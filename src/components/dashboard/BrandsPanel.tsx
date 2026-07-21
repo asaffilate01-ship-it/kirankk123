@@ -31,6 +31,15 @@ export function BrandsPanel() {
                     <h3 className="font-semibold">{b.name}</h3>
                   </div>
                   <p className="mt-1 text-xs text-muted-foreground">{b.tagline}</p>
+                  <a
+                    href={`https://${b.domain}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 inline-block text-[11px] font-medium text-primary hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {b.domain} ↗
+                  </a>
                 </div>
                 <Switch
                   checked={a.enabled}
