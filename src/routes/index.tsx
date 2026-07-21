@@ -18,11 +18,11 @@ export const Route = createFileRoute("/")({
   loader: () => requireUnlocked(),
   head: () => ({
     meta: [
-      { title: "LoungeTech Investor Dashboard — Live Financial Model" },
+      { title: "LoungeTech Dashboard — Live Financial Model" },
       {
         name: "description",
         content:
-          "Interactive investor model for LoungeTech Digitallösungen GmbH — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+          "Interactive dashboard for LoungeTech Digitallösungen GmbH — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
       },
     ],
   }),
@@ -50,7 +50,7 @@ function Index() {
             <div>
               <h1 className="text-sm font-semibold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
               <p className="text-xs text-muted-foreground">
-                Live investor dashboard · 10 brands · 36-month forecast
+                Live dashboard · 10 brands · 36-month forecast
               </p>
             </div>
           </div>
