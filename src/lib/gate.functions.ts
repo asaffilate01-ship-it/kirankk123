@@ -16,6 +16,7 @@ function sessionConfig() {
       httpOnly: true,
       secure: !isLocalhost,
       sameSite: (isLocalhost ? "lax" : "none") as "lax" | "none",
+      partitioned: !isLocalhost,
       path: "/",
     },
   };
