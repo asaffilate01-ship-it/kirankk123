@@ -28,7 +28,7 @@ export function CashFlowPanel() {
     m: `M${r.month}`,
     Cash: Math.round(r.cashBalance),
     Funding: Math.round(r.fundingIn),
-    Distribution: Math.round(-r.investorShare),
+    Dividend: Math.round(-r.dividendPaid),
   }));
 
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
@@ -72,7 +72,9 @@ export function CashFlowPanel() {
                 <TableHead>Month</TableHead>
                 <TableHead className="text-right">Net profit</TableHead>
                 <TableHead className="text-right">Funding in</TableHead>
-                <TableHead className="text-right">Investor distribution</TableHead>
+                <TableHead className="text-right">Dividend paid</TableHead>
+                <TableHead className="text-right">Investor 45%</TableHead>
+                <TableHead className="text-right">Founder 55%</TableHead>
                 <TableHead className="text-right">Net cash flow</TableHead>
                 <TableHead className="text-right">Cash balance</TableHead>
               </TableRow>
@@ -86,7 +88,13 @@ export function CashFlowPanel() {
                     {fmtEURk(r.fundingIn)}
                   </TableCell>
                   <TableCell className="text-right tabular-nums text-red-500">
-                    {fmtEURk(-r.investorShare)}
+                    {r.dividendPaid ? fmtEURk(-r.dividendPaid) : "—"}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums">
+                    {r.investorShare ? fmtEURk(r.investorShare) : "—"}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums">
+                    {r.founderShare ? fmtEURk(r.founderShare) : "—"}
                   </TableCell>
                   <TableCell className="text-right tabular-nums">{fmtEURk(r.cashFlow)}</TableCell>
                   <TableCell className={`text-right tabular-nums font-semibold ${r.cashBalance < 0 ? "text-red-500" : ""}`}>
