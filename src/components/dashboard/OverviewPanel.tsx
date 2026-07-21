@@ -53,7 +53,7 @@ export function OverviewPanel() {
           tone={minCash < 0 ? "bad" : "good"}
         />
         <Kpi label={`Cash @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
-        <Kpi label="Investor dividends (45%)" value={fmtEURk(cumInvestor)} />
+        <Kpi label={`Investor dividends (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
         <Kpi label="Total dividends paid" value={fmtEURk(cumDividend)} />
         <Kpi
           label={`Margin @ M${rows.length}`}
