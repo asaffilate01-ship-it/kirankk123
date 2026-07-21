@@ -6,9 +6,10 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { requireUnlocked } from "@/lib/gate.functions";
 import { BRAND_LOGOS } from "@/lib/brand-logos";
+import { downloadBrandPdf } from "@/lib/brand-pdf";
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
@@ -48,6 +49,18 @@ function BrandDetail() {
   const mrr = lastRow.perBrandRevenue[brand.id] ?? 0;
   const users = lastRow.perBrandUsers[brand.id] ?? 0;
 
+  const handleDownloadPdf = () => {
+    downloadBrandPdf(brand, {
+      launchMonth: a.launchMonth,
+      users,
+      mrr,
+      arpu: a.arpu,
+      churn: a.churn,
+      growth: a.userGrowth,
+      horizonMonths: rows.length,
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b bg-card/50 backdrop-blur">
@@ -55,7 +68,10 @@ function BrandDetail() {
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-4 w-4" /> Back to dashboard
           </Link>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
+              <Download className="mr-1 h-4 w-4" /> Download PDF
+            </Button>
             {BRAND_LOGOS[brand.id] ? (
               <div className="flex h-6 w-[100px] items-center justify-center">
                 <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="h-full w-full object-contain" />
