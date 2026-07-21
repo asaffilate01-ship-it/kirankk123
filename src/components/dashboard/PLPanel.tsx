@@ -27,6 +27,7 @@ export function PLPanel() {
   const state = useFinance();
   const rows = useMemo(() => buildModel(state), [state]);
   const years = useMemo(() => yearSummaries(rows), [rows]);
+  const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
 
   const chartData = rows.map((r) => ({
     m: `M${r.month}`,

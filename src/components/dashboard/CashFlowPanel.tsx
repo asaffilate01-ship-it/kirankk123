@@ -75,8 +75,8 @@ export function CashFlowPanel() {
                 <TableHead className="text-right">Net profit</TableHead>
                 <TableHead className="text-right">Funding in</TableHead>
                 <TableHead className="text-right">Dividend paid</TableHead>
-                <TableHead className="text-right">Investor 45%</TableHead>
-                <TableHead className="text-right">Founder 55%</TableHead>
+                <TableHead className="text-right">Investor {investorPctLabel}</TableHead>
+                <TableHead className="text-right">Founder {founderPctLabel}</TableHead>
                 <TableHead className="text-right">Net cash flow</TableHead>
                 <TableHead className="text-right">Cash balance</TableHead>
               </TableRow>
