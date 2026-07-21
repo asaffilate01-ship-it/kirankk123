@@ -27,7 +27,7 @@ export function AssumptionsPanel() {
           label="Number of tranches"
           value={g.trancheCount}
           min={1}
-          max={24}
+          max={40}
           onChange={(v) => s.setGlobal({ trancheCount: v })}
         />
         <SliderRow
