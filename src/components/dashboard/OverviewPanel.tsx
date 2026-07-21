@@ -86,7 +86,7 @@ export function OverviewPanel() {
           Total raise: <b>{fmtEURk(totalFunding)}</b> for{" "}
           <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Drawn as{" "}
           {fmtEURk(state.global.trancheSize)} tranches × {state.global.trancheCount} months. Each
-          tranche therefore buys <b>{fmtPct(equityPerTranche)} equity</b> — so a €50k ticket is
+          tranche therefore buys <b>{fmtPct(equityPerTranche, 2)} equity</b> — so a €50k ticket is
           worth 2.25% at the full-raise valuation. Shareholders draw dividends every six months from
           undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
           <b>40% at M18, M24, M30 and M36</b> — split pro-rata by equity; the rest stays in the
