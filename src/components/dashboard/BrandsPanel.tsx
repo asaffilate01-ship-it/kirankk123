@@ -6,6 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { fmtEURk, fmtNum } from "./format";
 import { buildModel } from "@/lib/finance-store";
+import { BRAND_LOGOS } from "@/lib/brand-logos";
 
 export function BrandsPanel() {
   const state = useFinance();
@@ -23,11 +24,19 @@ export function BrandsPanel() {
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <div className="flex items-center gap-2">
-                    <span
-                      className="h-3 w-3 rounded-full"
-                      style={{ background: b.color }}
-                      aria-hidden
-                    />
+                    {BRAND_LOGOS[b.id] ? (
+                      <img
+                        src={BRAND_LOGOS[b.id]}
+                        alt={`${b.name} logo`}
+                        className="h-6 w-auto max-w-[96px] object-contain"
+                      />
+                    ) : (
+                      <span
+                        className="h-3 w-3 rounded-full"
+                        style={{ background: b.color }}
+                        aria-hidden
+                      />
+                    )}
                     <h3 className="font-semibold">{b.name}</h3>
                   </div>
                   <p className="mt-1 text-xs text-muted-foreground">{b.tagline}</p>

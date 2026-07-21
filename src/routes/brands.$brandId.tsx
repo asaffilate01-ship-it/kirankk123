@@ -8,6 +8,7 @@ import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { requireUnlocked } from "@/lib/gate.functions";
+import { BRAND_LOGOS } from "@/lib/brand-logos";
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
@@ -54,7 +55,11 @@ function BrandDetail() {
             <ArrowLeft className="h-4 w-4" /> Back to dashboard
           </Link>
           <div className="flex items-center gap-2">
-            <span className="h-3 w-3 rounded-full" style={{ background: brand.color }} aria-hidden />
+            {BRAND_LOGOS[brand.id] ? (
+              <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="h-6 w-auto max-w-[100px] object-contain" />
+            ) : (
+              <span className="h-3 w-3 rounded-full" style={{ background: brand.color }} aria-hidden />
+            )}
             <span className="text-sm font-semibold">{brand.name}</span>
           </div>
         </div>
@@ -62,6 +67,13 @@ function BrandDetail() {
       <main className="mx-auto grid max-w-6xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
           <div>
+            {BRAND_LOGOS[brand.id] && (
+              <img
+                src={BRAND_LOGOS[brand.id]}
+                alt={`${brand.name} logo`}
+                className="mb-3 h-16 w-auto max-w-[280px] object-contain"
+              />
+            )}
             <h1 className="text-2xl font-semibold tracking-tight">{brand.name}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
             <a
