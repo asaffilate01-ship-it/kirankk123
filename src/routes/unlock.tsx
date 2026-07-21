@@ -22,16 +22,14 @@ function Unlock() {
   const unlock = useServerFn(unlockSite);
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [password, setPassword] = useState("");
 
   function setBrowserFallbackCookie(cookieName: string, token: string, maxAge: number) {
     const secure = window.location.protocol === "https:" ? "; Secure; SameSite=None" : "; SameSite=Lax";
     document.cookie = `${cookieName}=${encodeURIComponent(token)}; Path=/; Max-Age=${maxAge}${secure}`;
   }
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const password = String(new FormData(form).get("password") ?? "");
+  async function handleUnlock() {
     if (!password) return;
     setBusy(true);
     setError(false);
@@ -51,6 +49,11 @@ function Unlock() {
     }
   }
 
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    void handleUnlock();
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm space-y-5 p-6">
@@ -63,10 +66,12 @@ function Unlock() {
             </p>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="space-y-3">
+        <form onSubmit={onSubmit} action="javascript:void(0)" className="space-y-3">
           <Input
             type="password"
             name="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
             autoComplete="current-password"
             placeholder="Password"
             autoFocus
@@ -75,7 +80,7 @@ function Unlock() {
           {error && (
             <p className="text-xs text-red-500">Incorrect password. Try again.</p>
           )}
-          <Button type="submit" className="w-full" disabled={busy}>
+          <Button type="button" className="w-full" disabled={busy || !password} onClick={handleUnlock}>
             {busy ? "Unlocking…" : "Enter"}
           </Button>
         </form>
