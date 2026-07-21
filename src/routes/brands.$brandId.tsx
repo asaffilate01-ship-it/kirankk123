@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { BRANDS } from "@/lib/brands";
+import { BRANDS, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/brands/$brandId")({
 });
 
 function BrandDetail() {
-  const { brand } = Route.useLoaderData();
+  const { brand } = Route.useLoaderData() as { brand: Brand };
   const state = useFinance();
   const a = state.brands[brand.id];
   const rows = buildModel(state);
