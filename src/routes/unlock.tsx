@@ -23,6 +23,11 @@ function Unlock() {
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
 
+  function setBrowserFallbackCookie(cookieName: string, token: string, maxAge: number) {
+    const secure = window.location.protocol === "https:" ? "; Secure; SameSite=None" : "; SameSite=Lax";
+    document.cookie = `${cookieName}=${encodeURIComponent(token)}; Path=/; Max-Age=${maxAge}${secure}`;
+  }
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -31,8 +36,10 @@ function Unlock() {
     setBusy(true);
     setError(false);
     try {
-      const { ok } = await unlock({ data: { password } });
+      const result = await unlock({ data: { password } });
+      const { ok } = result;
       if (ok) {
+        setBrowserFallbackCookie(result.cookieName, result.token, result.maxAge);
         // Hard navigation guarantees the new session cookie is used for the
         // next request and the loader re-runs cleanly.
         window.location.assign("/");
