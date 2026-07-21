@@ -1,18 +1,21 @@
 import { createServerFn } from "@tanstack/react-start";
-import { useSession } from "@tanstack/react-start/server";
+import { clearSession, getRequestHeader, updateSession, useSession } from "@tanstack/react-start/server";
 import { createHash, timingSafeEqual } from "node:crypto";
 
 type GateSession = { unlocked?: boolean };
 
 function sessionConfig() {
+  const host = getRequestHeader("host") ?? "";
+  const isLocalhost = host.includes("localhost") || host.includes("127.0.0.1");
+
   return {
     password: process.env.SESSION_SECRET!,
     name: "loungetech-gate",
     maxAge: 60 * 60 * 24 * 7,
     cookie: {
       httpOnly: true,
-      secure: true,
-      sameSite: "lax" as const,
+      secure: !isLocalhost,
+      sameSite: (isLocalhost ? "lax" : "none") as "lax" | "none",
       path: "/",
     },
   };
@@ -35,20 +38,18 @@ export const requireUnlocked = createServerFn({ method: "GET" }).handler(async (
 });
 
 export const unlockSite = createServerFn({ method: "POST" })
-  .inputValidator((data: { password: string }) => data)
+  .validator((data: { password: string }) => data)
   .handler(async ({ data }) => {
     const expected = process.env.SITE_PASSWORD;
     if (!expected) throw new Error("SITE_PASSWORD is not set");
     if (!passwordMatches(data.password, expected)) {
       return { ok: false as const };
     }
-    const session = await useSession<GateSession>(sessionConfig());
-    await session.update({ unlocked: true });
+    await updateSession<GateSession>(sessionConfig(), { unlocked: true });
     return { ok: true as const };
   });
 
 export const lockSite = createServerFn({ method: "POST" }).handler(async () => {
-  const session = await useSession<GateSession>(sessionConfig());
-  await session.clear();
+  await clearSession(sessionConfig());
   return { ok: true as const };
 });
