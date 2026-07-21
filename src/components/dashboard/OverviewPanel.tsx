@@ -72,7 +72,7 @@ export function OverviewPanel() {
                 <Row k="EBIT" v={fmtEURk(y.ebit)} />
                 <Row k="Margin" v={fmtPct(y.margin)} />
                 <Row k="Net profit" v={fmtEURk(y.netProfit)} />
-                <Row k="Investor dividends (45%)" v={fmtEURk(y.investorShare)} />
+                <Row k={`Investor dividends (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
                 <Row k="Year-end cash" v={fmtEURk(y.endCash)} />
               </div>
             </div>
