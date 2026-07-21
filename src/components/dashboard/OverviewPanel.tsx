@@ -30,7 +30,7 @@ export function OverviewPanel() {
         <div>
           <h1 className="text-2xl font-bold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
           <p className="text-sm text-muted-foreground">
-            Live investor model — 10 German-focused digital brands, one operating team. Drag any slider to
+            Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to
             re-forecast P&L, cash flow and balance sheet in real time.
           </p>
         </div>

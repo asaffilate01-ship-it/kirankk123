@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Interactive investor model for LoungeTech Digitallösungen GmbH — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+          "Interactive dashboard for LoungeTech Digitallösungen GmbH — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
       },
     ],
   }),
