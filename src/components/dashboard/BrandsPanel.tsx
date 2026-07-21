@@ -25,11 +25,13 @@ export function BrandsPanel() {
                 <div>
                   <div className="flex items-center gap-2">
                     {BRAND_LOGOS[b.id] ? (
-                      <img
-                        src={BRAND_LOGOS[b.id]}
-                        alt={`${b.name} logo`}
-                        className="h-10 w-auto max-w-[140px] object-contain"
-                      />
+                      <div className="flex h-10 w-[140px] items-center justify-center">
+                        <img
+                          src={BRAND_LOGOS[b.id]}
+                          alt={`${b.name} logo`}
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
                     ) : (
                       <span
                         className="h-4 w-4 rounded-full"
