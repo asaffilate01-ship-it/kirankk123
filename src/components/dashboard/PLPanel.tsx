@@ -94,7 +94,7 @@ export function PLPanel() {
                 { k: "Margin", get: (y: any) => y.margin, fmt: fmtPct },
                 { k: "Tax", get: (y: any) => -y.tax },
                 { k: "Net profit", get: (y: any) => y.netProfit, cls: "font-semibold" },
-                { k: "Investor dividends (45%)", get: (y: any) => y.investorShare },
+                { k: `Investor dividends (${investorPctLabel})`, get: (y: any) => y.investorShare },
                 { k: "Year-end cash", get: (y: any) => y.endCash, cls: "font-semibold" },
               ].map((row) => (
                 <TableRow key={row.k}>
