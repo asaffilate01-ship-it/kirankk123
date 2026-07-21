@@ -28,11 +28,11 @@ export function BrandsPanel() {
                       <img
                         src={BRAND_LOGOS[b.id]}
                         alt={`${b.name} logo`}
-                        className="h-6 w-auto max-w-[96px] object-contain"
+                        className="h-10 w-auto max-w-[140px] object-contain"
                       />
                     ) : (
                       <span
-                        className="h-3 w-3 rounded-full"
+                        className="h-4 w-4 rounded-full"
                         style={{ background: b.color }}
                         aria-hidden
                       />

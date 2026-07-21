@@ -48,7 +48,7 @@ function Index() {
             <img
               src={logoAsset.url}
               alt="LoungeTech Digitallösungen GmbH"
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
             <div>
               <h1 className="text-sm font-semibold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
