@@ -10,8 +10,8 @@ import logoAsset from "@/assets/loungetech-logo.png.asset.json";
 export const Route = createFileRoute("/unlock")({
   head: () => ({
     meta: [
-      { title: "Unlock — LoungeTech Investor Dashboard" },
-      { name: "description", content: "Password protected investor dashboard." },
+      { title: "Unlock — LoungeTech Dashboard" },
+      { name: "description", content: "Password protected dashboard." },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
@@ -48,7 +48,7 @@ function Unlock() {
         <div className="flex flex-col items-center gap-3 text-center">
           <img src={logoAsset.url} alt="LoungeTech" className="h-16 w-auto" />
           <div>
-            <h1 className="text-lg font-semibold tracking-tight">Investor dashboard</h1>
+            <h1 className="text-lg font-semibold tracking-tight">Dashboard</h1>
             <p className="text-xs text-muted-foreground">
               Enter the access password to view the financial model.
             </p>

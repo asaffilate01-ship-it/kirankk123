@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
   loader: () => requireUnlocked(),
   head: () => ({
     meta: [
-      { title: "LoungeTech Investor Dashboard — Live Financial Model" },
+      { title: "LoungeTech Dashboard — Live Financial Model" },
       {
         name: "description",
         content:
@@ -50,7 +50,7 @@ function Index() {
             <div>
               <h1 className="text-sm font-semibold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
               <p className="text-xs text-muted-foreground">
-                Live investor dashboard · 10 brands · 36-month forecast
+                Live dashboard · 10 brands · 36-month forecast
               </p>
             </div>
           </div>
