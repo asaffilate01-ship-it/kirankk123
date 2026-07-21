@@ -22,12 +22,7 @@ export const unlockSite = createServerFn({ method: "POST" })
     if (!secret) throw new Error("SESSION_SECRET is not set");
     const token = createUnlockToken(secret);
     setCookie(GATE_COOKIE_NAME, token, gateCookieOptions());
-    return {
-      ok: true as const,
-      token,
-      cookieName: GATE_COOKIE_NAME,
-      maxAge: 60 * 60 * 24 * 7,
-    };
+    return { ok: true as const };
   });
 
 export const lockSite = createServerFn({ method: "POST" }).handler(async () => {

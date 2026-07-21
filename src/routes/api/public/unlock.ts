@@ -13,7 +13,7 @@ export const Route = createFileRoute("/api/public/unlock")({
             return Response.json({ ok: false, error: "Gate is not configured" }, { status: 500 });
           }
 
-          const { createUnlockToken, gateSetCookieHeader, passwordMatches, GATE_COOKIE_NAME, GATE_COOKIE_MAX_AGE } = await import(
+          const { createUnlockToken, gateSetCookieHeader, passwordMatches } = await import(
             "@/lib/gate.server"
           );
 
@@ -25,10 +25,7 @@ export const Route = createFileRoute("/api/public/unlock")({
           const headers = new Headers({ "Content-Type": "application/json" });
           headers.append("Set-Cookie", gateSetCookieHeader(request.headers.get("host") ?? "", token));
 
-          return new Response(
-            JSON.stringify({ ok: true, token, cookieName: GATE_COOKIE_NAME, maxAge: GATE_COOKIE_MAX_AGE }),
-            { status: 200, headers },
-          );
+          return new Response(JSON.stringify({ ok: true }), { status: 200, headers });
         } catch {
           return Response.json({ ok: false }, { status: 400 });
         }

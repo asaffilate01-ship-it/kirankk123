@@ -25,11 +25,6 @@ function Unlock() {
   const [busy, setBusy] = useState(false);
   const [password, setPassword] = useState("");
 
-  function setBrowserFallbackCookie(cookieName: string, token: string, maxAge: number) {
-    const secure = window.location.protocol === "https:" ? "; Secure; SameSite=None" : "; SameSite=Lax";
-    document.cookie = `${cookieName}=${encodeURIComponent(token)}; Path=/; Max-Age=${maxAge}${secure}`;
-  }
-
   async function handleUnlock() {
     if (!password) return;
     setBusy(true);
@@ -40,12 +35,9 @@ function Unlock() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
       });
-      const result = (await response.json()) as
-        | { ok: true; token: string; cookieName: string; maxAge: number }
-        | { ok: false };
+      const result = (await response.json()) as { ok: boolean };
       const { ok } = result;
       if (ok) {
-        setBrowserFallbackCookie(result.cookieName, result.token, result.maxAge);
         // Hard navigation guarantees the new session cookie is used for the
         // next request and the loader re-runs cleanly.
         window.location.assign("/");
