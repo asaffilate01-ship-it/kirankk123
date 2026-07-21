@@ -3,6 +3,7 @@ import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
+import logoAsset from "@/assets/loungetech-logo.png.asset.json";
 
 export function OverviewPanel() {
   const state = useFinance();
@@ -20,12 +21,19 @@ export function OverviewPanel() {
 
   return (
     <div className="space-y-4">
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
-        <p className="text-sm text-muted-foreground">
-          Live investor model — 10 German-focused digital brands, one operating team. Drag any slider to
-          re-forecast P&L, cash flow and balance sheet in real time.
-        </p>
+      <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+        <img
+          src={logoAsset.url}
+          alt="LoungeTech Digitallösungen GmbH"
+          className="h-24 w-auto shrink-0"
+        />
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
+          <p className="text-sm text-muted-foreground">
+            Live investor model — 10 German-focused digital brands, one operating team. Drag any slider to
+            re-forecast P&L, cash flow and balance sheet in real time.
+          </p>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
