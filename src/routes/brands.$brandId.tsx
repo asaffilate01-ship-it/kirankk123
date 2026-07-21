@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { BRANDS, SHARED_ADVANTAGE, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -12,7 +12,8 @@ import { BRAND_LOGOS } from "@/lib/brand-logos";
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
-    await requireUnlocked();
+    const { unlocked } = await requireUnlocked();
+    if (!unlocked) throw redirect({ to: "/unlock" });
     const brand = BRANDS.find((b) => b.id === params.brandId);
     if (!brand) throw notFound();
     return { brand };
