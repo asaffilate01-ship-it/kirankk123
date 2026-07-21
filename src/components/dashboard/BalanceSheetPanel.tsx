@@ -54,7 +54,7 @@ export function BalanceSheetPanel() {
             </TableRow>
             {[
               { k: "Paid-in capital (investor tranches)", get: (b: any) => b.paidInCapital },
-              { k: "Retained earnings (founder share)", get: (b: any) => b.retainedEarnings },
+              { k: "Retained earnings (undistributed profit)", get: (b: any) => b.retainedEarnings },
               { k: "Total equity", get: (b: any) => b.totalEquity, bold: true },
               { k: "Liabilities (leases/loans)", get: (b: any) => b.liabilities },
               { k: "Total equity + liabilities", get: (b: any) => b.totalLiabAndEquity, bold: true },
@@ -72,9 +72,9 @@ export function BalanceSheetPanel() {
         </Table>
       </div>
       <p className="mt-3 text-xs text-muted-foreground">
-        Simplified balance sheet. Fixed assets and matching liabilities are modelled as a small placeholder
-        capitalisation; equity is composed of investor paid-in capital and founder retained earnings after the
-        45% profit distribution.
+        Simplified balance sheet. Fixed assets and matching liabilities are a small placeholder
+        capitalisation. Equity = investor paid-in capital + retained earnings (net profit left in
+        the business after semi-annual dividends of 20%/30%/40%/40%/40%/40% at M6/12/18/24/30/36).
       </p>
     </Card>
   );
