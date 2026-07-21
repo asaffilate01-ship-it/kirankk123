@@ -14,7 +14,30 @@ export type Brand = {
   defaultAddlRevenue: number; // ancillary EUR / mo
   defaultDirectCost: number; // brand-level direct cost EUR / mo (baseline)
   color: string;
+  domain: string;
+  reason: string;
+  proposition: string;
+  features: string[];
+  apps: { name: string; kind: "SaaS" | "Web" | "iOS" | "Android" | "API" | "Admin"; purpose: string }[];
+  userTypes: { type: string; useCase: string }[];
+  risks: { risk: string; mitigation: string }[];
 };
+
+// Shared platform advantage — identical for every brand, injected into detail page.
+export const SHARED_ADVANTAGE: string[] = [
+  "One cloud infrastructure (Hetzner + Cloudflare, DE-hosted)",
+  "One engineering team shipping across all 10 products",
+  "One AI platform (shared LLM gateway, embeddings, moderation)",
+  "One authentication system (SSO across every brand)",
+  "One payment system (Stripe + SEPA, unified reconciliation)",
+  "One subscription engine (trial, dunning, invoicing)",
+  "One CRM covering all leads and customers",
+  "One customer-support platform (shared inbox, macros, SLAs)",
+  "One finance department (DATEV-connected)",
+  "One legal & compliance function (GDPR, AGB, contracts)",
+  "One sales organisation with cross-sell playbooks",
+  "One marketing team running paid, SEO and content at group scale",
+];
 
 // Launch cadence: one brand every ~3 weeks starting M1. So launches at 1..10.
 // After a 2-month free trial, paid revenue starts 2 months after launch.
@@ -39,6 +62,41 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 3000,
     defaultDirectCost: 4500,
     color: "#22c55e",
+    domain: "haccora.de",
+    reason:
+      "German food-safety law (LMHV, EU 852/2004) forces every gastronomy operator to keep continuous HACCP records. 80% still do it on paper — illegible, missed entries, and audit failures that trigger 4-figure fines and forced closures. HACCORA removes the paper binder and the liability with it.",
+    proposition:
+      "A mobile-first HACCP suite: bluetooth temperature probes stream into the app, staff sign off critical control points in seconds, allergen matrices auto-generate from recipes, and the whole audit trail exports to the Lebensmittelüberwachung on demand. Priced 40% below FoodNotify with free onboarding and POS integration bundled.",
+    features: [
+      "Digital HACCP checklists with photo evidence",
+      "Bluetooth / WLAN temperature probe integration",
+      "Automatic cold-chain break alerts (WhatsApp, SMS, e-mail)",
+      "Allergen & recipe matrix auto-generated from ingredients",
+      "Cleaning schedules with staff sign-off",
+      "One-click audit report export (PDF, DIN A4)",
+      "Multi-location dashboard for chains",
+      "Supplier certificate vault",
+      "Staff training tracker with certificate reminders",
+      "POS integration: Vectron, Gastronovi, Lightspeed, Orderbird",
+    ],
+    apps: [
+      { name: "HACCORA Manager", kind: "Web", purpose: "Owner dashboard, audits, multi-site view" },
+      { name: "HACCORA Kitchen", kind: "iOS", purpose: "Staff check-list app for iPad in the kitchen" },
+      { name: "HACCORA Kitchen Android", kind: "Android", purpose: "Same, on Android tablets" },
+      { name: "HACCORA Probes", kind: "API", purpose: "Ingestion API for temperature sensors" },
+      { name: "HACCORA Admin", kind: "Admin", purpose: "Internal ops console" },
+    ],
+    userTypes: [
+      { type: "Restaurant owner", useCase: "Sees compliance status across all sites at a glance." },
+      { type: "Kitchen staff", useCase: "Ticks off temperature and cleaning checks on a tablet." },
+      { type: "Head chef", useCase: "Maintains recipes and allergen matrix." },
+      { type: "External auditor", useCase: "Read-only audit link, no account required." },
+    ],
+    risks: [
+      { risk: "Incumbents cut prices to defend share", mitigation: "Land-and-expand via POS partnerships gives distribution incumbents can't match; bundled hardware discount locks in 12-month contracts." },
+      { risk: "Staff resist replacing paper", mitigation: "White-glove onboarding, in-language training videos (DE/TR/PL), free tablet on annual plans." },
+      { risk: "Regulatory change invalidates workflows", mitigation: "In-house Lebensmittelrecht advisor updates templates within 30 days of any BMEL change." },
+    ],
   },
   {
     id: "kinderstars",
@@ -59,10 +117,43 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 2500,
     defaultDirectCost: 5000,
     color: "#f59e0b",
+    domain: "kinderstars24.de",
+    reason:
+      "Germany has a chronic childcare shortage: 430k Kita places missing (BMFSFJ 2024) and >60% of parents rely on informal networks. Existing marketplaces are unvetted or ad-based, leaving safety to the parent. KINDERSTARS makes vetted, bookable care as easy as ordering a taxi.",
+    proposition:
+      "Every carer is Führungszeugnis-checked, ID-verified and reference-validated before going live. Parents book by the hour or as a recurring slot, pay in-app (SEPA + Kreditkarte), and receive a tax-deductible invoice automatically. Employers subscribe as a benefit for staff.",
+    features: [
+      "Führungszeugnis + ID verification for every carer",
+      "Instant hourly booking or recurring schedule",
+      "In-app chat & video introduction",
+      "SEPA / card payment with auto-invoicing (§35a EStG deductible)",
+      "Employer benefits portal (subsidised hours)",
+      "Emergency-cover pool (24h response)",
+      "Ratings & incident reporting",
+      "Tutor scheduling with school-subject filtering",
+    ],
+    apps: [
+      { name: "KINDERSTARS Family", kind: "iOS", purpose: "Booking, chat, payments for parents" },
+      { name: "KINDERSTARS Family Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "KINDERSTARS Carer", kind: "iOS", purpose: "Availability, jobs, earnings for carers" },
+      { name: "KINDERSTARS Employer", kind: "Web", purpose: "HR portal for benefits & billing" },
+      { name: "KINDERSTARS Trust", kind: "Admin", purpose: "Vetting & incident-response console" },
+    ],
+    userTypes: [
+      { type: "Parent", useCase: "Books a vetted babysitter for Friday 18-23h in three taps." },
+      { type: "Nanny / carer", useCase: "Manages availability, gets paid weekly." },
+      { type: "Tutor", useCase: "Runs recurring after-school lessons with reminders." },
+      { type: "HR manager", useCase: "Buys care hours as a company benefit." },
+    ],
+    risks: [
+      { risk: "Safety incident damages trust", mitigation: "€10m liability insurance per booking, 24h trust-and-safety team, incident escrow suspending payouts pending review." },
+      { risk: "Betreut.de retaliates on price", mitigation: "Employer B2B channel is a different buyer — insulated from consumer price wars; carers get lower take-rate so supply prefers us." },
+      { risk: "Carer supply shortage in rural PLZ", mitigation: "Referral bounties, Kita partnerships, integration with childcare training providers." },
+    ],
   },
   {
     id: "eventplanrger",
-    name: "EventPlanrGER",
+    name: "EVENTPLANR",
     tagline: "All-in-one event planning platform for Germany",
     description:
       "Venue discovery, vendor marketplace, guest management, RSVP, budgeting and vendor payments for weddings, corporate events and private celebrations.",
@@ -79,6 +170,39 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 4000,
     defaultDirectCost: 4200,
     color: "#a855f7",
+    domain: "eventplanr.de",
+    reason:
+      "Planning an event in Germany means juggling 8-12 tools: venue portals, spreadsheet budgets, WhatsApp with vendors, PDF RSVPs. Vendors pay per-lead fees (€200+ per enquiry) with no conversion guarantee. EVENTPLANR unifies planners and vendors on one platform, replacing per-lead extortion with a flat subscription.",
+    proposition:
+      "Planners get end-to-end event OS — venue search, vendor marketplace, budget tracker, guest list, RSVP, seating chart and vendor payments. Vendors pay a flat €49/mo to appear, respond and get paid. No commission, no per-lead fees.",
+    features: [
+      "Filterable venue search (capacity, PLZ, price, style)",
+      "Vendor marketplace: catering, DJ, florist, photographer",
+      "Budget tracker with actuals vs plan",
+      "Digital RSVP with dietary & song requests",
+      "Interactive seating chart",
+      "Escrow vendor payments (funds released on event day)",
+      "Guest communication (e-mail + WhatsApp templates)",
+      "Vendor CRM & availability calendar",
+    ],
+    apps: [
+      { name: "EVENTPLANR Studio", kind: "Web", purpose: "Full planner workspace" },
+      { name: "EVENTPLANR Guest", kind: "Web", purpose: "RSVP microsite per event" },
+      { name: "EVENTPLANR Vendor", kind: "Web", purpose: "Vendor inbox, calendar, payments" },
+      { name: "EVENTPLANR Mobile", kind: "iOS", purpose: "On-the-day coordination for planners" },
+      { name: "EVENTPLANR Mobile Android", kind: "Android", purpose: "Same, on Android" },
+    ],
+    userTypes: [
+      { type: "Couple planning a wedding", useCase: "Books venue + 6 vendors in one place." },
+      { type: "Corporate HR / EA", useCase: "Runs the annual Sommerfest end-to-end." },
+      { type: "Event agency", useCase: "White-labels EVENTPLANR for client events." },
+      { type: "Vendor (DJ, caterer, florist)", useCase: "Fills the diary without paying per-lead fees." },
+    ],
+    risks: [
+      { risk: "Vendors won't quit eventinc", mitigation: "6-month free trial for the first 500 vendors; migrate reviews with a one-click importer." },
+      { risk: "Seasonality (Q1 low)", mitigation: "Corporate events fill Q1; annual plans smooth cash." },
+      { risk: "Disputes over payments", mitigation: "Escrow release on event day + dispute mediation SLA of 72h." },
+    ],
   },
   {
     id: "rettio",
@@ -99,6 +223,39 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 2000,
     defaultDirectCost: 3800,
     color: "#10b981",
+    domain: "rettio.de",
+    reason:
+      "German bakeries throw away 15-20% of daily output; supermarkets bin near-expiry stock rather than mark it down. Too Good To Go takes 25% + €1.09 per box, leaving merchants marginal or negative. RETTIO flips the model to a flat subscription so merchants keep every euro.",
+    proposition:
+      "Merchants pay €39/mo unlimited: publish surprise bags, get paid direct, keep the customer relationship. Consumers pay a €4.99/mo membership for unlimited rescues at member prices. Both sides win vs a commission platform.",
+    features: [
+      "Merchant inventory publisher (drag-and-drop bags)",
+      "Consumer geo-feed with pickup windows",
+      "Consumer membership (unlimited rescues)",
+      "In-app payment direct to merchant IBAN",
+      "CO2 & waste-saved dashboard",
+      "Pickup QR verification",
+      "Auto-repeat inventory templates",
+      "B2B waste-report export for ESG reporting",
+    ],
+    apps: [
+      { name: "RETTIO Merchant", kind: "iOS", purpose: "Publish bags, manage pickups" },
+      { name: "RETTIO Merchant Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "RETTIO Consumer", kind: "iOS", purpose: "Discover & pick up rescues" },
+      { name: "RETTIO Consumer Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "RETTIO ESG", kind: "Web", purpose: "Corporate waste-reporting portal" },
+    ],
+    userTypes: [
+      { type: "Bakery / café owner", useCase: "Publishes 5 surprise bags at 17:00, sells out by 19:00." },
+      { type: "Supermarket branch manager", useCase: "Clears near-expiry stock without markdown paperwork." },
+      { type: "Consumer member", useCase: "Grabs a €12 dinner bag for €3.99 on the way home." },
+      { type: "ESG officer", useCase: "Pulls monthly waste-saved report for CSRD reporting." },
+    ],
+    risks: [
+      { risk: "Too Good To Go undercuts subscription", mitigation: "Multi-year merchant lock-in with progressive discounts; consumer membership creates two-sided moat." },
+      { risk: "Low consumer awareness at launch", mitigation: "Piggyback on KIEZIO and RETTIO cross-promo in KINDERSTARS family app." },
+      { risk: "Food-safety incident", mitigation: "Bag time-stamped, temperature-declared; €1m product liability insurance." },
+    ],
   },
   {
     id: "kiezio",
@@ -119,6 +276,38 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 3500,
     defaultDirectCost: 3500,
     color: "#06b6d4",
+    domain: "kiezio.de",
+    reason:
+      "Google Maps is generic — it won't tell you which café is halal, wheelchair-accessible, or has a Wickeltisch. Yelp never took off in DE. Expats and niche communities rely on Reddit threads and Facebook groups. KIEZIO is the discovery layer for real neighbourhood needs, with DE-hosted privacy Google can't match.",
+    proposition:
+      "Filter local businesses by the criteria that actually matter — halal, kosher, LGBTQ+ safe, ramp access, pet-friendly, prayer times, breastfeeding-friendly, cash-only vs card. Community-verified, ad-free for consumers, businesses pay €25/mo for a verified profile and analytics.",
+    features: [
+      "40+ niche filters no other directory ships",
+      "Community-verified attributes (crowd + moderator sign-off)",
+      "Kiez-scoped feeds (Neukölln, Prenzlberg, Schanze, etc.)",
+      "Prayer-time widget per venue",
+      "Verified business profile with photos & menus",
+      "Owner-response inbox",
+      "Local business analytics (views, calls, directions)",
+      "Curated community lists ('Best Wickelraum-Cafés in Kreuzberg')",
+    ],
+    apps: [
+      { name: "KIEZIO", kind: "iOS", purpose: "Consumer discovery app" },
+      { name: "KIEZIO Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "KIEZIO Business", kind: "Web", purpose: "SMB owner profile & analytics" },
+      { name: "KIEZIO Moderation", kind: "Admin", purpose: "Community moderation console" },
+    ],
+    userTypes: [
+      { type: "Expat resident", useCase: "Finds an English-speaking dentist with wheelchair access in Mitte." },
+      { type: "Muslim family", useCase: "Filters halal restaurants with prayer-friendly hours." },
+      { type: "Local business owner", useCase: "Claims profile, responds to reviews, sees weekly analytics." },
+      { type: "Tourist", useCase: "Discovers curated 'locals-only' spots per kiez." },
+    ],
+    risks: [
+      { risk: "Google adds niche filters", mitigation: "Community-owned data + DE privacy narrative is a brand moat Google can't clone quickly." },
+      { risk: "Fake reviews", mitigation: "Verified-purchase reviews via Rettio/EventPlanr integrations; community mod team." },
+      { risk: "Cold-start in new cities", mitigation: "Bootstrapped via KINDERSTARS + RETTIO + BERATERMARKT merchants already on the group platform." },
+    ],
   },
   {
     id: "beratermarkt",
@@ -139,6 +328,38 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 4500,
     defaultDirectCost: 4200,
     color: "#6366f1",
+    domain: "beratermarkt.de",
+    reason:
+      "SMBs need lawyer + tax advisor + auditor + bookkeeper working together, but each hides behind a single-profession portal. Clients repeat their story four times and pay four onboarding fees. BERATERMARKT is one client dashboard, one document vault, cross-referrals baked in.",
+    proposition:
+      "Advisors pay €89/mo to appear, receive referrals from adjacent professions (RA→StB→WP→Buchhalter) and share documents via a secure GoBD-compliant portal. Clients get a single relationship manager across all four disciplines.",
+    features: [
+      "Verified advisor profiles (Kammer-ID checked)",
+      "Cross-profession referral engine",
+      "GoBD-compliant document vault",
+      "Secure client portal with mandate management",
+      "Time-tracking & fixed-fee quoting",
+      "DATEV export for accountants",
+      "Video-consultation booking",
+      "Encrypted messaging with retention rules",
+    ],
+    apps: [
+      { name: "BERATERMARKT Advisor", kind: "Web", purpose: "Advisor workspace & referrals" },
+      { name: "BERATERMARKT Client", kind: "Web", purpose: "Client dashboard & documents" },
+      { name: "BERATERMARKT Client Mobile", kind: "iOS", purpose: "On-the-go document upload & signing" },
+      { name: "BERATERMARKT Vault", kind: "API", purpose: "GoBD document API for DATEV / lexoffice" },
+    ],
+    userTypes: [
+      { type: "Steuerberater", useCase: "Receives referrals from partner lawyers; bills via portal." },
+      { type: "Rechtsanwalt", useCase: "Shares client docs securely, tracks mandate progress." },
+      { type: "SMB owner", useCase: "One dashboard for tax return, contract review, audit." },
+      { type: "Consumer", useCase: "Books an initial 30-min consult with a vetted advisor." },
+    ],
+    risks: [
+      { risk: "Kammer restrictions on advertising", mitigation: "Positioned as neutral directory + document platform, not lead-gen; legal opinion from Kammer-approved counsel." },
+      { risk: "Slow advisor adoption", mitigation: "Free tier for first year for Kammer members; DATEV integration is the hook." },
+      { risk: "Data breach on sensitive client docs", mitigation: "AES-256 at rest, DE-only hosting, ISO 27001, penetration-tested quarterly." },
+    ],
   },
   {
     id: "stellenxpert",
@@ -159,6 +380,38 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 5000,
     defaultDirectCost: 4800,
     color: "#ec4899",
+    domain: "stellenxpert.de",
+    reason:
+      "Germany has 1.8m open roles and a Fachkräftemangel that costs €86bn/yr (IW Köln). International talent can't navigate 12 job boards in German. Employers can't screen non-German CVs. STELLENXPERT sits above every board and translates in both directions.",
+    proposition:
+      "One aggregated feed of every open role in Germany, with AI translation of listings, AI screening of candidate CVs, and visa/relocation guidance built in. Employers subscribe for €99/mo per seat and get a shortlist without touching 5 separate portals.",
+    features: [
+      "Aggregated jobs from StepStone, Indeed, Xing, LinkedIn, direct employer APIs",
+      "AI translation of listings (EN, TR, RU, PL, AR, UA)",
+      "AI CV screening & role-match scoring",
+      "Applicant tracking (ATS) with pipeline stages",
+      "Visa / Blue Card eligibility checker",
+      "Salary benchmark by role & PLZ",
+      "Employer branding microsite",
+      "Auto-generated interview questions per role",
+    ],
+    apps: [
+      { name: "STELLENXPERT Talent", kind: "Web", purpose: "Candidate job search & applications" },
+      { name: "STELLENXPERT Talent Mobile", kind: "iOS", purpose: "Job alerts & one-tap apply" },
+      { name: "STELLENXPERT Employer", kind: "Web", purpose: "ATS, screening, shortlist" },
+      { name: "STELLENXPERT Match", kind: "API", purpose: "AI screening API for staffing agencies" },
+    ],
+    userTypes: [
+      { type: "International jobseeker", useCase: "Sees roles translated to English with visa eligibility upfront." },
+      { type: "SMB HR manager", useCase: "Gets a ranked shortlist without reading 200 CVs." },
+      { type: "Staffing agency", useCase: "Uses the AI screening API to accelerate placements." },
+      { type: "Hiring manager", useCase: "AI generates interview questions tailored to the role." },
+    ],
+    risks: [
+      { risk: "Boards block scraping", mitigation: "Direct API partnerships + employer-side listings uploaded natively; XING and Indeed have public APIs." },
+      { risk: "AI screening bias / AGG risk", mitigation: "AGG-audited model, bias monitoring, explainable-score export for every rejection." },
+      { risk: "Employer scepticism of AI shortlist", mitigation: "Human-in-the-loop mode; screening confidence scores + rationale." },
+    ],
   },
   {
     id: "viazeno",
@@ -179,6 +432,38 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 3200,
     defaultDirectCost: 3800,
     color: "#0ea5e9",
+    domain: "viazeno.de",
+    reason:
+      "Blacklane and similar take 20-30% commission per ride. A €100 airport transfer nets the operator €70-75 after fees. Operators want distribution but not extortion. VIAZENO is the flat-fee alternative — €59/mo unlimited jobs.",
+    proposition:
+      "Operators subscribe for €59/mo, keep 100% of every fare, and get a bookable profile with corporate-travel-manager visibility. Corporate buyers use a single dashboard to book, approve and expense chauffeur travel across Germany.",
+    features: [
+      "Operator profile with fleet, insurance, licences",
+      "Real-time job board with instant accept",
+      "Corporate travel dashboard (approval workflows)",
+      "In-app payment with SEPA & card, direct to operator",
+      "Flight tracking for airport transfers",
+      "Ratings & repeat-rider preferences",
+      "Digital daily-driver logs (§21a StVG)",
+      "Multi-language passenger app (DE, EN, AR, TR)",
+    ],
+    apps: [
+      { name: "VIAZENO Driver", kind: "iOS", purpose: "Job board & navigation for operators" },
+      { name: "VIAZENO Driver Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "VIAZENO Rider", kind: "iOS", purpose: "Passenger booking app" },
+      { name: "VIAZENO Corporate", kind: "Web", purpose: "Corporate travel manager console" },
+    ],
+    userTypes: [
+      { type: "Independent chauffeur", useCase: "Fills gaps in the diary; keeps 100% of the fare." },
+      { type: "Fleet operator", useCase: "Distributes 5-20 vehicles without new dispatch software." },
+      { type: "Corporate travel manager", useCase: "Books chauffeurs across cities from one portal." },
+      { type: "Event agency", useCase: "Reserves fleets for weddings & corporate events." },
+    ],
+    risks: [
+      { risk: "Blacklane matches on price", mitigation: "Commission model can't structurally match a flat sub without cannibalising their P&L." },
+      { risk: "Regulatory (PBefG) changes", mitigation: "In-house PBefG compliance monitor; all operators pre-verified on Genehmigung." },
+      { risk: "Cold-start on rider side", mitigation: "Bootstrap riders via EVENTPLANR wedding transfers and STELLENXPERT relocation packages." },
+    ],
   },
   {
     id: "immoviq",
@@ -199,6 +484,38 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 3800,
     defaultDirectCost: 4000,
     color: "#f43f5e",
+    domain: "immoviq.de",
+    reason:
+      "ImmoScout ends when a tenant clicks 'apply'. From there, landlords wrestle with SCHUFA requests, PDF leases, Excel Nebenkostenabrechnung, WhatsApp repair chaos, and manual DATEV entries. IMMOVIQ owns everything after the listing.",
+    proposition:
+      "One workspace for private landlords: SCHUFA-integrated screening, qualified-e-signature leases, repair ticketing with vetted Handwerker, annual service-charge accounting (Nebenkostenabrechnung), and DATEV export for the Steuerberater — €69/mo/unit tiered.",
+    features: [
+      "SCHUFA & Bonitätsauskunft in-app",
+      "Qualified electronic signature (eIDAS) for leases",
+      "Repair ticketing with vetted Handwerker network",
+      "Annual Nebenkostenabrechnung generator (BetrKV compliant)",
+      "Rent-payment tracking with SEPA-Lastschrift",
+      "DATEV & lexoffice export",
+      "Tenant portal (documents, receipts, repair requests)",
+      "Mieterhöhung workflow with Mietspiegel-check",
+    ],
+    apps: [
+      { name: "IMMOVIQ Landlord", kind: "Web", purpose: "Full landlord workspace" },
+      { name: "IMMOVIQ Tenant", kind: "iOS", purpose: "Tenant portal & repair requests" },
+      { name: "IMMOVIQ Tenant Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "IMMOVIQ Handwerker", kind: "iOS", purpose: "Repair ticket queue for trades" },
+    ],
+    userTypes: [
+      { type: "Private landlord (1-5 units)", useCase: "Digitalises the whole tenancy without hiring a Verwalter." },
+      { type: "Small property manager (5-50 units)", useCase: "Replaces 4 tools with 1." },
+      { type: "Tenant", useCase: "Requests repairs, pays rent, downloads Nebenkostenabrechnung." },
+      { type: "Handwerker", useCase: "Receives ticketed jobs, invoices in-app." },
+    ],
+    risks: [
+      { risk: "ImmoScout builds workflow tools", mitigation: "They're incentivised to defend the listing marketplace; workflow depth requires vertical expertise they don't staff." },
+      { risk: "eIDAS / SCHUFA integration risk", mitigation: "Signed reseller agreement with a qualified trust-service provider (D-Trust / Bundesdruckerei)." },
+      { risk: "Landlord churn after tenant placed", mitigation: "Sticky ongoing services (repairs, Nebenkosten, rent tracking) create year-round value, not just a one-off lease event." },
+    ],
   },
   {
     id: "beinstandplus",
@@ -219,5 +536,37 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 4200,
     defaultDirectCost: 3600,
     color: "#eab308",
+    domain: "beistandplus.de",
+    reason:
+      "Arriving in Germany means 15+ appointments across Bürgeramt, Ausländerbehörde, Krankenkasse, Finanzamt, Schule — with waiting times of 6-14 weeks. Employers lose 3 months of productive time per relocation. Charities are overloaded and free-tier only. BEINSTANDPLUS sells speed and certainty.",
+    proposition:
+      "A guided-services platform: one caseworker per migrant, appointment slots pre-booked within 48h through partner Behörden networks and private-sector alternatives (private Krankenkasse, private schools). Sold at €79/mo per relocating employee to HR departments.",
+    features: [
+      "Digital case file with all documents (visa, passport, contracts)",
+      "48h guaranteed appointment booking (Anmeldung, Ausländerbehörde)",
+      "Multilingual caseworker (EN, AR, TR, RU, UA, ES)",
+      "Health insurance selection & enrolment",
+      "Tax ID & Steuerklasse guidance",
+      "School / Kita placement service",
+      "Employer HR dashboard tracking relocation progress",
+      "Translation & apostille service",
+    ],
+    apps: [
+      { name: "BEISTANDPLUS Client", kind: "iOS", purpose: "Migrant case-tracking app" },
+      { name: "BEISTANDPLUS Client Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "BEISTANDPLUS Employer", kind: "Web", purpose: "HR dashboard for relocations" },
+      { name: "BEISTANDPLUS Caseworker", kind: "Web", purpose: "Internal caseworker console" },
+    ],
+    userTypes: [
+      { type: "Relocating employee", useCase: "Anmeldung done in week 1 instead of week 8." },
+      { type: "International student", useCase: "Full onboarding package before semester start." },
+      { type: "HR / mobility manager", useCase: "Tracks each relocation's status without chasing e-mails." },
+      { type: "Family joining relocated staff", useCase: "School placement + spouse work-permit guidance." },
+    ],
+    risks: [
+      { risk: "Appointment scarcity outside our control", mitigation: "Framework agreements with 30+ Bürgerämter; private-sector fallbacks for Krankenkasse and schools." },
+      { risk: "Regulatory push-back on 'paid appointments'", mitigation: "We book publicly-available slots; premium value is the caseworker, translation, and coordination — never paid queue-jumping." },
+      { risk: "Charity substitute pressure", mitigation: "Sold B2B to HR budgets, not competing for consumer wallet share; charities become referral partners." },
+    ],
   },
 ];

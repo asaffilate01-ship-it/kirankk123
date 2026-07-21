@@ -1,12 +1,12 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { BRANDS, type Brand } from "@/lib/brands";
+import { BRANDS, SHARED_ADVANTAGE, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: ({ params }) => {
@@ -57,13 +57,68 @@ function BrandDetail() {
           </div>
         </div>
       </header>
-      <main className="mx-auto grid max-w-5xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
+      <main className="mx-auto grid max-w-6xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">{brand.name}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
+            <a
+              href={`https://${brand.domain}`}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+            >
+              {brand.domain} <ExternalLink className="h-3 w-3" />
+            </a>
           </div>
           <p className="text-sm">{brand.description}</p>
+
+          <Section title="Why this product exists">
+            <p className="text-sm">{brand.reason}</p>
+          </Section>
+
+          <Section title="Proposition">
+            <p className="text-sm">{brand.proposition}</p>
+          </Section>
+
+          <Section title="Features">
+            <ul className="grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
+              {brand.features.map((f) => (
+                <li key={f} className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: brand.color }} />
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="SaaS platform & apps">
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+              {brand.apps.map((app) => (
+                <div key={app.name} className="rounded-md border p-3 text-sm">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="font-semibold">{app.name}</div>
+                    <span className="rounded bg-muted px-1.5 py-0.5 text-[10px] font-medium uppercase text-muted-foreground">
+                      {app.kind}
+                    </span>
+                  </div>
+                  <div className="mt-1 text-xs text-muted-foreground">{app.purpose}</div>
+                </div>
+              ))}
+            </div>
+          </Section>
+
+          <Section title="User types">
+            <div className="space-y-2">
+              {brand.userTypes.map((u) => (
+                <div key={u.type} className="rounded-md border p-3 text-sm">
+                  <div className="font-semibold">{u.type}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{u.useCase}</div>
+                </div>
+              ))}
+            </div>
+          </Section>
+
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div className="rounded-md border p-3 text-sm">
               <div className="text-xs font-semibold uppercase text-muted-foreground">Market</div>
@@ -74,11 +129,9 @@ function BrandDetail() {
               <div className="mt-1">{brand.audience}</div>
             </div>
           </div>
-          <div>
-            <div className="text-xs font-semibold uppercase text-muted-foreground">
-              Competition & how we break their strength
-            </div>
-            <div className="mt-2 space-y-2">
+
+          <Section title="Competition & how we break their strength">
+            <div className="space-y-2">
               {brand.competitors.map((c) => (
                 <div key={c.name} className="rounded-md border p-3 text-sm">
                   <div className="font-semibold">{c.name}</div>
@@ -89,7 +142,36 @@ function BrandDetail() {
                 </div>
               ))}
             </div>
-          </div>
+          </Section>
+
+          <Section title="Competitive advantage — one team, ten brands">
+            <p className="text-sm text-muted-foreground">
+              Unlike standalone SaaS businesses, {brand.name} shares every non-product function with the
+              other nine LoungeTech brands. Each additional product therefore benefits from economies of
+              scale and cross-selling opportunities.
+            </p>
+            <ul className="mt-2 grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
+              {SHARED_ADVANTAGE.map((s) => (
+                <li key={s} className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Risks & how we reduce them to nil">
+            <div className="space-y-2">
+              {brand.risks.map((r) => (
+                <div key={r.risk} className="rounded-md border p-3 text-sm">
+                  <div className="font-semibold text-amber-500">Risk: {r.risk}</div>
+                  <div className="mt-1 text-xs">
+                    <span className="font-semibold text-emerald-500">Mitigation:</span> {r.mitigation}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Section>
         </div>
 
         <Card className="flex h-fit flex-col gap-3 p-4">
@@ -147,6 +229,15 @@ function BrandDetail() {
           </Button>
         </Card>
       </main>
+    </div>
+  );
+}
+
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{title}</div>
+      <div className="mt-2">{children}</div>
     </div>
   );
 }
