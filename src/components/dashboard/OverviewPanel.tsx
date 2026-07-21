@@ -11,6 +11,8 @@ export function OverviewPanel() {
   const last = rows[rows.length - 1];
   const totalFunding = Math.min(state.global.months, state.global.trancheCount) * state.global.trancheSize;
   const cumInvestor = rows.reduce((s, r) => s + r.investorShare, 0);
+  const cumFounder = rows.reduce((s, r) => s + r.founderShare, 0);
+  const cumDividend = cumInvestor + cumFounder;
   const monthAtMilestone = rows.find((r) => r.revenue >= 1_000_000)?.month;
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
 
@@ -40,7 +42,8 @@ export function OverviewPanel() {
           tone={minCash < 0 ? "bad" : "good"}
         />
         <Kpi label={`Cash @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
-        <Kpi label="Investor cumulative share" value={fmtEURk(cumInvestor)} />
+        <Kpi label="Investor dividends (45%)" value={fmtEURk(cumInvestor)} />
+        <Kpi label="Total dividends paid" value={fmtEURk(cumDividend)} />
         <Kpi
           label={`Margin @ M${rows.length}`}
           value={last.revenue > 0 ? fmtPct(last.ebit / last.revenue) : "—"}
@@ -58,7 +61,7 @@ export function OverviewPanel() {
                 <Row k="EBIT" v={fmtEURk(y.ebit)} />
                 <Row k="Margin" v={fmtPct(y.margin)} />
                 <Row k="Net profit" v={fmtEURk(y.netProfit)} />
-                <Row k="Investor share (45%)" v={fmtEURk(y.investorShare)} />
+                <Row k="Investor dividends (45%)" v={fmtEURk(y.investorShare)} />
                 <Row k="Year-end cash" v={fmtEURk(y.endCash)} />
               </div>
             </div>
@@ -71,9 +74,11 @@ export function OverviewPanel() {
         <p className="text-muted-foreground">
           {fmtEURk(state.global.trancheSize)} monthly tranches × {state.global.trancheCount} months
           ({fmtEURk(totalFunding)} total) in exchange for{" "}
-          <b>{fmtPct(state.global.investorEquityPct)} equity</b> and{" "}
-          <b>{fmtPct(state.global.investorProfitSharePct)} of monthly net profit</b>. All 10 brands
-          launch on a 3-week rolling cadence with a {state.global.freeTrialMonths}-month free trial.
+          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Shareholders draw dividends every
+          six months from undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
+          <b>40% at M18, M24, M30 and M36</b> — split pro-rata by equity; the rest stays in the
+          business. All 10 brands launch on a 3-week rolling cadence with a{" "}
+          {state.global.freeTrialMonths}-month free trial.
         </p>
       </Card>
 
