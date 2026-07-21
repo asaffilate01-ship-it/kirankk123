@@ -27,6 +27,14 @@ export const Route = createFileRoute("/")({
         content:
           "Interactive dashboard for LoungeTech Digitallösungen GmbH — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
       },
+      { property: "og:title", content: "LoungeTech Dashboard — Live Financial Model" },
+      {
+        property: "og:description",
+        content:
+          "Interactive dashboard for LoungeTech Digitallösungen GmbH with 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Index,

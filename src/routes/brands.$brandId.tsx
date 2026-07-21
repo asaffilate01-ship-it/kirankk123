@@ -26,6 +26,13 @@ export const Route = createFileRoute("/brands/$brandId")({
         name: "description",
         content: loaderData?.brand.tagline ?? "LoungeTech brand detail",
       },
+      { property: "og:title", content: loaderData ? `${loaderData.brand.name} — LoungeTech` : "Brand — LoungeTech" },
+      {
+        property: "og:description",
+        content: loaderData?.brand.tagline ?? "LoungeTech brand detail",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   notFoundComponent: () => (
