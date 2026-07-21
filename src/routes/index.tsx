@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
 import { BrandsPanel } from "@/components/dashboard/BrandsPanel";
@@ -15,7 +15,10 @@ import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 
 export const Route = createFileRoute("/")({
-  loader: () => requireUnlocked(),
+  loader: async () => {
+    const { unlocked } = await requireUnlocked();
+    if (!unlocked) throw redirect({ to: "/unlock" });
+  },
   head: () => ({
     meta: [
       { title: "LoungeTech Dashboard — Live Financial Model" },
