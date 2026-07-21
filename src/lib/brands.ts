@@ -59,6 +59,12 @@ export const BRANDS: Brand[] = [
       { name: "FoodNotify", strength: "Enterprise brand, recipe DB", counter: "40% lower price + free onboarding + bundled POS connectors (Vectron, Gastronovi, Lightspeed)" },
       { name: "Flowtify", strength: "Established HACCP flows", counter: "Modern mobile-first UX, WhatsApp alerts, DE-hosted with BSI-grade security" },
     ],
+    currentMarket: {
+      howServed:
+        "Today ~80% of the 220k German gastronomy operators still run HACCP on paper binders and Excel. The digital 20% is split between FoodNotify (enterprise chains), Flowtify (mid-market), and a long tail of Kassen-hardware add-ons (Vectron, Orderbird). Independent Gastronomen — the biggest segment — are effectively unserved by modern software.",
+      users: "≈44,000 gastronomy sites digitised today; ≈176,000 still on paper.",
+      revenue: "≈€55m/yr digital HACCP spend in Germany; €65m still parked in paper, printers, binders & fines.",
+    },
     defaultLaunchMonth: 1,
     defaultInitialUsers: 120,
     defaultUserGrowth: 0.18,
@@ -114,6 +120,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "Betreut.de", strength: "Brand recognition & SEO", counter: "Long-tail PLZ landing pages per carer, aggressive employer B2B channel (Corporate Benefits partners)" },
     ],
+    currentMarket: {
+      howServed:
+        "Formal childcare is dominated by Kitas (public + Träger like Diakonie, AWO, Caritas), with a 430k-place shortfall. Private on-demand care runs through Betreut.de, WhatsApp groups, Aupair agencies and informal Mundpropaganda. Employer-provided childcare is a fast-growing corporate-benefits segment (voiio, Elternservice AWO) but still a niche of large corporates.",
+      users: "≈1.8m families use paid non-Kita care; only ≈250k transact through a digital marketplace.",
+      revenue: "≈€4.5bn total childcare spend; ≈€180m flows through digital marketplaces + employer benefits today.",
+    },
     defaultLaunchMonth: 1,
     defaultInitialUsers: 200,
     defaultUserGrowth: 0.2,
@@ -167,6 +179,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "eventinc", strength: "Venue inventory", counter: "Zero-commission flat €49/mo for vendors vs €200+ per-lead fees; full guest management stack" },
     ],
+    currentMarket: {
+      howServed:
+        "Planners cobble together 8-12 tools: eventinc / EventLokale for venues, WeddyPlace / hochzeitsportal24 for weddings, Doodle for RSVP, Excel for budget, WhatsApp for vendors. Vendors pay per-lead fees (€150-€300 per enquiry) with no conversion guarantee. Corporate event tech (Cvent, Bizzabo) is enterprise-only.",
+      users: "≈400k weddings + 1.2m corporate events/yr; ≈250k of those touch a digital planning tool.",
+      revenue: "≈€8bn German event industry; ≈€320m/yr flows to event-tech platforms and per-lead vendor fees.",
+    },
     defaultLaunchMonth: 2,
     defaultInitialUsers: 150,
     defaultUserGrowth: 0.17,
@@ -220,6 +238,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "Too Good To Go", strength: "Consumer brand & network", counter: "Flat €39/mo sub vs 25% + €1.09 per box commission — merchants keep 100% of revenue" },
     ],
+    currentMarket: {
+      howServed:
+        "Too Good To Go is the dominant surplus-food marketplace in Germany with ~30k active merchants and ~10m registered consumers, taking a 25% + €1.09 commission per bag. Sirplus and ResQ Club serve smaller niches. The vast majority of bakeries and supermarkets still dump surplus stock or send it to Tafel food banks.",
+      users: "≈30k merchants and ~10m consumer accounts on surplus-food platforms; ≈400k food-serving businesses still bin surplus.",
+      revenue: "≈€180m GMV/yr on surplus-food apps in DE; commissions to platforms ≈€45m/yr.",
+    },
     defaultLaunchMonth: 2,
     defaultInitialUsers: 180,
     defaultUserGrowth: 0.16,
@@ -273,6 +297,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "Google Business", strength: "Ubiquity & maps", counter: "Niche filters Google won't ship, community-curated lists, DE-hosted privacy story" },
     ],
+    currentMarket: {
+      howServed:
+        "Google Maps and Google Business Profiles are the de-facto directory (~3m verified DE profiles). Gelbe Seiten and Das Örtliche linger with older users. Niche communities (halal, LGBTQ+, wheelchair, expats) rely on Reddit, Facebook groups and Yelp threads. No mainstream player ships the niche filters community actually wants.",
+      users: "≈3m local SMB profiles claimed on Google; ≈45m active local-search users in Germany.",
+      revenue: "≈€2bn local-marketing spend/yr in DE (Google Ads local + directory ads + Yelp / Gelbe Seiten combined).",
+    },
     defaultLaunchMonth: 3,
     defaultInitialUsers: 220,
     defaultUserGrowth: 0.2,
@@ -325,6 +355,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "anwalt.de", strength: "SEO for lawyers", counter: "Cross-referrals across 4 professions vs lawyer-only focus; unified client dashboard" },
     ],
+    currentMarket: {
+      howServed:
+        "Each profession is served in its own silo: anwalt.de and advocado for Rechtsanwälte; ageras and steuerberater.com for Steuerberater; WPK directory for Wirtschaftsprüfer; sevDesk / lexoffice for Buchhalter tooling. Cross-profession collaboration happens over e-mail and USB sticks. DATEV Mandantenportal covers document exchange but not discovery.",
+      users: "≈165k regulated advisors (≈166k Kammer members combined); ≈40k list themselves on a digital directory today.",
+      revenue: "≈€40bn combined advisor revenue in DE; ≈€380m/yr flows through advisor-discovery & software portals.",
+    },
     defaultLaunchMonth: 3,
     defaultInitialUsers: 140,
     defaultUserGrowth: 0.15,
@@ -377,6 +413,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "StepStone", strength: "Employer relationships", counter: "Aggregator layer sitting above them + AI screening for non-German-speaking talent" },
     ],
+    currentMarket: {
+      howServed:
+        "StepStone (~€400m DE revenue), Indeed and Xing dominate paid job listings. Bundesagentur für Arbeit runs the public board. LinkedIn takes premium white-collar recruiting. International talent flows through Make-it-in-Germany and consulate portals with no unified matching. AI screening is early — mostly HeyJobs and Zalvus at the edges.",
+      users: "≈1.8m open roles at any time; ≈32m Erwerbstätige, of whom ≈4m are actively job-hunting each year.",
+      revenue: "≈€8bn German recruitment market; ≈€1.6bn is spent on digital job boards and ATS software.",
+    },
     defaultLaunchMonth: 4,
     defaultInitialUsers: 130,
     defaultUserGrowth: 0.18,
@@ -429,6 +471,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "Blacklane", strength: "Enterprise clients", counter: "€59/mo flat sub instead of ~25% commission — operators net 30-40% more per ride" },
     ],
+    currentMarket: {
+      howServed:
+        "Blacklane leads premium chauffeur booking (~15k drivers globally, DE core market) on a ~20-25% commission. Sixt Ride, FreeNow Ride and Uber Black compete on the app side. Corporate travel routes bookings via SAP Concur, TravelPerks or agency desks. Independent operators typically run their own Excel + phone dispatch on top of these platforms.",
+      users: "≈12,000 licensed private-hire operators in DE; ≈900k corporate travellers book chauffeur transfers annually.",
+      revenue: "≈€3.5bn premium ground-transport market; ≈€700m flows through digital chauffeur platforms.",
+    },
     defaultLaunchMonth: 4,
     defaultInitialUsers: 100,
     defaultUserGrowth: 0.16,
@@ -481,6 +529,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "ImmoScout24", strength: "Listing marketplace", counter: "Focus on post-listing workflow (screening, repairs, DATEV) where ImmoScout is weak" },
     ],
+    currentMarket: {
+      howServed:
+        "ImmoScout24 and Immowelt own the listing marketplace. Post-listing is fragmented: Objego, Vermietet.de and Zinsland for landlord admin; Casavi for larger Verwalter; SCHUFA direct for screening; DocuSign / DATEV for signing and accounting; WhatsApp for repairs. Private landlords with <10 units are the least served — most still run Excel + paper leases.",
+      users: "≈5.8m rental units held by private landlords across ≈3.9m Kleinvermieter; ≈600k use any PropTech tool today.",
+      revenue: "≈€1.5bn German PropTech TAM; ≈€250m/yr flows to landlord SaaS and workflow tools (excl. listings).",
+    },
     defaultLaunchMonth: 5,
     defaultInitialUsers: 110,
     defaultUserGrowth: 0.14,
@@ -533,6 +587,12 @@ export const BRANDS: Brand[] = [
     competitors: [
       { name: "Local charities & Behörden", strength: "Trust & free", counter: "Speed & certainty — booked appointment slot within 48h, sold via employer B2B channel" },
     ],
+    currentMarket: {
+      howServed:
+        "New residents rely on the Bürgeramt (6-14 week waits in major cities), Ausländerbehörde, and free help from charities (Caritas, Diakonie, DRK, AWO). Corporate relocation is served by expensive B2B agencies (Crown Relocations, Santa Fe, KPMG mobility) charging €3-8k per employee. There is no scalable mid-market platform between free-and-slow and €5k-and-manual.",
+      users: "≈1.4m new residents/yr in DE (migrants + international students + relocated staff); ≈120k pass through paid relocation services.",
+      revenue: "≈€600m relocation-services TAM in DE; ≈€180m of that runs through corporate mobility agencies today.",
+    },
     defaultLaunchMonth: 6,
     defaultInitialUsers: 90,
     defaultUserGrowth: 0.15,
