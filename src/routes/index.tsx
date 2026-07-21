@@ -7,6 +7,7 @@ import { PLPanel } from "@/components/dashboard/PLPanel";
 import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
+import logoAsset from "@/assets/loungetech-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,11 +28,18 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b bg-card/50 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-          <div>
-            <h1 className="text-sm font-semibold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
-            <p className="text-xs text-muted-foreground">
-              Live investor dashboard · 10 brands · 36-month forecast
-            </p>
+          <div className="flex items-center gap-3">
+            <img
+              src={logoAsset.url}
+              alt="LoungeTech Digitallösungen GmbH"
+              className="h-10 w-auto"
+            />
+            <div>
+              <h1 className="text-sm font-semibold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
+              <p className="text-xs text-muted-foreground">
+                Live investor dashboard · 10 brands · 36-month forecast
+              </p>
+            </div>
           </div>
           <div className="text-xs text-muted-foreground">All figures € · assumptions editable</div>
         </div>
