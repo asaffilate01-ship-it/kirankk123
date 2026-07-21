@@ -16,6 +16,9 @@ export function OverviewPanel() {
   const cumDividend = cumInvestor + cumFounder;
   const monthAtMilestone = rows.find((r) => r.revenue >= 1_000_000)?.month;
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
+  const equityPerTranche =
+    totalFunding > 0 ? (state.global.investorEquityPct * state.global.trancheSize) / totalFunding : 0;
+  const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
 
   const activeBrands = BRANDS.filter((b) => state.brands[b.id]?.enabled).length;
 
