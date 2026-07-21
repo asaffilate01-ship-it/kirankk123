@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
-import { BRANDS } from "@/lib/brands";
+import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
 
@@ -75,6 +75,43 @@ export function OverviewPanel() {
           <b>{fmtPct(state.global.investorProfitSharePct)} of monthly net profit</b>. All 10 brands
           launch on a 3-week rolling cadence with a {state.global.freeTrialMonths}-month free trial.
         </p>
+      </Card>
+
+      <Card className="space-y-3 p-4 text-sm">
+        <h3 className="font-semibold">Our system — one team, ten brands</h3>
+        <p className="text-muted-foreground">
+          LoungeTech Digitallösungen GmbH operates as a single company that ships and runs ten
+          German-focused digital brands. Every brand shares the same operating chassis, so each new
+          product launched on our platform benefits from economies of scale and cross-selling into the
+          existing customer base of the other nine.
+        </p>
+        <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
+          {SHARED_ADVANTAGE.map((s) => (
+            <li key={s} className="flex gap-2">
+              <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+              <span>{s}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="grid grid-cols-1 gap-2 pt-2 md:grid-cols-2">
+          {BRANDS.map((b) => (
+            <div key={b.id} className="flex items-center justify-between rounded-md border p-2 text-xs">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full" style={{ background: b.color }} />
+                <span className="font-semibold">{b.name}</span>
+                <span className="text-muted-foreground">· launches M{state.brands[b.id].launchMonth}</span>
+              </div>
+              <a
+                href={`https://${b.domain}`}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-primary hover:underline"
+              >
+                {b.domain} ↗
+              </a>
+            </div>
+          ))}
+        </div>
       </Card>
     </div>
   );
