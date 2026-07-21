@@ -83,10 +83,12 @@ export function OverviewPanel() {
       <Card className="space-y-2 p-4 text-sm">
         <h3 className="font-semibold">Investor terms</h3>
         <p className="text-muted-foreground">
-          {fmtEURk(state.global.trancheSize)} monthly tranches × {state.global.trancheCount} months
-          ({fmtEURk(totalFunding)} total) in exchange for{" "}
-          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Shareholders draw dividends every
-          six months from undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
+          Total raise: <b>{fmtEURk(totalFunding)}</b> for{" "}
+          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Drawn as{" "}
+          {fmtEURk(state.global.trancheSize)} tranches × {state.global.trancheCount} months. Each
+          tranche therefore buys <b>{fmtPct(equityPerTranche)} equity</b> — so a €50k ticket is
+          worth 2.25% at the full-raise valuation. Shareholders draw dividends every six months from
+          undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
           <b>40% at M18, M24, M30 and M36</b> — split pro-rata by equity; the rest stays in the
           business. All 10 brands launch on a 3-week rolling cadence with a{" "}
           {state.global.freeTrialMonths}-month free trial.
