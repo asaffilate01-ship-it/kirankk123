@@ -20,12 +20,14 @@ export const Route = createFileRoute("/unlock")({
 
 function Unlock() {
   const unlock = useServerFn(unlockSite);
-  const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
+    const password = String(new FormData(form).get("password") ?? "");
+    if (!password) return;
     setBusy(true);
     setError(false);
     try {
@@ -60,15 +62,13 @@ function Unlock() {
             name="password"
             autoComplete="current-password"
             placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
             autoFocus
             required
           />
           {error && (
             <p className="text-xs text-red-500">Incorrect password. Try again.</p>
           )}
-          <Button type="submit" className="w-full" disabled={busy || !password}>
+          <Button type="submit" className="w-full" disabled={busy}>
             {busy ? "Unlocking…" : "Enter"}
           </Button>
         </form>
