@@ -130,6 +130,22 @@ function BrandDetail() {
             </div>
           </div>
 
+          <Section title="How this market is served in Germany today">
+            <div className="space-y-2">
+              <p className="text-sm">{brand.currentMarket.howServed}</p>
+              <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+                <div className="rounded-md border p-3 text-sm">
+                  <div className="text-xs font-semibold uppercase text-muted-foreground">Users today</div>
+                  <div className="mt-1">{brand.currentMarket.users}</div>
+                </div>
+                <div className="rounded-md border p-3 text-sm">
+                  <div className="text-xs font-semibold uppercase text-muted-foreground">Revenue today</div>
+                  <div className="mt-1">{brand.currentMarket.revenue}</div>
+                </div>
+              </div>
+            </div>
+          </Section>
+
           <Section title="Competition & how we break their strength">
             <div className="space-y-2">
               {brand.competitors.map((c) => (
