@@ -7,9 +7,11 @@ import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import { requireUnlocked } from "@/lib/gate.functions";
 
 export const Route = createFileRoute("/brands/$brandId")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    await requireUnlocked();
     const brand = BRANDS.find((b) => b.id === params.brandId);
     if (!brand) throw notFound();
     return { brand };
