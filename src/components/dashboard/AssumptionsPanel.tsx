@@ -39,15 +39,12 @@ export function AssumptionsPanel() {
           onChange={(v) => s.setGlobal({ investorEquityPct: v / 100 })}
           format={(v) => `${v.toFixed(1)}%`}
         />
-        <SliderRow
-          label="Investor net-profit share %"
-          value={Math.round(g.investorProfitSharePct * 1000) / 10}
-          min={0}
-          max={100}
-          step={0.5}
-          onChange={(v) => s.setGlobal({ investorProfitSharePct: v / 100 })}
-          format={(v) => `${v.toFixed(1)}%`}
-        />
+        <div className="rounded-md border p-3 text-xs text-muted-foreground">
+          <div className="mb-1 font-medium text-foreground">Dividend schedule</div>
+          Shareholders draw dividends from undistributed net profit: 20% at M6, 30% at M12,
+          40% at M18/24/30/36. Split by equity (investor {Math.round(g.investorEquityPct * 100)}% / founder{" "}
+          {100 - Math.round(g.investorEquityPct * 100)}%).
+        </div>
         <SliderRow
           label="Opening cash"
           value={g.openingCash}

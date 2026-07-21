@@ -142,8 +142,11 @@ export type MonthRow = {
   ebit: number;
   tax: number;
   netProfit: number;
+  dividendPct: number;
+  dividendPaid: number;
   investorShare: number;
   founderShare: number;
+  retainedInBusiness: number;
   fundingIn: number;
   cashFlow: number;
   cashBalance: number;
@@ -154,10 +157,20 @@ function lineAtMonth(l: CustomLine, m: number) {
   return l.amount * Math.pow(1 + l.growth, m - l.startMonth);
 }
 
+export const DIVIDEND_SCHEDULE: Record<number, number> = {
+  6: 0.2,
+  12: 0.3,
+  18: 0.4,
+  24: 0.4,
+  30: 0.4,
+  36: 0.4,
+};
+
 export function buildModel(state: State): MonthRow[] {
   const g = state.global;
   const rows: MonthRow[] = [];
   let cash = g.openingCash;
+  let undistributed = 0;
 
   for (let m = 1; m <= g.months; m++) {
     const perBrandRevenue: Record<string, number> = {};
@@ -206,12 +219,16 @@ export function buildModel(state: State): MonthRow[] {
     const ebit = revenue - totalCost;
     const tax = ebit > 0 ? ebit * g.taxRate : 0;
     const netProfit = ebit - tax;
-    const investorShare = netProfit > 0 ? netProfit * g.investorProfitSharePct : 0;
-    const founderShare = netProfit - investorShare;
+    undistributed += netProfit;
+    const dividendPct = DIVIDEND_SCHEDULE[m] ?? 0;
+    const dividendPaid = dividendPct > 0 && undistributed > 0 ? undistributed * dividendPct : 0;
+    undistributed -= dividendPaid;
+    const investorShare = dividendPaid * g.investorEquityPct;
+    const founderShare = dividendPaid - investorShare;
 
     const fundingIn = m <= g.trancheCount ? g.trancheSize : 0;
-    // Cash: EBIT-based simplification (no working capital changes) — netProfit + funding - investor distribution
-    const cashFlow = netProfit + fundingIn - investorShare;
+    // Cash: netProfit + funding tranche − dividend paid out to shareholders
+    const cashFlow = netProfit + fundingIn - dividendPaid;
     cash += cashFlow;
 
     rows.push({
@@ -232,8 +249,11 @@ export function buildModel(state: State): MonthRow[] {
       ebit,
       tax,
       netProfit,
+      dividendPct,
+      dividendPaid,
       investorShare,
       founderShare,
+      retainedInBusiness: undistributed,
       fundingIn,
       cashFlow,
       cashBalance: cash,
@@ -297,11 +317,11 @@ export function balanceSheets(rows: MonthRow[], g: GlobalAssumptions): BalanceRo
   const out: BalanceRow[] = [];
   const totalYears = Math.ceil(rows.length / 12);
   let cumInvestorPaid = 0;
-  let cumRetained = 0;
+  let retainedInBusiness = 0;
   for (let y = 0; y < totalYears; y++) {
     const slice = rows.slice(0, (y + 1) * 12);
     cumInvestorPaid = slice.reduce((s, r) => s + r.fundingIn, 0);
-    cumRetained = slice.reduce((s, r) => s + r.founderShare, 0);
+    retainedInBusiness = slice.length ? slice[slice.length - 1].retainedInBusiness : 0;
     const cash = slice.length ? slice[slice.length - 1].cashBalance : 0;
     const fixedAssets = 25000 + y * 15000; // simple placeholder capitalisation
     out.push({
@@ -310,10 +330,10 @@ export function balanceSheets(rows: MonthRow[], g: GlobalAssumptions): BalanceRo
       fixedAssets,
       totalAssets: cash + fixedAssets,
       paidInCapital: cumInvestorPaid,
-      retainedEarnings: cumRetained,
-      totalEquity: cumInvestorPaid + cumRetained,
+      retainedEarnings: retainedInBusiness,
+      totalEquity: cumInvestorPaid + retainedInBusiness,
       liabilities: fixedAssets, // balancing plug (leases/loans)
-      totalLiabAndEquity: cumInvestorPaid + cumRetained + fixedAssets,
+      totalLiabAndEquity: cumInvestorPaid + retainedInBusiness + fixedAssets,
     });
   }
   return out;
