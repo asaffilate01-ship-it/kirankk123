@@ -10,6 +10,10 @@ export const Route = createFileRoute("/unlock")({
     meta: [
       { title: "Unlock — LoungeTech Dashboard" },
       { name: "description", content: "Password protected dashboard." },
+      { property: "og:title", content: "Unlock — LoungeTech Dashboard" },
+      { property: "og:description", content: "Password protected LoungeTech dashboard access." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
