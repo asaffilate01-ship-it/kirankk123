@@ -8,8 +8,14 @@ import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import logoAsset from "@/assets/loungetech-logo.png.asset.json";
+import { requireUnlocked, lockSite } from "@/lib/gate.functions";
+import { useServerFn } from "@tanstack/react-start";
+import { useRouter } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
+import { LogOut } from "lucide-react";
 
 export const Route = createFileRoute("/")({
+  loader: () => requireUnlocked(),
   head: () => ({
     meta: [
       { title: "LoungeTech Investor Dashboard — Live Financial Model" },
@@ -24,6 +30,13 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const router = useRouter();
+  const lock = useServerFn(lockSite);
+  async function handleLock() {
+    await lock({});
+    await router.navigate({ to: "/unlock" });
+    router.invalidate();
+  }
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b bg-card/50 backdrop-blur">
@@ -41,7 +54,14 @@ function Index() {
               </p>
             </div>
           </div>
-          <div className="text-xs text-muted-foreground">All figures € · assumptions editable</div>
+          <div className="flex items-center gap-3">
+            <span className="hidden text-xs text-muted-foreground sm:inline">
+              All figures € · assumptions editable
+            </span>
+            <Button variant="outline" size="sm" onClick={handleLock}>
+              <LogOut className="mr-1 h-3.5 w-3.5" /> Lock
+            </Button>
+          </div>
         </div>
       </header>
       <main className="mx-auto max-w-7xl px-4 py-6">
