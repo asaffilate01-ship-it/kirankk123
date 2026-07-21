@@ -47,8 +47,14 @@ export function AssumptionsPanel() {
               g.trancheSize * g.trancheCount > 0
                 ? (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount)
                 : 0,
+              2,
             )}{" "}
-            equity ({fmtEURk(g.trancheSize)} = {fmtPct((g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount))} at full raise)
+            equity ({fmtEURk(g.trancheSize)} ={" "}
+            {fmtPct(
+              (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount),
+              2,
+            )}{" "}
+            at full raise)
           </div>
         </div>
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
