@@ -40,6 +40,18 @@ export function AssumptionsPanel() {
           format={(v) => `${v.toFixed(1)}%`}
         />
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
+          <div className="mb-1 font-medium text-foreground">Funding summary</div>
+          <div>
+            Total raise: {fmtEURk(g.trancheSize * g.trancheCount)} · each tranche buys{" "}
+            {fmtPct(
+              g.trancheSize * g.trancheCount > 0
+                ? (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount)
+                : 0,
+            )}{" "}
+            equity ({fmtEURk(g.trancheSize)} = {fmtPct((g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount))} at full raise)
+          </div>
+        </div>
+        <div className="rounded-md border p-3 text-xs text-muted-foreground">
           <div className="mb-1 font-medium text-foreground">Dividend schedule</div>
           Shareholders draw dividends from undistributed net profit: 20% at M6, 30% at M12,
           40% at M18/24/30/36. Split by equity (investor {Math.round(g.investorEquityPct * 100)}% / founder{" "}
