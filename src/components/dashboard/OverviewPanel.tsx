@@ -28,7 +28,7 @@ export function OverviewPanel() {
         <img
           src={logoAsset.url}
           alt="LoungeTech Digitallösungen GmbH"
-          className="h-24 w-auto shrink-0"
+          className="h-32 w-auto shrink-0"
         />
         <div>
           <h1 className="text-2xl font-bold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
