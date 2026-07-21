@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SliderRow } from "./SliderRow";
-import { fmtEURk } from "./format";
+import { fmtEURk, fmtPct } from "./format";
 import { Trash2, Plus } from "lucide-react";
 
 export function AssumptionsPanel() {
@@ -27,7 +27,7 @@ export function AssumptionsPanel() {
           label="Number of tranches"
           value={g.trancheCount}
           min={1}
-          max={24}
+          max={40}
           onChange={(v) => s.setGlobal({ trancheCount: v })}
         />
         <SliderRow
@@ -39,6 +39,24 @@ export function AssumptionsPanel() {
           onChange={(v) => s.setGlobal({ investorEquityPct: v / 100 })}
           format={(v) => `${v.toFixed(1)}%`}
         />
+        <div className="rounded-md border p-3 text-xs text-muted-foreground">
+          <div className="mb-1 font-medium text-foreground">Funding summary</div>
+          <div>
+            Total raise: {fmtEURk(g.trancheSize * g.trancheCount)} · each tranche buys{" "}
+            {fmtPct(
+              g.trancheSize * g.trancheCount > 0
+                ? (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount)
+                : 0,
+              2,
+            )}{" "}
+            equity ({fmtEURk(g.trancheSize)} ={" "}
+            {fmtPct(
+              (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount),
+              2,
+            )}{" "}
+            at full raise)
+          </div>
+        </div>
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
           <div className="mb-1 font-medium text-foreground">Dividend schedule</div>
           Shareholders draw dividends from undistributed net profit: 20% at M6, 30% at M12,

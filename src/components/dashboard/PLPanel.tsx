@@ -27,6 +27,7 @@ export function PLPanel() {
   const state = useFinance();
   const rows = useMemo(() => buildModel(state), [state]);
   const years = useMemo(() => yearSummaries(rows), [rows]);
+  const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
 
   const chartData = rows.map((r) => ({
     m: `M${r.month}`,
@@ -93,7 +94,7 @@ export function PLPanel() {
                 { k: "Margin", get: (y: any) => y.margin, fmt: fmtPct },
                 { k: "Tax", get: (y: any) => -y.tax },
                 { k: "Net profit", get: (y: any) => y.netProfit, cls: "font-semibold" },
-                { k: "Investor dividends (45%)", get: (y: any) => y.investorShare },
+                { k: `Investor dividends (${investorPctLabel})`, get: (y: any) => y.investorShare },
                 { k: "Year-end cash", get: (y: any) => y.endCash, cls: "font-semibold" },
               ].map((row) => (
                 <TableRow key={row.k}>

@@ -16,6 +16,9 @@ export function OverviewPanel() {
   const cumDividend = cumInvestor + cumFounder;
   const monthAtMilestone = rows.find((r) => r.revenue >= 1_000_000)?.month;
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
+  const equityPerTranche =
+    totalFunding > 0 ? (state.global.investorEquityPct * state.global.trancheSize) / totalFunding : 0;
+  const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
 
   const activeBrands = BRANDS.filter((b) => state.brands[b.id]?.enabled).length;
 
@@ -50,7 +53,7 @@ export function OverviewPanel() {
           tone={minCash < 0 ? "bad" : "good"}
         />
         <Kpi label={`Cash @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
-        <Kpi label="Investor dividends (45%)" value={fmtEURk(cumInvestor)} />
+        <Kpi label={`Investor dividends (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
         <Kpi label="Total dividends paid" value={fmtEURk(cumDividend)} />
         <Kpi
           label={`Margin @ M${rows.length}`}
@@ -69,7 +72,7 @@ export function OverviewPanel() {
                 <Row k="EBIT" v={fmtEURk(y.ebit)} />
                 <Row k="Margin" v={fmtPct(y.margin)} />
                 <Row k="Net profit" v={fmtEURk(y.netProfit)} />
-                <Row k="Investor dividends (45%)" v={fmtEURk(y.investorShare)} />
+                <Row k={`Investor dividends (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
                 <Row k="Year-end cash" v={fmtEURk(y.endCash)} />
               </div>
             </div>
@@ -80,10 +83,12 @@ export function OverviewPanel() {
       <Card className="space-y-2 p-4 text-sm">
         <h3 className="font-semibold">Investor terms</h3>
         <p className="text-muted-foreground">
-          {fmtEURk(state.global.trancheSize)} monthly tranches × {state.global.trancheCount} months
-          ({fmtEURk(totalFunding)} total) in exchange for{" "}
-          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Shareholders draw dividends every
-          six months from undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
+          Total raise: <b>{fmtEURk(totalFunding)}</b> for{" "}
+          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Drawn as{" "}
+          {fmtEURk(state.global.trancheSize)} tranches × {state.global.trancheCount} months. Each
+          tranche therefore buys <b>{fmtPct(equityPerTranche, 2)} equity</b> — so a €50k ticket is
+          worth 2.25% at the full-raise valuation. Shareholders draw dividends every six months from
+          undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
           <b>40% at M18, M24, M30 and M36</b> — split pro-rata by equity; the rest stays in the
           business. All 10 brands launch on a 3-week rolling cadence with a{" "}
           {state.global.freeTrialMonths}-month free trial.

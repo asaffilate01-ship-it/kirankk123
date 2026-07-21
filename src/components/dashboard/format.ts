@@ -15,4 +15,4 @@ export const fmtEURk = (n: number) => {
 export const fmtNum = (n: number) =>
   new Intl.NumberFormat("de-DE", { maximumFractionDigits: 0 }).format(Number.isFinite(n) ? n : 0);
 
-export const fmtPct = (n: number) => `${(n * 100).toFixed(1)}%`;
+export const fmtPct = (n: number, digits = 1) => `${(n * 100).toFixed(digits)}%`;
