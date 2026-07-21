@@ -21,6 +21,11 @@ export type Brand = {
   apps: { name: string; kind: "SaaS" | "Web" | "iOS" | "Android" | "API" | "Admin"; purpose: string }[];
   userTypes: { type: string; useCase: string }[];
   risks: { risk: string; mitigation: string }[];
+  currentMarket: {
+    howServed: string;
+    users: string;
+    revenue: string;
+  };
 };
 
 // Shared platform advantage — identical for every brand, injected into detail page.
