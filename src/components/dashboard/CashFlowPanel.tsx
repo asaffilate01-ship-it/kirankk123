@@ -55,7 +55,7 @@ export function CashFlowPanel() {
               <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
               <XAxis dataKey="m" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={70} />
-              <Tooltip formatter={(v: number) => fmtEURk(v)} />
+              <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend />
               <Area type="monotone" dataKey="Cash" stroke="#22c55e" fill="url(#cashG)" />
             </AreaChart>

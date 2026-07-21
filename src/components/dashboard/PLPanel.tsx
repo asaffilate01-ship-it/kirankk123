@@ -47,7 +47,7 @@ export function PLPanel() {
                 <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
                 <XAxis dataKey="m" tick={{ fontSize: 10 }} />
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
-                <Tooltip formatter={(v: number) => fmtEURk(v)} />
+                <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
                 <Line type="monotone" dataKey="Revenue" stroke="#22c55e" strokeWidth={2} dot={false} />
                 <Line type="monotone" dataKey="Costs" stroke="#ef4444" strokeWidth={2} dot={false} />
@@ -63,7 +63,7 @@ export function PLPanel() {
                 <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
                 <XAxis dataKey="m" tick={{ fontSize: 10 }} />
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
-                <Tooltip formatter={(v: number) => fmtEURk(v)} />
+                <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
                 <Bar dataKey="EBIT" fill="#6366f1" />
                 <Bar dataKey="Net" fill="#0ea5e9" />

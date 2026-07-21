@@ -56,7 +56,7 @@ export function ChartsPanel() {
               <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
               <XAxis dataKey="m" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
-              <Tooltip formatter={(v: number) => fmtEURk(v)} />
+              <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend wrapperStyle={{ fontSize: 10 }} />
               {BRANDS.map((b) => (
                 <Area
@@ -84,7 +84,7 @@ export function ChartsPanel() {
                   <Cell key={i} fill={d.color} />
                 ))}
               </Pie>
-              <Tooltip formatter={(v: number) => fmtEURk(v)} />
+              <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend wrapperStyle={{ fontSize: 10 }} />
             </PieChart>
           </ResponsiveContainer>
@@ -99,7 +99,7 @@ export function ChartsPanel() {
               <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
               <XAxis dataKey="m" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
-              <Tooltip formatter={(v: number) => fmtEURk(v)} />
+              <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend wrapperStyle={{ fontSize: 10 }} />
               <Bar dataKey="Direct" stackId="c" fill="#ef4444" />
               <Bar dataKey="HQ" stackId="c" fill="#f59e0b" />
