@@ -1,4 +1,4 @@
-import { createFileRoute, useRouter } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { unlockSite } from "@/lib/gate.functions";
@@ -19,7 +19,6 @@ export const Route = createFileRoute("/unlock")({
 });
 
 function Unlock() {
-  const router = useRouter();
   const unlock = useServerFn(unlockSite);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
@@ -32,11 +31,12 @@ function Unlock() {
     try {
       const { ok } = await unlock({ data: { password } });
       if (ok) {
-        await router.navigate({ to: "/" });
-        router.invalidate();
-      } else {
-        setError(true);
+        // Hard navigation guarantees the new session cookie is used for the
+        // next request and the loader re-runs cleanly.
+        window.location.assign("/");
+        return;
       }
+      setError(true);
     } finally {
       setBusy(false);
     }
