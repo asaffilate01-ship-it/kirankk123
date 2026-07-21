@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
-import { unlockSite } from "@/lib/gate.functions";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +17,6 @@ export const Route = createFileRoute("/unlock")({
 });
 
 function Unlock() {
-  const unlock = useServerFn(unlockSite);
   const [error, setError] = useState(false);
   const [busy, setBusy] = useState(false);
   const [password, setPassword] = useState("");
@@ -34,7 +31,14 @@ function Unlock() {
     setBusy(true);
     setError(false);
     try {
-      const result = await unlock({ data: { password } });
+      const response = await fetch("/api/public/unlock", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      const result = (await response.json()) as
+        | { ok: true; token: string; cookieName: string; maxAge: number }
+        | { ok: false };
       const { ok } = result;
       if (ok) {
         setBrowserFallbackCookie(result.cookieName, result.token, result.maxAge);
