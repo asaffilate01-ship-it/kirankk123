@@ -33,6 +33,8 @@ export function CashFlowPanel() {
 
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
   const minMonth = rows.find((r) => r.cashBalance === minCash)?.month ?? 0;
+  const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
+  const founderPctLabel = `${100 - Math.round(state.global.investorEquityPct * 100)}%`;
 
   return (
     <div className="space-y-4">
