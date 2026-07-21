@@ -80,8 +80,14 @@ export const unlockSite = createServerFn({ method: "POST" })
     }
     const secret = process.env.SESSION_SECRET;
     if (!secret) throw new Error("SESSION_SECRET is not set");
-    setCookie(COOKIE_NAME, createUnlockToken(secret), cookieOptions());
-    return { ok: true as const };
+    const token = createUnlockToken(secret);
+    setCookie(COOKIE_NAME, token, cookieOptions());
+    return {
+      ok: true as const,
+      token,
+      cookieName: COOKIE_NAME,
+      maxAge: COOKIE_MAX_AGE,
+    };
   });
 
 export const lockSite = createServerFn({ method: "POST" }).handler(async () => {
