@@ -764,4 +764,78 @@ export const BRANDS: Brand[] = [
       { risk: "Dependence on financing/insurance partners for ancillary revenue", mitigation: "Multi-partner integrations (Santander, CreditPlus, Allianz, HUK) with revenue-share diversification; no single partner exceeds 30% of ancillary revenue." },
     ],
   },
+  {
+    id: "konnevia",
+    name: "KONNEVIA",
+    tagline: "WhatsApp Workflow Platform for Germany",
+    description:
+      "Konnevia turns WhatsApp into a controlled business process. Every conversation becomes a case with qualification, appointment, document request, quote, payment, third-party fulfilment and follow-up — one engine sold three ways: embedded add-on inside any LoungeTech brand, standalone SaaS for independent SMEs, and a partner/white-label edition for agencies and groups.",
+    market:
+      "≈3.3m SMEs in Germany, ≈60m WhatsApp users; €1.8bn addressable customer-conversation SaaS TAM (WhatsApp Business Platform, helpdesk, appointment & workflow tooling).",
+    audience:
+      "Independent SMEs in beauty, trades, healthcare, real-estate, hospitality, automotive; in-house teams inside LoungeTech brands; agencies, consultancies and franchise groups running many client tenants.",
+    competitors: [
+      { name: "Superchat", strength: "Established DE WhatsApp inbox brand", counter: "Case-based workflow engine (not just an inbox), embedded distribution across 11 sister brands, and 30% cheaper standalone tier" },
+      { name: "Charles", strength: "Commerce focus, Shopify integrations", counter: "Vertical workflow packs (LoungeBeauty, Trades, Care, Estate, Hosp, Auto) + § 203 StGB / DSGVO / TTDSG compliance out of the box, not just marketing sends" },
+      { name: "MessageBird / Bird", strength: "Global CPaaS scale", counter: "German-hosted (Frankfurt), German AVV, DE-native templates and support — MessageBird is US/NL-run and enterprise-priced" },
+      { name: "Team-Inbox tools (Trengo, Respond.io)", strength: "Multi-channel inbox", counter: "Not just a shared inbox: full case state machine, SLA, approvals, escrow-style quote→pay→reconcile, and Meta-approved template governance" },
+    ],
+    currentMarket: {
+      howServed:
+        "German SMEs run customer conversations across private WhatsApp on the owner's phone, e-mail, and paper. The digital 10-15% split between Superchat and Charles (WhatsApp-first inboxes), Trengo/Respond.io (multi-channel inboxes) and enterprise CPaaS (MessageBird, Twilio). None of them ship case management, quote-to-pay, third-party fulfilment or vertical workflow packs — those live in separate CRMs, invoicing tools and spreadsheets. § 203 StGB and DSGVO obligations are largely ignored on private phones.",
+      users:
+        "≈3.3m SMEs in DE, ≈60m WhatsApp users; ≈250k SMEs use a paid WhatsApp Business tool today, ≈3m still on private WhatsApp or e-mail.",
+      revenue:
+        "≈€420m/yr paid WhatsApp Business + inbox SaaS spend in DE; the wider customer-conversation & workflow stack SMEs already buy (CRM, ticketing, appointment, invoicing) is ≈€1.8bn/yr — Konnevia consolidates that stack.",
+    },
+    defaultLaunchMonth: 3,
+    defaultInitialUsers: 260,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 99,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 6000,
+    defaultDirectCost: 5200,
+    color: "#25D366",
+    domain: "konnevia.de",
+    reason:
+      "German SMEs already run their business on WhatsApp — but on private phones, with no audit trail, no consent management, no SLA and no compliance with § 203 StGB / DSGVO / TTDSG. Existing tools are either shared inboxes (no workflow) or enterprise CPaaS (too expensive). Konnevia gives every SME — and every LoungeTech brand — a compliant, case-based WhatsApp workflow engine that turns chats into revenue.",
+    proposition:
+      "One engine, three surfaces. (1) Embedded add-on inside a LoungeTech brand at €29/€69/€149 per month — shared login, data and billing with the host product. (2) Standalone SaaS at €49/€99/€249 for independent SMEs — own tenant, own number, own inbox, workflows and staff app. (3) Partner edition from €499/mo for agencies and groups — multi-tenant, delegated support, branding and commission accounting built in. Every tier ships DSGVO-first, EU-hosted, with Meta-approved template governance and § 203 StGB safeguards.",
+    features: [
+      "Case state machine: intake → qualify → quote → schedule → fulfil → follow-up",
+      "Unified inbox: AI, agent, manager, partner — one thread, different views",
+      "AI drafting, triage and data capture with human-in-the-loop on regulated steps",
+      "Vertical workflow packs (Beauty, Trades, Care, Estate, Hosp, Auto) pre-installed",
+      "Consent, purpose-binding, frequency caps and DSGVO event log",
+      "Secure portal links (short-lived signed URLs) for IDs, invoices, contracts",
+      "Roles & approvals: Owner, Admin, Manager, Agent, Finance, Compliance, Partner",
+      "Third-party fulfilment: bring in partners, scope data, track SLAs",
+      "Meta-approved template governance with versioning, sign-off and rollback",
+      "Quote → approval → send → collect → reconcile flow with SEPA + card",
+      "Analytics: automation rate, CSAT, SLA breaches, revenue attribution",
+      "White-label: brand, domain, from-name and templates per tenant",
+    ],
+    apps: [
+      { name: "Konnevia Workspace", kind: "Web", purpose: "Agent + manager console: inbox, cases, workflows, analytics" },
+      { name: "Konnevia Staff", kind: "iOS", purpose: "On-the-go staff app for field agents and technicians" },
+      { name: "Konnevia Staff Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "Konnevia Portal", kind: "Web", purpose: "Customer-facing secure portal for uploads, quotes and payments" },
+      { name: "Konnevia Partner", kind: "SaaS", purpose: "Agency multi-tenant console with commissions and branding" },
+      { name: "Konnevia Cloud API", kind: "API", purpose: "WhatsApp Cloud API + workflow engine for embedded use inside LoungeTech brands" },
+      { name: "Konnevia Admin", kind: "Admin", purpose: "Trust, safety, template governance, break-glass access review" },
+    ],
+    userTypes: [
+      { type: "SME owner", useCase: "Sees every customer conversation and case in one compliant workspace instead of on a private phone." },
+      { type: "Agent / receptionist", useCase: "Runs qualification, quotes and appointments from WhatsApp with AI drafts." },
+      { type: "Manager / operations", useCase: "Tracks SLA, automation rate and revenue per workflow across the team." },
+      { type: "Compliance / finance", useCase: "Audits every message, consent and payment; exports DSGVO records on demand." },
+      { type: "Partner / agency", useCase: "Runs many client tenants with delegated support, branding and commission accounting." },
+      { type: "LoungeTech sister brand", useCase: "Embeds Konnevia inside its own product as a native WhatsApp add-on." },
+    ],
+    risks: [
+      { risk: "Meta policy changes on WhatsApp Business Platform", mitigation: "Authorised Meta partner path, template governance with rollback, and multi-channel fallback (SMS, e-mail, portal) so no workflow depends on a single Meta approval." },
+      { risk: "Superchat / Charles compete on price on the standalone tier", mitigation: "Embedded distribution across 11 sister brands is a channel neither has; standalone tier is a lead source, not the profit centre." },
+      { risk: "§ 203 StGB / DSGVO enforcement on healthcare & legal tenants", mitigation: "Purpose-bound consent, EU-only data residency, RLS, break-glass access with review, and vertical packs (LoungeCare) reviewed by in-house counsel." },
+    ],
+  },
 ];
