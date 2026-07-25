@@ -80,8 +80,8 @@ function BrandDetail() {
               <Download className="mr-1 h-4 w-4" /> Download PDF
             </Button>
             {BRAND_LOGOS[brand.id] ? (
-              <div className="flex h-6 w-[100px] items-center justify-center">
-                <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="h-full w-full object-contain" />
+              <div className="flex h-6 w-[120px] items-center justify-center">
+                <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="max-h-full w-auto max-w-full object-contain" />
               </div>
             ) : (
               <span className="h-3 w-3 rounded-full" style={{ background: brand.color }} aria-hidden />
@@ -94,11 +94,11 @@ function BrandDetail() {
         <div className="space-y-4">
           <div>
             {BRAND_LOGOS[brand.id] && (
-              <div className="mb-3 flex h-16 w-[280px] items-center justify-center">
+              <div className="mb-3 flex h-16 w-[320px] items-center justify-center">
                 <img
                   src={BRAND_LOGOS[brand.id]}
                   alt={`${brand.name} logo`}
-                  className="h-full w-full object-contain"
+                  className="max-h-full w-auto max-w-full object-contain"
                 />
               </div>
             )}
