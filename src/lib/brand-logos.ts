@@ -4,6 +4,7 @@ import viazenoLogo from "@/assets/viazeno-logo.png.asset.json";
 import rettioLogo from "@/assets/rettio-logo.png.asset.json";
 import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
+import zivvoLogo from "@/assets/zivvo-logo.png";
 
 export const BRAND_LOGOS: Record<string, string> = {
   haccora: haccoraLogo.url,
@@ -12,4 +13,5 @@ export const BRAND_LOGOS: Record<string, string> = {
   rettio: rettioLogo.url,
   beratermarkt: beratermarktLogo.url,
   traindirekt: traindirektLogo.url,
+  zivvo: zivvoLogo,
 };
