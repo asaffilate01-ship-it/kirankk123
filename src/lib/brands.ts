@@ -838,4 +838,77 @@ export const BRANDS: Brand[] = [
       { risk: "§ 203 StGB / DSGVO enforcement on healthcare & legal tenants", mitigation: "Purpose-bound consent, EU-only data residency, RLS, break-glass access with review, and vertical packs (LoungeCare) reviewed by in-house counsel." },
     ],
   },
+  {
+    id: "unipathway",
+    name: "UNIPATHWAY",
+    tagline: "UK & Germany study consultancy for Pakistani students",
+    description:
+      "End-to-end admissions, language-prep (IELTS, TestDaF, Goethe), Sperrkonto, visa and pre-departure guidance for Pakistani students heading to universities in the UK and Germany. Runs entirely online with a Karachi/Lahore ground team and DE/UK-hosted student portal.",
+    market:
+      "≈50,000 Pakistani students go abroad each year; UK + Germany absorb ≈18,000 of them. Addressable consultancy + prep TAM ≈€180m/yr.",
+    audience:
+      "Pakistani undergraduates and A-level / FSc leavers, master's applicants, and their parents; secondary: Pakistani employers sponsoring staff for German Fachkräfte visas.",
+    competitors: [
+      { name: "IDP / British Council counselling", strength: "Brand trust, testing monopoly on IELTS", counter: "Fixed transparent fee, end-to-end (admission → visa → arrival) instead of per-service, and success-based refunds if visa is refused on our error" },
+      { name: "Local Pakistani agents (SI-UK, Times Consultant)", strength: "High-street presence in every city", counter: "Digital portal + AI shortlisting + verified Germany rails (Sperrkonto, APS, Uni-Assist) that most agents outsource" },
+      { name: "DAAD / self-service", strength: "Free official information", counter: "We do the actual paperwork, Uni-Assist submission, Sperrkonto opening and visa dossier — DAAD only informs" },
+    ],
+    currentMarket: {
+      howServed:
+        "Pakistani students today rely on a fragmented mix: British Council/IDP for IELTS and UK counselling, DAAD info-only for Germany, and thousands of small local agents charging per-service commissions. Germany-specific rails (APS certificate, Uni-Assist, Sperrkonto, Krankenversicherung, block-account) are poorly handled — most agents only cover the UK. Families juggle 4–6 vendors to get one student from Karachi to Berlin.",
+      users:
+        "≈50,000 outbound Pakistani students/yr; ≈8,000 to the UK, ≈10,000 to Germany. Only ≈15% currently use structured digital consultancy.",
+      revenue:
+        "≈€120m/yr spent on Pakistani outbound consultancy + language prep + visa filing across UK/DE; another ≈€80m in Sperrkonto float, insurance and pre-departure services.",
+    },
+    defaultLaunchMonth: 4,
+    defaultInitialUsers: 180,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 149,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 8000,
+    defaultDirectCost: 5000,
+    color: "#8B1538",
+    domain: "unipathway.pk",
+    reason:
+      "Pakistani families lose lakhs of rupees every year to fragmented agents, mis-filed Uni-Assist applications and rejected visa dossiers. Germany in particular is under-served: the APS certificate, Sperrkonto opening and Krankenversicherung enrolment intimidate students and most agents skip them. UNIPATHWAY is the one operator that handles the full UK and Germany pathway digitally, with fixed fees and refund-on-error guarantees.",
+    proposition:
+      "One student portal from IELTS/TestDaF booking to landing in Berlin or London: AI-driven university shortlisting, document vault, Uni-Assist / UCAS submission, Sperrkonto opening with a partner bank, health insurance enrolment, visa-dossier builder, and pre-departure briefing. Fixed transparent fees (₨) with a partial refund if a visa is refused due to our filing error.",
+    features: [
+      "AI university shortlister matching CGPA, budget, subject, IELTS/TestDaF scores",
+      "Document vault with checklist per country and per university",
+      "Uni-Assist and UCAS submission engine with tracking",
+      "Language-prep classroom (IELTS, TestDaF, Goethe A1–C1) with mock exams",
+      "Sperrkonto opening via partner bank (Expatrio / Fintiba equivalent)",
+      "APS certificate workflow for Germany applicants",
+      "Visa-dossier builder for UK Student Route and German § 16b",
+      "Krankenversicherung enrolment (TK, Mawista) for DE arrivals",
+      "Accommodation shortlist in host city (Studentenwerk + private)",
+      "Parent portal in Urdu with milestone SMS/WhatsApp updates",
+      "Alumni mentor network in London, Berlin, Munich, Manchester",
+      "Refund-on-error clause tied to submission audit trail",
+    ],
+    apps: [
+      { name: "UNIPATHWAY Student", kind: "Web", purpose: "Student portal: shortlist, applications, documents, payments, visa tracker" },
+      { name: "UNIPATHWAY Learn", kind: "SaaS", purpose: "IELTS / TestDaF / Goethe classroom with live tutors and mocks" },
+      { name: "UNIPATHWAY Parent", kind: "Web", purpose: "Parent-facing Urdu progress dashboard with WhatsApp updates" },
+      { name: "UNIPATHWAY Counsellor", kind: "SaaS", purpose: "Counsellor console with case pipeline, Uni-Assist / UCAS integration" },
+      { name: "UNIPATHWAY Mobile", kind: "iOS", purpose: "On-the-go document capture, chat with counsellor, visa checklist" },
+      { name: "UNIPATHWAY Mobile Android", kind: "Android", purpose: "Same, on Android — primary device in the target market" },
+      { name: "UNIPATHWAY Admin", kind: "Admin", purpose: "Ops console for partner banks, universities, visa authorities and finance" },
+    ],
+    userTypes: [
+      { type: "Undergraduate applicant", useCase: "FSc / A-levels student targeting a UK or German bachelor's, needs shortlisting, language prep and visa help." },
+      { type: "Master's applicant", useCase: "Pakistani graduate targeting UK MSc or German M.Sc., needs APS, Uni-Assist and Sperrkonto." },
+      { type: "Parent / sponsor", useCase: "Pays the bill and wants a transparent Urdu-language view of progress and refunds." },
+      { type: "Counsellor (in-house)", useCase: "Runs 40–60 students in a pipeline with SLA and document audit trail." },
+      { type: "Partner bank / insurer", useCase: "Receives verified Sperrkonto and Krankenversicherung leads with pre-filled KYC." },
+      { type: "Alumni mentor", useCase: "London/Berlin-based alumnus mentoring 1–3 incoming students per intake." },
+    ],
+    risks: [
+      { risk: "UK or Germany tightens student visa quotas or salary rules", mitigation: "Dual-country model (UK + DE) plus emerging rails to Ireland and the Netherlands; not dependent on a single visa regime." },
+      { risk: "Regulatory scrutiny of Pakistani education agents (SECP, HEC)", mitigation: "Licensed as a private limited entity in PK, transparent fee schedule, and DAAD/British Council-aligned counselling standards — we welcome regulation." },
+      { risk: "FX and remittance friction on student payments", mitigation: "SBP-compliant fee collection in PKR, partner bank rails for Sperrkonto funding, and installment plans to smooth family cash-flow." },
+    ],
+  },
 ];
