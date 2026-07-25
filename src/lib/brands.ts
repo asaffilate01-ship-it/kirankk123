@@ -634,4 +634,67 @@ export const BRANDS: Brand[] = [
       { risk: "Charity substitute pressure", mitigation: "Sold B2B to HR budgets, not competing for consumer wallet share; charities become referral partners." },
     ],
   },
+  {
+    id: "traindirekt",
+    name: "TRAINDIREKT",
+    tagline: "Funded German-language & tech courses for adults in Germany",
+    description:
+      "Online academy delivering AZAV- and BAMF-zertifizierte German-language and technology courses. Students can be funded via Bildungsgutschein (Agentur für Arbeit / Jobcenter), BAMF Integrationskurse and Berufssprachkurse, employer-funded (Qualifizierungschancengesetz / Aufstiegs-BAföG), or self-funded.",
+    market: "≈1.8m adults in DE eligible for funded further-education/language courses per year; €4.2bn combined AZAV + BAMF + employer L&D spend.",
+    audience: "Job-seekers with Bildungsgutschein, migrants on Integrationskurse, employees on Qualifizierungschancengesetz, self-paying career switchers, employers upskilling staff.",
+    competitors: [
+      { name: "DeutschAkademie / Speexx / Lingoda", strength: "Established language-course brands", counter: "Full AZAV + BAMF Trägerzulassung so students pay €0 out-of-pocket; combined German + tech curriculum in one Träger" },
+      { name: "IU Akademie / WBS Training / alfatraining", strength: "Large AZAV-certified tech Weiterbildungs-catalogue", counter: "Modern SaaS learning platform, live cohort + on-demand hybrid, price 20% below WBS on employer contracts, and language + tech in one funding-code bundle" },
+    ],
+    currentMarket: {
+      howServed:
+        "Funded further-education in Germany is fragmented across three funding rails. AZAV-certified Träger (WBS Training, alfatraining, IU Akademie, Comcave) redeem Bildungsgutscheine from the Agentur für Arbeit / Jobcenter for tech and business courses. BAMF-licensed providers (Volkshochschulen, DeutschAkademie, inlingua) run Integrationskurse and Berufssprachkurse (B1-C1). Employers fund staff development directly under the Qualifizierungschancengesetz, and a self-pay long tail buys from Lingoda, Babbel Live and Udemy Business. Very few providers hold BOTH AZAV and BAMF Trägerzulassung — students who want language + tech usually enrol at two different schools.",
+      users: "≈420k Bildungsgutscheine issued/yr, ≈340k BAMF Integrationskurs-Teilnehmer/yr, ≈1.1m employees on Qualifizierungschancengesetz measures.",
+      revenue: "≈€2.6bn AZAV Weiterbildung + €800m BAMF language courses + €800m employer-funded upskilling = ≈€4.2bn addressable in DE.",
+    },
+    defaultLaunchMonth: 3,
+    defaultInitialUsers: 160,
+    defaultUserGrowth: 0.17,
+    defaultArpu: 149,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 6000,
+    defaultDirectCost: 5200,
+    color: "#0ea5e9",
+    domain: "traindirekt.de",
+    reason:
+      "German adults who want to retrain — whether unemployed, newly arrived, or upskilling in-role — face a maze of Träger, funding codes and paper applications. Almost no provider offers language AND technology courses under one Trägerzulassung, so a migrant learning German who also wants an IT re-training has to enrol twice. TRAINDIREKT collapses German-language and tech Weiterbildung into a single AZAV + BAMF-zertifizierte platform, funded by whichever rail the student qualifies for.",
+    proposition:
+      "One academy, four funding paths: (1) Bildungsgutschein via AZAV — €0 for the student, invoiced to the Agentur für Arbeit / Jobcenter; (2) BAMF Integrations- and Berufssprachkurse — €0 for eligible migrants, invoiced to BAMF; (3) Employer-funded under Qualifizierungschancengesetz — invoiced to the employer with up to 100% Lohnkostenzuschuss; (4) Self-funded at €149/mo with SEPA-Ratenzahlung. Courses combine live cohort sessions, on-demand video, AI tutors and IHK / telc / Goethe exam prep.",
+    features: [
+      "AZAV-zertifiziert (Bildungsgutschein-fähig) — student pays €0",
+      "BAMF-Trägerzulassung for Integrations- & Berufssprachkurse (A1-C1)",
+      "Employer portal for Qualifizierungschancengesetz-funded upskilling",
+      "Self-pay tier with SEPA-Ratenzahlung (€0 down)",
+      "German-language tracks: A1, A2, B1, B2, C1, Berufssprache, telc & Goethe prep",
+      "Tech tracks: Web dev, Data & AI, Cloud (AWS/Azure), Cybersecurity, SAP",
+      "Live cohort classes + on-demand video + AI tutor per learner",
+      "Automatic Anwesenheitsnachweis for Agentur für Arbeit / Jobcenter",
+      "IHK, telc, Goethe and vendor-cert exam prep & booking",
+      "Employer dashboard: seat management, progress, invoicing, ZUG-Meldung",
+    ],
+    apps: [
+      { name: "TRAINDIREKT Academy", kind: "Web", purpose: "Learner LMS: live classes, on-demand video, assignments, exams" },
+      { name: "TRAINDIREKT Mobile", kind: "iOS", purpose: "On-the-go lessons, flashcards, attendance check-in" },
+      { name: "TRAINDIREKT Mobile Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "TRAINDIREKT Employer", kind: "Web", purpose: "HR portal: seat allocation, funding applications, invoicing" },
+      { name: "TRAINDIREKT Träger", kind: "Admin", purpose: "AZAV/BAMF compliance console: Anwesenheit, Maßnahmen, Abrechnung" },
+    ],
+    userTypes: [
+      { type: "Bildungsgutschein-Inhaber", useCase: "Redeems Gutschein for a 6-month AZAV tech Umschulung at €0 personal cost." },
+      { type: "Migrant on BAMF-Kurs", useCase: "Books an Integrationskurs or Berufssprachkurs, funded by BAMF, exam-ready in B1/B2." },
+      { type: "Employee (Qualifizierungschancengesetz)", useCase: "Employer books an upskilling track, up to 100% co-funded by the Agentur für Arbeit." },
+      { type: "Self-funded career switcher", useCase: "Pays €149/mo via SEPA to combine B2-German with a Data Analytics certificate." },
+      { type: "Employer / HR L&D", useCase: "Manages a team of learners across language + tech with one invoice." },
+    ],
+    risks: [
+      { risk: "Loss or delay of AZAV / BAMF Trägerzulassung", mitigation: "In-house Zulassungsmanager, dual-audit calendar (fachkundige Stelle + BAMF), and a self-pay + employer channel that keeps revenue flowing if a single Zulassung lapses." },
+      { risk: "Policy change to Bildungsgutschein rules", mitigation: "Four independent funding rails (AZAV, BAMF, employer, self-pay) — no single policy shift can zero the pipeline." },
+      { risk: "Completion / Anwesenheit below AZAV threshold", mitigation: "AI-driven early-warning on attendance, live coach outreach, and hybrid live+on-demand format proven to lift completion above the 70% AZAV bar." },
+    ],
+  },
 ];
