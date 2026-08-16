@@ -734,5 +734,18 @@ export const DE: Record<string, string> = {
  "Investor dividends": "Investorendividenden",
  "MRR": "MRR",
  "Users": "Nutzer",
- "launches": "Starts"
+ "launches": "Starts",
+ "Total raise:": "Gesamtvolumen:",
+ "for": "für",
+ "equity": "Anteile",
+ "Drawn as": "Abgerufen in",
+ "tranches ×": "Tranchen ×",
+ "months.": "Monaten.",
+ "Each tranche therefore buys": "Jede Tranche erwirbt somit",
+ "so a €50k ticket is worth 2.25% at the full-raise valuation.": "ein 50.000-€-Ticket entspricht also 2,25 % bei vollständigem Abruf.",
+ "Shareholders draw dividends every six months from undistributed net profit —": "Gesellschafter entnehmen alle sechs Monate Dividenden aus dem nicht ausgeschütteten Jahresüberschuss —",
+ "then": "dann",
+ "split pro-rata by equity; the rest stays in the business.": "anteilig nach Beteiligung verteilt; der Rest bleibt im Unternehmen.",
+ "All 10 brands launch on a 3-week rolling cadence with a": "Alle 10 Marken starten im 3-Wochen-Rhythmus mit",
+ "-month free trial.": "-monatiger kostenloser Testphase."
 };
