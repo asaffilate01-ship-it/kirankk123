@@ -84,15 +84,19 @@ export function OverviewPanel() {
       <Card className="space-y-2 p-4 text-sm">
         <h3 className="font-semibold">{t("Investor terms")}</h3>
         <p className="text-muted-foreground">
-          Total raise: <b>{fmtEURk(totalFunding)}</b> for{" "}
-          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Drawn as{" "}
-          {fmtEURk(state.global.trancheSize)} tranches × {state.global.trancheCount} months. Each
-          tranche therefore buys <b>{fmtPct(equityPerTranche, 2)} equity</b> — so a €50k ticket is
-          worth 2.25% at the full-raise valuation. Shareholders draw dividends every six months from
-          undistributed net profit — <b>{t("20% at M6")}</b>, <b>{t("30% at M12")}</b>, then{" "}
-          <b>{t("40% at M18, M24, M30 and M36")}</b> — split pro-rata by equity; the rest stays in the
-          business. All 10 brands launch on a 3-week rolling cadence with a{" "}
-          {state.global.freeTrialMonths}-month free trial.
+          {t("Total raise:")} <b>{fmtEURk(totalFunding)}</b>{" "}
+          {t("for")} <b>{fmtPct(state.global.investorEquityPct)} {t("equity")}</b>.{" "}
+          {t("Drawn as")} {fmtEURk(state.global.trancheSize)} {t("tranches ×")}{" "}
+          {state.global.trancheCount} {t("months.")}{" "}
+          {t("Each tranche therefore buys")} <b>{fmtPct(equityPerTranche, 2)} {t("equity")}</b> —{" "}
+          {t("so a €50k ticket is worth 2.25% at the full-raise valuation.")}{" "}
+          {t("Shareholders draw dividends every six months from undistributed net profit —")}{" "}
+          <b>{t("20% at M6")}</b>, <b>{t("30% at M12")}</b>, {t("then")}{" "}
+          <b>{t("40% at M18, M24, M30 and M36")}</b> —{" "}
+          {t("split pro-rata by equity; the rest stays in the business.")}{" "}
+          {t("All 10 brands launch on a 3-week rolling cadence with a")}{" "}
+          {state.global.freeTrialMonths}
+          {t("-month free trial.")}
         </p>
       </Card>
 
