@@ -2335,8 +2335,8 @@ export const BRANDS: Brand[] = [
   {
     id: "lawquo",
     name: "LAWQUO",
-    region: "DE",
-    tagline: "Der globale Legal Operating System f\u00fcr Mandanten und Kanzleien",
+    region: "UK",
+    tagline: "The legal operating system for clients and law firms",
     domain: "lawquo.co.uk",
     description: "Verified lawyer marketplace plus secure case management: clients find vetted solicitors, agree milestone-based fees, and every document and payment sits in one audited case file.",
     market: "\u2248165,000 Rechtsanw\u00e4lte in Germany; \u2248\u20ac25bn legal services market.",
