@@ -14,7 +14,7 @@ import { downloadBrandPdf } from "@/lib/brand-pdf";
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
     const { unlocked } = await requireUnlocked();
-    if (!unlocked) throw redirect({ to: "/unlock", search: {} });
+    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
     const brand = BRANDS.find((b) => b.id === params.brandId);
     if (!brand) throw notFound();
     return { brand };

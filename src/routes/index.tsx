@@ -17,7 +17,7 @@ import { LogOut } from "lucide-react";
 export const Route = createFileRoute("/")({
   loader: async () => {
     const { unlocked } = await requireUnlocked();
-    if (!unlocked) throw redirect({ to: "/unlock", search: {} });
+    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
   },
   head: () => ({
     meta: [
@@ -45,7 +45,7 @@ function Index() {
   const lock = useServerFn(lockSite);
   async function handleLock() {
     await lock({});
-    await router.navigate({ to: "/unlock", search: {} });
+    await router.navigate({ to: "/unlock", search: { error: undefined } });
     router.invalidate();
   }
   return (
