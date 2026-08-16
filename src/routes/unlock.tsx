@@ -5,7 +5,9 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import logoEn from "@/assets/itechlounge-logo-en.png";
+import { logoFor } from "@/lib/logo";
+import { useLang } from "@/lib/i18n";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { unlockSite } from "@/lib/gate.functions";
 import { saveGateToken } from "@/lib/gate-client";
 
@@ -30,6 +32,7 @@ export const Route = createFileRoute("/unlock")({
 function Unlock() {
   const { error: searchError } = Route.useSearch();
   const navigate = useNavigate();
+  const { lang } = useLang();
   const unlock = useServerFn(unlockSite);
   const [error, setError] = useState<string | undefined>(searchError);
   const [busy, setBusy] = useState(false);
@@ -56,8 +59,11 @@ function Unlock() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm space-y-5 p-6">
+        <div className="flex justify-end">
+          <LanguageToggle />
+        </div>
         <div className="flex flex-col items-center gap-3 text-center">
-          <img src={logoEn} alt={t("iTechLounge")} className="h-16 w-auto" />
+          <img src={logoFor(lang)} alt={t("iTechLounge")} className="h-16 w-auto" />
           <div>
             <h1 className="text-lg font-semibold tracking-tight">{t("Dashboard")}</h1>
             <p className="text-xs text-muted-foreground">{t("Enter the access password to view the financial model.")}</p>

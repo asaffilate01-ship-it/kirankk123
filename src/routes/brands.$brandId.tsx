@@ -11,6 +11,7 @@ import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { GateGuard } from "@/components/GateGuard";
 import { BRAND_LOGOS } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
@@ -78,6 +79,7 @@ function BrandDetail() {
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />{t("Back to dashboard")}</Link>
           <div className="flex items-center gap-3">
+            <LanguageToggle />
             <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
               <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
             {BRAND_LOGOS[brand.id] ? (

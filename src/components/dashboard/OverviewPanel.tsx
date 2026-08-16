@@ -4,13 +4,12 @@ import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
-import logoEn from "@/assets/itechlounge-logo-en.png";
-import logoDe from "@/assets/itechlounge-logo-de.png";
-import logoEnDark from "@/assets/itechlounge-logo-en-dark.png";
-import logoDeDark from "@/assets/itechlounge-logo-de-dark.png";
+import { logoFor, logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
+import { useLang } from "@/lib/i18n";
 
 export function OverviewPanel() {
   const state = useFinance();
+  const { lang } = useLang();
   const rows = useMemo(() => buildModel(state), [state]);
   const years = useMemo(() => yearSummaries(rows), [rows]);
   const last = rows[rows.length - 1];
@@ -30,7 +29,7 @@ export function OverviewPanel() {
     <div className="space-y-4">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <img
-          src={logoEn}
+          src={logoFor(lang)}
           alt={t("iTechLounge")}
           className="h-32 w-auto shrink-0"
         />
