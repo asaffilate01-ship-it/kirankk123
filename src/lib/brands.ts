@@ -355,7 +355,7 @@ export const BRANDS: Brand[] = [
     risks: [
       { risk: "Google adds niche filters", mitigation: "Community-owned data + DE privacy narrative is a brand moat Google can't clone quickly." },
       { risk: "Fake reviews", mitigation: "Verified-purchase reviews via Rettio/EventPlanr integrations; community mod team." },
-      { risk: "Cold-start in new cities", mitigation: "Bootstrapped via KINDERSTARS + RETTIO + BERATERMARKT merchants already on the group platform." },
+      { risk: "Cold-start in new cities", mitigation: "Bootstrapped via KINDERSTARS + RETTIO + BERATEMARKT merchants already on the group platform." },
     ],
   },
   {
@@ -385,7 +385,7 @@ export const BRANDS: Brand[] = [
     color: "#6366f1",
     domain: "beratemarkt.de",
     reason:
-      "SMBs need lawyer + tax advisor + auditor + bookkeeper working together, but each hides behind a single-profession portal. Clients repeat their story four times and pay four onboarding fees. BERATERMARKT is one client dashboard, one document vault, cross-referrals baked in.",
+      "SMBs need lawyer + tax advisor + auditor + bookkeeper working together, but each hides behind a single-profession portal. Clients repeat their story four times and pay four onboarding fees. BERATEMARKT is one client dashboard, one document vault, cross-referrals baked in.",
     proposition:
       "Advisors pay €89/mo to appear, receive referrals from adjacent professions (RA→StB→WP→Buchhalter) and share documents via a secure GoBD-compliant portal. Clients get a single relationship manager across all four disciplines.",
     features: [
@@ -399,10 +399,10 @@ export const BRANDS: Brand[] = [
       "Encrypted messaging with retention rules",
     ],
     apps: [
-      { name: "BERATERMARKT Advisor", kind: "Web", purpose: "Advisor workspace & referrals" },
-      { name: "BERATERMARKT Client", kind: "Web", purpose: "Client dashboard & documents" },
-      { name: "BERATERMARKT Client Mobile", kind: "iOS", purpose: "On-the-go document upload & signing" },
-      { name: "BERATERMARKT Vault", kind: "API", purpose: "GoBD document API for DATEV / lexoffice" },
+      { name: "BERATEMARKT Advisor", kind: "Web", purpose: "Advisor workspace & referrals" },
+      { name: "BERATEMARKT Client", kind: "Web", purpose: "Client dashboard & documents" },
+      { name: "BERATEMARKT Client Mobile", kind: "iOS", purpose: "On-the-go document upload & signing" },
+      { name: "BERATEMARKT Vault", kind: "API", purpose: "GoBD document API for DATEV / lexoffice" },
     ],
     userTypes: [
       { type: "Steuerberater", useCase: "Receives referrals from partner lawyers; bills via portal." },
@@ -2146,7 +2146,7 @@ export const BRANDS: Brand[] = [
     defaultChurn: 0.03,
     defaultAddlRevenue: 7000,
     defaultDirectCost: 6000,
-    reason: "German salons still run paper appointment books and lose double-digit revenue to no-shows, while Treatwell charges commission on every new client. STYLESYNC DE offers flat-fee software with deposits built in.",
+    reason: "German salons still run paper appointment books and lose double-digit revenue to no-shows, while Treatwell charges commission on every new client. SCHONOVA offers flat-fee software with deposits built in.",
     proposition: "Flat monthly fee, no booking commission: online booking with deposits, staff rota, stock, TSE/GoBD-compliant checkout, DSGVO-safe client and patch-test records, and automated WhatsApp reminders in German.",
     features: [
       "Online-Buchung mit Anzahlung gegen No-Shows",
