@@ -748,4 +748,10 @@ export const DE: Record<string, string> = {
  "split pro-rata by equity; the rest stays in the business.": "anteilig nach Beteiligung verteilt; der Rest bleibt im Unternehmen.",
  "All 10 brands launch on a 3-week rolling cadence with a": "Alle 10 Marken starten im 3-Wochen-Rhythmus mit",
  "-month free trial.": "-monatiger kostenloser Testphase."
+ "Company & domains": "Unternehmen & Domains",
+ "United Kingdom": "Vereinigtes K\u00f6nigreich",
+ "Germany": "Deutschland",
+ "download disabled": "Download deaktiviert",
+ "\u00a9 ITECHLOUNGE LTD / ITECHLOUNGE GMBH. The marks are shown for reference only \u2014 downloading, dragging and saving are disabled. Request the master files from the brand owner.": "\u00a9 ITECHLOUNGE LTD / ITECHLOUNGE GMBH. Die Marken dienen nur zur Ansicht \u2014 Herunterladen, Ziehen und Speichern sind deaktiviert. Die Masterdateien erhalten Sie beim Markeninhaber.",
+ "All four marks are transparent PNGs (no background box), tightly cropped to the artwork \u2014 ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.": "Alle vier Marken sind transparente PNGs (kein Hintergrundkasten), exakt auf das Motiv beschnitten \u2014 bereit f\u00fcr Visitenkarten, Briefpapier, Beschilderung, Pr\u00e4sentationen und Web. Helle Version auf wei\u00dfem oder hellem Papier, dunkle Version auf schwarzen, dunklen oder fotografischen Hintergr\u00fcnden.",
 };
