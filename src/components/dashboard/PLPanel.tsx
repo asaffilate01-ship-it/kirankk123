@@ -58,7 +58,8 @@ export function PLPanel() {
           </div>
         </Card>
         <Card className="p-4">
-          <h3 className="mb-2 font-semibold">{t("EBIT & Net profit (monthly)")}</h3>
+          <h3 className="mb-2 font-semibold">{t("Operating profit & net profit (monthly)")}</h3>
+          <p className="mb-2 text-xs text-muted-foreground">{t("Operating profit (EBIT) is what's left after running costs, before tax. Net profit is after tax.")}</p>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={chartData} margin={{ top: 8, right: 12, left: 8, bottom: 0 }}>
@@ -67,8 +68,8 @@ export function PLPanel() {
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
                 <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
-                <Bar dataKey="EBIT" name={t("EBIT")} fill="#6366f1" />
-                <Bar dataKey="Net" name={t("Net")} fill="#0ea5e9" />
+                <Bar dataKey="EBIT" name={t("Operating profit (EBIT)")} fill="#6366f1" />
+                <Bar dataKey="Net" name={t("Net profit")} fill="#0ea5e9" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -76,7 +77,8 @@ export function PLPanel() {
       </div>
 
       <Card className="p-4">
-        <h3 className="mb-3 font-semibold">{t("Annual P&L")}</h3>
+        <h3 className="mb-1 font-semibold">{t("Annual P&L")}</h3>
+        <p className="mb-3 text-xs text-muted-foreground">{t("P&L means profit and loss: revenue in, costs out, profit left over.")}</p>
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
@@ -91,12 +93,12 @@ export function PLPanel() {
               {[
                 { k: t("Revenue"), get: (y: any) => y.revenue, cls: "font-semibold" },
                 { k: t("Total costs"), get: (y: any) => -y.totalCost },
-                { k: t("EBIT"), get: (y: any) => y.ebit, cls: "font-semibold" },
-                { k: t("Margin"), get: (y: any) => y.margin, fmt: fmtPct },
+                { k: t("Operating profit (EBIT)"), get: (y: any) => y.ebit, cls: "font-semibold" },
+                { k: t("Profit margin"), get: (y: any) => y.margin, fmt: fmtPct },
                 { k: t("Tax"), get: (y: any) => -y.tax },
                 { k: t("Net profit"), get: (y: any) => y.netProfit, cls: "font-semibold" },
                 { k: `${t("Investor dividends")} (${investorPctLabel})`, get: (y: any) => y.investorShare },
-                { k: t("Year-end cash"), get: (y: any) => y.endCash, cls: "font-semibold" },
+                { k: t("Money in the bank at year end"), get: (y: any) => y.endCash, cls: "font-semibold" },
               ].map((row) => (
                 <TableRow key={row.k}>
                   <TableCell className={row.cls}>{row.k}</TableCell>
@@ -125,8 +127,8 @@ export function PLPanel() {
                 <TableHead className="text-right">{t("Tech")}</TableHead>
                 <TableHead className="text-right">{t("Marketing")}</TableHead>
                 <TableHead className="text-right">{t("Var opex")}</TableHead>
-                <TableHead className="text-right">{t("EBIT")}</TableHead>
-                <TableHead className="text-right">{t("Net")}</TableHead>
+                <TableHead className="text-right">{t("Operating profit")}</TableHead>
+                <TableHead className="text-right">{t("Net profit")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
