@@ -10,7 +10,6 @@ import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import { BrandLogo } from "@/components/BrandLogo";
 import { BRANDS } from "@/lib/brands";
-import { useLang } from "@/lib/i18n";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { lockSite } from "@/lib/gate.functions";
 import { GateGuard } from "@/components/GateGuard";

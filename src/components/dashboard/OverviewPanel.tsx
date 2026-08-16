@@ -4,12 +4,11 @@ import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
-import { logoFor, logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
-import { useLang } from "@/lib/i18n";
+import { logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function OverviewPanel() {
   const state = useFinance();
-  const { lang } = useLang();
   const rows = useMemo(() => buildModel(state), [state]);
   const years = useMemo(() => yearSummaries(rows), [rows]);
   const last = rows[rows.length - 1];
@@ -28,11 +27,7 @@ export function OverviewPanel() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-        <img
-          src={logoFor(lang)}
-          alt={t("iTechLounge")}
-          className="h-32 w-auto shrink-0"
-        />
+        <BrandLogo className="h-32" />
         <div>
           <h1 className="text-2xl font-bold tracking-tight">{t("iTechLounge")}</h1>
           <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
@@ -133,8 +128,25 @@ export function OverviewPanel() {
       </Card>
 
       <Card className="space-y-3 p-4 text-sm">
+        <h3 className="font-semibold">{t("Company & domains")}</h3>
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <div className="rounded-lg border p-3">
+            <div className="text-xs uppercase text-muted-foreground">{t("United Kingdom")}</div>
+            <div className="font-semibold">ITECHLOUNGE LTD</div>
+            <a href="https://itechlounge.co.uk" target="_blank" rel="noreferrer" className="text-primary hover:underline">itechlounge.co.uk ↗</a>
+          </div>
+          <div className="rounded-lg border p-3">
+            <div className="text-xs uppercase text-muted-foreground">{t("Germany")}</div>
+            <div className="font-semibold">ITECHLOUNGE GMBH</div>
+            <a href="https://itechlounge.de" target="_blank" rel="noreferrer" className="text-primary hover:underline">itechlounge.de ↗</a>
+          </div>
+        </div>
+      </Card>
+
+      <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">{t("Brand marks")}</h3>
-        <p className="text-muted-foreground">{t("All four files are transparent PNGs (no background box), tightly cropped to the artwork — ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.")}</p>
+        <p className="text-muted-foreground">{t("All four marks are transparent PNGs (no background box), tightly cropped to the artwork — ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.")}</p>
+        <p className="text-xs text-muted-foreground">{t("© ITECHLOUNGE LTD / ITECHLOUNGE GMBH. The marks are shown for reference only — downloading, dragging and saving are disabled. Request the master files from the brand owner.")}</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <MarkTile
             src={logoEn}
@@ -190,10 +202,10 @@ function MarkTile({
           dark ? "bg-zinc-900" : "bg-white"
         }`}
       >
-        <img src={src} alt={alt} className="max-h-28 w-auto object-contain" />
+        <BrandLogo src={src} alt={alt} dark={dark} className="h-28" />
       </div>
       <span className="text-xs text-muted-foreground">{label}</span>
-      <a href={src} download={file} className="text-xs font-medium text-primary hover:underline">{t("Download transparent PNG")}</a>
+      <span className="text-xs text-muted-foreground">{file} · {t("download disabled")}</span>
     </div>
   );
 }
