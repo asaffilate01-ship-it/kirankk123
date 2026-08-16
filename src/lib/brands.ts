@@ -3647,9 +3647,9 @@ export const BRANDS: Brand[] = [
   {
     id: "zorynnexus",
     name: "ZORYN NEXUS",
-    region: "INT",
+    region: "DE",
     tagline: "Money, payments and rewards infrastructure",
-    domain: "zoryn.io",
+    domain: "zorynbank.de",
     description: "The payments and money layer behind the iTechLounge group: merchant payments, wallets, payouts, multi-currency settlement and rewards infrastructure exposed as APIs to our brands and third parties.",
     market: "\u2248$2.3tn global payments revenue; embedded-finance platforms hold a fast-growing share.",
     audience: "Group brands, external merchants, marketplaces, platform partners.",
