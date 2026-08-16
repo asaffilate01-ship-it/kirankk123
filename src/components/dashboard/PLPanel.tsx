@@ -51,8 +51,8 @@ export function PLPanel() {
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
                 <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
-                <Line type="monotone" dataKey="Revenue" name={t("Revenue")}} stroke="#22c55e" strokeWidth={2} dot={false} />
-                <Line type="monotone" dataKey="Costs" name={t("Costs")}} stroke="#ef4444" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="Revenue" name={t("Revenue")} stroke="#22c55e" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="Costs" name={t("Costs")} stroke="#ef4444" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -67,8 +67,8 @@ export function PLPanel() {
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
                 <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
-                <Bar dataKey="EBIT" name={t("EBIT")}} fill="#6366f1" />
-                <Bar dataKey="Net" name={t("Net")}} fill="#0ea5e9" />
+                <Bar dataKey="EBIT" name={t("EBIT")} fill="#6366f1" />
+                <Bar dataKey="Net" name={t("Net")} fill="#0ea5e9" />
               </BarChart>
             </ResponsiveContainer>
           </div>

@@ -60,7 +60,7 @@ export function CashFlowPanel() {
               <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={70} />
               <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend />
-              <Area type="monotone" dataKey="Cash" name={t("Cash")}} stroke="#22c55e" fill="url(#cashG)" />
+              <Area type="monotone" dataKey="Cash" name={t("Cash")} stroke="#22c55e" fill="url(#cashG)" />
             </AreaChart>
           </ResponsiveContainer>
         </div>

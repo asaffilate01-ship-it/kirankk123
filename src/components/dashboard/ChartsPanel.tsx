@@ -102,12 +102,12 @@ export function ChartsPanel() {
               <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
               <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend wrapperStyle={{ fontSize: 10 }} />
-              <Bar dataKey="Direct" name={t("Direct")}} stackId="c" fill="#ef4444" />
-              <Bar dataKey="HQ" name={t("HQ")}} stackId="c" fill="#f59e0b" />
-              <Bar dataKey="Tech" name={t("Tech")}} stackId="c" fill="#6366f1" />
-              <Bar dataKey="Marketing" name={t("Marketing")}} stackId="c" fill="#ec4899" />
-              <Bar dataKey="Var opex" name={t("Var opex")}} stackId="c" fill="#0ea5e9" />
-              <Bar dataKey="Custom" name={t("Custom")}} stackId="c" fill="#a855f7" />
+              <Bar dataKey="Direct" name={t("Direct")} stackId="c" fill="#ef4444" />
+              <Bar dataKey="HQ" name={t("HQ")} stackId="c" fill="#f59e0b" />
+              <Bar dataKey="Tech" name={t("Tech")} stackId="c" fill="#6366f1" />
+              <Bar dataKey="Marketing" name={t("Marketing")} stackId="c" fill="#ec4899" />
+              <Bar dataKey="Var opex" name={t("Var opex")} stackId="c" fill="#0ea5e9" />
+              <Bar dataKey="Custom" name={t("Custom")} stackId="c" fill="#a855f7" />
             </BarChart>
           </ResponsiveContainer>
         </div>
