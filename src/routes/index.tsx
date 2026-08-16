@@ -79,7 +79,7 @@ function Index() {
             <TabsTrigger value="overview">{t("Overview")}</TabsTrigger>
             <TabsTrigger value="brands">{t("Brands")}</TabsTrigger>
             <TabsTrigger value="assumptions">{t("Assumptions")}</TabsTrigger>
-            <TabsTrigger value="pl">{t("P&amp;L")}</TabsTrigger>
+            <TabsTrigger value="pl">{t("P&L")}</TabsTrigger>
             <TabsTrigger value="cash">{t("Cash flow")}</TabsTrigger>
             <TabsTrigger value="bs">{t("Balance sheet")}</TabsTrigger>
             <TabsTrigger value="charts">{t("Charts")}</TabsTrigger>
