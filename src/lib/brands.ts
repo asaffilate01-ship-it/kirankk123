@@ -884,7 +884,7 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 8000,
     defaultDirectCost: 5000,
     color: "#8B1538",
-    domain: "unipathway.pk",
+    domain: "unipathways.pk",
     reason:
       "Pakistani families lose lakhs of rupees every year to fragmented agents, mis-filed Uni-Assist applications and rejected visa dossiers. Germany in particular is under-served: the APS certificate, Sperrkonto opening and Krankenversicherung enrolment intimidate students and most agents skip them. UNIPATHWAY is the one operator that handles the full UK and Germany pathway digitally, with fixed fees and refund-on-error guarantees.",
     proposition:
