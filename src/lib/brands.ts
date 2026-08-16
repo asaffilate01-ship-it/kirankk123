@@ -2,6 +2,8 @@ export type Brand = {
   id: string;
   name: string;
   tagline: string;
+  /** Market section: Germany, United Kingdom, or International. Defaults to Germany. */
+  region?: Region;
   description: string;
   market: string;
   audience: string;
@@ -27,6 +29,18 @@ export type Brand = {
     revenue: string;
   };
 };
+
+export type Region = "DE" | "UK" | "INT";
+
+export const REGIONS: { id: Region; label: string; blurb: string }[] = [
+  { id: "DE", label: "Germany", blurb: "German-market brands — DE-hosted, DSGVO-first, German-language support." },
+  { id: "UK", label: "United Kingdom", blurb: "UK-market brands — GBP billing, UK compliance, .co.uk domains." },
+  { id: "INT", label: "International", blurb: "Cross-border brands sold in multiple markets and currencies." },
+];
+
+export function regionOf(b: Brand): Region {
+  return b.region ?? "DE";
+}
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
@@ -840,6 +854,7 @@ export const BRANDS: Brand[] = [
   },
   {
     id: "unipathway",
+    region: "INT",
     name: "UNIPATHWAY",
     tagline: "UK & Germany study consultancy for Pakistani students",
     description:
