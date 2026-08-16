@@ -762,7 +762,7 @@ export const DE: Record<string, string> = {
  "Operating profit": "Betriebsgewinn",
  "Operating profit (EBIT)": "Betriebsgewinn (EBIT)",
  "Operating profit & net profit (monthly)": "Betriebsgewinn & Nettogewinn (monatlich)",
- "Operating profit (EBIT) is what"s left after running costs, before tax. Net profit is after tax.": "Betriebsgewinn (EBIT) ist das, was nach den laufenden Kosten und vor Steuern bleibt. Nettogewinn ist nach Steuern.",
+ "Operating profit (EBIT) is what's left after running costs, before tax. Net profit is after tax.": "Betriebsgewinn (EBIT) ist das, was nach den laufenden Kosten und vor Steuern bleibt. Nettogewinn ist nach Steuern.",
  "P&L means profit and loss: revenue in, costs out, profit left over.": "GuV bedeutet Gewinn- und Verlustrechnung: Umsatz herein, Kosten heraus, Gewinn bleibt übrig.",
  "Money coming in every month from subscriptions (MRR)": "Monatlich wiederkehrende Abo-Einnahmen (MRR)",
  "Month when monthly revenue first reaches €1 million": "Monat, in dem der Monatsumsatz erstmals 1 Mio. € erreicht",
