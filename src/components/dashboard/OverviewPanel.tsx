@@ -220,7 +220,17 @@ function MarkTile({
     </div>
   );
 }
-function Kpi({ label, value, tone }: { label: string; value: string; tone?: "good" | "bad" }) {
+function Kpi({
+  label,
+  value,
+  tone,
+  hint,
+}: {
+  label: string;
+  value: string;
+  tone?: "good" | "bad";
+  hint?: string;
+}) {
   return (
     <Card className="p-3">
       <div className="text-xs text-muted-foreground">{label}</div>
@@ -231,6 +241,7 @@ function Kpi({ label, value, tone }: { label: string; value: string; tone?: "goo
       >
         {value}
       </div>
+      {hint ? <div className="mt-1 text-[11px] leading-snug text-muted-foreground">{hint}</div> : null}
     </Card>
   );
 }
