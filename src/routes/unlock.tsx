@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import logoAsset from "@/assets/loungetech-logo.png.asset.json";
 
 export const Route = createFileRoute("/unlock")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    error: typeof search.error === "string" ? search.error : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Unlock — LoungeTech Dashboard" },
@@ -21,38 +23,7 @@ export const Route = createFileRoute("/unlock")({
 });
 
 function Unlock() {
-  const [error, setError] = useState(false);
-  const [busy, setBusy] = useState(false);
-  const [password, setPassword] = useState("");
-
-  async function handleUnlock() {
-    if (!password) return;
-    setBusy(true);
-    setError(false);
-    try {
-      const response = await fetch("/api/public/unlock", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
-      });
-      const result = (await response.json()) as { ok: boolean };
-      const { ok } = result;
-      if (ok) {
-        // Hard navigation guarantees the new session cookie is used for the
-        // next request and the loader re-runs cleanly.
-        window.location.assign("/");
-        return;
-      }
-      setError(true);
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    void handleUnlock();
-  }
+  const { error } = Route.useSearch();
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -66,22 +37,23 @@ function Unlock() {
             </p>
           </div>
         </div>
-        <form onSubmit={onSubmit} action="javascript:void(0)" className="space-y-3">
+        <form method="post" action="/api/public/unlock" className="space-y-3">
           <Input
             type="password"
             name="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
             autoComplete="current-password"
             placeholder="Password"
             autoFocus
             required
           />
-          {error && (
-            <p className="text-xs text-red-500">Incorrect password. Try again.</p>
+          {error === "invalid" && (
+            <p className="text-xs text-destructive">Incorrect password. Try again.</p>
           )}
-          <Button type="button" className="w-full" disabled={busy || !password} onClick={handleUnlock}>
-            {busy ? "Unlocking…" : "Enter"}
+          {error === "config" && (
+            <p className="text-xs text-destructive">Dashboard access is temporarily unavailable.</p>
+          )}
+          <Button type="submit" className="w-full">
+            Enter
           </Button>
         </form>
       </Card>
