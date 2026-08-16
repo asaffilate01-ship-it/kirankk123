@@ -36,7 +36,7 @@ export function OverviewPanel() {
       </div>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Kpi label={t("Active brands")} value={`${activeBrands} / 10`} />
+        <Kpi label={t("Active brands")} value={`${activeBrands} / ${BRANDS.length}`} />
         <Kpi
           label={`${t("Monthly revenue")} @ M${rows.length}`}
           value={fmtEURk(last.revenue)}
