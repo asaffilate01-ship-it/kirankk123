@@ -9,6 +9,7 @@ import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import { logoFor } from "@/lib/logo";
+import { BRANDS } from "@/lib/brands";
 import { useLang } from "@/lib/i18n";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { lockSite } from "@/lib/gate.functions";
@@ -67,7 +68,7 @@ function Index() {
             />
             <div>
               <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
-              <p className="text-xs text-muted-foreground">{t("Live dashboard · 10 brands · 36-month forecast")}</p>
+              <p className="text-xs text-muted-foreground">{t("Live dashboard")} · {BRANDS.length} {t("brands")} · {t("36-month forecast")}</p>
             </div>
           </div>
           <div className="flex items-center gap-3">

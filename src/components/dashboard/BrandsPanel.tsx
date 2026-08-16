@@ -1,6 +1,6 @@
 import { t } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
-import { BRANDS } from "@/lib/brands";
+import { BRANDS, REGIONS, regionOf } from "@/lib/brands";
 import { useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -14,8 +14,19 @@ export function BrandsPanel() {
   const rows = buildModel(state);
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {BRANDS.map((b) => {
+    <div className="space-y-8">
+      {REGIONS.map((region) => {
+        const brands = BRANDS.filter((b) => regionOf(b) === region.id);
+        if (brands.length === 0) return null;
+        return (
+          <section key={region.id}>
+            <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b pb-2">
+              <h2 className="text-lg font-semibold tracking-tight">{t(region.label)}</h2>
+              <span className="text-xs text-muted-foreground">{brands.length} {t("brands")}</span>
+              <p className="text-xs text-muted-foreground">{t(region.blurb)}</p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {brands.map((b) => {
           const a = state.brands[b.id];
           const lastRow = rows[rows.length - 1];
           const mrr = lastRow.perBrandRevenue[b.id] ?? 0;
@@ -79,6 +90,10 @@ export function BrandsPanel() {
             </Card>
           );
         })}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

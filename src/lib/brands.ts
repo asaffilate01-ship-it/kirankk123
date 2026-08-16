@@ -2,6 +2,8 @@ export type Brand = {
   id: string;
   name: string;
   tagline: string;
+  /** Market section: Germany, United Kingdom, or International. Defaults to Germany. */
+  region?: Region;
   description: string;
   market: string;
   audience: string;
@@ -27,6 +29,18 @@ export type Brand = {
     revenue: string;
   };
 };
+
+export type Region = "DE" | "UK" | "INT";
+
+export const REGIONS: { id: Region; label: string; blurb: string }[] = [
+  { id: "DE", label: "Germany", blurb: "German-market brands — DE-hosted, DSGVO-first, German-language support." },
+  { id: "UK", label: "United Kingdom", blurb: "UK-market brands — GBP billing, UK compliance, .co.uk domains." },
+  { id: "INT", label: "International", blurb: "Cross-border brands sold in multiple markets and currencies." },
+];
+
+export function regionOf(b: Brand): Region {
+  return b.region ?? "DE";
+}
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
@@ -840,6 +854,7 @@ export const BRANDS: Brand[] = [
   },
   {
     id: "unipathway",
+    region: "INT",
     name: "UNIPATHWAY",
     tagline: "UK & Germany study consultancy for Pakistani students",
     description:
@@ -910,5 +925,2822 @@ export const BRANDS: Brand[] = [
       { risk: "Regulatory scrutiny of Pakistani education agents (SECP, HEC)", mitigation: "Licensed as a private limited entity in PK, transparent fee schedule, and DAAD/British Council-aligned counselling standards — we welcome regulation." },
       { risk: "FX and remittance friction on student payments", mitigation: "SBP-compliant fee collection in PKR, partner bank rails for Sperrkonto funding, and installment plans to smooth family cash-flow." },
     ],
+  },
+  {
+    id: "zivvouk",
+    name: "ZIVVO UK",
+    region: "UK",
+    tagline: "Verified car marketplace for the UK",
+    domain: "zivvo.co.uk",
+    description: "UK sister marketplace to ZIVVO Germany: verified private and dealer car listings with HPI, MOT and finance checks, escrow payments and delivery. Same engine, UK compliance and pricing.",
+    market: "\u22487.2m used-car transactions per year in the UK; \u2248\u00a31.1bn spent on listings, leads and dealer software.",
+    audience: "Independent dealers, franchise groups, private sellers, car buyers.",
+    color: "#0ea5e9",
+    defaultLaunchMonth: 5,
+    defaultInitialUsers: 180,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 119,
+    defaultChurn: 0.025,
+    defaultAddlRevenue: 9000,
+    defaultDirectCost: 7000,
+    reason: "UK dealers pay Auto Trader \u00a31,000\u2013\u00a33,000 per month per forecourt for listings alone and still handle checks, payments and delivery off-platform. ZIVVO UK bundles listing, HPI/MOT verification, escrow and delivery into one subscription at a fraction of the cost.",
+    proposition: "One subscription puts a dealer's whole stock online with automatic HPI, MOT-history and mileage verification, finance quotes, escrow-protected payment and nationwide delivery booking \u2014 no per-lead fees, no upsells.",
+    features: [
+      "Verified listings with HPI, MOT & mileage checks",
+      "Dealer stock feed import (AutoTrader/eBay/CSV)",
+      "Escrow payments with buyer protection",
+      "Finance & warranty quotes at checkout",
+      "Nationwide delivery & collection booking",
+      "Part-exchange valuation tool",
+      "In-app chat with fraud screening",
+      "Dealer CRM with lead scoring",
+      "Photo AI: auto-enhance & background removal",
+      "Reviews & verified-seller badges",
+    ],
+    apps: [
+      {
+        name: "ZIVVO Marketplace",
+        kind: "Web",
+        purpose: "Public search, listings, checkout",
+      },
+      {
+        name: "ZIVVO Dealer",
+        kind: "SaaS",
+        purpose: "Stock, leads, pricing, analytics",
+      },
+      {
+        name: "ZIVVO Mobile",
+        kind: "iOS",
+        purpose: "Buyer search & alerts",
+      },
+      {
+        name: "ZIVVO Mobile",
+        kind: "Android",
+        purpose: "Buyer search & alerts",
+      },
+      {
+        name: "ZIVVO Feeds",
+        kind: "API",
+        purpose: "Stock feed ingest & syndication",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Independent dealer",
+        useCase: "Lists 40 cars, pays one flat fee instead of per-advert pricing.",
+      },
+      {
+        type: "Private seller",
+        useCase: "Sells with verified checks and escrow protection.",
+      },
+      {
+        type: "Buyer",
+        useCase: "Filters by verified history, books delivery.",
+      },
+      {
+        type: "Finance broker",
+        useCase: "Receives qualified, pre-checked applications.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Auto Trader",
+        strength: "Dominant audience and dealer habit",
+        counter: "Flat-fee pricing vs per-advert escalators, plus escrow, delivery and HPI bundled free \u2014 a dealer saves 60-70% per month",
+      },
+      {
+        name: "Motors.co.uk / eBay Motors",
+        strength: "Cheap listing volume",
+        counter: "Verification-first trust layer and integrated payments; we monetise transactions, not clicks, so listings can be near-free",
+      },
+    ],
+    risks: [
+      {
+        risk: "Auto Trader price war",
+        mitigation: "Our unit economics rely on transaction and finance commissions, not listing rent, so we can undercut indefinitely.",
+      },
+      {
+        risk: "Fraudulent listings",
+        mitigation: "Mandatory V5C/HPI verification, ID checks and escrow-only payments on private sales.",
+      },
+    ],
+    currentMarket: {
+      howServed: "The UK market is effectively an Auto Trader monopoly (\u224875% of dealer ad spend), with Motors, eBay Motors and Facebook Marketplace taking the value end. Checks (HPI), payments and delivery all happen off-platform through separate vendors.",
+      users: "\u224813,000 franchise + \u22489,000 independent dealers; \u22487.2m annual used-car sales.",
+      revenue: "\u2248\u00a31.1bn/yr dealer advertising and software spend, plus \u2248\u00a3400m of checks, warranty and delivery revenue sitting outside the marketplaces.",
+    },
+  },
+  {
+    id: "kinderstarsuk",
+    name: "KINDERSTARS UK",
+    region: "UK",
+    tagline: "Childminder agency & childcare software for the UK",
+    domain: "kinderstars.co.uk",
+    description: "UK childminder agency and directory: parents search vetted, Ofsted-registered childminders by postcode; providers get bookings, registers, invoicing and compliance packs. Agency model lets us register childminders under our own umbrella.",
+    market: "\u22484.7m children under 9 in England; \u2248\u00a37.6bn annual childcare spend; \u224827,000 registered childminders.",
+    audience: "Working parents, childminders, nurseries, employers offering childcare benefits.",
+    color: "#fb7185",
+    defaultLaunchMonth: 6,
+    defaultInitialUsers: 240,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 39,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 6000,
+    defaultDirectCost: 7000,
+    reason: "England lost over 12,000 childminders in five years, largely to paperwork and Ofsted burden. As a registered childminder agency we absorb registration, inspection and compliance so carers can work \u2014 and parents get vetted care with one search.",
+    proposition: "Two products in one: a consumer directory with postcode search, availability and instant booking, and an agency SaaS giving childminders registration, DBS tracking, EYFS learning journals, invoicing and Tax-Free Childcare handling for a flat monthly fee.",
+    features: [
+      "Postcode & availability search with filters",
+      "Agency registration and Ofsted-equivalent oversight",
+      "DBS, first-aid and insurance expiry tracking",
+      "EYFS learning journals with photo observations",
+      "Automated invoicing, Tax-Free Childcare & funded hours",
+      "Daily registers and ratio checks",
+      "Parent app with daily diary and messaging",
+      "Employer benefit portal",
+      "Review and verification badges",
+      "Vacancy alerts for parents",
+    ],
+    apps: [
+      {
+        name: "KinderStars Directory",
+        kind: "Web",
+        purpose: "Parent search and booking",
+      },
+      {
+        name: "KinderStars Provider",
+        kind: "SaaS",
+        purpose: "Registers, journals, invoicing",
+      },
+      {
+        name: "KinderStars Parent",
+        kind: "iOS",
+        purpose: "Daily diary, payments, messaging",
+      },
+      {
+        name: "KinderStars Agency",
+        kind: "Admin",
+        purpose: "Vetting, inspection, compliance",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Parent",
+        useCase: "Finds and books a vetted childminder near work or home.",
+      },
+      {
+        type: "Childminder",
+        useCase: "Runs the whole business \u2014 register, journals, invoices \u2014 from a phone.",
+      },
+      {
+        type: "Employer",
+        useCase: "Offers a vetted childcare benefit to staff.",
+      },
+      {
+        type: "Agency inspector",
+        useCase: "Runs quality visits and records outcomes.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Childcare.co.uk",
+        strength: "Huge parent traffic and SEO",
+        counter: "We are an agency, not a classifieds site \u2014 we vet, register and insure, and charge providers a subscription rather than parents a paywall",
+      },
+      {
+        name: "Tiney",
+        strength: "Well-funded agency model",
+        counter: "Lower agency fee, no equity-style revenue share, and full software (journals, invoicing, funded hours) included rather than sold separately",
+      },
+    ],
+    risks: [
+      {
+        risk: "Ofsted / DfE agency rule change",
+        mitigation: "Dual model: even without agency status the directory + software business stands alone.",
+      },
+      {
+        risk: "Trust incident",
+        mitigation: "Mandatory enhanced DBS, reference checks, insurance verification and unannounced quality visits.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Parents use Childcare.co.uk classifieds, Facebook groups and word of mouth; providers juggle paper registers, Excel invoices and separate learning-journal apps (Tapestry, Famly). Agencies (tiney, Koru Kids) cover only a fraction of the country.",
+      users: "\u224827,000 registered childminders and \u22481.3m families using paid non-nursery childcare.",
+      revenue: "\u2248\u00a37.6bn UK childcare spend; \u2248\u00a3120m/yr addressable in directory, agency fees and provider software.",
+    },
+  },
+  {
+    id: "eventplanruk",
+    name: "EVENTPLANR UK",
+    region: "UK",
+    tagline: "Event planning & trusted vendor marketplace",
+    domain: "eventplanr.co.uk",
+    description: "UK version of EVENTPLANR: plan weddings, parties and corporate events with task boards, budgets, RSVPs and private media sharing, and book verified local vendors with deposits held in escrow.",
+    market: "\u2248240,000 UK weddings plus \u22481.1m private and corporate events a year; \u2248\u00a314bn spend.",
+    audience: "Couples, party hosts, corporate PAs, venues, caterers, photographers, DJs.",
+    color: "#a855f7",
+    defaultLaunchMonth: 7,
+    defaultInitialUsers: 300,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 25,
+    defaultChurn: 0.035,
+    defaultAddlRevenue: 9000,
+    defaultDirectCost: 6000,
+    reason: "Event planning still happens across WhatsApp, spreadsheets and email chains, and vendor deposits are paid with no protection. EVENTPLANR gives hosts one workspace and vendors a booking channel that actually converts.",
+    proposition: "Free for hosts (planner, guest list, RSVP, budget, media wall), monetised through vendor subscriptions, commission on escrow-protected bookings and premium guest features \u2014 a marketplace that funds itself on supply, not on the couple.",
+    features: [
+      "Drag-and-drop task timeline with templates",
+      "Guest list, RSVP and dietary tracking",
+      "Budget tracker with real supplier quotes",
+      "Verified vendor marketplace with reviews",
+      "Escrow deposits and milestone payments",
+      "Private media wall for guest photos",
+      "Seating planner",
+      "Group gifting and contributions",
+      "Vendor CRM with enquiry pipeline",
+      "Contracts and e-signature",
+    ],
+    apps: [
+      {
+        name: "EventPlanr Web",
+        kind: "Web",
+        purpose: "Planning workspace and marketplace",
+      },
+      {
+        name: "EventPlanr Vendor",
+        kind: "SaaS",
+        purpose: "Enquiries, calendar, payments",
+      },
+      {
+        name: "EventPlanr Guest",
+        kind: "iOS",
+        purpose: "RSVP, photos, schedule",
+      },
+      {
+        name: "EventPlanr Guest",
+        kind: "Android",
+        purpose: "RSVP, photos, schedule",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Couple / host",
+        useCase: "Plans the whole event and pays vendors safely.",
+      },
+      {
+        type: "Vendor",
+        useCase: "Fills empty dates and manages enquiries.",
+      },
+      {
+        type: "Guest",
+        useCase: "RSVPs, sees the schedule and uploads photos.",
+      },
+      {
+        type: "Venue",
+        useCase: "Lists availability and cross-sells preferred suppliers.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Hitched / The Knot",
+        strength: "Enormous SEO and directory inventory",
+        counter: "We are a working planning tool, not a directory \u2014 hosts stay for months, so vendors get warm, high-intent leads and we can charge less per lead",
+      },
+      {
+        name: "Bridebook",
+        strength: "Strong free planning app",
+        counter: "Escrow payments and a real vendor CRM turn us into the transaction layer, which directories never captured",
+      },
+    ],
+    risks: [
+      {
+        risk: "Seasonality of weddings",
+        mitigation: "Corporate and private-party segments smooth the calendar; annual vendor plans.",
+      },
+      {
+        risk: "Vendor disintermediation",
+        mitigation: "Escrow protection, dispute resolution and reviews make on-platform booking the safer option for both sides.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Hosts use Hitched, Bridebook and Pinterest for inspiration, then move to WhatsApp and spreadsheets to actually run the event. Vendors pay \u00a340-\u00a3200/mo for directory listings and chase deposits by bank transfer.",
+      users: "\u2248240,000 weddings/yr and \u224870,000 UK event vendors.",
+      revenue: "\u2248\u00a314bn event spend; \u2248\u00a3250m/yr flows to directories and vendor software today.",
+    },
+  },
+  {
+    id: "taxlounge",
+    name: "TAXLOUNGE",
+    region: "UK",
+    tagline: "Find and compare UK accountants \u2014 free",
+    domain: "taxlounge.co.uk",
+    description: "A matching marketplace where businesses describe their needs and receive vetted, fixed-price quotes from UK accountants. Transparent pricing, verified ICAEW/ACCA credentials, and reviews from real clients.",
+    market: "\u22485.6m UK businesses; \u2248\u00a312bn spent annually on accountancy and bookkeeping.",
+    audience: "Sole traders, limited-company directors, landlords, small practices seeking clients.",
+    color: "#14b8a6",
+    defaultLaunchMonth: 8,
+    defaultInitialUsers: 220,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 49,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 7000,
+    defaultDirectCost: 5000,
+    reason: "Choosing an accountant is opaque: no published prices, no verified credentials, and referral sites simply sell the same lead to five firms. TAXLOUNGE publishes fixed prices and verifies every practice.",
+    proposition: "Free for the business: answer 8 questions, get 3 verified fixed-price quotes within 24 hours. Accountants pay a subscription for verified-practice status plus a success fee on won clients \u2014 no blind lead-selling.",
+    features: [
+      "Guided needs questionnaire",
+      "Verified ICAEW / ACCA / AAT credential checks",
+      "Fixed-price quotes, no hourly guesswork",
+      "Practice profiles with specialisms and sectors",
+      "Verified client reviews",
+      "Secure document exchange for onboarding",
+      "Deadline reminders (SA, VAT, CT, MTD)",
+      "Switching service with handover letters",
+      "Practice CRM and pipeline",
+      "Fee benchmarking data",
+    ],
+    apps: [
+      {
+        name: "TaxLounge Marketplace",
+        kind: "Web",
+        purpose: "Search, quote requests, profiles",
+      },
+      {
+        name: "TaxLounge Practice",
+        kind: "SaaS",
+        purpose: "Leads, quotes, client onboarding",
+      },
+      {
+        name: "TaxLounge Vault",
+        kind: "Web",
+        purpose: "Secure document exchange",
+      },
+      {
+        name: "TaxLounge Admin",
+        kind: "Admin",
+        purpose: "Verification and dispute handling",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Business owner",
+        useCase: "Compares three fixed-price quotes in a day.",
+      },
+      {
+        type: "Landlord",
+        useCase: "Finds a property-tax specialist.",
+      },
+      {
+        type: "Accountancy practice",
+        useCase: "Fills capacity with matched, pre-qualified clients.",
+      },
+      {
+        type: "Bookkeeper",
+        useCase: "Picks up overflow work from practices.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Unbiased",
+        strength: "Established brand and traffic",
+        counter: "We verify credentials and publish fixed prices; leads are exclusive, not resold five times \u2014 better conversion for practices at lower cost",
+      },
+      {
+        name: "Bark",
+        strength: "Aggressive lead generation",
+        counter: "No pay-per-lead lottery: subscription plus success fee means practices only pay when they win work",
+      },
+    ],
+    risks: [
+      {
+        risk: "Practices bypass the platform",
+        mitigation: "Success fee is charged on first-year fees only and priced below their cost of acquisition, so compliance is cheaper than evasion.",
+      },
+      {
+        risk: "Quality of advice complaints",
+        mitigation: "Credential verification, PI insurance checks and review moderation with a complaints route.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Businesses find accountants through word of mouth, Unbiased, Bark or Google Ads. Pricing is quoted privately and lead-gen sites resell the same enquiry to multiple firms, so conversion is poor and buyers get spammed.",
+      users: "\u22485.6m businesses; \u2248340,000 accountancy professionals across \u224840,000 practices.",
+      revenue: "\u2248\u00a312bn accountancy fees; \u2248\u00a3300m/yr spent on lead generation and practice marketing.",
+    },
+  },
+  {
+    id: "estately",
+    name: "ESTATELY",
+    region: "UK",
+    tagline: "The property OS for UK agencies and landlords",
+    domain: "estately.co.uk",
+    description: "A public property marketplace fused with a full agency CRM, compliance hub and tenant portal \u2014 sales, lettings, HMO and commercial in one workspace.",
+    market: "\u224825,000 UK estate and letting agency branches; \u2248\u00a32.4bn spent on portals and agency software.",
+    audience: "Estate agents, letting agents, landlords, tenants, buyers.",
+    color: "#6366f1",
+    defaultLaunchMonth: 9,
+    defaultInitialUsers: 140,
+    defaultUserGrowth: 0.18,
+    defaultArpu: 199,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 12000,
+    defaultDirectCost: 9000,
+    reason: "Agents pay Rightmove and Zoopla thousands a month for listings, then pay again for a CRM (Reapit, Alto), again for compliance (Goodlord) and again for tenant referencing. ESTATELY is one system at one price.",
+    proposition: "Marketplace exposure, CRM, compliance and tenant portal in a single subscription \u2014 with portal syndication included \u2014 cutting an average branch's software and listing bill by more than half.",
+    features: [
+      "Public marketplace with map & school search",
+      "Sales and lettings CRM with pipelines",
+      "Automated portal syndication (Rightmove, Zoopla, OnTheMarket)",
+      "Compliance hub: EPC, gas, EICR, deposit protection",
+      "Tenant referencing and right-to-rent checks",
+      "Digital tenancy agreements and e-signature",
+      "Rent collection and arrears chasing",
+      "Maintenance ticketing with contractor network",
+      "Landlord portal with statements",
+      "HMO room-level management",
+    ],
+    apps: [
+      {
+        name: "Estately Marketplace",
+        kind: "Web",
+        purpose: "Public property search",
+      },
+      {
+        name: "Estately Agency",
+        kind: "SaaS",
+        purpose: "CRM, compliance, accounting",
+      },
+      {
+        name: "Estately Tenant",
+        kind: "iOS",
+        purpose: "Rent, maintenance, documents",
+      },
+      {
+        name: "Estately Landlord",
+        kind: "Web",
+        purpose: "Statements and approvals",
+      },
+      {
+        name: "Estately Sync",
+        kind: "API",
+        purpose: "Portal and accounting integrations",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Branch manager",
+        useCase: "Runs sales and lettings pipelines in one place.",
+      },
+      {
+        type: "Property manager",
+        useCase: "Tracks compliance certificates and maintenance.",
+      },
+      {
+        type: "Landlord",
+        useCase: "Sees rent, arrears and certificates live.",
+      },
+      {
+        type: "Tenant",
+        useCase: "Pays rent and raises repairs from the app.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Rightmove",
+        strength: "Near-monopoly buyer audience",
+        counter: "We do not have to beat Rightmove on audience \u2014 we bundle syndication to it and win on the \u00a3700+/mo an agent spends on CRM and compliance, which we replace at a lower total cost",
+      },
+      {
+        name: "Reapit / Alto",
+        strength: "Deep, entrenched agency workflows",
+        counter: "Modern UX, no implementation fees, free data migration, and compliance plus tenant portal included instead of sold as add-ons",
+      },
+    ],
+    risks: [
+      {
+        risk: "Portal duopoly raises syndication costs",
+        mitigation: "Agents keep their own portal contracts; we are the workspace, so our value is unaffected.",
+      },
+      {
+        risk: "Migration inertia",
+        mitigation: "Free white-glove migration and 90-day parallel running.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Agents run a stack of Rightmove/Zoopla (\u00a31,200-\u00a32,500/mo), a CRM (Reapit, Alto, Jupix), a compliance product (Goodlord, Vouch) and separate accounting. Landlords self-manage on spreadsheets or pay 10-15% management fees.",
+      users: "\u224825,000 agency branches and \u22482.7m private landlords.",
+      revenue: "\u2248\u00a32.4bn/yr portal and agency software spend; \u2248\u00a39bn in letting management fees.",
+    },
+  },
+  {
+    id: "stylesyncuk",
+    name: "STYLESYNC UK",
+    region: "UK",
+    tagline: "Salon booking & management software",
+    domain: "stylesync.co.uk",
+    description: "Consumer booking marketplace plus full salon management: calendar, staff rotas, stock, payments and marketing for hair, beauty and barber businesses.",
+    market: "\u224845,000 UK hair and beauty businesses; \u2248\u00a38.5bn consumer spend.",
+    audience: "Salon owners, independent stylists, barbers, beauty therapists, clients.",
+    color: "#ec4899",
+    defaultLaunchMonth: 10,
+    defaultInitialUsers: 260,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 59,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 8000,
+    defaultDirectCost: 6000,
+    reason: "Salons lose 15-20% of revenue to no-shows and pay marketplaces up to \u00a33 per new-client booking on top of a monthly fee. STYLESYNC charges one flat subscription with zero commission on bookings.",
+    proposition: "Everything a salon needs \u2014 online booking, deposits that kill no-shows, rotas, stock, card payments and automated rebooking marketing \u2014 for a flat monthly fee with no per-booking commission, plus free exposure on the consumer marketplace.",
+    features: [
+      "Online booking with deposits and no-show protection",
+      "Marketplace listing with reviews",
+      "Staff rota and commission tracking",
+      "Client records with treatment and patch-test history",
+      "Automated SMS/WhatsApp reminders and rebooking",
+      "Stock control and retail sales",
+      "Integrated card payments and tips",
+      "Loyalty and package memberships",
+      "Gift vouchers",
+      "Reporting: utilisation, retention, average spend",
+    ],
+    apps: [
+      {
+        name: "StyleSync Book",
+        kind: "Web",
+        purpose: "Consumer marketplace and booking",
+      },
+      {
+        name: "StyleSync Salon",
+        kind: "SaaS",
+        purpose: "Calendar, rotas, stock, payments",
+      },
+      {
+        name: "StyleSync Pro",
+        kind: "iOS",
+        purpose: "Stylist app for mobile chairs",
+      },
+      {
+        name: "StyleSync Client",
+        kind: "Android",
+        purpose: "Book, pay, rebook",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Salon owner",
+        useCase: "Runs rota, stock and payments in one system.",
+      },
+      {
+        type: "Independent stylist",
+        useCase: "Takes deposits and fills gaps in the diary.",
+      },
+      {
+        type: "Client",
+        useCase: "Books, pays and rebooks in 30 seconds.",
+      },
+      {
+        type: "Receptionist",
+        useCase: "Manages walk-ins and waitlists.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Treatwell",
+        strength: "Massive consumer demand engine",
+        counter: "Zero commission per booking versus their 20-35% new-client fee \u2014 a busy salon saves four figures a month",
+      },
+      {
+        name: "Fresha",
+        strength: "Free core software",
+        counter: "Transparent flat pricing with no payment-processing lock-in and no client-data ownership grab; UK support and marketplace exposure included",
+      },
+    ],
+    risks: [
+      {
+        risk: "Free competitor undercuts price",
+        mitigation: "Our marketplace drives new clients and we monetise payments and marketing, so the software price can flex.",
+      },
+      {
+        risk: "Payment processing dependency",
+        mitigation: "Multi-PSP setup (Stripe + fallback acquirer) so no single provider can squeeze margin.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Salons use Fresha (free, monetised via payments and marketplace fees), Treatwell (commission on new clients), Phorest or Timely (\u00a380-\u00a3250/mo), or still run a paper book. No-shows and deposits remain the biggest unsolved pain.",
+      users: "\u224845,000 salons and \u2248100,000 self-employed stylists.",
+      revenue: "\u2248\u00a38.5bn consumer spend; \u2248\u00a3350m/yr salon software and booking commission.",
+    },
+  },
+  {
+    id: "xpertjobs",
+    name: "XPERTJOBS",
+    region: "UK",
+    tagline: "AI recruitment for engineering, medical, law and finance",
+    domain: "xpertjobs.co.uk",
+    description: "Specialist AI-matched job platform for regulated and technical professions: CV parsing, skills matching, compliance-document tracking and interview scheduling for candidates and employers.",
+    market: "\u2248\u00a343bn UK recruitment market; professional/technical niches account for \u2248\u00a312bn.",
+    audience: "Engineers, clinicians, solicitors, finance professionals, employers, agencies.",
+    color: "#0284c7",
+    defaultLaunchMonth: 11,
+    defaultInitialUsers: 200,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 149,
+    defaultChurn: 0.025,
+    defaultAddlRevenue: 10000,
+    defaultDirectCost: 8000,
+    reason: "Agencies charge 15-25% of first-year salary \u2014 \u00a39,000+ on a \u00a345k engineer \u2014 for a process that is largely CV matching and diary management. XPERTJOBS does the matching with AI and charges a subscription.",
+    proposition: "Employers pay a flat monthly subscription for unlimited hires: AI shortlists from a verified, credential-checked talent pool, tracks GMC/NMC/SRA/CEng registrations and expiry, and books interviews automatically. Typical saving versus agency fees exceeds 80%.",
+    features: [
+      "AI CV parsing and skills-graph matching",
+      "Verified professional registrations (GMC, NMC, SRA, CEng)",
+      "Right-to-work and DBS document vault",
+      "Automated interview scheduling",
+      "Structured scorecards and interview kits",
+      "Salary benchmarking by discipline",
+      "Talent pools and re-engagement campaigns",
+      "Agency portal for overflow roles",
+      "Diversity-blind screening mode",
+      "ATS integrations (Workday, Greenhouse, Bullhorn)",
+    ],
+    apps: [
+      {
+        name: "XpertJobs Careers",
+        kind: "Web",
+        purpose: "Candidate search and applications",
+      },
+      {
+        name: "XpertJobs Employer",
+        kind: "SaaS",
+        purpose: "Pipeline, scorecards, offers",
+      },
+      {
+        name: "XpertJobs Compliance",
+        kind: "Web",
+        purpose: "Credential and document tracking",
+      },
+      {
+        name: "XpertJobs Connect",
+        kind: "API",
+        purpose: "ATS and job-board integrations",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Candidate",
+        useCase: "Matched to relevant roles without agency spam.",
+      },
+      {
+        type: "Hiring manager",
+        useCase: "Gets a ranked shortlist in 48 hours.",
+      },
+      {
+        type: "Compliance officer",
+        useCase: "Tracks every registration and expiry.",
+      },
+      {
+        type: "Recruitment agency",
+        useCase: "Uses the platform for overflow placement.",
+      },
+    ],
+    competitors: [
+      {
+        name: "LinkedIn Recruiter",
+        strength: "Unmatched candidate graph",
+        counter: "Vertical depth: verified professional registrations and compliance tracking LinkedIn does not do, at a third of the seat price",
+      },
+      {
+        name: "Indeed",
+        strength: "Volume and reach",
+        counter: "Quality over volume \u2014 AI shortlisting for regulated roles rather than 300 unscreened applications, plus flat pricing instead of pay-per-click",
+      },
+    ],
+    risks: [
+      {
+        risk: "Candidate liquidity cold start",
+        mitigation: "Launch discipline by discipline (start with allied health and civils) rather than all verticals at once.",
+      },
+      {
+        risk: "Agency retaliation",
+        mitigation: "Agency portal turns competitors into a distribution channel on revenue share.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Employers use LinkedIn Recruiter, Indeed and Reed for reach, then pay specialist agencies 15-25% of salary for anything technical or regulated. Compliance checking is manual, done in spreadsheets by HR.",
+      users: "\u22481.1m professional vacancies filled per year in these disciplines.",
+      revenue: "\u2248\u00a312bn agency fees in professional/technical recruitment; \u2248\u00a3900m in job-board and ATS spend.",
+    },
+  },
+  {
+    id: "traderos",
+    name: "TRADEROS",
+    region: "UK",
+    tagline: "Jobs, materials and delivery for UK trades",
+    domain: "traderos.co.uk",
+    description: "Three-sided platform connecting tradespeople, customers and drivers: job management and quoting, materials ordering at trade prices, and same-day delivery to site.",
+    market: "\u2248900,000 UK trade businesses; \u2248\u00a329bn annual builders'-merchant spend.",
+    audience: "Electricians, plumbers, builders, homeowners, merchants, van drivers.",
+    color: "#f97316",
+    defaultLaunchMonth: 12,
+    defaultInitialUsers: 220,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 69,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 14000,
+    defaultDirectCost: 9000,
+    reason: "A tradesperson loses roughly an hour a day driving to a merchant, quotes on scraps of paper, and chases invoices for weeks. TRADEROS puts the merchant, the paperwork and the delivery in the van's phone.",
+    proposition: "Free job management (quotes, invoices, scheduling) funded by margin on materials and delivery: order at trade prices from partnered merchants, get it delivered to site within hours, and invoice the customer with materials auto-costed.",
+    features: [
+      "Quotes and invoices with materials auto-costed",
+      "Job scheduling and site calendar",
+      "Materials catalogue at negotiated trade prices",
+      "Same-day site delivery via driver network",
+      "Customer job portal with photo progress",
+      "Payments with card, bank transfer and finance",
+      "CIS and VAT-ready exports",
+      "Certificates and compliance documents (EICR, Gas Safe)",
+      "Team timesheets and job costing",
+      "Review and referral engine",
+    ],
+    apps: [
+      {
+        name: "TraderOS Pro",
+        kind: "SaaS",
+        purpose: "Jobs, quotes, invoices, costing",
+      },
+      {
+        name: "TraderOS Van",
+        kind: "iOS",
+        purpose: "On-site ordering and delivery tracking",
+      },
+      {
+        name: "TraderOS Driver",
+        kind: "Android",
+        purpose: "Delivery jobs and proof of delivery",
+      },
+      {
+        name: "TraderOS Customer",
+        kind: "Web",
+        purpose: "Quotes, progress, payments",
+      },
+      {
+        name: "TraderOS Merchant",
+        kind: "API",
+        purpose: "Stock, pricing and fulfilment",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Tradesperson",
+        useCase: "Quotes on site and orders materials from the same screen.",
+      },
+      {
+        type: "Homeowner",
+        useCase: "Approves quotes and tracks the job.",
+      },
+      {
+        type: "Merchant",
+        useCase: "Gains incremental orders without extra counter staff.",
+      },
+      {
+        type: "Driver",
+        useCase: "Earns per delivery run between merchant and site.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Checkatrade",
+        strength: "Consumer trust and lead flow",
+        counter: "We are not a lead-rental business \u2014 no \u00a31,000+/yr membership; we make money on materials and delivery, so job software is free",
+      },
+      {
+        name: "Tradify / Powered Now",
+        strength: "Solid trade job software",
+        counter: "Materials and delivery integration is unique \u2014 the tradesperson saves real hours and money, not just paperwork",
+      },
+    ],
+    risks: [
+      {
+        risk: "Merchant margin pressure",
+        mitigation: "Volume-based rebate deals plus own-label sourcing on high-turn lines.",
+      },
+      {
+        risk: "Driver supply",
+        mitigation: "Hybrid model: partnered courier firms plus merchant delivery fleets before gig drivers.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Trades juggle Checkatrade or MyBuilder for leads (\u00a31,000+/yr), Tradify/Powered Now for paperwork, and a physical trip to Screwfix, Toolstation or a Travis Perkins branch for materials. Delivery is merchant-scheduled and slow.",
+      users: "\u2248900,000 trade businesses; \u2248250,000 use any job-management software.",
+      revenue: "\u2248\u00a329bn merchant spend; \u2248\u00a3600m/yr lead-generation and trade-software spend.",
+    },
+  },
+  {
+    id: "hgcare",
+    name: "HGCARE CONNECT",
+    region: "UK",
+    tagline: "Care management software for UK care providers",
+    domain: "hgcareconnect.co.uk",
+    description: "Digital care records, rostering, medication and handover for UK domiciliary and residential care providers \u2014 built on 14 years of frontline operating experience.",
+    market: "\u224818,500 CQC-regulated adult social care providers in England; \u2248\u00a31.1bn care-software market.",
+    audience: "Domiciliary agencies, care homes, supported living providers, carers, families.",
+    color: "#10b981",
+    defaultLaunchMonth: 13,
+    defaultInitialUsers: 120,
+    defaultUserGrowth: 0.18,
+    defaultArpu: 229,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 11000,
+    defaultDirectCost: 10000,
+    reason: "Care providers fail CQC inspections on evidence, not on care \u2014 paper MAR charts, missed visits and handover gaps. HGCARE CONNECT captures the evidence as care happens.",
+    proposition: "One system for rostering, electronic care plans, eMAR, handover and family updates, priced per site rather than per carer, with CQC evidence packs generated automatically for inspection day.",
+    features: [
+      "Electronic care plans and daily notes",
+      "eMAR medication administration with alerts",
+      "Rostering with travel time and continuity rules",
+      "Electronic call monitoring (visit verification)",
+      "Incident, safeguarding and body-map reporting",
+      "Handover boards between shifts",
+      "CQC evidence pack generator (KLOE-mapped)",
+      "Family portal with visit updates",
+      "Training and DBS expiry tracking",
+      "Invoicing to local authorities and private clients",
+    ],
+    apps: [
+      {
+        name: "HGCare Web",
+        kind: "SaaS",
+        purpose: "Rostering, care plans, reporting",
+      },
+      {
+        name: "HGCare Carer",
+        kind: "Android",
+        purpose: "Visits, notes, eMAR at the point of care",
+      },
+      {
+        name: "HGCare Carer",
+        kind: "iOS",
+        purpose: "Visits, notes, eMAR",
+      },
+      {
+        name: "HGCare Family",
+        kind: "Web",
+        purpose: "Updates and visit history",
+      },
+      {
+        name: "HGCare Admin",
+        kind: "Admin",
+        purpose: "Multi-site oversight",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Registered manager",
+        useCase: "Evidences compliance and prepares for inspection.",
+      },
+      {
+        type: "Care worker",
+        useCase: "Records visits and medication on the phone.",
+      },
+      {
+        type: "Family member",
+        useCase: "Sees that mum's visit happened and what changed.",
+      },
+      {
+        type: "Commissioner",
+        useCase: "Receives accurate, auditable invoicing.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Access / Nourish",
+        strength: "Deep CQC alignment and market share",
+        counter: "Priced per site not per carer \u2014 providers with high staff turnover stop paying for churn; free migration from paper or Nourish",
+      },
+      {
+        name: "Birdie",
+        strength: "Modern domiciliary product and funding",
+        counter: "Operator-built workflows (we ran care homes for 14 years) and residential + domiciliary in one platform rather than domiciliary only",
+      },
+    ],
+    risks: [
+      {
+        risk: "Local-authority funding squeeze on providers",
+        mitigation: "Price per site with a small-provider tier; ROI framed as avoided agency staffing and inspection downgrades.",
+      },
+      {
+        risk: "Clinical safety liability",
+        mitigation: "DCB0129 clinical-safety case, ISO 27001 roadmap and NHS DSPT compliance.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Roughly a third of providers still run paper care plans and MAR charts. Digitised providers use Access, Nourish, Person Centred Software or Birdie at \u00a34-\u00a39 per service user per month, plus a separate rostering tool.",
+      users: "\u224818,500 providers caring for \u22481.5m people.",
+      revenue: "\u2248\u00a31.1bn UK care-software market, growing with the NHS Digitising Social Care fund.",
+    },
+  },
+  {
+    id: "mycareacademy",
+    name: "MYCARE ACADEMY",
+    region: "UK",
+    tagline: "Gamified compliance training for care & education",
+    domain: "mycareacademy.co.uk",
+    description: "Blended compliance training platform for CQC, Ofsted and Skills for Care providers: mandatory e-learning, practical sign-off, gamified progress and inspection-ready matrices.",
+    market: "\u22481.7m adult social care workers plus \u2248600,000 early-years staff in England; \u2248\u00a3900m training spend.",
+    audience: "Care providers, nurseries, training managers, care workers, apprentices.",
+    color: "#84cc16",
+    defaultLaunchMonth: 14,
+    defaultInitialUsers: 180,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 89,
+    defaultChurn: 0.025,
+    defaultAddlRevenue: 7000,
+    defaultDirectCost: 6000,
+    reason: "Mandatory training is the single most common CQC and Ofsted compliance gap, yet most providers track it on a spreadsheet and buy e-learning that staff click through without learning anything.",
+    proposition: "Care Certificate and mandatory modules delivered as short, gamified mobile lessons with practical observation sign-off, plus a live training matrix that shows any inspector exactly who is compliant and who expires next month.",
+    features: [
+      "Care Certificate and 30+ mandatory modules",
+      "Gamified micro-lessons with streaks and badges",
+      "Practical competency sign-off by assessors",
+      "Live training matrix with expiry alerts",
+      "Ofsted / CQC evidence export",
+      "Blended classroom session booking",
+      "Apprenticeship and Skills for Care mapping",
+      "Multi-language delivery for international recruits",
+      "Manager dashboards by site and team",
+      "Certificates with QR verification",
+    ],
+    apps: [
+      {
+        name: "MyCare Academy",
+        kind: "SaaS",
+        purpose: "Courses, matrix, reporting",
+      },
+      {
+        name: "MyCare Learn",
+        kind: "iOS",
+        purpose: "Mobile micro-learning",
+      },
+      {
+        name: "MyCare Learn",
+        kind: "Android",
+        purpose: "Mobile micro-learning",
+      },
+      {
+        name: "MyCare Assessor",
+        kind: "Web",
+        purpose: "Observation and sign-off",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Training manager",
+        useCase: "Sees the whole workforce matrix and books refreshers.",
+      },
+      {
+        type: "Care worker",
+        useCase: "Completes lessons on the bus in five-minute chunks.",
+      },
+      {
+        type: "Assessor",
+        useCase: "Signs off practical competence in person.",
+      },
+      {
+        type: "Inspector",
+        useCase: "Receives a verified evidence pack.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Grey Matter Learning / Skills for Care partners",
+        strength: "Sector credibility and accreditation",
+        counter: "Mobile-first gamified delivery with real completion rates, plus practical sign-off \u2014 not just SCORM click-through \u2014 at a lower per-seat price",
+      },
+      {
+        name: "iHASCO",
+        strength: "Broad course library and brand",
+        counter: "Care and early-years depth, multi-language for international recruits, and the compliance matrix included instead of charged as an LMS add-on",
+      },
+    ],
+    risks: [
+      {
+        risk: "Accreditation requirements",
+        mitigation: "Skills for Care endorsement and CPD accreditation pursued pre-launch.",
+      },
+      {
+        risk: "Seat churn with staff turnover",
+        mitigation: "Site-based pricing bands and free re-enrolment of replacement staff.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Providers buy e-learning seats from iHASCO, Grey Matter or Care Skills Academy at \u00a330-\u00a390 per staff member per year, track completion in Excel, and run practical sessions with paper sign-off sheets.",
+      users: "\u22482.3m care and early-years staff requiring annual mandatory training.",
+      revenue: "\u2248\u00a3900m/yr training spend across adult social care and early years.",
+    },
+  },
+  {
+    id: "formationgenie",
+    name: "FORMATION GENIE",
+    region: "UK",
+    tagline: "Company formation, compliance and growth tools",
+    domain: "formationgenie.co.uk",
+    description: "Transparent UK company formation with everything that comes after it: registered office, Companies House filings, VAT/PAYE registration, business banking and compliance reminders.",
+    market: "\u2248800,000 UK companies incorporated each year; \u2248\u00a3450m formation and company-secretarial market.",
+    audience: "First-time founders, contractors, overseas entrepreneurs, accountants.",
+    color: "#eab308",
+    defaultLaunchMonth: 15,
+    defaultInitialUsers: 320,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 19,
+    defaultChurn: 0.04,
+    defaultAddlRevenue: 11000,
+    defaultDirectCost: 4000,
+    reason: "Formation agents advertise \u00a312 incorporations and then bill for the registered office, the confirmation statement, the VAT registration and the mail forwarding. Founders discover the real cost in year two.",
+    proposition: "One transparent monthly plan covering incorporation, registered office and director service address, all Companies House filings, VAT/PAYE registration and deadline management \u2014 plus banking, accounting and insurance partners on revenue share.",
+    features: [
+      "Same-day Companies House incorporation",
+      "Registered office and director service address",
+      "Confirmation statement and filing automation",
+      "VAT, PAYE and Corporation Tax registration",
+      "Business bank account introductions",
+      "Digital mail scanning and forwarding",
+      "Share cap tables and share issues",
+      "Compliance calendar with deadline alerts",
+      "Templates: shareholder agreements, contracts, policies",
+      "Accountant marketplace referral (via TAXLOUNGE)",
+    ],
+    apps: [
+      {
+        name: "Formation Genie",
+        kind: "Web",
+        purpose: "Formation flow and dashboard",
+      },
+      {
+        name: "Genie Compliance",
+        kind: "SaaS",
+        purpose: "Filings, deadlines, documents",
+      },
+      {
+        name: "Genie Mail",
+        kind: "Web",
+        purpose: "Scanned post and forwarding",
+      },
+      {
+        name: "Genie Partner",
+        kind: "Admin",
+        purpose: "Accountant and bank referrals",
+      },
+    ],
+    userTypes: [
+      {
+        type: "First-time founder",
+        useCase: "Incorporates and stays compliant without an accountant.",
+      },
+      {
+        type: "Contractor",
+        useCase: "Runs a one-person limited company on autopilot.",
+      },
+      {
+        type: "Overseas founder",
+        useCase: "Gets a UK company, address and bank introduction.",
+      },
+      {
+        type: "Accountant",
+        useCase: "Onboards clients through a white-label formation flow.",
+      },
+    ],
+    competitors: [
+      {
+        name: "1st Formations",
+        strength: "Scale and Companies House integration",
+        counter: "Flat all-in monthly price versus their \u00e0-la-carte upsells; compliance automation included rather than sold per filing",
+      },
+      {
+        name: "Tide / ANNA free formation",
+        strength: "Free incorporation bundled with banking",
+        counter: "We are bank-neutral and cover the whole compliance lifecycle, so founders are not locked into one bank to stay compliant",
+      },
+    ],
+    risks: [
+      {
+        risk: "Race to zero on formation price",
+        mitigation: "Formation is the loss leader; revenue comes from recurring compliance, address and partner referrals.",
+      },
+      {
+        risk: "AML / KYC obligations",
+        mitigation: "Automated ID verification, PEP/sanctions screening and HMRC-supervised AML processes.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Founders use 1st Formations, Companies Made Simple, or free incorporation from Tide and ANNA bundled with banking. Ongoing compliance is either self-managed or bolted onto an accountant's fee.",
+      users: "\u2248800,000 incorporations per year and \u22485.5m active UK companies.",
+      revenue: "\u2248\u00a3450m/yr formation, registered-office and company-secretarial spend.",
+    },
+  },
+  {
+    id: "maisoncreme",
+    name: "MAISON\u00b7CR\u00c8ME",
+    region: "UK",
+    tagline: "Hand-crafted boutique cakes & luxury chocolates",
+    domain: "maisoncreme.co.uk",
+    description: "Premium hand-finished cakes, cupcakes, cheesecakes and luxury chocolates ordered online for next-day collection or delivery, with a plant-based sister range.",
+    market: "\u2248\u00a34.4bn UK cakes and celebration bakery market; \u2248\u00a31.4bn premium chocolate.",
+    audience: "Celebration buyers, corporate gifting, event planners, wedding couples.",
+    color: "#f43f5e",
+    defaultLaunchMonth: 16,
+    defaultInitialUsers: 400,
+    defaultUserGrowth: 0.17,
+    defaultArpu: 29,
+    defaultChurn: 0.05,
+    defaultAddlRevenue: 15000,
+    defaultDirectCost: 11000,
+    reason: "Celebration cake buying is still local, phone-based and unpredictable. MAISON\u00b7CR\u00c8ME makes a premium, photographable cake as easy to order as a takeaway \u2014 with a guaranteed slot and nationwide chilled delivery.",
+    proposition: "A direct-to-consumer premium bakery brand with online ordering, cut-off-time guarantees, personalisation and corporate gifting accounts \u2014 high-margin product sold through our own channel rather than a marketplace taking 30%.",
+    features: [
+      "Online ordering with guaranteed collection slots",
+      "Cake personalisation (message, tiers, toppers)",
+      "Next-day nationwide chilled delivery",
+      "Corporate gifting accounts and bulk orders",
+      "Subscription dessert boxes",
+      "Plant-based sister range",
+      "Wedding and event cake consultations",
+      "Allergen and ingredient transparency",
+      "Loyalty and referral rewards",
+      "Local same-day delivery zones",
+    ],
+    apps: [
+      {
+        name: "Maison\u00b7Cr\u00e8me Shop",
+        kind: "Web",
+        purpose: "Ordering, personalisation, checkout",
+      },
+      {
+        name: "Maison\u00b7Cr\u00e8me Ops",
+        kind: "Admin",
+        purpose: "Production planning and dispatch",
+      },
+      {
+        name: "Maison\u00b7Cr\u00e8me Corporate",
+        kind: "Web",
+        purpose: "Gifting accounts and invoicing",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Celebration buyer",
+        useCase: "Orders a bespoke cake for Saturday, delivered Friday.",
+      },
+      {
+        type: "Corporate buyer",
+        useCase: "Sends branded gift boxes to 200 clients.",
+      },
+      {
+        type: "Event planner",
+        useCase: "Books multi-tier cakes with tasting.",
+      },
+      {
+        type: "Subscriber",
+        useCase: "Receives a monthly dessert box.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Lola's Cupcakes",
+        strength: "Strong brand and retail presence",
+        counter: "Lower overhead (dark-kitchen production, no prime retail rent) means a better product at the same price, and nationwide next-day rather than store-limited",
+      },
+      {
+        name: "Cutter & Squidge / Biscuiteers",
+        strength: "Premium gifting positioning",
+        counter: "Personalisation depth, corporate accounts with invoicing, and a plant-based line that captures a segment they under-serve",
+      },
+    ],
+    risks: [
+      {
+        risk: "Ingredient and delivery cost inflation",
+        mitigation: "Dynamic pricing on delivery, seasonal menu engineering, and volume contracts on core ingredients.",
+      },
+      {
+        risk: "Perishable logistics failure",
+        mitigation: "Insulated chilled packaging validated to 36 hours plus a no-quibble replacement guarantee.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Buyers use local bakeries found on Google or Instagram, supermarket celebration cakes, or premium DTC brands (Lola's, Cutter & Squidge, Biscuiteers). Marketplaces like Bakerdays and Deliveroo take 20-30% commission.",
+      users: "\u224832m celebration cakes bought annually in the UK.",
+      revenue: "\u2248\u00a34.4bn cake market; \u2248\u00a3700m of it premium/bespoke and increasingly bought online.",
+    },
+  },
+  {
+    id: "stylesyncger",
+    name: "STYLESYNC DE",
+    region: "DE",
+    tagline: "Salon-Software und Buchungsplattform f\u00fcr Deutschland",
+    domain: "stylesync.de",
+    description: "German edition of STYLESYNC: online booking marketplace plus salon management for Friseure, Kosmetik and Barbershops, with DSGVO-compliant client records, TSE-ready checkout and SEPA payments.",
+    market: "\u224880,000 Friseur- und Kosmetikbetriebe in Germany; \u2248\u20ac22bn consumer spend.",
+    audience: "Salon owners, self-employed stylists, beauty studios, clients.",
+    color: "#db2777",
+    defaultLaunchMonth: 10,
+    defaultInitialUsers: 240,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 55,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 7000,
+    defaultDirectCost: 6000,
+    reason: "German salons still run paper appointment books and lose double-digit revenue to no-shows, while Treatwell charges commission on every new client. STYLESYNC DE offers flat-fee software with deposits built in.",
+    proposition: "Flat monthly fee, no booking commission: online booking with deposits, staff rota, stock, TSE/GoBD-compliant checkout, DSGVO-safe client and patch-test records, and automated WhatsApp reminders in German.",
+    features: [
+      "Online-Buchung mit Anzahlung gegen No-Shows",
+      "Marktplatz-Listing mit Bewertungen",
+      "Dienstplan und Provisionsabrechnung",
+      "Kundenkartei mit Behandlungs- und Patch-Test-Historie",
+      "Automatische WhatsApp/SMS-Erinnerungen",
+      "Warenwirtschaft und Retail-Verkauf",
+      "TSE-/GoBD-konforme Kasse",
+      "Treuepunkte und Abo-Pakete",
+      "Gutscheine",
+      "Auswertungen: Auslastung, Wiederkehr, Bon-H\u00f6he",
+    ],
+    apps: [
+      {
+        name: "StyleSync Buchung",
+        kind: "Web",
+        purpose: "Marktplatz und Terminbuchung",
+      },
+      {
+        name: "StyleSync Salon",
+        kind: "SaaS",
+        purpose: "Kalender, Dienstplan, Kasse",
+      },
+      {
+        name: "StyleSync Pro",
+        kind: "iOS",
+        purpose: "App f\u00fcr mobile Stylisten",
+      },
+      {
+        name: "StyleSync Kunde",
+        kind: "Android",
+        purpose: "Buchen, zahlen, wiederbuchen",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Saloninhaberin",
+        useCase: "F\u00fchrt Dienstplan, Lager und Kasse in einem System.",
+      },
+      {
+        type: "Selbstst\u00e4ndige Stylistin",
+        useCase: "Nimmt Anzahlungen und f\u00fcllt L\u00fccken im Kalender.",
+      },
+      {
+        type: "Kundin",
+        useCase: "Bucht und zahlt in 30 Sekunden.",
+      },
+      {
+        type: "Empfang",
+        useCase: "Verwaltet Laufkundschaft und Wartelisten.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Treatwell",
+        strength: "Gr\u00f6\u00dfte Buchungsnachfrage in DACH",
+        counter: "Keine Provision pro Neukunde (statt 20-35%) \u2014 ein gut ausgelasteter Salon spart vierstellig pro Monat",
+      },
+      {
+        name: "Shore / phorest",
+        strength: "Etablierte Salon-Software in DACH",
+        counter: "Moderneres UI, TSE-Kasse inklusive, DE-Hosting und Preis rund 30% unter Shore",
+      },
+    ],
+    risks: [
+      {
+        risk: "Preiskampf mit Fresha (kostenlos)",
+        mitigation: "Marktplatz-Nachfrage und Zahlungsmargen tragen das Produkt; Softwarepreis ist flexibel.",
+      },
+      {
+        risk: "TSE-/Kassenrecht",
+        mitigation: "Zertifizierte TSE-Partnerl\u00f6sung und laufende Kassenrichtlinien-Updates.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Deutsche Salons nutzen Papierkalender, Shore, phorest oder Treatwell. Treatwell dominiert die Endkundennachfrage und nimmt Provision; Kassensysteme werden separat gekauft.",
+      users: "\u224880,000 Betriebe, davon gesch\u00e4tzt 35% mit Online-Buchung.",
+      revenue: "\u2248\u20ac22bn Verbraucherausgaben; \u2248\u20ac260m/Jahr f\u00fcr Salonsoftware und Buchungsprovisionen.",
+    },
+  },
+  {
+    id: "parkpunkt",
+    name: "PARKPUNKT",
+    region: "DE",
+    tagline: "Finden. Parken. Bezahlen.",
+    domain: "parkpunkt.de",
+    description: "Parking operating system for drivers, operators and cities: one app to find, book and pay for on-street, barrier and private parking, plus a management layer for operators.",
+    market: "\u224848m registered cars in Germany; \u2248\u20ac3.9bn parking revenue.",
+    audience: "Drivers, parking operators, municipalities, property owners with spare bays.",
+    color: "#64748b",
+    defaultLaunchMonth: 17,
+    defaultInitialUsers: 300,
+    defaultUserGrowth: 0.18,
+    defaultArpu: 9,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 18000,
+    defaultDirectCost: 8000,
+    reason: "German drivers need a different app in every city \u2014 Handyparken, EasyPark, PARK NOW, plus each operator's own barrier system. PARKPUNKT is one wallet that works everywhere and pays operators faster.",
+    proposition: "Consumer app free with a low transaction margin; operators pay SaaS for occupancy, dynamic pricing, ANPR/barrier integration and settlement; cities get enforcement and utilisation data. Revenue from three sides of the same transaction.",
+    features: [
+      "One-tap start/stop parking on-street and in garages",
+      "Live availability and price comparison",
+      "Barrier and ANPR integration (Scheidt & Bachmann, Designa)",
+      "Season tickets and employee parking",
+      "Private bay sharing (residential and commercial)",
+      "EV charging session bundling",
+      "Dynamic pricing engine for operators",
+      "Enforcement and permit management for cities",
+      "Automatic invoicing and VAT handling",
+      "Occupancy analytics and heatmaps",
+    ],
+    apps: [
+      {
+        name: "ParkPunkt App",
+        kind: "iOS",
+        purpose: "Find, book, pay, extend",
+      },
+      {
+        name: "ParkPunkt App",
+        kind: "Android",
+        purpose: "Find, book, pay, extend",
+      },
+      {
+        name: "ParkPunkt Operator",
+        kind: "SaaS",
+        purpose: "Pricing, occupancy, settlement",
+      },
+      {
+        name: "ParkPunkt City",
+        kind: "Web",
+        purpose: "Permits, enforcement, data",
+      },
+      {
+        name: "ParkPunkt Gate",
+        kind: "API",
+        purpose: "Barrier and ANPR integrations",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Driver",
+        useCase: "Parks anywhere with one app and one invoice.",
+      },
+      {
+        type: "Operator",
+        useCase: "Raises utilisation with dynamic pricing.",
+      },
+      {
+        type: "City",
+        useCase: "Manages permits and sees real occupancy data.",
+      },
+      {
+        type: "Property owner",
+        useCase: "Monetises empty bays out of hours.",
+      },
+    ],
+    competitors: [
+      {
+        name: "EasyPark",
+        strength: "Broad European coverage and city contracts",
+        counter: "Operator SaaS plus driver app in one \u2014 operators get real software, not just a payment channel; lower per-transaction fee",
+      },
+      {
+        name: "PARK NOW / Parkster",
+        strength: "Established Handyparken position",
+        counter: "Barrier, ANPR and EV charging in the same session, plus private-bay supply cities cannot offer",
+      },
+    ],
+    risks: [
+      {
+        risk: "City contract procurement cycles",
+        mitigation: "Start with private operators and property owners where sales cycles are weeks, not years.",
+      },
+      {
+        risk: "Payment margin compression",
+        mitigation: "Operator SaaS subscriptions, not transaction fees, carry the margin.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Drivers juggle EasyPark, PARK NOW, Parkster and city-specific apps, or use coins and paper tickets (still \u224860% of on-street payments). Operators run legacy Scheidt & Bachmann or Designa systems with no shared data layer.",
+      users: "\u224848m cars; \u22489m regular app-based parkers.",
+      revenue: "\u2248\u20ac3.9bn parking revenue in Germany; \u2248\u20ac400m/yr in operator technology and payment fees.",
+    },
+  },
+  {
+    id: "verislaw",
+    name: "VERIS LAW",
+    region: "DE",
+    tagline: "Der globale Legal Operating System f\u00fcr Mandanten und Kanzleien",
+    domain: "verislaw.de",
+    description: "Verified lawyer marketplace plus secure case management: clients find vetted solicitors, agree milestone-based fees, and every document and payment sits in one audited case file.",
+    market: "\u2248165,000 Rechtsanw\u00e4lte in Germany; \u2248\u20ac25bn legal services market.",
+    audience: "Private clients, SMEs, law firms, in-house counsel, expats.",
+    color: "#7c3aed",
+    defaultLaunchMonth: 18,
+    defaultInitialUsers: 110,
+    defaultUserGrowth: 0.18,
+    defaultArpu: 249,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 13000,
+    defaultDirectCost: 10000,
+    reason: "Legal fees are opaque and cross-border cases are chaotic: email attachments, wire transfers and no shared timeline. VERIS LAW makes fees fixed and milestone-based, and the case file auditable.",
+    proposition: "Clients get verified lawyers with published fixed-fee packages and escrowed milestone payments. Firms get full case-management SaaS \u2014 matters, deadlines (Fristen), documents, time capture, beA-ready filing and billing \u2014 with new-client flow included.",
+    features: [
+      "Verified lawyer profiles (Kammer registration checked)",
+      "Fixed-fee packages and milestone escrow",
+      "Matter and deadline (Fristen) management",
+      "Secure client portal and document vault",
+      "e-signature and beA-compatible filing",
+      "Time capture and RVG/hourly billing",
+      "Conflict checks",
+      "Multilingual case handling (DE/EN/TR/AR)",
+      "Court-date calendaring",
+      "Full audit trail for every action",
+    ],
+    apps: [
+      {
+        name: "Veris Marketplace",
+        kind: "Web",
+        purpose: "Find and instruct a lawyer",
+      },
+      {
+        name: "Veris Firm",
+        kind: "SaaS",
+        purpose: "Matters, deadlines, billing",
+      },
+      {
+        name: "Veris Client",
+        kind: "Web",
+        purpose: "Case timeline, documents, payments",
+      },
+      {
+        name: "Veris Vault",
+        kind: "API",
+        purpose: "Document and signature services",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Private client",
+        useCase: "Instructs a lawyer at a known, fixed price.",
+      },
+      {
+        type: "SME",
+        useCase: "Manages contracts and disputes in one file.",
+      },
+      {
+        type: "Law firm",
+        useCase: "Runs matters and gets new instructions.",
+      },
+      {
+        type: "Expat",
+        useCase: "Finds an English-speaking German lawyer.",
+      },
+    ],
+    competitors: [
+      {
+        name: "anwalt.de / Anwalt Suchservice",
+        strength: "Dominant German lawyer directory traffic",
+        counter: "We are transactional, not a listing rental: fixed fees, escrow and case management mean firms pay for outcomes, and clients actually convert",
+      },
+      {
+        name: "Advoware / RA-MICRO",
+        strength: "Entrenched German Kanzlei software",
+        counter: "Cloud-native, no server installation, DSGVO-compliant DE hosting, and client acquisition built in rather than sold separately",
+      },
+    ],
+    risks: [
+      {
+        risk: "Rechtsdienstleistungsgesetz (RDG) constraints",
+        mitigation: "We are a technology and marketplace provider, not a legal service provider; fee sharing structured as advertising and software fees, reviewed by counsel.",
+      },
+      {
+        risk: "Firm adoption inertia",
+        mitigation: "Free tier for solo practitioners, migration tooling from Advoware/RA-MICRO exports.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Clients search anwalt.de, Google or ask their Steuerberater; firms run Advoware, RA-MICRO or DATEV Anwalt on local servers and communicate by email, fax and beA. Fees are quoted per RVG or hourly with no transparency.",
+      users: "\u2248165,000 Rechtsanw\u00e4lte in \u224845,000 Kanzleien.",
+      revenue: "\u2248\u20ac25bn legal fees; \u2248\u20ac500m/yr Kanzleisoftware plus \u2248\u20ac200m directory advertising.",
+    },
+  },
+  {
+    id: "zoryn",
+    name: "ZORYN",
+    region: "DE",
+    tagline: "Mehr als nur Punkte \u2014 Wallet, Zahlungen und Rewards",
+    domain: "zoryn.de",
+    description: "Consumer wallet and loyalty network: one app for local and online rewards, stamp cards, cashback and payments, with a merchant console for campaigns.",
+    market: "\u224870m German consumers; \u2248\u20ac2.6bn loyalty and rewards market.",
+    audience: "Consumers, local retailers, hospitality venues, online merchants.",
+    color: "#f59e0b",
+    defaultLaunchMonth: 19,
+    defaultInitialUsers: 500,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 0,
+    defaultChurn: 0.04,
+    defaultAddlRevenue: 26000,
+    defaultDirectCost: 9000,
+    reason: "Germany's loyalty landscape is Payback, Deutschlandcard and a drawer full of paper stamp cards. Small local merchants are locked out because enterprise loyalty schemes cost more than they can earn.",
+    proposition: "Free for consumers; merchants pay a small monthly fee for digital stamp cards, targeted campaigns and cashback funding, with settlement through our own payment rails. One wallet spanning the Kiez shop and the online checkout.",
+    features: [
+      "Digital stamp cards and point balances",
+      "Cashback offers funded by merchants",
+      "One wallet across local and online merchants",
+      "Geo-triggered offers in the neighbourhood",
+      "Merchant campaign console with ROI reporting",
+      "Payment at checkout via QR and NFC",
+      "Referral and friend-invite rewards",
+      "Gift cards and vouchers",
+      "Segmented push campaigns",
+      "DSGVO-first consent and data controls",
+    ],
+    apps: [
+      {
+        name: "Zoryn Wallet",
+        kind: "iOS",
+        purpose: "Rewards, payments, offers",
+      },
+      {
+        name: "Zoryn Wallet",
+        kind: "Android",
+        purpose: "Rewards, payments, offers",
+      },
+      {
+        name: "Zoryn Merchant",
+        kind: "SaaS",
+        purpose: "Campaigns, redemptions, analytics",
+      },
+      {
+        name: "Zoryn Till",
+        kind: "Web",
+        purpose: "In-store redemption terminal",
+      },
+      {
+        name: "Zoryn Pay",
+        kind: "API",
+        purpose: "Payment and settlement rails",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Consumer",
+        useCase: "Collects and spends rewards without a plastic card.",
+      },
+      {
+        type: "Local retailer",
+        useCase: "Runs a stamp-card campaign for \u20ac29/month.",
+      },
+      {
+        type: "Hospitality venue",
+        useCase: "Drives midweek footfall with targeted offers.",
+      },
+      {
+        type: "Online merchant",
+        useCase: "Adds cashback at checkout.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Payback",
+        strength: "Enormous coalition scale and partner base",
+        counter: "Local independents cannot join Payback economically; we serve the Kiez with self-serve pricing and no minimum spend",
+      },
+      {
+        name: "Deutschlandcard",
+        strength: "Retail chain distribution",
+        counter: "Wallet plus payment in one, geo-triggered local offers, and merchant self-service instead of enterprise sales cycles",
+      },
+    ],
+    risks: [
+      {
+        risk: "Consumer cold start",
+        mitigation: "Launch Kiez by Kiez alongside KIEZIO merchants \u2014 shared local sales force.",
+      },
+      {
+        risk: "Payment licensing",
+        mitigation: "Operate under a partnered BaFin-licensed e-money institution rather than seeking our own licence at launch.",
+      },
+    ],
+    currentMarket: {
+      howServed: "German loyalty is dominated by Payback (\u224831m users) and Deutschlandcard, both coalition schemes for large chains. Independents use paper stamp cards or nothing; digital challengers (Stocard/Klarna) only store cards, they don't run campaigns.",
+      users: "\u224845m Germans hold at least one loyalty card; \u2248600,000 independent retail and hospitality businesses are unserved.",
+      revenue: "\u2248\u20ac2.6bn loyalty and rewards market; \u2248\u20ac350m/yr addressable in SME loyalty and local advertising.",
+    },
+  },
+  {
+    id: "marktpass",
+    name: "MARKTPASS",
+    region: "DE",
+    tagline: "EU marketplace compliance operating system",
+    domain: "marktpass.eu",
+    description: "Compliance OS for products sold into the EU: GPSR, EPR, WEEE, packaging and battery registrations, responsible-person data and per-marketplace documentation, verified before you ship.",
+    market: "\u22481.4m EU marketplace sellers affected by GPSR and EPR; \u2248\u20ac1.2bn compliance-services market.",
+    audience: "Amazon/eBay sellers, D2C brands, importers, marketplace operators.",
+    color: "#0f766e",
+    defaultLaunchMonth: 20,
+    defaultInitialUsers: 150,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 169,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 10000,
+    defaultDirectCost: 7000,
+    reason: "Since GPSR came into force, marketplaces delist non-compliant listings automatically, and EPR/LUCID registration failures carry five-figure fines. Most sellers manage this in a spreadsheet and find out when their listings go dark.",
+    proposition: "One product record generates every required EU compliance artefact \u2014 GPSR responsible person, LUCID/EPR numbers, WEEE and battery registration, declarations of conformity, labelling \u2014 and pushes them straight into Amazon, eBay, Kaufland and Otto seller accounts.",
+    features: [
+      "Product compliance passport per SKU",
+      "GPSR responsible-person management",
+      "LUCID / EPR packaging registration and reporting",
+      "WEEE and battery registration tracking",
+      "Declaration of conformity generator",
+      "Marketplace attribute push (Amazon, eBay, Kaufland, Otto)",
+      "Delisting risk alerts before enforcement",
+      "Multi-country registration in 27 member states",
+      "Document vault with audit history",
+      "Supplier document chasing workflows",
+    ],
+    apps: [
+      {
+        name: "MarktPass Console",
+        kind: "SaaS",
+        purpose: "Product records and registrations",
+      },
+      {
+        name: "MarktPass Sync",
+        kind: "API",
+        purpose: "Marketplace and ERP integrations",
+      },
+      {
+        name: "MarktPass Vault",
+        kind: "Web",
+        purpose: "Certificates and audit trail",
+      },
+      {
+        name: "MarktPass Admin",
+        kind: "Admin",
+        purpose: "Registration filing operations",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Amazon seller",
+        useCase: "Keeps listings live through GPSR enforcement.",
+      },
+      {
+        type: "D2C brand",
+        useCase: "Registers packaging and WEEE across the EU.",
+      },
+      {
+        type: "Importer",
+        useCase: "Acts as responsible person with documented evidence.",
+      },
+      {
+        type: "Marketplace operator",
+        useCase: "Bulk-verifies its seller base.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Lizenzero / Reclay",
+        strength: "Established packaging-licensing incumbents",
+        counter: "We cover the whole compliance stack \u2014 GPSR, WEEE, batteries, DoCs and marketplace push \u2014 not just packaging licence sales",
+      },
+      {
+        name: "Avask / Taxdoo",
+        strength: "Strong VAT and seller-services brand",
+        counter: "Product-level compliance automation rather than consultancy hours; software pricing, not per-filing professional fees",
+      },
+    ],
+    risks: [
+      {
+        risk: "Regulation changes faster than the product",
+        mitigation: "In-house regulatory analyst plus a rules engine designed for versioned requirement sets.",
+      },
+      {
+        risk: "Liability for filings",
+        mitigation: "Filings are made in the seller's name with clear scope; PI insurance and audited processes.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Sellers buy packaging licences from Lizenzero or Reclay, WEEE from Take-e-way, and pay consultants (Avask, Taxdoo) or lawyers for GPSR. Nothing links a product record to marketplace listing data, so enforcement arrives as a surprise delisting.",
+      users: "\u22481.4m sellers into the EU; \u2248500,000 directly exposed to German LUCID/WEEE duties.",
+      revenue: "\u2248\u20ac1.2bn EU compliance-services spend, growing sharply with GPSR and the Digital Product Passport.",
+    },
+  },
+  {
+    id: "cafe1",
+    name: "CAF\u00c9 1",
+    region: "INT",
+    tagline: "Online ordering, EPOS and KDS for food businesses",
+    domain: "cafe1.app",
+    description: "International food-business SaaS proven in our own St Albans caf\u00e9: online ordering and delivery storefront, EPOS till, kitchen display, inventory and loyalty in one system.",
+    market: "\u22488m independent food businesses worldwide; \u2248$28bn restaurant-technology market.",
+    audience: "Caf\u00e9s, takeaways, small chains, dark kitchens, food trucks.",
+    color: "#ef4444",
+    defaultLaunchMonth: 21,
+    defaultInitialUsers: 280,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 79,
+    defaultChurn: 0.025,
+    defaultAddlRevenue: 16000,
+    defaultDirectCost: 9000,
+    reason: "Independents pay Deliveroo, Uber Eats and Just Eat 25-35% commission, then pay again for an EPOS, again for a KDS and again for loyalty. Caf\u00e9 1 is one system that keeps the order \u2014 and the customer \u2014 direct.",
+    proposition: "A single subscription covering commission-free online ordering on the venue's own domain, EPOS, kitchen display, inventory and loyalty, multi-currency and multi-language \u2014 battle-tested in a live caf\u00e9 before it was ever sold.",
+    features: [
+      "Commission-free online ordering storefront",
+      "EPOS till with offline mode",
+      "Kitchen display system with prep timings",
+      "Menu management with modifiers and allergens",
+      "Inventory and recipe costing",
+      "Delivery zones, driver dispatch and tracking",
+      "Loyalty, vouchers and campaigns",
+      "Table ordering via QR code",
+      "Multi-site and franchise reporting",
+      "Marketplace connectors (Deliveroo, Uber Eats, Just Eat)",
+    ],
+    apps: [
+      {
+        name: "Caf\u00e9 1 Storefront",
+        kind: "Web",
+        purpose: "Branded ordering site",
+      },
+      {
+        name: "Caf\u00e9 1 EPOS",
+        kind: "SaaS",
+        purpose: "Till, payments, staff",
+      },
+      {
+        name: "Caf\u00e9 1 KDS",
+        kind: "Web",
+        purpose: "Kitchen display screens",
+      },
+      {
+        name: "Caf\u00e9 1 Driver",
+        kind: "Android",
+        purpose: "Delivery dispatch and proof",
+      },
+      {
+        name: "Caf\u00e9 1 Orders",
+        kind: "API",
+        purpose: "Marketplace and payment integrations",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Caf\u00e9 owner",
+        useCase: "Takes direct orders and keeps the 30% commission.",
+      },
+      {
+        type: "Kitchen staff",
+        useCase: "Works from a clear KDS instead of paper tickets.",
+      },
+      {
+        type: "Customer",
+        useCase: "Orders from the venue's own site with loyalty points.",
+      },
+      {
+        type: "Multi-site operator",
+        useCase: "Compares sites and menus centrally.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Square / Toast",
+        strength: "Complete hardware + software ecosystems",
+        counter: "No hardware lock-in \u2014 runs on any tablet \u2014 and online ordering plus KDS included rather than as paid modules; markets Toast does not serve",
+      },
+      {
+        name: "Deliveroo / Uber Eats",
+        strength: "Massive consumer demand",
+        counter: "We do not compete for demand, we recapture margin: venues keep marketplace listings and push repeat customers to their own commission-free storefront",
+      },
+    ],
+    risks: [
+      {
+        risk: "Payment processing dependency",
+        mitigation: "Multiple PSPs by region (Stripe, Adyen, local acquirers).",
+      },
+      {
+        risk: "Hardware support burden",
+        mitigation: "Bring-your-own-tablet model with certified device list and remote support only.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Independents run a legacy till (Epos Now, Lightspeed) plus one or more delivery marketplaces at 25-35% commission, with a separate loyalty app and paper kitchen tickets. Direct online ordering, when it exists, is a basic Wix or marketplace-owned page.",
+      users: "\u22488m independent food businesses globally; \u22482m already pay for restaurant software.",
+      revenue: "\u2248$28bn restaurant-technology market, plus \u2248$150bn of marketplace commission that direct ordering can claw back.",
+    },
+  },
+  {
+    id: "silkroaduz",
+    name: "SILKROADUZ",
+    region: "INT",
+    tagline: "AI travel companion for Uzbekistan and the Silk Road",
+    domain: "silkroaduz.com",
+    description: "AI-planned Silk Road travel: itineraries, halal-friendly stays, train and tour booking, eSIM and a Telegram concierge for travellers to Uzbekistan and Central Asia.",
+    market: "\u22486.6m annual international visitors to Uzbekistan, growing >20% a year; \u2248$2.5bn tourism revenue.",
+    audience: "Cultural travellers, halal-conscious tourists, diaspora visitors, tour operators.",
+    color: "#06b6d4",
+    defaultLaunchMonth: 22,
+    defaultInitialUsers: 350,
+    defaultUserGrowth: 0.21,
+    defaultArpu: 39,
+    defaultChurn: 0.045,
+    defaultAddlRevenue: 17000,
+    defaultDirectCost: 8000,
+    reason: "Uzbekistan is one of the fastest-growing tourism markets on earth, but booking it means Telegram groups, cash payments and unbookable train tickets. SILKROADUZ makes the whole trip planable and payable online.",
+    proposition: "An AI itinerary engine that turns 'ten days, Samarkand and Bukhara, halal food' into a bookable trip \u2014 trains, hotels, guides, transfers and eSIM in one checkout \u2014 with a Telegram concierge for in-country support in English, Russian and Uzbek.",
+    features: [
+      "AI itinerary generation and day-by-day planning",
+      "Afrosiyob train seat booking",
+      "Halal-friendly hotel and restaurant filters",
+      "Licensed guide and tour marketplace",
+      "Airport transfers and driver hire",
+      "eSIM and connectivity bundles",
+      "Telegram concierge with human escalation",
+      "Multi-currency payment (card, UZS, crypto-off)",
+      "Offline itinerary and maps",
+      "Operator dashboard for local suppliers",
+    ],
+    apps: [
+      {
+        name: "SilkRoadUZ Web",
+        kind: "Web",
+        purpose: "Planning and booking",
+      },
+      {
+        name: "SilkRoadUZ Concierge",
+        kind: "API",
+        purpose: "Telegram bot and support routing",
+      },
+      {
+        name: "SilkRoadUZ Supplier",
+        kind: "SaaS",
+        purpose: "Inventory, pricing, payouts",
+      },
+      {
+        name: "SilkRoadUZ Mobile",
+        kind: "iOS",
+        purpose: "Offline itinerary and tickets",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Cultural traveller",
+        useCase: "Plans a two-week Silk Road route and books it once.",
+      },
+      {
+        type: "Halal-conscious family",
+        useCase: "Filters stays and restaurants confidently.",
+      },
+      {
+        type: "Local guide",
+        useCase: "Sells directly instead of through agencies.",
+      },
+      {
+        type: "Tour operator",
+        useCase: "White-labels the itinerary engine.",
+      },
+    ],
+    competitors: [
+      {
+        name: "GetYourGuide / Viator",
+        strength: "Global activity inventory and trust",
+        counter: "Deep local supply GetYourGuide does not carry \u2014 trains, licensed guides, transfers \u2014 and full multi-day itineraries rather than isolated day tours",
+      },
+      {
+        name: "Advantour / local agencies",
+        strength: "On-the-ground relationships",
+        counter: "Instant online booking and transparent pricing versus email quotes and cash payment, plus AI planning that removes the agency's core work",
+      },
+    ],
+    risks: [
+      {
+        risk: "Regional instability or visa change",
+        mitigation: "Multi-country coverage across Kazakhstan, Kyrgyzstan and Tajikistan reduces single-country dependency.",
+      },
+      {
+        risk: "Supplier payment friction",
+        mitigation: "Local entity and UZS settlement account with weekly payouts.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Travellers plan on TripAdvisor and blogs, then book through email with local agencies (Advantour, Peopletravel), pay by wire or cash, and buy train tickets in person. GetYourGuide carries only shallow day-tour inventory.",
+      users: "\u22486.6m international visitors/yr; fewer than 15% book online end-to-end.",
+      revenue: "\u2248$2.5bn tourism revenue; \u2248$400m/yr addressable in bookable tours, transport and stays.",
+    },
+  },
+  {
+    id: "dubaitrips",
+    name: "DUBAITRIPS4U",
+    region: "INT",
+    tagline: "Dubai experiences, tours and adventure booking",
+    domain: "dubaitrips4u.com",
+    description: "Curated Dubai and UAE experience marketplace: desert safaris, water sports, theme parks, dining and city tours with instant confirmation and clear pricing.",
+    market: "\u224818m annual visitors to Dubai; \u2248$5.5bn tours and activities spend.",
+    audience: "Leisure tourists, GCC weekenders, corporate incentive groups, hotel concierges.",
+    color: "#f59e0b",
+    defaultLaunchMonth: 23,
+    defaultInitialUsers: 380,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 35,
+    defaultChurn: 0.05,
+    defaultAddlRevenue: 18000,
+    defaultDirectCost: 9000,
+    reason: "Dubai's activity market is a maze of resellers marking up the same desert safari four times. DUBAITRIPS4U buys direct from operators, publishes one honest price and confirms instantly.",
+    proposition: "Direct operator contracts, instant confirmation, hotel pickup included and transparent all-in pricing \u2014 plus a B2B channel selling the same inventory to hotels, concierges and travel agents on commission.",
+    features: [
+      "Curated experience catalogue with real photography",
+      "Instant confirmation and e-tickets",
+      "Hotel pickup and transfer included",
+      "All-in pricing with no checkout surprises",
+      "Multi-day itinerary bundles",
+      "B2B concierge and agent portal",
+      "Operator dashboard with availability and payouts",
+      "Multi-currency and multi-language (EN/AR/RU/DE)",
+      "Reviews with verified-booking badges",
+      "Group and corporate incentive bookings",
+    ],
+    apps: [
+      {
+        name: "DubaiTrips4U",
+        kind: "Web",
+        purpose: "Consumer marketplace",
+      },
+      {
+        name: "DubaiTrips Operator",
+        kind: "SaaS",
+        purpose: "Availability, manifests, payouts",
+      },
+      {
+        name: "DubaiTrips Agent",
+        kind: "Web",
+        purpose: "B2B booking and commission",
+      },
+      {
+        name: "DubaiTrips Mobile",
+        kind: "iOS",
+        purpose: "Tickets and itinerary",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Tourist",
+        useCase: "Books a desert safari with pickup, confirmed instantly.",
+      },
+      {
+        type: "Concierge",
+        useCase: "Books guest activities and earns commission.",
+      },
+      {
+        type: "Operator",
+        useCase: "Fills seats without paying a 30% OTA fee.",
+      },
+      {
+        type: "Corporate planner",
+        useCase: "Books a 60-person incentive programme.",
+      },
+    ],
+    competitors: [
+      {
+        name: "GetYourGuide",
+        strength: "Global brand and SEO dominance",
+        counter: "Direct operator contracts mean lower prices on identical products, plus a B2B concierge channel GetYourGuide does not prioritise",
+      },
+      {
+        name: "Viator / Klook",
+        strength: "Huge inventory and app installs",
+        counter: "Dubai depth: local operator relationships, Arabic and Russian support, and hotel pickup as standard rather than an add-on",
+      },
+    ],
+    risks: [
+      {
+        risk: "OTA price undercutting",
+        mitigation: "B2B concierge channel and operator exclusivity deals reduce direct price exposure.",
+      },
+      {
+        risk: "Seasonality (summer heat)",
+        mitigation: "Indoor and GCC-resident product mix plus summer discounting to smooth demand.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Tourists book via GetYourGuide, Viator, Klook, hotel concierges or street resellers, often paying 2-4x the operator's net rate. Operators depend on OTA commission of 25-30% and manual WhatsApp bookings from agents.",
+      users: "\u224818m annual visitors; \u224860% buy at least one paid experience.",
+      revenue: "\u2248$5.5bn tours and activities spend in the UAE; \u2248$1.6bn booked online.",
+    },
+  },
+  {
+    id: "marocways",
+    name: "MAROCWAYS",
+    region: "INT",
+    tagline: "Morocco tours, riads and desert holidays",
+    domain: "marocways.com",
+    description: "Curated Morocco travel marketplace: Sahara desert tours, riad stays, city breaks and private drivers, bookable online with clear itineraries and verified local operators.",
+    market: "\u224817m annual visitors to Morocco (2030 World Cup driving growth); \u2248$11bn tourism revenue.",
+    audience: "European and North American leisure travellers, groups, honeymooners, diaspora.",
+    color: "#c2410c",
+    defaultLaunchMonth: 24,
+    defaultInitialUsers: 320,
+    defaultUserGrowth: 0.2,
+    defaultArpu: 45,
+    defaultChurn: 0.05,
+    defaultAddlRevenue: 15000,
+    defaultDirectCost: 8000,
+    reason: "Morocco travel is booked through WhatsApp with agencies whose prices change per enquiry, and quality varies wildly. MAROCWAYS verifies operators, fixes prices and takes payment securely.",
+    proposition: "Verified local operators, fixed published prices, secure card payment with deposit protection and 24/7 in-destination support \u2014 with an operator SaaS layer giving Moroccan agencies the booking system they never had.",
+    features: [
+      "Curated multi-day desert and city itineraries",
+      "Verified riad and hotel inventory",
+      "Private driver and 4x4 booking",
+      "Fixed pricing with deposit and balance schedule",
+      "Secure card payment with buyer protection",
+      "24/7 WhatsApp in-destination support",
+      "Operator dashboard with availability and payouts",
+      "Group and honeymoon packages",
+      "Multi-language (EN/FR/ES/AR/DE)",
+      "Traveller reviews with verified stays",
+    ],
+    apps: [
+      {
+        name: "MarocWays",
+        kind: "Web",
+        purpose: "Consumer marketplace and booking",
+      },
+      {
+        name: "MarocWays Operator",
+        kind: "SaaS",
+        purpose: "Inventory, bookings, payouts",
+      },
+      {
+        name: "MarocWays Concierge",
+        kind: "API",
+        purpose: "WhatsApp support automation",
+      },
+      {
+        name: "MarocWays Mobile",
+        kind: "iOS",
+        purpose: "Itinerary and vouchers",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Leisure traveller",
+        useCase: "Books a 5-day Sahara tour with a verified operator.",
+      },
+      {
+        type: "Honeymoon couple",
+        useCase: "Books riads and transfers as one package.",
+      },
+      {
+        type: "Local operator",
+        useCase: "Sells online with card payment for the first time.",
+      },
+      {
+        type: "Diaspora visitor",
+        useCase: "Arranges family transport and stays.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Viator / GetYourGuide",
+        strength: "Trust and global distribution",
+        counter: "Multi-day Morocco itineraries and riad inventory they barely carry, sourced direct so prices beat theirs",
+      },
+      {
+        name: "Local WhatsApp agencies",
+        strength: "Cheap and personal",
+        counter: "Verified quality, fixed prices, card payment and buyer protection \u2014 plus we give the good agencies our software instead of competing with them",
+      },
+    ],
+    risks: [
+      {
+        risk: "Operator quality variance",
+        mitigation: "Mystery-shopping, verified reviews and a de-listing policy with financial penalties.",
+      },
+      {
+        risk: "Seasonal and event-driven demand spikes (World Cup 2030)",
+        mitigation: "Capacity contracts locked early with core riads and transport partners.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Travellers book through Viator/GetYourGuide day tours, TripAdvisor forums, or direct WhatsApp negotiation with Marrakech agencies. Payment is often cash on arrival; operators have almost no online booking technology.",
+      users: "\u224817m annual visitors; \u22484m buy multi-day tours.",
+      revenue: "\u2248$11bn tourism revenue; \u2248$1.3bn/yr in tours, riads and transport that could be booked online.",
+    },
+  },
+  {
+    id: "fleetpulse",
+    name: "FLEETPULSE",
+    region: "INT",
+    tagline: "White-label fleet management SaaS",
+    domain: "fleetpulse.io",
+    description: "Multi-tenant fleet management platform sold white-label: delivery companies and fleet operators launch their own branded platform with driver management, tracking, maintenance and compliance.",
+    market: "\u22488m commercial fleet vehicles across the GCC and emerging markets; \u2248$12bn fleet-software market.",
+    audience: "Delivery companies, logistics operators, rental fleets, corporate fleet managers.",
+    color: "#3b82f6",
+    defaultLaunchMonth: 25,
+    defaultInitialUsers: 90,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 299,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 12000,
+    defaultDirectCost: 10000,
+    reason: "Regional delivery and logistics firms want their own branded platform but cannot fund a two-year build. FLEETPULSE lets them launch one in a week on their own domain.",
+    proposition: "A true multi-tenant, white-label platform: custom branding, custom domain, per-tenant configuration and regional compliance (UAE Emirates-specific rules included), sold as SaaS per tenant plus per-vehicle pricing \u2014 a fraction of a bespoke build.",
+    features: [
+      "White-label branding and custom domains",
+      "Multi-tenant architecture with per-tenant config",
+      "Live GPS tracking and geofencing",
+      "Driver profiles, licences and visa expiry tracking",
+      "Job dispatch and route optimisation",
+      "Vehicle maintenance schedules and cost tracking",
+      "Fuel and toll (Salik/Darb) reconciliation",
+      "Proof of delivery with photo and signature",
+      "Compliance packs per emirate/jurisdiction",
+      "Client portal and API for enterprise customers",
+    ],
+    apps: [
+      {
+        name: "FleetPulse Console",
+        kind: "SaaS",
+        purpose: "Fleet operations and dispatch",
+      },
+      {
+        name: "FleetPulse Driver",
+        kind: "Android",
+        purpose: "Jobs, navigation, POD",
+      },
+      {
+        name: "FleetPulse Driver",
+        kind: "iOS",
+        purpose: "Jobs, navigation, POD",
+      },
+      {
+        name: "FleetPulse Tenant Admin",
+        kind: "Admin",
+        purpose: "Branding, users, billing",
+      },
+      {
+        name: "FleetPulse API",
+        kind: "API",
+        purpose: "Telematics and ERP integration",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Fleet operator",
+        useCase: "Runs dispatch, maintenance and compliance in one console.",
+      },
+      {
+        type: "Driver",
+        useCase: "Receives jobs and captures proof of delivery.",
+      },
+      {
+        type: "Reseller / partner",
+        useCase: "Launches a branded fleet product in its own market.",
+      },
+      {
+        type: "Corporate client",
+        useCase: "Tracks its deliveries through a client portal.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Samsara",
+        strength: "Best-in-class telematics hardware and AI",
+        counter: "Hardware-agnostic and white-label \u2014 partners sell it as their own product, at emerging-market price points Samsara will not meet",
+      },
+      {
+        name: "Locate2u / Detrack",
+        strength: "Simple, cheap delivery tracking",
+        counter: "Full fleet lifecycle (maintenance, driver visas, compliance) plus multi-tenancy for resellers, not just tracking",
+      },
+    ],
+    risks: [
+      {
+        risk: "Telematics hardware dependency",
+        mitigation: "Hardware-agnostic integrations (Teltonika, Queclink) plus phone-only mode for light fleets.",
+      },
+      {
+        risk: "Regional regulatory variation",
+        mitigation: "Per-jurisdiction compliance packs maintained as configuration, not code.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Operators use Samsara or Geotab at premium prices, cheap trackers with no software, or a spreadsheet plus WhatsApp. White-label options are rare, so regional players commission expensive bespoke builds.",
+      users: "\u22488m commercial vehicles in target markets; \u224825% run any fleet software.",
+      revenue: "\u2248$12bn global fleet-software market; \u2248$800m addressable in GCC and adjacent emerging markets.",
+    },
+  },
+  {
+    id: "visaflow",
+    name: "VISAFLOW",
+    region: "INT",
+    tagline: "UAE visa and PRO management platform",
+    domain: "visaflow.ae",
+    description: "PRO services platform for UAE businesses: visa processing, employee compliance, document expiry tracking and government-relations workflow in one system.",
+    market: "\u2248550,000 registered UAE companies; \u2248$1.4bn PRO and government-services market.",
+    audience: "SME employers, free-zone companies, PRO service firms, HR managers.",
+    color: "#8b5cf6",
+    defaultLaunchMonth: 26,
+    defaultInitialUsers: 130,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 189,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 9000,
+    defaultDirectCost: 7000,
+    reason: "UAE employers manage visas, Emirates IDs, labour cards and medicals across WhatsApp threads with a PRO, and a missed expiry means fines of AED 1,000+ per day per employee.",
+    proposition: "Every employee document tracked with automated expiry alerts, every visa application run as a tracked workflow with document checklists, and PRO firms given a client console so they can serve 3x the clients with the same team.",
+    features: [
+      "Employee document vault (passport, visa, EID, labour card)",
+      "Automated expiry alerts at 90/60/30 days",
+      "Visa application workflows by free zone and mainland",
+      "Document checklist and typing-centre handoff",
+      "Government fee tracking and cost allocation",
+      "Medical and Emirates ID appointment scheduling",
+      "Multi-company and multi-branch management",
+      "PRO firm client console",
+      "Audit trail for every submission",
+      "Reporting for MOHRE and free-zone audits",
+    ],
+    apps: [
+      {
+        name: "VisaFlow Console",
+        kind: "SaaS",
+        purpose: "Applications, documents, alerts",
+      },
+      {
+        name: "VisaFlow HR",
+        kind: "Web",
+        purpose: "Employer self-service",
+      },
+      {
+        name: "VisaFlow PRO",
+        kind: "Admin",
+        purpose: "Multi-client PRO operations",
+      },
+      {
+        name: "VisaFlow Mobile",
+        kind: "iOS",
+        purpose: "Employee document wallet",
+      },
+    ],
+    userTypes: [
+      {
+        type: "HR manager",
+        useCase: "Never misses a visa renewal again.",
+      },
+      {
+        type: "PRO firm",
+        useCase: "Runs 200 client companies from one console.",
+      },
+      {
+        type: "Employee",
+        useCase: "Holds documents and status in a phone wallet.",
+      },
+      {
+        type: "Finance",
+        useCase: "Allocates government fees per department.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Bayzat",
+        strength: "Strong UAE HR/payroll brand",
+        counter: "Visa and PRO depth rather than payroll-first HR \u2014 the workflow, government fees and typing-centre handoff PRO firms actually live in",
+      },
+      {
+        name: "Zenhr / local PRO agencies",
+        strength: "Human relationships and government access",
+        counter: "We arm PRO firms rather than replace them: white-label console on revenue share, so their capacity trebles",
+      },
+    ],
+    risks: [
+      {
+        risk: "Government portal changes (MOHRE, ICP, free zones)",
+        mitigation: "Configuration-driven workflows plus a dedicated regulatory-ops analyst.",
+      },
+      {
+        risk: "Data residency and privacy",
+        mitigation: "UAE-region hosting and alignment with the UAE PDPL.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Companies rely on external PRO agencies coordinating by WhatsApp and email, or an in-house PRO with an Excel expiry tracker. HR suites (Bayzat, Zenhr) treat visas as a checkbox, not a workflow.",
+      users: "\u2248550,000 companies employing \u22487m expatriate workers requiring visa renewal cycles.",
+      revenue: "\u2248$1.4bn PRO and government-services spend; \u2248$180m addressable in software.",
+    },
+  },
+  {
+    id: "sharedbricks",
+    name: "SHAREDBRICKS",
+    region: "INT",
+    tagline: "Fractional property investment from $100",
+    domain: "sharedbricks.com",
+    description: "Fractional real-estate investment platform: buy shares in regulated SPV-held properties across the UAE, Saudi Arabia, the UK and Pakistan and receive quarterly rental income.",
+    market: "\u2248$280bn annual cross-border retail real-estate investment; fractional platforms hold <1%.",
+    audience: "Retail investors, diaspora investors, property owners seeking partial exit, agents.",
+    color: "#0891b2",
+    defaultLaunchMonth: 27,
+    defaultInitialUsers: 600,
+    defaultUserGrowth: 0.21,
+    defaultArpu: 15,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 24000,
+    defaultDirectCost: 12000,
+    reason: "Owning income property in Dubai or London needs six figures and a lawyer. SHAREDBRICKS lowers that to $100 per share with the property held in a regulated SPV and income paid quarterly.",
+    proposition: "Every property sits in its own regulated SPV with published documentation, valuations and rental accounts; investors buy and sell shares on a secondary market, and owners can sell 20-60% of an asset instead of all of it. Revenue from acquisition fees, an annual management fee and secondary-market spread.",
+    features: [
+      "Fractional shares from $100 in SPV-held properties",
+      "Quarterly rental distributions",
+      "Four-country portfolio (UAE, KSA, UK, PK)",
+      "Full document pack per property (title, valuation, accounts)",
+      "Secondary market for share resale",
+      "Automated KYC/AML and investor accreditation",
+      "Portfolio dashboard with yield and capital tracking",
+      "Owner partial-exit listings",
+      "Sharia-compliant structures available",
+      "Multi-currency funding and payouts",
+    ],
+    apps: [
+      {
+        name: "SharedBricks Invest",
+        kind: "Web",
+        purpose: "Browse, invest, portfolio",
+      },
+      {
+        name: "SharedBricks Owner",
+        kind: "Web",
+        purpose: "List a property for partial exit",
+      },
+      {
+        name: "SharedBricks Mobile",
+        kind: "iOS",
+        purpose: "Portfolio and distributions",
+      },
+      {
+        name: "SharedBricks Admin",
+        kind: "Admin",
+        purpose: "SPV, compliance and distributions",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Retail investor",
+        useCase: "Builds a diversified property portfolio from $1,000.",
+      },
+      {
+        type: "Diaspora investor",
+        useCase: "Owns income property back home without managing it.",
+      },
+      {
+        type: "Property owner",
+        useCase: "Releases equity by selling a share, not the asset.",
+      },
+      {
+        type: "Agent",
+        useCase: "Introduces stock and earns a fee.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Stake (UAE)",
+        strength: "First-mover in Dubai fractional and regulated by DFSA",
+        counter: "Multi-country portfolio (UAE, KSA, UK, PK) versus single-market exposure, plus an owner partial-exit product they do not offer",
+      },
+      {
+        name: "Property Partner / REITs",
+        strength: "Liquidity and regulatory maturity",
+        counter: "Asset-level choice and transparency instead of a blind pooled fund, with lower fees than a listed REIT's cost stack",
+      },
+    ],
+    risks: [
+      {
+        risk: "Securities regulation across four jurisdictions",
+        mitigation: "Per-jurisdiction SPV and licensing structure with local counsel; launch sequenced by licence, not by ambition.",
+      },
+      {
+        risk: "Secondary-market illiquidity",
+        mitigation: "Market-making reserve plus a scheduled quarterly matching window with published pricing.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Retail investors either buy whole property (six-figure entry, heavy admin), buy REIT units (no asset choice, layered fees), or use single-market fractional platforms like Stake and SmartCrowd in the UAE. Cross-border retail access is essentially unserved.",
+      users: "\u224840m retail investors in target markets; fractional platforms serve fewer than 500,000.",
+      revenue: "\u2248$280bn cross-border retail property investment; \u2248$3bn/yr addressable in platform fees.",
+    },
+  },
+  {
+    id: "educloud",
+    name: "EDUCLOUD",
+    region: "INT",
+    tagline: "White-label campus OS for training providers",
+    domain: "educloud.io",
+    description: "The international white-label edition of our education operating system: accredited training providers launch a branded campus with admissions, virtual classroom, QA and university progression built in.",
+    market: "\u2248120,000 private training providers globally; \u2248$25bn education-management software market.",
+    audience: "Private colleges, training providers, universities' pathway arms, corporate academies.",
+    color: "#22d3ee",
+    defaultLaunchMonth: 28,
+    defaultInitialUsers: 80,
+    defaultUserGrowth: 0.18,
+    defaultArpu: 399,
+    defaultChurn: 0.015,
+    defaultAddlRevenue: 14000,
+    defaultDirectCost: 11000,
+    reason: "A private college's stack is a student CRM, an LMS, Zoom, a spreadsheet for attendance funding and email for university applications. Regulators (Ofsted, ESFA, AZAV, national ministries) want evidence none of those systems produce.",
+    proposition: "One white-label campus platform: admissions and CRM, LMS and virtual classroom, attendance and funding evidence, QA and IQA workflows, and progression pipelines into partner universities \u2014 branded as the provider's own, priced per campus.",
+    features: [
+      "White-label branded campus and domain",
+      "Admissions CRM with agent portal",
+      "LMS with SCORM and native course authoring",
+      "Virtual classroom with attendance capture",
+      "Funding and attendance evidence packs",
+      "QA, IQA and standardisation workflows",
+      "University progression and partner pipelines",
+      "Student finance and instalment plans",
+      "Certification and transcript issuing",
+      "Multi-campus and multi-language",
+    ],
+    apps: [
+      {
+        name: "EduCloud Campus",
+        kind: "SaaS",
+        purpose: "Admissions, teaching, QA",
+      },
+      {
+        name: "EduCloud Student",
+        kind: "Web",
+        purpose: "Courses, timetable, submissions",
+      },
+      {
+        name: "EduCloud Student",
+        kind: "iOS",
+        purpose: "Mobile learning and attendance",
+      },
+      {
+        name: "EduCloud Agent",
+        kind: "Web",
+        purpose: "Recruitment agent portal",
+      },
+      {
+        name: "EduCloud API",
+        kind: "API",
+        purpose: "Finance, HR and ministry integrations",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Principal",
+        useCase: "Runs admissions, delivery and QA on one platform.",
+      },
+      {
+        type: "Tutor",
+        useCase: "Teaches, marks and evidences attendance in one place.",
+      },
+      {
+        type: "Student",
+        useCase: "Applies, learns and progresses to a partner university.",
+      },
+      {
+        type: "Recruitment agent",
+        useCase: "Tracks applications and commissions.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Canvas / Moodle",
+        strength: "Dominant LMS mindshare and ecosystem",
+        counter: "We are not an LMS \u2014 we are the whole campus: admissions, funding evidence, QA and progression, which Canvas leaves to four other vendors",
+      },
+      {
+        name: "Anthology / Ellucian",
+        strength: "Enterprise SIS depth",
+        counter: "Weeks not years to implement, per-campus pricing an independent provider can afford, and white-labelling so the provider's brand stays front and centre",
+      },
+    ],
+    risks: [
+      {
+        risk: "Long procurement cycles in education",
+        mitigation: "Land with small independent providers and corporate academies; enterprise comes later.",
+      },
+      {
+        risk: "Accreditation-body variation",
+        mitigation: "Evidence packs configured per regulator (Ofsted, ESFA, AZAV, national ministries).",
+      },
+    ],
+    currentMarket: {
+      howServed: "Providers stitch together Moodle or Canvas, a CRM (HubSpot or Salesforce), Zoom, spreadsheets for funding evidence, and email for university applications. Enterprise SIS platforms (Anthology, Ellucian, Tribal) cost six figures and take a year to deploy.",
+      users: "\u2248120,000 private providers and \u224840,000 corporate academies worldwide.",
+      revenue: "\u2248$25bn education-management software market; \u2248$2bn addressable in independent and pathway providers.",
+    },
+  },
+  {
+    id: "stemcoach",
+    name: "STEMCOACH",
+    region: "INT",
+    tagline: "Virtual tuition centre for STEM and language exams",
+    domain: "stemcoach.io",
+    description: "Exam-prep platform with 2m+ exam-style questions across Maths, Sciences, Computer Science, Economics, Humanities and IELTS, covering 50+ curricula with mock exams, mascot tutors and progress tracking.",
+    market: "\u2248$120bn global private tutoring market; \u2248$14bn online exam prep.",
+    audience: "Students aged 11-18, parents, schools, tutoring centres.",
+    color: "#4ade80",
+    defaultLaunchMonth: 29,
+    defaultInitialUsers: 700,
+    defaultUserGrowth: 0.21,
+    defaultArpu: 19,
+    defaultChurn: 0.05,
+    defaultAddlRevenue: 20000,
+    defaultDirectCost: 10000,
+    reason: "Private tuition costs \u20ac30-\u20ac60 an hour and is priced out of reach for most families, while free question banks are unstructured and unmarked. STEMCOACH delivers structured, curriculum-mapped practice for the price of one hour of tutoring per year.",
+    proposition: "Two million exam-style questions mapped to 50+ curricula (GCSE, A-Level, IB, Abitur, CBSE, AP), AI-marked with worked solutions, adaptive difficulty, timed mock exams and a parent progress dashboard \u2014 plus a schools tier for whole-class deployment.",
+    features: [
+      "2m+ curriculum-mapped exam-style questions",
+      "50+ curricula (GCSE, A-Level, IB, Abitur, AP, CBSE)",
+      "AI marking with step-by-step worked solutions",
+      "Adaptive difficulty and spaced repetition",
+      "Timed mock exams with grade prediction",
+      "12 mascot tutors for engagement and streaks",
+      "IELTS and language exam preparation",
+      "Parent progress dashboard",
+      "Teacher class assignment and analytics",
+      "Offline practice packs and printable worksheets",
+    ],
+    apps: [
+      {
+        name: "STEMCoach Web",
+        kind: "Web",
+        purpose: "Practice, mocks, analytics",
+      },
+      {
+        name: "STEMCoach Mobile",
+        kind: "iOS",
+        purpose: "Practice on the go",
+      },
+      {
+        name: "STEMCoach Mobile",
+        kind: "Android",
+        purpose: "Practice on the go",
+      },
+      {
+        name: "STEMCoach Schools",
+        kind: "SaaS",
+        purpose: "Class assignment and reporting",
+      },
+      {
+        name: "STEMCoach Parent",
+        kind: "Web",
+        purpose: "Progress and spend tracking",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Student",
+        useCase: "Practises to a predicted grade with instant marking.",
+      },
+      {
+        type: "Parent",
+        useCase: "Sees real progress instead of guessing.",
+      },
+      {
+        type: "Teacher",
+        useCase: "Sets differentiated homework in two minutes.",
+      },
+      {
+        type: "Tutoring centre",
+        useCase: "Uses the bank as its curriculum backbone.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Save My Exams / Physics & Maths Tutor",
+        strength: "Trusted UK revision brands and SEO",
+        counter: "Breadth across 50+ international curricula plus AI marking and adaptive practice, not static PDFs",
+      },
+      {
+        name: "Khan Academy",
+        strength: "Free and globally trusted",
+        counter: "Exam-board specificity, timed mocks with grade prediction and parent reporting \u2014 the outcome layer free content never provides",
+      },
+    ],
+    risks: [
+      {
+        risk: "Free content commoditising practice questions",
+        mitigation: "Value sits in marking, adaptivity, grade prediction and parent reporting, not in the questions themselves.",
+      },
+      {
+        risk: "Seasonal exam-cycle churn",
+        mitigation: "Annual plans, school contracts and non-exam-season language products (IELTS) smooth revenue.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Families pay \u00a325-\u00a360/hour for tutors or use free resources (Save My Exams, PMT, Khan Academy, past papers). Schools buy Sparx, MyMaths or Kerboodle for single subjects. Nothing spans multiple curricula with AI marking at a consumer price.",
+      users: "\u2248300m secondary students in target markets; \u224840m pay for exam preparation.",
+      revenue: "\u2248$14bn online exam-prep spend, plus \u2248$120bn in offline tutoring being displaced.",
+    },
+  },
+  {
+    id: "qiyada",
+    name: "QIYADA",
+    region: "INT",
+    tagline: "Founder launchpad and venture-building platform",
+    domain: "qiyada.io",
+    description: "Structured launchpad for founders: application and screening, milestone-based programme delivery, finance-partner matching and investor reporting in one platform.",
+    market: "\u2248500,000 startups founded annually across target regions; \u2248$4bn accelerator and venture-services market.",
+    audience: "Early-stage founders, accelerators, finance partners, corporate innovation teams.",
+    color: "#a3e635",
+    defaultLaunchMonth: 30,
+    defaultInitialUsers: 140,
+    defaultUserGrowth: 0.19,
+    defaultArpu: 99,
+    defaultChurn: 0.03,
+    defaultAddlRevenue: 9000,
+    defaultDirectCost: 6000,
+    reason: "Accelerators run on Airtable, Typeform and Google Docs, so founders get inconsistent support and investors get no real visibility into portfolio progress.",
+    proposition: "A programme OS: structured application and screening, milestone tracking with evidence, mentor and finance-partner matching, and live investor reporting \u2014 sold to accelerators, banks and corporates running founder programmes, and to founders directly as a self-serve tier.",
+    features: [
+      "Application intake with scoring rubrics",
+      "Cohort and programme management",
+      "Milestone tracking with evidence upload",
+      "Mentor matching and session scheduling",
+      "Finance-partner and investor matching",
+      "Data room and cap-table basics",
+      "Investor reporting dashboards",
+      "Curriculum and resource library",
+      "Alumni network and community",
+      "Multi-language (EN/AR) delivery",
+    ],
+    apps: [
+      {
+        name: "Qiyada Programme",
+        kind: "SaaS",
+        purpose: "Cohorts, milestones, mentors",
+      },
+      {
+        name: "Qiyada Founder",
+        kind: "Web",
+        purpose: "Application, tasks, data room",
+      },
+      {
+        name: "Qiyada Investor",
+        kind: "Web",
+        purpose: "Portfolio and reporting",
+      },
+      {
+        name: "Qiyada Admin",
+        kind: "Admin",
+        purpose: "Screening and programme ops",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Founder",
+        useCase: "Applies, follows milestones and raises with a live data room.",
+      },
+      {
+        type: "Programme manager",
+        useCase: "Runs a 40-startup cohort without spreadsheets.",
+      },
+      {
+        type: "Finance partner",
+        useCase: "Sees a screened, milestone-verified deal flow.",
+      },
+      {
+        type: "Corporate innovation lead",
+        useCase: "Runs a supplier or intrapreneur programme.",
+      },
+    ],
+    competitors: [
+      {
+        name: "F6S",
+        strength: "Huge founder network and free tooling",
+        counter: "Purpose-built programme delivery and investor reporting rather than a listings and application inbox",
+      },
+      {
+        name: "Bridge / Sopact",
+        strength: "Established accelerator management tools",
+        counter: "Finance-partner matching and founder-facing product included; simple pricing instead of enterprise quotes",
+      },
+    ],
+    risks: [
+      {
+        risk: "Dependence on accelerator budgets",
+        mitigation: "Direct-to-founder self-serve tier plus corporate and bank programmes diversify demand.",
+      },
+      {
+        risk: "Small addressable count of accelerators",
+        mitigation: "Expand into corporate innovation, government SME programmes and bank startup schemes.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Accelerators run programmes on Airtable, Notion, Typeform and Google Sheets, or pay for niche tools (F6S, Bridge, Sopact). Founders track their own progress in decks; investors get quarterly emails.",
+      users: "\u22488,000 accelerators and \u2248500,000 startups founded annually in target regions.",
+      revenue: "\u2248$4bn accelerator and venture-services market; \u2248$300m addressable in programme software.",
+    },
+  },
+  {
+    id: "zorynnexus",
+    name: "ZORYN NEXUS",
+    region: "INT",
+    tagline: "Money, payments and rewards infrastructure",
+    domain: "zoryn.io",
+    description: "The payments and money layer behind the iTechLounge group: merchant payments, wallets, payouts, multi-currency settlement and rewards infrastructure exposed as APIs to our brands and third parties.",
+    market: "\u2248$2.3tn global payments revenue; embedded-finance platforms hold a fast-growing share.",
+    audience: "Group brands, external merchants, marketplaces, platform partners.",
+    color: "#facc15",
+    defaultLaunchMonth: 31,
+    defaultInitialUsers: 70,
+    defaultUserGrowth: 0.18,
+    defaultArpu: 499,
+    defaultChurn: 0.015,
+    defaultAddlRevenue: 22000,
+    defaultDirectCost: 14000,
+    reason: "Fourteen brands taking money in six countries would otherwise mean fourteen payment integrations, fourteen reconciliations and fourteen compliance surfaces. ZORYN NEXUS is one rail for the whole group \u2014 and a product we can sell.",
+    proposition: "Payments, wallets, escrow, split payouts, multi-currency settlement and rewards issuing as a single API. It cuts the group's blended payment cost, funds itself internally, and is sold externally to marketplaces that need escrow and split payouts without building them.",
+    features: [
+      "Card, SEPA, open banking and wallet acceptance",
+      "Escrow and milestone release",
+      "Split payouts to sellers and providers",
+      "Multi-currency settlement and FX",
+      "Merchant onboarding with KYB/KYC",
+      "Rewards and cashback issuing",
+      "Subscription billing and dunning",
+      "Chargeback and dispute handling",
+      "Unified reconciliation and ledger",
+      "Reporting and revenue-share automation",
+    ],
+    apps: [
+      {
+        name: "Zoryn Nexus API",
+        kind: "API",
+        purpose: "Payments, payouts, wallets",
+      },
+      {
+        name: "Zoryn Console",
+        kind: "SaaS",
+        purpose: "Merchant onboarding and reporting",
+      },
+      {
+        name: "Zoryn Ledger",
+        kind: "Admin",
+        purpose: "Reconciliation and settlement",
+      },
+      {
+        name: "Zoryn Checkout",
+        kind: "Web",
+        purpose: "Hosted checkout and wallet",
+      },
+    ],
+    userTypes: [
+      {
+        type: "Group brand",
+        useCase: "Plugs in payments and payouts in days, not months.",
+      },
+      {
+        type: "External marketplace",
+        useCase: "Gets escrow and split payouts without building them.",
+      },
+      {
+        type: "Merchant",
+        useCase: "Onboards, sells and gets settled in one console.",
+      },
+      {
+        type: "Finance team",
+        useCase: "Reconciles every brand in a single ledger.",
+      },
+    ],
+    competitors: [
+      {
+        name: "Stripe Connect",
+        strength: "Best-in-class developer experience and coverage",
+        counter: "We ride on licensed rails but add escrow, rewards issuing and group-level reconciliation; internally we capture the margin Stripe would keep",
+      },
+      {
+        name: "Adyen for Platforms",
+        strength: "Enterprise scale and unified commerce",
+        counter: "Faster onboarding for small marketplaces and vertical features (milestone escrow, rewards) that enterprise processors treat as custom work",
+      },
+    ],
+    risks: [
+      {
+        risk: "Regulatory licensing",
+        mitigation: "Operate as a technical layer on partnered licensed institutions (e-money and acquiring) rather than holding funds ourselves at launch.",
+      },
+      {
+        risk: "Concentration risk on one acquirer",
+        mitigation: "Multi-acquirer routing with automatic failover.",
+      },
+    ],
+    currentMarket: {
+      howServed: "Each platform integrates Stripe, Adyen or a local acquirer directly, then builds escrow, split payouts and reconciliation itself. Rewards and loyalty run on entirely separate systems with no shared ledger.",
+      users: "\u224830m merchants globally on platform payment rails; group-internal volume alone reaches eight figures by Year 2.",
+      revenue: "\u2248$2.3tn global payments revenue; group-internal savings of \u2248\u20ac1.2m/yr at scale plus external platform fees.",
+    },
   },
 ];
