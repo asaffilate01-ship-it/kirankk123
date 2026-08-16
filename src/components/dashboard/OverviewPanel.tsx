@@ -133,6 +133,24 @@ export function OverviewPanel() {
           ))}
         </div>
       </Card>
+
+      <Card className="space-y-3 p-4 text-sm">
+        <h3 className="font-semibold">Brand marks</h3>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
+            <img src={logoEn} alt="iTechLounge — Digital ideas. Beautifully built." className="h-28 w-auto object-contain" />
+            <a href={logoEn} download="itechlounge-logo-en.png" className="text-xs font-medium text-primary hover:underline">
+              English slogan · download
+            </a>
+          </div>
+          <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
+            <img src={logoDe} alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt." className="h-28 w-auto object-contain" />
+            <a href={logoDe} download="itechlounge-logo-de.png" className="text-xs font-medium text-primary hover:underline">
+              German slogan · download
+            </a>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }
