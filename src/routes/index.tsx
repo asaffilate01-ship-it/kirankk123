@@ -48,7 +48,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const router = useRouter();
-  const { lang } = useLang();
   const lock = useServerFn(lockSite);
   async function handleLock() {
     await lock({});

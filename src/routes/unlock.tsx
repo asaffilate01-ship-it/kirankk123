@@ -32,7 +32,6 @@ export const Route = createFileRoute("/unlock")({
 function Unlock() {
   const { error: searchError } = Route.useSearch();
   const navigate = useNavigate();
-  const { lang } = useLang();
   const unlock = useServerFn(unlockSite);
   const [error, setError] = useState<string | undefined>(searchError);
   const [busy, setBusy] = useState(false);
