@@ -360,7 +360,7 @@ export const BRANDS: Brand[] = [
   },
   {
     id: "beratermarkt",
-    name: "BERATERMARKT",
+    name: "BERATEMARKT",
     tagline: "Cross-professional advisor marketplace",
     description:
       "Marketplace for regulated advisors — Rechtsanwälte, Steuerberater, Wirtschaftsprüfer and Buchhalter. Cross-referrals across four disciplines, secure client portal.",
@@ -383,7 +383,7 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 4500,
     defaultDirectCost: 4200,
     color: "#6366f1",
-    domain: "beratermarkt.de",
+    domain: "beratemarkt.de",
     reason:
       "SMBs need lawyer + tax advisor + auditor + bookkeeper working together, but each hides behind a single-profession portal. Clients repeat their story four times and pay four onboarding fees. BERATERMARKT is one client dashboard, one document vault, cross-referrals baked in.",
     proposition:
@@ -1436,7 +1436,7 @@ export const BRANDS: Brand[] = [
     name: "STYLESYNC UK",
     region: "UK",
     tagline: "Salon booking & management software",
-    domain: "stylesync.co.uk",
+    domain: "stylesync.uk",
     description: "Consumer booking marketplace plus full salon management: calendar, staff rotas, stock, payments and marketing for hair, beauty and barber businesses.",
     market: "\u224845,000 UK hair and beauty businesses; \u2248\u00a38.5bn consumer spend.",
     audience: "Salon owners, independent stylists, barbers, beauty therapists, clients.",
@@ -2131,10 +2131,10 @@ export const BRANDS: Brand[] = [
   },
   {
     id: "stylesyncger",
-    name: "STYLESYNC DE",
+    name: "SCHONOVA",
     region: "DE",
     tagline: "Salon-Software und Buchungsplattform f\u00fcr Deutschland",
-    domain: "stylesync.de",
+    domain: "schonova.de",
     description: "German edition of STYLESYNC: online booking marketplace plus salon management for Friseure, Kosmetik and Barbershops, with DSGVO-compliant client records, TSE-ready checkout and SEPA payments.",
     market: "\u224880,000 Friseur- und Kosmetikbetriebe in Germany; \u2248\u20ac22bn consumer spend.",
     audience: "Salon owners, self-employed stylists, beauty studios, clients.",
@@ -2540,7 +2540,7 @@ export const BRANDS: Brand[] = [
     name: "MARKTPASS",
     region: "DE",
     tagline: "EU marketplace compliance operating system",
-    domain: "marktpass.eu",
+    domain: "marktpass.de",
     description: "Compliance OS for products sold into the EU: GPSR, EPR, WEEE, packaging and battery registrations, responsible-person data and per-marketplace documentation, verified before you ship.",
     market: "\u22481.4m EU marketplace sellers affected by GPSR and EPR; \u2248\u20ac1.2bn compliance-services market.",
     audience: "Amazon/eBay sellers, D2C brands, importers, marketplace operators.",
@@ -3241,9 +3241,9 @@ export const BRANDS: Brand[] = [
   {
     id: "sharedbricks",
     name: "SHAREDBRICKS",
-    region: "INT",
+    region: "UK",
     tagline: "Fractional property investment from $100",
-    domain: "sharedbricks.com",
+    domain: "sharedbricks.co.uk",
     description: "Fractional real-estate investment platform: buy shares in regulated SPV-held properties across the UAE, Saudi Arabia, the UK and Pakistan and receive quarterly rental income.",
     market: "\u2248$280bn annual cross-border retail real-estate investment; fractional platforms hold <1%.",
     audience: "Retail investors, diaspora investors, property owners seeking partial exit, agents.",
