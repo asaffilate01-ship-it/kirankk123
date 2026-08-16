@@ -3,7 +3,7 @@ import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
-import logoAsset from "@/assets/loungetech-logo.png.asset.json";
+import logoEn from "@/assets/itechlounge-logo-en.png";
 
 export function OverviewPanel() {
   const state = useFinance();
@@ -26,12 +26,12 @@ export function OverviewPanel() {
     <div className="space-y-4">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <img
-          src={logoAsset.url}
-          alt="LoungeTech Digitallösungen GmbH"
+          src={logoEn}
+          alt="iTechLounge"
           className="h-32 w-auto shrink-0"
         />
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
+          <h1 className="text-2xl font-bold tracking-tight">iTechLounge</h1>
           <p className="text-sm text-muted-foreground">
             Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to
             re-forecast P&L, cash flow and balance sheet in real time.
@@ -98,7 +98,7 @@ export function OverviewPanel() {
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">Our system — one team, ten brands</h3>
         <p className="text-muted-foreground">
-          LoungeTech Digitallösungen GmbH operates as a single company that ships and runs ten
+          iTechLounge operates as a single company that ships and runs ten
           German-focused digital brands. Every brand shares the same operating chassis, so each new
           product launched on our platform benefits from economies of scale and cross-selling into the
           existing customer base of the other nine.

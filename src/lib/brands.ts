@@ -769,11 +769,11 @@ export const BRANDS: Brand[] = [
     name: "KONNEVIA",
     tagline: "WhatsApp Workflow Platform for Germany",
     description:
-      "Konnevia turns WhatsApp into a controlled business process. Every conversation becomes a case with qualification, appointment, document request, quote, payment, third-party fulfilment and follow-up — one engine sold three ways: embedded add-on inside any LoungeTech brand, standalone SaaS for independent SMEs, and a partner/white-label edition for agencies and groups.",
+      "Konnevia turns WhatsApp into a controlled business process. Every conversation becomes a case with qualification, appointment, document request, quote, payment, third-party fulfilment and follow-up — one engine sold three ways: embedded add-on inside any iTechLounge brand, standalone SaaS for independent SMEs, and a partner/white-label edition for agencies and groups.",
     market:
       "≈3.3m SMEs in Germany, ≈60m WhatsApp users; €1.8bn addressable customer-conversation SaaS TAM (WhatsApp Business Platform, helpdesk, appointment & workflow tooling).",
     audience:
-      "Independent SMEs in beauty, trades, healthcare, real-estate, hospitality, automotive; in-house teams inside LoungeTech brands; agencies, consultancies and franchise groups running many client tenants.",
+      "Independent SMEs in beauty, trades, healthcare, real-estate, hospitality, automotive; in-house teams inside iTechLounge brands; agencies, consultancies and franchise groups running many client tenants.",
     competitors: [
       { name: "Superchat", strength: "Established DE WhatsApp inbox brand", counter: "Case-based workflow engine (not just an inbox), embedded distribution across 11 sister brands, and 30% cheaper standalone tier" },
       { name: "Charles", strength: "Commerce focus, Shopify integrations", counter: "Vertical workflow packs (LoungeBeauty, Trades, Care, Estate, Hosp, Auto) + § 203 StGB / DSGVO / TTDSG compliance out of the box, not just marketing sends" },
@@ -798,9 +798,9 @@ export const BRANDS: Brand[] = [
     color: "#25D366",
     domain: "konnevia.de",
     reason:
-      "German SMEs already run their business on WhatsApp — but on private phones, with no audit trail, no consent management, no SLA and no compliance with § 203 StGB / DSGVO / TTDSG. Existing tools are either shared inboxes (no workflow) or enterprise CPaaS (too expensive). Konnevia gives every SME — and every LoungeTech brand — a compliant, case-based WhatsApp workflow engine that turns chats into revenue.",
+      "German SMEs already run their business on WhatsApp — but on private phones, with no audit trail, no consent management, no SLA and no compliance with § 203 StGB / DSGVO / TTDSG. Existing tools are either shared inboxes (no workflow) or enterprise CPaaS (too expensive). Konnevia gives every SME — and every iTechLounge brand — a compliant, case-based WhatsApp workflow engine that turns chats into revenue.",
     proposition:
-      "One engine, three surfaces. (1) Embedded add-on inside a LoungeTech brand at €29/€69/€149 per month — shared login, data and billing with the host product. (2) Standalone SaaS at €49/€99/€249 for independent SMEs — own tenant, own number, own inbox, workflows and staff app. (3) Partner edition from €499/mo for agencies and groups — multi-tenant, delegated support, branding and commission accounting built in. Every tier ships DSGVO-first, EU-hosted, with Meta-approved template governance and § 203 StGB safeguards.",
+      "One engine, three surfaces. (1) Embedded add-on inside a iTechLounge brand at €29/€69/€149 per month — shared login, data and billing with the host product. (2) Standalone SaaS at €49/€99/€249 for independent SMEs — own tenant, own number, own inbox, workflows and staff app. (3) Partner edition from €499/mo for agencies and groups — multi-tenant, delegated support, branding and commission accounting built in. Every tier ships DSGVO-first, EU-hosted, with Meta-approved template governance and § 203 StGB safeguards.",
     features: [
       "Case state machine: intake → qualify → quote → schedule → fulfil → follow-up",
       "Unified inbox: AI, agent, manager, partner — one thread, different views",
@@ -821,7 +821,7 @@ export const BRANDS: Brand[] = [
       { name: "Konnevia Staff Android", kind: "Android", purpose: "Same, on Android" },
       { name: "Konnevia Portal", kind: "Web", purpose: "Customer-facing secure portal for uploads, quotes and payments" },
       { name: "Konnevia Partner", kind: "SaaS", purpose: "Agency multi-tenant console with commissions and branding" },
-      { name: "Konnevia Cloud API", kind: "API", purpose: "WhatsApp Cloud API + workflow engine for embedded use inside LoungeTech brands" },
+      { name: "Konnevia Cloud API", kind: "API", purpose: "WhatsApp Cloud API + workflow engine for embedded use inside iTechLounge brands" },
       { name: "Konnevia Admin", kind: "Admin", purpose: "Trust, safety, template governance, break-glass access review" },
     ],
     userTypes: [
@@ -830,7 +830,7 @@ export const BRANDS: Brand[] = [
       { type: "Manager / operations", useCase: "Tracks SLA, automation rate and revenue per workflow across the team." },
       { type: "Compliance / finance", useCase: "Audits every message, consent and payment; exports DSGVO records on demand." },
       { type: "Partner / agency", useCase: "Runs many client tenants with delegated support, branding and commission accounting." },
-      { type: "LoungeTech sister brand", useCase: "Embeds Konnevia inside its own product as a native WhatsApp add-on." },
+      { type: "iTechLounge sister brand", useCase: "Embeds Konnevia inside its own product as a native WhatsApp add-on." },
     ],
     risks: [
       { risk: "Meta policy changes on WhatsApp Business Platform", mitigation: "Authorised Meta partner path, template governance with rollback, and multi-channel fallback (SMS, e-mail, portal) so no workflow depends on a single Meta approval." },

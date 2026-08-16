@@ -21,15 +21,15 @@ export const Route = createFileRoute("/brands/$brandId")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: loaderData ? `${loaderData.brand.name} — LoungeTech` : "Brand — LoungeTech" },
+      { title: loaderData ? `${loaderData.brand.name} — iTechLounge` : "Brand — iTechLounge" },
       {
         name: "description",
-        content: loaderData?.brand.tagline ?? "LoungeTech brand detail",
+        content: loaderData?.brand.tagline ?? "iTechLounge brand detail",
       },
-      { property: "og:title", content: loaderData ? `${loaderData.brand.name} — LoungeTech` : "Brand — LoungeTech" },
+      { property: "og:title", content: loaderData ? `${loaderData.brand.name} — iTechLounge` : "Brand — iTechLounge" },
       {
         property: "og:description",
-        content: loaderData?.brand.tagline ?? "LoungeTech brand detail",
+        content: loaderData?.brand.tagline ?? "iTechLounge brand detail",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -205,7 +205,7 @@ function BrandDetail() {
           <Section title="Competitive advantage — one team, ten brands">
             <p className="text-sm text-muted-foreground">
               Unlike standalone SaaS businesses, {brand.name} shares every non-product function with the
-              other nine LoungeTech brands. Each additional product therefore benefits from economies of
+              other nine iTechLounge brands. Each additional product therefore benefits from economies of
               scale and cross-selling opportunities.
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
