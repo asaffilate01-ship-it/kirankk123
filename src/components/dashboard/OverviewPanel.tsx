@@ -4,6 +4,7 @@ import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
 import logoEn from "@/assets/itechlounge-logo-en.png";
+import logoDe from "@/assets/itechlounge-logo-de.png";
 
 export function OverviewPanel() {
   const state = useFinance();
@@ -32,6 +33,7 @@ export function OverviewPanel() {
         />
         <div>
           <h1 className="text-2xl font-bold tracking-tight">iTechLounge</h1>
+          <p className="text-sm font-medium">Digital ideas. Beautifully built.</p>
           <p className="text-sm text-muted-foreground">
             Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to
             re-forecast P&L, cash flow and balance sheet in real time.
