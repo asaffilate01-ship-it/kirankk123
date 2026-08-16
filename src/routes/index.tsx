@@ -7,7 +7,7 @@ import { PLPanel } from "@/components/dashboard/PLPanel";
 import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
-import logoAsset from "@/assets/loungetech-logo.png.asset.json";
+import logoEn from "@/assets/itechlounge-logo-en.png";
 import { requireUnlocked, lockSite } from "@/lib/gate.functions";
 import { useServerFn } from "@tanstack/react-start";
 import { useRouter } from "@tanstack/react-router";
@@ -21,17 +21,17 @@ export const Route = createFileRoute("/")({
   },
   head: () => ({
     meta: [
-      { title: "LoungeTech Dashboard — Live Financial Model" },
+      { title: "iTechLounge Dashboard — Live Financial Model" },
       {
         name: "description",
         content:
-          "Interactive dashboard for LoungeTech Digitallösungen GmbH — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+          "Interactive dashboard for iTechLounge — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
       },
-      { property: "og:title", content: "LoungeTech Dashboard — Live Financial Model" },
+      { property: "og:title", content: "iTechLounge Dashboard — Live Financial Model" },
       {
         property: "og:description",
         content:
-          "Interactive dashboard for LoungeTech Digitallösungen GmbH with 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+          "Interactive dashboard for iTechLounge with 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -54,12 +54,12 @@ function Index() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
             <img
-              src={logoAsset.url}
-              alt="LoungeTech Digitallösungen GmbH"
+              src={logoEn}
+              alt="iTechLounge"
               className="h-14 w-auto"
             />
             <div>
-              <h1 className="text-sm font-semibold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
+              <h1 className="text-sm font-semibold tracking-tight">iTechLounge</h1>
               <p className="text-xs text-muted-foreground">
                 Live dashboard · 10 brands · 36-month forecast
               </p>

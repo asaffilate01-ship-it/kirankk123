@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import logoAsset from "@/assets/loungetech-logo.png.asset.json";
+import logoEn from "@/assets/itechlounge-logo-en.png";
 
 export const Route = createFileRoute("/unlock")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -10,10 +10,10 @@ export const Route = createFileRoute("/unlock")({
   }),
   head: () => ({
     meta: [
-      { title: "Unlock — LoungeTech Dashboard" },
+      { title: "Unlock — iTechLounge Dashboard" },
       { name: "description", content: "Password protected dashboard." },
-      { property: "og:title", content: "Unlock — LoungeTech Dashboard" },
-      { property: "og:description", content: "Password protected LoungeTech dashboard access." },
+      { property: "og:title", content: "Unlock — iTechLounge Dashboard" },
+      { property: "og:description", content: "Password protected iTechLounge dashboard access." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex,nofollow" },
@@ -29,7 +29,7 @@ function Unlock() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm space-y-5 p-6">
         <div className="flex flex-col items-center gap-3 text-center">
-          <img src={logoAsset.url} alt="LoungeTech" className="h-16 w-auto" />
+          <img src={logoEn} alt="iTechLounge" className="h-16 w-auto" />
           <div>
             <h1 className="text-lg font-semibold tracking-tight">Dashboard</h1>
             <p className="text-xs text-muted-foreground">

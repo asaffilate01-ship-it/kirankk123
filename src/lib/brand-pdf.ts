@@ -201,7 +201,7 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
     doc.text(
-      `LoungeTech Digitallösungen GmbH · ${brand.name} · ${new Date().toLocaleDateString()}`,
+      `iTechLounge · ${brand.name} · ${new Date().toLocaleDateString()}`,
       margin,
       pageH - 24,
     );

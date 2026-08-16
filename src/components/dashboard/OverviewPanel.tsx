@@ -3,7 +3,8 @@ import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
-import logoAsset from "@/assets/loungetech-logo.png.asset.json";
+import logoEn from "@/assets/itechlounge-logo-en.png";
+import logoDe from "@/assets/itechlounge-logo-de.png";
 
 export function OverviewPanel() {
   const state = useFinance();
@@ -26,12 +27,13 @@ export function OverviewPanel() {
     <div className="space-y-4">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <img
-          src={logoAsset.url}
-          alt="LoungeTech Digitallösungen GmbH"
+          src={logoEn}
+          alt="iTechLounge"
           className="h-32 w-auto shrink-0"
         />
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">LoungeTech Digitallösungen GmbH</h1>
+          <h1 className="text-2xl font-bold tracking-tight">iTechLounge</h1>
+          <p className="text-sm font-medium">Digital ideas. Beautifully built.</p>
           <p className="text-sm text-muted-foreground">
             Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to
             re-forecast P&L, cash flow and balance sheet in real time.
@@ -98,7 +100,7 @@ export function OverviewPanel() {
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">Our system — one team, ten brands</h3>
         <p className="text-muted-foreground">
-          LoungeTech Digitallösungen GmbH operates as a single company that ships and runs ten
+          iTechLounge operates as a single company that ships and runs ten
           German-focused digital brands. Every brand shares the same operating chassis, so each new
           product launched on our platform benefits from economies of scale and cross-selling into the
           existing customer base of the other nine.
@@ -131,10 +133,27 @@ export function OverviewPanel() {
           ))}
         </div>
       </Card>
+
+      <Card className="space-y-3 p-4 text-sm">
+        <h3 className="font-semibold">Brand marks</h3>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
+            <img src={logoEn} alt="iTechLounge — Digital ideas. Beautifully built." className="h-28 w-auto object-contain" />
+            <a href={logoEn} download="itechlounge-logo-en.png" className="text-xs font-medium text-primary hover:underline">
+              English slogan · download
+            </a>
+          </div>
+          <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
+            <img src={logoDe} alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt." className="h-28 w-auto object-contain" />
+            <a href={logoDe} download="itechlounge-logo-de.png" className="text-xs font-medium text-primary hover:underline">
+              German slogan · download
+            </a>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }
-
 function Kpi({ label, value, tone }: { label: string; value: string; tone?: "good" | "bad" }) {
   return (
     <Card className="p-3">
