@@ -687,7 +687,7 @@ export const DE: Record<string, string> = {
  "Other revenue / mo": "Sonstige Einnahmen / Monat",
  "Our system — one team, ten brands": "Unser System – ein Team, zehn Marken",
  "Overview": "Übersicht",
- "P&amp;L": "GuV",
+ "P&L": "GuV",
  "Paid-in capital (investor tranches)": "Eingezahltes Kapital (Investoren-Tranchen)",
  "Password": "Passwort",
  "Proposition": "Angebot",
