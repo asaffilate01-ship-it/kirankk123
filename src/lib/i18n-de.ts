@@ -728,5 +728,11 @@ export const DE: Record<string, string> = {
  "Risk": "Risiko",
  "Risk:": "Risiko:",
  "Strength": "Stärke",
- "Strength:": "Stärke:"
+ "Strength:": "Stärke:",
+ "Costs": "Kosten",
+ "Custom": "Benutzerdefiniert",
+ "Investor dividends": "Investorendividenden",
+ "MRR": "MRR",
+ "Users": "Nutzer",
+ "launches": "Starts"
 };
