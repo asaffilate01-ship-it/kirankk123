@@ -64,7 +64,7 @@ function Unlock() {
             </p>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="space-y-3">
+        <form method="post" action="/api/public/unlock" onSubmit={onSubmit} className="space-y-3">
           <Input
             type="password"
             name="password"
