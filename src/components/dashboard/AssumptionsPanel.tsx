@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { useState } from "react";
 import { useFinance, type CustomLine } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -13,9 +14,9 @@ export function AssumptionsPanel() {
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <Card className="space-y-4 p-4">
-        <h3 className="font-semibold">Funding & investor terms</h3>
+        <h3 className="font-semibold">{t("Funding & investor terms")}</h3>
         <SliderRow
-          label="Tranche size"
+          label={t("Tranche size")}
           value={g.trancheSize}
           min={10000}
           max={500000}
@@ -24,14 +25,14 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="Number of tranches"
+          label={t("Number of tranches")}
           value={g.trancheCount}
           min={1}
           max={40}
           onChange={(v) => s.setGlobal({ trancheCount: v })}
         />
         <SliderRow
-          label="Investor equity %"
+          label={t("Investor equity %")}
           value={Math.round(g.investorEquityPct * 1000) / 10}
           min={0}
           max={100}
@@ -40,7 +41,7 @@ export function AssumptionsPanel() {
           format={(v) => `${v.toFixed(1)}%`}
         />
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
-          <div className="mb-1 font-medium text-foreground">Funding summary</div>
+          <div className="mb-1 font-medium text-foreground">{t("Funding summary")}</div>
           <div>
             Total raise: {fmtEURk(g.trancheSize * g.trancheCount)} · each tranche buys{" "}
             {fmtPct(
@@ -58,13 +59,13 @@ export function AssumptionsPanel() {
           </div>
         </div>
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
-          <div className="mb-1 font-medium text-foreground">Dividend schedule</div>
+          <div className="mb-1 font-medium text-foreground">{t("Dividend schedule")}</div>
           Shareholders draw dividends from undistributed net profit: 20% at M6, 30% at M12,
           40% at M18/24/30/36. Split by equity (investor {Math.round(g.investorEquityPct * 100)}% / founder{" "}
           {100 - Math.round(g.investorEquityPct * 100)}%).
         </div>
         <SliderRow
-          label="Opening cash"
+          label={t("Opening cash")}
           value={g.openingCash}
           min={0}
           max={2000000}
@@ -75,9 +76,9 @@ export function AssumptionsPanel() {
       </Card>
 
       <Card className="space-y-4 p-4">
-        <h3 className="font-semibold">Shared cost engine</h3>
+        <h3 className="font-semibold">{t("Shared cost engine")}</h3>
         <SliderRow
-          label="HQ base / mo"
+          label={t("HQ base / mo")}
           value={g.hqBase}
           min={0}
           max={200000}
@@ -86,7 +87,7 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="HQ per launched brand / mo"
+          label={t("HQ per launched brand / mo")}
           value={g.hqPerBrand}
           min={0}
           max={30000}
@@ -95,7 +96,7 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="Tech base / mo"
+          label={t("Tech base / mo")}
           value={g.techBase}
           min={0}
           max={80000}
@@ -104,7 +105,7 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="Tech per launched brand / mo"
+          label={t("Tech per launched brand / mo")}
           value={g.techPerBrand}
           min={0}
           max={15000}
@@ -113,7 +114,7 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="Marketing base / mo"
+          label={t("Marketing base / mo")}
           value={g.marketingBase}
           min={0}
           max={80000}
@@ -122,7 +123,7 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="Marketing per launched brand / mo"
+          label={t("Marketing per launched brand / mo")}
           value={g.marketingPerBrand}
           min={0}
           max={30000}
@@ -131,7 +132,7 @@ export function AssumptionsPanel() {
           format={fmtEURk}
         />
         <SliderRow
-          label="Variable opex (% of revenue)"
+          label={t("Variable opex (% of revenue)")}
           value={Math.round(g.variableOpexPct * 1000) / 10}
           min={0}
           max={40}
@@ -140,7 +141,7 @@ export function AssumptionsPanel() {
           format={(v) => `${v.toFixed(1)}%`}
         />
         <SliderRow
-          label="Corporate tax rate"
+          label={t("Corporate tax rate")}
           value={Math.round(g.taxRate * 1000) / 10}
           min={0}
           max={45}
@@ -149,14 +150,14 @@ export function AssumptionsPanel() {
           format={(v) => `${v.toFixed(1)}%`}
         />
         <SliderRow
-          label="Free trial (months)"
+          label={t("Free trial (months)")}
           value={g.freeTrialMonths}
           min={0}
           max={6}
           onChange={(v) => s.setGlobal({ freeTrialMonths: v })}
         />
         <SliderRow
-          label="Forecast horizon (months)"
+          label={t("Forecast horizon (months)")}
           value={g.months}
           min={12}
           max={60}
@@ -219,7 +220,7 @@ function CustomLinesEditor({ kind }: { kind: "revenue" | "cost" }) {
       </div>
       <div className="space-y-3">
         {lines.length === 0 && (
-          <p className="text-xs text-muted-foreground">No lines yet.</p>
+          <p className="text-xs text-muted-foreground">{t("No lines yet.")}</p>
         )}
         {lines.map((l) => (
           <div key={l.id} className="space-y-2 rounded-md border p-3">
@@ -234,7 +235,7 @@ function CustomLinesEditor({ kind }: { kind: "revenue" | "cost" }) {
               </Button>
             </div>
             <SliderRow
-              label="Amount / mo"
+              label={t("Amount / mo")}
               value={l.amount}
               min={0}
               max={200000}
@@ -243,14 +244,14 @@ function CustomLinesEditor({ kind }: { kind: "revenue" | "cost" }) {
               format={fmtEURk}
             />
             <SliderRow
-              label="Start month"
+              label={t("Start month")}
               value={l.startMonth}
               min={1}
               max={s.global.months}
               onChange={(v) => update(l.id, { startMonth: v })}
             />
             <SliderRow
-              label="Monthly growth %"
+              label={t("Monthly growth %")}
               value={Math.round(l.growth * 1000) / 10}
               min={-10}
               max={30}

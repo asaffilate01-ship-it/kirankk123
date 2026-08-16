@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { useMemo } from "react";
 import { useFinance, buildModel, balanceSheets } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -18,12 +19,12 @@ export function BalanceSheetPanel() {
 
   return (
     <Card className="p-4">
-      <h3 className="mb-3 font-semibold">Year-end balance sheets</h3>
+      <h3 className="mb-3 font-semibold">{t("Year-end balance sheets")}</h3>
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Line item</TableHead>
+              <TableHead>{t("Line item")}</TableHead>
               {bs.map((b) => (
                 <TableHead key={b.year} className="text-right">Y{b.year}</TableHead>
               ))}
@@ -31,13 +32,13 @@ export function BalanceSheetPanel() {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell className="font-semibold text-muted-foreground">ASSETS</TableCell>
+              <TableCell className="font-semibold text-muted-foreground">{t("ASSETS")}</TableCell>
               {bs.map((b) => <TableCell key={b.year} />)}
             </TableRow>
             {[
-              { k: "Cash", get: (b: any) => b.cash },
-              { k: "Fixed assets", get: (b: any) => b.fixedAssets },
-              { k: "Total assets", get: (b: any) => b.totalAssets, bold: true },
+              { k: t("Cash"), get: (b: any) => b.cash },
+              { k: t("Fixed assets"), get: (b: any) => b.fixedAssets },
+              { k: t("Total assets"), get: (b: any) => b.totalAssets, bold: true },
             ].map((r) => (
               <TableRow key={r.k}>
                 <TableCell className={r.bold ? "font-semibold" : ""}>{r.k}</TableCell>
@@ -49,15 +50,15 @@ export function BalanceSheetPanel() {
               </TableRow>
             ))}
             <TableRow>
-              <TableCell className="font-semibold text-muted-foreground">EQUITY & LIAB.</TableCell>
+              <TableCell className="font-semibold text-muted-foreground">{t("EQUITY & LIAB.")}</TableCell>
               {bs.map((b) => <TableCell key={b.year} />)}
             </TableRow>
             {[
-              { k: "Paid-in capital (investor tranches)", get: (b: any) => b.paidInCapital },
-              { k: "Retained earnings (undistributed profit)", get: (b: any) => b.retainedEarnings },
-              { k: "Total equity", get: (b: any) => b.totalEquity, bold: true },
-              { k: "Liabilities (leases/loans)", get: (b: any) => b.liabilities },
-              { k: "Total equity + liabilities", get: (b: any) => b.totalLiabAndEquity, bold: true },
+              { k: t("Paid-in capital (investor tranches)"), get: (b: any) => b.paidInCapital },
+              { k: t("Retained earnings (undistributed profit)"), get: (b: any) => b.retainedEarnings },
+              { k: t("Total equity"), get: (b: any) => b.totalEquity, bold: true },
+              { k: t("Liabilities (leases/loans)"), get: (b: any) => b.liabilities },
+              { k: t("Total equity + liabilities"), get: (b: any) => b.totalLiabAndEquity, bold: true },
             ].map((r) => (
               <TableRow key={r.k}>
                 <TableCell className={r.bold ? "font-semibold" : ""}>{r.k}</TableCell>

@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { useEffect, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
@@ -31,7 +32,7 @@ export function GateGuard({ children }: { children: React.ReactNode }) {
   if (state === "checking") {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background">
-        <p className="text-sm text-muted-foreground">Checking access…</p>
+        <p className="text-sm text-muted-foreground">{t("Checking access…")}</p>
       </div>
     );
   }

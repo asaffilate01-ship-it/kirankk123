@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { BRANDS } from "@/lib/brands";
 import { useFinance } from "@/lib/finance-store";
@@ -59,7 +60,7 @@ export function BrandsPanel() {
               </div>
               <div className="grid grid-cols-3 gap-2 rounded-md bg-muted/50 p-2 text-center text-xs">
                 <div>
-                  <div className="text-muted-foreground">Launch</div>
+                  <div className="text-muted-foreground">{t("Launch")}</div>
                   <div className="font-semibold">M{a.launchMonth}</div>
                 </div>
                 <div>

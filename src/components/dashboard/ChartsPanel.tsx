@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { useMemo } from "react";
 import { useFinance, buildModel } from "@/lib/finance-store";
 import { BRANDS } from "@/lib/brands";
@@ -49,7 +50,7 @@ export function ChartsPanel() {
   return (
     <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
       <Card className="p-4">
-        <h3 className="mb-2 font-semibold">Revenue mix by brand (stacked, monthly)</h3>
+        <h3 className="mb-2 font-semibold">{t("Revenue mix by brand (stacked, monthly)")}</h3>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={stackData} margin={{ top: 8, right: 12, left: 8, bottom: 0 }}>
@@ -92,7 +93,7 @@ export function ChartsPanel() {
       </Card>
 
       <Card className="p-4 xl:col-span-2">
-        <h3 className="mb-2 font-semibold">Cost composition (stacked, monthly)</h3>
+        <h3 className="mb-2 font-semibold">{t("Cost composition (stacked, monthly)")}</h3>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={costMix} margin={{ top: 8, right: 12, left: 8, bottom: 0 }}>
