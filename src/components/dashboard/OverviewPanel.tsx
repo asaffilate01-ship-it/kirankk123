@@ -42,7 +42,7 @@ export function OverviewPanel() {
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Kpi label={t("Active brands")} value={`${activeBrands} / 10`} />
-        <Kpi label={`MRR @ M${rows.length}`} value={fmtEURk(last.revenue)} />
+        <Kpi label={`${t("MRR")} @ M${rows.length}`} value={fmtEURk(last.revenue)} />
         <Kpi label={t("Funding raised")} value={fmtEURk(totalFunding)} />
         <Kpi
           label={t("€1m/mo hit at")}
@@ -53,11 +53,11 @@ export function OverviewPanel() {
           value={fmtEURk(minCash)}
           tone={minCash < 0 ? "bad" : "good"}
         />
-        <Kpi label={`Cash @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
-        <Kpi label={`Investor dividends (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
+        <Kpi label={`${t("Cash")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
+        <Kpi label={`${t("Investor dividends")} (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
         <Kpi label={t("Total dividends paid")} value={fmtEURk(cumDividend)} />
         <Kpi
-          label={`Margin @ M${rows.length}`}
+          label={`${t("Margin")} @ M${rows.length}`}
           value={last.revenue > 0 ? fmtPct(last.ebit / last.revenue) : "—"}
         />
       </div>
@@ -69,12 +69,12 @@ export function OverviewPanel() {
             <div key={y.year} className="rounded-lg border p-3">
               <div className="text-xs uppercase text-muted-foreground">Year {y.year}</div>
               <div className="mt-2 space-y-1 text-sm">
-                <Row k="Revenue" v={fmtEURk(y.revenue)} />
-                <Row k="EBIT" v={fmtEURk(y.ebit)} />
-                <Row k="Margin" v={fmtPct(y.margin)} />
-                <Row k="Net profit" v={fmtEURk(y.netProfit)} />
-                <Row k={`Investor dividends (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
-                <Row k="Year-end cash" v={fmtEURk(y.endCash)} />
+                <Row k={t("Revenue")} v={fmtEURk(y.revenue)} />
+                <Row k={t("EBIT")} v={fmtEURk(y.ebit)} />
+                <Row k={t("Margin")} v={fmtPct(y.margin)} />
+                <Row k={t("Net profit")} v={fmtEURk(y.netProfit)} />
+                <Row k={`${t("Investor dividends")} (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
+                <Row k={t("Year-end cash")} v={fmtEURk(y.endCash)} />
               </div>
             </div>
           ))}
@@ -113,7 +113,7 @@ export function OverviewPanel() {
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full" style={{ background: b.color }} />
                 <span className="font-semibold">{b.name}</span>
-                <span className="text-muted-foreground">· launches M{state.brands[b.id].launchMonth}</span>
+                <span className="text-muted-foreground">· {t("launches")} M{state.brands[b.id].launchMonth}</span>
               </div>
               <a
                 href={`https://${b.domain}`}
