@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { logoFor } from "@/lib/logo";
+import { BrandLogo } from "@/components/BrandLogo";
 import { useLang } from "@/lib/i18n";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { unlockSite } from "@/lib/gate.functions";
@@ -63,7 +63,7 @@ function Unlock() {
           <LanguageToggle />
         </div>
         <div className="flex flex-col items-center gap-3 text-center">
-          <img src={logoFor(lang)} alt={t("iTechLounge")} className="h-16 w-auto" />
+          <BrandLogo className="h-16" />
           <div>
             <h1 className="text-lg font-semibold tracking-tight">{t("Dashboard")}</h1>
             <p className="text-xs text-muted-foreground">{t("Enter the access password to view the financial model.")}</p>

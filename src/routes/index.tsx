@@ -8,7 +8,7 @@ import { PLPanel } from "@/components/dashboard/PLPanel";
 import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
-import { logoFor } from "@/lib/logo";
+import { BrandLogo } from "@/components/BrandLogo";
 import { BRANDS } from "@/lib/brands";
 import { useLang } from "@/lib/i18n";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -61,11 +61,7 @@ function Index() {
       <header className="border-b bg-card/50 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
-            <img
-              src={logoFor(lang)}
-              alt={t("iTechLounge")}
-              className="h-14 w-auto"
-            />
+            <BrandLogo className="h-14" />
             <div>
               <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
               <p className="text-xs text-muted-foreground">{t("Live dashboard")} · {BRANDS.length} {t("brands")} · {t("36-month forecast")}</p>
