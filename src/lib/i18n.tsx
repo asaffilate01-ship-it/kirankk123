@@ -1,5 +1,6 @@
 import {
   createContext,
+  Fragment,
   useCallback,
   useContext,
   useEffect,
@@ -76,7 +77,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   const value = useMemo(() => ({ lang, setLang, t }), [lang, setLang]);
-  return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
+  return (
+    <LangContext.Provider value={value}>
+      {/* key forces a fresh render pass so module-level t() re-evaluates everywhere */}
+      <Fragment key={lang}>{children}</Fragment>
+    </LangContext.Provider>
+  );
 }
 
 export function useLang() {
