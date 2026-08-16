@@ -136,8 +136,6 @@ export function OverviewPanel() {
     </div>
   );
 }
-
-
 function Kpi({ label, value, tone }: { label: string; value: string; tone?: "good" | "bad" }) {
   return (
     <Card className="p-3">
