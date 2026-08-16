@@ -1,8 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import logoEn from "@/assets/itechlounge-logo-en.png";
+import { unlockSite } from "@/lib/gate.functions";
+import { saveGateToken } from "@/lib/gate-client";
 
 export const Route = createFileRoute("/unlock")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -23,7 +27,30 @@ export const Route = createFileRoute("/unlock")({
 });
 
 function Unlock() {
-  const { error } = Route.useSearch();
+  const { error: searchError } = Route.useSearch();
+  const navigate = useNavigate();
+  const unlock = useServerFn(unlockSite);
+  const [error, setError] = useState<string | undefined>(searchError);
+  const [busy, setBusy] = useState(false);
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const password = String(new FormData(e.currentTarget).get("password") ?? "");
+    setBusy(true);
+    try {
+      const res = await unlock({ data: { password } });
+      if (res.ok && res.token) {
+        saveGateToken(res.token);
+        await navigate({ to: "/" });
+      } else {
+        setError("invalid");
+      }
+    } catch {
+      setError("config");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -37,7 +64,7 @@ function Unlock() {
             </p>
           </div>
         </div>
-        <form method="post" action="/api/public/unlock" className="space-y-3">
+        <form onSubmit={onSubmit} className="space-y-3">
           <Input
             type="password"
             name="password"
@@ -52,8 +79,8 @@ function Unlock() {
           {error === "config" && (
             <p className="text-xs text-destructive">Dashboard access is temporarily unavailable.</p>
           )}
-          <Button type="submit" className="w-full">
-            Enter
+          <Button type="submit" className="w-full" disabled={busy}>
+            {busy ? "Checking…" : "Enter"}
           </Button>
         </form>
       </Card>
