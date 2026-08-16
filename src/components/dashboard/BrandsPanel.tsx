@@ -42,7 +42,7 @@ export function BrandsPanel() {
                     )}
                     <h3 className="font-semibold">{b.name}</h3>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{b.tagline}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
                   <a
                     href={`https://${b.domain}`}
                     target="_blank"
@@ -72,7 +72,7 @@ export function BrandsPanel() {
                   <div className="font-semibold">{fmtEURk(mrr)}</div>
                 </div>
               </div>
-              <p className="line-clamp-3 text-xs text-muted-foreground">{b.description}</p>
+              <p className="line-clamp-3 text-xs text-muted-foreground">{t(b.description)}</p>
               <Button asChild variant="outline" size="sm" className="mt-auto">
                 <Link to="/brands/$brandId" params={{ brandId: b.id }}>{t("Open brand · edit assumptions")}</Link>
               </Button>

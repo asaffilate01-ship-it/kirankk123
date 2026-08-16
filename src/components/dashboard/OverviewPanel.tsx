@@ -103,7 +103,7 @@ export function OverviewPanel() {
           {SHARED_ADVANTAGE.map((s) => (
             <li key={s} className="flex gap-2">
               <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-              <span>{s}</span>
+              <span>{t(s)}</span>
             </li>
           ))}
         </ul>

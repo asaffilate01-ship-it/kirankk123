@@ -106,7 +106,7 @@ function BrandDetail() {
               </div>
             )}
             <h1 className="text-2xl font-semibold tracking-tight">{brand.name}</h1>
-            <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
+            <p className="mt-1 text-sm text-muted-foreground">{t(brand.tagline)}</p>
             <a
               href={`https://${brand.domain}`}
               target="_blank"
@@ -116,22 +116,22 @@ function BrandDetail() {
               {brand.domain} <ExternalLink className="h-3 w-3" />
             </a>
           </div>
-          <p className="text-sm">{brand.description}</p>
+          <p className="text-sm">{t(brand.description)}</p>
 
           <Section title={t("Why this product exists")}>
-            <p className="text-sm">{brand.reason}</p>
+            <p className="text-sm">{t(brand.reason)}</p>
           </Section>
 
           <Section title={t("Proposition")}>
-            <p className="text-sm">{brand.proposition}</p>
+            <p className="text-sm">{t(brand.proposition)}</p>
           </Section>
 
           <Section title={t("Features")}>
             <ul className="grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
               {brand.features.map((f) => (
-                <li key={f} className="flex gap-2">
+                <li key={t(f)} className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: brand.color }} />
-                  <span>{f}</span>
+                  <span>{t(f)}</span>
                 </li>
               ))}
             </ul>
@@ -147,7 +147,7 @@ function BrandDetail() {
                       {app.kind}
                     </span>
                   </div>
-                  <div className="mt-1 text-xs text-muted-foreground">{app.purpose}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{t(app.purpose)}</div>
                 </div>
               ))}
             </div>
@@ -156,9 +156,9 @@ function BrandDetail() {
           <Section title={t("User types")}>
             <div className="space-y-2">
               {brand.userTypes.map((u) => (
-                <div key={u.type} className="rounded-md border p-3 text-sm">
-                  <div className="font-semibold">{u.type}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">{u.useCase}</div>
+                <div key={t(u.type)} className="rounded-md border p-3 text-sm">
+                  <div className="font-semibold">{t(u.type)}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{t(u.useCase)}</div>
                 </div>
               ))}
             </div>
@@ -167,25 +167,25 @@ function BrandDetail() {
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div className="rounded-md border p-3 text-sm">
               <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Market")}</div>
-              <div className="mt-1">{brand.market}</div>
+              <div className="mt-1">{t(brand.market)}</div>
             </div>
             <div className="rounded-md border p-3 text-sm">
               <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Audience")}</div>
-              <div className="mt-1">{brand.audience}</div>
+              <div className="mt-1">{t(brand.audience)}</div>
             </div>
           </div>
 
           <Section title={t("How this market is served in Germany today")}>
             <div className="space-y-2">
-              <p className="text-sm">{brand.currentMarket.howServed}</p>
+              <p className="text-sm">{t(brand.currentMarket.howServed)}</p>
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
                 <div className="rounded-md border p-3 text-sm">
                   <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Users today")}</div>
-                  <div className="mt-1">{brand.currentMarket.users}</div>
+                  <div className="mt-1">{t(brand.currentMarket.users)}</div>
                 </div>
                 <div className="rounded-md border p-3 text-sm">
                   <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Revenue today")}</div>
-                  <div className="mt-1">{brand.currentMarket.revenue}</div>
+                  <div className="mt-1">{t(brand.currentMarket.revenue)}</div>
                 </div>
               </div>
             </div>
@@ -196,9 +196,9 @@ function BrandDetail() {
               {brand.competitors.map((c) => (
                 <div key={c.name} className="rounded-md border p-3 text-sm">
                   <div className="font-semibold">{c.name}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">Strength: {c.strength}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{t("Strength:")} {t(c.strength)}</div>
                   <div className="mt-1 text-xs">
-                    <span className="font-semibold text-emerald-500">{t("Counter:")}</span> {c.counter}
+                    <span className="font-semibold text-emerald-500">{t("Counter:")}</span> {t(c.counter)}
                   </div>
                 </div>
               ))}
@@ -213,9 +213,9 @@ function BrandDetail() {
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
               {SHARED_ADVANTAGE.map((s) => (
-                <li key={s} className="flex gap-2">
+                <li key={t(s)} className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-                  <span>{s}</span>
+                  <span>{t(s)}</span>
                 </li>
               ))}
             </ul>
@@ -225,9 +225,9 @@ function BrandDetail() {
             <div className="space-y-2">
               {brand.risks.map((r) => (
                 <div key={r.risk} className="rounded-md border p-3 text-sm">
-                  <div className="font-semibold text-amber-500">Risk: {r.risk}</div>
+                  <div className="font-semibold text-amber-500">{t("Risk:")} {t(r.risk)}</div>
                   <div className="mt-1 text-xs">
-                    <span className="font-semibold text-emerald-500">{t("Mitigation:")}</span> {r.mitigation}
+                    <span className="font-semibold text-emerald-500">{t("Mitigation:")}</span> {t(r.mitigation)}
                   </div>
                 </div>
               ))}
