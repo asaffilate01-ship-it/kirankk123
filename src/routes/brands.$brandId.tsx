@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BRANDS, SHARED_ADVANTAGE, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -7,14 +7,12 @@ import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
 import { ArrowLeft, Download, ExternalLink } from "lucide-react";
-import { requireUnlocked } from "@/lib/gate.functions";
+import { GateGuard } from "@/components/GateGuard";
 import { BRAND_LOGOS } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
-    const { unlocked } = await requireUnlocked();
-    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
     const brand = BRANDS.find((b) => b.id === params.brandId);
     if (!brand) throw notFound();
     return { brand };
@@ -44,7 +42,11 @@ export const Route = createFileRoute("/brands/$brandId")({
   errorComponent: ({ error }) => (
     <div className="mx-auto max-w-3xl p-8 text-sm text-destructive">{String(error)}</div>
   ),
-  component: BrandDetail,
+  component: () => (
+    <GateGuard>
+      <BrandDetail />
+    </GateGuard>
+  ),
 });
 
 function BrandDetail() {
