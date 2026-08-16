@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
 import logoEn from "@/assets/itechlounge-logo-en.png";
 import logoDe from "@/assets/itechlounge-logo-de.png";
+import logoEnDark from "@/assets/itechlounge-logo-en-dark.png";
+import logoDeDark from "@/assets/itechlounge-logo-de-dark.png";
 
 export function OverviewPanel() {
   const state = useFinance();
@@ -136,21 +138,72 @@ export function OverviewPanel() {
 
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">Brand marks</h3>
+        <p className="text-muted-foreground">
+          All four files are transparent PNGs (no background box), tightly cropped to the artwork —
+          ready for business cards, letterheads, signage, slides and web. Use the light version on
+          white or pale stock, the dark version on black, dark or photographic backgrounds.
+        </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
-            <img src={logoEn} alt="iTechLounge — Digital ideas. Beautifully built." className="h-28 w-auto object-contain" />
-            <a href={logoEn} download="itechlounge-logo-en.png" className="text-xs font-medium text-primary hover:underline">
-              English slogan · download
-            </a>
-          </div>
-          <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
-            <img src={logoDe} alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt." className="h-28 w-auto object-contain" />
-            <a href={logoDe} download="itechlounge-logo-de.png" className="text-xs font-medium text-primary hover:underline">
-              German slogan · download
-            </a>
-          </div>
+          <MarkTile
+            src={logoEn}
+            alt="iTechLounge — Digital ideas. Beautifully built."
+            file="itechlounge-logo-en.png"
+            label="English · for light backgrounds"
+            dark={false}
+          />
+          <MarkTile
+            src={logoEnDark}
+            alt="iTechLounge — Digital ideas. Beautifully built. (reversed)"
+            file="itechlounge-logo-en-dark.png"
+            label="English · for dark backgrounds"
+            dark
+          />
+          <MarkTile
+            src={logoDe}
+            alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt."
+            file="itechlounge-logo-de.png"
+            label="German · for light backgrounds"
+            dark={false}
+          />
+          <MarkTile
+            src={logoDeDark}
+            alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt. (reversed)"
+            file="itechlounge-logo-de-dark.png"
+            label="German · for dark backgrounds"
+            dark
+          />
         </div>
       </Card>
+    </div>
+  );
+}
+
+function MarkTile({
+  src,
+  alt,
+  file,
+  label,
+  dark,
+}: {
+  src: string;
+  alt: string;
+  file: string;
+  label: string;
+  dark: boolean;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-2 rounded-lg border p-4">
+      <div
+        className={`flex h-32 w-full items-center justify-center rounded-md ${
+          dark ? "bg-zinc-900" : "bg-white"
+        }`}
+      >
+        <img src={src} alt={alt} className="max-h-28 w-auto object-contain" />
+      </div>
+      <span className="text-xs text-muted-foreground">{label}</span>
+      <a href={src} download={file} className="text-xs font-medium text-primary hover:underline">
+        Download transparent PNG
+      </a>
     </div>
   );
 }
