@@ -76,12 +76,10 @@ function BrandDetail() {
       <header className="border-b bg-card/50 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" /> Back to dashboard
-          </Link>
+            <ArrowLeft className="h-4 w-4" />{t("Back to dashboard")}</Link>
           <div className="flex items-center gap-3">
             <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
-              <Download className="mr-1 h-4 w-4" /> Download PDF
-            </Button>
+              <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
             {BRAND_LOGOS[brand.id] ? (
               <div className="flex h-6 w-[120px] items-center justify-center">
                 <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="max-h-full w-auto max-w-full object-contain" />

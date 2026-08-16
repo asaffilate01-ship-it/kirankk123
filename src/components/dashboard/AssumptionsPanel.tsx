@@ -169,9 +169,7 @@ export function AssumptionsPanel() {
       <CustomLinesEditor kind="cost" />
 
       <Card className="p-4 lg:col-span-2">
-        <Button variant="outline" onClick={() => s.reset()}>
-          Reset all assumptions
-        </Button>
+        <Button variant="outline" onClick={() => s.reset()}>{t("Reset all assumptions")}</Button>
       </Card>
     </div>
   );
@@ -215,8 +213,7 @@ function CustomLinesEditor({ kind }: { kind: "revenue" | "cost" }) {
             setName("");
           }}
         >
-          <Plus className="mr-1 h-3 w-3" /> Add
-        </Button>
+          <Plus className="mr-1 h-3 w-3" />{t("Add")}</Button>
       </div>
       <div className="space-y-3">
         {lines.length === 0 && (

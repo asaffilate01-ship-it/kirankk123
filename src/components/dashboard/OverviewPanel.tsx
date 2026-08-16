@@ -37,10 +37,7 @@ export function OverviewPanel() {
         <div>
           <h1 className="text-2xl font-bold tracking-tight">{t("iTechLounge")}</h1>
           <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
-          <p className="text-sm text-muted-foreground">
-            Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to
-            re-forecast P&L, cash flow and balance sheet in real time.
-          </p>
+          <p className="text-sm text-muted-foreground">{t("Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to re-forecast P&L, cash flow and balance sheet in real time.")}</p>
         </div>
       </div>
 
@@ -102,12 +99,7 @@ export function OverviewPanel() {
 
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">{t("Our system — one team, ten brands")}</h3>
-        <p className="text-muted-foreground">
-          iTechLounge operates as a single company that ships and runs ten
-          German-focused digital brands. Every brand shares the same operating chassis, so each new
-          product launched on our platform benefits from economies of scale and cross-selling into the
-          existing customer base of the other nine.
-        </p>
+        <p className="text-muted-foreground">{t("iTechLounge operates as a single company that ships and runs ten German-focused digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the other nine.")}</p>
         <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
           {SHARED_ADVANTAGE.map((s) => (
             <li key={s} className="flex gap-2">
@@ -139,11 +131,7 @@ export function OverviewPanel() {
 
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">{t("Brand marks")}</h3>
-        <p className="text-muted-foreground">
-          All four files are transparent PNGs (no background box), tightly cropped to the artwork —
-          ready for business cards, letterheads, signage, slides and web. Use the light version on
-          white or pale stock, the dark version on black, dark or photographic backgrounds.
-        </p>
+        <p className="text-muted-foreground">{t("All four files are transparent PNGs (no background box), tightly cropped to the artwork — ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.")}</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <MarkTile
             src={logoEn}
@@ -202,9 +190,7 @@ function MarkTile({
         <img src={src} alt={alt} className="max-h-28 w-auto object-contain" />
       </div>
       <span className="text-xs text-muted-foreground">{label}</span>
-      <a href={src} download={file} className="text-xs font-medium text-primary hover:underline">
-        Download transparent PNG
-      </a>
+      <a href={src} download={file} className="text-xs font-medium text-primary hover:underline">{t("Download transparent PNG")}</a>
     </div>
   );
 }

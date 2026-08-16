@@ -60,9 +60,7 @@ function Unlock() {
           <img src={logoEn} alt={t("iTechLounge")} className="h-16 w-auto" />
           <div>
             <h1 className="text-lg font-semibold tracking-tight">{t("Dashboard")}</h1>
-            <p className="text-xs text-muted-foreground">
-              Enter the access password to view the financial model.
-            </p>
+            <p className="text-xs text-muted-foreground">{t("Enter the access password to view the financial model.")}</p>
           </div>
         </div>
         <form method="post" action="/api/public/unlock" onSubmit={onSubmit} className="space-y-3">

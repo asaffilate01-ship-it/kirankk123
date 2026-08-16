@@ -64,18 +64,13 @@ function Index() {
             />
             <div>
               <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
-              <p className="text-xs text-muted-foreground">
-                Live dashboard · 10 brands · 36-month forecast
-              </p>
+              <p className="text-xs text-muted-foreground">{t("Live dashboard · 10 brands · 36-month forecast")}</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className="hidden text-xs text-muted-foreground sm:inline">
-              All figures € · assumptions editable
-            </span>
+            <span className="hidden text-xs text-muted-foreground sm:inline">{t("All figures € · assumptions editable")}</span>
             <Button variant="outline" size="sm" onClick={handleLock}>
-              <LogOut className="mr-1 h-3.5 w-3.5" /> Lock
-            </Button>
+              <LogOut className="mr-1 h-3.5 w-3.5" />{t("Lock")}</Button>
           </div>
         </div>
       </header>

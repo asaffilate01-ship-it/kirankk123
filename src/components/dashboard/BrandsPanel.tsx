@@ -74,9 +74,7 @@ export function BrandsPanel() {
               </div>
               <p className="line-clamp-3 text-xs text-muted-foreground">{b.description}</p>
               <Button asChild variant="outline" size="sm" className="mt-auto">
-                <Link to="/brands/$brandId" params={{ brandId: b.id }}>
-                  Open brand · edit assumptions
-                </Link>
+                <Link to="/brands/$brandId" params={{ brandId: b.id }}>{t("Open brand · edit assumptions")}</Link>
               </Button>
             </Card>
           );
