@@ -747,7 +747,7 @@ export const DE: Record<string, string> = {
  "then": "dann",
  "split pro-rata by equity; the rest stays in the business.": "anteilig nach Beteiligung verteilt; der Rest bleibt im Unternehmen.",
  "All 10 brands launch on a 3-week rolling cadence with a": "Alle 10 Marken starten im 3-Wochen-Rhythmus mit",
- "-month free trial.": "-monatiger kostenloser Testphase."
+  "-month free trial.": "-monatiger kostenloser Testphase.",
  "Company & domains": "Unternehmen & Domains",
  "United Kingdom": "Vereinigtes K\u00f6nigreich",
  "Germany": "Deutschland",
