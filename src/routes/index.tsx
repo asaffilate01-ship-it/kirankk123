@@ -1,4 +1,4 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
 import { BrandsPanel } from "@/components/dashboard/BrandsPanel";
@@ -8,17 +8,15 @@ import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import logoEn from "@/assets/itechlounge-logo-en.png";
-import { requireUnlocked, lockSite } from "@/lib/gate.functions";
+import { lockSite } from "@/lib/gate.functions";
+import { GateGuard } from "@/components/GateGuard";
+import { clearGateToken } from "@/lib/gate-client";
 import { useServerFn } from "@tanstack/react-start";
 import { useRouter } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 
 export const Route = createFileRoute("/")({
-  loader: async () => {
-    const { unlocked } = await requireUnlocked();
-    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
-  },
   head: () => ({
     meta: [
       { title: "iTechLounge Dashboard — Live Financial Model" },
@@ -37,7 +35,11 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary" },
     ],
   }),
-  component: Index,
+  component: () => (
+    <GateGuard>
+      <Index />
+    </GateGuard>
+  ),
 });
 
 function Index() {
@@ -45,6 +47,7 @@ function Index() {
   const lock = useServerFn(lockSite);
   async function handleLock() {
     await lock({});
+    clearGateToken();
     await router.navigate({ to: "/unlock", search: { error: undefined } });
     router.invalidate();
   }
