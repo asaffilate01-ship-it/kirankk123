@@ -120,11 +120,11 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   doc.setTextColor(90, 90, 90);
   const cells = [
     ["Launch", `M${m.launchMonth}`],
-    [`Users @ M${m.horizonMonths}`, m.users.toLocaleString()],
-    [`MRR @ M${m.horizonMonths}`, `€${(m.mrr / 1000).toFixed(1)}k`],
-    ["ARPU", `€${m.arpu.toFixed(0)}/mo`],
-    ["Growth", `${(m.growth * 100).toFixed(1)}%`],
-    ["Churn", `${(m.churn * 100).toFixed(1)}%`],
+    [`Paying customers @ M${m.horizonMonths}`, m.users.toLocaleString()],
+    [`Monthly revenue @ M${m.horizonMonths}`, `€${(m.mrr / 1000).toFixed(1)}k`],
+    ["Price per customer", `€${m.arpu.toFixed(0)}/mo`],
+    ["Monthly growth", `${(m.growth * 100).toFixed(1)}%`],
+    ["Monthly cancellations", `${(m.churn * 100).toFixed(1)}%`],
   ];
   const cellW = maxW / cells.length;
   cells.forEach(([lbl, val], i) => {
