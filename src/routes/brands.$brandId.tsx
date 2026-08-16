@@ -252,26 +252,26 @@ function BrandDetail() {
               <div className="font-semibold">M{a.launchMonth}</div>
             </div>
             <div>
-              <div className="text-muted-foreground">Users @ M{rows.length}</div>
+              <div className="text-muted-foreground">{t("Paying customers")} @ M{rows.length}</div>
               <div className="font-semibold">{fmtNum(users)}</div>
             </div>
             <div>
-              <div className="text-muted-foreground">MRR @ M{rows.length}</div>
+              <div className="text-muted-foreground">{t("Monthly revenue")} @ M{rows.length}</div>
               <div className="font-semibold">{fmtEURk(mrr)}</div>
             </div>
           </div>
           <SliderRow label={t("Launch month")} value={a.launchMonth} min={1} max={state.global.months}
             onChange={(v) => state.setBrand(brand.id, { launchMonth: v })} />
-          <SliderRow label={t("Initial paid users (post-trial)")} value={a.initialUsers} min={0} max={2000} step={10}
+          <SliderRow label={t("Starting paying customers (after free trial)")} value={a.initialUsers} min={0} max={2000} step={10}
             onChange={(v) => state.setBrand(brand.id, { initialUsers: v })} format={fmtNum} />
-          <SliderRow label={t("Monthly user growth")} value={Math.round(a.userGrowth * 1000) / 10}
+          <SliderRow label={t("New customers added each month")} value={Math.round(a.userGrowth * 1000) / 10}
             min={0} max={40} step={0.5}
             onChange={(v) => state.setBrand(brand.id, { userGrowth: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
-          <SliderRow label={t("ARPU")} value={a.arpu} min={0} max={500} step={1}
+          <SliderRow label={t("Average price per customer / month")} value={a.arpu} min={0} max={500} step={1}
             onChange={(v) => state.setBrand(brand.id, { arpu: v })}
             format={(v) => `€${v.toFixed(0)}/mo`} />
-          <SliderRow label={t("Monthly churn")} value={Math.round(a.churn * 1000) / 10}
+          <SliderRow label={t("Customers cancelling each month")} value={Math.round(a.churn * 1000) / 10}
             min={0} max={15} step={0.1}
             onChange={(v) => state.setBrand(brand.id, { churn: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
@@ -281,8 +281,8 @@ function BrandDetail() {
             onChange={(v) => state.setBrand(brand.id, { directCost: v })} format={fmtEURk} />
           <div className="grid grid-cols-2 gap-2 rounded-md bg-muted/50 p-3 text-xs">
             <div>{t("Free trial:")} <b>{state.global.freeTrialMonths} mo</b></div>
-            <div>{t("ARPU:")} <b>{fmtEUR(a.arpu)}</b></div>
-            <div>{t("Churn:")} <b>{fmtPct(a.churn)}</b></div>
+            <div>{t("Price per customer:")} <b>{fmtEUR(a.arpu)}</b></div>
+            <div>{t("Cancellations:")} <b>{fmtPct(a.churn)}</b></div>
             <div>{t("Growth:")} <b>{fmtPct(a.userGrowth)}</b></div>
           </div>
           <Button asChild variant="outline" size="sm">

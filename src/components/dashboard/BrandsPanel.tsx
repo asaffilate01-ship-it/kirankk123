@@ -75,11 +75,11 @@ export function BrandsPanel() {
                   <div className="font-semibold">M{a.launchMonth}</div>
                 </div>
                 <div>
-                  <div className="text-muted-foreground">Users @ M{rows.length}</div>
+                  <div className="text-muted-foreground">{t("Paying customers")} @ M{rows.length}</div>
                   <div className="font-semibold">{fmtNum(users)}</div>
                 </div>
                 <div>
-                  <div className="text-muted-foreground">MRR @ M{rows.length}</div>
+                  <div className="text-muted-foreground">{t("Monthly revenue")} @ M{rows.length}</div>
                   <div className="font-semibold">{fmtEURk(mrr)}</div>
                 </div>
               </div>

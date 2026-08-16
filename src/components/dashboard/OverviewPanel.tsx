@@ -37,23 +37,34 @@ export function OverviewPanel() {
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Kpi label={t("Active brands")} value={`${activeBrands} / 10`} />
-        <Kpi label={`${t("MRR")} @ M${rows.length}`} value={fmtEURk(last.revenue)} />
+        <Kpi
+          label={`${t("Monthly revenue")} @ M${rows.length}`}
+          value={fmtEURk(last.revenue)}
+          hint={t("Money coming in every month from subscriptions (MRR)")}
+        />
         <Kpi label={t("Funding raised")} value={fmtEURk(totalFunding)} />
         <Kpi
           label={t("€1m/mo hit at")}
           value={monthAtMilestone ? `M${monthAtMilestone}` : "not reached"}
+          hint={t("Month when monthly revenue first reaches €1 million")}
         />
         <Kpi
           label={t("Cash trough")}
           value={fmtEURk(minCash)}
           tone={minCash < 0 ? "bad" : "good"}
+          hint={t("Lowest money-in-the-bank point across the forecast")}
         />
-        <Kpi label={`${t("Cash")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
-        <Kpi label={`${t("Investor dividends")} (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
+        <Kpi label={`${t("Money in the bank")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
+        <Kpi
+          label={`${t("Investor dividends")} (${investorPctLabel})`}
+          value={fmtEURk(cumInvestor)}
+          hint={t("Profit paid out to investors over the whole period")}
+        />
         <Kpi label={t("Total dividends paid")} value={fmtEURk(cumDividend)} />
         <Kpi
-          label={`${t("Margin")} @ M${rows.length}`}
+          label={`${t("Profit margin")} @ M${rows.length}`}
           value={last.revenue > 0 ? fmtPct(last.ebit / last.revenue) : "—"}
+          hint={t("Share of revenue left as profit after costs")}
         />
       </div>
 
@@ -65,11 +76,11 @@ export function OverviewPanel() {
               <div className="text-xs uppercase text-muted-foreground">Year {y.year}</div>
               <div className="mt-2 space-y-1 text-sm">
                 <Row k={t("Revenue")} v={fmtEURk(y.revenue)} />
-                <Row k={t("EBIT")} v={fmtEURk(y.ebit)} />
-                <Row k={t("Margin")} v={fmtPct(y.margin)} />
+                <Row k={t("Operating profit (EBIT)")} v={fmtEURk(y.ebit)} />
+                <Row k={t("Profit margin")} v={fmtPct(y.margin)} />
                 <Row k={t("Net profit")} v={fmtEURk(y.netProfit)} />
                 <Row k={`${t("Investor dividends")} (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
-                <Row k={t("Year-end cash")} v={fmtEURk(y.endCash)} />
+                <Row k={t("Money in the bank at year end")} v={fmtEURk(y.endCash)} />
               </div>
             </div>
           ))}
@@ -209,7 +220,17 @@ function MarkTile({
     </div>
   );
 }
-function Kpi({ label, value, tone }: { label: string; value: string; tone?: "good" | "bad" }) {
+function Kpi({
+  label,
+  value,
+  tone,
+  hint,
+}: {
+  label: string;
+  value: string;
+  tone?: "good" | "bad";
+  hint?: string;
+}) {
   return (
     <Card className="p-3">
       <div className="text-xs text-muted-foreground">{label}</div>
@@ -220,6 +241,7 @@ function Kpi({ label, value, tone }: { label: string; value: string; tone?: "goo
       >
         {value}
       </div>
+      {hint ? <div className="mt-1 text-[11px] leading-snug text-muted-foreground">{hint}</div> : null}
     </Card>
   );
 }
