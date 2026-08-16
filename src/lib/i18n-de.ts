@@ -612,7 +612,7 @@ export const DE: Record<string, string> = {
  "Marketing": "Marketing",
  "Marketing base / mo": "Marketingbasis / Monat",
  "Marketing per launched brand / mo": "Marketing pro eingeführte Marke / Monat",
- "Mitigation:": "Minderung:",
+ "Mitigation:": "Gegenmaßnahme:",
  "Month": "Monat",
  "Monthly P&L (all months)": "Monatliche Gewinn- und Verlustrechnung (alle Monate)",
  "Monthly churn": "Monatliche Abwanderung",
@@ -629,7 +629,7 @@ export const DE: Record<string, string> = {
  "Competitive advantage — one team, ten brands": "Wettbewerbsvorteil – ein Team, zehn Marken",
  "Corporate tax rate": "Körperschaftsteuersatz",
  "Cost composition (stacked, monthly)": "Kostenstruktur (gestapelt, monatlich)",
- "Counter:": "Zähler:",
+ "Counter:": "Gegenzug:",
  "Dashboard": "Dashboard",
  "Dashboard access is temporarily unavailable.": "Der Dashboard-Zugriff ist vorübergehend nicht verfügbar.",
  "Digital ideas. Beautifully built.": "Digitale Ideen. Wunderschön umgesetzt.",
@@ -722,5 +722,11 @@ export const DE: Record<string, string> = {
  "The page you're looking for doesn't exist or has been moved.": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
  "This page didn't load": "Diese Seite konnte nicht geladen werden",
  "Try again": "Erneut versuchen",
- "iTechLounge operates as a single company that ships and runs ten German-focused digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the other nine.": "iTechLounge operiert als ein einziges Unternehmen, das zehn auf Deutschland fokussierte Digitalmarken versendet und betreibt. Jede Marke teilt dasselbe operative Chassis, sodass jedes neue Produkt, das auf unserer Plattform eingeführt wird, von Skaleneffekten und Cross-Selling in den bestehenden Kundenstamm der anderen neun Marken profitiert."
+ "iTechLounge operates as a single company that ships and runs ten German-focused digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the other nine.": "iTechLounge operiert als ein einziges Unternehmen, das zehn auf Deutschland fokussierte Digitalmarken versendet und betreibt. Jede Marke teilt dasselbe operative Chassis, sodass jedes neue Produkt, das auf unserer Plattform eingeführt wird, von Skaleneffekten und Cross-Selling in den bestehenden Kundenstamm der anderen neun Marken profitiert.",
+ "Counter": "Gegenzug",
+ "Mitigation": "Gegenmaßnahme",
+ "Risk": "Risiko",
+ "Risk:": "Risiko:",
+ "Strength": "Stärke",
+ "Strength:": "Stärke:"
 };
