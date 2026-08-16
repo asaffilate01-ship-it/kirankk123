@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { jsPDF } from "jspdf";
 import type { Brand } from "@/lib/brands";
 import { SHARED_ADVANTAGE } from "@/lib/brands";
@@ -102,7 +103,7 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   doc.setFont("helvetica", "italic");
   doc.setFontSize(11);
   doc.setTextColor(90, 90, 90);
-  doc.text(brand.tagline, margin, y);
+  doc.text(t(brand.tagline), margin, y);
   y += 16;
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
@@ -139,36 +140,36 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   });
   y += 76;
 
-  paragraph(brand.description);
+  paragraph(t(brand.description));
 
   subheading("Why this product exists");
-  paragraph(brand.reason);
+  paragraph(t(brand.reason));
 
   subheading("Proposition");
-  paragraph(brand.proposition);
+  paragraph(t(brand.proposition));
 
   subheading("Features");
-  bullets(brand.features);
+  bullets(brand.features.map(t));
 
   subheading("SaaS platform & apps");
   brand.apps.forEach((app) => {
-    labelValue(`${app.name} (${app.kind})`, app.purpose);
+    labelValue(`${app.name} (${app.kind})`, t(app.purpose));
   });
   y += 4;
 
   subheading("User types");
-  brand.userTypes.forEach((u) => labelValue(u.type, u.useCase));
+  brand.userTypes.forEach((u) => labelValue(t(u.type), t(u.useCase)));
   y += 4;
 
   subheading("Market & audience");
-  labelValue("Market", brand.market);
-  labelValue("Audience", brand.audience);
+  labelValue(t("Market"), t(brand.market));
+  labelValue(t("Audience"), t(brand.audience));
   y += 4;
 
   subheading("How this market is served in Germany today");
-  paragraph(brand.currentMarket.howServed);
-  labelValue("Users today", brand.currentMarket.users);
-  labelValue("Revenue today", brand.currentMarket.revenue);
+  paragraph(t(brand.currentMarket.howServed));
+  labelValue(t("Users today"), t(brand.currentMarket.users));
+  labelValue(t("Revenue today"), t(brand.currentMarket.revenue));
   y += 4;
 
   subheading("Competition & how we break their strength");
@@ -178,18 +179,18 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
     ensure(14);
     doc.text(c.name, margin, y);
     y += 14;
-    labelValue("Strength", c.strength);
-    labelValue("Counter", c.counter);
+    labelValue(t("Strength"), t(c.strength));
+    labelValue(t("Counter"), t(c.counter));
     y += 2;
   });
 
   subheading("Competitive advantage — one team, ten brands");
-  bullets(SHARED_ADVANTAGE);
+  bullets(SHARED_ADVANTAGE.map(t));
 
   subheading("Risks & mitigations");
   brand.risks.forEach((r) => {
-    labelValue("Risk", r.risk);
-    labelValue("Mitigation", r.mitigation);
+    labelValue(t("Risk"), t(r.risk));
+    labelValue(t("Mitigation"), t(r.mitigation));
     y += 2;
   });
 

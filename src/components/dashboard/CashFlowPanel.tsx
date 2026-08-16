@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { useMemo } from "react";
 import { useFinance, buildModel } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -40,7 +41,7 @@ export function CashFlowPanel() {
     <div className="space-y-4">
       <Card className="p-4">
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="font-semibold">Cash balance over time</h3>
+          <h3 className="font-semibold">{t("Cash balance over time")}</h3>
           <div className="text-xs text-muted-foreground">
             Trough: <b className={minCash < 0 ? "text-red-500" : "text-emerald-500"}>{fmtEURk(minCash)}</b> at M{minMonth}
           </div>
@@ -59,26 +60,26 @@ export function CashFlowPanel() {
               <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={70} />
               <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
               <Legend />
-              <Area type="monotone" dataKey="Cash" stroke="#22c55e" fill="url(#cashG)" />
+              <Area type="monotone" dataKey="Cash" name={t("Cash")} stroke="#22c55e" fill="url(#cashG)" />
             </AreaChart>
           </ResponsiveContainer>
         </div>
       </Card>
 
       <Card className="p-4">
-        <h3 className="mb-3 font-semibold">Cash flow statement (monthly)</h3>
+        <h3 className="mb-3 font-semibold">{t("Cash flow statement (monthly)")}</h3>
         <div className="max-h-96 overflow-auto">
           <Table>
             <TableHeader className="sticky top-0 bg-background">
               <TableRow>
-                <TableHead>Month</TableHead>
-                <TableHead className="text-right">Net profit</TableHead>
-                <TableHead className="text-right">Funding in</TableHead>
-                <TableHead className="text-right">Dividend paid</TableHead>
+                <TableHead>{t("Month")}</TableHead>
+                <TableHead className="text-right">{t("Net profit")}</TableHead>
+                <TableHead className="text-right">{t("Funding in")}</TableHead>
+                <TableHead className="text-right">{t("Dividend paid")}</TableHead>
                 <TableHead className="text-right">Investor {investorPctLabel}</TableHead>
                 <TableHead className="text-right">Founder {founderPctLabel}</TableHead>
-                <TableHead className="text-right">Net cash flow</TableHead>
-                <TableHead className="text-right">Cash balance</TableHead>
+                <TableHead className="text-right">{t("Net cash flow")}</TableHead>
+                <TableHead className="text-right">{t("Cash balance")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

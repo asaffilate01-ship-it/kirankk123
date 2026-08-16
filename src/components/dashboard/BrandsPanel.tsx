@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { BRANDS } from "@/lib/brands";
 import { useFinance } from "@/lib/finance-store";
@@ -41,7 +42,7 @@ export function BrandsPanel() {
                     )}
                     <h3 className="font-semibold">{b.name}</h3>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{b.tagline}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
                   <a
                     href={`https://${b.domain}`}
                     target="_blank"
@@ -59,7 +60,7 @@ export function BrandsPanel() {
               </div>
               <div className="grid grid-cols-3 gap-2 rounded-md bg-muted/50 p-2 text-center text-xs">
                 <div>
-                  <div className="text-muted-foreground">Launch</div>
+                  <div className="text-muted-foreground">{t("Launch")}</div>
                   <div className="font-semibold">M{a.launchMonth}</div>
                 </div>
                 <div>
@@ -71,11 +72,9 @@ export function BrandsPanel() {
                   <div className="font-semibold">{fmtEURk(mrr)}</div>
                 </div>
               </div>
-              <p className="line-clamp-3 text-xs text-muted-foreground">{b.description}</p>
+              <p className="line-clamp-3 text-xs text-muted-foreground">{t(b.description)}</p>
               <Button asChild variant="outline" size="sm" className="mt-auto">
-                <Link to="/brands/$brandId" params={{ brandId: b.id }}>
-                  Open brand · edit assumptions
-                </Link>
+                <Link to="/brands/$brandId" params={{ brandId: b.id }}>{t("Open brand · edit assumptions")}</Link>
               </Button>
             </Card>
           );

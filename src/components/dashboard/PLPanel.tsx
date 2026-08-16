@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { useMemo } from "react";
 import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -41,7 +42,7 @@ export function PLPanel() {
     <div className="space-y-4">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card className="p-4">
-          <h3 className="mb-2 font-semibold">Revenue vs Costs (monthly)</h3>
+          <h3 className="mb-2 font-semibold">{t("Revenue vs Costs (monthly)")}</h3>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={chartData} margin={{ top: 8, right: 12, left: 8, bottom: 0 }}>
@@ -50,14 +51,14 @@ export function PLPanel() {
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
                 <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
-                <Line type="monotone" dataKey="Revenue" stroke="#22c55e" strokeWidth={2} dot={false} />
-                <Line type="monotone" dataKey="Costs" stroke="#ef4444" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="Revenue" name={t("Revenue")} stroke="#22c55e" strokeWidth={2} dot={false} />
+                <Line type="monotone" dataKey="Costs" name={t("Costs")} stroke="#ef4444" strokeWidth={2} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>
         </Card>
         <Card className="p-4">
-          <h3 className="mb-2 font-semibold">EBIT & Net profit (monthly)</h3>
+          <h3 className="mb-2 font-semibold">{t("EBIT & Net profit (monthly)")}</h3>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={chartData} margin={{ top: 8, right: 12, left: 8, bottom: 0 }}>
@@ -66,8 +67,8 @@ export function PLPanel() {
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
                 <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
-                <Bar dataKey="EBIT" fill="#6366f1" />
-                <Bar dataKey="Net" fill="#0ea5e9" />
+                <Bar dataKey="EBIT" name={t("EBIT")} fill="#6366f1" />
+                <Bar dataKey="Net" name={t("Net")} fill="#0ea5e9" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -75,12 +76,12 @@ export function PLPanel() {
       </div>
 
       <Card className="p-4">
-        <h3 className="mb-3 font-semibold">Annual P&L</h3>
+        <h3 className="mb-3 font-semibold">{t("Annual P&L")}</h3>
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Line item</TableHead>
+                <TableHead>{t("Line item")}</TableHead>
                 {years.map((y) => (
                   <TableHead key={y.year} className="text-right">Y{y.year}</TableHead>
                 ))}
@@ -88,14 +89,14 @@ export function PLPanel() {
             </TableHeader>
             <TableBody>
               {[
-                { k: "Revenue", get: (y: any) => y.revenue, cls: "font-semibold" },
-                { k: "Total costs", get: (y: any) => -y.totalCost },
-                { k: "EBIT", get: (y: any) => y.ebit, cls: "font-semibold" },
-                { k: "Margin", get: (y: any) => y.margin, fmt: fmtPct },
-                { k: "Tax", get: (y: any) => -y.tax },
-                { k: "Net profit", get: (y: any) => y.netProfit, cls: "font-semibold" },
-                { k: `Investor dividends (${investorPctLabel})`, get: (y: any) => y.investorShare },
-                { k: "Year-end cash", get: (y: any) => y.endCash, cls: "font-semibold" },
+                { k: t("Revenue"), get: (y: any) => y.revenue, cls: "font-semibold" },
+                { k: t("Total costs"), get: (y: any) => -y.totalCost },
+                { k: t("EBIT"), get: (y: any) => y.ebit, cls: "font-semibold" },
+                { k: t("Margin"), get: (y: any) => y.margin, fmt: fmtPct },
+                { k: t("Tax"), get: (y: any) => -y.tax },
+                { k: t("Net profit"), get: (y: any) => y.netProfit, cls: "font-semibold" },
+                { k: `${t("Investor dividends")} (${investorPctLabel})`, get: (y: any) => y.investorShare },
+                { k: t("Year-end cash"), get: (y: any) => y.endCash, cls: "font-semibold" },
               ].map((row) => (
                 <TableRow key={row.k}>
                   <TableCell className={row.cls}>{row.k}</TableCell>
@@ -112,20 +113,20 @@ export function PLPanel() {
       </Card>
 
       <Card className="p-4">
-        <h3 className="mb-3 font-semibold">Monthly P&L (all months)</h3>
+        <h3 className="mb-3 font-semibold">{t("Monthly P&L (all months)")}</h3>
         <div className="max-h-96 overflow-auto">
           <Table>
             <TableHeader className="sticky top-0 bg-background">
               <TableRow>
-                <TableHead>Month</TableHead>
-                <TableHead className="text-right">Revenue</TableHead>
-                <TableHead className="text-right">Direct</TableHead>
-                <TableHead className="text-right">HQ</TableHead>
-                <TableHead className="text-right">Tech</TableHead>
-                <TableHead className="text-right">Marketing</TableHead>
-                <TableHead className="text-right">Var opex</TableHead>
-                <TableHead className="text-right">EBIT</TableHead>
-                <TableHead className="text-right">Net</TableHead>
+                <TableHead>{t("Month")}</TableHead>
+                <TableHead className="text-right">{t("Revenue")}</TableHead>
+                <TableHead className="text-right">{t("Direct")}</TableHead>
+                <TableHead className="text-right">{t("HQ")}</TableHead>
+                <TableHead className="text-right">{t("Tech")}</TableHead>
+                <TableHead className="text-right">{t("Marketing")}</TableHead>
+                <TableHead className="text-right">{t("Var opex")}</TableHead>
+                <TableHead className="text-right">{t("EBIT")}</TableHead>
+                <TableHead className="text-right">{t("Net")}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

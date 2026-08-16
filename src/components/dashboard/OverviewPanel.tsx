@@ -1,15 +1,15 @@
+import { t } from "@/lib/i18n";
 import { useMemo } from "react";
 import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
-import logoEn from "@/assets/itechlounge-logo-en.png";
-import logoDe from "@/assets/itechlounge-logo-de.png";
-import logoEnDark from "@/assets/itechlounge-logo-en-dark.png";
-import logoDeDark from "@/assets/itechlounge-logo-de-dark.png";
+import { logoFor, logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
+import { useLang } from "@/lib/i18n";
 
 export function OverviewPanel() {
   const state = useFinance();
+  const { lang } = useLang();
   const rows = useMemo(() => buildModel(state), [state]);
   const years = useMemo(() => yearSummaries(rows), [rows]);
   const last = rows[rows.length - 1];
@@ -29,55 +29,52 @@ export function OverviewPanel() {
     <div className="space-y-4">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <img
-          src={logoEn}
-          alt="iTechLounge"
+          src={logoFor(lang)}
+          alt={t("iTechLounge")}
           className="h-32 w-auto shrink-0"
         />
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">iTechLounge</h1>
-          <p className="text-sm font-medium">Digital ideas. Beautifully built.</p>
-          <p className="text-sm text-muted-foreground">
-            Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to
-            re-forecast P&L, cash flow and balance sheet in real time.
-          </p>
+          <h1 className="text-2xl font-bold tracking-tight">{t("iTechLounge")}</h1>
+          <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
+          <p className="text-sm text-muted-foreground">{t("Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to re-forecast P&L, cash flow and balance sheet in real time.")}</p>
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Kpi label="Active brands" value={`${activeBrands} / 10`} />
-        <Kpi label={`MRR @ M${rows.length}`} value={fmtEURk(last.revenue)} />
-        <Kpi label="Funding raised" value={fmtEURk(totalFunding)} />
+        <Kpi label={t("Active brands")} value={`${activeBrands} / 10`} />
+        <Kpi label={`${t("MRR")} @ M${rows.length}`} value={fmtEURk(last.revenue)} />
+        <Kpi label={t("Funding raised")} value={fmtEURk(totalFunding)} />
         <Kpi
-          label="€1m/mo hit at"
+          label={t("€1m/mo hit at")}
           value={monthAtMilestone ? `M${monthAtMilestone}` : "not reached"}
         />
         <Kpi
-          label="Cash trough"
+          label={t("Cash trough")}
           value={fmtEURk(minCash)}
           tone={minCash < 0 ? "bad" : "good"}
         />
-        <Kpi label={`Cash @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
-        <Kpi label={`Investor dividends (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
-        <Kpi label="Total dividends paid" value={fmtEURk(cumDividend)} />
+        <Kpi label={`${t("Cash")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
+        <Kpi label={`${t("Investor dividends")} (${investorPctLabel})`} value={fmtEURk(cumInvestor)} />
+        <Kpi label={t("Total dividends paid")} value={fmtEURk(cumDividend)} />
         <Kpi
-          label={`Margin @ M${rows.length}`}
+          label={`${t("Margin")} @ M${rows.length}`}
           value={last.revenue > 0 ? fmtPct(last.ebit / last.revenue) : "—"}
         />
       </div>
 
       <Card className="p-4">
-        <h3 className="mb-3 font-semibold">Year-by-year summary</h3>
+        <h3 className="mb-3 font-semibold">{t("Year-by-year summary")}</h3>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
           {years.map((y) => (
             <div key={y.year} className="rounded-lg border p-3">
               <div className="text-xs uppercase text-muted-foreground">Year {y.year}</div>
               <div className="mt-2 space-y-1 text-sm">
-                <Row k="Revenue" v={fmtEURk(y.revenue)} />
-                <Row k="EBIT" v={fmtEURk(y.ebit)} />
-                <Row k="Margin" v={fmtPct(y.margin)} />
-                <Row k="Net profit" v={fmtEURk(y.netProfit)} />
-                <Row k={`Investor dividends (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
-                <Row k="Year-end cash" v={fmtEURk(y.endCash)} />
+                <Row k={t("Revenue")} v={fmtEURk(y.revenue)} />
+                <Row k={t("EBIT")} v={fmtEURk(y.ebit)} />
+                <Row k={t("Margin")} v={fmtPct(y.margin)} />
+                <Row k={t("Net profit")} v={fmtEURk(y.netProfit)} />
+                <Row k={`${t("Investor dividends")} (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
+                <Row k={t("Year-end cash")} v={fmtEURk(y.endCash)} />
               </div>
             </div>
           ))}
@@ -85,33 +82,32 @@ export function OverviewPanel() {
       </Card>
 
       <Card className="space-y-2 p-4 text-sm">
-        <h3 className="font-semibold">Investor terms</h3>
+        <h3 className="font-semibold">{t("Investor terms")}</h3>
         <p className="text-muted-foreground">
-          Total raise: <b>{fmtEURk(totalFunding)}</b> for{" "}
-          <b>{fmtPct(state.global.investorEquityPct)} equity</b>. Drawn as{" "}
-          {fmtEURk(state.global.trancheSize)} tranches × {state.global.trancheCount} months. Each
-          tranche therefore buys <b>{fmtPct(equityPerTranche, 2)} equity</b> — so a €50k ticket is
-          worth 2.25% at the full-raise valuation. Shareholders draw dividends every six months from
-          undistributed net profit — <b>20% at M6</b>, <b>30% at M12</b>, then{" "}
-          <b>40% at M18, M24, M30 and M36</b> — split pro-rata by equity; the rest stays in the
-          business. All 10 brands launch on a 3-week rolling cadence with a{" "}
-          {state.global.freeTrialMonths}-month free trial.
+          {t("Total raise:")} <b>{fmtEURk(totalFunding)}</b>{" "}
+          {t("for")} <b>{fmtPct(state.global.investorEquityPct)} {t("equity")}</b>.{" "}
+          {t("Drawn as")} {fmtEURk(state.global.trancheSize)} {t("tranches ×")}{" "}
+          {state.global.trancheCount} {t("months.")}{" "}
+          {t("Each tranche therefore buys")} <b>{fmtPct(equityPerTranche, 2)} {t("equity")}</b> —{" "}
+          {t("so a €50k ticket is worth 2.25% at the full-raise valuation.")}{" "}
+          {t("Shareholders draw dividends every six months from undistributed net profit —")}{" "}
+          <b>{t("20% at M6")}</b>, <b>{t("30% at M12")}</b>, {t("then")}{" "}
+          <b>{t("40% at M18, M24, M30 and M36")}</b> —{" "}
+          {t("split pro-rata by equity; the rest stays in the business.")}{" "}
+          {t("All 10 brands launch on a 3-week rolling cadence with a")}{" "}
+          {state.global.freeTrialMonths}
+          {t("-month free trial.")}
         </p>
       </Card>
 
       <Card className="space-y-3 p-4 text-sm">
-        <h3 className="font-semibold">Our system — one team, ten brands</h3>
-        <p className="text-muted-foreground">
-          iTechLounge operates as a single company that ships and runs ten
-          German-focused digital brands. Every brand shares the same operating chassis, so each new
-          product launched on our platform benefits from economies of scale and cross-selling into the
-          existing customer base of the other nine.
-        </p>
+        <h3 className="font-semibold">{t("Our system — one team, ten brands")}</h3>
+        <p className="text-muted-foreground">{t("iTechLounge operates as a single company that ships and runs ten German-focused digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the other nine.")}</p>
         <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
           {SHARED_ADVANTAGE.map((s) => (
             <li key={s} className="flex gap-2">
               <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-              <span>{s}</span>
+              <span>{t(s)}</span>
             </li>
           ))}
         </ul>
@@ -121,7 +117,7 @@ export function OverviewPanel() {
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full" style={{ background: b.color }} />
                 <span className="font-semibold">{b.name}</span>
-                <span className="text-muted-foreground">· launches M{state.brands[b.id].launchMonth}</span>
+                <span className="text-muted-foreground">· {t("launches")} M{state.brands[b.id].launchMonth}</span>
               </div>
               <a
                 href={`https://${b.domain}`}
@@ -137,39 +133,35 @@ export function OverviewPanel() {
       </Card>
 
       <Card className="space-y-3 p-4 text-sm">
-        <h3 className="font-semibold">Brand marks</h3>
-        <p className="text-muted-foreground">
-          All four files are transparent PNGs (no background box), tightly cropped to the artwork —
-          ready for business cards, letterheads, signage, slides and web. Use the light version on
-          white or pale stock, the dark version on black, dark or photographic backgrounds.
-        </p>
+        <h3 className="font-semibold">{t("Brand marks")}</h3>
+        <p className="text-muted-foreground">{t("All four files are transparent PNGs (no background box), tightly cropped to the artwork — ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.")}</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <MarkTile
             src={logoEn}
-            alt="iTechLounge — Digital ideas. Beautifully built."
+            alt={t("iTechLounge — Digital ideas. Beautifully built.")}
             file="itechlounge-logo-en.png"
-            label="English · for light backgrounds"
+            label={t("English · for light backgrounds")}
             dark={false}
           />
           <MarkTile
             src={logoEnDark}
-            alt="iTechLounge — Digital ideas. Beautifully built. (reversed)"
+            alt={t("iTechLounge — Digital ideas. Beautifully built. (reversed)")}
             file="itechlounge-logo-en-dark.png"
-            label="English · for dark backgrounds"
+            label={t("English · for dark backgrounds")}
             dark
           />
           <MarkTile
             src={logoDe}
-            alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt."
+            alt={t("iTechLounge — Digitale Ideen. Wunderschön umgesetzt.")}
             file="itechlounge-logo-de.png"
-            label="German · for light backgrounds"
+            label={t("German · for light backgrounds")}
             dark={false}
           />
           <MarkTile
             src={logoDeDark}
-            alt="iTechLounge — Digitale Ideen. Wunderschön umgesetzt. (reversed)"
+            alt={t("iTechLounge — Digitale Ideen. Wunderschön umgesetzt. (reversed)")}
             file="itechlounge-logo-de-dark.png"
-            label="German · for dark backgrounds"
+            label={t("German · for dark backgrounds")}
             dark
           />
         </div>
@@ -201,9 +193,7 @@ function MarkTile({
         <img src={src} alt={alt} className="max-h-28 w-auto object-contain" />
       </div>
       <span className="text-xs text-muted-foreground">{label}</span>
-      <a href={src} download={file} className="text-xs font-medium text-primary hover:underline">
-        Download transparent PNG
-      </a>
+      <a href={src} download={file} className="text-xs font-medium text-primary hover:underline">{t("Download transparent PNG")}</a>
     </div>
   );
 }

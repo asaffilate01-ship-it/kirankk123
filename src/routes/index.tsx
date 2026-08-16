@@ -1,3 +1,4 @@
+import { t } from "@/lib/i18n";
 import { createFileRoute } from "@tanstack/react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
@@ -7,7 +8,9 @@ import { PLPanel } from "@/components/dashboard/PLPanel";
 import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
-import logoEn from "@/assets/itechlounge-logo-en.png";
+import { logoFor } from "@/lib/logo";
+import { useLang } from "@/lib/i18n";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { lockSite } from "@/lib/gate.functions";
 import { GateGuard } from "@/components/GateGuard";
 import { clearGateToken } from "@/lib/gate-client";
@@ -44,6 +47,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const router = useRouter();
+  const { lang } = useLang();
   const lock = useServerFn(lockSite);
   async function handleLock() {
     await lock({});
@@ -57,37 +61,33 @@ function Index() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
             <img
-              src={logoEn}
-              alt="iTechLounge"
+              src={logoFor(lang)}
+              alt={t("iTechLounge")}
               className="h-14 w-auto"
             />
             <div>
-              <h1 className="text-sm font-semibold tracking-tight">iTechLounge</h1>
-              <p className="text-xs text-muted-foreground">
-                Live dashboard · 10 brands · 36-month forecast
-              </p>
+              <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
+              <p className="text-xs text-muted-foreground">{t("Live dashboard · 10 brands · 36-month forecast")}</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className="hidden text-xs text-muted-foreground sm:inline">
-              All figures € · assumptions editable
-            </span>
+            <span className="hidden text-xs text-muted-foreground sm:inline">{t("All figures € · assumptions editable")}</span>
+            <LanguageToggle />
             <Button variant="outline" size="sm" onClick={handleLock}>
-              <LogOut className="mr-1 h-3.5 w-3.5" /> Lock
-            </Button>
+              <LogOut className="mr-1 h-3.5 w-3.5" />{t("Lock")}</Button>
           </div>
         </div>
       </header>
       <main className="mx-auto max-w-7xl px-4 py-6">
         <Tabs defaultValue="overview" className="space-y-6">
           <TabsList className="flex-wrap">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="brands">Brands</TabsTrigger>
-            <TabsTrigger value="assumptions">Assumptions</TabsTrigger>
-            <TabsTrigger value="pl">P&amp;L</TabsTrigger>
-            <TabsTrigger value="cash">Cash flow</TabsTrigger>
-            <TabsTrigger value="bs">Balance sheet</TabsTrigger>
-            <TabsTrigger value="charts">Charts</TabsTrigger>
+            <TabsTrigger value="overview">{t("Overview")}</TabsTrigger>
+            <TabsTrigger value="brands">{t("Brands")}</TabsTrigger>
+            <TabsTrigger value="assumptions">{t("Assumptions")}</TabsTrigger>
+            <TabsTrigger value="pl">{t("P&amp;L")}</TabsTrigger>
+            <TabsTrigger value="cash">{t("Cash flow")}</TabsTrigger>
+            <TabsTrigger value="bs">{t("Balance sheet")}</TabsTrigger>
+            <TabsTrigger value="charts">{t("Charts")}</TabsTrigger>
           </TabsList>
           <TabsContent value="overview"><OverviewPanel /></TabsContent>
           <TabsContent value="brands"><BrandsPanel /></TabsContent>
