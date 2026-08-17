@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
 import { logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
 import { BrandLogo } from "@/components/BrandLogo";
+import { InvestorCalculator } from "./InvestorCalculator";
 
 export function OverviewPanel() {
   const state = useFinance();
@@ -124,6 +125,8 @@ export function OverviewPanel() {
           {t("-month free trial.")}
         </p>
       </Card>
+
+      <InvestorCalculator />
 
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">{t("Our system — one team, ten brands")}</h3>
