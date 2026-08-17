@@ -1,7 +1,7 @@
 import { t } from "@/lib/i18n";
 import { useMemo } from "react";
 import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
-import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
+import { BRANDS, SHARED_ADVANTAGE, TARGET_BRAND_COUNT } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import { fmtEURk, fmtPct } from "./format";
 import { logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
@@ -37,7 +37,7 @@ export function OverviewPanel() {
       </div>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Kpi label={t("Active brands")} value={`${activeBrands} / ${BRANDS.length}`} />
+        <Kpi label={t("Active brands")} value={`${activeBrands} / ${TARGET_BRAND_COUNT}`} />
         <Kpi
           label={`${t("Monthly revenue")} @ M${rows.length}`}
           value={fmtEURk(last.revenue)}

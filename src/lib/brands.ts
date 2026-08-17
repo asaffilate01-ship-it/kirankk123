@@ -42,10 +42,13 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
+// Full portfolio target: 60 brands, 5 launches per month to month 12.
+export const TARGET_BRAND_COUNT = 60;
+
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
   "One cloud infrastructure (Hetzner + Cloudflare, DE-hosted)",
-  "One engineering team shipping across all 10 products",
+  "One engineering team shipping across all 60 products",
   "One AI platform (shared LLM gateway, embeddings, moderation)",
   "One authentication system (SSO across every brand)",
   "One payment system (Stripe + SEPA, unified reconciliation)",
