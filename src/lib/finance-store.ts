@@ -36,6 +36,9 @@ export type GlobalAssumptions = {
   trancheCount: number;
   investorEquityPct: number;
   investorProfitSharePct: number;
+  upfrontFunding: number;
+  monthlyFunding: number;
+  fundingMonths: number;
   openingCash: number;
 };
 
@@ -85,9 +88,12 @@ const defaultGlobal = (): GlobalAssumptions => ({
   marketingBase: 5000,
   marketingPerBrand: 4000,
   trancheSize: 50000,
-  trancheCount: 20,
-  investorEquityPct: 0.45,
-  investorProfitSharePct: 0.45,
+  trancheCount: 60,
+  investorEquityPct: 0.42,
+  investorProfitSharePct: 0.42,
+  upfrontFunding: 600000,
+  monthlyFunding: 200000,
+  fundingMonths: 12,
   openingCash: 0,
 });
 
@@ -226,7 +232,8 @@ export function buildModel(state: State): MonthRow[] {
     const investorShare = dividendPaid * g.investorEquityPct;
     const founderShare = dividendPaid - investorShare;
 
-    const fundingIn = m <= g.trancheCount ? g.trancheSize : 0;
+    const fundingIn =
+      (m === 1 ? g.upfrontFunding : 0) + (m <= g.fundingMonths ? g.monthlyFunding : 0);
     // Cash: netProfit + funding tranche − dividend paid out to shareholders
     const cashFlow = netProfit + fundingIn - dividendPaid;
     cash += cashFlow;

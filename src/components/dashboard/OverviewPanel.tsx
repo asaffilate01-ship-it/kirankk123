@@ -12,14 +12,14 @@ export function OverviewPanel() {
   const rows = useMemo(() => buildModel(state), [state]);
   const years = useMemo(() => yearSummaries(rows), [rows]);
   const last = rows[rows.length - 1];
-  const totalFunding = Math.min(state.global.months, state.global.trancheCount) * state.global.trancheSize;
+  const g = state.global;
+  const totalFunding = g.upfrontFunding + g.monthlyFunding * g.fundingMonths;
   const cumInvestor = rows.reduce((s, r) => s + r.investorShare, 0);
   const cumFounder = rows.reduce((s, r) => s + r.founderShare, 0);
   const cumDividend = cumInvestor + cumFounder;
   const monthAtMilestone = rows.find((r) => r.revenue >= 1_000_000)?.month;
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
-  const equityPerTranche =
-    totalFunding > 0 ? (state.global.investorEquityPct * state.global.trancheSize) / totalFunding : 0;
+  const equityPerTranche = g.trancheCount > 0 ? g.investorEquityPct / g.trancheCount : 0;
   const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
 
   const activeBrands = BRANDS.filter((b) => state.brands[b.id]?.enabled).length;
@@ -90,18 +90,37 @@ export function OverviewPanel() {
       <Card className="space-y-2 p-4 text-sm">
         <h3 className="font-semibold">{t("Investor terms")}</h3>
         <p className="text-muted-foreground">
-          {t("Total raise:")} <b>{fmtEURk(totalFunding)}</b>{" "}
-          {t("for")} <b>{fmtPct(state.global.investorEquityPct)} {t("equity")}</b>.{" "}
-          {t("Drawn as")} {fmtEURk(state.global.trancheSize)} {t("tranches ×")}{" "}
-          {state.global.trancheCount} {t("months.")}{" "}
-          {t("Each tranche therefore buys")} <b>{fmtPct(equityPerTranche, 2)} {t("equity")}</b> —{" "}
-          {t("so a €50k ticket is worth 2.25% at the full-raise valuation.")}{" "}
+          {t("Total raise:")} <b>{fmtEURk(totalFunding)}</b> {t("for")}{" "}
+          <b>{fmtPct(g.investorEquityPct)} {t("equity")}</b> {t("and")}{" "}
+          <b>{fmtPct(g.investorProfitSharePct)} {t("of net profit after all costs and taxes")}</b>.{" "}
+          {t("Paid as")} <b>{fmtEURk(g.upfrontFunding)}</b> {t("upfront, then")}{" "}
+          <b>{fmtEURk(g.monthlyFunding)}</b> {t("per month over")} {g.fundingMonths}{" "}
+          {t("months.")}
+        </p>
+        <ul className="space-y-1 text-muted-foreground">
+          {[
+            `${g.trancheCount} × ${fmtEURk(g.trancheSize)} tranches — each tranche = ${fmtPct(equityPerTranche, 2)} equity and ${fmtPct(equityPerTranche, 2)} of net profit. Investors may buy more than one tranche.`,
+            `Each tranche is funded ${fmtEURk(10000)} at signing, with the remaining ${fmtEURk(40000)} paid in 12 equal monthly instalments.`,
+            "5 brands launch per month, with all 60 live by month 12. Each brand would cost ~€250k standalone; shared legal & compliance, finance, tech, admin, sales & marketing and office overheads cut that dramatically and keep improving with scale.",
+            "Funds are spent on finalising the native apps, legal & compliance, then sales & marketing — the core tech is already built.",
+            "All shareholdings are legally recorded by lawyers under the relevant country law. No further investment rounds are planned.",
+            "Investors can sell their equity, with first refusal to the company; valuation is set independently by auditors for full transparency.",
+            "Every investor gets their own portal with live access to revenue, turnover and KPIs. Accounts are audited and shared annually.",
+            "We run tech, operations and management; investors can input on defined matters, with final say resting with the company.",
+            "Each brand stands on its own economics, and cross-selling across verticals compounds sales and customer trust.",
+          ].map((line) => (
+            <li key={line} className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+              <span>{t(line)}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="text-muted-foreground">
           {t("Shareholders draw dividends every six months from undistributed net profit —")}{" "}
           <b>{t("20% at M6")}</b>, <b>{t("30% at M12")}</b>, {t("then")}{" "}
           <b>{t("40% at M18, M24, M30 and M36")}</b> —{" "}
           {t("split pro-rata by equity; the rest stays in the business.")}{" "}
-          {t("All 10 brands launch on a 3-week rolling cadence with a")}{" "}
-          {state.global.freeTrialMonths}
+          {t("Brands launch on a 3-week rolling cadence with a")} {g.freeTrialMonths}
           {t("-month free trial.")}
         </p>
       </Card>
