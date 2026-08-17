@@ -9,7 +9,7 @@ import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import { BrandLogo } from "@/components/BrandLogo";
-import { BRANDS } from "@/lib/brands";
+import { TARGET_BRAND_COUNT } from "@/lib/brands";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { lockSite } from "@/lib/gate.functions";
 import { GateGuard } from "@/components/GateGuard";
@@ -91,7 +91,7 @@ function Index() {
             <div className="min-w-0">
               <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
               <p className="truncate text-[11px] text-muted-foreground sm:text-xs">
-                {t("Live dashboard")} · {BRANDS.length} {t("brands")} · {t("36-month forecast")}
+                {t("Live dashboard")} · {TARGET_BRAND_COUNT} {t("brands")} · {t("36-month forecast")}
               </p>
             </div>
           </div>
