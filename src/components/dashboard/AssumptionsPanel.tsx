@@ -16,6 +16,31 @@ export function AssumptionsPanel() {
       <Card className="space-y-4 p-4">
         <h3 className="font-semibold">{t("Funding & investor terms")}</h3>
         <SliderRow
+          label={t("Upfront payment (month 1)")}
+          value={g.upfrontFunding}
+          min={0}
+          max={1500000}
+          step={50000}
+          onChange={(v) => s.setGlobal({ upfrontFunding: v })}
+          format={fmtEURk}
+        />
+        <SliderRow
+          label={t("Monthly instalment")}
+          value={g.monthlyFunding}
+          min={0}
+          max={500000}
+          step={10000}
+          onChange={(v) => s.setGlobal({ monthlyFunding: v })}
+          format={fmtEURk}
+        />
+        <SliderRow
+          label={t("Instalment months")}
+          value={g.fundingMonths}
+          min={0}
+          max={24}
+          onChange={(v) => s.setGlobal({ fundingMonths: v })}
+        />
+        <SliderRow
           label={t("Tranche size")}
           value={g.trancheSize}
           min={10000}
@@ -28,7 +53,7 @@ export function AssumptionsPanel() {
           label={t("Number of tranches")}
           value={g.trancheCount}
           min={1}
-          max={40}
+          max={100}
           onChange={(v) => s.setGlobal({ trancheCount: v })}
         />
         <SliderRow
@@ -43,19 +68,12 @@ export function AssumptionsPanel() {
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
           <div className="mb-1 font-medium text-foreground">{t("Funding summary")}</div>
           <div>
-            Total raise: {fmtEURk(g.trancheSize * g.trancheCount)} · each tranche buys{" "}
-            {fmtPct(
-              g.trancheSize * g.trancheCount > 0
-                ? (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount)
-                : 0,
-              2,
-            )}{" "}
-            equity ({fmtEURk(g.trancheSize)} ={" "}
-            {fmtPct(
-              (g.investorEquityPct * g.trancheSize) / (g.trancheSize * g.trancheCount),
-              2,
-            )}{" "}
-            at full raise)
+            Total raise: {fmtEURk(g.upfrontFunding + g.monthlyFunding * g.fundingMonths)} ·{" "}
+            {fmtEURk(g.upfrontFunding)} upfront then {fmtEURk(g.monthlyFunding)}/mo ×{" "}
+            {g.fundingMonths} months. {g.trancheCount} tranches of {fmtEURk(g.trancheSize)} ·
+            each tranche buys{" "}
+            {fmtPct(g.trancheCount > 0 ? g.investorEquityPct / g.trancheCount : 0, 2)} equity and
+            the same share of net profit.
           </div>
         </div>
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
