@@ -735,6 +735,7 @@ export const DE: Record<string, string> = {
  "MRR": "MRR",
  "Users": "Nutzer",
  "launches": "Starts",
+ "More": "Mehr",
  "Total raise:": "Gesamtvolumen:",
  "for": "für",
  "equity": "Anteile",
