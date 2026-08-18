@@ -2,6 +2,15 @@ import haccoraLogo from "@/assets/haccora-logo.png.asset.json";
 import kinderstarsLogo from "@/assets/kinderstars-logo.png.asset.json";
 import viazenoLogo from "@/assets/viazeno-logo.png.asset.json";
 import rettioLogo from "@/assets/rettio-logo.png.asset.json";
+import rettioLogoV2 from "@/assets/rettio-logo-v2.png.asset.json";
+import stellenxpertLogo from "@/assets/stellenxpert-logo.png.asset.json";
+import xpertjobsLogo from "@/assets/xpertjobs-logo.png.asset.json";
+import uzvoyaLogo from "@/assets/uzvoya-logo.png.asset.json";
+import baytcircleLogo from "@/assets/baytcircle-logo.png.asset.json";
+import tareevoLogo from "@/assets/tareevo-logo.png.asset.json";
+import taxnuviaLogo from "@/assets/taxnuvia-logo.png.asset.json";
+import beistandplusLogo from "@/assets/beistandplus-logo.png.asset.json";
+import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
 import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo.png";
@@ -27,7 +36,15 @@ export const BRAND_LOGOS: Record<string, string> = {
   haccora: haccoraLogo.url,
   kinderstars: kinderstarsLogo.url,
   viazeno: viazenoLogo.url,
-  rettio: rettioLogo.url,
+  rettio: rettioLogoV2.url,
+  stellenxpert: stellenxpertLogo.url,
+  xpertjobs: xpertjobsLogo.url,
+  uzvoya: uzvoyaLogo.url,
+  baytcircle: baytcircleLogo.url,
+  tareevo: tareevoLogo.url,
+  taxnuvia: taxnuviaLogo.url,
+  beinstandplus: beistandplusLogo.url,
+  stylesyncuk: stylesyncLogo.url,
   beratermarkt: beratermarktLogo.url,
   traindirekt: traindirektLogo.url,
   zivvo: zivvoLogo,
