@@ -18,6 +18,7 @@ import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
 import dishbeeLogo from "@/assets/dishbee-logo.png.asset.json";
+import saatheraLogo from "@/assets/saathera-logo.png.asset.json";
 import konneviaLogo from "@/assets/konnevia-logo.png.asset.json";
 import unipathwayLogo from "@/assets/unipathway-logo-v2.png.asset.json";
 import lawquoLogo from "@/assets/lawquo-logo.png.asset.json";
@@ -62,6 +63,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   zivvo: zivvoLogo.url,
   zivvouk: zivvoLogo.url,
   dishbee: dishbeeLogo.url,
+  saathera: saatheraLogo.url,
   konnevia: konneviaLogo.url,
   unipathway: unipathwayLogo.url,
   "haccora-uk": haccoraUkLogo.url,
