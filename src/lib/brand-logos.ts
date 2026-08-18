@@ -1,4 +1,8 @@
-import haccoraLogo from "@/assets/haccora-logo.png.asset.json";
+import haccoraLogo from "@/assets/haccora-logo-de.png.asset.json";
+import haccoraUkLogo from "@/assets/haccora-logo-en.png.asset.json";
+import bidlumoLogo from "@/assets/bidlumo-logo.png.asset.json";
+import ilmveroLogo from "@/assets/ilmvero-logo.png.asset.json";
+import marktpassLogo from "@/assets/marktpass-logo.png.asset.json";
 import kinderstarsLogo from "@/assets/kinderstars-logo.png.asset.json";
 import viazenoLogo from "@/assets/viazeno-logo-v2.png.asset.json";
 import rettioLogoV2 from "@/assets/rettio-logo-v2.png.asset.json";
@@ -6,7 +10,7 @@ import stellenxpertLogo from "@/assets/stellenxpert-logo.png.asset.json";
 import xpertjobsLogo from "@/assets/xpertjobs-logo.png.asset.json";
 import uzvoyaLogo from "@/assets/uzvoya-logo.png.asset.json";
 import baytcircleLogo from "@/assets/baytcircle-logo.png.asset.json";
-import tareevoLogo from "@/assets/tareevo-logo.png.asset.json";
+import tareevoLogo from "@/assets/tareevo-logo-v2.png.asset.json";
 import taxnuviaLogo from "@/assets/taxnuvia-logo.png.asset.json";
 import beistandplusLogo from "@/assets/beistandplus-logo.png.asset.json";
 import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
@@ -53,6 +57,10 @@ export const BRAND_LOGOS: Record<string, string> = {
   zivvo: zivvoLogo,
   konnevia: konneviaLogo.url,
   unipathway: unipathwayLogo.url,
+  "haccora-uk": haccoraUkLogo.url,
+  bidlumo: bidlumoLogo.url,
+  ilmvero: ilmveroLogo.url,
+  marktpass: marktpassLogo.url,
   lawquo: lawquoLogo.url,
   traderos: traderosLogo.url,
   kiezio: kiezioLogo.url,
