@@ -1,3 +1,5 @@
+import { EXTRA_BRANDS } from "./brands-extra";
+
 export type Brand = {
   id: string;
   name: string;
@@ -42,8 +44,8 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
-// Full portfolio target: 60 brands, 5 launches per month to month 12.
-export const TARGET_BRAND_COUNT = 60;
+// Full portfolio target: 77 brands, 5 launches per month to month 12.
+export const TARGET_BRAND_COUNT = 77;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
@@ -63,7 +65,7 @@ export const SHARED_ADVANTAGE: string[] = [
 
 // Launch cadence: one brand every ~3 weeks starting M1. So launches at 1..10.
 // After a 2-month free trial, paid revenue starts 2 months after launch.
-export const BRANDS: Brand[] = [
+const BASE_BRANDS: Brand[] = [
   {
     id: "haccora",
     name: "HACCORA",
@@ -618,7 +620,7 @@ export const BRANDS: Brand[] = [
     defaultAddlRevenue: 4200,
     defaultDirectCost: 3600,
     color: "#eab308",
-    domain: "beistandplus.de",
+    domain: "beinstandplus.de",
     reason:
       "Arriving in Germany means 15+ appointments across Bürgeramt, Ausländerbehörde, Krankenkasse, Finanzamt, Schule — with waiting times of 6-14 weeks. Employers lose 3 months of productive time per relocation. Charities are overloaded and free-tier only. BEINSTANDPLUS sells speed and certainty.",
     proposition:
@@ -3652,7 +3654,7 @@ export const BRANDS: Brand[] = [
     name: "ZORYN NEXUS",
     region: "DE",
     tagline: "Money, payments and rewards infrastructure",
-    domain: "zorynbank.de",
+    domain: "zorynpay.de",
     description: "The payments and money layer behind the iTechLounge group: merchant payments, wallets, payouts, multi-currency settlement and rewards infrastructure exposed as APIs to our brands and third parties.",
     market: "\u2248$2.3tn global payments revenue; embedded-finance platforms hold a fast-growing share.",
     audience: "Group brands, external merchants, marketplaces, platform partners.",
@@ -3751,7 +3753,7 @@ export const BRANDS: Brand[] = [
     name: "ONYNGO",
     region: "UK",
     tagline: "0% commission food ordering, EPOS and delivery",
-    domain: "onyngo.co.uk",
+    domain: "onyngo.com",
     description: "A flat-fee ordering and delivery platform for restaurants, takeaways, grocery shops and pharmacies. £4.99+VAT per day per site with zero order commission, bundling an own-branded storefront, EPOS till, kitchen display, self-order kiosk, QR pay-at-table, driver dispatch and wholesale supplier ordering.",
     market: "≈60,000 UK takeaways and ≈150,000 hospitality sites; ≈£13bn of online food delivery orders each year.",
     audience: "Independent restaurants and takeaways, grocery shops, pharmacies, wholesale suppliers, delivery drivers.",
@@ -3993,3 +3995,5 @@ export const BRANDS: Brand[] = [
     },
   },
 ];
+
+export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS];
