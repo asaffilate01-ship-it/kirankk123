@@ -50,7 +50,7 @@ export const TARGET_BRAND_COUNT = 77;
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
   "One cloud infrastructure (Hetzner + Cloudflare, DE-hosted)",
-  "One engineering team shipping across all 60 products",
+  "One engineering team shipping across the whole portfolio",
   "One AI platform (shared LLM gateway, embeddings, moderation)",
   "One authentication system (SSO across every brand)",
   "One payment system (Stripe + SEPA, unified reconciliation)",
