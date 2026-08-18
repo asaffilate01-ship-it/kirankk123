@@ -1,6 +1,6 @@
 import haccoraLogo from "@/assets/haccora-logo.png.asset.json";
 import kinderstarsLogo from "@/assets/kinderstars-logo.png.asset.json";
-import viazenoLogo from "@/assets/viazeno-logo.png.asset.json";
+import viazenoLogo from "@/assets/viazeno-logo-v2.png.asset.json";
 import rettioLogoV2 from "@/assets/rettio-logo-v2.png.asset.json";
 import stellenxpertLogo from "@/assets/stellenxpert-logo.png.asset.json";
 import xpertjobsLogo from "@/assets/xpertjobs-logo.png.asset.json";
@@ -14,7 +14,11 @@ import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo.png";
 import konneviaLogo from "@/assets/konnevia-logo.png.asset.json";
-import unipathwayLogo from "@/assets/unipathway-logo.png.asset.json";
+import unipathwayLogo from "@/assets/unipathway-logo-v2.png.asset.json";
+import lawquoLogo from "@/assets/lawquo-logo.png.asset.json";
+import traderosLogo from "@/assets/traderos-logo.png.asset.json";
+import kiezioLogo from "@/assets/kiezio-logo.png.asset.json";
+import docuveraLogo from "@/assets/docuvera-logo.png.asset.json";
 import merqoraLogo from "@/assets/merqora-logo.png.asset.json";
 import hexareveLogo from "@/assets/hexareve-logo.png.asset.json";
 import recovrableLogo from "@/assets/recovrable-logo.png.asset.json";
@@ -49,6 +53,11 @@ export const BRAND_LOGOS: Record<string, string> = {
   zivvo: zivvoLogo,
   konnevia: konneviaLogo.url,
   unipathway: unipathwayLogo.url,
+  lawquo: lawquoLogo.url,
+  traderos: traderosLogo.url,
+  kiezio: kiezioLogo.url,
+  "docuvera-de": docuveraLogo.url,
+  "docuvera-uk": docuveraLogo.url,
   merqora: merqoraLogo.url,
   hexareve: hexareveLogo.url,
   recovrable: recovrableLogo.url,
