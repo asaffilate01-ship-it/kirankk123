@@ -38,6 +38,10 @@ import oceavelaLogo from "@/assets/oceavela-logo.png.asset.json";
 import savanseaLogo from "@/assets/savansea-logo.png.asset.json";
 import iberavivaLogo from "@/assets/iberaviva-logo.png.asset.json";
 import fiftyroamLogo from "@/assets/fiftyroam-logo.png.asset.json";
+import amityosLogo from "@/assets/amityos-logo.png.asset.json";
+import skillfinchLogo from "@/assets/skillfinch-logo.png.asset.json";
+import dearnextLogo from "@/assets/dearnext-logo.png.asset.json";
+import gableyLogo from "@/assets/gabley-logo.png.asset.json";
 
 export const BRAND_LOGOS: Record<string, string> = {
   haccora: haccoraLogo.url,
@@ -81,4 +85,8 @@ export const BRAND_LOGOS: Record<string, string> = {
   savansea: savanseaLogo.url,
   iberaviva: iberavivaLogo.url,
   fiftyroam: fiftyroamLogo.url,
+  amityos: amityosLogo.url,
+  skillfinch: skillfinchLogo.url,
+  dearnext: dearnextLogo.url,
+  gabley: gableyLogo.url,
 };
