@@ -1,7 +1,6 @@
 import haccoraLogo from "@/assets/haccora-logo.png.asset.json";
 import kinderstarsLogo from "@/assets/kinderstars-logo.png.asset.json";
 import viazenoLogo from "@/assets/viazeno-logo.png.asset.json";
-import rettioLogo from "@/assets/rettio-logo.png.asset.json";
 import rettioLogoV2 from "@/assets/rettio-logo-v2.png.asset.json";
 import stellenxpertLogo from "@/assets/stellenxpert-logo.png.asset.json";
 import xpertjobsLogo from "@/assets/xpertjobs-logo.png.asset.json";
