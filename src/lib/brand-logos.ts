@@ -8,6 +8,9 @@ import zivvoLogo from "@/assets/zivvo-logo.png";
 import konneviaLogo from "@/assets/konnevia-logo.png.asset.json";
 import unipathwayLogo from "@/assets/unipathway-logo.png.asset.json";
 import merqoraLogo from "@/assets/merqora-logo.png.asset.json";
+import hexareveLogo from "@/assets/hexareve-logo.png.asset.json";
+import recovrableLogo from "@/assets/recovrable-logo.png.asset.json";
+import autohashiLogo from "@/assets/autohashi-logo.png.asset.json";
 import lessonaheadLogo from "@/assets/lessonahead-logo.png.asset.json";
 import premisoraLogo from "@/assets/premisora-logo.png.asset.json";
 import bosporivaLogo from "@/assets/bosporiva-logo.png.asset.json";
@@ -31,6 +34,9 @@ export const BRAND_LOGOS: Record<string, string> = {
   konnevia: konneviaLogo.url,
   unipathway: unipathwayLogo.url,
   merqora: merqoraLogo.url,
+  hexareve: hexareveLogo.url,
+  recovrable: recovrableLogo.url,
+  autohashi: autohashiLogo.url,
   lessonahead: lessonaheadLogo.url,
   premisora: premisoraLogo.url,
   bosporiva: bosporivaLogo.url,
