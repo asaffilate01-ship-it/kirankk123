@@ -97,11 +97,11 @@ function BrandDetail() {
         <div className="space-y-4">
           <div>
             {BRAND_LOGOS[brand.id] && (
-              <div className="mb-3 flex h-16 w-[320px] items-center justify-center">
+              <div className="mb-3 flex h-16 w-[200px] shrink-0 items-center justify-start overflow-hidden">
                 <img
                   src={BRAND_LOGOS[brand.id]}
                   alt={`${brand.name} logo`}
-                  className="max-h-full w-auto max-w-full object-contain"
+                  className="h-full w-full object-contain object-left"
                 />
               </div>
             )}
