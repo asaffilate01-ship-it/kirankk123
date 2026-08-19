@@ -18,6 +18,7 @@ import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
 import dishbeeLogo from "@/assets/dishbee-logo-v2.png.asset.json";
+import qiyavoLogo from "@/assets/qiyavo-logo.png.asset.json";
 import craftvaroLogoEn from "@/assets/craftvaro-logo-en.png.asset.json";
 import craftvaroLogoDe from "@/assets/craftvaro-logo-de.png.asset.json";
 import saatheraLogo from "@/assets/saathera-logo.png.asset.json";
@@ -108,6 +109,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   niyyahnoor: niyyahnoorLogo.url,
   travenexa: travenexaLogo.url,
   marelyra: marelyraLogo.url,
+  qiyavo: qiyavoLogo.url,
   "craftvaro-uk": craftvaroLogoEn.url,
   "craftvaro-de": craftvaroLogoDe.url,
   eventplanrger: eventplanrLogoDe.url,
