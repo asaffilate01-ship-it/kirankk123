@@ -2055,11 +2055,11 @@ const BASE_BRANDS: Brand[] = [
     },
   },
   {
-    id: "maisoncreme",
+    id: "merqano",
     name: "MAISON\u00b7CR\u00c8ME",
     region: "UK",
     tagline: "Hand-crafted boutique cakes & luxury chocolates",
-    domain: "maisoncreme.co.uk",
+    domain: "merqano.com",
     description: "Premium hand-finished cakes, cupcakes, cheesecakes and luxury chocolates ordered online for next-day collection or delivery, with a plant-based sister range.",
     market: "\u2248\u00a34.4bn UK cakes and celebration bakery market; \u2248\u00a31.4bn premium chocolate.",
     audience: "Celebration buyers, corporate gifting, event planners, wedding couples.",
