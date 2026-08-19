@@ -1,4 +1,4 @@
-import { t } from "@/lib/i18n";
+import { t, useLang } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { BRANDS, REGIONS, regionOf } from "@/lib/brands";
 import { useFinance } from "@/lib/finance-store";
@@ -7,7 +7,7 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { fmtEURk, fmtNum } from "./format";
 import { buildModel } from "@/lib/finance-store";
-import { BRAND_LOGOS } from "@/lib/brand-logos";
+import { brandLogo } from "@/lib/brand-logos";
 
 export function BrandsPanel() {
   const state = useFinance();
@@ -36,10 +36,10 @@ export function BrandsPanel() {
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <div className="flex items-center gap-2">
-                    {BRAND_LOGOS[b.id] ? (
+                    {brandLogo(b.id, lang) ? (
                       <div className="flex h-16 w-[200px] shrink-0 items-center justify-start overflow-hidden">
                         <img
-                          src={BRAND_LOGOS[b.id]}
+                          src={brandLogo(b.id, lang)}
                           alt={`${b.name} logo`}
                           className="h-full w-full object-contain object-left"
                         />
