@@ -345,4 +345,80 @@ export const DE_EXTRA: Record<string, string> = {
     "Ca. 25.000 britische Maklerfilialen und ca. 2,8 Mio. private Vermieter verwalten ca. 4,6 Mio. Mietwohnungen und ca. 1 Mio. Verkäufe pro Jahr — fast alle mit Multi-Anbieter-Stacks statt einer Plattform.",
   "UK agency software, portal advertising, referencing and rent-collection spend is ≈£5bn a year; portal listing fees and per-tenancy charges alone take hundreds of pounds per branch per month that a flat subscription removes.":
     "Ausgaben für Makler-Software, Portalwerbung, Mieterprüfung und Mietinkasso liegen in UK bei ca. 5 Mrd. £ pro Jahr; allein Portalgebühren und Kosten pro Mietverhältnis binden hunderte Pfund pro Filiale und Monat, die ein Pauschalabo einspart.",
+
+  // EVENTPLANR UK
+  "Plan it once. Book trusted UK vendors.": "Einmal planen. Geprüfte UK-Dienstleister buchen.",
+  "EVENTPLANR UK is the commission-free, full-service event platform for Britain: a public marketplace of verified venues and vendors searchable by postcode, distance, category, price and rating; a complete planning workspace (task timeline, budget, guest list, RSVP, seating, documents); private media sharing for guests; encrypted deposit and balance payments with full logs and receipts for both sides; and a built-in vendor CRM with enquiry pipeline, calendar, quotes, contracts and invoices. Hosts, vendors, guests and venues each get their own portal plus iOS and Android apps for on-the-day coordination. Live now as a test site at eventplanruk.itechlounge.co.uk; the real domain eventplanr.co.uk follows.":
+    "EVENTPLANR UK ist die provisionsfreie Full-Service-Eventplattform für Großbritannien: ein öffentlicher Marktplatz mit geprüften Locations und Dienstleistern, durchsuchbar nach Postleitzahl, Entfernung, Kategorie, Preis und Bewertung; ein vollständiger Planungsarbeitsbereich (Zeitplan, Budget, Gästeliste, RSVP, Sitzplan, Dokumente); privates Teilen von Fotos und Videos für Gäste; verschlüsselte Anzahlungs- und Restzahlungen mit vollständigen Protokollen und Belegen für beide Seiten; sowie ein integriertes Dienstleister-CRM mit Anfragen-Pipeline, Kalender, Angeboten, Verträgen und Rechnungen. Gastgeber, Dienstleister, Gäste und Locations erhalten jeweils ein eigenes Portal, dazu iOS- und Android-Apps für die Koordination am Eventtag. Aktuell live als Testseite unter eventplanruk.itechlounge.co.uk; die echte Domain eventplanr.co.uk folgt.",
+  "≈240,000 UK weddings plus ≈1.1m private and corporate events a year; ≈£14bn spend.":
+    "Ca. 240.000 Hochzeiten in UK sowie ca. 1,1 Mio. private und Firmenevents pro Jahr; ca. 14 Mrd. £ Ausgaben.",
+  "Couples, party hosts, corporate PAs, venues, caterers, photographers, DJs.":
+    "Paare, private Gastgeber, Assistenzkräfte in Unternehmen, Locations, Catering, Fotografen, DJs.",
+  "Planning a UK event still means WhatsApp groups, spreadsheets, email chains and Pinterest boards, while deposits leave by bank transfer with no protection. Vendors, meanwhile, pay directories £40-£200 a month or per-lead fees for enquiries that mostly never convert. EVENTPLANR UK puts hosts and vendors on one working platform and replaces per-lead charging with a flat subscription.":
+    "Ein Event in Großbritannien zu planen bedeutet weiterhin WhatsApp-Gruppen, Tabellen, E-Mail-Ketten und Pinterest-Boards, während Anzahlungen ungeschützt per Banküberweisung abgehen. Dienstleister zahlen zugleich 40-200 £ pro Monat an Verzeichnisse oder Gebühren pro Lead für Anfragen, die meist nie zu einer Buchung führen. EVENTPLANR UK bringt Gastgeber und Dienstleister auf eine gemeinsame Arbeitsplattform und ersetzt Lead-Gebühren durch ein Pauschalabo.",
+  "Zero commission, ever. Registering is free for hosts — planner, guest list, RSVP, budget and vendor search cost nothing; private media sharing is an optional £3 per event. Vendors pay a flat subscription from £10/mo for marketplace visibility, CRM, calendar, quoting, contracts and payments, and keep 100% of every booking. How it works: the host describes the event once, EVENTPLANR builds the task timeline and budget, shortlists verified vendors by postcode and distance, collects comparable quotes, takes deposits and balances through encrypted payments with receipts and logs on both sides, runs RSVPs, dietary needs and seating from the guest portal, and hands the day over as a shared timeline every supplier can see.":
+    "Null Provision, immer. Die Registrierung ist für Gastgeber kostenlos — Planung, Gästeliste, RSVP, Budget und Dienstleistersuche kosten nichts; privates Teilen von Medien ist optional für 3 £ pro Event. Dienstleister zahlen ein Pauschalabo ab 10 £/Monat für Sichtbarkeit im Marktplatz, CRM, Kalender, Angebote, Verträge und Zahlungen und behalten 100 % jeder Buchung. So funktioniert es: Der Gastgeber beschreibt das Event einmal, EVENTPLANR erstellt Zeitplan und Budget, schlägt geprüfte Dienstleister nach Postleitzahl und Entfernung vor, sammelt vergleichbare Angebote, verarbeitet Anzahlungen und Restzahlungen über verschlüsselte Zahlungen mit Belegen und Protokollen auf beiden Seiten, steuert RSVPs, Essenswünsche und Sitzplan über das Gästeportal und übergibt den Eventtag als gemeinsamen Zeitplan, den jeder Dienstleister sieht.",
+  "Hosts: free forever — planning workspace, guest list, RSVP, budget, vendor search and shortlists":
+    "Gastgeber: dauerhaft kostenlos — Planungsbereich, Gästeliste, RSVP, Budget, Dienstleistersuche und Favoritenlisten",
+  "Host premium: £3 per event for private media sharing and guest photo wall":
+    "Gastgeber-Premium: 3 £ pro Event für privates Teilen von Medien und Gäste-Fotowand",
+  "Vendor Starter £10/mo: marketplace profile, enquiry inbox, calendar":
+    "Dienstleister Starter 10 £/Monat: Marktplatzprofil, Anfragen-Postfach, Kalender",
+  "Vendor Pro £39/mo: full CRM pipeline, quotes, contracts and e-signature, payments and payouts":
+    "Dienstleister Pro 39 £/Monat: vollständige CRM-Pipeline, Angebote, Verträge mit E-Signatur, Zahlungen und Auszahlungen",
+  "Venue £99/mo: multi-space availability, preferred-supplier cross-selling, event sheets":
+    "Location 99 £/Monat: Verfügbarkeit mehrerer Räume, Cross-Selling von Partnerdienstleistern, Eventblätter",
+  "Agency £199/mo: multi-event dashboard, white-label client portals, team seats":
+    "Agentur 199 £/Monat: Dashboard für mehrere Events, White-Label-Kundenportale, Teamplätze",
+  "No commission on bookings, no per-lead fees, no listing fees — ever":
+    "Keine Provision auf Buchungen, keine Lead-Gebühren, keine Listungsgebühren — niemals",
+  "Drag-and-drop task timeline with event templates": "Zeitplan per Drag-and-drop mit Eventvorlagen",
+  "Guest list, RSVP and dietary tracking": "Gästeliste, RSVP und Erfassung von Essenswünschen",
+  "Budget tracker with real supplier quotes": "Budgetübersicht mit echten Dienstleisterangeboten",
+  "Verified vendor marketplace searchable by postcode, distance, category, price and rating":
+    "Marktplatz mit geprüften Dienstleistern, durchsuchbar nach Postleitzahl, Entfernung, Kategorie, Preis und Bewertung",
+  "Protected deposits and balance payments with 256-bit encryption, receipts and full payment logs":
+    "Geschützte Anzahlungen und Restzahlungen mit 256-Bit-Verschlüsselung, Belegen und vollständigen Zahlungsprotokollen",
+  "Private media wall for guest photos": "Private Medienwand für Gästefotos",
+  "Seating planner": "Sitzplaner",
+  "Group gifting and contributions": "Gruppengeschenke und Beiträge",
+  "Vendor CRM with enquiry pipeline, quotes and invoicing": "Dienstleister-CRM mit Anfragen-Pipeline, Angeboten und Rechnungen",
+  "Contracts and e-signature": "Verträge und E-Signatur",
+  "Favourites and shortlists shared with co-hosts": "Favoriten und Auswahllisten, geteilt mit Mitgastgebern",
+  "City and postcode SEO landing pages driving free vendor demand":
+    "SEO-Landingpages für Städte und Postleitzahlen, die kostenlose Nachfrage für Dienstleister erzeugen",
+  "Planning workspace and marketplace": "Planungsbereich und Marktplatz",
+  "Enquiries, CRM pipeline, calendar, quotes, payouts": "Anfragen, CRM-Pipeline, Kalender, Angebote, Auszahlungen",
+  "RSVP, photos, schedule": "RSVP, Fotos, Zeitplan",
+  "Plans the whole event and pays vendors safely.": "Plant das gesamte Event und bezahlt Dienstleister sicher.",
+  "Fills empty dates and manages enquiries.": "Füllt freie Termine und verwaltet Anfragen.",
+  "RSVPs, sees the schedule and uploads photos.": "Sagt zu, sieht den Zeitplan und lädt Fotos hoch.",
+  "Lists availability and cross-sells preferred suppliers.":
+    "Zeigt Verfügbarkeiten und vermittelt Partnerdienstleister.",
+  "Enormous SEO and directory inventory": "Enorme SEO-Reichweite und großes Verzeichnisinventar",
+  "We are a working planning tool, not a directory — hosts stay for months, so vendors get warm, high-intent enquiries for a flat £10-£39/mo with no per-lead charge at all":
+    "Wir sind ein echtes Planungswerkzeug, kein Verzeichnis — Gastgeber bleiben monatelang, Dienstleister erhalten also warme, kaufbereite Anfragen für pauschal 10-39 £/Monat, ganz ohne Lead-Gebühren",
+  "Strong free planning app": "Starke kostenlose Planungs-App",
+  "Protected payments plus a real vendor CRM, contracts and invoicing make us the transaction layer, not just the inspiration layer":
+    "Geschützte Zahlungen plus echtes Dienstleister-CRM, Verträge und Rechnungen machen uns zur Transaktionsebene, nicht nur zur Inspirationsebene",
+  "Fast supplier quote marketplaces with wide category coverage":
+    "Schnelle Angebotsmarktplätze mit breiter Kategorieabdeckung",
+  "They take booking commission or sell leads per credit; we take zero commission and vendors keep 100% of the fee, so our suppliers can quote lower and still earn more":
+    "Sie nehmen Buchungsprovision oder verkaufen Leads gegen Guthaben; wir nehmen null Provision und Dienstleister behalten 100 % des Honorars — unsere Anbieter können günstiger anbieten und verdienen trotzdem mehr",
+  "Ticketing scale and enterprise corporate event tooling":
+    "Ticketing-Reichweite und Enterprise-Tools für Firmenevents",
+  "Self-serve pricing with no implementation fee or annual contract, and one platform that also covers private events, vendors and payments":
+    "Self-Service-Preise ohne Einrichtungsgebühr oder Jahresvertrag und eine Plattform, die auch private Events, Dienstleister und Zahlungen abdeckt",
+  "Seasonality of weddings": "Saisonalität von Hochzeiten",
+  "Corporate and private-party segments smooth the calendar; annual vendor plans.":
+    "Firmen- und Privatfeiern glätten den Kalender; Jahresabos für Dienstleister.",
+  "Vendor disintermediation": "Umgehung der Plattform durch Dienstleister",
+  "Escrow protection, dispute resolution and reviews make on-platform booking the safer option for both sides.":
+    "Treuhandschutz, Streitbeilegung und Bewertungen machen die Buchung über die Plattform für beide Seiten sicherer.",
+  "Hosts use Hitched, Bridebook and Pinterest for inspiration, then move to WhatsApp and spreadsheets to actually run the event. Vendors pay £40-£200/mo for directory listings and chase deposits by bank transfer.":
+    "Gastgeber nutzen Hitched, Bridebook und Pinterest zur Inspiration und wechseln dann zu WhatsApp und Tabellen, um das Event tatsächlich zu organisieren. Dienstleister zahlen 40-200 £/Monat für Verzeichniseinträge und treiben Anzahlungen per Banküberweisung ein.",
+  "≈240,000 weddings/yr and ≈70,000 UK event vendors.":
+    "Ca. 240.000 Hochzeiten pro Jahr und ca. 70.000 Eventdienstleister in UK.",
+  "≈£14bn event spend; ≈£250m/yr flows to directories and vendor software today.":
+    "Ca. 14 Mrd. £ Eventausgaben; ca. 250 Mio. £/Jahr fließen heute an Verzeichnisse und Dienstleister-Software.",
 };
