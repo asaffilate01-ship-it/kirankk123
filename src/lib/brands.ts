@@ -22,6 +22,8 @@ export type Brand = {
   reason: string;
   proposition: string;
   features: string[];
+  /** Optional public pricing / packaging lines. */
+  pricing?: string[];
   apps: { name: string; kind: "SaaS" | "Web" | "iOS" | "Android" | "API" | "Admin"; purpose: string }[];
   userTypes: { type: string; useCase: string }[];
   risks: { risk: string; mitigation: string }[];
