@@ -2490,7 +2490,7 @@ const BASE_BRANDS: Brand[] = [
     name: "ZORYN",
     region: "DE",
     tagline: "Mehr als nur Punkte.",
-    domain: "zoryn.de",
+    domain: "zorynrewards.de",
     description: "Shared loyalty infrastructure for the whole group: one wallet for points, cashback, affiliate shopping, local offers and merchant rewards \u2014 spanning direct Zoryn merchants, our own products (KIEZIO, RETTIO, HACCORA, TRAINDIREKT), affiliate retailers and card-linked offer partners.",
     market: "\u224870m German consumers; \u2248\u20ac2.6bn loyalty and rewards market.",
     audience: "Consumers, local retailers, hospitality venues, online merchants.",
@@ -3625,7 +3625,7 @@ const BASE_BRANDS: Brand[] = [
   },
   {
     id: "zorynnexus",
-    name: "ZORYN NEXUS",
+    name: "ZORYN PAY",
     region: "DE",
     tagline: "Money, payments and rewards infrastructure",
     domain: "zorynpay.de",
@@ -3640,7 +3640,7 @@ const BASE_BRANDS: Brand[] = [
     defaultChurn: 0.015,
     defaultAddlRevenue: 22000,
     defaultDirectCost: 14000,
-    reason: "Fourteen brands taking money in six countries would otherwise mean fourteen payment integrations, fourteen reconciliations and fourteen compliance surfaces. ZORYN NEXUS is one rail for the whole group \u2014 and a product we can sell.",
+    reason: "Fourteen brands taking money in six countries would otherwise mean fourteen payment integrations, fourteen reconciliations and fourteen compliance surfaces. ZORYN PAY is one rail for the whole group \u2014 and a product we can sell.",
     proposition: "Payments, wallets, escrow, split payouts, multi-currency settlement and rewards issuing as a single API. It cuts the group's blended payment cost, funds itself internally, and is sold externally to marketplaces that need escrow and split payouts without building them.",
     features: [
       "Card, SEPA, open banking and wallet acceptance",
