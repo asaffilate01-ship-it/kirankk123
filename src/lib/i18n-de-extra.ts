@@ -1,5 +1,71 @@
-// German translations for the newest brands (CIRQIVA, DOKUVERA UK).
+// German translations for the newest brands (CIRQIVA, DOKUVERA UK, AUTOHASHI, GABLEY, EVENTPLANR).
 export const DE_EXTRA: Record<string, string> = {
+  // EVENTPLANR (Germany)
+  "Plan it once. Everything in one place.": "Einmal planen. Alles an einem Ort.",
+  "EVENTPLANR is the commission-free, full-service event platform for Germany: a public marketplace of verified venues and vendors, a complete planning workspace (tasks, budget, timeline, seating, documents), guest management with digital RSVP microsites, escrow-protected vendor payments, and a built-in CRM with calendar, quotes and invoices for vendors. Planner, vendor, guest and agency each get their own portal plus iOS and Android apps for on-the-day coordination. Live now as a test site at eventplanrde.itechlounge.co.uk; the real domain eventplanr.de follows.":
+    "EVENTPLANR ist die provisionsfreie Full-Service-Eventplattform für Deutschland: ein öffentlicher Marktplatz mit geprüften Locations und Dienstleistern, ein vollständiger Planungsarbeitsbereich (Aufgaben, Budget, Zeitplan, Sitzplan, Dokumente), Gästemanagement mit digitalen RSVP-Microsites, treuhänderisch gesicherte Dienstleisterzahlungen und ein integriertes CRM mit Kalender, Angeboten und Rechnungen für Dienstleister. Planer, Dienstleister, Gäste und Agenturen erhalten jeweils ein eigenes Portal, dazu iOS- und Android-Apps für die Koordination am Eventtag. Aktuell live als Testseite unter eventplanrde.itechlounge.co.uk; die echte Domain eventplanr.de folgt.",
+  "€8bn German event industry; 400k weddings + 1.2m corporate events / yr; ≈€320m/yr spent on event tech and per-lead vendor fees.":
+    "8 Mrd. € deutscher Eventmarkt; 400.000 Hochzeiten + 1,2 Mio. Firmenevents pro Jahr; ca. 320 Mio. €/Jahr für Event-Software und Lead-Gebühren.",
+  "Couples, private hosts, corporate HR/EA event owners, event agencies, and vendors: venues, caterers, DJs, photographers, florists, decorators, bus and shuttle firms.":
+    "Paare, private Gastgeber, HR- und Assistenzteams in Unternehmen, Eventagenturen sowie Dienstleister: Locations, Catering, DJs, Fotografen, Floristen, Dekorateure, Bus- und Shuttleunternehmen.",
+  "Largest German venue inventory and strong SEO on location searches":
+    "Größtes deutsches Location-Inventar und starke SEO bei Locationsuchen",
+  "Zero commission and no per-lead fees — vendors pay a flat monthly subscription and keep 100% of every booking; planners also get the full planning, guest and payment stack, not just a venue enquiry form":
+    "Null Provision und keine Lead-Gebühren — Dienstleister zahlen ein festes Monatsabo und behalten 100 % jeder Buchung; Planer erhalten zusätzlich den kompletten Planungs-, Gäste- und Zahlungs-Stack statt nur ein Anfrageformular.",
+  "Wedding-specific vendor directories and consumer reach":
+    "Hochzeitsspezifische Anbieterverzeichnisse und Endkundenreichweite",
+  "One platform for weddings, corporate and private events with real workflow (budget, timeline, seating, escrow), so hosts stay after the booking and vendors get repeat business, not one-off leads":
+    "Eine Plattform für Hochzeiten, Firmen- und Privatevents mit echten Abläufen (Budget, Zeitplan, Sitzplan, Treuhand) — Gastgeber bleiben nach der Buchung, Dienstleister gewinnen Folgeaufträge statt Einzel-Leads.",
+  "Enterprise corporate event management and integrations":
+    "Enterprise-Eventmanagement und Integrationen für Konzerne",
+  "German-hosted, DSGVO-first, self-serve pricing from €49/mo with no annual enterprise contract or implementation fee — usable by an HR team of one":
+    "In Deutschland gehostet, DSGVO-first, Self-Service ab 49 €/Monat ohne Jahresvertrag oder Einrichtungsgebühr — auch für ein HR-Team von einer Person nutzbar.",
+  "Free and familiar": "Kostenlos und vertraut",
+  "Same zero-cost start via a free plan for hosts, then one shared source of truth with reminders, supplier chat, contracts and payment protection instead of eight tools":
+    "Gleicher kostenloser Start über einen Gratis-Tarif für Gastgeber, danach eine gemeinsame Datenbasis mit Erinnerungen, Dienstleister-Chat, Verträgen und Zahlungsschutz statt acht Tools.",
+  "Zero commission, ever. Hosts plan free and pay only for premium features; vendors pay a flat monthly subscription for marketplace visibility, CRM, calendar, quoting, contracts and payouts, and keep 100% of every booking. How it works: the host describes the event once, EVENTPLANR builds the task list, budget and supplier shortlist, sends enquiries to verified vendors, collects quotes side by side, holds the deposit in escrow until the event day, runs RSVPs and seating from the guest microsite, and hands the whole event over as a timeline every supplier can see on the day.":
+    "Null Provision, dauerhaft. Gastgeber planen kostenlos und zahlen nur für Premium-Funktionen; Dienstleister zahlen ein festes Monatsabo für Marktplatz-Sichtbarkeit, CRM, Kalender, Angebote, Verträge und Auszahlungen und behalten 100 % jeder Buchung. So funktioniert es: Der Gastgeber beschreibt das Event einmal, EVENTPLANR erstellt Aufgabenliste, Budget und Dienstleister-Auswahl, versendet Anfragen an geprüfte Anbieter, stellt Angebote direkt vergleichbar dar, hält die Anzahlung bis zum Eventtag treuhänderisch, steuert RSVP und Sitzplan über die Gäste-Microsite und übergibt das Event als Ablaufplan, den am Tag jeder Dienstleister sieht.",
+  "Verified vendors: trade licence, insurance and review checks before listing":
+    "Geprüfte Dienstleister: Gewerbenachweis, Versicherung und Bewertungsprüfung vor der Freigabe",
+  "Side-by-side quote comparison from multiple vendors on one brief":
+    "Direkter Angebotsvergleich mehrerer Dienstleister auf eine Anfrage",
+  "Auto-generated task list and countdown timeline per event type":
+    "Automatisch erzeugte Aufgabenliste und Countdown-Zeitplan je Eventtyp",
+  "Contracts and e-signature with German AGB templates":
+    "Verträge und E-Signatur mit deutschen AGB-Vorlagen",
+  "Quotes, invoices and DATEV-ready exports for vendors":
+    "Angebote, Rechnungen und DATEV-fähige Exporte für Dienstleister",
+  "Private photo & document sharing per event":
+    "Privates Teilen von Fotos und Dokumenten pro Event",
+  "Day-of run sheet shared live with every supplier":
+    "Live-Ablaufplan am Eventtag für alle Dienstleister",
+  "Agency mode: multi-event pipeline, white-label and client access":
+    "Agenturmodus: Multi-Event-Pipeline, White-Label und Kundenzugänge",
+  "DE-hosted, DSGVO-first data handling with SEPA and card payments":
+    "Hosting in Deutschland, DSGVO-first, Zahlungen per SEPA und Karte",
+  "Hosts — Free: one event, tasks, budget, guest list and RSVP microsite":
+    "Gastgeber — Free: ein Event, Aufgaben, Budget, Gästeliste und RSVP-Microsite",
+  "Hosts — Plus €19/mo: seating chart, escrow payments, unlimited guests, media sharing":
+    "Gastgeber — Plus 19 €/Monat: Sitzplan, Treuhandzahlungen, unbegrenzte Gäste, Medien-Sharing",
+  "Vendors — Listing €49/mo: marketplace profile, unlimited enquiries and bookings, 0% commission":
+    "Dienstleister — Listing 49 €/Monat: Marktplatzprofil, unbegrenzte Anfragen und Buchungen, 0 % Provision",
+  "Vendors — Pro €99/mo: CRM, calendar sync, quotes, contracts, invoicing and payouts":
+    "Dienstleister — Pro 99 €/Monat: CRM, Kalendersync, Angebote, Verträge, Rechnungen und Auszahlungen",
+  "Agencies €249/mo: multi-event pipeline, team seats, white-label portal and client logins":
+    "Agenturen 249 €/Monat: Multi-Event-Pipeline, Teamplätze, White-Label-Portal und Kundenlogins",
+  "Add-ons: extra locations €15/mo, featured placement €39/mo, SMS/WhatsApp credits at cost":
+    "Add-ons: weitere Standorte 15 €/Monat, Top-Platzierung 39 €/Monat, SMS-/WhatsApp-Guthaben zum Selbstkostenpreis",
+  "No per-lead fees, no booking commission, monthly terms, 2-month free trial":
+    "Keine Lead-Gebühren, keine Buchungsprovision, monatlich kündbar, 2 Monate kostenlos testen",
+  "Public venue and vendor marketplace with city and PLZ landing pages":
+    "Öffentlicher Location- und Dienstleister-Marktplatz mit Stadt- und PLZ-Landingpages",
+  "Vendor pipeline, quotes, contracts, invoices and payouts":
+    "Dienstleister-Pipeline, Angebote, Verträge, Rechnungen und Auszahlungen",
+  "Vendor verification, disputes, payouts and moderation":
+    "Dienstleisterprüfung, Streitfälle, Auszahlungen und Moderation",
+  "Calendar, accounting and website-widget integrations":
+    "Integrationen für Kalender, Buchhaltung und Website-Widgets",
+
   // CIRQIVA
   "Waste sorted. Value recovered.": "Abfall geregelt. Wert zurückgewonnen.",
   "A full-service, commission-free waste and recycling marketplace plus operations platform for the UK. Businesses, landlords, builders and households book skips, bins, wait-and-load, clearances and recycling collections at published prices; licensed carriers and recycling facilities receive jobs, routes and digital duty-of-care paperwork in one app. Live test site: cirqiva.itechlounge.co.uk (real domain cirqiva.co.uk will follow).":

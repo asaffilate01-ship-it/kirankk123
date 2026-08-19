@@ -192,13 +192,16 @@ const BASE_BRANDS: Brand[] = [
   {
     id: "eventplanrger",
     name: "EVENTPLANR",
-    tagline: "All-in-one event planning platform for Germany",
+    tagline: "Plan it once. Everything in one place.",
     description:
-      "Venue discovery, vendor marketplace, guest management, RSVP, budgeting and vendor payments for weddings, corporate events and private celebrations.",
-    market: "€8bn German event industry; 400k weddings + 1.2m corporate events / yr.",
-    audience: "Couples, HR event managers, private hosts, small event agencies.",
+      "EVENTPLANR is the commission-free, full-service event platform for Germany: a public marketplace of verified venues and vendors, a complete planning workspace (tasks, budget, timeline, seating, documents), guest management with digital RSVP microsites, escrow-protected vendor payments, and a built-in CRM with calendar, quotes and invoices for vendors. Planner, vendor, guest and agency each get their own portal plus iOS and Android apps for on-the-day coordination. Live now as a test site at eventplanrde.itechlounge.co.uk; the real domain eventplanr.de follows.",
+    market: "€8bn German event industry; 400k weddings + 1.2m corporate events / yr; ≈€320m/yr spent on event tech and per-lead vendor fees.",
+    audience: "Couples, private hosts, corporate HR/EA event owners, event agencies, and vendors: venues, caterers, DJs, photographers, florists, decorators, bus and shuttle firms.",
     competitors: [
-      { name: "eventinc", strength: "Venue inventory", counter: "Zero-commission flat €49/mo for vendors vs €200+ per-lead fees; full guest management stack" },
+      { name: "eventinc", strength: "Largest German venue inventory and strong SEO on location searches", counter: "Zero commission and no per-lead fees — vendors pay a flat monthly subscription and keep 100% of every booking; planners also get the full planning, guest and payment stack, not just a venue enquiry form" },
+      { name: "WeddyPlace / hochzeitsportal24", strength: "Wedding-specific vendor directories and consumer reach", counter: "One platform for weddings, corporate and private events with real workflow (budget, timeline, seating, escrow), so hosts stay after the booking and vendors get repeat business, not one-off leads" },
+      { name: "Cvent / Bizzabo", strength: "Enterprise corporate event management and integrations", counter: "German-hosted, DSGVO-first, self-serve pricing from €49/mo with no annual enterprise contract or implementation fee — usable by an HR team of one" },
+      { name: "Excel + WhatsApp + Doodle", strength: "Free and familiar", counter: "Same zero-cost start via a free plan for hosts, then one shared source of truth with reminders, supplier chat, contracts and payment protection instead of eight tools" },
     ],
     currentMarket: {
       howServed:
@@ -214,20 +217,38 @@ const BASE_BRANDS: Brand[] = [
     defaultAddlRevenue: 4000,
     defaultDirectCost: 4200,
     color: "#a855f7",
-    domain: "eventplanr.de",
+    domain: "eventplanrde.itechlounge.co.uk",
     reason:
       "Planning an event in Germany means juggling 8-12 tools: venue portals, spreadsheet budgets, WhatsApp with vendors, PDF RSVPs. Vendors pay per-lead fees (€200+ per enquiry) with no conversion guarantee. EVENTPLANR unifies planners and vendors on one platform, replacing per-lead extortion with a flat subscription.",
     proposition:
-      "Planners get end-to-end event OS — venue search, vendor marketplace, budget tracker, guest list, RSVP, seating chart and vendor payments. Vendors pay a flat €49/mo to appear, respond and get paid. No commission, no per-lead fees.",
+      "Zero commission, ever. Hosts plan free and pay only for premium features; vendors pay a flat monthly subscription for marketplace visibility, CRM, calendar, quoting, contracts and payouts, and keep 100% of every booking. How it works: the host describes the event once, EVENTPLANR builds the task list, budget and supplier shortlist, sends enquiries to verified vendors, collects quotes side by side, holds the deposit in escrow until the event day, runs RSVPs and seating from the guest microsite, and hands the whole event over as a timeline every supplier can see on the day.",
     features: [
       "Filterable venue search (capacity, PLZ, price, style)",
       "Vendor marketplace: catering, DJ, florist, photographer",
+      "Verified vendors: trade licence, insurance and review checks before listing",
+      "Side-by-side quote comparison from multiple vendors on one brief",
       "Budget tracker with actuals vs plan",
+      "Auto-generated task list and countdown timeline per event type",
       "Digital RSVP with dietary & song requests",
       "Interactive seating chart",
       "Escrow vendor payments (funds released on event day)",
       "Guest communication (e-mail + WhatsApp templates)",
       "Vendor CRM & availability calendar",
+      "Contracts and e-signature with German AGB templates",
+      "Quotes, invoices and DATEV-ready exports for vendors",
+      "Private photo & document sharing per event",
+      "Day-of run sheet shared live with every supplier",
+      "Agency mode: multi-event pipeline, white-label and client access",
+      "DE-hosted, DSGVO-first data handling with SEPA and card payments",
+    ],
+    pricing: [
+      "Hosts — Free: one event, tasks, budget, guest list and RSVP microsite",
+      "Hosts — Plus €19/mo: seating chart, escrow payments, unlimited guests, media sharing",
+      "Vendors — Listing €49/mo: marketplace profile, unlimited enquiries and bookings, 0% commission",
+      "Vendors — Pro €99/mo: CRM, calendar sync, quotes, contracts, invoicing and payouts",
+      "Agencies €249/mo: multi-event pipeline, team seats, white-label portal and client logins",
+      "Add-ons: extra locations €15/mo, featured placement €39/mo, SMS/WhatsApp credits at cost",
+      "No per-lead fees, no booking commission, monthly terms, 2-month free trial",
     ],
     apps: [
       { name: "EVENTPLANR Studio", kind: "Web", purpose: "Full planner workspace" },
@@ -235,6 +256,10 @@ const BASE_BRANDS: Brand[] = [
       { name: "EVENTPLANR Vendor", kind: "Web", purpose: "Vendor inbox, calendar, payments" },
       { name: "EVENTPLANR Mobile", kind: "iOS", purpose: "On-the-day coordination for planners" },
       { name: "EVENTPLANR Mobile Android", kind: "Android", purpose: "Same, on Android" },
+      { name: "EVENTPLANR Marketplace", kind: "Web", purpose: "Public venue and vendor marketplace with city and PLZ landing pages" },
+      { name: "EVENTPLANR CRM", kind: "SaaS", purpose: "Vendor pipeline, quotes, contracts, invoices and payouts" },
+      { name: "EVENTPLANR Admin", kind: "Admin", purpose: "Vendor verification, disputes, payouts and moderation" },
+      { name: "EVENTPLANR API", kind: "API", purpose: "Calendar, accounting and website-widget integrations" },
     ],
     userTypes: [
       { type: "Couple planning a wedding", useCase: "Books venue + 6 vendors in one place." },
