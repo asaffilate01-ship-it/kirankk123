@@ -2450,9 +2450,9 @@ const BASE_BRANDS: Brand[] = [
     id: "zoryn",
     name: "ZORYN",
     region: "DE",
-    tagline: "Mehr als nur Punkte \u2014 Wallet, Zahlungen und Rewards",
+    tagline: "Mehr als nur Punkte.",
     domain: "zoryn.de",
-    description: "Consumer wallet and loyalty network: one app for local and online rewards, stamp cards, cashback and payments, with a merchant console for campaigns.",
+    description: "Shared loyalty infrastructure for the whole group: one wallet for points, cashback, affiliate shopping, local offers and merchant rewards \u2014 spanning direct Zoryn merchants, our own products (KIEZIO, RETTIO, HACCORA, TRAINDIREKT), affiliate retailers and card-linked offer partners.",
     market: "\u224870m German consumers; \u2248\u20ac2.6bn loyalty and rewards market.",
     audience: "Consumers, local retailers, hospitality venues, online merchants.",
     color: "#f59e0b",
@@ -2476,6 +2476,14 @@ const BASE_BRANDS: Brand[] = [
       "Gift cards and vouchers",
       "Segmented push campaigns",
       "DSGVO-first consent and data controls",
+      "Universal points plus merchant-specific and pending points",
+      "Online affiliate shopping with tracked cashback",
+      "Card-linked offers via Open Banking",
+      "Family wallet with child-account restrictions",
+      "Apple Wallet and Google Wallet passes",
+      "Double-entry points ledger with settlement statements",
+      "Fraud engine and campaign approval workflow",
+      "Digital receipts and transaction history",
     ],
     apps: [
       {
@@ -2503,6 +2511,11 @@ const BASE_BRANDS: Brand[] = [
         kind: "API",
         purpose: "Payment and settlement rails",
       },
+      {
+        name: "Zoryn Admin",
+        kind: "Web",
+        purpose: "Onboarding, liability, fraud, GDPR requests, audit logs",
+      },
     ],
     userTypes: [
       {
@@ -2520,6 +2533,22 @@ const BASE_BRANDS: Brand[] = [
       {
         type: "Online merchant",
         useCase: "Adds cashback at checkout.",
+      },
+      {
+        type: "Family administrator",
+        useCase: "Shares points with family members and sets child limits.",
+      },
+      {
+        type: "Merchant staff",
+        useCase: "Scans and redeems at the till with a staff-only login.",
+      },
+      {
+        type: "Affiliate/card partner",
+        useCase: "Funds manufacturer or network promotions and reconciles them.",
+      },
+      {
+        type: "Platform admin",
+        useCase: "Approves campaigns, manages settlement and rewards liability.",
       },
     ],
     competitors: [
