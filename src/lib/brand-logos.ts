@@ -14,7 +14,7 @@ import tareevoLogo from "@/assets/tareevo-logo-v3.png.asset.json";
 import taxnuviaLogo from "@/assets/taxnuvia-logo.png.asset.json";
 import beistandplusLogo from "@/assets/beistandplus-logo.png.asset.json";
 import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
-import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
+import beratermarktLogo from "@/assets/beratemarkt-logo-v2.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
 import dishbeeLogo from "@/assets/dishbee-logo-v2.png.asset.json";

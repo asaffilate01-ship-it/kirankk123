@@ -366,7 +366,7 @@ const BASE_BRANDS: Brand[] = [
   {
     id: "beratermarkt",
     name: "BERATEMARKT",
-    tagline: "Cross-professional advisor marketplace",
+    tagline: "Experten finden. Sicher entscheiden.",
     description:
       "Marketplace for regulated advisors — Rechtsanwälte, Steuerberater, Wirtschaftsprüfer and Buchhalter. Cross-referrals across four disciplines, secure client portal.",
     market: "165k regulated advisors in Germany; €40bn combined revenue.",
@@ -402,6 +402,14 @@ const BASE_BRANDS: Brand[] = [
       "DATEV export for accountants",
       "Video-consultation booking",
       "Encrypted messaging with retention rules",
+      "Lead marketplace: clients post a mandate, advisors buy or bid on matching leads",
+      "Advisor CRM with pipeline, tasks, calendar and quote builder",
+      "City and service landing pages for local SEO",
+      "Rechtstipps and resources content hub with expert articles",
+      "Compare and search filters by profession, sector, city and language",
+      "Verified reviews with published review and verification policies",
+      "Sales-agent portal with referrals, commissions and KPI tracking",
+      "Admin back office: verifications, complaints, sectors, reporting and audit log",
     ],
     apps: [
       { name: "BERATEMARKT Advisor", kind: "Web", purpose: "Advisor workspace & referrals" },
@@ -414,6 +422,8 @@ const BASE_BRANDS: Brand[] = [
       { type: "Rechtsanwalt", useCase: "Shares client docs securely, tracks mandate progress." },
       { type: "SMB owner", useCase: "One dashboard for tax return, contract review, audit." },
       { type: "Consumer", useCase: "Books an initial 30-min consult with a vetted advisor." },
+      { type: "Sales agent / partner", useCase: "Onboards advisors in their region and earns recurring commission." },
+      { type: "Platform admin", useCase: "Verifies credentials, handles complaints and monitors marketplace quality." },
     ],
     risks: [
       { risk: "Kammer restrictions on advertising", mitigation: "Positioned as neutral directory + document platform, not lead-gen; legal opinion from Kammer-approved counsel." },
