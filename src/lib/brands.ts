@@ -2056,7 +2056,7 @@ const BASE_BRANDS: Brand[] = [
   },
   {
     id: "merqano",
-    name: "MAISON\u00b7CR\u00c8ME",
+    name: "MERQANO",
     region: "UK",
     tagline: "Hand-crafted boutique cakes & luxury chocolates",
     domain: "merqano.com",
@@ -2071,7 +2071,7 @@ const BASE_BRANDS: Brand[] = [
     defaultChurn: 0.05,
     defaultAddlRevenue: 15000,
     defaultDirectCost: 11000,
-    reason: "Celebration cake buying is still local, phone-based and unpredictable. MAISON\u00b7CR\u00c8ME makes a premium, photographable cake as easy to order as a takeaway \u2014 with a guaranteed slot and nationwide chilled delivery.",
+    reason: "Celebration cake buying is still local, phone-based and unpredictable. MERQANO makes a premium, photographable cake as easy to order as a takeaway \u2014 with a guaranteed slot and nationwide chilled delivery.",
     proposition: "A direct-to-consumer premium bakery brand with online ordering, cut-off-time guarantees, personalisation and corporate gifting accounts \u2014 high-margin product sold through our own channel rather than a marketplace taking 30%.",
     features: [
       "Online ordering with guaranteed collection slots",
@@ -2087,17 +2087,17 @@ const BASE_BRANDS: Brand[] = [
     ],
     apps: [
       {
-        name: "Maison\u00b7Cr\u00e8me Shop",
+        name: "MERQANO Shop",
         kind: "Web",
         purpose: "Ordering, personalisation, checkout",
       },
       {
-        name: "Maison\u00b7Cr\u00e8me Ops",
+        name: "MERQANO Ops",
         kind: "Admin",
         purpose: "Production planning and dispatch",
       },
       {
-        name: "Maison\u00b7Cr\u00e8me Corporate",
+        name: "MERQANO Corporate",
         kind: "Web",
         purpose: "Gifting accounts and invoicing",
       },
