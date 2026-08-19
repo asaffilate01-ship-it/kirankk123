@@ -2311,7 +2311,7 @@ const BASE_BRANDS: Brand[] = [
       },
       {
         name: "ParkPunkt Enforcement",
-        kind: "Mobile",
+        kind: "Android",
         purpose: "Plate checks, evidence capture, notices offline",
       },
       {
