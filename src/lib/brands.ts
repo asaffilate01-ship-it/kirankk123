@@ -1484,12 +1484,12 @@ const BASE_BRANDS: Brand[] = [
         purpose: "Consumer marketplace and booking",
       },
       {
-        name: "StyleSync Salon",
+        name: "SCHONOVA Salon",
         kind: "SaaS",
         purpose: "Calendar, rotas, stock, payments",
       },
       {
-        name: "StyleSync Pro",
+        name: "SCHONOVA Pro",
         kind: "iOS",
         purpose: "Stylist app for mobile chairs",
       },
@@ -2148,7 +2148,7 @@ const BASE_BRANDS: Brand[] = [
     id: "stylesyncger",
     name: "SCHONOVA",
     region: "DE",
-    tagline: "Salon-Software und Buchungsplattform f\u00fcr Deutschland",
+    tagline: "Beauty finden. Direkt buchen.",
     domain: "schonova.de",
     description: "German edition of STYLESYNC: online booking marketplace plus salon management for Friseure, Kosmetik and Barbershops, with DSGVO-compliant client records, TSE-ready checkout and SEPA payments.",
     market: "\u224880,000 Friseur- und Kosmetikbetriebe in Germany; \u2248\u20ac22bn consumer spend.",
@@ -2177,22 +2177,22 @@ const BASE_BRANDS: Brand[] = [
     ],
     apps: [
       {
-        name: "StyleSync Buchung",
+        name: "SCHONOVA Buchung",
         kind: "Web",
         purpose: "Marktplatz und Terminbuchung",
       },
       {
-        name: "StyleSync Salon",
+        name: "SCHONOVA Salon",
         kind: "SaaS",
         purpose: "Kalender, Dienstplan, Kasse",
       },
       {
-        name: "StyleSync Pro",
+        name: "SCHONOVA Pro",
         kind: "iOS",
         purpose: "App f\u00fcr mobile Stylisten",
       },
       {
-        name: "StyleSync Kunde",
+        name: "SCHONOVA Kunde",
         kind: "Android",
         purpose: "Buchen, zahlen, wiederbuchen",
       },
