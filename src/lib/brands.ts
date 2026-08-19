@@ -2273,6 +2273,15 @@ const BASE_BRANDS: Brand[] = [
       "Enforcement and permit management for cities",
       "Automatic invoicing and VAT handling",
       "Occupancy analytics and heatmaps",
+      "Transparent tariff quotes before booking",
+      "Reservations, active-session view and digital receipts",
+      "Vehicle profiles, favourites and accessibility preferences",
+      "Business/fleet parking contexts with pooled billing",
+      "Support cases and penalty-notice appeals workflow",
+      "Enforcement plate checks with offline-safe evidence drafts",
+      "Mobility-provider onboarding, API keys and sync health",
+      "Provider commissions, refunds and settlement runs",
+      "Bilingual DE/EN platform with role-based access and audit trail",
     ],
     apps: [
       {
@@ -2300,6 +2309,16 @@ const BASE_BRANDS: Brand[] = [
         kind: "API",
         purpose: "Barrier and ANPR integrations",
       },
+      {
+        name: "ParkPunkt Enforcement",
+        kind: "Android",
+        purpose: "Plate checks, evidence capture, notices offline",
+      },
+      {
+        name: "ParkPunkt Admin",
+        kind: "Web",
+        purpose: "Roles, organisations, commissions, refunds, audit",
+      },
     ],
     userTypes: [
       {
@@ -2317,6 +2336,22 @@ const BASE_BRANDS: Brand[] = [
       {
         type: "Property owner",
         useCase: "Monetises empty bays out of hours.",
+      },
+      {
+        type: "Business / fleet manager",
+        useCase: "Manages employee parking on one consolidated invoice.",
+      },
+      {
+        type: "Mobility provider",
+        useCase: "Publishes inventory through the provider API and earns commission.",
+      },
+      {
+        type: "Enforcement officer",
+        useCase: "Checks plates and issues notices with photo evidence, even offline.",
+      },
+      {
+        type: "Platform admin",
+        useCase: "Handles refunds, settlements, roles and audit activity.",
       },
     ],
     competitors: [
