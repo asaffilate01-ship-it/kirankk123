@@ -6,10 +6,10 @@ export const EXTRA_BRANDS: Brand[] = [
     id: "cirqiva",
     name: "CIRQIVA",
     region: "UK",
-    domain: "cirqiva.co.uk",
+    domain: "cirqiva.itechlounge.co.uk",
     tagline: "Waste sorted. Value recovered.",
     description:
-      "A full-service, commission-free waste and recycling marketplace plus operations platform for the UK. Businesses, landlords, builders and households book skips, bins, wait-and-load, clearances and recycling collections at published prices; licensed carriers and recycling facilities receive jobs, routes and digital duty-of-care paperwork in one app. Test domain: cirqiva.itechlounge.co.uk.",
+      "A full-service, commission-free waste and recycling marketplace plus operations platform for the UK. Businesses, landlords, builders and households book skips, bins, wait-and-load, clearances and recycling collections at published prices; licensed carriers and recycling facilities receive jobs, routes and digital duty-of-care paperwork in one app. Live test site: cirqiva.itechlounge.co.uk (real domain cirqiva.co.uk will follow).",
     market: "≈£12bn UK waste-management market; ≈£1.5bn of brokered commercial collections and skip hire is addressable.",
     audience: "SMEs, hospitality and retail chains, construction firms, landlords and letting agents, councils, licensed waste carriers and recycling facilities.",
     color: "#22c55e",
