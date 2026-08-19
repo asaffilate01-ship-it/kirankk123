@@ -818,4 +818,5 @@ export const DE: Record<string, string> = {
  "Acceptable use": "Zul\u00e4ssige Nutzung",
  "Liability and changes": "Haftung und \u00c4nderungen",
  "Provider information for this dashboard.": "Anbieterangaben f\u00fcr dieses Dashboard.",
+ "Pricing & packaging": "Preise & Pakete",
 };
