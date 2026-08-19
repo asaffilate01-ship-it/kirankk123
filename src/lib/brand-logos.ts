@@ -60,9 +60,11 @@ import nilevellaLogo from "@/assets/nilevella-logo.png.asset.json";
 import iberavivaLogoV2 from "@/assets/iberaviva-logo-v2.png.asset.json";
 import eventplanrLogoDe from "@/assets/eventplanr-logo-de.png.asset.json";
 import eventplanrLogoEn from "@/assets/eventplanr-logo-en.png.asset.json";
+import cirqivaLogo from "@/assets/cirqiva-logo.png.asset.json";
 import konneviaLogoDe from "@/assets/konnevia-logo-de.png.asset.json";
 
 export const BRAND_LOGOS: Record<string, string> = {
+  cirqiva: cirqivaLogo.url,
   haccora: haccoraLogo.url,
   kinderstars: kinderstarsLogo.url,
   viazeno: viazenoLogo.url,
