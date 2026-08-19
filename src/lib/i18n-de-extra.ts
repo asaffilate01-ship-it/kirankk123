@@ -256,7 +256,7 @@ export const DE_EXTRA: Record<string, string> = {
   "Strong portfolio and block-management workflows":
     "Starke Workflows für Portfolio- und Blockverwaltung",
   "We cover the same portfolio and HMO room-level work while also giving the agent front-office sales and lettings, so one system replaces two":
-    "Wir deckern dieselbe Portfolio- und WG-Zimmerverwaltung ab und liefern zusätzlich Verkauf und Vermietung im Front Office — ein System ersetzt zwei",
+    "Wir decken dieselbe Portfolio- und WG-Zimmerverwaltung ab und liefern zusätzlich Verkauf und Vermietung im Front Office — ein System ersetzt zwei",
   "Same speed with automatic expiry alerts, an auditable record per property and self-service portals that stop the phone calls":
     "Gleiches Tempo mit automatischen Fristwarnungen, prüfbarer Historie pro Objekt und Self-Service-Portalen, die Anrufe erübrigen",
   "Agencies are locked into multi-year CRM contracts": "Makler sind an mehrjährige CRM-Verträge gebunden",
