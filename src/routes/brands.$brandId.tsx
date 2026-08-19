@@ -83,7 +83,7 @@ function BrandDetail() {
             <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
               <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
             {BRAND_LOGOS[brand.id] ? (
-              <div className="flex h-6 w-[120px] items-center justify-center">
+              <div className="flex h-26 w-[120px] items-center justify-center">
                 <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="max-h-full w-auto max-w-full object-contain" />
               </div>
             ) : (
@@ -97,7 +97,7 @@ function BrandDetail() {
         <div className="space-y-4">
           <div>
             {BRAND_LOGOS[brand.id] && (
-              <div className="mb-3 flex h-16 w-[200px] shrink-0 items-center justify-start overflow-hidden">
+              <div className="mb-3 flex h-26 w-[200px] shrink-0 items-center justify-start overflow-hidden">
                 <img
                   src={BRAND_LOGOS[brand.id]}
                   alt={`${brand.name} logo`}
