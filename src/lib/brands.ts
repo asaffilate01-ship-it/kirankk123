@@ -3524,7 +3524,6 @@ const BASE_BRANDS: Brand[] = [
       revenue: "\u2248$14bn online exam-prep spend, plus \u2248$120bn in offline tutoring being displaced.",
     },
   },
-  },
   {
     id: "zorynnexus",
     name: "ZORYN PAY",
