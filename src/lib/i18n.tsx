@@ -9,6 +9,9 @@ import {
   type ReactNode,
 } from "react";
 import { DE } from "./i18n-de";
+import { DE_EXTRA } from "./i18n-de-extra";
+
+const DICT: Record<string, string> = { ...DE, ...DE_EXTRA };
 
 export type Lang = "en" | "de";
 
@@ -25,7 +28,7 @@ let currentLang: Lang = "en";
 
 export function t(text: string): string {
   if (currentLang === "en") return text;
-  return DE[text] ?? text;
+  return DICT[text] ?? text;
 }
 
 export function detectLang(): Lang {

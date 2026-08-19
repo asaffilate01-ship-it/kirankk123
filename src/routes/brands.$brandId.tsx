@@ -1,4 +1,4 @@
-import { t } from "@/lib/i18n";
+import { t, useLang } from "@/lib/i18n";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BRANDS, SHARED_ADVANTAGE, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
@@ -9,7 +9,7 @@ import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
 import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { GateGuard } from "@/components/GateGuard";
-import { BRAND_LOGOS } from "@/lib/brand-logos";
+import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
 
@@ -53,6 +53,8 @@ export const Route = createFileRoute("/brands/$brandId")({
 
 function BrandDetail() {
   const { brand } = Route.useLoaderData() as { brand: Brand };
+  const { lang } = useLang();
+  const logo = brandLogo(brand.id, lang);
   const state = useFinance();
   const a = state.brands[brand.id];
   const rows = buildModel(state);
@@ -82,9 +84,9 @@ function BrandDetail() {
             <LanguageToggle />
             <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
               <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
-            {BRAND_LOGOS[brand.id] ? (
+            {logo ? (
               <div className="flex h-26 w-[120px] items-center justify-center">
-                <img src={BRAND_LOGOS[brand.id]} alt={`${brand.name} logo`} className="max-h-full w-auto max-w-full object-contain" />
+                <img src={logo} alt={`${brand.name} logo`} className="max-h-full w-auto max-w-full object-contain" />
               </div>
             ) : (
               <span className="h-3 w-3 rounded-full" style={{ background: brand.color }} aria-hidden />
@@ -96,10 +98,10 @@ function BrandDetail() {
       <main className="mx-auto grid max-w-6xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
           <div>
-            {BRAND_LOGOS[brand.id] && (
+            {logo && (
               <div className="mb-3 flex h-26 w-[200px] shrink-0 items-center justify-start overflow-hidden">
                 <img
-                  src={BRAND_LOGOS[brand.id]}
+                  src={logo}
                   alt={`${brand.name} logo`}
                   className="h-full w-full object-contain object-left"
                 />
