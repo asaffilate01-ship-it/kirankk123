@@ -19,7 +19,6 @@ import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
 import dishbeeLogo from "@/assets/dishbee-logo.png.asset.json";
 import saatheraLogo from "@/assets/saathera-logo.png.asset.json";
-import konneviaLogo from "@/assets/konnevia-logo.png.asset.json";
 import unipathwayLogo from "@/assets/unipathway-logo-v2.png.asset.json";
 import lawquoLogo from "@/assets/lawquo-logo.png.asset.json";
 import traderosLogo from "@/assets/traderos-logo.png.asset.json";
@@ -38,12 +37,19 @@ import canavelleLogo from "@/assets/canavelle-logo.png.asset.json";
 import rangvayaLogo from "@/assets/rangvaya-logo.png.asset.json";
 import oceavelaLogo from "@/assets/oceavela-logo.png.asset.json";
 import savanseaLogo from "@/assets/savansea-logo.png.asset.json";
-import iberavivaLogo from "@/assets/iberaviva-logo.png.asset.json";
 import fiftyroamLogo from "@/assets/fiftyroam-logo.png.asset.json";
 import amityosLogo from "@/assets/amityos-logo.png.asset.json";
 import skillfinchLogo from "@/assets/skillfinch-logo.png.asset.json";
 import dearnextLogo from "@/assets/dearnext-logo.png.asset.json";
 import gableyLogo from "@/assets/gabley-logo.png.asset.json";
+import euralumeLogo from "@/assets/euralume-logo.png.asset.json";
+import flightloungeLogo from "@/assets/flightlounge-logo.png.asset.json";
+import niyyahnoorLogo from "@/assets/niyyahnoor-logo.png.asset.json";
+import travenexaLogo from "@/assets/travenexa-logo.png.asset.json";
+import marelyraLogo from "@/assets/marelyra-logo.png.asset.json";
+import iberavivaLogoV2 from "@/assets/iberaviva-logo-v2.png.asset.json";
+import eventplanrLogoDe from "@/assets/eventplanr-logo-de.png.asset.json";
+import konneviaLogoDe from "@/assets/konnevia-logo-de.png.asset.json";
 
 export const BRAND_LOGOS: Record<string, string> = {
   haccora: haccoraLogo.url,
@@ -64,7 +70,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   zivvouk: zivvoLogo.url,
   dishbee: dishbeeLogo.url,
   saathera: saatheraLogo.url,
-  konnevia: konneviaLogo.url,
+  konnevia: konneviaLogoDe.url,
   unipathway: unipathwayLogo.url,
   "haccora-uk": haccoraUkLogo.url,
   bidlumo: bidlumoLogo.url,
@@ -88,10 +94,16 @@ export const BRAND_LOGOS: Record<string, string> = {
   rangvaya: rangvayaLogo.url,
   oceavela: oceavelaLogo.url,
   savansea: savanseaLogo.url,
-  iberaviva: iberavivaLogo.url,
+  iberaviva: iberavivaLogoV2.url,
   fiftyroam: fiftyroamLogo.url,
   amityos: amityosLogo.url,
   skillfinch: skillfinchLogo.url,
   dearnext: dearnextLogo.url,
   gabley: gableyLogo.url,
+  euralume: euralumeLogo.url,
+  flightlounge: flightloungeLogo.url,
+  niyyahnoor: niyyahnoorLogo.url,
+  travenexa: travenexaLogo.url,
+  marelyra: marelyraLogo.url,
+  eventplanrger: eventplanrLogoDe.url,
 };
