@@ -56,6 +56,7 @@ import niyyahnoorLogo from "@/assets/niyyahnoor-logo.png.asset.json";
 import travenexaLogo from "@/assets/travenexa-logo.png.asset.json";
 import marelyraLogo from "@/assets/marelyra-logo.png.asset.json";
 import adrilumeLogo from "@/assets/adrilume-logo.png.asset.json";
+import nilevellaLogo from "@/assets/nilevella-logo.png.asset.json";
 import iberavivaLogoV2 from "@/assets/iberaviva-logo-v2.png.asset.json";
 import eventplanrLogoDe from "@/assets/eventplanr-logo-de.png.asset.json";
 import eventplanrLogoEn from "@/assets/eventplanr-logo-en.png.asset.json";
@@ -122,6 +123,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   travenexa: travenexaLogo.url,
   marelyra: marelyraLogo.url,
   adrilume: adrilumeLogo.url,
+  nilevella: nilevellaLogo.url,
   qiyavo: qiyavoLogo.url,
   "craftvaro-uk": craftvaroLogoEn.url,
   "craftvaro-de": craftvaroLogoDe.url,
