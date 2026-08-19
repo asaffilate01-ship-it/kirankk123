@@ -3,7 +3,7 @@ import haccoraUkLogo from "@/assets/haccora-logo-en.png.asset.json";
 import bidlumoLogo from "@/assets/bidlumo-logo.png.asset.json";
 import ilmveroLogo from "@/assets/ilmvero-logo-v2.png.asset.json";
 import marktpassLogo from "@/assets/marktpass-logo.png.asset.json";
-import kinderstarsLogo from "@/assets/kinderstars-logo.png.asset.json";
+import kinderstarsLogo from "@/assets/kinderstars-logo-from-project.png.asset.json";
 import viazenoLogo from "@/assets/viazeno-logo-v2.png.asset.json";
 import rettioLogoV2 from "@/assets/rettio-logo-v2.png.asset.json";
 import stellenxpertLogo from "@/assets/stellenxpert-logo.png.asset.json";
