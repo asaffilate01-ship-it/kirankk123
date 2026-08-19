@@ -45,7 +45,7 @@ export function regionOf(b: Brand): Region {
 }
 
 // Full portfolio target: 77 brands, 5 launches per month to month 12.
-export const TARGET_BRAND_COUNT = 86;
+export const TARGET_BRAND_COUNT = 85;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
@@ -3414,110 +3414,6 @@ const BASE_BRANDS: Brand[] = [
       howServed: "Retail investors either buy whole property (six-figure entry, heavy admin), buy REIT units (no asset choice, layered fees), or use single-market fractional platforms like Stake and SmartCrowd in the UAE. Cross-border retail access is essentially unserved.",
       users: "\u224840m retail investors in target markets; fractional platforms serve fewer than 500,000.",
       revenue: "\u2248$280bn cross-border retail property investment; \u2248$3bn/yr addressable in platform fees.",
-    },
-  },
-  {
-    id: "educloud",
-    name: "EDUCLOUD",
-    region: "INT",
-    tagline: "White-label campus OS for training providers",
-    domain: "educloud.io",
-    description: "The international white-label edition of our education operating system: accredited training providers launch a branded campus with admissions, virtual classroom, QA and university progression built in.",
-    market: "\u2248120,000 private training providers globally; \u2248$25bn education-management software market.",
-    audience: "Private colleges, training providers, universities' pathway arms, corporate academies.",
-    color: "#22d3ee",
-    defaultLaunchMonth: 28,
-    defaultInitialUsers: 80,
-    defaultUserGrowth: 0.18,
-    defaultArpu: 399,
-    defaultChurn: 0.015,
-    defaultAddlRevenue: 14000,
-    defaultDirectCost: 11000,
-    reason: "A private college's stack is a student CRM, an LMS, Zoom, a spreadsheet for attendance funding and email for university applications. Regulators (Ofsted, ESFA, AZAV, national ministries) want evidence none of those systems produce.",
-    proposition: "One white-label campus platform: admissions and CRM, LMS and virtual classroom, attendance and funding evidence, QA and IQA workflows, and progression pipelines into partner universities \u2014 branded as the provider's own, priced per campus.",
-    features: [
-      "White-label branded campus and domain",
-      "Admissions CRM with agent portal",
-      "LMS with SCORM and native course authoring",
-      "Virtual classroom with attendance capture",
-      "Funding and attendance evidence packs",
-      "QA, IQA and standardisation workflows",
-      "University progression and partner pipelines",
-      "Student finance and instalment plans",
-      "Certification and transcript issuing",
-      "Multi-campus and multi-language",
-    ],
-    apps: [
-      {
-        name: "EduCloud Campus",
-        kind: "SaaS",
-        purpose: "Admissions, teaching, QA",
-      },
-      {
-        name: "EduCloud Student",
-        kind: "Web",
-        purpose: "Courses, timetable, submissions",
-      },
-      {
-        name: "EduCloud Student",
-        kind: "iOS",
-        purpose: "Mobile learning and attendance",
-      },
-      {
-        name: "EduCloud Agent",
-        kind: "Web",
-        purpose: "Recruitment agent portal",
-      },
-      {
-        name: "EduCloud API",
-        kind: "API",
-        purpose: "Finance, HR and ministry integrations",
-      },
-    ],
-    userTypes: [
-      {
-        type: "Principal",
-        useCase: "Runs admissions, delivery and QA on one platform.",
-      },
-      {
-        type: "Tutor",
-        useCase: "Teaches, marks and evidences attendance in one place.",
-      },
-      {
-        type: "Student",
-        useCase: "Applies, learns and progresses to a partner university.",
-      },
-      {
-        type: "Recruitment agent",
-        useCase: "Tracks applications and commissions.",
-      },
-    ],
-    competitors: [
-      {
-        name: "Canvas / Moodle",
-        strength: "Dominant LMS mindshare and ecosystem",
-        counter: "We are not an LMS \u2014 we are the whole campus: admissions, funding evidence, QA and progression, which Canvas leaves to four other vendors",
-      },
-      {
-        name: "Anthology / Ellucian",
-        strength: "Enterprise SIS depth",
-        counter: "Weeks not years to implement, per-campus pricing an independent provider can afford, and white-labelling so the provider's brand stays front and centre",
-      },
-    ],
-    risks: [
-      {
-        risk: "Long procurement cycles in education",
-        mitigation: "Land with small independent providers and corporate academies; enterprise comes later.",
-      },
-      {
-        risk: "Accreditation-body variation",
-        mitigation: "Evidence packs configured per regulator (Ofsted, ESFA, AZAV, national ministries).",
-      },
-    ],
-    currentMarket: {
-      howServed: "Providers stitch together Moodle or Canvas, a CRM (HubSpot or Salesforce), Zoom, spreadsheets for funding evidence, and email for university applications. Enterprise SIS platforms (Anthology, Ellucian, Tribal) cost six figures and take a year to deploy.",
-      users: "\u2248120,000 private providers and \u224840,000 corporate academies worldwide.",
-      revenue: "\u2248$25bn education-management software market; \u2248$2bn addressable in independent and pathway providers.",
     },
   },
   {
