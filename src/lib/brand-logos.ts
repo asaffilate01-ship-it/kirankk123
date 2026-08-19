@@ -1,7 +1,7 @@
 import haccoraLogo from "@/assets/haccora-logo-de.png.asset.json";
 import haccoraUkLogo from "@/assets/haccora-logo-en.png.asset.json";
 import bidlumoLogo from "@/assets/bidlumo-logo.png.asset.json";
-import ilmveroLogo from "@/assets/ilmvero-logo.png.asset.json";
+import ilmveroLogo from "@/assets/ilmvero-logo-v2.png.asset.json";
 import marktpassLogo from "@/assets/marktpass-logo.png.asset.json";
 import kinderstarsLogo from "@/assets/kinderstars-logo.png.asset.json";
 import viazenoLogo from "@/assets/viazeno-logo-v2.png.asset.json";
@@ -17,7 +17,9 @@ import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
 import beratermarktLogo from "@/assets/beratermarkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
-import dishbeeLogo from "@/assets/dishbee-logo.png.asset.json";
+import dishbeeLogo from "@/assets/dishbee-logo-v2.png.asset.json";
+import craftvaroLogoEn from "@/assets/craftvaro-logo-en.png.asset.json";
+import craftvaroLogoDe from "@/assets/craftvaro-logo-de.png.asset.json";
 import saatheraLogo from "@/assets/saathera-logo.png.asset.json";
 import unipathwayLogo from "@/assets/unipathway-logo-v2.png.asset.json";
 import lawquoLogo from "@/assets/lawquo-logo.png.asset.json";
@@ -106,6 +108,8 @@ export const BRAND_LOGOS: Record<string, string> = {
   niyyahnoor: niyyahnoorLogo.url,
   travenexa: travenexaLogo.url,
   marelyra: marelyraLogo.url,
+  "craftvaro-uk": craftvaroLogoEn.url,
+  "craftvaro-de": craftvaroLogoDe.url,
   eventplanrger: eventplanrLogoDe.url,
   eventplanruk: eventplanrLogoEn.url,
 };
