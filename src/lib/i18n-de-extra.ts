@@ -421,4 +421,140 @@ export const DE_EXTRA: Record<string, string> = {
     "Ca. 240.000 Hochzeiten pro Jahr und ca. 70.000 Eventdienstleister in UK.",
   "≈£14bn event spend; ≈£250m/yr flows to directories and vendor software today.":
     "Ca. 14 Mrd. £ Eventausgaben; ca. 250 Mio. £/Jahr fließen heute an Verzeichnisse und Dienstleister-Software.",
+
+  // AMITYOS (UK) — full German profile
+  "Care that connects. Evidence that speaks for itself.":
+    "Pflege, die verbindet. Nachweise, die für sich sprechen.",
+  "AMITYOS is the complete operating system and commission-free care marketplace for UK social care. One flat subscription per site covers digital care planning, eMAR medication, rostering with electronic call monitoring, incidents and safeguarding, handovers, training and DBS tracking, local-authority and private invoicing, plus role-aware portals for managers, carers, families, commissioners and district nurses. A verified care marketplace connects families and councils with providers and connects providers with vetted bank and agency carers — with no commission, no per-carer licence and no cut of a placement. Built on 14 years of frontline care-operating experience. Live now as a test site at amityos.itechlounge.co.uk; the real domain amityos.co.uk follows.":
+    "AMITYOS ist das komplette Betriebssystem und der provisionsfreie Pflegemarktplatz für die britische Sozialpflege. Ein pauschales Abo pro Standort umfasst digitale Pflegeplanung, eMAR-Medikation, Dienstplanung mit elektronischer Einsatzerfassung, Vorfälle und Schutzmeldungen, Übergaben, Schulungs- und DBS-Überwachung, Abrechnung an Kommunen und Privatzahler sowie rollenbasierte Portale für Leitungen, Pflegekräfte, Angehörige, Kostenträger und Pflegefachkräfte. Ein verifizierter Pflegemarktplatz verbindet Familien und Kommunen mit Anbietern und Anbieter mit geprüften Springer- und Zeitarbeitskräften — ohne Provision, ohne Lizenz pro Pflegekraft und ohne Anteil an einer Vermittlung. Aufgebaut auf 14 Jahren operativer Erfahrung in der Pflege. Aktuell live als Testseite unter amityos.itechlounge.co.uk; die echte Domain amityos.co.uk folgt.",
+  "≈18,500 CQC-regulated adult social care providers in England; ≈£1.1bn care-software market plus ≈£4.5bn a year spent on agency staffing and introduction fees.":
+    "Ca. 18.500 CQC-regulierte Pflegeanbieter in England; ca. 1,1 Mrd. £ Markt für Pflegesoftware plus ca. 4,5 Mrd. £ pro Jahr für Zeitarbeit und Vermittlungsgebühren.",
+  "Domiciliary agencies, care homes, supported living and learning-disability providers, registered managers, care workers, bank and agency staff, families, local-authority commissioners, district nurses.":
+    "Ambulante Pflegedienste, Pflegeheime, betreutes Wohnen und Anbieter für Menschen mit Lernbehinderung, verantwortliche Leitungen, Pflegekräfte, Springer- und Zeitarbeitskräfte, Angehörige, kommunale Kostenträger, Pflegefachkräfte.",
+  "Providers fail CQC inspections on evidence, not on care. A typical agency runs a care-planning system, a separate rostering tool, a paper MAR file, a spreadsheet for training and DBS expiry, a phone-and-WhatsApp handover, and an accounts package that never matches the actual visits delivered. On top of that, every unfilled shift is bought from an agency at 30-60% margin and every private enquiry arrives through a directory that charges for the introduction. AMITYOS exists so the evidence is captured as care happens, the rota fills itself from vetted staff at no commission, and one flat fee per site replaces the whole stack.":
+    "Anbieter scheitern bei CQC-Prüfungen am Nachweis, nicht an der Pflege. Ein typischer Dienst nutzt ein Pflegeplanungssystem, ein separates Dienstplan-Tool, eine Papier-MAR-Akte, eine Tabelle für Schulungs- und DBS-Fristen, eine Übergabe per Telefon und WhatsApp und eine Buchhaltung, die nie zu den tatsächlich erbrachten Einsätzen passt. Dazu wird jede offene Schicht bei einer Agentur mit 30-60 % Marge eingekauft und jede Privatanfrage kommt über ein Verzeichnis, das für die Vermittlung Geld nimmt. AMITYOS sorgt dafür, dass Nachweise entstehen, während Pflege geleistet wird, dass sich der Dienstplan provisionsfrei aus geprüften Kräften füllt und dass eine Pauschale pro Standort den gesamten Software-Stack ersetzt.",
+  "One flat fee per site, no per-carer licence, no commission, 30 days free. Every plan includes the full care record, eMAR, rostering with electronic call monitoring, incidents and safeguarding, family portal, training matrix and invoicing — domiciliary, residential and supported living in the same platform. Full service: we migrate your care plans from paper, Nourish or Access, configure your assessment templates and KLOE evidence packs, train your team and stay on support. The marketplace connects families, councils and providers, and providers with bank and agency carers, and we take nothing from either side of the placement.":
+    "Eine Pauschale pro Standort, keine Lizenz pro Pflegekraft, keine Provision, 30 Tage kostenlos. Jeder Plan enthält die vollständige Pflegedokumentation, eMAR, Dienstplanung mit elektronischer Einsatzerfassung, Vorfälle und Schutzmeldungen, Angehörigenportal, Schulungsmatrix und Abrechnung — ambulant, stationär und betreutes Wohnen in einer Plattform. Full Service: Wir migrieren Pflegepläne von Papier, Nourish oder Access, konfigurieren Assessment-Vorlagen und KLOE-Nachweispakete, schulen das Team und bleiben im Support. Der Marktplatz verbindet Familien, Kommunen und Anbieter sowie Anbieter mit Springer- und Zeitarbeitskräften — und wir nehmen von keiner Seite eine Vermittlungsgebühr.",
+  "Commission-free care marketplace: verified providers for families and councils, and vetted bank and agency carers for providers, with no introduction or placement fee":
+    "Provisionsfreier Pflegemarktplatz: verifizierte Anbieter für Familien und Kommunen sowie geprüfte Springer- und Zeitarbeitskräfte für Anbieter — ohne Vermittlungs- oder Platzierungsgebühr",
+  "Digital care planning: person-centred assessments, risk assessments, reviews and daily notes with photo and voice capture":
+    "Digitale Pflegeplanung: personenzentrierte Assessments, Risikobewertungen, Reviews und Tagesberichte mit Foto- und Spracherfassung",
+  "eMAR medication administration with PRN, controlled drugs, missed-dose alerts and pharmacy stock reconciliation":
+    "eMAR-Medikamentengabe mit Bedarfsmedikation, Betäubungsmitteln, Warnungen bei ausgelassenen Dosen und Abgleich der Apothekenbestände",
+  "Rostering and scheduling with travel time, continuity of carer, skills matching, working-time and pay-rate rules":
+    "Dienst- und Einsatzplanung mit Wegezeiten, Betreuungskontinuität, Qualifikationsabgleich, Arbeitszeit- und Vergütungsregeln",
+  "Electronic call monitoring: geo, NFC and timestamp visit verification with real-time late and missed-visit alerts":
+    "Elektronische Einsatzerfassung: Verifizierung per Geodaten, NFC und Zeitstempel mit Echtzeitwarnungen bei Verspätungen und ausgefallenen Einsätzen",
+  "Incidents, accidents, safeguarding, body maps and duty-of-candour workflows with escalation":
+    "Vorfälle, Unfälle, Schutzmeldungen, Körperschemata und Transparenzpflicht-Workflows mit Eskalation",
+  "Shift handover boards, alerts and open-task lists across shifts and sites":
+    "Übergabeboards, Warnungen und offene Aufgabenlisten über Schichten und Standorte hinweg",
+  "CQC evidence packs mapped to the single assessment framework and quality statements, generated on demand":
+    "CQC-Nachweispakete, zugeordnet zum Single Assessment Framework und den Qualitätsaussagen, auf Abruf erzeugt",
+  "Family and advocate portal: visit history, notes, medication summary, consent and secure messaging":
+    "Portal für Angehörige und Betreuer: Einsatzhistorie, Berichte, Medikationsübersicht, Einwilligungen und sichere Nachrichten",
+  "Staff compliance hub: training matrix, supervisions, appraisals, DBS, right-to-work and vaccination expiry alerts":
+    "Compliance-Zentrale für Personal: Schulungsmatrix, Supervisionen, Mitarbeitergespräche, Führungszeugnisse, Arbeitserlaubnis und Impffristen",
+  "Care CRM: enquiries, assessments, placements, funding source, capacity and occupancy pipeline":
+    "Pflege-CRM: Anfragen, Assessments, Platzierungen, Kostenträger, Kapazitäts- und Belegungspipeline",
+  "Invoicing and payroll exports: local authority, ICB, direct payment and private billing reconciled against verified visits":
+    "Abrechnung und Lohnexporte: Kommune, ICB, Direktzahlung und Privatabrechnung, abgestimmt auf verifizierte Einsätze",
+  "Nurse and clinical tools: wounds, fluids, food charts, seizures, epilepsy, diabetes and NEWS2 observations":
+    "Pflegefachliche Werkzeuge: Wunden, Flüssigkeits- und Ernährungsprotokolle, Anfälle, Epilepsie, Diabetes und NEWS2-Vitalwerte",
+  "Offline-first mobile apps for carers in poor-signal homes, with sync on reconnect":
+    "Offline-fähige Mobile-Apps für Einsätze mit schlechtem Empfang, mit Synchronisierung bei erneuter Verbindung",
+  "AI Copilot: care-plan drafting, note quality checks, trend and deterioration flags and inspection readiness scoring":
+    "KI-Copilot: Entwürfe für Pflegepläne, Qualitätsprüfung von Berichten, Trend- und Verschlechterungswarnungen und Prüfbereitschafts-Score",
+  "Security and assurance: NHS DSPT, DCB0129 clinical safety case, row-level security per provider, MFA and UK GDPR privacy centre":
+    "Sicherheit und Nachweise: NHS DSPT, klinischer Sicherheitsnachweis DCB0129, Row-Level-Security pro Anbieter, MFA und UK-DSGVO-Datenschutzzentrum",
+  "Open API and white-label: integrations with GP Connect, NHS Mail, payroll, finance and council brokerage systems":
+    "Offene API und White-Label: Integrationen mit GP Connect, NHS Mail, Lohn-, Finanz- und kommunalen Vermittlungssystemen",
+  "Starter — £99/mo per site: up to 20 people supported, unlimited carer seats, care plans, eMAR, rostering, call monitoring, family portal, email support.":
+    "Starter — 99 £/Monat pro Standort: bis zu 20 betreute Personen, unbegrenzte Pflegekraft-Zugänge, Pflegepläne, eMAR, Dienstplanung, Einsatzerfassung, Angehörigenportal, E-Mail-Support.",
+  "Growth — £229/mo per site: up to 80 people supported, evidence packs, compliance hub, invoicing and payroll exports, clinical charts, priority support.":
+    "Growth — 229 £/Monat pro Standort: bis zu 80 betreute Personen, Nachweispakete, Compliance-Zentrale, Abrechnung und Lohnexporte, klinische Protokolle, Priority-Support.",
+  "Unlimited — £449/mo per site: unlimited people supported, multi-site oversight, custom templates, dedicated account manager and onboarding.":
+    "Unlimited — 449 £/Monat pro Standort: unbegrenzt betreute Personen, standortübergreifende Steuerung, eigene Vorlagen, persönlicher Ansprechpartner und Onboarding.",
+  "Group — from £1,499/mo: 10+ sites, group dashboards, SSO, data warehouse export and API access.":
+    "Group — ab 1.499 £/Monat: 10+ Standorte, Gruppen-Dashboards, SSO, Data-Warehouse-Export und API-Zugang.",
+  "Add-ons per site: AI Copilot £49, clinical nursing module £39, agency and bank staff marketplace £29, SMS and WhatsApp alerts £19, multi-language £15.":
+    "Add-ons pro Standort: KI-Copilot 49 £, klinisches Pflegemodul 39 £, Marktplatz für Zeitarbeit und Springer 29 £, SMS- und WhatsApp-Benachrichtigungen 19 £, Mehrsprachigkeit 15 £.",
+  "Unlimited carer seats on every plan — you never pay again for staff turnover.":
+    "Unbegrenzte Pflegekraft-Zugänge in jedem Plan — für Personalwechsel zahlen Sie nie erneut.",
+  "30 days free, no card required; paper, Nourish, Access and Person Centred Software migration included.":
+    "30 Tage kostenlos, ohne Kreditkarte; Migration von Papier, Nourish, Access und Person Centred Software inklusive.",
+  "Zero commission: no fee on marketplace enquiries, no cut of a bank or agency placement, no percentage of care fees.":
+    "Null Provision: keine Gebühr für Marktplatzanfragen, kein Anteil an Springer- oder Zeitarbeitsvermittlungen, kein Prozentsatz der Pflegeentgelte.",
+  "Core provider workspace: care plans, rostering, eMAR oversight, compliance, invoicing and reporting.":
+    "Zentraler Arbeitsbereich des Anbieters: Pflegepläne, Dienstplanung, eMAR-Überwachung, Compliance, Abrechnung und Reporting.",
+  "Commission-free marketplace: provider profiles for families and councils, plus vetted bank and agency shift matching.":
+    "Provisionsfreier Marktplatz: Anbieterprofile für Familien und Kommunen plus Schichtvermittlung geprüfter Springer- und Zeitarbeitskräfte.",
+  "Offline-first point-of-care app: visits, notes, eMAR, body maps, incidents and handover.":
+    "Offline-fähige App am Ort der Pflege: Einsätze, Berichte, eMAR, Körperschemata, Vorfälle und Übergabe.",
+  "Same point-of-care app on Android, with NFC and geo visit verification.":
+    "Dieselbe App am Ort der Pflege für Android, mit NFC- und Geo-Einsatzverifizierung.",
+  "Family and advocate portal: visit history, notes, medication summary and secure messaging.":
+    "Portal für Angehörige und Betreuer: Einsatzhistorie, Berichte, Medikationsübersicht und sichere Nachrichten.",
+  "Group dashboards, SSO, council brokerage, GP Connect, payroll and finance integrations.":
+    "Gruppen-Dashboards, SSO, kommunale Vermittlung, GP Connect, Lohn- und Finanzintegrationen.",
+  "Registered manager": "Verantwortliche Pflegeleitung",
+  "Runs the rota, evidences compliance and walks into inspection with a KLOE-mapped evidence pack already generated.":
+    "Steuert den Dienstplan, belegt Compliance und geht mit einem bereits erzeugten, KLOE-zugeordneten Nachweispaket in die Prüfung.",
+  "Care worker": "Pflegekraft",
+  "Records visits, notes and medication on the phone, works offline and reads the handover before the first call.":
+    "Dokumentiert Einsätze, Berichte und Medikation am Smartphone, arbeitet offline und liest die Übergabe vor dem ersten Einsatz.",
+  "Bank / agency carer": "Springer- / Zeitarbeitskraft",
+  "Picks up verified open shifts from the marketplace with no agency margin taken out of the rate.":
+    "Übernimmt verifizierte offene Schichten über den Marktplatz, ohne dass eine Agenturmarge vom Stundensatz abgezogen wird.",
+  "Family member or advocate": "Angehörige oder Betreuer",
+  "Sees that mum's visit happened, what changed and what medication was given, and messages the team securely.":
+    "Sieht, dass der Einsatz stattgefunden hat, was sich verändert hat und welche Medikation gegeben wurde, und schreibt dem Team sicher.",
+  "Local-authority commissioner": "Kommunaler Kostenträger",
+  "Finds capacity through the marketplace and receives auditable invoices reconciled to verified visits.":
+    "Findet Kapazitäten über den Marktplatz und erhält prüffähige Rechnungen, abgestimmt auf verifizierte Einsätze.",
+  "Nurse / clinical lead": "Pflegefachkraft / klinische Leitung",
+  "Tracks wounds, observations, fluids and deterioration trends across the caseload.":
+    "Verfolgt Wunden, Vitalwerte, Flüssigkeitsbilanz und Verschlechterungstrends über alle betreuten Personen.",
+  "Compares site quality and occupancy and cross-sells sister brands such as SKILLFINCH, RECOVRABLE and HMO FLOW.":
+    "Vergleicht Qualität und Belegung der Standorte und vermarktet Schwestermarken wie SKILLFINCH, RECOVRABLE und HMO FLOW.",
+  "Deep CQC alignment, large installed base and long-term contracts":
+    "Enge CQC-Ausrichtung, große installierte Basis und langfristige Verträge",
+  "Flat fee per site with unlimited carer seats instead of £4-£9 per person per month plus a separate rostering licence — typically 40-60% lower total cost, with free migration and no multi-year lock-in":
+    "Pauschale pro Standort mit unbegrenzten Pflegekraft-Zugängen statt 4-9 £ pro Person und Monat plus separater Dienstplanlizenz — typischerweise 40-60 % geringere Gesamtkosten, mit kostenloser Migration und ohne mehrjährige Bindung",
+  "Modern domiciliary product, good mobile app and funding":
+    "Modernes Produkt für ambulante Pflege, gute Mobile-App und Finanzierung",
+  "Operator-built by a team that ran care services for 14 years, and domiciliary, residential and supported living live in the same platform with clinical charts — one system as a provider grows, not a migration":
+    "Von Praktikern gebaut, die 14 Jahre Pflegedienste betrieben haben; ambulant, stationär und betreutes Wohnen liegen mit klinischen Protokollen in einer Plattform — ein System beim Wachsen des Anbieters statt einer Migration",
+  "Fast access to bank and agency carers": "Schneller Zugang zu Springer- und Zeitarbeitskräften",
+  "Our marketplace takes zero commission on a shift or placement: the carer keeps the full rate and the provider avoids a 30-60% agency margin, because the software subscription already pays for the platform":
+    "Unser Marktplatz nimmt null Provision auf Schichten oder Vermittlungen: Die Pflegekraft behält den vollen Satz und der Anbieter spart 30-60 % Agenturmarge, weil das Software-Abo die Plattform bereits finanziert",
+  "Consumer traffic and review credibility for family enquiries":
+    "Endkundenreichweite und Bewertungsvertrauen bei Familienanfragen",
+  "Provider profiles and family enquiries are free and included in the subscription, with enquiries landing straight in the care CRM instead of being sold back as paid leads":
+    "Anbieterprofile und Familienanfragen sind kostenlos im Abo enthalten; Anfragen landen direkt im Pflege-CRM statt als bezahlte Leads zurückverkauft zu werden",
+  "Paper files, spreadsheets and WhatsApp": "Papierakten, Tabellen und WhatsApp",
+  "Free, familiar and requires no training": "Kostenlos, vertraut und ohne Schulungsaufwand",
+  "Same speed at the point of care with offline mobile capture, automatic expiry alerts and an auditable record — and inspection evidence produced in minutes instead of a fortnight of file-pulling":
+    "Gleiches Tempo am Ort der Pflege mit Offline-Erfassung, automatischen Fristwarnungen und prüffähiger Dokumentation — Prüfnachweise in Minuten statt zwei Wochen Aktensuche",
+  "Local-authority funding squeeze on providers": "Finanzierungsdruck der Kommunen auf Anbieter",
+  "Small-provider tier from £99 per site; ROI framed against avoided agency margin, admin hours and inspection downgrades rather than a discretionary IT spend.":
+    "Tarif für kleine Anbieter ab 99 £ pro Standort; der ROI wird an vermiedener Agenturmarge, Verwaltungsstunden und Prüfabwertungen gemessen statt als freiwillige IT-Ausgabe.",
+  "Clinical safety and medication liability": "Klinische Sicherheit und Medikationshaftung",
+  "DCB0129 clinical safety case with a named clinical safety officer, eMAR double-signing and controlled-drug workflows, NHS DSPT and an ISO 27001 roadmap.":
+    "Klinischer Sicherheitsnachweis DCB0129 mit benanntem Clinical Safety Officer, eMAR-Doppelunterschrift und BtM-Workflows, NHS DSPT und ISO-27001-Roadmap.",
+  "Providers locked into incumbent contracts": "Anbieter sind in Verträgen der Platzhirsche gebunden",
+  "Free parallel run during the 30-day trial, migration handled by our team and go-live aligned to contract expiry.":
+    "Kostenloser Parallelbetrieb während der 30-tägigen Testphase, Migration durch unser Team und Go-live abgestimmt auf das Vertragsende.",
+  "Carer adoption and digital confidence": "Akzeptanz und digitale Sicherheit der Pflegekräfte",
+  "Offline-first app designed for one-handed use, multi-language interface for international recruits and free onboarding sessions with SKILLFINCH training bundled.":
+    "Offline-fähige App für Einhandbedienung, mehrsprachige Oberfläche für internationale Fachkräfte und kostenlose Onboarding-Sessions inklusive SKILLFINCH-Schulungen.",
+  "Data-protection exposure on special-category data": "Datenschutzrisiko bei besonderen Kategorien personenbezogener Daten",
+  "Row-level security per provider, role-based access, MFA on sensitive actions, UK data residency, DPIAs and a UK GDPR privacy centre.":
+    "Row-Level-Security pro Anbieter, rollenbasierter Zugriff, MFA bei sensiblen Aktionen, Datenhaltung in UK, Datenschutz-Folgenabschätzungen und UK-DSGVO-Datenschutzzentrum.",
+  "Roughly a third of providers still run paper care plans and MAR charts. Digitised providers pay Access, Nourish, Person Centred Software or Birdie £4-£9 per person supported per month, plus a separate rostering licence, a training spreadsheet, a paper DBS file and an accounts package that is reconciled by hand. Unfilled shifts are bought from staffing agencies at 30-60% margin, and private family enquiries are bought back from directories as paid leads.":
+    "Etwa ein Drittel der Anbieter führt Pflegepläne und MAR-Blätter weiterhin auf Papier. Digitalisierte Anbieter zahlen Access, Nourish, Person Centred Software oder Birdie 4-9 £ pro betreuter Person und Monat, dazu eine separate Dienstplanlizenz, eine Schulungstabelle, eine Papier-DBS-Akte und eine Buchhaltung, die manuell abgeglichen wird. Offene Schichten werden bei Zeitarbeitsfirmen mit 30-60 % Marge eingekauft, und private Familienanfragen werden von Verzeichnissen als bezahlte Leads zurückgekauft.",
+  "≈18,500 CQC-regulated providers supporting ≈1.5m people with a workforce of ≈1.7m, of whom a large share still record care on paper.":
+    "Ca. 18.500 CQC-regulierte Anbieter versorgen ca. 1,5 Mio. Menschen mit ca. 1,7 Mio. Beschäftigten, von denen ein großer Teil noch auf Papier dokumentiert.",
+  "≈£1.1bn UK care-software market growing with the NHS Digitising Social Care fund, on top of ≈£4.5bn a year of agency staffing spend and tens of millions in directory lead fees that a flat, commission-free subscription removes.":
+    "Ca. 1,1 Mrd. £ Markt für Pflegesoftware in UK, wachsend durch den NHS-Fonds zur Digitalisierung der Sozialpflege, dazu ca. 4,5 Mrd. £ Zeitarbeitsausgaben pro Jahr und zweistellige Millionenbeträge an Verzeichnis-Leadgebühren, die ein pauschales, provisionsfreies Abo entfallen lässt.",
 };
