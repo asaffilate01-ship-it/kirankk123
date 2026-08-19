@@ -10,6 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UnlockRouteImport } from './routes/unlock'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ImprintRouteImport } from './routes/imprint'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BrandsBrandIdRouteImport } from './routes/brands.$brandId'
 import { Route as ApiPublicUnlockRouteImport } from './routes/api/public/unlock'
@@ -17,6 +21,26 @@ import { Route as ApiPublicUnlockRouteImport } from './routes/api/public/unlock'
 const UnlockRoute = UnlockRouteImport.update({
   id: '/unlock',
   path: '/unlock',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImprintRoute = ImprintRouteImport.update({
+  id: '/imprint',
+  path: '/imprint',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -37,12 +61,20 @@ const ApiPublicUnlockRoute = ApiPublicUnlockRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cookies': typeof CookiesRoute
+  '/imprint': typeof ImprintRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/unlock': typeof UnlockRoute
   '/brands/$brandId': typeof BrandsBrandIdRoute
   '/api/public/unlock': typeof ApiPublicUnlockRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cookies': typeof CookiesRoute
+  '/imprint': typeof ImprintRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/unlock': typeof UnlockRoute
   '/brands/$brandId': typeof BrandsBrandIdRoute
   '/api/public/unlock': typeof ApiPublicUnlockRoute
@@ -50,20 +82,53 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cookies': typeof CookiesRoute
+  '/imprint': typeof ImprintRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/unlock': typeof UnlockRoute
   '/brands/$brandId': typeof BrandsBrandIdRoute
   '/api/public/unlock': typeof ApiPublicUnlockRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/unlock' | '/brands/$brandId' | '/api/public/unlock'
+  fullPaths:
+    | '/'
+    | '/cookies'
+    | '/imprint'
+    | '/privacy'
+    | '/terms'
+    | '/unlock'
+    | '/brands/$brandId'
+    | '/api/public/unlock'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/unlock' | '/brands/$brandId' | '/api/public/unlock'
-  id: '__root__' | '/' | '/unlock' | '/brands/$brandId' | '/api/public/unlock'
+  to:
+    | '/'
+    | '/cookies'
+    | '/imprint'
+    | '/privacy'
+    | '/terms'
+    | '/unlock'
+    | '/brands/$brandId'
+    | '/api/public/unlock'
+  id:
+    | '__root__'
+    | '/'
+    | '/cookies'
+    | '/imprint'
+    | '/privacy'
+    | '/terms'
+    | '/unlock'
+    | '/brands/$brandId'
+    | '/api/public/unlock'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CookiesRoute: typeof CookiesRoute
+  ImprintRoute: typeof ImprintRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
   UnlockRoute: typeof UnlockRoute
   BrandsBrandIdRoute: typeof BrandsBrandIdRoute
   ApiPublicUnlockRoute: typeof ApiPublicUnlockRoute
@@ -76,6 +141,34 @@ declare module '@tanstack/react-router' {
       path: '/unlock'
       fullPath: '/unlock'
       preLoaderRoute: typeof UnlockRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/imprint': {
+      id: '/imprint'
+      path: '/imprint'
+      fullPath: '/imprint'
+      preLoaderRoute: typeof ImprintRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -104,6 +197,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CookiesRoute: CookiesRoute,
+  ImprintRoute: ImprintRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
   UnlockRoute: UnlockRoute,
   BrandsBrandIdRoute: BrandsBrandIdRoute,
   ApiPublicUnlockRoute: ApiPublicUnlockRoute,

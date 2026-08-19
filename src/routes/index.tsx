@@ -11,6 +11,7 @@ import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import { BrandLogo } from "@/components/BrandLogo";
 import { TARGET_BRAND_COUNT } from "@/lib/brands";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { SiteFooter } from "@/components/SiteFooter";
 import { lockSite } from "@/lib/gate.functions";
 import { GateGuard } from "@/components/GateGuard";
 import { clearGateToken } from "@/lib/gate-client";
@@ -124,6 +125,10 @@ function Index() {
           <TabsContent value="charts"><ChartsPanel /></TabsContent>
         </Tabs>
       </main>
+
+      <div className="pb-[calc(4.5rem+env(safe-area-inset-bottom))] md:pb-0">
+        <SiteFooter />
+      </div>
 
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
         <div className="grid grid-cols-5">
