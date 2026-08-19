@@ -26,6 +26,7 @@ import craftvaroLogoEn from "@/assets/craftvaro-logo-en.png.asset.json";
 import craftvaroLogoDe from "@/assets/craftvaro-logo-de.png.asset.json";
 import saatheraLogo from "@/assets/saathera-logo.png.asset.json";
 import fleetsoraLogo from "@/assets/fleetsora-logo.png.asset.json";
+import immoviqLogo from "@/assets/immoviq-logo.png.asset.json";
 import unipathwayLogo from "@/assets/unipathway-logo-v2.png.asset.json";
 import lawquoLogo from "@/assets/lawquo-logo.png.asset.json";
 import traderosLogo from "@/assets/traderos-logo.png.asset.json";
@@ -83,6 +84,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   dishbee: dishbeeLogo.url,
   saathera: saatheraLogo.url,
   fleetsora: fleetsoraLogo.url,
+  immoviq: immoviqLogo.url,
   konnevia: konneviaLogoDe.url,
   unipathway: unipathwayLogo.url,
   "haccora-uk": haccoraUkLogo.url,
