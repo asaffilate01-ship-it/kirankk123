@@ -10,7 +10,7 @@ import stellenxpertLogo from "@/assets/stellenxpert-logo.png.asset.json";
 import xpertjobsLogo from "@/assets/xpertjobs-logo.png.asset.json";
 import uzvoyaLogo from "@/assets/uzvoya-logo.png.asset.json";
 import baytcircleLogo from "@/assets/baytcircle-logo.png.asset.json";
-import tareevoLogo from "@/assets/tareevo-logo-v2.png.asset.json";
+import tareevoLogo from "@/assets/tareevo-logo-v3.png.asset.json";
 import taxnuviaLogo from "@/assets/taxnuvia-logo.png.asset.json";
 import beistandplusLogo from "@/assets/beistandplus-logo.png.asset.json";
 import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
