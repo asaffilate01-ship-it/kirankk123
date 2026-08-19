@@ -121,6 +121,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   niyyahnoor: niyyahnoorLogo.url,
   travenexa: travenexaLogo.url,
   marelyra: marelyraLogo.url,
+  adrilume: adrilumeLogo.url,
   qiyavo: qiyavoLogo.url,
   "craftvaro-uk": craftvaroLogoEn.url,
   "craftvaro-de": craftvaroLogoDe.url,
