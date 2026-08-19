@@ -15,6 +15,7 @@ import taxnuviaLogo from "@/assets/taxnuvia-logo.png.asset.json";
 import beistandplusLogo from "@/assets/beistandplus-logo.png.asset.json";
 import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
 import beratermarktLogo from "@/assets/beratemarkt-logo-v2.png.asset.json";
+import schonovaLogo from "@/assets/schonova-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
 import dishbeeLogo from "@/assets/dishbee-logo-v2.png.asset.json";
@@ -69,6 +70,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   beinstandplus: beistandplusLogo.url,
   stylesyncuk: stylesyncLogo.url,
   beratermarkt: beratermarktLogo.url,
+  stylesyncger: schonovaLogo.url,
   traindirekt: traindirektLogo.url,
   zivvo: zivvoLogo.url,
   zivvouk: zivvoLogo.url,
