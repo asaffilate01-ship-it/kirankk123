@@ -3,6 +3,77 @@ import type { Brand } from "./brands";
 
 export const EXTRA_BRANDS: Brand[] = [
   {
+    id: "cirqiva",
+    name: "CIRQIVA",
+    region: "UK",
+    domain: "cirqiva.co.uk",
+    tagline: "Waste sorted. Value recovered.",
+    description:
+      "A full-service, commission-free waste and recycling marketplace plus operations platform for the UK. Businesses, landlords, builders and households book skips, bins, wait-and-load, clearances and recycling collections at published prices; licensed carriers and recycling facilities receive jobs, routes and digital duty-of-care paperwork in one app. Test domain: cirqiva.itechlounge.co.uk.",
+    market: "≈£12bn UK waste-management market; ≈£1.5bn of brokered commercial collections and skip hire is addressable.",
+    audience: "SMEs, hospitality and retail chains, construction firms, landlords and letting agents, councils, licensed waste carriers and recycling facilities.",
+    color: "#22c55e",
+    defaultLaunchMonth: 14,
+    defaultInitialUsers: 90,
+    defaultUserGrowth: 0.13,
+    defaultArpu: 79,
+    defaultChurn: 0.02,
+    defaultAddlRevenue: 4000,
+    defaultDirectCost: 3500,
+    reason:
+      "UK waste is bought through brokers who take 20–35% of every job, hide gate fees and rebates, and leave the customer with paper transfer notes and no proof of where material went. Carriers lose margin and never own the customer relationship. CIRQIVA removes the broker: the customer pays the carrier's published price, the carrier keeps the job, and CIRQIVA earns a flat SaaS subscription instead of commission.",
+    proposition:
+      "Zero commission, ever. Customers see live availability and all-in prices for skips, bins, roll-on-roll-off, wait-and-load, hazardous and WEEE collections, book in under two minutes, and get digital waste transfer notes, weighbridge tickets and recycling rates automatically. Carriers pay a flat monthly platform fee for the marketplace, CRM, routing, ANPR/weighbridge capture and compliance pack — no per-job cut.",
+    features: [
+      "Commission-free marketplace: carriers publish their own prices and keep 100% of the job value",
+      "Instant quoting by postcode, waste stream, container size and access constraints",
+      "Licence and permit verification (Environment Agency carrier licence, permits, insurance) before a carrier can trade",
+      "Digital duty of care: waste transfer notes, consignment notes, EWC codes and 2-year archive",
+      "Weighbridge, tonnage and recycling-rate capture with per-site diversion-from-landfill reporting",
+      "Route optimisation, driver app with ePOD, photos and contamination flags",
+      "Recurring bin schedules, missed-collection SLAs and automatic credits",
+      "Built-in CRM: leads, quotes, contracts, renewals and multi-site accounts",
+      "Rebate transparency on recovered material (paper, metals, cardboard, WEEE)",
+      "Stripe and Direct Debit billing, consolidated multi-site invoices, Xero/Sage export",
+      "ESG dashboard and exportable Scope 3 / recycling reports for tenders",
+      "Open API and white-label portal for facilities-management partners",
+    ],
+    apps: [
+      { name: "CIRQIVA Marketplace", kind: "Web", purpose: "Customer-facing booking, live pricing, availability and repeat orders." },
+      { name: "CIRQIVA Operations SaaS", kind: "SaaS", purpose: "Carrier and facility back office: jobs, routes, containers, compliance, invoicing." },
+      { name: "CIRQIVA CRM", kind: "SaaS", purpose: "Pipeline, quotes, contracts, renewals and multi-site account management." },
+      { name: "CIRQIVA Driver", kind: "Android", purpose: "Run sheets, navigation, ePOD, photos, weights and contamination reporting." },
+      { name: "CIRQIVA Customer App", kind: "iOS", purpose: "Book collections, track vehicles, download transfer notes and ESG reports." },
+      { name: "CIRQIVA API & Admin", kind: "API", purpose: "FM partners, weighbridge and ANPR integrations, group reporting and rebate reconciliation." },
+    ],
+    userTypes: [
+      { type: "SME / hospitality site", useCase: "Sets up recurring general-waste, food and dry-mixed-recycling collections at a published price with digital duty-of-care records." },
+      { type: "Construction / trade", useCase: "Books skips, grab and wait-and-load at short notice with permit handling and tonnage evidence." },
+      { type: "Landlord / letting agent", useCase: "Orders clearances and bulky-waste removals across a portfolio with per-property billing." },
+      { type: "Licensed waste carrier", useCase: "Wins local demand without paying broker commission, and runs routing, ePOD and invoicing on one flat fee." },
+      { type: "Recycling facility / MRF", useCase: "Publishes gate fees and rebates, receives inbound loads and reports material recovery." },
+      { type: "Multi-site / FM buyer", useCase: "Consolidates all sites onto one contract, one invoice and one ESG dashboard for tenders." },
+    ],
+    competitors: [
+      { name: "Biffa / Veolia / Suez", strength: "National fleets, long contracts and huge infrastructure", counter: "No 3–5 year lock-in, no rate-rise clauses and transparent all-in pricing; local carriers deliver the same service with better SLAs at lower cost" },
+      { name: "Broker platforms (AnyJunk, Waste Managed, BusinessWaste.co.uk)", strength: "Heavy paid search and national coverage", counter: "We take zero commission — customers pay carrier prices directly and carriers get software instead of a 20–35% cut" },
+      { name: "Skip-hire comparison sites", strength: "Cheap top-of-funnel skip leads", counter: "Full-service scope beyond skips (bins, food, WEEE, hazardous, clearances) plus compliance, CRM and ESG reporting the comparison sites do not offer" },
+      { name: "Legacy waste software (AMCS, Isuzu/Weighsoft)", strength: "Deep enterprise features for large operators", counter: "Modern, mobile-first, self-serve onboarding at SME pricing — and it comes with demand attached, not just software" },
+    ],
+    risks: [
+      { risk: "Carrier supply density in early postcodes", mitigation: "Launch region by region with a signed anchor carrier per area before opening customer demand; free platform tier for the first carriers." },
+      { risk: "Environmental compliance and fly-tipping liability", mitigation: "Licence, permit and insurance verification at onboarding, automated EA checks, digital transfer notes on every job and immediate suspension on breach." },
+      { risk: "Price undercutting by national incumbents", mitigation: "Flat-fee model keeps carrier prices structurally lower than commissioned brokers; value defended on SLAs, evidence and ESG reporting rather than price alone." },
+      { risk: "Gate-fee and commodity-price volatility", mitigation: "Prices refreshed by carriers and facilities, indexed rebate schedules and clear surcharge rules shown before checkout." },
+    ],
+    currentMarket: {
+      howServed:
+        "Most UK businesses buy waste services either on multi-year contracts from a handful of national operators with annual rate-rise clauses, or through brokers who resell local carriers at a 20–35% mark-up. Paperwork is still largely paper transfer notes, and recycling performance is rarely evidenced.",
+      users: "≈2.5m UK business premises requiring commercial waste collection, plus ≈1m annual skip and clearance jobs from trades and households.",
+      revenue: "≈£12bn annual UK waste and recycling spend, with ≈£1.5bn passing through brokers and comparison sites each year.",
+    },
+  },
+  {
     id: "docuvera-de",
     name: "DOCUVERA",
     region: "DE",
