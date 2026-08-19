@@ -1588,9 +1588,9 @@ export const EXTRA_BRANDS: Brand[] = [
     name: "FLIGHTLOUNGE",
     region: "INT",
     domain: "flightlounge.com",
-    tagline: "Where every journey takes off. — flight, train & coach booking",
+    tagline: "Where every journey takes off.",
     description:
-      "Multi-modal transport booking platform covering flights, rail and coach, plus airport transfers and car hire, with fare search, enquiry-based reservations and a full back office for leads, payments, commissions and supplier settlement.",
+      "FlightLounge is a worldwide flight, train and coach booking platform with AI-assisted search, a full booking engine and a licensable travel distribution SaaS. It covers multi-modal transport, airport transfers and car hire, with fare search, enquiry-based reservations, vouchers, webhooks and commission reconciliation for both travellers and partner agencies.",
     market: "≈€700bn global air travel distribution; €120bn European rail and coach ticketing.",
     audience: "Leisure and SME business travellers, plus the sister travel brands using it as booking engine.",
     color: "#1d4ed8",
