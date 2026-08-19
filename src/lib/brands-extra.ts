@@ -1379,9 +1379,9 @@ export const EXTRA_BRANDS: Brand[] = [
     name: "ADRILUME",
     region: "INT",
     domain: "adrilume.com",
-    tagline: "Adriatic coast stays and sailing",
-    description: "Croatia, Montenegro and Albania coastal stays, sailing routes and island transfers with direct-owner inventory.",
-    market: "≈25m annual Adriatic coastal visitors.",
+    tagline: "Italy and the Adriatic, in a new light.",
+    description: "Curated Italy and Adriatic coastal stays, sailing routes, island transfers and local experiences, booked directly with owners through transparent all-in pricing.",
+    market: "≈80m annual visitors to Italy and the Adriatic coastal region.",
     audience: "Sailing and beach travellers, families, groups.",
     color: "#2563eb",
     defaultLaunchMonth: 18,
@@ -1421,7 +1421,7 @@ export const EXTRA_BRANDS: Brand[] = [
     currentMarket: {
       howServed: "Today this demand is met by intermediaries, offline brokers and generic tools, with pricing and quality varying widely and little digital record keeping.",
       users: "Millions of transactions each year, but only a small share happen on a purpose-built digital platform.",
-      revenue: "≈25m annual Adriatic coastal visitors. Most of that value currently sits with intermediaries rather than software.",
+      revenue: "≈€80bn annual travel spend across Italy and the Adriatic coastal region, with a large share still flowing through intermediaries.",
     },
   },
   {
