@@ -622,4 +622,122 @@ export const DE_EXTRA: Record<string, string> = {
     "Der Marktplatz ist Motor für Bindung und Neukunden des Pauschalabos; optionale geprüfte Einträge bringen Marge, ohne Buchungen zu belasten.",
   "Most UK kitchens still use FSA paper SFBB packs or a wall clipboard, with photos of fridge dials in a WhatsApp group, and find auditors, trainers and pest control through word of mouth or commission-taking directories. Digital adoption is concentrated in chains using Trail, Navitas or Checkit; independents are largely unserved and no incumbent joins compliance, CRM and a services marketplace in one subscription.":
     "Die meisten britischen Küchen nutzen weiterhin die FSA-Papierordner (SFBB) oder ein Klemmbrett an der Wand, mit Fotos von Kühlthermometern in einer WhatsApp-Gruppe, und finden Auditoren, Schulungsanbieter und Schädlingsbekämpfer über Mundpropaganda oder provisionsnehmende Verzeichnisse. Digitale Nutzung konzentriert sich auf Ketten mit Trail, Navitas oder Checkit; Einzelbetriebe sind weitgehend unversorgt, und kein Platzhirsch verbindet Compliance, CRM und Dienstleistermarktplatz in einem Abo.",
+  "Commission-free tutoring marketplace, lesson platform and CRM":
+    "Provisionsfreier Nachhilfe-Marktplatz, Unterrichtsplattform und CRM",
+  "LessonAhead is the complete operating system for UK tutoring: a verified tutor marketplace, live lesson and homework platform, safeguarding and DBS compliance, parent progress reporting, and a full tuition-business CRM with billing \u2014 on a flat subscription with zero commission on lessons.":
+    "LessonAhead ist das komplette Betriebssystem f\u00fcr Nachhilfe in Gro\u00dfbritannien: gepr\u00fcfter Nachhilfe-Marktplatz, Live-Unterricht und Hausaufgabenplattform, Kinderschutz- und DBS-Compliance, Fortschrittsberichte f\u00fcr Eltern und ein vollst\u00e4ndiges CRM mit Abrechnung f\u00fcr Nachhilfebetriebe \u2013 im Pauschalabo, ohne Provision auf Unterrichtsstunden.",
+  "\u224830% of UK pupils receive private tuition; \u2248\u00a32bn a year spent on tutoring, plus school catch-up and National Tutoring style funding.":
+    "\u224830 % der britischen Sch\u00fcler erhalten Privatunterricht; \u22482 Mrd. \u00a3 j\u00e4hrliche Ausgaben f\u00fcr Nachhilfe, zuz\u00fcglich schulischer F\u00f6rderprogramme.",
+  "Parents and pupils (KS1\u2013A-level), independent tutors, tuition centres and agencies, schools and MATs spending catch-up funding.":
+    "Eltern und Sch\u00fcler (Grundschule bis Abitur), selbstst\u00e4ndige Nachhilfelehrkr\u00e4fte, Nachhilfeinstitute und Agenturen, Schulen und Schultr\u00e4ger mit F\u00f6rdermitteln.",
+  "UK tutoring runs on marketplaces that skim 15\u201325% of every lesson forever, plus WhatsApp for scheduling, spreadsheets for invoicing, Zoom for delivery and nothing at all for safeguarding records. Tutors lose a quarter of their income for a match they only needed once, parents cannot see progress, and centres stitch together five tools. LessonAhead removes the commission and joins discovery, delivery, compliance and billing in one product.":
+    "Nachhilfe in Gro\u00dfbritannien l\u00e4uft \u00fcber Marktpl\u00e4tze, die dauerhaft 15\u201325 % jeder Stunde absch\u00f6pfen, plus WhatsApp f\u00fcr Termine, Tabellen f\u00fcr Rechnungen, Zoom f\u00fcr den Unterricht und nichts f\u00fcr Kinderschutznachweise. Lehrkr\u00e4fte verlieren ein Viertel ihres Einkommens f\u00fcr eine Vermittlung, die sie nur einmal brauchten, Eltern sehen keinen Fortschritt, und Institute kombinieren f\u00fcnf Werkzeuge. LessonAhead schafft die Provision ab und verbindet Suche, Unterricht, Compliance und Abrechnung in einem Produkt.",
+  "Find, book, teach, evidence and get paid in one place \u2014 with no commission on any lesson. Parents search verified, DBS-checked tutors with transparent hourly rates; tutors and centres pay a flat monthly subscription and keep 100% of what they charge; schools get auditable attendance and progress reporting for funded tuition. Built on the shared iTechLounge stack, so it ships with apps, CRM, payments and reporting from day one.":
+    "Finden, buchen, unterrichten, nachweisen und bezahlt werden an einem Ort \u2013 ohne Provision auf irgendeine Stunde. Eltern suchen gepr\u00fcfte, DBS-kontrollierte Lehrkr\u00e4fte mit transparenten Stundens\u00e4tzen; Lehrkr\u00e4fte und Institute zahlen ein monatliches Pauschalabo und behalten 100 % ihrer Honorare; Schulen erhalten pr\u00fcfbare Anwesenheits- und Fortschrittsberichte f\u00fcr gef\u00f6rderte Nachhilfe. Auf dem gemeinsamen iTechLounge-Stack gebaut \u2013 Apps, CRM, Zahlungen und Reporting ab Tag eins.",
+  "Verified tutor marketplace with DBS status, qualifications, references and transparent hourly rates":
+    "Gepr\u00fcfter Marktplatz mit DBS-Status, Qualifikationen, Referenzen und transparenten Stundens\u00e4tzen",
+  "Zero commission on lessons, packages or repeat bookings \u2014 flat subscription only":
+    "Keine Provision auf Stunden, Pakete oder Folgebuchungen \u2013 nur Pauschalabo",
+  "Smart matching by subject, exam board, level, budget, availability and learning needs":
+    "Intelligentes Matching nach Fach, Pr\u00fcfungsordnung, Niveau, Budget, Verf\u00fcgbarkeit und F\u00f6rderbedarf",
+  "Built-in live classroom: video, whiteboard, screen share, file sharing and session recording":
+    "Integriertes Live-Klassenzimmer: Video, Whiteboard, Bildschirmfreigabe, Dateien und Aufzeichnung",
+  "Scheduling with recurring lessons, reschedule rules, reminders and no-show policies":
+    "Terminplanung mit wiederkehrenden Stunden, Verschiebungsregeln, Erinnerungen und No-Show-Regeln",
+  "Homework, resources and marking with per-pupil progress tracking against curriculum objectives":
+    "Hausaufgaben, Materialien und Korrektur mit Fortschrittsverfolgung je Sch\u00fcler entlang der Lehrplanziele",
+  "Parent portal with attendance, session notes, progress reports and spend history":
+    "Elternportal mit Anwesenheit, Stundennotizen, Fortschrittsberichten und Ausgabenhistorie",
+  "Tuition CRM: leads, trials, enquiry pipeline, pupil records, tutor rotas and centre reporting":
+    "Nachhilfe-CRM: Leads, Probestunden, Anfragen-Pipeline, Sch\u00fclerakten, Dienstpl\u00e4ne und Institutsreporting",
+  "Payments, packages, credit balances, auto-invoicing, VAT handling and payouts":
+    "Zahlungen, Pakete, Guthaben, automatische Rechnungen, Umsatzsteuer und Auszahlungen",
+  "Safeguarding centre: DBS renewals, policy sign-off, chat monitoring and incident logging":
+    "Kinderschutz-Center: DBS-Erneuerungen, Richtlinienbest\u00e4tigung, Chat-Monitoring und Vorfallsprotokoll",
+  "Schools and MAT workspace for funded tuition with auditable attendance evidence":
+    "Arbeitsbereich f\u00fcr Schulen und Schultr\u00e4ger mit pr\u00fcfbaren Anwesenheitsnachweisen f\u00fcr gef\u00f6rderte Nachhilfe",
+  "Reviews, ratings and dispute resolution with escrowed lesson credit":
+    "Bewertungen, Ratings und Streitbeilegung mit treuh\u00e4nderisch gehaltenem Stundenguthaben",
+  "Parents and pupils: free forever \u2014 search, book, message, attend lessons and view reports at no cost":
+    "Eltern und Sch\u00fcler: dauerhaft kostenlos \u2013 suchen, buchen, schreiben, teilnehmen und Berichte einsehen",
+  "Tutor Starter: \u00a30/mo \u2014 up to 5 active pupils, marketplace profile, classroom and payments (2.5% payment processing only, no commission)":
+    "Tutor Starter: 0 \u00a3/Monat \u2013 bis 5 aktive Sch\u00fcler, Marktplatzprofil, Klassenzimmer und Zahlungen (nur 2,5 % Zahlungsabwicklung, keine Provision)",
+  "Tutor Pro: \u00a319/mo \u2014 unlimited pupils, CRM, packages, auto-invoicing, homework and progress reports, priority marketplace ranking":
+    "Tutor Pro: 19 \u00a3/Monat \u2013 unbegrenzt Sch\u00fcler, CRM, Pakete, Auto-Rechnungen, Hausaufgaben und Fortschrittsberichte, bevorzugtes Ranking",
+  "Tuition Centre: \u00a379/mo per site \u2014 up to 15 tutor seats, rotas, multi-tutor reporting, branded parent portal":
+    "Nachhilfeinstitut: 79 \u00a3/Monat pro Standort \u2013 bis 15 Lehrkraft-Pl\u00e4tze, Dienstpl\u00e4ne, Reporting, gebrandetes Elternportal",
+  "Agency / Group: \u00a3249/mo \u2014 unlimited seats and sites, safeguarding dashboard, API, consolidated billing":
+    "Agentur/Gruppe: 249 \u00a3/Monat \u2013 unbegrenzt Pl\u00e4tze und Standorte, Kinderschutz-Dashboard, API, Sammelabrechnung",
+  "Schools & MATs: \u00a3499/mo per trust \u2014 funded-tuition workspace, attendance evidence packs, invoicing to the school":
+    "Schulen und Schultr\u00e4ger: 499 \u00a3/Monat pro Tr\u00e4ger \u2013 Arbeitsbereich f\u00fcr gef\u00f6rderte Nachhilfe, Nachweispakete, Rechnung an die Schule",
+  "Add-ons: branded white-label domain \u00a329/mo, SMS reminder bundles, exam-board resource libraries":
+    "Zusatzoptionen: gebrandete White-Label-Domain 29 \u00a3/Monat, SMS-Erinnerungspakete, Materialbibliotheken je Pr\u00fcfungsordnung",
+  "Never charged: booking commission, lesson take rate, per-lead fees or contact-unlock fees":
+    "Nie berechnet: Buchungsprovision, Anteil an Stundenhonoraren, Lead-Geb\u00fchren oder Kontakt-Freischaltgeb\u00fchren",
+  "Marketplace, classroom, CRM, billing and reporting in one workspace.":
+    "Marktplatz, Klassenzimmer, CRM, Abrechnung und Reporting in einem Arbeitsbereich.",
+  "Book lessons, join the classroom, submit homework and read progress reports.":
+    "Stunden buchen, ins Klassenzimmer gehen, Hausaufgaben abgeben und Fortschrittsberichte lesen.",
+  "Manage diary, run lessons, mark work, log notes and track earnings on the move.":
+    "Kalender verwalten, Stunden halten, korrigieren, Notizen erfassen und Einnahmen mobil verfolgen.",
+  "Rotas, tutor compliance, enquiry pipeline and multi-site performance for centres and agencies.":
+    "Dienstpl\u00e4ne, Compliance der Lehrkr\u00e4fte, Anfragen-Pipeline und Standort-Performance f\u00fcr Institute und Agenturen.",
+  "MIS/SIMS, Google Classroom, Xero/QuickBooks, Stripe and group-level reporting.":
+    "MIS/SIMS, Google Classroom, Xero/QuickBooks, Stripe und gruppenweites Reporting.",
+  "Finds a vetted tutor at a clear hourly rate, books recurring lessons and sees attendance, notes and progress in one place.":
+    "Findet eine gepr\u00fcfte Lehrkraft mit klarem Stundensatz, buchen wiederkehrende Stunden und sieht Anwesenheit, Notizen und Fortschritt an einem Ort.",
+  "Joins lessons, gets homework and resources, and tracks improvement by topic and exam board.":
+    "Nimmt an Stunden teil, erh\u00e4lt Hausaufgaben und Materialien und verfolgt Fortschritt je Thema und Pr\u00fcfungsordnung.",
+  "Wins pupils from the marketplace, delivers lessons, invoices automatically and keeps 100% of the fee.":
+    "Gewinnt Sch\u00fcler \u00fcber den Marktplatz, unterrichtet, rechnet automatisch ab und beh\u00e4lt 100 % des Honorars.",
+  "Runs rotas, tracks tutor compliance and DBS, manages enquiries and reports on centre revenue.":
+    "F\u00fchrt Dienstpl\u00e4ne, \u00fcberwacht Compliance und DBS, bearbeitet Anfragen und berichtet Standortums\u00e4tze.",
+  "Commissions tuition with funding, receives auditable attendance and impact evidence, pays on invoice.":
+    "Beauftragt Nachhilfe mit F\u00f6rdermitteln, erh\u00e4lt pr\u00fcfbare Anwesenheits- und Wirkungsnachweise, zahlt per Rechnung.",
+  "Monitors safeguarding, quality and cross-sell with other iTechLounge education brands.":
+    "\u00dcberwacht Kinderschutz, Qualit\u00e4t und Cross-Selling mit anderen iTechLounge-Bildungsmarken.",
+  "Strong brand, large vetted tutor pool and school partnerships":
+    "Starke Marke, gro\u00dfer gepr\u00fcfter Lehrkr\u00e4fte-Pool und Schulpartnerschaften",
+  "They take a large share of every lesson forever and set the rate; we charge tutors a flat \u00a319/mo, let them price their own lessons, and give centres and schools tooling MyTutor does not sell":
+    "Sie nehmen dauerhaft einen gro\u00dfen Anteil jeder Stunde und setzen den Preis; wir verlangen pauschal 19 \u00a3/Monat, lassen Lehrkr\u00e4fte ihre Preise selbst bestimmen und geben Instituten und Schulen Werkzeuge, die MyTutor nicht anbietet",
+  "Easy onboarding and volume of UK listings":
+    "Einfacher Einstieg und viele Eintr\u00e4ge in Gro\u00dfbritannien",
+  "Percentage commission on all lessons plus limited business tooling; we are commission-free with full CRM, invoicing, safeguarding and centre rotas included":
+    "Prozentuale Provision auf alle Stunden und kaum Gesch\u00e4ftswerkzeuge; wir sind provisionsfrei und liefern CRM, Rechnungen, Kinderschutz und Dienstpl\u00e4ne inklusive",
+  "Huge listing volume and cheap discovery":
+    "Sehr viele Eintr\u00e4ge und g\u00fcnstige Sichtbarkeit",
+  "Pay-to-contact directories with no delivery, safeguarding or payment layer; we verify DBS, host the classroom and hold lesson credit in escrow":
+    "Kontakt-Bezahlverzeichnisse ohne Unterricht, Kinderschutz oder Zahlungsebene; wir pr\u00fcfen DBS, hosten das Klassenzimmer und halten Stundenguthaben treuh\u00e4nderisch",
+  "Deep admin features for established centres":
+    "Umfangreiche Verwaltungsfunktionen f\u00fcr etablierte Institute",
+  "Admin only \u2014 no demand generation; we bundle the marketplace that fills the diary with the admin system at a lower flat price":
+    "Nur Verwaltung, keine Nachfrage; wir verbinden den Marktplatz, der den Kalender f\u00fcllt, mit der Verwaltung zu einem g\u00fcnstigeren Pauschalpreis",
+  "No safeguarding record, no progress evidence and hours lost on invoicing; we replace the stack and produce audit-ready reporting for parents, Ofsted-minded schools and funders":
+    "Kein Kinderschutznachweis, kein Fortschrittsbeleg und viele Stunden f\u00fcr Rechnungen; wir ersetzen den Werkzeug-Mix und liefern pr\u00fcfungsfertige Berichte f\u00fcr Eltern, Schulen und F\u00f6rdergeber",
+  "Tutors joining to be matched then taking pupils off-platform":
+    "Lehrkr\u00e4fte nutzen die Vermittlung und arbeiten dann au\u00dferhalb der Plattform weiter",
+  "Commission-free pricing removes the incentive to leave \u2014 the subscription is cheaper than any leakage; classroom, homework, invoicing and reporting keep the workflow on-platform.":
+    "Provisionsfreiheit nimmt den Anreiz zum Abwandern \u2013 das Abo ist g\u00fcnstiger als jeder Verlust; Klassenzimmer, Hausaufgaben, Rechnungen und Reporting halten den Ablauf auf der Plattform.",
+  "Safeguarding or child-protection incident":
+    "Kinderschutzvorfall",
+  "Mandatory DBS verification and renewal tracking, in-platform messaging only, recorded sessions, policy sign-off, incident logging and a named safeguarding lead in the shared compliance function.":
+    "Verpflichtende DBS-Pr\u00fcfung und Fristenverfolgung, Kommunikation nur in der Plattform, aufgezeichnete Stunden, Richtlinienbest\u00e4tigung, Vorfallsprotokoll und eine benannte Kinderschutzverantwortliche in der gemeinsamen Compliance-Funktion.",
+  "Cold-start supply and demand in each town":
+    "Kaltstart von Angebot und Nachfrage in jeder Stadt",
+  "Launch city by city with a curated tutor core, seed demand through school and centre partnerships, and reuse shared iTechLounge SEO and cross-sell from sister education brands.":
+    "Start Stadt f\u00fcr Stadt mit einem kuratierten Kern an Lehrkr\u00e4ften, Nachfrage \u00fcber Schul- und Institutspartnerschaften, plus gemeinsames iTechLounge-SEO und Cross-Selling aus Schwestermarken.",
+  "Dependence on school catch-up funding cycles":
+    "Abh\u00e4ngigkeit von schulischen F\u00f6rderzyklen",
+  "Parent-paid tuition is the core revenue base; school funding is upside, spread across trusts and contract lengths.":
+    "Von Eltern bezahlte Nachhilfe ist die Umsatzbasis; Schulf\u00f6rderung ist Zusatzpotenzial, verteilt \u00fcber Tr\u00e4ger und Vertragslaufzeiten.",
+  "Marketplace incumbents cutting commission":
+    "Etablierte Marktpl\u00e4tze senken ihre Provision",
+  "Our flat model is structurally cheaper for any active tutor; margin comes from software, not lesson volume, so we can hold price while they cannot.":
+    "Unser Pauschalmodell ist f\u00fcr jede aktive Lehrkraft strukturell g\u00fcnstiger; die Marge kommt aus Software, nicht aus Stundenvolumen \u2013 wir k\u00f6nnen den Preis halten, sie nicht.",
+  "UK tuition today is split between commission marketplaces (MyTutor, Tutorful, Superprof) that take 15\u201325% of every lesson, pay-to-contact directories, local agencies working from spreadsheets, and a long tail of tutors running everything through WhatsApp, Zoom and manual invoices. Centres buy separate admin software with no demand generation, and safeguarding evidence is largely paper-based.":
+    "Nachhilfe in Gro\u00dfbritannien verteilt sich heute auf Provisionsmarktpl\u00e4tze (MyTutor, Tutorful, Superprof) mit 15\u201325 % je Stunde, Kontakt-Bezahlverzeichnisse, lokale Agenturen mit Tabellen und viele Lehrkr\u00e4fte, die alles \u00fcber WhatsApp, Zoom und manuelle Rechnungen abwickeln. Institute kaufen separate Verwaltungssoftware ohne Nachfragegenerierung, und Kinderschutznachweise sind \u00fcberwiegend Papier.",
+  "\u22482m UK pupils receive private tuition each year and \u2248150,000 people tutor professionally or part-time; only a minority of the work runs on a purpose-built platform end to end.":
+    "\u22482 Mio. britische Sch\u00fcler erhalten j\u00e4hrlich Privatunterricht und \u2248150.000 Personen unterrichten haupt- oder nebenberuflich; nur ein kleiner Teil l\u00e4uft durchg\u00e4ngig auf einer spezialisierten Plattform.",
+  "\u2248\u00a32bn a year of UK tutoring spend plus school catch-up budgets. Most of the software value is currently captured as marketplace commission taken out of tutors' income rather than paid as software.":
+    "\u22482 Mrd. \u00a3 j\u00e4hrliche Nachhilfeausgaben in Gro\u00dfbritannien plus Schulbudgets. Der Softwarewert wird derzeit \u00fcberwiegend als Marktplatzprovision aus dem Einkommen der Lehrkr\u00e4fte entnommen statt als Software bezahlt.",
 };
