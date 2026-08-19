@@ -550,7 +550,7 @@ const BASE_BRANDS: Brand[] = [
   {
     id: "immoviq",
     name: "IMMOVIQ",
-    tagline: "Post-listing property workflow platform",
+    tagline: "Immobilien. Einfach geregelt.",
     description:
       "Where ImmoScout stops, IMMOVIQ starts: tenant screening (SCHUFA), digital lease signing, repair ticketing, service-charge accounting and DATEV export for landlords.",
     market: "5.8m rental units under private ownership in Germany; €1.5bn PropTech TAM.",
@@ -586,6 +586,10 @@ const BASE_BRANDS: Brand[] = [
       "DATEV & lexoffice export",
       "Tenant portal (documents, receipts, repair requests)",
       "Mieterhöhung workflow with Mietspiegel-check",
+      "Handwerker & Makler marketplace with verified profiles",
+      "Instant property valuation (Bewertung) and Mietspiegel data",
+      "Financing enquiries and Bonitäts-checks in one flow",
+      "Neighbourhood (Stadtteile) insights and landlord Ratgeber content",
     ],
     apps: [
       { name: "IMMOVIQ Landlord", kind: "Web", purpose: "Full landlord workspace" },
