@@ -557,4 +557,69 @@ export const DE_EXTRA: Record<string, string> = {
     "Ca. 18.500 CQC-regulierte Anbieter versorgen ca. 1,5 Mio. Menschen mit ca. 1,7 Mio. Beschäftigten, von denen ein großer Teil noch auf Papier dokumentiert.",
   "≈£1.1bn UK care-software market growing with the NHS Digitising Social Care fund, on top of ≈£4.5bn a year of agency staffing spend and tens of millions in directory lead fees that a flat, commission-free subscription removes.":
     "Ca. 1,1 Mrd. £ Markt für Pflegesoftware in UK, wachsend durch den NHS-Fonds zur Digitalisierung der Sozialpflege, dazu ca. 4,5 Mrd. £ Zeitarbeitsausgaben pro Jahr und zweistellige Millionenbeträge an Verzeichnis-Leadgebühren, die ein pauschales, provisionsfreies Abo entfallen lässt.",
+  "Commission-free food-safety OS, marketplace and CRM for UK hospitality":
+    "Provisionsfreies Lebensmittelsicherheits-OS, Marktplatz und CRM für die britische Gastronomie",
+  "The UK edition of HACCORA (Haccora Connect): digital HACCP diaries, fridge and probe temperature logs, allergen matrices (Natasha's Law), cleaning schedules and audit-ready evidence packs mapped to the FSA's Safer Food, Better Business framework and the Food Hygiene Rating Scheme — plus a commission-free marketplace of verified auditors, pest-control firms, hygiene trainers, equipment engineers and suppliers, and a full operator CRM for sites, staff, suppliers and inspections.":
+    "Die UK-Ausgabe von HACCORA (Haccora Connect): digitale HACCP-Tagebücher, Kühl- und Kerntemperatur-Protokolle, Allergenmatrizen (Natasha's Law), Reinigungspläne und prüfungsfertige Nachweispakete nach dem FSA-Rahmen \"Safer Food, Better Business\" und dem Food Hygiene Rating Scheme — dazu ein provisionsfreier Marktplatz mit geprüften Auditoren, Schädlingsbekämpfern, Hygieneschulern, Technikern und Lieferanten sowie ein vollständiges Betreiber-CRM für Standorte, Personal, Lieferanten und Kontrollen.",
+  "One flat subscription per site, no commission and no per-user fees: staff sign off checks on a phone or tablet in seconds, Bluetooth probes and fridge sensors log automatically, allergen matrices generate from recipes, and a single tap produces the evidence pack an EHO asks for. The same subscription includes the CRM (sites, staff, suppliers, contractors, incidents) and the verified services marketplace — operators book audits, training, pest control and servicing at the provider's own price, because we take nothing from the booking. Reuses the German HACCORA engine, so UK pricing undercuts incumbents.":
+    "Ein pauschales Abo pro Standort, ohne Provision und ohne Nutzergebühren: Das Team quittiert Kontrollen in Sekunden per Handy oder Tablet, Bluetooth-Thermometer und Kühlsensoren protokollieren automatisch, Allergenmatrizen entstehen aus Rezepturen, und ein Tipp erzeugt das Nachweispaket, das die Lebensmittelaufsicht verlangt. Im selben Abo enthalten sind das CRM (Standorte, Personal, Lieferanten, Dienstleister, Vorfälle) und der geprüfte Dienstleistermarktplatz — Betriebe buchen Audits, Schulungen, Schädlingsbekämpfung und Wartung zum Preis des Anbieters, denn wir behalten nichts von der Buchung. Nutzt die deutsche HACCORA-Engine, daher unterbietet die UK-Preisgestaltung die Platzhirsche.",
+  "Single Site £29.99/mo — HACCP diaries, allergen matrices, cleaning schedules, unlimited staff sign-offs, inspection evidence pack":
+    "Einzelstandort 29,99 £/Monat — HACCP-Tagebücher, Allergenmatrizen, Reinigungspläne, unbegrenzte Mitarbeiterquittierungen, Nachweispaket für Kontrollen",
+  "Site Pro £59.99/mo — adds sensor and Bluetooth probe logging, corrective-action escalation, training records, supplier CRM":
+    "Site Pro 59,99 £/Monat — zusätzlich Sensor- und Bluetooth-Thermometer-Protokollierung, Eskalation von Korrekturmaßnahmen, Schulungsnachweise, Lieferanten-CRM",
+  "Multi-Site £149/mo (up to 5 sites) — group dashboard, hygiene risk scoring, brand-wide templates, area-manager roles":
+    "Multi-Site 149 £/Monat (bis 5 Standorte) — Gruppen-Dashboard, Hygiene-Risikobewertung, markenweite Vorlagen, Rollen für Bezirksleitung",
+  "Group / Enterprise £399/mo+ — unlimited sites, SSO, API and EPOS/rota integrations, dedicated onboarding, franchise reporting":
+    "Gruppe / Enterprise ab 399 £/Monat — unbegrenzte Standorte, SSO, API- und Kassen-/Dienstplan-Integrationen, persönliches Onboarding, Franchise-Reporting",
+  "Zero commission on marketplace bookings — auditors, trainers, pest control and engineers keep 100% of their fee":
+    "Null Provision auf Marktplatz-Buchungen — Auditoren, Schulungsanbieter, Schädlingsbekämpfer und Techniker behalten 100 % ihres Honorars",
+  "Optional verified-provider listing £19/mo for suppliers and contractors; sensors and probes resold at cost":
+    "Optionaler Eintrag als geprüfter Anbieter 19 £/Monat für Lieferanten und Dienstleister; Sensoren und Thermometer zum Einkaufspreis",
+  "Free 2-month trial on every tier, monthly rolling, no tie-in":
+    "Zwei Monate kostenlos in jedem Tarif, monatlich kündbar, keine Vertragsbindung",
+  "Commission-free marketplace of verified auditors, trainers, pest control and equipment engineers":
+    "Provisionsfreier Marktplatz mit geprüften Auditoren, Schulungsanbietern, Schädlingsbekämpfern und Gerätetechnikern",
+  "Operator CRM: sites, staff, suppliers, contractors, incidents and renewal reminders":
+    "Betreiber-CRM: Standorte, Personal, Lieferanten, Dienstleister, Vorfälle und Erinnerungen an Verlängerungen",
+  "Quote requests and booking workflow with documents, certificates and expiry tracking":
+    "Angebotsanfragen und Buchungsablauf mit Dokumenten, Zertifikaten und Fristenverfolgung",
+  "Role-aware portals for owners, chefs, staff, contractors and EHOs":
+    "Rollenbasierte Portale für Inhaber, Küchenchefs, Personal, Dienstleister und Lebensmittelkontrolleure",
+  "Offline-first mobile capture that syncs when signal returns":
+    "Offline-fähige mobile Erfassung, die synchronisiert, sobald wieder Netz vorhanden ist",
+  "Commission-free directory and booking of verified compliance services":
+    "Provisionsfreies Verzeichnis und Buchung geprüfter Compliance-Dienstleistungen",
+  "Sites, staff, suppliers, contractors, certificates and renewals":
+    "Standorte, Personal, Lieferanten, Dienstleister, Zertifikate und Verlängerungen",
+  "Auditor, trainer and engineer app for jobs, reports and certificates":
+    "App für Auditoren, Schulungsanbieter und Techniker mit Aufträgen, Berichten und Zertifikaten",
+  "Auditor or hygiene trainer": "Auditor oder Hygieneschulungsanbieter",
+  "Wins work through the marketplace commission-free and files reports in the partner app.":
+    "Gewinnt Aufträge provisionsfrei über den Marktplatz und erstellt Berichte in der Partner-App.",
+  "Pest control or equipment engineer": "Schädlingsbekämpfer oder Gerätetechniker",
+  "Receives jobs, uploads certificates and sets service intervals against each site.":
+    "Erhält Aufträge, lädt Zertifikate hoch und legt Wartungsintervalle je Standort fest.",
+  "Franchise or group compliance lead": "Compliance-Verantwortliche/r für Franchise oder Gruppe",
+  "Rolls out brand templates and tracks every site's evidence and expiry dates in the CRM.":
+    "Rollt Markenvorlagen aus und verfolgt Nachweise und Fristen aller Standorte im CRM.",
+  "Checkit / Kitchen CUT": "Checkit / Kitchen CUT",
+  "Enterprise sensor hardware and kitchen management suites":
+    "Enterprise-Sensorhardware und Küchenmanagement-Suiten",
+  "Flat per-site pricing with hardware sold at cost, and the CRM plus marketplace included rather than a six-figure enterprise contract":
+    "Pauschalpreis pro Standort, Hardware zum Einkaufspreis, CRM und Marktplatz inklusive statt eines sechsstelligen Enterprise-Vertrags",
+  "Compliance consultancies and lead-gen directories": "Compliance-Beratungen und Lead-Verzeichnisse",
+  "Trusted local relationships and inspection know-how":
+    "Vertraute lokale Beziehungen und Prüfungs-Know-how",
+  "We list the same providers with verified credentials and charge zero commission, so operators pay less and providers keep their full fee":
+    "Wir listen die gleichen Anbieter mit geprüften Nachweisen und verlangen keine Provision — Betriebe zahlen weniger, Anbieter behalten ihr volles Honorar",
+  "Marketplace supply is thin at launch in some regions":
+    "Anbieterangebot ist zum Start in einigen Regionen dünn",
+  "Seed verified providers city by city alongside site sign-ups, and keep compliance value standalone so the platform is useful before the marketplace fills.":
+    "Geprüfte Anbieter Stadt für Stadt parallel zu den Standortanmeldungen aufbauen; der Compliance-Nutzen steht für sich, sodass die Plattform schon vor gefülltem Marktplatz trägt.",
+  "No commission means slower marketplace monetisation":
+    "Ohne Provision verzögert sich die Monetarisierung des Marktplatzes",
+  "Marketplace is a retention and acquisition engine for the flat subscription; optional verified listings add margin without taxing bookings.":
+    "Der Marktplatz ist Motor für Bindung und Neukunden des Pauschalabos; optionale geprüfte Einträge bringen Marge, ohne Buchungen zu belasten.",
+  "Most UK kitchens still use FSA paper SFBB packs or a wall clipboard, with photos of fridge dials in a WhatsApp group, and find auditors, trainers and pest control through word of mouth or commission-taking directories. Digital adoption is concentrated in chains using Trail, Navitas or Checkit; independents are largely unserved and no incumbent joins compliance, CRM and a services marketplace in one subscription.":
+    "Die meisten britischen Küchen nutzen weiterhin die FSA-Papierordner (SFBB) oder ein Klemmbrett an der Wand, mit Fotos von Kühlthermometern in einer WhatsApp-Gruppe, und finden Auditoren, Schulungsanbieter und Schädlingsbekämpfer über Mundpropaganda oder provisionsnehmende Verzeichnisse. Digitale Nutzung konzentriert sich auf Ketten mit Trail, Navitas oder Checkit; Einzelbetriebe sind weitgehend unversorgt, und kein Platzhirsch verbindet Compliance, CRM und Dienstleistermarktplatz in einem Abo.",
 };
