@@ -168,4 +168,115 @@ export const DE_EXTRA: Record<string, string> = {
     "Rund 1,3 Mio. Gebrauchtfahrzeuge werden jährlich aus Japan exportiert; Großbritannien ist einer der größten Rechtslenker-Märkte mit Zehntausenden Importen und JDM-Käufen pro Jahr.",
   "Independent importers and JDM specialists, franchised dealers adding import stock, brokers, shipping and clearing agents, and private enthusiast buyers.":
     "Unabhängige Importeure und JDM-Spezialisten, Vertragshändler mit Importbestand, Makler, Reederei- und Zollagenten sowie private Enthusiasten.",
+  // GABLEY
+  "Where property comes together.": "Wo Immobilien zusammenkommen.",
+  "GABLEY is the complete operating system and commission-free marketplace for UK estate and letting agents. One premium workspace holds the public property marketplace, the agency CRM, the compliance hub, tenancies, client accounting and card payments, plus dedicated portals for agents, landlords, renters, buyers, sellers, contractors, inventory clerks and conveyancers. Nine roles, 55+ operational workspaces and local pages for 335 UK towns replace a stack of Reapit, Alto, Dezrez, Arthur, Goodlord and PayProp. Live now as a test site at gabley.itechlounge.co.uk; the real domain gabley.co.uk follows.":
+    "GABLEY ist das komplette Betriebssystem und der provisionsfreie Marktplatz für britische Immobilien- und Vermietungsmakler. Ein Premium-Arbeitsbereich vereint den öffentlichen Immobilienmarktplatz, das Makler-CRM, das Compliance-Center, Mietverhältnisse, Mandantenbuchhaltung und Kartenzahlungen sowie eigene Portale für Makler, Eigentümer, Mieter, Käufer, Verkäufer, Handwerker, Inventarprüfer und Notare. Neun Rollen, über 55 Arbeitsbereiche und lokale Seiten für 335 britische Städte ersetzen einen Stack aus Reapit, Alto, Dezrez, Arthur, Goodlord und PayProp. Live als Testseite unter gabley.itechlounge.co.uk; die echte Domain gabley.co.uk folgt.",
+  "≈£5bn UK estate-agency and lettings software, portal and referencing spend; ≈25,000 agency branches plus 2.8m private landlords are addressable.":
+    "Ca. 5 Mrd. £ Ausgaben für Makler-Software, Portale und Mieterprüfung in UK; ca. 25.000 Maklerfilialen und 2,8 Mio. private Vermieter sind adressierbar.",
+  "Independent and multi-branch estate and letting agents, HMO and block managers, private landlords, tenants, buyers and sellers, contractors and conveyancers.":
+    "Unabhängige und filialübergreifende Immobilien- und Vermietungsmakler, WG-/Blockverwalter, private Vermieter, Mieter, Käufer und Verkäufer, Handwerker und Notare.",
+  "A UK agency today pays a CRM vendor, a referencing provider, a rent-collection provider, a compliance tracker, a website supplier and two portals that charge hundreds of pounds per branch per month and own the agency's audience. Data is re-keyed between systems, certificates expire unnoticed, landlords chase statements by email and tenants have nowhere to see their own tenancy. GABLEY exists so one flat branch subscription covers the whole operation and the agency — not a portal — owns its listings, leads and customer relationships.":
+    "Ein britischer Makler zahlt heute an einen CRM-Anbieter, einen Dienst für Mieterprüfung, einen Mietinkasso-Anbieter, ein Compliance-Tool, eine Website-Agentur und zwei Portale, die hunderte Pfund pro Filiale und Monat kosten und das Publikum besitzen. Daten werden mehrfach erfasst, Zertifikate laufen unbemerkt ab, Eigentümer fordern Abrechnungen per E-Mail an, und Mieter haben keinen Zugang zu ihrem Mietverhältnis. GABLEY sorgt dafür, dass ein festes Filial-Abo den gesamten Betrieb abdeckt und der Makler — nicht ein Portal — Objekte, Leads und Kundenbeziehungen besitzt.",
+  "One flat fee per branch, no portal commission, 30 days free. Every plan includes the full CRM, the public marketplace, the compliance engine, tenancies, client accounting, card rent collection and every portal — sales, lettings, HMO room-level, commercial and holiday lets all in the same stock record. Full service: we migrate your data, build your branded site, publish your listings to the marketplace and optionally syndicate to Rightmove, Zoopla, OnTheMarket and PrimeLocation, and you get iOS, Android and installable PWA apps for viewings and inspections. Built on the shared iTechLounge stack, so it ships fast and is priced at a fraction of the incumbent stack.":
+    "Eine feste Gebühr pro Filiale, keine Portalprovision, 30 Tage kostenlos. Jeder Tarif enthält das komplette CRM, den öffentlichen Marktplatz, die Compliance-Engine, Mietverhältnisse, Mandantenbuchhaltung, Mietinkasso per Karte und alle Portale — Verkauf, Vermietung, WG-Zimmerebene, Gewerbe und Ferienvermietung im selben Objektdatensatz. Full Service: Wir migrieren Daten, erstellen die Website im eigenen Branding, veröffentlichen Objekte im Marktplatz und optional bei Rightmove, Zoopla, OnTheMarket und PrimeLocation; dazu iOS-, Android- und installierbare PWA-Apps für Besichtigungen und Prüfungen. Auf dem gemeinsamen iTechLounge-Stack gebaut, daher schnell startklar und ein Bruchteil der Kosten der etablierten Systeme.",
+  "Commission-free marketplace: split grid and map search, verified agency badges, HMO rooms and commercial stock published straight from the CRM":
+    "Provisionsfreier Marktplatz: geteilte Raster- und Kartensuche, verifizierte Makler-Badges, WG-Zimmer und Gewerbeobjekte direkt aus dem CRM veröffentlicht",
+  "Agency CRM: leads, viewings, offers, pipeline, branch targets, teams, roles and permissions":
+    "Makler-CRM: Leads, Besichtigungen, Angebote, Pipeline, Filialziele, Teams, Rollen und Rechte",
+  "Compliance engine: gas, EICR, EPC, licences, inspections and deposits with automatic expiry reminders":
+    "Compliance-Engine: Gas, EICR, Energieausweis, Lizenzen, Prüfungen und Kautionen mit automatischen Fristerinnerungen",
+  "Tenancies end to end: referencing, right to rent, e-signed packs, renewals, arrears and notices":
+    "Mietverhältnisse Ende zu Ende: Mieterprüfung, Mietberechtigung, digitale Signatur, Verlängerungen, Mietrückstände und Kündigungen",
+  "Client accounting: owner statements, rent reconciliation, bank feeds, arrears workflows and exports":
+    "Mandantenbuchhaltung: Eigentümerabrechnungen, Mietabstimmung, Bankanbindung, Rückstands-Workflows und Exporte",
+  "Card rent collection and subscription billing with test mode before go-live":
+    "Mietinkasso per Karte und Abo-Abrechnung mit Testmodus vor dem Livegang",
+  "Nine role-aware portals: agent, landlord, tenant, buyer, seller, contractor, inventory clerk, surveyor, conveyancer":
+    "Neun rollenbasierte Portale: Makler, Eigentümer, Mieter, Käufer, Verkäufer, Handwerker, Inventarprüfer, Gutachter, Notar",
+  "HMO suite: room-level rents, occupancy, licensing and inspection rounds":
+    "WG-Modul: Mieten auf Zimmerebene, Belegung, Lizenzen und Prüfrunden",
+  "Work-order marketplace with contractor quotes, scheduling and photo, geo and timestamp evidence":
+    "Auftragsmarktplatz mit Handwerkerangeboten, Terminplanung und Foto-, Geo- und Zeitstempelnachweisen",
+  "Sales progression: offers, MOU, buyer status, vendor feedback and conveyancer milestones":
+    "Verkaufsabwicklung: Angebote, Absichtserklärung, Käuferstatus, Verkäufer-Feedback und Notar-Meilensteine",
+  "Saved-search matching, real-time inbox, WhatsApp and SMS reminders and digest alerts":
+    "Suchauftrags-Matching, Echtzeit-Postfach, WhatsApp- und SMS-Erinnerungen sowie Zusammenfassungs-Benachrichtigungen",
+  "Own-brand agency website plus local landing pages for 335 UK towns for organic reach":
+    "Makler-Website im eigenen Branding plus lokale Landingpages für 335 britische Städte für organische Reichweite",
+  "Security: row-level security with agency scoping, MFA on sensitive admin actions, UK GDPR privacy centre":
+    "Sicherheit: Row-Level-Security mit Mandantentrennung, MFA bei sensiblen Admin-Aktionen, Datenschutzzentrum nach UK-DSGVO",
+  "PWA with offline shell and mobile capture, plus native iOS and Android shells":
+    "PWA mit Offline-Hülle und mobiler Erfassung sowie native iOS- und Android-Apps",
+  "AI Copilot: listing descriptions, auto-replies, tenancy summaries and lease abstraction":
+    "KI-Copilot: Objektbeschreibungen, Auto-Antworten, Mietvertrags-Zusammenfassungen und Vertragsauswertung",
+  "Open API and white-label portals for partners, franchises and portfolio landlords":
+    "Offene API und White-Label-Portale für Partner, Franchises und Portfolio-Eigentümer",
+  "Starter — £29.99/mo per branch: up to 3 live listings, 3 seats, full CRM, marketplace publishing, compliance hub, tenant and landlord portals, email support.":
+    "Starter — 29,99 £/Monat pro Filiale: bis zu 3 aktive Objekte, 3 Nutzer, komplettes CRM, Marktplatz-Veröffentlichung, Compliance-Center, Mieter- und Eigentümerportal, E-Mail-Support.",
+  "Growth — £49.99/mo per branch: up to 10 live listings, 10 seats, owner statements, branch performance reports, priority support.":
+    "Growth — 49,99 £/Monat pro Filiale: bis zu 10 aktive Objekte, 10 Nutzer, Eigentümerabrechnungen, Filial-Reports, Priority-Support.",
+  "Unlimited — £99.99/mo per branch: unlimited listings and users, all operational modules, priority onboarding and dedicated account support.":
+    "Unlimited — 99,99 £/Monat pro Filiale: unbegrenzte Objekte und Nutzer, alle Module, priorisiertes Onboarding und persönliche Betreuung.",
+  "Add-ons per branch: AI Copilot £19.99, AI photo & floorplan £14.99, WhatsApp & SMS £9.99, advanced e-sign (eIDAS AES) £12.99, portal syndication+ £24.99, multi-language £7.99.":
+    "Add-ons pro Filiale: KI-Copilot 19,99 £, KI-Foto & Grundriss 14,99 £, WhatsApp & SMS 9,99 £, erweiterte E-Signatur (eIDAS AES) 12,99 £, Portal-Syndizierung+ 24,99 £, Mehrsprachigkeit 7,99 £.",
+  "30 days free on every plan, no card required; migration and branded-site setup included.":
+    "30 Tage kostenlos in jedem Tarif, ohne Kreditkarte; Migration und Website-Einrichtung inklusive.",
+  "Zero commission: no portal listing fees taken as a cut, no percentage of rent, no referencing mark-up.":
+    "Null Provision: kein Anteil an Objektgebühren, kein Prozentsatz der Miete, kein Aufschlag auf Mieterprüfungen.",
+  "Estate & letting agent": "Immobilien- und Vermietungsmakler",
+  "Runs sales, lettings, HMO and commercial from one CRM with branch targets and per-branch billing.":
+    "Steuert Verkauf, Vermietung, WG und Gewerbe aus einem CRM mit Filialzielen und Abrechnung pro Filiale.",
+  "Landlord / portfolio owner": "Vermieter / Portfolio-Eigentümer",
+  "Sees compliance, occupancy, statements and arrears live, and approves work orders in the owner portal.":
+    "Sieht Compliance, Belegung, Abrechnungen und Rückstände live und genehmigt Aufträge im Eigentümerportal.",
+  "Renter / tenant": "Mieter",
+  "Searches verified listings, signs the tenancy pack, pays rent by card and reports repairs.":
+    "Sucht verifizierte Objekte, unterschreibt digital, zahlt Miete per Karte und meldet Reparaturen.",
+  "Buyer / seller": "Käufer / Verkäufer",
+  "Tracks offers, MOU, feedback and conveyancing milestones to completion.":
+    "Verfolgt Angebote, Absichtserklärung, Feedback und Notar-Meilensteine bis zum Abschluss.",
+  "Contractor / inventory clerk": "Handwerker / Inventarprüfer",
+  "Receives work orders, quotes, schedules and uploads timestamped evidence and certificates.":
+    "Erhält Aufträge, erstellt Angebote, plant Termine und lädt zeitgestempelte Nachweise und Zertifikate hoch.",
+  "Monitors branch performance and cross-sells sister brands such as HMO FLOW, IMMOVIQ and PREMISORA.":
+    "Überwacht Filialleistung und vermarktet Schwestermarken wie HMO FLOW, IMMOVIQ und PREMISORA.",
+  "Entrenched agency CRMs with long contracts and deep sales and lettings features":
+    "Etablierte Makler-CRMs mit langen Verträgen und tiefen Funktionen für Verkauf und Vermietung",
+  "We match the operational scope and add the marketplace, portals and payments for a flat £29.99–£99.99 per branch — typically a fraction of their per-seat licence, with no multi-year lock-in and free migration":
+    "Wir bieten denselben Funktionsumfang plus Marktplatz, Portale und Zahlungen für pauschal 29,99–99,99 £ pro Filiale — meist ein Bruchteil ihrer Lizenz pro Nutzer, ohne Mehrjahresbindung und mit kostenloser Migration",
+  "Consumer traffic and near-monopoly on buyer eyeballs":
+    "Verbrauchertraffic und quasi-monopolistische Aufmerksamkeit der Käufer",
+  "Our marketplace charges the agent nothing, keeps the lead and audience with the agency, and drives organic traffic through 335 local town pages and shared iTechLounge SEO; syndication to the portals stays optional at £24.99":
+    "Unser Marktplatz kostet den Makler nichts, hält Leads und Publikum beim Makler und liefert organischen Traffic über 335 lokale Städteseiten und gemeinsames iTechLounge-SEO; die Portal-Syndizierung bleibt optional für 24,99 £",
+  "Slick referencing, rent collection and reconciliation":
+    "Ausgereifte Mieterprüfung, Mietinkasso und Abstimmung",
+  "Referencing, right to rent, e-sign, card rent collection and reconciliation are included in the same subscription instead of billed per tenancy":
+    "Mieterprüfung, Mietberechtigung, E-Signatur, Kartenzahlung und Abstimmung sind im selben Abo enthalten statt pro Mietverhältnis abgerechnet",
+  "Strong portfolio and block-management workflows":
+    "Starke Workflows für Portfolio- und Blockverwaltung",
+  "We cover the same portfolio and HMO room-level work while also giving the agent front-office sales and lettings, so one system replaces two":
+    "Wir deckern dieselbe Portfolio- und WG-Zimmerverwaltung ab und liefern zusätzlich Verkauf und Vermietung im Front Office — ein System ersetzt zwei",
+  "Same speed with automatic expiry alerts, an auditable record per property and self-service portals that stop the phone calls":
+    "Gleiches Tempo mit automatischen Fristwarnungen, prüfbarer Historie pro Objekt und Self-Service-Portalen, die Anrufe erübrigen",
+  "Agencies are locked into multi-year CRM contracts": "Makler sind an mehrjährige CRM-Verträge gebunden",
+  "Free parallel-run and migration during the 30-day trial, with a start date aligned to contract expiry and data import handled by our team.":
+    "Kostenloser Parallelbetrieb und Migration während der 30-tägigen Testphase, Start passend zum Vertragsende und Datenimport durch unser Team.",
+  "Portal dependency keeps agents on incumbent listing fees": "Portalabhängigkeit hält Makler bei bestehenden Objektgebühren",
+  "Optional syndication add-on means GABLEY never blocks portal use, while local SEO pages and buyer alerts build a direct audience over time.":
+    "Das optionale Syndizierungs-Add-on blockiert die Portalnutzung nie, während lokale SEO-Seiten und Käufer-Alerts mit der Zeit ein direktes Publikum aufbauen.",
+  "Client-money and lettings regulation (CMP, TDS, Renters' Rights Act)": "Mandantengelder und Mietrecht (CMP, TDS, Renters' Rights Act)",
+  "Compliance rules are configuration, not code; the shared legal function tracks legislation and updates templates and deposit rules centrally.":
+    "Compliance-Regeln sind Konfiguration, nicht Code; die gemeinsame Rechtsabteilung verfolgt Gesetzesänderungen und aktualisiert Vorlagen und Kautionsregeln zentral.",
+  "Payment and data-security exposure": "Risiken bei Zahlungen und Datensicherheit",
+  "Row-level security with agency scoping, nine roles, MFA on sensitive admin actions, PCI-compliant card processing and a UK GDPR privacy centre.":
+    "Row-Level-Security mit Mandantentrennung, neun Rollen, MFA bei sensiblen Admin-Aktionen, PCI-konforme Kartenzahlung und Datenschutzzentrum nach UK-DSGVO.",
+  "Branch-level self-serve pricing, town-page SEO and cross-sell from HMO FLOW, IMMOVIQ, CIRQIVA and RECOVRABLE rather than paid-only growth.":
+    "Self-Service-Preise pro Filiale, SEO über Städteseiten und Cross-Selling aus HMO FLOW, IMMOVIQ, CIRQIVA und RECOVRABLE statt rein bezahltem Wachstum.",
+  "A typical UK branch stitches together a legacy CRM (Reapit, Alto or Dezrez) on per-seat licences, one or both major portals at several hundred pounds a month, a separate referencing and rent-collection provider, a compliance spreadsheet, a website agency and a paper inventory process. Nothing shares a record: certificates expire unnoticed, landlords email for statements, tenants have no portal, and contractors are booked by phone.":
+    "Eine typische britische Filiale kombiniert ein Legacy-CRM (Reapit, Alto oder Dezrez) mit Lizenzen pro Nutzer, ein oder beide großen Portale für mehrere hundert Pfund im Monat, einen separaten Anbieter für Mieterprüfung und Mietinkasso, eine Compliance-Tabelle, eine Website-Agentur und einen papierbasierten Inventarprozess. Nichts teilt einen Datensatz: Zertifikate laufen unbemerkt ab, Eigentümer fragen Abrechnungen per E-Mail an, Mieter haben kein Portal, und Handwerker werden telefonisch beauftragt.",
+  "≈25,000 UK estate and letting agency branches and ≈2.8m private landlords manage ≈4.6m private rented homes and ≈1m annual sales transactions — almost all on multi-vendor stacks rather than one platform.":
+    "Ca. 25.000 britische Maklerfilialen und ca. 2,8 Mio. private Vermieter verwalten ca. 4,6 Mio. Mietwohnungen und ca. 1 Mio. Verkäufe pro Jahr — fast alle mit Multi-Anbieter-Stacks statt einer Plattform.",
+  "UK agency software, portal advertising, referencing and rent-collection spend is ≈£5bn a year; portal listing fees and per-tenancy charges alone take hundreds of pounds per branch per month that a flat subscription removes.":
+    "Ausgaben für Makler-Software, Portalwerbung, Mieterprüfung und Mietinkasso liegen in UK bei ca. 5 Mrd. £ pro Jahr; allein Portalgebühren und Kosten pro Mietverhältnis binden hunderte Pfund pro Filiale und Monat, die ein Pauschalabo einspart.",
 };
