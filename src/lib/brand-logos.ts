@@ -17,6 +17,7 @@ import stylesyncLogo from "@/assets/stylesync-logo.png.asset.json";
 import beratermarktLogo from "@/assets/beratemarkt-logo-v2.png.asset.json";
 import schonovaLogo from "@/assets/schonova-logo.png.asset.json";
 import zorynLogo from "@/assets/zoryn-logo.png.asset.json";
+import parkpunktLogo from "@/assets/parkpunkt-logo.png.asset.json";
 import traindirektLogo from "@/assets/traindirekt-logo.png.asset.json";
 import zivvoLogo from "@/assets/zivvo-logo-v2.png.asset.json";
 import dishbeeLogo from "@/assets/dishbee-logo-v2.png.asset.json";
@@ -74,6 +75,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   stylesyncger: schonovaLogo.url,
   zoryn: zorynLogo.url,
   zorynnexus: zorynLogo.url,
+  parkpunkt: parkpunktLogo.url,
   traindirekt: traindirektLogo.url,
   zivvo: zivvoLogo.url,
   zivvouk: zivvoLogo.url,
