@@ -53,6 +53,8 @@ export const Route = createFileRoute("/brands/$brandId")({
 
 function BrandDetail() {
   const { brand } = Route.useLoaderData() as { brand: Brand };
+  const { lang } = useLang();
+  const logo = brandLogo(brand.id, lang);
   const state = useFinance();
   const a = state.brands[brand.id];
   const rows = buildModel(state);

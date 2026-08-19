@@ -11,6 +11,7 @@ import { brandLogo } from "@/lib/brand-logos";
 
 export function BrandsPanel() {
   const state = useFinance();
+  const { lang } = useLang();
   const rows = buildModel(state);
 
   return (
