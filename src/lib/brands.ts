@@ -45,7 +45,7 @@ export function regionOf(b: Brand): Region {
 }
 
 // Full portfolio target: 77 brands, 5 launches per month to month 12.
-export const TARGET_BRAND_COUNT = 85;
+export const TARGET_BRAND_COUNT = 84;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
@@ -3522,105 +3522,6 @@ const BASE_BRANDS: Brand[] = [
       howServed: "Families pay \u00a325-\u00a360/hour for tutors or use free resources (Save My Exams, PMT, Khan Academy, past papers). Schools buy Sparx, MyMaths or Kerboodle for single subjects. Nothing spans multiple curricula with AI marking at a consumer price.",
       users: "\u2248300m secondary students in target markets; \u224840m pay for exam preparation.",
       revenue: "\u2248$14bn online exam-prep spend, plus \u2248$120bn in offline tutoring being displaced.",
-    },
-  },
-  {
-    id: "qiyada",
-    name: "QIYADA",
-    region: "INT",
-    tagline: "Founder launchpad and venture-building platform",
-    domain: "qiyada.io",
-    description: "Structured launchpad for founders: application and screening, milestone-based programme delivery, finance-partner matching and investor reporting in one platform.",
-    market: "\u2248500,000 startups founded annually across target regions; \u2248$4bn accelerator and venture-services market.",
-    audience: "Early-stage founders, accelerators, finance partners, corporate innovation teams.",
-    color: "#a3e635",
-    defaultLaunchMonth: 30,
-    defaultInitialUsers: 140,
-    defaultUserGrowth: 0.19,
-    defaultArpu: 99,
-    defaultChurn: 0.03,
-    defaultAddlRevenue: 9000,
-    defaultDirectCost: 6000,
-    reason: "Accelerators run on Airtable, Typeform and Google Docs, so founders get inconsistent support and investors get no real visibility into portfolio progress.",
-    proposition: "A programme OS: structured application and screening, milestone tracking with evidence, mentor and finance-partner matching, and live investor reporting \u2014 sold to accelerators, banks and corporates running founder programmes, and to founders directly as a self-serve tier.",
-    features: [
-      "Application intake with scoring rubrics",
-      "Cohort and programme management",
-      "Milestone tracking with evidence upload",
-      "Mentor matching and session scheduling",
-      "Finance-partner and investor matching",
-      "Data room and cap-table basics",
-      "Investor reporting dashboards",
-      "Curriculum and resource library",
-      "Alumni network and community",
-      "Multi-language (EN/AR) delivery",
-    ],
-    apps: [
-      {
-        name: "Qiyada Programme",
-        kind: "SaaS",
-        purpose: "Cohorts, milestones, mentors",
-      },
-      {
-        name: "Qiyada Founder",
-        kind: "Web",
-        purpose: "Application, tasks, data room",
-      },
-      {
-        name: "Qiyada Investor",
-        kind: "Web",
-        purpose: "Portfolio and reporting",
-      },
-      {
-        name: "Qiyada Admin",
-        kind: "Admin",
-        purpose: "Screening and programme ops",
-      },
-    ],
-    userTypes: [
-      {
-        type: "Founder",
-        useCase: "Applies, follows milestones and raises with a live data room.",
-      },
-      {
-        type: "Programme manager",
-        useCase: "Runs a 40-startup cohort without spreadsheets.",
-      },
-      {
-        type: "Finance partner",
-        useCase: "Sees a screened, milestone-verified deal flow.",
-      },
-      {
-        type: "Corporate innovation lead",
-        useCase: "Runs a supplier or intrapreneur programme.",
-      },
-    ],
-    competitors: [
-      {
-        name: "F6S",
-        strength: "Huge founder network and free tooling",
-        counter: "Purpose-built programme delivery and investor reporting rather than a listings and application inbox",
-      },
-      {
-        name: "Bridge / Sopact",
-        strength: "Established accelerator management tools",
-        counter: "Finance-partner matching and founder-facing product included; simple pricing instead of enterprise quotes",
-      },
-    ],
-    risks: [
-      {
-        risk: "Dependence on accelerator budgets",
-        mitigation: "Direct-to-founder self-serve tier plus corporate and bank programmes diversify demand.",
-      },
-      {
-        risk: "Small addressable count of accelerators",
-        mitigation: "Expand into corporate innovation, government SME programmes and bank startup schemes.",
-      },
-    ],
-    currentMarket: {
-      howServed: "Accelerators run programmes on Airtable, Notion, Typeform and Google Sheets, or pay for niche tools (F6S, Bridge, Sopact). Founders track their own progress in decks; investors get quarterly emails.",
-      users: "\u22488,000 accelerators and \u2248500,000 startups founded annually in target regions.",
-      revenue: "\u2248$4bn accelerator and venture-services market; \u2248$300m addressable in programme software.",
     },
   },
   {
