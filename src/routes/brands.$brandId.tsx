@@ -138,6 +138,21 @@ function BrandDetail() {
           </Section>
 
           <Section title={t("SaaS platform & apps")}>
+            {brand.pricing && brand.pricing.length > 0 && (
+              <div className="mb-4">
+                <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  {t("Pricing & packaging")}
+                </div>
+                <ul className="mt-2 space-y-1 text-sm">
+                  {brand.pricing.map((p) => (
+                    <li key={p} className="flex gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: brand.color }} />
+                      <span>{t(p)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
               {brand.apps.map((app) => (
                 <div key={app.name} className="rounded-md border p-3 text-sm">
