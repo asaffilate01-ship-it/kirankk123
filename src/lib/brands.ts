@@ -3222,7 +3222,6 @@ const BASE_BRANDS: Brand[] = [
       revenue: "\u2248$12bn global fleet-software market; \u2248$800m addressable in GCC and adjacent emerging markets.",
     },
   },
-  },
   {
     id: "sharedbricks",
     name: "SHAREDBRICKS",
