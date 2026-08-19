@@ -3115,11 +3115,11 @@ const BASE_BRANDS: Brand[] = [
     },
   },
   {
-    id: "fleetpulse",
-    name: "FLEETPULSE",
+    id: "fleetsora",
+    name: "FLEETSORA",
     region: "INT",
     tagline: "White-label fleet management SaaS",
-    domain: "fleetpulse.io",
+    domain: "fleetsora.com",
     description: "Multi-tenant fleet management platform sold white-label: delivery companies and fleet operators launch their own branded platform with driver management, tracking, maintenance and compliance.",
     market: "\u22488m commercial fleet vehicles across the GCC and emerging markets; \u2248$12bn fleet-software market.",
     audience: "Delivery companies, logistics operators, rental fleets, corporate fleet managers.",
@@ -3131,7 +3131,7 @@ const BASE_BRANDS: Brand[] = [
     defaultChurn: 0.02,
     defaultAddlRevenue: 12000,
     defaultDirectCost: 10000,
-    reason: "Regional delivery and logistics firms want their own branded platform but cannot fund a two-year build. FLEETPULSE lets them launch one in a week on their own domain.",
+    reason: "Regional delivery and logistics firms want their own branded platform but cannot fund a two-year build. FLEETSORA lets them launch one in a week on their own domain.",
     proposition: "A true multi-tenant, white-label platform: custom branding, custom domain, per-tenant configuration and regional compliance (UAE Emirates-specific rules included), sold as SaaS per tenant plus per-vehicle pricing \u2014 a fraction of a bespoke build.",
     features: [
       "White-label branding and custom domains",
@@ -3147,27 +3147,27 @@ const BASE_BRANDS: Brand[] = [
     ],
     apps: [
       {
-        name: "FleetPulse Console",
+        name: "Fleetsora Console",
         kind: "SaaS",
         purpose: "Fleet operations and dispatch",
       },
       {
-        name: "FleetPulse Driver",
+        name: "Fleetsora Driver",
         kind: "Android",
         purpose: "Jobs, navigation, POD",
       },
       {
-        name: "FleetPulse Driver",
+        name: "Fleetsora Driver",
         kind: "iOS",
         purpose: "Jobs, navigation, POD",
       },
       {
-        name: "FleetPulse Tenant Admin",
+        name: "Fleetsora Tenant Admin",
         kind: "Admin",
         purpose: "Branding, users, billing",
       },
       {
-        name: "FleetPulse API",
+        name: "Fleetsora API",
         kind: "API",
         purpose: "Telematics and ERP integration",
       },
