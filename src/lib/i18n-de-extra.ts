@@ -1,5 +1,145 @@
 // German translations for the newest brands (CIRQIVA, DOKUVERA UK, AUTOHASHI, GABLEY, EVENTPLANR).
 export const DE_EXTRA: Record<string, string> = {
+  // MOTORESQ (UK)
+  "Commission-free vehicle rescue, repair and mobile-mechanic marketplace":
+    "Provisionsfreier Marktplatz für Pannenhilfe, Reparatur und mobile Mechaniker",
+  "MotorESQ is the complete operating system for UK vehicle rescue and repair: an on-demand marketplace of vetted recovery operators, mobile mechanics, tyre fitters and garages with live GPS job dispatch, transparent upfront pricing, digital job cards with photo evidence, subscription breakdown cover, fleet portals and a full workshop CRM — on a flat subscription with zero commission on any job. Live now as a test site at motoresq.itechlounge.co.uk; the real domain motoresq.co.uk follows.":
+    "MotorESQ ist das komplette Betriebssystem für Pannenhilfe und Fahrzeugreparatur in Großbritannien: ein On-Demand-Marktplatz mit geprüften Abschleppunternehmen, mobilen Mechanikern, Reifendiensten und Werkstätten, mit GPS-Livedisposition, transparenten Festpreisen, digitalen Auftragskarten mit Fotobelegen, Pannenschutz im Abo, Flottenportalen und einem vollständigen Werkstatt-CRM — im Pauschalabo und ohne jede Provision auf Aufträge. Aktuell live als Testseite unter motoresq.itechlounge.co.uk; die echte Domain motoresq.co.uk folgt.",
+  "≈41m vehicles on UK roads generating ≈10m breakdowns a year; ≈£1.2bn roadside assistance market plus ≈£21bn independent repair and servicing spend.":
+    "Ca. 41 Mio. Fahrzeuge auf britischen Straßen mit ca. 10 Mio. Pannen pro Jahr; ca. 1,2 Mrd. £ Markt für Pannenhilfe plus ca. 21 Mrd. £ für unabhängige Reparatur und Wartung.",
+  "Drivers and households, independent recovery operators and mobile mechanics, garages and tyre fitters, fleets, leasing firms, insurers and dealer groups.":
+    "Autofahrer und Haushalte, unabhängige Abschleppunternehmen und mobile Mechaniker, Werkstätten und Reifendienste, Flotten, Leasinggesellschaften, Versicherer und Händlergruppen.",
+  "When a car fails, the driver has no idea who is coming, when, or what it will cost. Motoring clubs sell annual cover then subcontract the work to local operators for a fraction of the price; call-centre dispatch networks clip 25–40% of every job; and the independent operators who actually do the work run on phone calls, WhatsApp, paper job sheets and hand-typed invoices, waiting 30–60 days to be paid. Drivers overpay, operators lose margin, and nobody has a digital record of the job. MotorESQ joins demand, dispatch, evidence and payment in one commission-free platform.":
+    "Wenn ein Auto liegen bleibt, weiß der Fahrer nicht, wer kommt, wann und was es kostet. Automobilclubs verkaufen Jahresschutz und geben die Arbeit dann für einen Bruchteil an lokale Betriebe weiter; Callcenter-Dispositionsnetzwerke behalten 25–40 % jedes Auftrags; und die Betriebe, die die Arbeit tatsächlich leisten, organisieren alles per Telefon, WhatsApp, Papieraufträgen und handgetippten Rechnungen und warten 30–60 Tage auf ihr Geld. Fahrer zahlen zu viel, Betriebe verlieren Marge, und niemand hat eine digitale Dokumentation. MotorESQ verbindet Nachfrage, Disposition, Nachweis und Zahlung in einer provisionsfreien Plattform.",
+  "Get rescued, repaired and paid in one place — with no commission on any job. Drivers see a fixed all-in price and the responding technician's live ETA on a map before they accept; operators, mobile mechanics and garages pay a flat monthly subscription, keep 100% of the job value and are paid within 48 hours; fleets and insurers get a single portal with SLA reporting and consolidated invoicing. Built on the shared iTechLounge stack, so it launches with apps, CRM, payments and reporting from day one.":
+    "Pannenhilfe, Reparatur und Bezahlung an einem Ort — ohne Provision auf Aufträge. Fahrer sehen einen festen Komplettpreis und die Live-Ankunftszeit des Technikers auf der Karte, bevor sie zustimmen; Abschleppbetriebe, mobile Mechaniker und Werkstätten zahlen ein monatliches Pauschalabo, behalten 100 % des Auftragswerts und werden innerhalb von 48 Stunden bezahlt; Flotten und Versicherer erhalten ein Portal mit SLA-Reporting und Sammelrechnung. Aufgebaut auf dem gemeinsamen iTechLounge-Stack und daher ab Tag eins mit Apps, CRM, Zahlungen und Reporting.",
+  "On-demand marketplace of vetted recovery operators, mobile mechanics, tyre fitters, auto-electricians and garages":
+    "On-Demand-Marktplatz mit geprüften Abschleppbetrieben, mobilen Mechanikern, Reifendiensten, Autoelektrikern und Werkstätten",
+  "Zero commission on any callout, repair or recovery — flat subscription only":
+    "Null Provision auf Einsätze, Reparaturen und Abschleppungen — nur Pauschalabo",
+  "Live GPS dispatch: nearest available unit, real-time ETA, driver tracking map and arrival notifications":
+    "GPS-Livedisposition: nächstes verfügbares Fahrzeug, Echtzeit-Ankunftszeit, Tracking-Karte und Ankunftsbenachrichtigungen",
+  "Transparent fixed upfront pricing per job type — no hourly surprises, out-of-hours loading or mileage shocks":
+    "Transparente Festpreise je Auftragsart — keine Stundenüberraschungen, Nachtzuschläge oder Kilometerkosten",
+  "Digital job cards with photo and video evidence, damage capture, parts used and customer e-signature":
+    "Digitale Auftragskarten mit Foto- und Videobelegen, Schadensaufnahme, verwendeten Teilen und E-Signatur des Kunden",
+  "Subscription breakdown cover for drivers (monthly or annual) with unlimited callouts and no renewal price hikes":
+    "Pannenschutz im Abo für Fahrer (monatlich oder jährlich) mit unbegrenzten Einsätzen und ohne Preiserhöhung bei Verlängerung",
+  "Vehicle health record: MOT and tax lookup, service history, recurring-fault flags and reminders":
+    "Fahrzeugakte: Abfrage von HU und Steuer, Servicehistorie, Hinweise auf wiederkehrende Fehler und Erinnerungen",
+  "Workshop and operator CRM: jobs, quotes, parts, invoicing, VAT, technician rotas and vehicle histories":
+    "Werkstatt- und Betriebs-CRM: Aufträge, Angebote, Teile, Rechnungen, Umsatzsteuer, Technikerpläne und Fahrzeughistorien",
+  "Fleet and leasing portal with multi-vehicle SLAs, cost centres, authorisation limits and downtime reporting":
+    "Flotten- und Leasingportal mit SLAs für mehrere Fahrzeuge, Kostenstellen, Freigabegrenzen und Ausfallzeit-Reporting",
+  "Insurer and warranty workflows: claim references, authorisation, evidence packs and consolidated billing":
+    "Versicherungs- und Garantieprozesse: Schadennummern, Freigaben, Nachweispakete und Sammelabrechnung",
+  "48-hour operator payouts with escrowed job value and automated self-billing statements":
+    "Auszahlung an Betriebe in 48 Stunden mit treuhänderisch gesichertem Auftragswert und automatischen Gutschriftsabrechnungen",
+  "Ratings, disputes and quality control with recovery-operator compliance checks (insurance, licence, PSV/CPC, DVSA)":
+    "Bewertungen, Streitfälle und Qualitätskontrolle mit Compliance-Prüfung der Betriebe (Versicherung, Lizenz, PSV/CPC, DVSA)",
+  "Drivers: free to request a job and pay per callout at a fixed quoted price — no membership required":
+    "Fahrer: Auftrag kostenlos anfragen und pro Einsatz zum festen Angebotspreis zahlen — keine Mitgliedschaft nötig",
+  "MotorESQ Cover: £7.99/mo or £79/yr per vehicle — unlimited roadside callouts, recovery, home start and misfuel help":
+    "MotorESQ Cover: 7,99 £/Monat oder 79 £/Jahr pro Fahrzeug — unbegrenzte Pannenhilfe, Abschleppen, Starthilfe zu Hause und Fehltankungshilfe",
+  "MotorESQ Cover Family: £14.99/mo — up to 4 vehicles or any vehicle the named drivers travel in":
+    "MotorESQ Cover Family: 14,99 £/Monat — bis zu 4 Fahrzeuge oder jedes Fahrzeug, in dem die genannten Fahrer unterwegs sind",
+  "Operator Starter: £0/mo — marketplace profile, up to 8 jobs a month, live dispatch and payouts (2.5% payment processing only, no commission)":
+    "Operator Starter: 0 £/Monat — Marktplatzprofil, bis zu 8 Aufträge pro Monat, Livedisposition und Auszahlungen (nur 2,5 % Zahlungsabwicklung, keine Provision)",
+  "Operator Pro: £59/mo per unit — unlimited jobs, CRM, digital job cards, invoicing, priority dispatch ranking":
+    "Operator Pro: 59 £/Monat pro Fahrzeug — unbegrenzte Aufträge, CRM, digitale Auftragskarten, Rechnungen, bevorzugte Disposition",
+  "Garage / Workshop: £149/mo per site — up to 10 technician seats, rotas, parts and stock, branded customer portal":
+    "Werkstatt: 149 £/Monat pro Standort — bis zu 10 Technikerzugänge, Dienstpläne, Teile und Lager, Kundenportal im eigenen Branding",
+  "Fleet & Leasing: £399/mo — unlimited vehicles, SLA dashboards, authorisation workflow, consolidated monthly invoicing":
+    "Flotte & Leasing: 399 £/Monat — unbegrenzte Fahrzeuge, SLA-Dashboards, Freigabeworkflow, monatliche Sammelrechnung",
+  "Insurer / Enterprise: £1,299/mo — API dispatch, claim integration, evidence packs, custom SLAs and account management":
+    "Versicherer / Enterprise: 1.299 £/Monat — Disposition per API, Schadenanbindung, Nachweispakete, individuelle SLAs und Account-Management",
+  "Add-ons: white-label driver app £99/mo, SMS bundles, telematics feed integration, parts-supplier catalogue":
+    "Zusatzoptionen: White-Label-Fahrer-App 99 £/Monat, SMS-Pakete, Telematik-Anbindung, Teilelieferanten-Katalog",
+  "Never charged: job commission, dispatch take rate, per-lead fees, contact-unlock fees or renewal loading":
+    "Wird nie berechnet: Auftragsprovision, Dispositionsanteil, Lead-Gebühren, Kontaktfreischaltung oder Verlängerungszuschlag",
+  "Marketplace, dispatch board, workshop CRM, billing and reporting in one workspace.":
+    "Marktplatz, Dispositionsboard, Werkstatt-CRM, Abrechnung und Reporting in einem Arbeitsbereich.",
+  "Request rescue in two taps, see fixed price and live ETA, track the technician and pay in-app.":
+    "Pannenhilfe mit zwei Klicks anfragen, Festpreis und Live-Ankunftszeit sehen, Techniker verfolgen und in der App bezahlen.",
+  "Accept jobs, navigate, capture photo evidence, complete digital job cards and track earnings.":
+    "Aufträge annehmen, navigieren, Fotobelege erfassen, digitale Auftragskarten abschließen und Einnahmen verfolgen.",
+  "Multi-vehicle dispatch, authorisation limits, SLA and downtime reporting for fleets and leasing firms.":
+    "Disposition für viele Fahrzeuge, Freigabegrenzen, SLA- und Ausfallzeit-Reporting für Flotten und Leasinggesellschaften.",
+  "Insurer, telematics, DVLA lookup, parts-supplier, Stripe and Xero/QuickBooks integrations.":
+    "Integrationen für Versicherer, Telematik, DVLA-Abfrage, Teilelieferanten, Stripe und Xero/QuickBooks.",
+  "Driver / household": "Fahrer / Haushalt",
+  "Breaks down, requests help in the app, accepts a fixed price and watches the recovery unit approach in real time.":
+    "Bleibt liegen, fordert Hilfe in der App an, akzeptiert einen Festpreis und sieht das Abschleppfahrzeug in Echtzeit näher kommen.",
+  "Recovery operator": "Abschleppunternehmen",
+  "Receives nearby jobs instantly, completes a digital job card with photos and is paid within 48 hours at full value.":
+    "Erhält Aufträge in der Nähe sofort, schließt eine digitale Auftragskarte mit Fotos ab und wird innerhalb von 48 Stunden zum vollen Wert bezahlt.",
+  "Mobile mechanic": "Mobiler Mechaniker",
+  "Fills dead time with local diagnostic and repair jobs, quotes parts and labour in-app and invoices automatically.":
+    "Füllt Leerzeiten mit lokalen Diagnose- und Reparaturaufträgen, kalkuliert Teile und Arbeitszeit in der App und rechnet automatisch ab.",
+  "Garage / workshop manager": "Werkstattleiter",
+  "Manages technician rotas, inbound jobs, parts, quotes and customer histories from one CRM.":
+    "Verwaltet Technikerpläne, eingehende Aufträge, Teile, Angebote und Kundenhistorien in einem CRM.",
+  "Fleet manager": "Flottenmanager",
+  "Dispatches to any vehicle, controls spend with authorisation limits and reports on downtime and cost per asset.":
+    "Disponiert für jedes Fahrzeug, steuert Ausgaben über Freigabegrenzen und berichtet Ausfallzeiten und Kosten pro Fahrzeug.",
+  "Insurer / warranty handler": "Versicherer / Garantieabwickler",
+  "Dispatches via API against a claim, receives photo evidence packs and settles on one consolidated invoice.":
+    "Disponiert per API zu einem Schadenfall, erhält Foto-Nachweispakete und begleicht alles über eine Sammelrechnung.",
+  "Monitors quality, compliance and cross-sell with sister iTechLounge automotive brands.":
+    "Überwacht Qualität, Compliance und Cross-Selling mit den Automotive-Schwestermarken von iTechLounge.",
+  "Household brand, huge patrol fleet and insurer contracts":
+    "Bekannte Marke, sehr große Einsatzflotte und Versicherungsverträge",
+  "Annual memberships that jump on renewal, and most work is subcontracted to local operators anyway; we sell honest flat cover with no renewal loading, pay the operator the full job value and show the driver live ETA and price before they commit":
+    "Jahresmitgliedschaften, die bei Verlängerung stark steigen, und die Arbeit wird ohnehin an lokale Betriebe vergeben; wir verkaufen ehrlichen Pauschalschutz ohne Verlängerungszuschlag, zahlen dem Betrieb den vollen Auftragswert und zeigen dem Fahrer Ankunftszeit und Preis vor der Zusage",
+  "Scale, breakdown data and dealer/manufacturer partnerships":
+    "Größe, Pannendaten und Partnerschaften mit Händlern und Herstellern",
+  "Call-centre dispatch with opaque pricing and long waits at peak; our GPS marketplace routes to the nearest available vetted unit with a fixed price and a digital, photo-evidenced job record":
+    "Callcenter-Disposition mit undurchsichtigen Preisen und langen Wartezeiten zu Spitzenzeiten; unser GPS-Marktplatz vermittelt an das nächste verfügbare geprüfte Fahrzeug mit Festpreis und digital fotodokumentiertem Auftrag",
+  "Cheap cover priced on a subcontracted operator network":
+    "Günstiger Schutz, kalkuliert über ein Netzwerk beauftragter Betriebe",
+  "They clip 25–40% of each job and squeeze operator rates; we take 0% commission, so operators prioritise our jobs and drivers get faster attendance":
+    "Sie behalten 25–40 % jedes Auftrags und drücken die Sätze der Betriebe; wir nehmen 0 % Provision, daher priorisieren Betriebe unsere Aufträge und Fahrer werden schneller versorgt",
+  "Slick booking journey for scheduled repairs":
+    "Reibungsloser Buchungsablauf für geplante Reparaturen",
+  "Percentage commission on every job and repair-only — no emergency recovery, no cover subscription, no workshop CRM; we cover roadside to workshop on one flat subscription":
+    "Prozentuale Provision auf jeden Auftrag und nur Reparaturen — keine Notfallbergung, kein Schutzabo, kein Werkstatt-CRM; wir deckenn Straße bis Werkstatt in einem Pauschalabo ab",
+  "Established job-management tooling for recovery operators":
+    "Etablierte Auftragsverwaltung für Abschleppbetriebe",
+  "Software only, with no demand generation; we bundle the marketplace that fills the truck with the job-management system at a lower flat price":
+    "Nur Software ohne Nachfragegenerierung; wir bündeln den Marktplatz, der die Fahrzeuge füllt, mit der Auftragsverwaltung zu einem günstigeren Pauschalpreis",
+  "Free and familiar for local operators": "Kostenlos und gewohnt für lokale Betriebe",
+  "No audit trail, disputed damage claims and 30–60 day payment terms; we produce photo-evidenced digital job cards and pay in 48 hours":
+    "Kein Prüfpfad, strittige Schadensansprüche und Zahlungsfristen von 30–60 Tagen; wir erstellen fotodokumentierte digitale Auftragskarten und zahlen in 48 Stunden",
+  "Operator supply too thin for fast attendance in some regions":
+    "Zu wenige Betriebe für schnelle Einsätze in manchen Regionen",
+  "Launch region by region with a curated core of recovery operators and mobile mechanics under guaranteed job volume, and hold a partner-network fallback for overflow before advertising cover in that postcode.":
+    "Region für Region starten, mit einem kuratierten Kern aus Abschleppbetrieben und mobilen Mechanikern mit garantiertem Auftragsvolumen, und ein Partnernetz als Auffanglösung sichern, bevor Schutz in einer Postleitzahl beworben wird.",
+  "Cover subscriptions loss-making if callout frequency exceeds plan":
+    "Schutzabos werden unrentabel, wenn Einsatzhäufigkeit über Plan liegt",
+  "Price cover on real actuarial callout rates per vehicle age and mileage band, cap abuse with fair-use terms, and keep pay-per-job as the default so subscription is a margin choice, not a dependency.":
+    "Schutz auf Basis echter versicherungsmathematischer Einsatzquoten je Fahrzeugalter und Laufleistung kalkulieren, Missbrauch über Fair-Use-Bedingungen begrenzen und Einzelabrechnung als Standard beibehalten, sodass das Abo eine Margenoption und keine Abhängigkeit ist.",
+  "Operators taking repeat customers off-platform":
+    "Betriebe nehmen Stammkunden von der Plattform mit",
+  "Commission-free pricing removes the incentive; escrowed payouts, digital job cards, insurance-grade evidence and instant demand keep the workflow on-platform.":
+    "Die provisionsfreie Preisgestaltung nimmt den Anreiz; treuhänderische Auszahlungen, digitale Auftragskarten, versicherungsfähige Nachweise und sofortige Nachfrage halten den Prozess auf der Plattform.",
+  "Safety, insurance or licensing incident during a recovery":
+    "Sicherheits-, Versicherungs- oder Lizenzvorfall bei einer Bergung",
+  "Verified operator onboarding (goods-in-transit and public liability insurance, licences, DVSA and CPC checks) with renewal tracking, in-app incident logging, and a named compliance lead in the shared iTechLounge function.":
+    "Geprüftes Onboarding der Betriebe (Transport- und Betriebshaftpflichtversicherung, Lizenzen, DVSA- und CPC-Prüfungen) mit Fristenverfolgung, Vorfallerfassung in der App und benannter Compliance-Verantwortung in der gemeinsamen iTechLounge-Funktion.",
+  "Incumbents undercutting cover pricing": "Etablierte Anbieter unterbieten die Schutzpreise",
+  "Our margin comes from software subscriptions, not from clipping job value, so we can hold cover pricing at a level their subcontracting economics cannot match.":
+    "Unsere Marge kommt aus Software-Abos und nicht aus dem Abschöpfen von Auftragswerten, daher können wir Preise halten, die ihre Vergabeökonomie nicht erreicht.",
+  "Roadside EV and telematics shift changing the job mix":
+    "E-Auto- und Telematikwandel verändert den Auftragsmix",
+  "EV-trained operator tier, mobile charge and flatbed job types, and telematics-triggered dispatch built into the roadmap from launch.":
+    "Eine für E-Fahrzeuge geschulte Betriebsstufe, Auftragsarten für mobiles Laden und Plateauabschleppung sowie telematikgesteuerte Disposition sind ab Start in der Roadmap.",
+  "UK breakdown and roadside work today runs through three motoring clubs (AA, RAC, Green Flag) that sell annual cover and subcontract much of the actual attendance to ≈3,000 independent recovery firms at squeezed rates, plus call-centre dispatch networks that clip 25–40% of each job. Independent operators and mobile mechanics take work by phone and WhatsApp, record it on paper job sheets, and wait 30–60 days to be paid. Repair marketplaces cover scheduled jobs on commission but not emergencies, and fleets reconcile downtime manually across several suppliers.":
+    "Pannenhilfe in Großbritannien läuft heute über drei Automobilclubs (AA, RAC, Green Flag), die Jahresschutz verkaufen und einen großen Teil der Einsätze zu gedrückten Sätzen an ca. 3.000 unabhängige Abschleppbetriebe vergeben, dazu Callcenter-Netzwerke, die 25–40 % jedes Auftrags behalten. Unabhängige Betriebe und mobile Mechaniker nehmen Aufträge per Telefon und WhatsApp an, dokumentieren sie auf Papier und warten 30–60 Tage auf Zahlung. Reparaturmarktplätze deckenn geplante Aufträge gegen Provision ab, aber keine Notfälle, und Flotten rechnen Ausfallzeiten manuell über mehrere Anbieter ab.",
+  "≈41m vehicles on UK roads, ≈10m breakdown events a year, ≈16m households holding breakdown cover, and ≈3,000 recovery firms plus tens of thousands of mobile mechanics and independent garages — very little of it running end to end on a purpose-built platform.":
+    "Ca. 41 Mio. Fahrzeuge auf britischen Straßen, ca. 10 Mio. Pannen pro Jahr, ca. 16 Mio. Haushalte mit Pannenschutz sowie ca. 3.000 Abschleppbetriebe und Zehntausende mobile Mechaniker und unabhängige Werkstätten — nur ein kleiner Teil davon läuft durchgängig über eine dafür gebaute Plattform.",
+  "≈£1.2bn UK roadside assistance premiums plus ≈£21bn of independent repair and servicing spend. Most of the software value is currently captured as membership margin and dispatch commission taken out of operators' job value rather than paid as software.":
+    "Ca. 1,2 Mrd. £ Prämien für Pannenhilfe in Großbritannien plus ca. 21 Mrd. £ für unabhängige Reparatur und Wartung. Der Softwarewert wird derzeit überwiegend als Mitgliedschaftsmarge und Dispositionsprovision aus dem Auftragswert der Betriebe abgeschöpft statt als Software bezahlt.",
+
   // EVENTPLANR (Germany)
   "Plan it once. Everything in one place.": "Einmal planen. Alles an einem Ort.",
   "EVENTPLANR is the commission-free, full-service event platform for Germany: a public marketplace of verified venues and vendors, a complete planning workspace (tasks, budget, timeline, seating, documents), guest management with digital RSVP microsites, escrow-protected vendor payments, and a built-in CRM with calendar, quotes and invoices for vendors. Planner, vendor, guest and agency each get their own portal plus iOS and Android apps for on-the-day coordination. Live now as a test site at eventplanrde.itechlounge.co.uk; the real domain eventplanr.de follows.":
