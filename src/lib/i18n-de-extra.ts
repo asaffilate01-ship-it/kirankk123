@@ -1071,4 +1071,130 @@ export const DE_EXTRA: Record<string, string> = {
     "≈15 Mio. Besucher jährlich in Ägypten, darunter deutlich über 2 Mio. Nilkreuzfahrtgäste und rund 1 Mio. Briten pro Jahr. Mehrere Tausend lizenzierte Veranstalter, Kreuzfahrtschiffe, Hotels und Guides bedienen sie — die große Mehrheit ohne eigene spezialisierte Software.",
   "Egyptian tourism revenue exceeds €12bn annually, with the Nile cruise and Red Sea package market alone estimated above €1.5bn. Today the software-shaped share of that value is extracted as marketplace commission from suppliers' income rather than paid for as software — which is exactly the value NILEVELLA returns to them.":
     "Die ägyptischen Tourismuserlöse übersteigen 12 Mrd. € jährlich, allein der Markt für Nilkreuzfahrten und Rotmeer-Pakete wird auf über 1,5 Mrd. € geschätzt. Der softwareförmige Anteil dieses Werts wird heute als Marktplatzprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diesen Wert gibt NILEVELLA zurück.",
+  // RANGVAYA (UK / South Asia)
+  "Ancient roots. Living journeys.": "Alte Wurzeln. Lebendige Reisen.",
+  "RANGVAYA is the commission-free, full-service travel platform for South Asia: tours and multi-country holiday packages, activities, day trips and monument tickets, heritage hotels, atoll villas and mountain lodges, plus transfers, private drivers with cars, rail bookings and inter-country flights — all bookable in one basket across India, Pakistan, Iran, Sri Lanka, the Maldives, Nepal and Bangladesh. Prices are all-in and shown in GBP, EUR, USD or INR, with the site and guides in English, French, German and Spanish. Licensed local operators, heritage properties and vetted guides keep 100% of the fare; RANGVAYA charges them a flat monthly subscription instead of commission. Traveller apps carry itineraries, vouchers and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, payouts and 24/7 trip support. Live now as a test site at rangvaya.itechlounge.co.uk; the real domain rangvaya.com follows (RANGVAYA is a trading name of TraveNexa Ltd).":
+    "RANGVAYA ist die provisionsfreie Full-Service-Reiseplattform für Südasien: Touren und länderübergreifende Urlaubspakete, Aktivitäten, Tagesausflüge und Monumentstickets, Heritage-Hotels, Atoll-Villen und Berglodges, dazu Transfers, Privatfahrer mit Fahrzeug, Zugbuchungen und Flüge zwischen den Ländern — alles in einem Warenkorb buchbar für Indien, Pakistan, Iran, Sri Lanka, die Malediven, Nepal und Bangladesch. Preise sind All-in und werden in GBP, EUR, USD oder INR angezeigt, Website und Reiseführer auf Englisch, Französisch, Deutsch und Spanisch. Lizenzierte lokale Veranstalter, Heritage-Häuser und geprüfte Guides behalten 100 % des Reisepreises; RANGVAYA berechnet ihnen ein pauschales Monatsabo statt Provision. Die Reise-Apps halten Reiseverläufe, Voucher und Abholzeiten offline bereit, und ein vollständiges Anbieter-CRM steuert Anfragen, Verfügbarkeiten, Verträge, Auszahlungen und 24/7-Reisebetreuung. Aktuell live als Testseite unter rangvaya.itechlounge.co.uk; die echte Domain rangvaya.com folgt (RANGVAYA ist ein Handelsname der TraveNexa Ltd).",
+  "≈€30bn South Asia inbound tourism across seven countries, with India alone welcoming ~10m international arrivals and a fast-growing UK/EU diaspora and heritage-travel segment.":
+    "≈30 Mrd. € Incoming-Tourismus in Südasien über sieben Länder; allein Indien verzeichnet rund 10 Mio. internationale Ankünfte, dazu ein stark wachsendes Diaspora- und Heritage-Reisesegment aus UK und der EU.",
+  "UK and European culture, wellness and trekking travellers, honeymooners and families, diaspora travellers visiting family, festival and group/MICE buyers — plus the supply side: licensed tour operators, heritage hotels and lodges, transport and rail agents, dive and trekking outfits and vetted local guides.":
+    "Kultur-, Wellness- und Trekkingreisende aus UK und Europa, Hochzeitsreisende und Familien, Diaspora-Reisende mit Familienbesuch, Festival- sowie Gruppen-/MICE-Einkäufer — dazu die Angebotsseite: lizenzierte Reiseveranstalter, Heritage-Hotels und Lodges, Transport- und Bahnagenturen, Tauch- und Trekkinganbieter sowie geprüfte lokale Guides.",
+  "RANGVAYA exists because South Asia travel is still sold through layers of intermediaries. A Golden Triangle tour or a Sri Lankan rail itinerary can pass through a wholesaler, an OTA and a local ground agent before it reaches the traveller — each adding 15–25% and none owning the experience. Travellers cannot see what is actually included, cross-border routing and permits are guesswork, and once they land nobody is accountable. Local operators, heritage properties, drivers and guides earn a fraction of the ticket and have no software of their own: bookings arrive by WhatsApp, availability lives in notebooks and payment takes months. RANGVAYA replaces that chain with one platform — published all-in prices, verified licensed suppliers with current insurance and licence documents, digital vouchers and paperwork, and a flat subscription instead of commission so the value stays with the people delivering the journey.":
+    "RANGVAYA existiert, weil Südasienreisen noch über mehrere Zwischenhändler verkauft werden. Eine Tour durch das Goldene Dreieck oder eine Bahnreise in Sri Lanka läuft oft über einen Großhändler, eine OTA und eine lokale Agentur, bevor sie den Reisenden erreicht — jede Stufe schlägt 15–25 % auf und keine verantwortet das Erlebnis. Reisende sehen nicht, was wirklich enthalten ist, Routenführung über Grenzen und Genehmigungen bleiben Glückssache, und vor Ort ist niemand zuständig. Lokale Veranstalter, Heritage-Häuser, Fahrer und Guides erhalten nur einen Bruchteil des Preises und haben keine eigene Software: Buchungen kommen per WhatsApp, Verfügbarkeiten stehen im Notizbuch, Zahlungen dauern Monate. RANGVAYA ersetzt diese Kette durch eine Plattform — veröffentlichte All-in-Preise, geprüfte lizenzierte Anbieter mit aktuellen Versicherungs- und Lizenznachweisen, digitale Voucher und Unterlagen sowie ein Pauschalabo statt Provision, damit der Wert bei denen bleibt, die die Reise leisten.",
+  "One platform for the whole South Asia journey, with no commission taken from anyone. Travellers search tours, multi-country packages, activities, stays, transfers, rail and inter-country flights side by side, see the true all-in price in their own currency and language, pay a deposit with a clear cancellation policy, and carry every voucher, pickup time and planner contact offline in the app. Every trip has a named planner and round-the-clock support, so a delayed sleeper train or a closed mountain pass gets fixed while the traveller is still on the road. Suppliers get a real operating system — inventory and availability, rate and allocation management, enquiry pipeline and CRM, contracts and licence/insurance tracking, digital vouchers, guide and driver rostering, reviews and same-cycle payouts — for a flat monthly fee with a two-month free trial. Free country and city guides, cross-border routing, visa and best-time-to-travel advice turn browsing into booking, and the shared iTechLounge stack means it launches fast at a fraction of standalone cost.":
+    "Eine Plattform für die gesamte Südasienreise — ohne Provision für irgendjemanden. Reisende durchsuchen Touren, Länderpakete, Aktivitäten, Unterkünfte, Transfers, Bahn und Flüge zwischen den Ländern nebeneinander, sehen den echten All-in-Preis in eigener Währung und Sprache, zahlen eine Anzahlung mit klarer Storno-Regel und tragen jeden Voucher, jede Abholzeit und den Planerkontakt offline in der App. Jede Reise hat einen namentlichen Reiseplaner und Rund-um-die-Uhr-Betreuung, sodass ein verspäteter Nachtzug oder ein geschlossener Pass noch unterwegs gelöst wird. Anbieter erhalten ein echtes Betriebssystem — Bestand und Verfügbarkeit, Raten- und Kontingentsteuerung, Anfragepipeline und CRM, Verträge sowie Lizenz-/Versicherungsnachweise, digitale Voucher, Guide- und Fahrerplanung, Bewertungen und Auszahlungen im selben Zyklus — für eine pauschale Monatsgebühr mit zwei Monaten Gratis-Testphase. Kostenlose Länder- und Städteführer, Grenzroutenplanung, Visa- und Reisezeit-Hinweise machen aus Stöbern Buchungen, und der gemeinsame iTechLounge-Stack ermöglicht einen schnellen Start zu einem Bruchteil der Einzelkosten.",
+  "Full South Asia catalogue: tours, multi-country packages, activities, stays, transfers, rail and flights in one basket":
+    "Vollständiger Südasien-Katalog: Touren, Länderpakete, Aktivitäten, Unterkünfte, Transfers, Bahn und Flüge in einem Warenkorb",
+  "Zero commission on any booking — operators, hotels, drivers and guides keep 100% of the fare":
+    "Null Provision auf jede Buchung — Veranstalter, Hotels, Fahrer und Guides behalten 100 % des Preises",
+  "Seven countries: India, Pakistan, Iran, Sri Lanka, the Maldives, Nepal and Bangladesh":
+    "Sieben Länder: Indien, Pakistan, Iran, Sri Lanka, Malediven, Nepal und Bangladesch",
+  "All-in pricing in GBP, EUR, USD or INR; site and guides in English, French, German and Spanish":
+    "All-in-Preise in GBP, EUR, USD oder INR; Website und Reiseführer auf Englisch, Französisch, Deutsch und Spanisch",
+  "Multi-country routing with inter-country flights, rail and land crossings handled for you":
+    "Länderübergreifende Routenplanung inklusive Flügen, Bahn und Landgrenzen — für Sie organisiert",
+  "Licensed operators and guides vetted in person, with insurance and licence documents kept current":
+    "Persönlich geprüfte lizenzierte Veranstalter und Guides mit stets aktuellen Versicherungs- und Lizenznachweisen",
+  "Deposit now, balance before travel, with a clear written cancellation policy on every booking":
+    "Anzahlung jetzt, Restbetrag vor Reiseantritt — mit klarer schriftlicher Storno-Regel bei jeder Buchung",
+  "Named trip planner plus 24/7 in-app support while travelling":
+    "Namentlicher Reiseplaner plus 24/7-Support in der App während der Reise",
+  "Offline itineraries, vouchers and pickup reminders on iOS and Android":
+    "Offline-Reiseverläufe, Voucher und Abhol-Erinnerungen auf iOS und Android",
+  "14 city guides and 7 country guides: visas and permits, best time to travel, money, SIM cards and safety":
+    "14 Städte- und 7 Länderführer: Visa und Genehmigungen, beste Reisezeit, Geld, SIM-Karten und Sicherheit",
+  "Supplier CRM: availability, rates, enquiries, contracts, rostering, reviews and same-cycle payouts":
+    "Anbieter-CRM: Verfügbarkeiten, Raten, Anfragen, Verträge, Einsatzplanung, Bewertungen und Auszahlungen im selben Zyklus",
+  "Trekking, wellness and festival programmes: Annapurna and Karakoram routes, Ayurveda retreats, Holi, Vesak, Nowruz and Diwali":
+    "Trekking-, Wellness- und Festivalprogramme: Annapurna- und Karakorum-Routen, Ayurveda-Retreats, Holi, Vesak, Nouruz und Diwali",
+  "Travellers: free — no booking fee, no service fee, all-in prices":
+    "Reisende: kostenlos — keine Buchungsgebühr, keine Servicegebühr, All-in-Preise",
+  "Operator Starter — £19/mo: one operator profile, up to 25 listings, enquiries and vouchers":
+    "Operator Starter — 19 £/Monat: ein Veranstalterprofil, bis zu 25 Angebote, Anfragen und Voucher",
+  "Operator Pro — £79/mo: unlimited listings, availability and rate management, CRM pipeline, driver and guide rostering":
+    "Operator Pro — 79 £/Monat: unbegrenzte Angebote, Verfügbarkeits- und Ratensteuerung, CRM-Pipeline, Fahrer- und Guide-Planung",
+  "Property / Lodge — £49/mo per property: rooms, allocations, seasonal rates and direct booking page":
+    "Property / Lodge — 49 £/Monat pro Haus: Zimmer, Kontingente, Saisonraten und Direktbuchungsseite",
+  "Transport & Rail Agent — £39/mo: transfer and car-with-driver inventory, dispatch and driver app seats":
+    "Transport & Bahnagentur — 39 £/Monat: Transfer- und Fahrzeug-mit-Fahrer-Bestand, Disposition und Fahrer-App-Zugänge",
+  "Agency / Multi-country DMC — £249/mo: multiple brands and countries, contracts, consolidated payouts, API access":
+    "Agentur / Multi-Country-DMC — 249 £/Monat: mehrere Marken und Länder, Verträge, konsolidierte Auszahlungen, API-Zugang",
+  "Two-month free trial on every supplier plan; no commission and no lock-in contract at any tier":
+    "Zwei Monate gratis in jedem Anbieter-Tarif; keine Provision und keine Vertragsbindung in keiner Stufe",
+  "Search and book tours, packages, activities, stays, transfers and flights with live all-in prices, real photography and destination guides.":
+    "Touren, Pakete, Aktivitäten, Unterkünfte, Transfers und Flüge mit echten All-in-Preisen, echter Fotografie und Reiseführern suchen und buchen.",
+  "Offline itinerary, vouchers and pickup reminders, saved trips and live chat with your trip planner.":
+    "Offline-Reiseverlauf, Voucher und Abhol-Erinnerungen, gespeicherte Reisen und Live-Chat mit dem Reiseplaner.",
+  "Same offline itinerary, vouchers, reminders and planner chat for Android travellers.":
+    "Derselbe Offline-Reiseverlauf, Voucher, Erinnerungen und Planer-Chat für Android-Reisende.",
+  "Operators, hotels and transport partners manage listings, availability, rates, enquiries, contracts and payouts.":
+    "Veranstalter, Hotels und Transportpartner verwalten Angebote, Verfügbarkeiten, Raten, Anfragen, Verträge und Auszahlungen.",
+  "Assigned jobs, passenger manifests, pickup navigation, check-ins and photo proof of delivery.":
+    "Zugewiesene Aufträge, Passagierlisten, Abholnavigation, Check-ins und Fotonachweise.",
+  "Internal trip planners build quotes, manage the enquiry pipeline, handle exceptions and run 24/7 support.":
+    "Interne Reiseplaner erstellen Angebote, steuern die Anfragepipeline, lösen Ausnahmen und betreiben den 24/7-Support.",
+  "Connects supplier inventory, channel managers, rail and flight consolidators and payment providers.":
+    "Verbindet Anbieterbestände, Channel-Manager, Bahn- und Flugkonsolidierer sowie Zahlungsdienstleister.",
+  "Books a single afternoon or a three-week multi-country journey at an all-in price and carries it offline in the app.":
+    "Bucht einen einzelnen Nachmittag oder eine dreiwöchige Mehrländerreise zum All-in-Preis und hat alles offline in der App.",
+  "Diaspora traveller": "Diaspora-Reisende",
+  "Arranges family visits, weddings and festival travel with paperwork, permits and transport handled.":
+    "Organisiert Familienbesuche, Hochzeiten und Festivalreisen inklusive Unterlagen, Genehmigungen und Transport.",
+  "Local tour operator": "Lokaler Reiseveranstalter",
+  "Lists tours and treks, manages availability and gets paid the full fare on the next payout cycle.":
+    "Listet Touren und Treks, steuert Verfügbarkeiten und erhält den vollen Preis im nächsten Auszahlungszyklus.",
+  "Heritage hotel / lodge": "Heritage-Hotel / Lodge",
+  "Sells rooms and packages commission-free with allocations and seasonal rates in one console.":
+    "Verkauft Zimmer und Pakete provisionsfrei, mit Kontingenten und Saisonraten in einer Konsole.",
+  "Transport and rail partner": "Transport- und Bahnpartner",
+  "Takes transfer, car-with-driver and rail jobs and dispatches them through the driver app.":
+    "Übernimmt Transfer-, Fahrzeug-mit-Fahrer- und Bahnaufträge und disponiert sie über die Fahrer-App.",
+  "Receives assigned days, manifests and traveller notes, and builds a public reviewed profile.":
+    "Erhält zugewiesene Tage, Teilnehmerlisten und Reisendenhinweise und baut ein öffentlich bewertetes Profil auf.",
+  "Trip planner (internal)": "Reiseplaner (intern)",
+  "Quotes, routes multi-country trips, resolves in-trip problems and owns quality control.":
+    "Erstellt Angebote, plant Mehrländerreisen, löst Probleme unterwegs und verantwortet die Qualitätskontrolle.",
+  "Group / MICE organiser": "Gruppen-/MICE-Organisator",
+  "Builds group itineraries with rooming lists, consolidated invoicing and one point of contact.":
+    "Erstellt Gruppenprogramme mit Zimmerlisten, konsolidierter Fakturierung und einem Ansprechpartner.",
+  "Enormous inventory and paid-search dominance": "Riesiger Bestand und Dominanz in der bezahlten Suche",
+  "They take 15–25% commission and sell beds, not journeys; we take zero commission, price all-in and route whole multi-country trips":
+    "Sie nehmen 15–25 % Provision und verkaufen Betten, keine Reisen; wir nehmen null Provision, kalkulieren All-in und planen ganze Mehrländerreisen",
+  "Deep activity catalogue and instant confirmation": "Tiefer Aktivitätenkatalog und Sofortbestätigung",
+  "20–30% commission and no aftercare; our operators keep 100% and every traveller has a named planner and 24/7 support":
+    "20–30 % Provision und keine Nachbetreuung; unsere Veranstalter behalten 100 % und jeder Reisende hat einen namentlichen Planer und 24/7-Support",
+  "Trust, bonding and retail presence": "Vertrauen, Insolvenzabsicherung und Filialpräsenz",
+  "Fixed packages and inflated pricing; we offer tailor-made multi-country routing at supplier-direct prices":
+    "Starre Pakete und aufgeblähte Preise; wir bieten maßgeschneiderte Mehrländerrouten zu Anbieter-Direktpreisen",
+  "Specialist South Asia agencies": "Spezialisierte Südasien-Agenturen",
+  "Genuine regional expertise and relationships": "Echte regionale Expertise und Beziehungen",
+  "They run on email and spreadsheets; we give the same expertise a modern platform, apps and CRM they cannot fund alone":
+    "Sie arbeiten mit E-Mail und Tabellen; wir geben derselben Expertise eine moderne Plattform, Apps und ein CRM, die sie allein nicht finanzieren könnten",
+  "Local ground agents / WhatsApp bookings": "Lokale Agenturen / WhatsApp-Buchungen",
+  "Cheapest and personally recommended": "Am günstigsten und persönlich empfohlen",
+  "No contract, no cancellation policy and no recourse; we keep the local operator but add escrowed payments, vouchers and accountability":
+    "Kein Vertrag, keine Storno-Regel, kein Rechtsweg; wir behalten den lokalen Veranstalter, ergänzen aber Treuhandzahlungen, Voucher und Verantwortlichkeit",
+  "Airbnb / direct DIY booking": "Airbnb / Selbstbuchung",
+  "Six websites, no permits, no cross-border routing; we assemble the whole journey in one basket with paperwork prepared":
+    "Sechs Websites, keine Genehmigungen, keine Grenzroutenplanung; wir stellen die ganze Reise in einem Warenkorb zusammen — Unterlagen vorbereitet",
+  "Slower supply-side onboarding across seven countries": "Langsameres Anbieter-Onboarding in sieben Ländern",
+  "Concierge onboarding country by country, launch with a curated core of vetted operators per corridor and reuse shared group sales capacity.":
+    "Concierge-Onboarding Land für Land, Start mit einem kuratierten Kern geprüfter Veranstalter pro Korridor und Nutzung der gemeinsamen Vertriebskapazität der Gruppe.",
+  "Traveller trust in a new brand for high-value trips": "Vertrauen der Reisenden in eine neue Marke bei hochwertigen Reisen",
+  "Licensed and insured suppliers only, escrowed deposits, written cancellation policies, verified reviews and a named planner on every booking.":
+    "Nur lizenzierte und versicherte Anbieter, Anzahlungen auf Treuhandbasis, schriftliche Storno-Regeln, verifizierte Bewertungen und ein namentlicher Planer bei jeder Buchung.",
+  "Political, safety or border disruption in a country": "Politische, sicherheitsbezogene oder grenzbedingte Störungen in einem Land",
+  "Seven-country spread, re-routing playbooks, flexible date change terms and shared legal/compliance monitoring per jurisdiction.":
+    "Streuung über sieben Länder, Umroutungs-Playbooks, flexible Umbuchungsbedingungen und gemeinsames Rechts-/Compliance-Monitoring je Rechtsraum.",
+  "Guide-led SEO across 21 country and city guides, diaspora community channels and cross-sell from sister travel brands rather than paid-only growth.":
+    "SEO über 21 Länder- und Städteführer, Diaspora-Community-Kanäle und Cross-Selling der Schwester-Reisemarken statt reinem Paid-Wachstum.",
+  "Payment, FX and payout complexity": "Komplexität bei Zahlungen, Währungen und Auszahlungen",
+  "Multi-currency collection with local payout rails, same-cycle supplier settlement and shared finance operations across the group.":
+    "Mehrwährungs-Inkasso mit lokalen Auszahlungswegen, Anbieterabrechnung im selben Zyklus und gemeinsame Finanzabläufe in der Gruppe.",
+  "Today South Asia travel is sold either by global OTAs that take 15–30% and only sell beds or single activities, by legacy tour operators selling fixed high-margin packages, or by local ground agents working over WhatsApp and email with no contract, no cancellation policy and no digital record. Nobody assembles a multi-country journey — flights, rail, drivers, permits, stays and guides — in one place at an all-in price, and no local operator has software of its own.":
+    "Heute werden Südasienreisen entweder von globalen OTAs verkauft, die 15–30 % nehmen und nur Betten oder einzelne Aktivitäten anbieten, von klassischen Reiseveranstaltern mit starren Hochmargenpaketen oder von lokalen Agenturen per WhatsApp und E-Mail — ohne Vertrag, ohne Storno-Regel und ohne digitale Dokumentation. Niemand stellt eine Mehrländerreise — Flüge, Bahn, Fahrer, Genehmigungen, Unterkünfte und Guides — an einem Ort zum All-in-Preis zusammen, und kein lokaler Veranstalter hat eigene Software.",
+  "Tens of millions of international arrivals a year across the seven countries plus a large UK/EU diaspora travel flow, yet only a small share is booked on a purpose-built regional platform; most operators still run on notebooks and messaging apps.":
+    "Zweistellige Millionenzahlen internationaler Ankünfte pro Jahr in den sieben Ländern plus ein großer Diaspora-Reisestrom aus UK und der EU — dennoch wird nur ein kleiner Teil über eine spezialisierte Regionalplattform gebucht; die meisten Veranstalter arbeiten weiter mit Notizbüchern und Messenger-Apps.",
+  "≈€30bn South Asia inbound tourism. Most of that value currently sits with intermediaries and OTA commission rather than with the operators delivering the journeys — the margin RANGVAYA returns to suppliers while charging a flat subscription.":
+    "≈30 Mrd. € Incoming-Tourismus in Südasien. Der größte Teil dieses Werts liegt heute bei Zwischenhändlern und OTA-Provisionen statt bei den Veranstaltern, die die Reisen durchführen — genau diese Marge gibt RANGVAYA den Anbietern zurück und berechnet stattdessen ein Pauschalabo.",
 };
