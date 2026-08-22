@@ -1508,7 +1508,7 @@ export const EXTRA_BRANDS: Brand[] = [
       { name: "RANGVAYA Traveller App", kind: "iOS", purpose: "Offline itinerary, vouchers and pickup reminders, saved trips and live chat with your trip planner." },
       { name: "RANGVAYA Traveller App", kind: "Android", purpose: "Same offline itinerary, vouchers, reminders and planner chat for Android travellers." },
       { name: "RANGVAYA Partner Console", kind: "SaaS", purpose: "Operators, hotels and transport partners manage listings, availability, rates, enquiries, contracts and payouts." },
-      { name: "RANGVAYA Guide & Driver App", kind: "Mobile", purpose: "Assigned jobs, passenger manifests, pickup navigation, check-ins and photo proof of delivery." },
+      { name: "RANGVAYA Guide & Driver App", kind: "Android", purpose: "Assigned jobs, passenger manifests, pickup navigation, check-ins and photo proof of delivery." },
       { name: "RANGVAYA Planner CRM", kind: "SaaS", purpose: "Internal trip planners build quotes, manage the enquiry pipeline, handle exceptions and run 24/7 support." },
       { name: "RANGVAYA Booking API", kind: "API", purpose: "Connects supplier inventory, channel managers, rail and flight consolidators and payment providers." },
     ],
