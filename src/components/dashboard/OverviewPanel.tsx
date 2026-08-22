@@ -94,6 +94,9 @@ export function OverviewPanel() {
           {t("Total raise:")} <b>{fmtEURk(totalFunding)}</b> {t("for")}{" "}
           <b>{fmtPct(g.investorEquityPct)} {t("equity")}</b> {t("and")}{" "}
           <b>{fmtPct(g.investorProfitSharePct)} {t("of net profit after all costs and taxes")}</b>.{" "}
+          {t("Investors may buy the whole round or take it in tranches — each")}{" "}
+          <b>{fmtEURk(g.trancheSize)}</b> {t("tranche buys")} <b>{fmtPct(equityPerTranche, 2)}</b>{" "}
+          {t("equity and the same share of profit")}.{" "}
           {t("Paid as")} <b>{fmtEURk(g.upfrontFunding)}</b> {t("upfront, then")}{" "}
           <b>{fmtEURk(g.monthlyFunding)}</b> {t("per month over")} {g.fundingMonths}{" "}
           {t("months.")}
@@ -101,8 +104,6 @@ export function OverviewPanel() {
         <ul className="space-y-1 text-muted-foreground">
           {[
             `${g.trancheCount} × ${fmtEURk(g.trancheSize)} tranches — each tranche = ${fmtPct(equityPerTranche, 2)} equity and ${fmtPct(equityPerTranche, 2)} of net profit. Investors may buy more than one tranche.`,
-            `Each tranche is funded ${fmtEURk(10000)} at signing, with the remaining ${fmtEURk(40000)} paid in 12 equal monthly instalments.`,
-            "5 brands launch per month, with all 60 live by month 12. Each brand would cost ~€250k standalone; shared legal & compliance, finance, tech, admin, sales & marketing and office overheads cut that dramatically and keep improving with scale.",
             "Funds are spent on finalising the native apps, legal & compliance, then sales & marketing — the core tech is already built.",
             "All shareholdings are legally recorded by lawyers under the relevant country law. No further investment rounds are planned.",
             "Investors can sell their equity, with first refusal to the company; valuation is set independently by auditors for full transparency.",
