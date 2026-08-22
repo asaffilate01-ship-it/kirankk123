@@ -11,8 +11,9 @@ import {
 import { DE } from "./i18n-de";
 import { DE_EXTRA } from "./i18n-de-extra";
 import { DE_OMNIQORA } from "./i18n-de-omniqora";
+import { DE_KIEZIO } from "./i18n-de-kiezio";
 
-const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA };
+const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO };
 
 export type Lang = "en" | "de";
 
