@@ -1759,10 +1759,6 @@ export const DE_EXTRA: Record<string, string> = {
     "Regionale Abopreise, damit französische Anbieter lokale Tarife zahlen und niemals Buchungsprovision",
 
   // HEXARÊVE pricing
-  "Travellers: free — no booking fee, no service fee, all-in prices at live exchange rates":
-    "Reisende: kostenlos — keine Buchungsgebühr, keine Servicegebühr, All-in-Preise zu Live-Wechselkursen",
-  "Supplier subscriptions are region-priced by purchasing power, in local currency, with a two-month free trial and no commission at any tier":
-    "Anbieter-Abos werden nach Kaufkraft regional bepreist, in lokaler Währung, mit zwei Monaten kostenlos und ohne Provision in jeder Stufe",
   "Tier 1 — France / EU (local suppliers): Guide or chef €19/mo · Villa & château Starter €29/mo · Property Pro (up to 10 units) €89/mo · Campsite €99/mo · Activity & boat operator €45/mo · Transfer & car hire €55/mo · Agency / DMC €299/mo":
     "Stufe 1 — Frankreich / EU (lokale Anbieter): Guide oder Koch 19 €/Mon. · Villa & Schloss Starter 29 €/Mon. · Property Pro (bis 10 Einheiten) 89 €/Mon. · Campingplatz 99 €/Mon. · Aktivitäts- und Bootsanbieter 45 €/Mon. · Transfer & Mietwagen 55 €/Mon. · Agentur / DMC 299 €/Mon.",
   "Tier 2 — UK & Switzerland: Guide or chef £19/mo · Villa Starter £29/mo · Property Pro £89/mo · Campsite £99/mo · Activity & boat £39/mo · Transfer & car hire £49/mo · Agency / multi-brand £299/mo":
@@ -1783,8 +1779,6 @@ export const DE_EXTRA: Record<string, string> = {
     "Geobasierter Shop in EN/FR/DE/AR mit Währungsumschaltung: Touren, Tickets, Unterkünfte, Campingplätze, Boote, Köche, Transport und Pakete zu Live-All-in-Preisen.",
   "Offline vouchers, villa addresses and door codes, pickup times, trip reminders, wishlists and chat with your named trip planner.":
     "Offline-Voucher, Villenadressen und Türcodes, Abholzeiten, Reiseerinnerungen, Merklisten und Chat mit dem persönlichen Reiseplaner.",
-  "Same offline wallet, reminders and planner chat for Android travellers, installable as a PWA from the web.":
-    "Dasselbe Offline-Wallet, Erinnerungen und Planer-Chat für Android-Reisende, aus dem Web als PWA installierbar.",
   "Châteaux, villas, hotels, campsites, activity and boat operators and transfer firms manage availability, seasonal rates, enquiries, contracts, compliance documents and payouts.":
     "Schlösser, Villen, Hotels, Campingplätze, Aktivitäts- und Bootsanbieter sowie Transferfirmen verwalten Verfügbarkeiten, Saisonpreise, Anfragen, Verträge, Compliance-Dokumente und Auszahlungen.",
   "Assigned tours, transfers and services, guest manifests, pickup navigation, check-ins and photo proof of delivery.":
@@ -1797,7 +1791,6 @@ export const DE_EXTRA: Record<string, string> = {
     "Verbindet Anbieterbestände, Channel-Manager, Fähr-, Bahn- und Flugdaten sowie Mehrwährungs-Zahlungsanbieter.",
 
   // HEXARÊVE user types
-  "City-break and culture traveller": "Städtereise- und Kulturreisende",
   "Books Paris days, Loire châteaux and museum tickets at one all-in price and carries them offline.":
     "Bucht Paris-Tage, Loire-Schlösser und Museumstickets zu einem All-in-Preis und hat sie offline dabei.",
   "Villa / château family group": "Familiengruppe in Villa / Schloss",
@@ -1848,8 +1841,6 @@ export const DE_EXTRA: Record<string, string> = {
     "Eigene Leistungsabwicklung vor Ort und Objektbeziehungen",
   "They add a margin layer and run on e-mail; we sell them the software instead and let travellers reach the supplier price directly":
     "Sie fügen eine Margenebene hinzu und arbeiten per E-Mail; wir verkaufen ihnen stattdessen die Software und lassen Reisende direkt zum Anbieterpreis kommen",
-  "No availability control, no vouchers, no reviews and slow payment; the Partner Console replaces the notebook and pays out the same cycle":
-    "Keine Verfügbarkeitssteuerung, keine Voucher, keine Bewertungen und langsame Zahlung; die Partner-Konsole ersetzt das Notizbuch und zahlt im selben Zyklus aus",
 
   // HEXARÊVE risks
   "Slower supply-side onboarding across eight French regions":
