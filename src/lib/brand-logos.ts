@@ -62,7 +62,7 @@ import iberavivaLogoV2 from "@/assets/iberaviva-logo-v2.png.asset.json";
 import eventplanrLogoDe from "@/assets/eventplanr-logo-de.png.asset.json";
 import eventplanrLogoEn from "@/assets/eventplanr-logo-en.png.asset.json";
 import cirqivaLogo from "@/assets/cirqiva-logo.png.asset.json";
-import omniqoraLogo from "@/assets/omniqora-logo.png.asset.json";
+import omniqoraLogo from "@/assets/omniqora-logo.webp";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -91,7 +91,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   saathera: saatheraLogo.url,
   fleetsora: fleetsoraLogo.url,
   immoviq: immoviqLogo.url,
-  omniqora: omniqoraLogo.url,
+  omniqora: omniqoraLogo,
   unipathway: unipathwayLogo.url,
   "haccora-uk": haccoraUkLogo.url,
   bidlumo: bidlumoLogo.url,
