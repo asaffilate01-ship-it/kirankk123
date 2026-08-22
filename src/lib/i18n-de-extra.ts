@@ -1154,7 +1154,7 @@ export const DE_EXTRA: Record<string, string> = {
   "Trip planner (internal)": "Reiseplaner (intern)",
   "Quotes, routes multi-country trips, resolves in-trip problems and owns quality control.":
     "Erstellt Angebote, plant Mehrländerreisen, löst Probleme unterwegs und verantwortet die Qualitätskontrolle.",
-  "Group / MICE organiser": "Gruppen-/MICE-Organisator",
+  
   "Builds group itineraries with rooming lists, consolidated invoicing and one point of contact.":
     "Erstellt Gruppenprogramme mit Zimmerlisten, konsolidierter Fakturierung und einem Ansprechpartner.",
   "Enormous inventory and paid-search dominance": "Riesiger Bestand und Dominanz in der bezahlten Suche",
