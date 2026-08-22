@@ -1709,4 +1709,170 @@ export const DE_EXTRA: Record<string, string> = {
     "Ca. 55 Mio. internationale Ankünfte pro Jahr, bedient von Zehntausenden Hotels, lizenzierten Guides, Boots- und Ballonbetreibern, Transferfirmen und Kliniken — die große Mehrheit ohne eigene, dafür gebaute Software.",
   "≈$55bn Turkish tourism receipts a year, of which medical and dental tourism alone exceeds $2bn. Most of the software-shaped share of that value is currently extracted as OTA, broker and wholesaler commission from suppliers' income rather than paid for as software — exactly the margin BOSPORIVA returns to Turkish operators while charging a flat, region-priced subscription.":
     "Ca. 55 Mrd. $ Tourismuseinnahmen der Türkei pro Jahr, davon allein über 2 Mrd. $ Medizin- und Dentaltourismus. Der softwareförmige Anteil dieses Werts wird heute überwiegend als OTA-, Vermittler- und Veranstalterprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diese Marge gibt BOSPORIVA an türkische Betriebe zurück und berechnet stattdessen ein pauschales, regional bepreistes Abo.",
+
+  // HEXARÊVE (France, UK-region brand)
+  "France, beautifully discovered.":
+    "Frankreich, wunderschön entdeckt.",
+  "HEXARÊVE is the commission-free, full-service travel platform for France: Paris and city tours, Provence and Riviera days, Loire châteaux, Normandy history, Bordeaux and Burgundy wine tours, Alps mountain weeks, attraction tickets, boat trips and yacht charters, beach and adventure days, cycling, scuba, markets and food halls, plus châteaux, villas, hotels, apartments and campsites, private chefs, licensed guides, childcare and nannies, spa and wellness, and destination weddings. Eight destination regions, everything a French holiday needs — getting there (ferries, Eurostar and TGV, driving to France, car hire) and getting around — with the shop and guides in English, French, German and Arabic and all-in prices in GBP, EUR, USD or CHF at live rates. Every château, villa, driver, chef and guide is identity-checked, licence-checked and insurance-checked before activation and keeps 100% of the fare; HEXARÊVE charges them a flat monthly subscription instead of commission, priced by region. Traveller apps on iOS, Android and PWA hold vouchers, addresses and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, compliance documents, payouts and support. Live now as a test site at hexareve.itechlounge.co.uk; the real domain hexareve.com follows (HEXARÊVE is a trading name of TraveNexia Ltd).":
+    "HEXARÊVE ist die provisionsfreie Full-Service-Reiseplattform für Frankreich: Paris- und Städtetouren, Tage in der Provence und an der Riviera, Loire-Schlösser, Normandie-Geschichte, Weintouren in Bordeaux und Burgund, Bergwochen in den Alpen, Attraktionstickets, Bootstouren und Yachtcharter, Strand- und Abenteuertage, Radfahren, Tauchen, Märkte und Markthallen, dazu Schlösser, Villen, Hotels, Apartments und Campingplätze, Privatköche, lizenzierte Guides, Kinderbetreuung und Nannies, Spa und Wellness sowie Hochzeiten in Frankreich. Acht Zielregionen, alles was ein Frankreich-Urlaub braucht — Anreise (Fähren, Eurostar und TGV, Autofahrt nach Frankreich, Mietwagen) und Fortbewegung vor Ort — mit Shop und Reiseführern auf Englisch, Französisch, Deutsch und Arabisch und All-in-Preisen in GBP, EUR, USD oder CHF zu Live-Kursen. Jedes Schloss, jede Villa, jeder Fahrer, Koch und Guide wird vor der Freischaltung auf Identität, Lizenz und Versicherung geprüft und behält 100% des Reisepreises; HEXARÊVE berechnet stattdessen ein pauschales, regional bepreistes Monatsabo. Reise-Apps für iOS, Android und PWA halten Voucher, Adressen und Abholzeiten offline bereit, und ein vollständiges Anbieter-CRM steuert Anfragen, Verfügbarkeit, Verträge, Compliance-Dokumente, Auszahlungen und Support. Aktuell live als Testseite unter hexareve.itechlounge.co.uk; die echte Domain hexareve.com folgt (HEXARÊVE ist ein Handelsname der TraveNexia Ltd).",
+  "≈100m annual visitors to France, the world's most visited country, with ≈€60bn of international tourism receipts a year; French holiday-rental, campsite and château-stay supply alone runs to hundreds of thousands of properties.":
+    "Ca. 100 Mio. Besucher pro Jahr in Frankreich, dem meistbesuchten Land der Welt, mit ca. 60 Mrd. € internationalen Tourismuseinnahmen jährlich; allein das Angebot an Ferienunterkünften, Campingplätzen und Schlossaufenthalten umfasst Hunderttausende Objekte.",
+  "UK, German, US, Gulf and Swiss travellers to France — couples, families, wine and gastronomy buyers, ski and Alps travellers, wedding and celebration groups, campsite and road-trip families — plus the supply side: châteaux, villas, boutique hotels, apartments, campsites, private drivers and taxi firms, licensed guides, chefs and caterers, childcare providers, activity and boat operators, spas and wedding planners.":
+    "Reisende aus Großbritannien, Deutschland, den USA, der Golfregion und der Schweiz — Paare, Familien, Wein- und Gourmetreisende, Ski- und Alpenurlauber, Hochzeits- und Feiergruppen, Camping- und Roadtrip-Familien — plus die Angebotsseite: Schlösser, Villen, Boutiquehotels, Apartments, Campingplätze, Privatfahrer und Taxiunternehmen, lizenzierte Guides, Köche und Caterer, Kinderbetreuung, Aktivitäts- und Bootsanbieter, Spas und Hochzeitsplaner.",
+  "HEXARÊVE exists because France is the world's most visited country and is still sold through the most expensive distribution chain in travel. A château week, a Provence villa, a Riviera boat day or a Bordeaux wine tour typically passes through a local agency, a wholesaler and an OTA before a traveller sees a price — each adding 15–30%, so the family that owns the château keeps a fraction of what the guest paid. Travellers cannot tell which villa is legally registered, which driver is insured, or which guide is actually licensed, and the small French operators who deliver the holiday run on e-mail, phone calls and paper. HEXARÊVE joins verified French supply, all-in pricing, digital paperwork and same-cycle payouts in one platform and charges the supplier a flat subscription instead of commission.":
+    "HEXARÊVE gibt es, weil Frankreich das meistbesuchte Land der Welt ist und dennoch über die teuerste Vertriebskette der Reisebranche verkauft wird. Eine Schlosswoche, eine Villa in der Provence, ein Bootstag an der Riviera oder eine Weintour in Bordeaux läuft meist über eine lokale Agentur, einen Reiseveranstalter und ein OTA, bevor der Reisende einen Preis sieht — jede Stufe schlägt 15–30% auf, sodass die Familie, der das Schloss gehört, nur einen Bruchteil behält. Reisende können nicht erkennen, welche Villa offiziell registriert, welcher Fahrer versichert und welcher Guide wirklich lizenziert ist, und die kleinen französischen Betriebe, die den Urlaub liefern, arbeiten mit E-Mail, Telefon und Papier. HEXARÊVE verbindet geprüftes französisches Angebot, All-in-Preise, digitale Abwicklung und Auszahlungen im selben Zyklus in einer Plattform — mit pauschalem Abo statt Provision.",
+  "One commission-free platform for the whole French holiday: verified châteaux, villas, hotels and campsites; licensed guides, drivers, chefs, childcare and wellness; tours, tickets, boats and wine days; and the transport to get there and around — all-in prices with no booking fee, a named trip planner, offline traveller apps and a full supplier CRM. Suppliers keep 100% of the fare and pay a flat, region-priced monthly subscription with a two-month free trial. Built on the shared iTechLounge stack, so it launches fast and costs a fraction of a standalone product.":
+    "Eine provisionsfreie Plattform für den gesamten Frankreich-Urlaub: geprüfte Schlösser, Villen, Hotels und Campingplätze; lizenzierte Guides, Fahrer, Köche, Kinderbetreuung und Wellness; Touren, Tickets, Boote und Weintage; sowie Anreise und Mobilität vor Ort — All-in-Preise ohne Buchungsgebühr, ein persönlicher Reiseplaner, Offline-Apps für Reisende und ein vollständiges Anbieter-CRM. Anbieter behalten 100% des Reisepreises und zahlen ein pauschales, regional bepreistes Monatsabo mit zwei Monaten kostenlos. Gebaut auf dem gemeinsamen iTechLounge-Stack — schneller Start zu einem Bruchteil der Kosten eines Einzelprodukts.",
+
+  // HEXARÊVE features
+  "Tours and activities: Paris and city tours, day trips, attraction tickets, wine tours in Bordeaux and Burgundy, markets and food halls, photography walks":
+    "Touren und Aktivitäten: Paris- und Städtetouren, Tagesausflüge, Attraktionstickets, Weintouren in Bordeaux und Burgund, Märkte und Markthallen, Fototouren",
+  "Stays: châteaux, villas, boutique hotels, city apartments and family campsites across eight destination regions":
+    "Unterkünfte: Schlösser, Villen, Boutiquehotels, Stadtapartments und Familiencampingplätze in acht Zielregionen",
+  "Experiences: boat trips and yacht charters, beach days, Alps and mountain activities, cycling, scuba and snorkelling, adventure, quad biking and paintball":
+    "Erlebnisse: Bootstouren und Yachtcharter, Strandtage, Alpen- und Bergaktivitäten, Radfahren, Tauchen und Schnorcheln, Abenteuer, Quad-Touren und Paintball",
+  "Dining and private chefs: restaurant reservations, chef-at-the-villa, catering, cooking classes and tasting menus with clear all-in pricing":
+    "Gastronomie und Privatköche: Restaurantreservierungen, Koch in der Villa, Catering, Kochkurse und Menüs zu klaren All-in-Preisen",
+  "People services: licensed guides, private drivers and taxi firms, childcare and nannies, spa and wellness therapists, destination-wedding planners":
+    "Personendienste: lizenzierte Guides, Privatfahrer und Taxiunternehmen, Kinderbetreuung und Nannies, Spa- und Wellnesstherapeuten, Hochzeitsplaner",
+  "Getting to France: ferries, Eurostar and TGV, driving-to-France planning with tolls and vignettes, flights and airport transfers":
+    "Anreise nach Frankreich: Fähren, Eurostar und TGV, Routenplanung für die Autofahrt inklusive Maut und Vignetten, Flüge und Flughafentransfers",
+  "Getting around: car hire, chauffeur days, regional rail, transfers between regions and real hop times for road-trip itineraries":
+    "Mobilität vor Ort: Mietwagen, Chauffeurtage, Regionalbahn, Transfers zwischen Regionen und realistische Fahrzeiten für Roadtrip-Routen",
+  "Holiday packages: multi-region Paris–Loire–Provence–Riviera itineraries with stays, transport, guiding and experiences in one price":
+    "Urlaubspakete: mehrregionale Routen Paris–Loire–Provence–Riviera mit Unterkunft, Transport, Guiding und Erlebnissen zu einem Preis",
+  "All-in pricing in GBP, EUR, USD or CHF at live rates; shop, app and guides in English, French, German and Arabic":
+    "All-in-Preise in GBP, EUR, USD oder CHF zu Live-Kursen; Shop, App und Reiseführer auf Englisch, Französisch, Deutsch und Arabisch",
+  "Verified suppliers only — identity, company or tax registration, category licence (accommodation, transport, guiding, food hygiene) and insurance checked before activation":
+    "Nur geprüfte Anbieter — Identität, Handels- oder Steuerregistrierung, Kategorielizenz (Beherbergung, Transport, Guiding, Lebensmittelhygiene) und Versicherung werden vor der Freischaltung geprüft",
+  "Staged activation: new listings start in request mode and only get managed card checkout after agreement, compliance and payout review pass":
+    "Stufenweise Freischaltung: neue Angebote starten im Anfragemodus und erhalten Kartenzahlung erst nach bestandener Vertrags-, Compliance- und Auszahlungsprüfung",
+  "Free city and regional guides: best months, regions and climate, money and tipping, etiquette, what to book ahead and what to skip":
+    "Kostenlose Stadt- und Regionalführer: beste Monate, Regionen und Klima, Geld und Trinkgeld, Etikette, was vorab zu buchen ist und was man sich sparen kann",
+  "Offline traveller wallet on iOS, Android and PWA: vouchers, addresses, pickup times, driver updates and trip reminders without signal":
+    "Offline-Wallet für Reisende auf iOS, Android und PWA: Voucher, Adressen, Abholzeiten, Fahrer-Updates und Reiseerinnerungen auch ohne Netz",
+  "Named trip planner with in-app messaging, WhatsApp and e-mail, plus in-destination care while the traveller is in France":
+    "Persönlicher Reiseplaner mit In-App-Chat, WhatsApp und E-Mail sowie Betreuung vor Ort während des Aufenthalts in Frankreich",
+  "Supplier CRM: availability and seasonal rates, allocations, enquiries, contracts, compliance file, reviews, rostering and same-cycle payouts":
+    "Anbieter-CRM: Verfügbarkeiten und Saisonpreise, Kontingente, Anfragen, Verträge, Compliance-Akte, Bewertungen, Einsatzplanung und Auszahlungen im selben Zyklus",
+  "Region-based subscription pricing so French suppliers pay local rates and never a booking commission":
+    "Regionale Abopreise, damit französische Anbieter lokale Tarife zahlen und niemals Buchungsprovision",
+
+  // HEXARÊVE pricing
+  "Tier 1 — France / EU (local suppliers): Guide or chef €19/mo · Villa & château Starter €29/mo · Property Pro (up to 10 units) €89/mo · Campsite €99/mo · Activity & boat operator €45/mo · Transfer & car hire €55/mo · Agency / DMC €299/mo":
+    "Stufe 1 — Frankreich / EU (lokale Anbieter): Guide oder Koch 19 €/Mon. · Villa & Schloss Starter 29 €/Mon. · Property Pro (bis 10 Einheiten) 89 €/Mon. · Campingplatz 99 €/Mon. · Aktivitäts- und Bootsanbieter 45 €/Mon. · Transfer & Mietwagen 55 €/Mon. · Agentur / DMC 299 €/Mon.",
+  "Tier 2 — UK & Switzerland: Guide or chef £19/mo · Villa Starter £29/mo · Property Pro £89/mo · Campsite £99/mo · Activity & boat £39/mo · Transfer & car hire £49/mo · Agency / multi-brand £299/mo":
+    "Stufe 2 — Großbritannien & Schweiz: Guide oder Koch 19 £/Mon. · Villa Starter 29 £/Mon. · Property Pro 89 £/Mon. · Campingplatz 99 £/Mon. · Aktivität & Boot 39 £/Mon. · Transfer & Mietwagen 49 £/Mon. · Agentur / Multi-Marke 299 £/Mon.",
+  "Tier 2 — US / Canada / AU-NZ (USD): Guide or chef $24/mo · Villa Starter $36/mo · Property Pro $109/mo · Activity & boat $49/mo · Transfer & car hire $59/mo · Agency $369/mo":
+    "Stufe 2 — USA / Kanada / AU-NZ (USD): Guide oder Koch 24 $/Mon. · Villa Starter 36 $/Mon. · Property Pro 109 $/Mon. · Aktivität & Boot 49 $/Mon. · Transfer & Mietwagen 59 $/Mon. · Agentur 369 $/Mon.",
+  "Tier 3 — Gulf & Middle East: Guide or chef AED 79/mo · Villa Starter AED 129/mo · Property Pro AED 379/mo · Activity & boat AED 169/mo · Transfer & car hire AED 209/mo · Agency AED 1,199/mo":
+    "Stufe 3 — Golfregion & Naher Osten: Guide oder Koch 79 AED/Mon. · Villa Starter 129 AED/Mon. · Property Pro 379 AED/Mon. · Aktivität & Boot 169 AED/Mon. · Transfer & Mietwagen 209 AED/Mon. · Agentur 1.199 AED/Mon.",
+  "Tier 4 — North Africa, Balkans & other emerging markets: from $9/mo (guide) to $99/mo (agency), billed in USD or local currency where supported":
+    "Stufe 4 — Nordafrika, Balkan & weitere Wachstumsmärkte: ab 9 $/Mon. (Guide) bis 99 $/Mon. (Agentur), Abrechnung in USD oder, wo unterstützt, in lokaler Währung",
+  "Wedding & celebration partners: Planner €149/mo (Tier 1/2) — venue catalogue, supplier bundles, package builder, guest logistics and milestone payments":
+    "Hochzeits- und Feierpartner: Planner 149 €/Mon. (Stufe 1/2) — Locationkatalog, Anbieterpakete, Paketbaukasten, Gästelogistik und Meilensteinzahlungen",
+  "Optional add-ons at every tier: extra property or vessel €9/mo-equivalent, additional driver, guide or chef app seat €4/mo-equivalent, API and channel-manager access included from Pro upward":
+    "Optionale Zusatzoptionen in jeder Stufe: weiteres Objekt oder Boot ab 9 €/Mon.-Äquivalent, zusätzlicher App-Zugang für Fahrer, Guide oder Koch ab 4 €/Mon.-Äquivalent, API- und Channel-Manager-Zugang ab Pro inklusive",
+
+  // HEXARÊVE apps
+  "Geo-aware shop in EN/FR/DE/AR with currency switching: tours, tickets, stays, campsites, boats, chefs, transport and packages at live all-in prices.":
+    "Geobasierter Shop in EN/FR/DE/AR mit Währungsumschaltung: Touren, Tickets, Unterkünfte, Campingplätze, Boote, Köche, Transport und Pakete zu Live-All-in-Preisen.",
+  "Offline vouchers, villa addresses and door codes, pickup times, trip reminders, wishlists and chat with your named trip planner.":
+    "Offline-Voucher, Villenadressen und Türcodes, Abholzeiten, Reiseerinnerungen, Merklisten und Chat mit dem persönlichen Reiseplaner.",
+  "Châteaux, villas, hotels, campsites, activity and boat operators and transfer firms manage availability, seasonal rates, enquiries, contracts, compliance documents and payouts.":
+    "Schlösser, Villen, Hotels, Campingplätze, Aktivitäts- und Bootsanbieter sowie Transferfirmen verwalten Verfügbarkeiten, Saisonpreise, Anfragen, Verträge, Compliance-Dokumente und Auszahlungen.",
+  "Assigned tours, transfers and services, guest manifests, pickup navigation, check-ins and photo proof of delivery.":
+    "Zugewiesene Touren, Transfers und Dienstleistungen, Gästelisten, Navigation zur Abholung, Check-ins und Fotonachweis der Leistung.",
+  "Internal planners quote, route multi-region French itineraries, handle in-trip exceptions and run in-destination care.":
+    "Interne Planer erstellen Angebote, routen mehrregionale Frankreich-Reisen, lösen Probleme während der Reise und betreuen vor Ort.",
+  "Venues and planners manage wedding and celebration packages, supplier bundles, guest logistics and staged payments.":
+    "Locations und Planer verwalten Hochzeits- und Feierpakete, Anbieterbündel, Gästelogistik und gestaffelte Zahlungen.",
+  "Connects supplier inventory, channel managers, ferry, rail and flight feeds and multi-currency payment providers.":
+    "Verbindet Anbieterbestände, Channel-Manager, Fähr-, Bahn- und Flugdaten sowie Mehrwährungs-Zahlungsanbieter.",
+
+  // HEXARÊVE user types
+  "Books Paris days, Loire châteaux and museum tickets at one all-in price and carries them offline.":
+    "Bucht Paris-Tage, Loire-Schlösser und Museumstickets zu einem All-in-Preis und hat sie offline dabei.",
+  "Villa / château family group": "Familiengruppe in Villa / Schloss",
+  "Combines a self-catering property with a private chef, childcare, transfers and day trips in one itinerary.":
+    "Kombiniert eine Selbstversorgerunterkunft mit Privatkoch, Kinderbetreuung, Transfers und Tagesausflügen in einer Reiseplanung.",
+  "Wine and gastronomy buyer": "Wein- und Gourmetreisende",
+  "Prices Bordeaux and Burgundy tastings, market walks and chef-led dinners with clear inclusions.":
+    "Bepreist Verkostungen in Bordeaux und Burgund, Marktbesuche und Küchenchef-Dinner mit klaren Leistungen.",
+  "Alps and outdoor traveller": "Alpen- und Outdoor-Reisende",
+  "Books mountain weeks, cycling, adventure and beach or scuba days with equipment and guiding included.":
+    "Bucht Bergwochen, Radtouren, Abenteuer- sowie Strand- oder Tauchtage inklusive Ausrüstung und Guiding.",
+  "Campsite and road-trip family": "Camping- und Roadtrip-Familie",
+  "Plans ferry or Eurostar crossing, driving route with tolls, car hire and pitch bookings in one place.":
+    "Plant Fähr- oder Eurostar-Überfahrt, Fahrtroute mit Maut, Mietwagen und Stellplatzbuchungen an einem Ort.",
+  "Wedding and celebration group": "Hochzeits- und Feiergruppe",
+  "Builds a French venue package with stays, catering, transport and guest logistics on staged payments.":
+    "Stellt ein Paket mit französischer Location, Unterkunft, Catering, Transport und Gästelogistik mit gestaffelten Zahlungen zusammen.",
+  "Château, villa and campsite owner": "Schloss-, Villen- und Campingplatzbetreiber",
+  "Sells nights commission-free with seasonal rates, allocations, compliance file and same-cycle payouts.":
+    "Verkauft Übernachtungen provisionsfrei mit Saisonpreisen, Kontingenten, Compliance-Akte und Auszahlung im selben Zyklus.",
+  "Licensed guide, chef or childcare provider": "Lizenzierter Guide, Koch oder Kinderbetreuung",
+  "Receives assigned jobs, manifests and guest notes and builds a public reviewed profile.":
+    "Erhält zugewiesene Aufträge, Gästelisten und Hinweise und baut ein öffentlich bewertetes Profil auf.",
+  "Transfer, taxi and car-hire company": "Transfer-, Taxi- und Mietwagenunternehmen",
+  "Takes airport, chauffeur and inter-region jobs and dispatches them through the driver app.":
+    "Übernimmt Flughafen-, Chauffeur- und Überlandaufträge und disponiert sie über die Fahrer-App.",
+
+  // HEXARÊVE competitors
+  "Enormous accommodation inventory and paid-search dominance":
+    "Riesiges Unterkunftsangebot und Dominanz in der bezahlten Suche",
+  "They take 15–25% of every night and sell beds only; we take zero commission, price all-in and assemble the whole French holiday including chefs, guides, boats and transport":
+    "Sie nehmen 15–25% jeder Übernachtung und verkaufen nur Betten; wir nehmen null Provision, bepreisen All-in und stellen den kompletten Frankreich-Urlaub inklusive Köchen, Guides, Booten und Transport zusammen",
+  "20–30% commission and no aftercare; our French operators keep 100% and every traveller gets a named planner and in-destination care":
+    "20–30% Provision und keine Nachbetreuung; unsere französischen Anbieter behalten 100%, und jeder Reisende erhält einen persönlichen Planer und Betreuung vor Ort",
+  "Trusted campsite packages with ferry and pitch bundled":
+    "Etablierte Campingpakete mit Fähre und Stellplatz im Bündel",
+  "Fixed inventory and rigid dates; we tailor-make across eight regions with independent French supply at supplier-direct prices":
+    "Feste Kontingente und starre Termine; wir stellen maßgeschneiderte Reisen in acht Regionen mit unabhängigem französischem Angebot zu Anbieterpreisen zusammen",
+  "Curated high-end villa portfolio and concierge service":
+    "Kuratiertes Luxus-Villenportfolio und Concierge-Service",
+  "Heavy commission and a narrow list; we keep the curation and verification but let owners publish their own price and pay a flat fee":
+    "Hohe Provision und eine schmale Auswahl; wir behalten Kuratierung und Prüfung bei, lassen Eigentümer aber ihren eigenen Preis veröffentlichen und eine Pauschale zahlen",
+  "Recognised French classification and owner trust":
+    "Anerkannte französische Klassifizierung und Vertrauen der Eigentümer",
+  "Directory-era product with weak availability, payments and mobile; we give the same owners live availability, card checkout, apps and a CRM":
+    "Verzeichnis-Produkt mit schwacher Verfügbarkeitssteuerung, Zahlung und Mobilnutzung; wir geben denselben Eigentümern Live-Verfügbarkeit, Kartenzahlung, Apps und ein CRM",
+  "Own ground handling and property relationships":
+    "Eigene Leistungsabwicklung vor Ort und Objektbeziehungen",
+  "They add a margin layer and run on e-mail; we sell them the software instead and let travellers reach the supplier price directly":
+    "Sie fügen eine Margenebene hinzu und arbeiten per E-Mail; wir verkaufen ihnen stattdessen die Software und lassen Reisende direkt zum Anbieterpreis kommen",
+
+  // HEXARÊVE risks
+  "Slower supply-side onboarding across eight French regions":
+    "Langsameres Anbieter-Onboarding über acht französische Regionen",
+  "Concierge onboarding region by region, launch with a curated core of stays, guides and activities per corridor, and reuse shared group sales capacity.":
+    "Concierge-Onboarding Region für Region, Start mit einem kuratierten Kern aus Unterkünften, Guides und Aktivitäten je Korridor und Nutzung der gemeinsamen Vertriebskapazität der Gruppe.",
+  "Traveller trust in a new brand for high-value villa and wedding bookings":
+    "Vertrauen der Reisenden in eine neue Marke bei hochpreisigen Villen- und Hochzeitsbuchungen",
+  "Registered, licensed and insured suppliers only, staged payment activation, escrowed deposits, written cancellation windows, verified reviews and a named planner on every booking.":
+    "Nur registrierte, lizenzierte und versicherte Anbieter, stufenweise Zahlungsfreischaltung, treuhänderisch verwahrte Anzahlungen, schriftliche Stornofristen, verifizierte Bewertungen und ein persönlicher Planer bei jeder Buchung.",
+  "Strong seasonality in French leisure travel":
+    "Starke Saisonalität im französischen Urlaubsreiseverkehr",
+  "Year-round mix of city breaks, ski weeks, wine seasons and wellness, plus shoulder-season pricing content and campsite and château early-booking windows.":
+    "Ganzjähriger Mix aus Städtereisen, Skiwochen, Weinsaison und Wellness, dazu Nebensaison-Preisinhalte sowie Frühbucherfenster für Campingplätze und Schlösser.",
+  "French rental registration and tourist-tax compliance (numéro d'enregistrement, taxe de séjour)":
+    "Französische Vermietungsregistrierung und Kurtaxe-Compliance (numéro d'enregistrement, taxe de séjour)",
+  "Compliance file per listing with registration numbers, automatic tourist-tax calculation and shared legal function tracking commune-level rules.":
+    "Compliance-Akte je Objekt mit Registriernummern, automatischer Kurtaxenberechnung und gemeinsamer Rechtsfunktion, die die Regeln auf Gemeindeebene verfolgt.",
+  "FX exposure across GBP, EUR, USD and CHF":
+    "Währungsrisiko über GBP, EUR, USD und CHF",
+  "Multi-currency collection at live rates, EUR payout rails for French suppliers, region-priced subscriptions reviewed quarterly and hedged group settlement.":
+    "Mehrwährungs-Inkasso zu Live-Kursen, EUR-Auszahlungswege für französische Anbieter, quartalsweise überprüfte regionale Abopreise und abgesicherte Konzernverrechnung.",
+  "Customer acquisition cost above plan in a paid-search-heavy market":
+    "Kundengewinnungskosten über Plan in einem stark von bezahlter Suche geprägten Markt",
+  "Shared group SEO, destination guide content, four-language organic reach and cross-sell from sister travel brands rather than paid-only growth.":
+    "Gemeinsame Gruppen-SEO, Reiseführerinhalte, organische Reichweite in vier Sprachen und Cross-Selling aus Schwester-Reisemarken statt rein bezahltem Wachstum.",
+
+  // HEXARÊVE current market
+  "France is sold today by global OTAs that take 15–25% of accommodation, activity platforms that take 20–30% of every tour, UK package operators with fixed campsite and resort inventory, legacy French directories such as Gîtes de France and Clévacances, and thousands of small local agencies working from e-mail and spreadsheets. Nothing joins the stay, the guide, the chef, the boat, the car and the ferry into one verified, all-in booking — and almost none of the French suppliers who deliver the holiday own software of their own.":
+    "Frankreich wird heute von globalen OTAs verkauft, die 15–25% der Unterkunft nehmen, von Aktivitätsplattformen mit 20–30% je Tour, von britischen Veranstaltern mit festen Camping- und Resortkontingenten, von alten französischen Verzeichnissen wie Gîtes de France und Clévacances sowie von tausenden kleinen lokalen Agenturen, die mit E-Mail und Tabellen arbeiten. Nichts verbindet Unterkunft, Guide, Koch, Boot, Auto und Fähre zu einer geprüften All-in-Buchung — und fast keiner der französischen Anbieter, die den Urlaub liefern, besitzt eigene Software.",
+  "≈100m international arrivals a year, served by hundreds of thousands of registered rentals, châteaux, hotels and campsites plus tens of thousands of licensed guides, drivers, chefs and activity operators — the large majority with no purpose-built platform.":
+    "Ca. 100 Mio. internationale Ankünfte pro Jahr, bedient von Hunderttausenden registrierten Ferienunterkünften, Schlössern, Hotels und Campingplätzen sowie Zehntausenden lizenzierten Guides, Fahrern, Köchen und Aktivitätsanbietern — die große Mehrheit ohne eigens dafür gebaute Plattform.",
+  "≈€60bn of international tourism receipts in France a year. The software-shaped share of that value is currently extracted as OTA, agency and wholesaler commission from suppliers' income rather than paid for as software — exactly the margin HEXARÊVE returns to French operators while charging a flat, region-priced subscription.":
+    "Ca. 60 Mrd. € internationale Tourismuseinnahmen in Frankreich pro Jahr. Der softwareförmige Anteil dieses Werts wird heute als OTA-, Agentur- und Veranstalterprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diese Marge gibt HEXARÊVE an französische Betriebe zurück und berechnet stattdessen ein pauschales, regional bepreistes Abo.",
 };
