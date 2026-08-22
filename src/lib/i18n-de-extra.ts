@@ -1197,4 +1197,143 @@ export const DE_EXTRA: Record<string, string> = {
     "Zweistellige Millionenzahlen internationaler Ankünfte pro Jahr in den sieben Ländern plus ein großer Diaspora-Reisestrom aus UK und der EU — dennoch wird nur ein kleiner Teil über eine spezialisierte Regionalplattform gebucht; die meisten Veranstalter arbeiten weiter mit Notizbüchern und Messenger-Apps.",
   "≈€30bn South Asia inbound tourism. Most of that value currently sits with intermediaries and OTA commission rather than with the operators delivering the journeys — the margin RANGVAYA returns to suppliers while charging a flat subscription.":
     "≈30 Mrd. € Incoming-Tourismus in Südasien. Der größte Teil dieses Werts liegt heute bei Zwischenhändlern und OTA-Provisionen statt bei den Veranstaltern, die die Reisen durchführen — genau diese Marge gibt RANGVAYA den Anbietern zurück und berechnet stattdessen ein Pauschalabo.",
+  // SAVANSEA (UK)
+  "From wild heart to island blue.":
+    "Vom wilden Herzen bis zum Inselblau.",
+  "SAVANSEA is the commission-free, full-service travel platform for Africa and the Indian Ocean: safaris and wildlife journeys, tours and day activities, ready-made and tailor-made holiday packages, lodges, camps, villas, resorts and apartments, plus airport transfers, private driver-guides, intercity road transfers and self-drive 4x4 hire — across nine countries: Kenya, Tanzania, Zanzibar, South Africa, Zimbabwe, Namibia, Botswana, Mauritius and the Seychelles. Prices are all-in and shown in GBP, EUR, USD or ZAR at live rates, with the shop and guides in eleven languages. Vetted, licensed and insured camps, lodges, driver-guides and boat operators — most community- or family-run — keep 100% of the fare; SAVANSEA charges them a flat monthly subscription instead of commission. Traveller apps hold itineraries and vouchers offline for days with no signal, and a full supplier CRM runs enquiries, availability, contracts, payouts and 24/7 on-the-ground support. Live now as a test site at savansea.itechlounge.co.uk; the real domain savansea.com follows (SAVANSEA is a trading name of TraveNexa Limited).":
+    "SAVANSEA ist die provisionsfreie Full-Service-Reiseplattform für Afrika und den Indischen Ozean: Safaris und Wildlife-Reisen, Touren und Tagesaktivitäten, fertige und individuell geplante Pauschalreisen, Lodges, Camps, Villen, Resorts und Apartments sowie Flughafentransfers, private Fahrer-Guides, Überlandtransfers und Selbstfahrer-4x4-Vermietung — in neun Ländern: Kenia, Tansania, Sansibar, Südafrika, Simbabwe, Namibia, Botswana, Mauritius und die Seychellen. Preise sind All-in und werden zu Live-Kursen in GBP, EUR, USD oder ZAR angezeigt, Shop und Reiseführer in elf Sprachen. Geprüfte, lizenzierte und versicherte Camps, Lodges, Fahrer-Guides und Bootsbetreiber — meist gemeinschafts- oder familiengeführt — behalten 100 % des Reisepreises; SAVANSEA berechnet ihnen stattdessen ein monatliches Pauschalabo. Die Reise-Apps halten Reiseverläufe und Vouchers offline bereit, auch an Tagen ohne Netz, und ein vollständiges Anbieter-CRM steuert Anfragen, Verfügbarkeiten, Verträge, Auszahlungen und 24/7-Betreuung vor Ort. Aktuell live als Testseite unter savansea.itechlounge.co.uk; die echte Domain savansea.com folgt (SAVANSEA ist ein Handelsname der TraveNexa Limited).",
+  "≈€35bn African inbound leisure travel; Kenya and Tanzania safari tourism plus the Mauritius, Seychelles and Zanzibar beach markets each run into the billions, with safari trips averaging £4,000–£8,000 per traveller.":
+    "≈35 Mrd. € Incoming-Urlaubsreisen in Afrika; Safari-Tourismus in Kenia und Tansania sowie die Strandmärkte Mauritius, Seychellen und Sansibar erreichen jeweils Milliardenvolumen, bei Safarireisen von durchschnittlich 4.000–8.000 £ pro Reisenden.",
+  "UK and European safari travellers, honeymooners, families and photography groups, diving and island buyers, multi-generational and small-group charters — plus the supply side: safari camps and lodges, licensed driver-guides, boat and dhow operators, beach resorts and villas, transfer and 4x4 hire companies and inbound DMCs.":
+    "Safari-Reisende aus UK und Europa, Hochzeitsreisende, Familien und Fotogruppen, Tauch- und Inselgäste, Mehrgenerationen- und Kleingruppenreisen — sowie die Angebotsseite: Safari-Camps und Lodges, lizenzierte Fahrer-Guides, Boots- und Dhow-Betreiber, Strandresorts und Villen, Transfer- und 4x4-Vermieter und Incoming-Agenturen (DMCs).",
+  "SAVANSEA exists because African travel is the most intermediated product in tourism. A Masai Mara camp bed or a Zanzibar transfer can pass through an inbound DMC, a wholesaler, an OTA and a retail agent before it reaches the traveller — each adding 15–30%, so a £6,000 safari can carry £2,000 of margin that never touches the camp, the guide or the community that hosts it. Travellers cannot tell which lodge is actually community-run, what full board really includes, or whether the Migration will even be in the reserve on their dates. On the supply side, world-class camps and guides have no software of their own: enquiries arrive by WhatsApp and email, availability lives in a spreadsheet, contracts are PDFs, and payment can take months after the guests have gone home. SAVANSEA replaces that chain with one platform — published all-in prices, licence and insurance verified suppliers, digital vouchers and paperwork, and a flat subscription instead of commission so the value stays in the destination.":
+    "SAVANSEA existiert, weil Afrikareisen das am stärksten zwischengeschaltete Produkt im Tourismus sind. Ein Camp-Bett in der Masai Mara oder ein Transfer auf Sansibar läuft oft über eine Incoming-Agentur, einen Reiseveranstalter, ein OTA und ein Reisebüro, bevor er den Gast erreicht — jeder schlägt 15–30 % auf, sodass eine Safari für 6.000 £ leicht 2.000 £ Marge enthält, die nie beim Camp, beim Guide oder bei der gastgebenden Gemeinschaft ankommt. Reisende können nicht erkennen, welche Lodge wirklich gemeinschaftsgeführt ist, was Vollpension tatsächlich umfasst oder ob die Migration zu ihren Terminen überhaupt im Reservat ist. Auf der Anbieterseite haben Weltklasse-Camps und Guides keine eigene Software: Anfragen kommen per WhatsApp und E-Mail, Verfügbarkeiten stehen in Tabellen, Verträge sind PDFs, und die Bezahlung dauert oft Monate, nachdem die Gäste längst abgereist sind. SAVANSEA ersetzt diese Kette durch eine Plattform — veröffentlichte All-in-Preise, auf Lizenz und Versicherung geprüfte Anbieter, digitale Vouchers und Unterlagen sowie ein Pauschalabo statt Provision, damit der Wert im Reiseland bleibt.",
+  "One platform for the whole Africa trip, with no commission taken from anyone. Travellers book a single game drive or a three-country safari-and-beach journey side by side, see the true all-in price in their own currency and one of eleven languages, get honest season, park and budget guidance before they commit, and carry itineraries, vouchers, pickup times and guide contacts offline for the days when there is no signal in the bush. Every trip has a named planner reachable on WhatsApp or email, plus support that continues while the traveller is on the ground, so a missed light-aircraft transfer or a flooded track gets fixed the same day. Suppliers get a real operating system — inventory and availability, seasonal rate and allocation management, enquiry pipeline and CRM, contracts with licence and insurance tracking, digital vouchers, guide and vehicle rostering, reviews and same-cycle payouts — for a flat monthly fee with a two-month free trial. Free country and city guides written by our own planners and local guides, cross-border routing, visa, health and ferry advice turn browsing into booking, and the shared iTechLounge stack means it launches fast at a fraction of standalone cost.":
+    "Eine Plattform für die ganze Afrikareise — ohne Provision für irgendjemanden. Reisende buchen eine einzelne Pirschfahrt oder eine Safari-und-Strand-Reise durch drei Länder nebeneinander, sehen den echten All-in-Preis in ihrer Währung und einer von elf Sprachen, erhalten vor der Buchung ehrliche Hinweise zu Saison, Parks und Budget und tragen Reiseverlauf, Vouchers, Abholzeiten und Guide-Kontakte offline bei sich, wenn im Busch kein Netz ist. Jede Reise hat einen namentlichen Planer per WhatsApp oder E-Mail sowie Betreuung, die auch vor Ort weiterläuft — ein verpasster Buschflug oder eine überflutete Piste wird am selben Tag gelöst. Anbieter erhalten ein echtes Betriebssystem — Bestände und Verfügbarkeiten, Saisonraten und Kontingente, Anfrage-Pipeline und CRM, Verträge mit Lizenz- und Versicherungsnachweisen, digitale Vouchers, Guide- und Fahrzeugplanung, Bewertungen und Auszahlungen im gleichen Zyklus — für eine monatliche Pauschale mit zwei Monaten Gratistest. Kostenlose Länder- und Städte-Guides von eigenen Planern und lokalen Guides, Routenplanung über Grenzen, Visa-, Gesundheits- und Fährinfos machen aus Stöbern Buchungen, und der gemeinsame iTechLounge-Stack ermöglicht einen schnellen Start zu einem Bruchteil der Kosten.",
+  "Nine countries in one basket: Kenya, Tanzania, Zanzibar, South Africa, Zimbabwe, Namibia, Botswana, Mauritius and the Seychelles":
+    "Neun Länder in einem Warenkorb: Kenia, Tansania, Sansibar, Südafrika, Simbabwe, Namibia, Botswana, Mauritius und die Seychellen",
+  "Zero commission on any booking — camps, lodges, guides, boats and transfer companies keep 100% of the fare":
+    "Null Provision auf jede Buchung — Camps, Lodges, Guides, Bootsbetreiber und Transferunternehmen behalten 100 % des Preises",
+  "Safaris and wildlife: Migration camps in the Mara and Serengeti, Kruger and Okavango game drives, walking safaris and gorilla add-ons":
+    "Safaris und Wildlife: Migrationscamps in der Mara und Serengeti, Pirschfahrten im Kruger und Okavango, Wandersafaris und Gorilla-Zusatzmodule",
+  "Tours and day activities: dhow and yacht cruises, dune drives, diving and snorkelling, wine estates, Victoria Falls flights and market walks":
+    "Touren und Tagesaktivitäten: Dhow- und Yachtfahrten, Dünenfahrten, Tauchen und Schnorcheln, Weingüter, Rundflüge über die Victoriafälle und Marktspaziergänge",
+  "Safari-and-beach combinations, honeymoons, family trips and multi-country routes priced as one package":
+    "Safari-und-Strand-Kombinationen, Hochzeitsreisen, Familienreisen und Mehrländer-Routen als ein Paketpreis",
+  "Stays from mobile tented camps and bush lodges to Zanzibar resorts and Mauritius or Seychelles villas, described honestly":
+    "Unterkünfte von mobilen Zeltcamps und Buschlodges bis zu Sansibar-Resorts und Villen auf Mauritius oder den Seychellen — ehrlich beschrieben",
+  "Airport meet-and-greet, private driver-guides, intercity transfers, ferries and self-drive 4x4 hire with paperwork explained up front":
+    "Flughafenempfang, private Fahrer-Guides, Überlandtransfers, Fähren und Selbstfahrer-4x4-Miete mit vorab erklärten Unterlagen",
+  "All-in pricing in GBP, EUR, USD or ZAR at live rates; shop and guides in eleven languages":
+    "All-in-Preise in GBP, EUR, USD oder ZAR zu Live-Kursen; Shop und Guides in elf Sprachen",
+  "Vetted, licensed and insured local operators, mostly community- or family-run, with documents kept current":
+    "Geprüfte, lizenzierte und versicherte lokale Anbieter, meist gemeinschafts- oder familiengeführt, mit stets aktuellen Nachweisen",
+  "Free country and city guides: parks and seasons, visas, budgets, safety, health, tipping and connectivity":
+    "Kostenlose Länder- und Städte-Guides: Parks und Saisons, Visa, Budgets, Sicherheit, Gesundheit, Trinkgeld und Konnektivität",
+  "Cross-border routing: regional flights, border posts, ferries to Zanzibar and the islands, real road transfer times":
+    "Routen über Grenzen: Regionalflüge, Grenzposten, Fähren nach Sansibar und zu den Inseln, realistische Fahrzeiten",
+  "Month-by-month timing: Migration and calving, whale season, dry versus green season and where prices drop":
+    "Timing Monat für Monat: Migration und Kalbungszeit, Walsaison, Trocken- gegen Grünsaison und wo die Preise fallen",
+  "Offline itineraries, vouchers and pickup reminders on iOS and Android for low-signal days":
+    "Offline-Reiseverläufe, Vouchers und Abhol-Erinnerungen auf iOS und Android für Tage mit schwachem Netz",
+  "Named trip planner on WhatsApp or email plus 24/7 in-destination support":
+    "Namentlicher Reiseplaner per WhatsApp oder E-Mail plus 24/7-Betreuung vor Ort",
+  "Supplier CRM: availability, seasonal rates, enquiries, contracts, rostering, reviews and same-cycle payouts":
+    "Anbieter-CRM: Verfügbarkeiten, Saisonraten, Anfragen, Verträge, Einsatzplanung, Bewertungen und Auszahlungen im gleichen Zyklus",
+  "Travellers: free — no booking fee, no service fee, all-in prices at live exchange rates":
+    "Reisende: kostenlos — keine Buchungsgebühr, keine Servicegebühr, All-in-Preise zu Live-Wechselkursen",
+  "Camp / Lodge Starter — £29/mo: one property, rooms and tents, seasonal rates, enquiries and vouchers":
+    "Camp/Lodge Starter — 29 £/Monat: eine Unterkunft, Zimmer und Zelte, Saisonraten, Anfragen und Vouchers",
+  "Camp / Lodge Pro — £89/mo: allocations, rate seasons, direct booking page, CRM pipeline and payout reporting":
+    "Camp/Lodge Pro — 89 £/Monat: Kontingente, Ratensaisons, direkte Buchungsseite, CRM-Pipeline und Auszahlungsreporting",
+  "Guide / Driver-Guide — £19/mo: profile, availability, assigned days, manifests and driver app seat":
+    "Guide/Fahrer-Guide — 19 £/Monat: Profil, Verfügbarkeit, zugewiesene Tage, Gästelisten und ein Fahrer-App-Zugang",
+  "Activity & Boat Operator — £39/mo: game drives, dhow and dive inventory with instant-confirmation slots":
+    "Aktivitäts- und Bootsbetreiber — 39 £/Monat: Pirschfahrten, Dhow- und Tauchangebote mit Sofortbestätigung",
+  "Transfer & 4x4 Hire — £49/mo: transfer and self-drive fleet, dispatch, driver app seats and fuel/deposit terms":
+    "Transfer & 4x4-Miete — 49 £/Monat: Transfer- und Selbstfahrerflotte, Disposition, Fahrer-App-Zugänge und Kraftstoff-/Kautionsregeln",
+  "Inbound DMC / Multi-country — £299/mo: multiple countries and brands, contracts, consolidated payouts, API access":
+    "Incoming-DMC/Mehrländer — 299 £/Monat: mehrere Länder und Marken, Verträge, konsolidierte Auszahlungen, API-Zugang",
+  "Geo-aware shop with language and currency switching: safaris, tours, packages, stays, transfers and guides with live all-in prices.":
+    "Geo-bewusster Shop mit Sprach- und Währungswechsel: Safaris, Touren, Pakete, Unterkünfte, Transfers und Guides mit Live-All-in-Preisen.",
+  "Offline itinerary, vouchers, pickup reminders, saved trips and WhatsApp-style chat with your named planner.":
+    "Offline-Reiseverlauf, Vouchers, Abhol-Erinnerungen, gespeicherte Reisen und Chat mit dem eigenen Reiseplaner.",
+  "Camps, lodges, resorts, boat and transfer operators manage availability, seasonal rates, enquiries, contracts and payouts.":
+    "Camps, Lodges, Resorts, Boots- und Transferbetreiber verwalten Verfügbarkeiten, Saisonraten, Anfragen, Verträge und Auszahlungen.",
+  "Assigned game drives and transfers, guest manifests, pickup navigation, check-ins and photo proof of delivery.":
+    "Zugewiesene Pirschfahrten und Transfers, Gästelisten, Navigation zur Abholung, Check-ins und Fotonachweise.",
+  "Internal planners quote, route multi-country safari-and-beach trips, handle in-trip exceptions and run 24/7 support.":
+    "Interne Planer erstellen Angebote, routen Safari-und-Strand-Reisen über mehrere Länder, lösen Störungen unterwegs und leisten 24/7-Support.",
+  "Connects supplier inventory, channel managers, regional air consolidators and multi-currency payment providers.":
+    "Verbindet Anbieterbestände, Channel Manager, regionale Flugkonsolidierer und Multi-Währungs-Zahlungsanbieter.",
+  "Books a single game drive or a three-country safari-and-beach journey at an all-in price and carries it offline in the bush.":
+    "Bucht eine einzelne Pirschfahrt oder eine Safari-und-Strand-Reise durch drei Länder zum All-in-Preis und hat sie im Busch offline dabei.",
+  "Combines safari and island in one quote with room upgrades, private vehicles and clear inclusions.":
+    "Kombiniert Safari und Insel in einem Angebot mit Zimmer-Upgrades, privaten Fahrzeugen und klaren Leistungen.",
+  "Safari camp / lodge":
+    "Safari-Camp/Lodge",
+  "Sells tents and rooms commission-free with seasonal rates, allocations and same-cycle payouts.":
+    "Verkauft Zelte und Zimmer provisionsfrei mit Saisonraten, Kontingenten und Auszahlungen im gleichen Zyklus.",
+  "Licensed driver-guide":
+    "Lizenzierter Fahrer-Guide",
+  "Activity and boat operator":
+    "Aktivitäts- und Bootsbetreiber",
+  "Lists game drives, dhow cruises and dives with instant-confirmation availability.":
+    "Listet Pirschfahrten, Dhow-Fahrten und Tauchgänge mit sofort bestätigter Verfügbarkeit.",
+  "Transfer and 4x4 hire company":
+    "Transfer- und 4x4-Vermietung",
+  "Takes airport, intercity and self-drive jobs and dispatches them through the driver app.":
+    "Übernimmt Flughafen-, Überland- und Selbstfahrer-Aufträge und disponiert sie über die Fahrer-App.",
+  "Inbound DMC":
+    "Incoming-Agentur (DMC)",
+  "Runs multiple countries and brands with contracts, consolidated invoicing and API inventory feeds.":
+    "Betreibt mehrere Länder und Marken mit Verträgen, konsolidierter Fakturierung und API-Bestandsfeeds.",
+  "They take 15–25% commission and sell beds, not journeys; we take zero commission, price all-in and route full safari-and-beach itineraries":
+    "Sie nehmen 15–25 % Provision und verkaufen Betten, keine Reisen; wir nehmen null Provision, zeigen All-in-Preise und planen komplette Safari-und-Strand-Routen",
+  "20–30% commission and no aftercare; our operators keep 100% and every traveller has a named planner and in-destination support":
+    "20–30 % Provision und keine Nachbetreuung; unsere Anbieter behalten 100 %, und jeder Gast hat einen namentlichen Planer und Betreuung vor Ort",
+  "Abercrombie & Kent / audley-style specialists":
+    "Abercrombie & Kent / Spezialveranstalter dieser Art",
+  "Prestige, expertise and trust for high-value safaris":
+    "Prestige, Expertise und Vertrauen bei hochwertigen Safaris",
+  "£10k+ trips carry heavy agency margin; we deliver the same vetted camps and guides at supplier-direct all-in prices with modern apps":
+    "Reisen ab 10.000 £ enthalten hohe Vermittlungsmargen; wir liefern dieselben geprüften Camps und Guides zu direkten All-in-Anbieterpreisen mit modernen Apps",
+  "Inbound DMCs and wholesalers":
+    "Incoming-Agenturen und Reiseveranstalter",
+  "Own the ground handling and camp relationships":
+    "Kontrollieren die Abwicklung vor Ort und die Camp-Beziehungen",
+  "They add a layer of margin and run on email; we give them the software instead and let travellers reach the camp price directly":
+    "Sie fügen eine Margenschicht hinzu und arbeiten per E-Mail; wir geben ihnen stattdessen die Software und lassen Gäste direkt zum Camp-Preis buchen",
+  "SafariBookings / safari marketplaces":
+    "SafariBookings / Safari-Marktplätze",
+  "Comparison content and lead volume":
+    "Vergleichsinhalte und Lead-Volumen",
+  "Lead-fee and commission models with no booking, payment or operations stack; we complete the transaction and run the operator's back office":
+    "Lead-Gebühren- und Provisionsmodelle ohne Buchungs-, Zahlungs- oder Betriebssystem; wir schließen die Transaktion ab und betreiben das Backoffice des Anbieters",
+  "Direct WhatsApp / email booking with camps":
+    "Direktbuchung per WhatsApp/E-Mail beim Camp",
+  "No contract, no cancellation policy and no recourse; we keep the local operator but add escrowed deposits, vouchers and accountability":
+    "Kein Vertrag, keine Stornoregelung, keine Absicherung; wir behalten den lokalen Anbieter, ergänzen aber treuhänderische Anzahlungen, Vouchers und Verantwortlichkeit",
+  "Slower supply-side onboarding across nine countries":
+    "Langsameres Onboarding der Anbieterseite in neun Ländern",
+  "Concierge onboarding country by country, launch with a curated core of camps and guides per corridor, and reuse shared group sales capacity.":
+    "Concierge-Onboarding Land für Land, Start mit einem kuratierten Kern an Camps und Guides je Korridor und Nutzung gemeinsamer Vertriebskapazitäten der Gruppe.",
+  "Traveller trust in a new brand for £5k+ safaris":
+    "Vertrauen der Reisenden in eine neue Marke bei Safaris ab 5.000 £",
+  "Seasonality and Migration-driven demand peaks":
+    "Saisonalität und von der Migration getriebene Nachfragespitzen",
+  "Nine-country spread across opposing seasons, green-season pricing content, and island inventory that sells when safari demand dips.":
+    "Verteilung auf neun Länder mit gegenläufigen Saisons, Inhalte zu Grünsaison-Preisen und Inselangebote, die sich verkaufen, wenn die Safari-Nachfrage nachlässt.",
+  "Political, health or wildlife-area disruption":
+    "Politische, gesundheitliche oder Wildschutzgebiets-Störungen",
+  "Re-routing playbooks, flexible date-change terms, multi-country alternatives and shared legal/compliance monitoring per jurisdiction.":
+    "Umbuchungs-Playbooks, flexible Terminänderungen, Alternativen in anderen Ländern und gemeinsames Rechts-/Compliance-Monitoring je Land.",
+  "Guide-led SEO across country and city guides, honeymoon and photography community channels, and cross-sell from sister travel brands rather than paid-only growth.":
+    "SEO über Länder- und Städte-Guides, Kanäle in Hochzeitsreise- und Fotografie-Communities sowie Cross-Selling der Schwester-Reisemarken statt rein bezahltem Wachstum.",
+  "Today African travel is sold either by global OTAs that take 15–30% and only list beds or single activities, by prestige tour operators charging heavy agency margin on £10k trips, or through an inbound DMC and wholesaler chain that adds a layer of cost before the traveller ever sees a price. Comparison marketplaces generate leads but do not complete the booking or run the operator's business. Nobody assembles a multi-country safari-and-beach journey — regional flights, transfers, ferries, camps, guides and permits — in one place at an all-in price, and most camps and guides still run on WhatsApp, email and spreadsheets.":
+    "Heute werden Afrikareisen entweder von globalen OTAs verkauft, die 15–30 % nehmen und nur Betten oder Einzelaktivitäten listen, von Prestige-Veranstaltern mit hoher Vermittlungsmarge auf 10.000-£-Reisen oder über eine Kette aus Incoming-Agentur und Veranstalter, die Kosten aufschlägt, bevor der Gast überhaupt einen Preis sieht. Vergleichsmarktplätze erzeugen Leads, schließen aber keine Buchung ab und betreiben nicht das Geschäft des Anbieters. Niemand stellt eine Safari-und-Strand-Reise über mehrere Länder — Regionalflüge, Transfers, Fähren, Camps, Guides und Permits — an einem Ort zum All-in-Preis zusammen, und die meisten Camps und Guides arbeiten weiter mit WhatsApp, E-Mail und Tabellen.",
+  "Tens of millions of international arrivals a year across the nine countries, with several thousand camps, lodges, resorts, boat operators and licensed guides serving them — the large majority with no purpose-built software of their own.":
+    "Zweistellige Millionenzahlen internationaler Ankünfte pro Jahr in den neun Ländern, bedient von mehreren Tausend Camps, Lodges, Resorts, Bootsbetreibern und lizenzierten Guides — die große Mehrheit ohne eigene, dafür gebaute Software.",
+  "≈€35bn African inbound leisure travel. Most of the software-shaped share of that value is currently extracted as OTA and wholesaler commission from suppliers' income rather than paid for as software — exactly the margin SAVANSEA returns to camps, guides and communities while charging a flat subscription.":
+    "≈35 Mrd. € Incoming-Urlaubsreisen in Afrika. Der software-nahe Anteil dieses Werts wird heute als OTA- und Veranstalterprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diese Marge gibt SAVANSEA an Camps, Guides und Gemeinschaften zurück und berechnet stattdessen ein Pauschalabo.",
 };
