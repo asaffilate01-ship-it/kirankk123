@@ -13,8 +13,9 @@ import { DE_EXTRA } from "./i18n-de-extra";
 import { DE_OMNIQORA } from "./i18n-de-omniqora";
 import { DE_KIEZIO } from "./i18n-de-kiezio";
 import { DE_MOTORESQ } from "./i18n-de-motoresq";
+import { DE_MARELYRA } from "./i18n-de-marelyra";
 
-const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ };
+const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA };
 
 export type Lang = "en" | "de";
 
