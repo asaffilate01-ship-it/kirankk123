@@ -1043,8 +1043,6 @@ export const DE_EXTRA: Record<string, string> = {
     "Keine Vertrauenssignale, keine sichere Zahlung, kein Regress. Wir behalten ihre Preise und ergänzen Lizenzprüfung, Kartenzahlung, digitale Vouchers und ein Supportteam.",
   "Airbnb Experiences and DIY planning":
     "Airbnb Experiences und Eigenplanung",
-  "Free, familiar and flexible":
-    "Kostenlos, vertraut und flexibel",
   "The traveller becomes their own tour operator across five suppliers and three time zones. We assemble and guarantee the whole chain for the same money.":
     "Der Reisende wird zum eigenen Veranstalter mit fünf Anbietern in drei Zeitzonen. Wir stellen die gesamte Kette zusammen und garantieren sie zum gleichen Preis.",
   "Supply-side onboarding slower than planned":
