@@ -10,8 +10,9 @@ import {
 } from "react";
 import { DE } from "./i18n-de";
 import { DE_EXTRA } from "./i18n-de-extra";
+import { DE_OMNIQORA } from "./i18n-de-omniqora";
 
-const DICT: Record<string, string> = { ...DE, ...DE_EXTRA };
+const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA };
 
 export type Lang = "en" | "de";
 

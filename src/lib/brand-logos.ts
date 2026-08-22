@@ -62,8 +62,7 @@ import iberavivaLogoV2 from "@/assets/iberaviva-logo-v2.png.asset.json";
 import eventplanrLogoDe from "@/assets/eventplanr-logo-de.png.asset.json";
 import eventplanrLogoEn from "@/assets/eventplanr-logo-en.png.asset.json";
 import cirqivaLogo from "@/assets/cirqiva-logo.png.asset.json";
-import konneviaLogoDe from "@/assets/konnevia-logo-de.png.asset.json";
-import konneviaLogoEn from "@/assets/konnevia-logo.png.asset.json";
+import omniqoraLogo from "@/assets/omniqora-logo.png.asset.json";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -92,7 +91,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   saathera: saatheraLogo.url,
   fleetsora: fleetsoraLogo.url,
   immoviq: immoviqLogo.url,
-  konnevia: konneviaLogoDe.url,
+  omniqora: omniqoraLogo.url,
   unipathway: unipathwayLogo.url,
   "haccora-uk": haccoraUkLogo.url,
   bidlumo: bidlumoLogo.url,
@@ -144,7 +143,6 @@ export const BRAND_LOGOS: Record<string, string> = {
 export const BRAND_LOGOS_BY_LANG: Record<string, Record<Lang, string>> = {
   haccora: { de: haccoraLogo.url, en: haccoraUkLogo.url },
   "haccora-uk": { de: haccoraLogo.url, en: haccoraUkLogo.url },
-  konnevia: { de: konneviaLogoDe.url, en: konneviaLogoEn.url },
   "craftvaro-de": { de: craftvaroLogoDe.url, en: craftvaroLogoEn.url },
   "craftvaro-uk": { de: craftvaroLogoDe.url, en: craftvaroLogoEn.url },
   eventplanrger: { de: eventplanrLogoDe.url, en: eventplanrLogoEn.url },
