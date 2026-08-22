@@ -1381,6 +1381,26 @@ export const DE_EXTRA: Record<string, string> = {
     "Mehrsprachig und mehrwährungsfähig für Clubs und Akademien in UK, am Golf und in Südasien",
   "Players, parents and supporters: free — watch, follow and receive coaching feedback at no cost":
     "Spieler, Eltern und Fans: kostenlos — zuschauen, verfolgen und Coaching-Feedback erhalten, ohne Gebühr",
+  "Pricing is location-based: every plan is priced and billed in the local currency of the club, league or coach, using purchasing-power tiers so the same platform is affordable in Karachi and in London":
+    "Die Preise sind standortabhängig: Jeder Tarif wird in der Landeswährung des Clubs, der Liga oder des Trainers berechnet und abgerechnet, mit Kaufkraftstufen, damit dieselbe Plattform in Karatschi genauso erschwinglich ist wie in London",
+  "Players, parents and supporters: free — watch, follow and receive coaching feedback at no cost, everywhere":
+    "Spieler, Eltern und Fans: kostenlos — überall zuschauen, verfolgen und Coaching-Feedback erhalten, ohne Gebühr",
+  "Tier 1 — UK, Ireland, EU, Australia, New Zealand, USA and Canada: Club Starter £19/mo · Club Pro £49/mo · Academy £99/mo · League / Competition £149/mo · Coach / Analyst £19/mo · Net / Ground Operator £39/mo":
+    "Stufe 1 — UK, Irland, EU, Australien, Neuseeland, USA und Kanada: Club Starter 19 £/Monat · Club Pro 49 £/Monat · Akademie 99 £/Monat · Liga/Wettbewerb 149 £/Monat · Trainer/Analyst 19 £/Monat · Netz-/Platzbetreiber 39 £/Monat",
+  "Tier 2 — Gulf and Middle East (UAE, Saudi Arabia, Qatar, Kuwait, Oman, Bahrain): Club Starter AED 79/mo · Club Pro AED 199/mo · Academy AED 399/mo · League AED 599/mo · Coach / Analyst AED 79/mo · Net / Ground Operator AED 149/mo":
+    "Stufe 2 — Golfregion und Nahost (VAE, Saudi-Arabien, Katar, Kuwait, Oman, Bahrain): Club Starter 79 AED/Monat · Club Pro 199 AED/Monat · Akademie 399 AED/Monat · Liga 599 AED/Monat · Trainer/Analyst 79 AED/Monat · Netz-/Platzbetreiber 149 AED/Monat",
+  "Tier 3 — South Asia (India, Pakistan, Sri Lanka, Bangladesh, Nepal): Club Starter ₹499 / PKR 1,499 per mo · Club Pro ₹1,299 / PKR 3,999 · Academy ₹2,499 / PKR 7,499 · League ₹3,999 / PKR 11,999 · Coach / Analyst ₹499 / PKR 1,499 · Net / Ground Operator ₹999 / PKR 2,999":
+    "Stufe 3 — Südasien (Indien, Pakistan, Sri Lanka, Bangladesch, Nepal): Club Starter 499 ₹ / 1.499 PKR pro Monat · Club Pro 1.299 ₹ / 3.999 PKR · Akademie 2.499 ₹ / 7.499 PKR · Liga 3.999 ₹ / 11.999 PKR · Trainer/Analyst 499 ₹ / 1.499 PKR · Netz-/Platzbetreiber 999 ₹ / 2.999 PKR",
+  "Tier 4 — Africa, Caribbean and other emerging cricket markets: Club Starter $9/mo · Club Pro $24/mo · Academy $49/mo · League $74/mo · Coach / Analyst $9/mo · Net / Ground Operator $19/mo":
+    "Stufe 4 — Afrika, Karibik und weitere aufstrebende Cricket-Märkte: Club Starter 9 $/Monat · Club Pro 24 $/Monat · Akademie 49 $/Monat · Liga 74 $/Monat · Trainer/Analyst 9 $/Monat · Netz-/Platzbetreiber 19 $/Monat",
+  "Germany, Austria and Switzerland (growing club and expat cricket): Club Starter €22/mo · Club Pro €55/mo · Academy €109/mo · League €169/mo · Coach / Analyst €22/mo · Net / Ground Operator €45/mo":
+    "Deutschland, Österreich und Schweiz (wachsendes Club- und Expat-Cricket): Club Starter 22 €/Monat · Club Pro 55 €/Monat · Akademie 109 €/Monat · Liga 169 €/Monat · Trainer/Analyst 22 €/Monat · Netz-/Platzbetreiber 45 €/Monat",
+  "Tier is set by the billing country of the club or coach and shown in local currency before checkout; VAT or GST is applied where it is due":
+    "Die Stufe richtet sich nach dem Abrechnungsland des Clubs oder Trainers und wird vor dem Checkout in Landeswährung angezeigt; USt. bzw. GST wird erhoben, wo sie anfällt",
+  "Multi-country leagues and touring academies are billed at the tier of their head office, with local-tier pricing for affiliated clubs abroad":
+    "Länderübergreifende Ligen und reisende Akademien werden nach der Stufe ihres Hauptsitzes abgerechnet, angeschlossene Clubs im Ausland zum jeweiligen lokalen Tarif",
+  "Two-month free trial on every plan in every location; no commission and no lock-in contract at any tier":
+    "Zwei Monate Gratistest bei jedem Tarif an jedem Standort; keine Provision und keine Vertragsbindung in keiner Stufe",
   "Club Starter — £19/mo: one club, unlimited fixtures and scoring, live scoreboard and public link":
     "Club Starter — 19 £/Monat: ein Club, unbegrenzte Spiele und Scoring, Live-Anzeigetafel und öffentlicher Link",
   "Club Pro — £49/mo: all teams, multi-phone camera room, review room, memberships and subs collection":
