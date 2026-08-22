@@ -103,7 +103,7 @@ export function OverviewPanel() {
         </p>
         <ul className="space-y-1 text-muted-foreground">
           {[
-            `${g.trancheCount} × ${fmtEURk(g.trancheSize)} tranches — each tranche = ${fmtPct(equityPerTranche, 2)} equity and ${fmtPct(equityPerTranche, 2)} of net profit. Investors may buy more than one tranche.`,
+            `${g.trancheCount} × ${fmtEURk(g.trancheSize)} ${t("tranches")} — ${t("each tranche =")} ${fmtPct(equityPerTranche, 2)} ${t("equity and")} ${fmtPct(equityPerTranche, 2)} ${t("of net profit")}. ${t("Investors may buy more than one tranche.")}`,
             "Funds are spent on finalising the native apps, legal & compliance, then sales & marketing — the core tech is already built.",
             "All shareholdings are legally recorded by lawyers under the relevant country law. No further investment rounds are planned.",
             "Investors can sell their equity, with first refusal to the company; valuation is set independently by auditors for full transparency.",
