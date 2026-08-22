@@ -758,6 +758,8 @@ export const DE: Record<string, string> = {
   "We run tech, operations and management; investors can input on defined matters, with final say resting with the company.": "Wir führen Technik, Betrieb und Management; Investoren können zu festgelegten Themen Stellung nehmen, das letzte Wort hat das Unternehmen.",
   "Each brand stands on its own economics, and cross-selling across verticals compounds sales and customer trust.": "Jede Marke steht auf eigenen wirtschaftlichen Füßen, und Cross-Selling über Branchen hinweg verstärkt Umsatz und Kundenvertrauen.",
   "Shareholders draw dividends every six months from undistributed net profit —": "Gesellschafter entnehmen alle sechs Monate Dividenden aus dem nicht ausgeschütteten Jahresüberschuss —",
+  "then": "dann",
+  "split pro-rata by equity; the rest stays in the business.": "anteilig nach Beteiligung verteilt; der Rest bleibt im Unternehmen.",
   "Brands launch on a 3-week rolling cadence with a": "Marken starten im 3-Wochen-Rhythmus mit einer",
   "-month free trial.": "-monatiger kostenloser Testphase.",
  "Company & domains": "Unternehmen & Domains",
