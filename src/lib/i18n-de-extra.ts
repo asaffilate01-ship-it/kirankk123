@@ -880,4 +880,197 @@ export const DE_EXTRA: Record<string, string> = {
     "\u22482 Mio. britische Sch\u00fcler erhalten j\u00e4hrlich Privatunterricht und \u2248150.000 Personen unterrichten haupt- oder nebenberuflich; nur ein kleiner Teil l\u00e4uft durchg\u00e4ngig auf einer spezialisierten Plattform.",
   "\u2248\u00a32bn a year of UK tutoring spend plus school catch-up budgets. Most of the software value is currently captured as marketplace commission taken out of tutors' income rather than paid as software.":
     "\u22482 Mrd. \u00a3 j\u00e4hrliche Nachhilfeausgaben in Gro\u00dfbritannien plus Schulbudgets. Der Softwarewert wird derzeit \u00fcberwiegend als Marktplatzprovision aus dem Einkommen der Lehrkr\u00e4fte entnommen statt als Software bezahlt.",
+  // NILEVELLA (Egypt / UK-sold)
+  "NILEVELLA is the commission-free, full-service travel platform for Egypt: tours and multi-day packages, Luxor–Aswan Nile cruises and dahabiyas, instant-confirmation day trips and activities, hotels, resorts, desert camps, villas and apartments, plus transfers, private drivers, car hire and domestic flights — all bookable in one place with all-in pricing in GBP, EUR, USD or EGP and eleven languages. Licensed local operators and vetted Egyptologist guides keep 100% of their fare; NILEVELLA charges them a flat subscription instead of commission. Traveller apps hold every voucher offline, and a full supplier CRM runs enquiries, availability, contracts, payouts and support. Live now as a test site at nilevella.itechlounge.co.uk; the real domain nilevella.com follows.":
+    "NILEVELLA ist die provisionsfreie Full-Service-Reiseplattform für Ägypten: Rundreisen und mehrtägige Pakete, Nilkreuzfahrten und Dahabijas zwischen Luxor und Assuan, Tagestouren und Aktivitäten mit Sofortbestätigung, Hotels, Resorts, Wüstencamps, Villen und Apartments sowie Transfers, private Fahrer, Mietwagen und Inlandsflüge — alles an einem Ort buchbar, mit Komplettpreisen in GBP, EUR, USD oder EGP und in elf Sprachen. Lizenzierte lokale Anbieter und geprüfte Ägyptologen-Guides behalten 100 % ihres Umsatzes; NILEVELLA berechnet ein pauschales Abo statt Provision. Die Reise-Apps halten alle Vouchers offline bereit, und ein vollständiges Anbieter-CRM steuert Anfragen, Verfügbarkeiten, Verträge, Auszahlungen und Support. Aktuell live als Testseite unter nilevella.itechlounge.co.uk; die echte Domain nilevella.com folgt.",
+  "Ancient wonder. Alive today.":
+    "Antikes Wunder. Heute lebendig.",
+  "UK and European culture travellers, honeymooners, families, divers and cruise buyers, group and MICE organisers, Egyptian diaspora — plus the supply side: licensed tour operators, cruise and dahabiya owners, hotels and resorts, transport companies and Egyptologist guides.":
+    "Kultur-, Hochzeits- und Familienreisende aus UK und Europa, Taucher und Kreuzfahrtkäufer, Gruppen- und MICE-Organisatoren, die ägyptische Diaspora — dazu die Angebotsseite: lizenzierte Reiseveranstalter, Kreuzfahrt- und Dahabija-Eigner, Hotels und Resorts, Transportunternehmen und Ägyptologen-Guides.",
+  "NILEVELLA exists because Egypt travel is still sold through layers of intermediaries. A Nile cruise cabin can pass through a wholesaler, an OTA and a local broker before it reaches the traveller — each adding 15–25% and none owning the experience. Travellers overpay for inconsistent quality, cannot see what is actually included, and lose contact with anyone accountable once they land. Local operators, captains, hotels and guides earn a fraction of the ticket and have no software of their own: bookings arrive by WhatsApp and email, availability lives in notebooks, and payment can take months. NILEVELLA replaces that chain with one platform — published all-in prices, verified licensed suppliers, digital vouchers and paperwork, and a flat subscription instead of commission so the value stays with the people delivering the trip.":
+    "NILEVELLA existiert, weil Ägyptenreisen weiterhin über mehrere Zwischenhändler verkauft werden. Eine Nilkreuzfahrt-Kabine läuft oft über Großhändler, OTA und lokalen Makler, bevor sie den Reisenden erreicht — jeder schlägt 15–25 % auf, niemand verantwortet das Erlebnis. Reisende zahlen zu viel für schwankende Qualität, sehen nicht, was wirklich enthalten ist, und haben vor Ort keinen Ansprechpartner. Lokale Anbieter, Kapitäne, Hotels und Guides erhalten nur einen Bruchteil und haben keine eigene Software: Buchungen kommen per WhatsApp und E-Mail, Verfügbarkeiten stehen in Notizbüchern, Zahlungen dauern Monate. NILEVELLA ersetzt diese Kette durch eine Plattform — veröffentlichte Komplettpreise, geprüfte lizenzierte Anbieter, digitale Vouchers und Dokumente sowie ein Pauschalabo statt Provision, damit der Wert bei denen bleibt, die die Reise leisten.",
+  "One platform for the whole Egypt trip, with no commission taken from anyone. Travellers search and book packages, cruises, day tours, stays, transfers and flights side by side, see the true all-in price in their own currency and language, pay securely with clear cancellation windows, and carry every voucher, pickup time and guide contact offline in the app. Suppliers get a real operating system — inventory and availability, rate and allocation management, enquiry pipeline and CRM, contracts, digital vouchers, guide and driver rostering, reviews and same-cycle payouts — for a flat monthly fee with a two-month free trial. Written city and country guides, costed itinerary ideas and an Egypt specialist team on call turn browsing into booking, and the shared iTechLounge stack means it launches fast at a fraction of standalone cost.":
+    "Eine Plattform für die komplette Ägyptenreise — ohne Provision für irgendjemanden. Reisende suchen und buchen Pakete, Kreuzfahrten, Tagestouren, Übernachtungen, Transfers und Flüge nebeneinander, sehen den echten Komplettpreis in eigener Währung und Sprache, zahlen sicher mit klaren Storno-Fristen und tragen jeden Voucher, jede Abholzeit und Guide-Kontakte offline in der App. Anbieter erhalten ein echtes Betriebssystem — Inventar und Verfügbarkeit, Raten- und Kontingentverwaltung, Anfragen-Pipeline und CRM, Verträge, digitale Vouchers, Guide- und Fahrerdisposition, Bewertungen und Auszahlungen im gleichen Zyklus — für eine monatliche Pauschale mit zwei Monaten Gratistest. Redaktionelle Stadt- und Landführer, kalkulierte Routenideen und ein Ägypten-Expertenteam machen aus Stöbern Buchungen; der gemeinsame iTechLounge-Stack ermöglicht einen schnellen Start zu einem Bruchteil der Einzelkosten.",
+  "Full Egypt catalogue: 5–14 day packages, Nile cruises, day tours, stays, transfers and flights in one search":
+    "Kompletter Ägypten-Katalog: 5–14-Tage-Pakete, Nilkreuzfahrten, Tagestouren, Übernachtungen, Transfers und Flüge in einer Suche",
+  "Zero commission on any booking — suppliers keep 100% of the fare":
+    "Keine Provision auf Buchungen — Anbieter behalten 100 % des Umsatzes",
+  "Published all-in pricing: guides, entry fees, internal flights and transfers shown up front":
+    "Veröffentlichte Komplettpreise: Guides, Eintritte, Inlandsflüge und Transfers vorab sichtbar",
+  "Luxor–Aswan cruise and dahabiya builder with Abu Simbel add-ons and shore excursions":
+    "Kreuzfahrt- und Dahabija-Konfigurator Luxor–Assuan mit Abu-Simbel-Zusatz und Landausflügen",
+  "Instant-confirmation day trips: balloons, diving, felucca sails, sound-and-light, food walks, quad biking":
+    "Tagestouren mit Sofortbestätigung: Ballonfahrten, Tauchen, Feluken, Sound-and-Light, Food-Walks, Quadtouren",
+  "Stays engine: Nile-view hotels, Red Sea resorts, desert camps, villas and whole apartments":
+    "Übernachtungsmodul: Hotels mit Nilblick, Rotmeer-Resorts, Wüstencamps, Villen und ganze Apartments",
+  "Transport module: airport meet-and-greet, private drivers by the day, intercity transfers, sleeper trains, car hire":
+    "Transportmodul: Flughafenbegleitung, Tagesfahrer, Fernverkehrstransfers, Nachtzüge, Mietwagen",
+  "Eleven languages and GBP / EUR / USD / EGP pricing at live rates":
+    "Elf Sprachen und Preise in GBP / EUR / USD / EGP zu Echtzeitkursen",
+  "Licensed-supplier verification: operator licence, insurance, vessel and guide credentials on file":
+    "Anbieterprüfung: Veranstalterlizenz, Versicherung, Schiffs- und Guide-Nachweise hinterlegt",
+  "Egyptologist and themed-guide marketplace with availability, languages and ratings":
+    "Marktplatz für Ägyptologen und Themen-Guides mit Verfügbarkeit, Sprachen und Bewertungen",
+  "Digital vouchers, contracts, receipts and cancellation windows generated automatically":
+    "Digitale Vouchers, Verträge, Belege und Storno-Fristen automatisch erzeugt",
+  "Secure card payments with deposit-and-balance schedules and escrow-style release on delivery":
+    "Sichere Kartenzahlungen mit Anzahlung und Restzahlung, treuhandähnliche Freigabe nach Leistung",
+  "Offline traveller wallet: vouchers, pickup times, driver and guide contacts without signal":
+    "Offline-Wallet für Reisende: Vouchers, Abholzeiten, Fahrer- und Guide-Kontakte ohne Netz",
+  "Supplier CRM: enquiries, quotes, allocations, rate calendars, rooming lists and payouts":
+    "Anbieter-CRM: Anfragen, Angebote, Kontingente, Ratenkalender, Zimmerlisten und Auszahlungen",
+  "Guide and driver rostering with day-sheets and job confirmations":
+    "Guide- und Fahrerdisposition mit Tagesplänen und Auftragsbestätigungen",
+  "City and country guides, costed itinerary ideas and Beyond-Egypt add-ons (Jordan, Sinai, Saudi Red Sea link)":
+    "Stadt- und Landführer, kalkulierte Routenideen und Zusatzziele (Jordanien, Sinai, saudische Rotmeerküste)",
+  "Tailor-made trip desk with human Egypt specialists before, during and after travel":
+    "Maßgeschneiderter Reiseservice mit echten Ägypten-Experten vor, während und nach der Reise",
+  "Installable PWA plus iOS and Android apps, mobile-first throughout":
+    "Installierbare PWA sowie iOS- und Android-Apps, durchgängig mobile-first",
+  "Reviews, incident logging, quality scoring and supplier league tables":
+    "Bewertungen, Vorfallprotokolle, Qualitätsbewertung und Anbieter-Rankings",
+  "Dashboards, exports and full audit trail for finance and compliance":
+    "Dashboards, Exporte und vollständiger Audit-Trail für Finanzen und Compliance",
+  "Travellers: free — no booking fee, no service fee, all-in price shown up front":
+    "Reisende: kostenlos — keine Buchungsgebühr, keine Servicegebühr, Komplettpreis vorab sichtbar",
+  "Guide / Driver: £19/mo — profile, availability, day-sheets, direct enquiries, payouts":
+    "Guide / Fahrer: 19 £/Monat — Profil, Verfügbarkeit, Tagespläne, Direktanfragen, Auszahlungen",
+  "Operator Starter: £49/mo — up to 25 products, CRM, vouchers, payments, one currency":
+    "Operator Starter: 49 £/Monat — bis 25 Produkte, CRM, Vouchers, Zahlungen, eine Währung",
+  "Operator Pro: £149/mo — unlimited products, rate calendars, allocations, multi-currency, API":
+    "Operator Pro: 149 £/Monat — unbegrenzte Produkte, Ratenkalender, Kontingente, Mehrwährung, API",
+  "Cruise & Hotel: £249/mo per vessel or property — cabin/room inventory, rooming lists, channel sync":
+    "Cruise & Hotel: 249 £/Monat pro Schiff oder Objekt — Kabinen-/Zimmerinventar, Zimmerlisten, Kanalsynchronisation",
+  "Group / DMC Enterprise: from £599/mo — multi-brand, multi-office, SLA support, custom integrations":
+    "Group / DMC Enterprise: ab 599 £/Monat — mehrere Marken und Standorte, SLA-Support, individuelle Integrationen",
+  "Zero commission on every booking at every tier — the fare belongs to the supplier":
+    "Keine Provision auf jede Buchung in jedem Tarif — der Umsatz gehört dem Anbieter",
+  "Two-month free trial for every subscriber; monthly billing, cancel any time":
+    "Zwei Monate gratis für alle Abonnenten; monatliche Abrechnung, jederzeit kündbar",
+  "Payment processing passed through at cost; optional marketing placements priced transparently":
+    "Zahlungsabwicklung zum Selbstkostenpreis; optionale Marketingplatzierungen transparent bepreist",
+  "Search and book packages, cruises, day tours, stays, transfers and flights with all-in pricing in eleven languages and four currencies.":
+    "Pakete, Kreuzfahrten, Tagestouren, Übernachtungen, Transfers und Flüge mit Komplettpreisen in elf Sprachen und vier Währungen suchen und buchen.",
+  "Offline voucher wallet, itinerary, pickup reminders and direct messaging with guides and drivers.":
+    "Offline-Voucher-Wallet, Reiseplan, Abhol-Erinnerungen und Direktnachrichten an Guides und Fahrer.",
+  "Same traveller experience on Android, installable as a PWA today.":
+    "Gleiches Reiseerlebnis auf Android, heute schon als PWA installierbar.",
+  "Operators, cruise owners and hotels manage products, rates, allocations, enquiries, contracts and payouts.":
+    "Veranstalter, Schiffseigner und Hotels verwalten Produkte, Raten, Kontingente, Anfragen, Verträge und Auszahlungen.",
+  "Guides and drivers accept jobs, view day-sheets and pickup lists, and confirm delivery with photo proof.":
+    "Guides und Fahrer nehmen Aufträge an, sehen Tagespläne und Abhollisten und bestätigen die Leistung mit Fotobeleg.",
+  "Central enquiry pipeline, tailor-made trip desk, quality control, incidents and supplier verification.":
+    "Zentrale Anfragen-Pipeline, Maßschneider-Desk, Qualitätskontrolle, Vorfälle und Anbieterprüfung.",
+  "Connects supplier inventory, channel managers, flight and rail content and payment gateways.":
+    "Verbindet Anbieterinventar, Channel-Manager, Flug- und Bahninhalte sowie Zahlungsdienstleister.",
+  "Leisure traveller":
+    "Urlaubsreisende",
+  "Compares packages, cruises and day tours at true all-in prices, books securely and carries vouchers offline.":
+    "Vergleicht Pakete, Kreuzfahrten und Tagestouren zu echten Komplettpreisen, bucht sicher und trägt Vouchers offline mit.",
+  "Honeymoon / special-occasion buyer":
+    "Hochzeits- und Anlassreisende",
+  "Builds a dahabiya-plus-Red-Sea trip with a specialist and pays by deposit and balance.":
+    "Stellt mit einem Experten eine Dahabija-plus-Rotes-Meer-Reise zusammen und zahlt per Anzahlung und Restzahlung.",
+  "Family traveller":
+    "Familienreisende",
+  "Filters family-friendly itineraries, room configurations and private transfers with clear inclusions.":
+    "Filtert familienfreundliche Routen, Zimmerbelegungen und Privattransfers mit klaren Leistungen.",
+  "Diver / adventure traveller":
+    "Taucher / Abenteuerreisende",
+  "Books Red Sea liveaboards, dive packages, desert camps and balloon flights with instant confirmation.":
+    "Bucht Rotmeer-Tauchsafaris, Tauchpakete, Wüstencamps und Ballonflüge mit Sofortbestätigung.",
+  "Group / MICE organiser":
+    "Gruppen- / MICE-Organisator",
+  "Holds cabin and room allocations, manages rooming lists and pays on one consolidated invoice.":
+    "Hält Kabinen- und Zimmerkontingente, verwaltet Zimmerlisten und zahlt auf einer Sammelrechnung.",
+  "Licensed tour operator / DMC":
+    "Lizenzierter Reiseveranstalter / DMC",
+  "Lists products, controls rates and availability, runs enquiries in the CRM and keeps 100% of the fare.":
+    "Listet Produkte, steuert Raten und Verfügbarkeit, bearbeitet Anfragen im CRM und behält 100 % des Umsatzes.",
+  "Cruise or dahabiya owner":
+    "Kreuzfahrt- oder Dahabija-Eigner",
+  "Publishes sailings and cabin inventory, syncs channels and fills empty cabins without commission.":
+    "Veröffentlicht Abfahrten und Kabineninventar, synchronisiert Kanäle und füllt leere Kabinen provisionsfrei.",
+  "Hotel / resort / villa owner":
+    "Hotel- / Resort- / Villenbesitzer",
+  "Manages rooms, rates and add-on services and gets paid on a predictable cycle.":
+    "Verwaltet Zimmer, Raten und Zusatzleistungen und wird in einem verlässlichen Zyklus bezahlt.",
+  "Egyptologist guide":
+    "Ägyptologen-Guide",
+  "Publishes languages, specialisms and availability, receives day-sheets and builds a rated profile.":
+    "Veröffentlicht Sprachen, Schwerpunkte und Verfügbarkeit, erhält Tagespläne und baut ein bewertetes Profil auf.",
+  "Driver / transport company":
+    "Fahrer / Transportunternehmen",
+  "Accepts airport meet-and-greet, intercity and day-hire jobs with confirmed pricing.":
+    "Nimmt Flughafenabholungen, Fernstrecken und Tagesmieten mit bestätigten Preisen an.",
+  "Egypt specialist (internal)":
+    "Ägypten-Experte (intern)",
+  "Handles tailor-made requests, changes, exceptions and in-destination support.":
+    "Bearbeitet Maßanfragen, Änderungen, Ausnahmen und Support vor Ort.",
+  "Finance / compliance (internal)":
+    "Finanzen / Compliance (intern)",
+  "Reconciles payouts, checks licences and insurance and exports audit trails.":
+    "Stimmt Auszahlungen ab, prüft Lizenzen und Versicherungen und exportiert Audit-Trails.",
+  "Viator / GetYourGuide":
+    "Viator / GetYourGuide",
+  "Enormous paid-search reach and instant-confirmation day-tour inventory":
+    "Enorme Reichweite in bezahlter Suche und Tagestouren mit Sofortbestätigung",
+  "They take 20–30% of every ticket; we take none. Suppliers can price 15–20% lower and still earn more, and we sell the whole trip — cruise, stay and transfers — not just day tours.":
+    "Sie nehmen 20–30 % pro Ticket, wir nichts. Anbieter können 15–20 % günstiger anbieten und verdienen mehr — und wir verkaufen die ganze Reise: Kreuzfahrt, Hotel und Transfers, nicht nur Tagestouren.",
+  "Booking.com / Expedia":
+    "Booking.com / Expedia",
+  "Global stay inventory and trusted checkout":
+    "Globales Hotelinventar und vertrauter Checkout",
+  "They are room-only with 15–18% commission and no Egypt operating knowledge. We bundle cruise, guide, transfer and entry fees into one accountable itinerary with a specialist on call.":
+    "Dort gibt es nur Zimmer, 15–18 % Provision und kein operatives Ägypten-Wissen. Wir bündeln Kreuzfahrt, Guide, Transfer und Eintritte in einer verantworteten Reise mit Experten-Hotline.",
+  "TUI / Jet2 and package tour operators":
+    "TUI / Jet2 und Pauschalveranstalter",
+  "ATOL-protected packages, high-street trust and charter capacity":
+    "ATOL-gesicherte Pakete, Vertrauen im Reisebüro und Charterkapazitäten",
+  "Fixed, mass-market itineraries and rigid change rules. We offer the same protections with locally owned, flexible itineraries at operator-direct prices.":
+    "Starre Massenreisen und unflexible Änderungsregeln. Wir bieten die gleichen Absicherungen mit lokal geführten, flexiblen Routen zu Direktpreisen der Anbieter.",
+  "Nile cruise wholesalers and brokers":
+    "Nilkreuzfahrt-Großhändler und Makler",
+  "Pre-bought cabin blocks and deep local relationships":
+    "Vorgekaufte Kabinenkontingente und enge lokale Beziehungen",
+  "Opaque mark-ups, no live availability, WhatsApp back office. We give owners real software, live inventory and same-cycle payouts they cannot fund alone.":
+    "Undurchsichtige Aufschläge, keine Echtzeitverfügbarkeit, Backoffice per WhatsApp. Wir geben Eignern echte Software, Live-Inventar und Auszahlungen im gleichen Zyklus, die sie allein nicht finanzieren könnten.",
+  "Local operators selling direct on social media":
+    "Lokale Anbieter mit Direktverkauf über Social Media",
+  "Lowest prices and genuine local knowledge":
+    "Niedrigste Preise und echtes lokales Wissen",
+  "No trust signals, no secure payment, no recourse. We keep their pricing but add licence verification, card payments, digital vouchers and a support team.":
+    "Keine Vertrauenssignale, keine sichere Zahlung, kein Regress. Wir behalten ihre Preise und ergänzen Lizenzprüfung, Kartenzahlung, digitale Vouchers und ein Supportteam.",
+  "Airbnb Experiences and DIY planning":
+    "Airbnb Experiences und Eigenplanung",
+  "Free, familiar and flexible":
+    "Kostenlos, vertraut und flexibel",
+  "The traveller becomes their own tour operator across five suppliers and three time zones. We assemble and guarantee the whole chain for the same money.":
+    "Der Reisende wird zum eigenen Veranstalter mit fünf Anbietern in drei Zeitzonen. Wir stellen die gesamte Kette zusammen und garantieren sie zum gleichen Preis.",
+  "Supply-side onboarding slower than planned":
+    "Anbieter-Onboarding langsamer als geplant",
+  "Concierge onboarding in Cairo, Luxor, Aswan and Hurghada; launch with a curated core of licensed operators and cruise owners before broad opening.":
+    "Concierge-Onboarding in Kairo, Luxor, Assuan und Hurghada; Start mit einem kuratierten Kern lizenzierter Veranstalter und Schiffseigner vor der breiten Öffnung.",
+  "Seasonality and demand shocks (security, health, currency)":
+    "Saisonalität und Nachfrageschocks (Sicherheit, Gesundheit, Währung)",
+  "Diversified product mix across culture, diving and desert; multi-currency pricing; flat subscription revenue is far less shock-sensitive than commission.":
+    "Diversifizierter Produktmix aus Kultur, Tauchen und Wüste; Mehrwährungspreise; Pauschalabo-Erlöse sind deutlich weniger schockanfällig als Provisionen.",
+  "Quality or safety failure by a supplier":
+    "Qualitäts- oder Sicherheitsversagen eines Anbieters",
+  "Licence, insurance and vessel checks on file, review and incident scoring, rapid delisting, and a duty operator reachable 24/7 in destination.":
+    "Hinterlegte Lizenz-, Versicherungs- und Schiffsprüfungen, Bewertungs- und Vorfall-Scoring, schnelle Auslistung und eine rund um die Uhr erreichbare Einsatzleitung vor Ort.",
+  "Payment, FX and payout complexity across EGP and GBP":
+    "Komplexität bei Zahlungen, Wechselkursen und Auszahlungen in EGP und GBP",
+  "Escrow-style release on delivery, hedged settlement, and a shared group finance function handling reconciliation centrally.":
+    "Treuhandähnliche Freigabe nach Leistung, abgesicherte Abwicklung und eine gemeinsame Konzernfinanzfunktion, die zentral abstimmt.",
+  "Customer acquisition cost above plan":
+    "Kundenakquisitionskosten über Plan",
+  "Guide and itinerary content SEO, diaspora and community channels, and cross-sell from sister travel brands rather than paid-only growth.":
+    "SEO über Reiseführer- und Routeninhalte, Diaspora- und Community-Kanäle sowie Cross-Selling aus Schwestermarken statt nur bezahltem Wachstum.",
+  "Today an Egypt trip is assembled by hand across a chain of intermediaries: an OTA for the day tours at 20–30% commission, a wholesaler or broker for the cruise cabin, a separate hotel booking, and WhatsApp for the airport transfer. Suppliers run on notebooks, spreadsheets and messaging apps, quality and pricing vary widely, and almost nobody holds an end-to-end digital record of the trip.":
+    "Heute wird eine Ägyptenreise per Hand über eine Kette von Zwischenhändlern zusammengestellt: eine OTA für Tagestouren mit 20–30 % Provision, ein Großhändler oder Makler für die Kreuzfahrtkabine, eine separate Hotelbuchung und WhatsApp für den Flughafentransfer. Anbieter arbeiten mit Notizbüchern, Tabellen und Messengern, Qualität und Preise schwanken stark, und kaum jemand hält einen durchgehenden digitalen Nachweis der Reise.",
+  "≈15m annual visitors to Egypt, including well over 2m Nile cruise passengers and roughly 1m UK visitors a year. Several thousand licensed operators, cruise vessels, hotels and guides serve them, the large majority with no purpose-built software of their own.":
+    "≈15 Mio. Besucher jährlich in Ägypten, darunter deutlich über 2 Mio. Nilkreuzfahrtgäste und rund 1 Mio. Briten pro Jahr. Mehrere Tausend lizenzierte Veranstalter, Kreuzfahrtschiffe, Hotels und Guides bedienen sie — die große Mehrheit ohne eigene spezialisierte Software.",
+  "Egyptian tourism revenue exceeds €12bn annually, with the Nile cruise and Red Sea package market alone estimated above €1.5bn. Today the software-shaped share of that value is extracted as marketplace commission from suppliers' income rather than paid for as software — which is exactly the value NILEVELLA returns to them.":
+    "Die ägyptischen Tourismuserlöse übersteigen 12 Mrd. € jährlich, allein der Markt für Nilkreuzfahrten und Rotmeer-Pakete wird auf über 1,5 Mrd. € geschätzt. Der softwareförmige Anteil dieses Werts wird heute als Marktplatzprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diesen Wert gibt NILEVELLA zurück.",
 };
