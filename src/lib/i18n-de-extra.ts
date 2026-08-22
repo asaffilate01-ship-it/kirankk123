@@ -1533,4 +1533,180 @@ export const DE_EXTRA: Record<string, string> = {
     "~5.000 angeschlossene Clubs und ~10.000 Teams allein in England und Wales, dazu Hunderte Ligen, Tausende Akademien und Schulprogramme sowie Zehntausende Trainer, Scorer und Schiedsrichter — die große Mehrheit ohne jede Video- oder Coaching-Software.",
   "≈€1.5bn global cricket technology, coaching and grassroots services spend. Most of it goes to camera hardware, pro analysis licences and commission taken from coaches and facility bookings rather than to affordable club software — the spend CRICLUME replaces with a flat subscription.":
     "≈1,5 Mrd. € weltweite Ausgaben für Cricket-Technologie, Coaching und Breitensportleistungen. Der größte Teil fließt in Kamera-Hardware, Profi-Analyselizenzen und Provisionen auf Trainer- und Anlagenbuchungen statt in bezahlbare Clubsoftware — genau diese Ausgaben ersetzt CRICLUME durch ein Pauschalabo.",
+
+  // BOSPORIVA (Türkiye, UK region)
+  "A bridge between continents.":
+    "Eine Brücke zwischen Kontinenten.",
+  "BOSPORIVA is the commission-free, full-service travel platform for Türkiye: Istanbul old-city and Bosphorus days, Cappadocia balloon mornings and valley hikes, Ephesus and Pamukkale, Gallipoli and Troy, Aegean gulet voyages and Turquoise Coast boat days, boutique and cave hotels, Antalya and Bodrum resorts, licensed guides, airport transfers, chauffeur days, self-drive hire, domestic flights and high-speed trains — plus food, hammam, cooking and photography experiences, and health and dental travel packages. Eight destinations, 300+ tours and experiences, in-country care 24/7, with the shop and guides in English, French, German and Spanish and all-in prices in GBP, EUR, USD or TRY at live rates. Every hotel, gulet, guide and transfer company is visited and vetted by our team in Türkiye and keeps 100% of the fare; BOSPORIVA charges them a flat monthly subscription instead of commission, priced by region. Traveller apps on iOS, Android and PWA hold vouchers and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, payouts and support. Live now as a test site at bosporiva.itechlounge.co.uk; the real domain bosporiva.com follows (BOSPORIVA is a trading name of TraveNexia Ltd).":
+    "BOSPORIVA ist die provisionsfreie Full-Service-Reiseplattform für die Türkei: Altstadt- und Bosporus-Tage in Istanbul, Ballonmorgen und Talwanderungen in Kappadokien, Ephesus und Pamukkale, Gallipoli und Troja, ägäische Gulet-Törns und Bootstage an der Türkisküste, Boutique- und Höhlenhotels, Resorts in Antalya und Bodrum, lizenzierte Guides, Flughafentransfers, Chauffeurtage, Mietwagen, Inlandsflüge und Hochgeschwindigkeitszüge — dazu Kulinarik-, Hamam-, Koch- und Fotoerlebnisse sowie Gesundheits- und Dentalreisepakete. Acht Destinationen, 300+ Touren und Erlebnisse, Betreuung vor Ort rund um die Uhr, Shop und Reiseführer auf Englisch, Französisch, Deutsch und Spanisch, Komplettpreise in GBP, EUR, USD oder TRY zu Live-Kursen. Jedes Hotel, jede Gulet, jeder Guide und jedes Transferunternehmen wird von unserem Team in der Türkei besucht und geprüft und behält 100 % des Fahrpreises; BOSPORIVA berechnet stattdessen ein monatliches Pauschalabo, dessen Preis sich nach der Region richtet. Reise-Apps für iOS, Android und PWA halten Voucher und Abholzeiten offline bereit, und ein vollständiges Lieferanten-CRM steuert Anfragen, Verfügbarkeit, Verträge, Auszahlungen und Support. Aktuell live als Testseite unter bosporiva.itechlounge.co.uk; die echte Domain bosporiva.com folgt (BOSPORIVA ist ein Handelsname der TraveNexia Ltd).",
+  "≈55m annual visitors to Türkiye, a top-five global destination; medical and dental tourism alone exceeds $2bn a year and Cappadocia ballooning, gulet charter and Antalya resort travel each run into the billions.":
+    "Ca. 55 Mio. Besucher jährlich in der Türkei, einem der fünf größten Reiseziele weltweit; allein der Medizin- und Dentaltourismus übersteigt 2 Mrd. $ pro Jahr, und Ballonfahrten in Kappadokien, Gulet-Charter und Resortreisen nach Antalya bewegen sich jeweils im Milliardenbereich.",
+  "UK and European city-break, culture and coast travellers, families, honeymooners, gulet and small-group charters, balloon and photography buyers, health and dental travel patients, Turkish diaspora — plus the supply side: licensed tour operators and guides, boutique and cave hotels, resorts, gulet and boat owners, transfer, chauffeur and car-hire companies, balloon operators, clinics and inbound DMCs.":
+    "Städtereise-, Kultur- und Küstenreisende aus Großbritannien und Europa, Familien, Hochzeitsreisende, Gulet- und Kleingruppen-Charter, Ballon- und Fotoreisende, Gesundheits- und Dentalreisepatienten, türkische Diaspora — dazu die Angebotsseite: lizenzierte Veranstalter und Guides, Boutique- und Höhlenhotels, Resorts, Gulet- und Bootseigner, Transfer-, Chauffeur- und Mietwagenfirmen, Ballonbetreiber, Kliniken und Incoming-Agenturen.",
+  "BOSPORIVA exists because Türkiye is a huge, high-repeat destination still sold through layers of intermediaries. A Cappadocia balloon seat, a cave-hotel room or a gulet cabin typically passes through a local broker, an inbound DMC, a wholesaler and an OTA before the traveller sees a price — each adding 15–30%, so the operator flying the balloon or sailing the boat keeps a fraction of what was paid. Travellers cannot tell which balloon company is licensed and insured, what a 'full board' resort really includes, or whether a Bosphorus cruise is a private boat or a 300-seat dinner barge; dental and health packages are the worst of all, sold by lead brokers with no clinical verification. On the supply side, excellent family-run hotels, guides and captains have no software: enquiries arrive by WhatsApp, availability lives in a notebook, contracts are PDFs and payment lands weeks after the guests fly home. BOSPORIVA replaces that chain with one platform — published all-in prices, licence- and insurance-verified suppliers, digital vouchers and paperwork, and a flat regional subscription instead of commission so the value stays in Türkiye.":
+    "BOSPORIVA existiert, weil die Türkei ein riesiges Reiseziel mit hoher Wiederbuchungsrate ist, das noch immer über mehrere Zwischenhändler verkauft wird. Ein Ballonplatz in Kappadokien, ein Höhlenhotelzimmer oder eine Gulet-Kabine läuft typischerweise über einen lokalen Vermittler, eine Incoming-Agentur, einen Reiseveranstalter und ein OTA, bevor der Reisende einen Preis sieht — jeder schlägt 15–30 % auf, sodass der Betrieb, der den Ballon fliegt oder das Boot segelt, nur einen Bruchteil behält. Reisende können nicht erkennen, welcher Ballonanbieter lizenziert und versichert ist, was „All-Inclusive“ wirklich enthält oder ob eine Bosporus-Fahrt ein Privatboot oder ein 300-Plätze-Dinnerschiff ist; Dental- und Gesundheitspakete sind am schlimmsten, verkauft von Lead-Brokern ohne klinische Prüfung. Auf der Angebotsseite haben hervorragende familiengeführte Hotels, Guides und Kapitäne keine Software: Anfragen kommen per WhatsApp, Verfügbarkeit steht im Notizbuch, Verträge sind PDFs, und die Zahlung kommt Wochen nach der Abreise der Gäste. BOSPORIVA ersetzt diese Kette durch eine Plattform — veröffentlichte Komplettpreise, lizenz- und versicherungsgeprüfte Anbieter, digitale Voucher und Dokumente sowie ein regionales Pauschalabo statt Provision, damit der Wert in der Türkei bleibt.",
+  "One platform for the whole Türkiye trip, with no commission taken from anyone. Travellers book a single museum ticket or a two-week private Istanbul–Cappadocia–coast itinerary side by side, see the true all-in price in their own currency and one of four languages, get honest guidance on seasons, regions, transfer times and what to skip before they commit, and carry vouchers, pickup times, driver details and guide contacts offline in the app. Every trip has a named trip planner reachable by chat, WhatsApp or email, plus in-country care 24/7 so a cancelled balloon flight, a missed transfer or a hotel problem is fixed the same day. Suppliers get a real operating system — inventory and availability, seasonal rate and allocation management, enquiry pipeline and CRM, contracts with licence and insurance tracking, digital vouchers, guide, boat and driver rostering, reviews and same-cycle payouts — for a flat monthly fee with a two-month free trial and pricing set by their region so a Cappadocia guide pays Türkiye-level rates while a UK or EU reseller pays Tier 1. Free city and country guides written by our own team in Türkiye turn browsing into booking, and the shared iTechLounge stack means it launches fast at a fraction of standalone cost.":
+    "Eine Plattform für die gesamte Türkei-Reise, ohne Provision für irgendjemanden. Reisende buchen ein einzelnes Museumsticket oder eine zweiwöchige private Route Istanbul–Kappadokien–Küste nebeneinander, sehen den echten Komplettpreis in ihrer Währung und einer von vier Sprachen, erhalten ehrliche Hinweise zu Saison, Regionen, Fahrzeiten und dem, was man sich sparen kann, und tragen Voucher, Abholzeiten, Fahrerdaten und Guide-Kontakte offline in der App. Jede Reise hat einen namentlichen Reiseplaner per Chat, WhatsApp oder E-Mail sowie Betreuung vor Ort rund um die Uhr, sodass eine abgesagte Ballonfahrt, ein verpasster Transfer oder ein Hotelproblem am selben Tag gelöst wird. Anbieter erhalten ein echtes Betriebssystem — Bestand und Verfügbarkeit, Saisonpreise und Kontingente, Anfragen-Pipeline und CRM, Verträge mit Lizenz- und Versicherungsnachweis, digitale Voucher, Einsatzplanung für Guides, Boote und Fahrer, Bewertungen und Auszahlungen im selben Zyklus — für eine monatliche Pauschale mit zwei Monaten kostenloser Testphase und regional festgelegten Preisen, sodass ein Guide in Kappadokien türkische Tarife zahlt, während ein britischer oder EU-Wiederverkäufer Stufe 1 zahlt. Kostenlose Städte- und Länderführer, geschrieben von unserem Team in der Türkei, machen aus Stöbern Buchen, und der gemeinsame iTechLounge-Stack ermöglicht einen schnellen Start zu einem Bruchteil der Einzelkosten.",
+  "Eight destinations in one basket: Istanbul, Cappadocia, Antalya, Bodrum, Ephesus, Pamukkale, Izmir, Fethiye — plus Trabzon and the Black Sea plateau":
+    "Acht Destinationen in einem Warenkorb: Istanbul, Kappadokien, Antalya, Bodrum, Ephesus, Pamukkale, Izmir, Fethiye — dazu Trabzon und das Schwarzmeer-Hochland",
+  "Zero commission on any booking — hotels, guides, gulets, balloon and transfer operators keep 100% of the fare":
+    "Null Provision auf jede Buchung — Hotels, Guides, Guleten, Ballon- und Transferbetriebe behalten 100 % des Erlöses",
+  "Tours and day trips: Istanbul old-city walks, Cappadocia valley hikes, Ephesus and Pamukkale, Gallipoli and Troy, licensed guides only":
+    "Touren und Tagesausflüge: Altstadtrundgänge in Istanbul, Talwanderungen in Kappadokien, Ephesus und Pamukkale, Gallipoli und Troja — ausschließlich mit lizenzierten Guides",
+  "Holiday packages: multi-city Istanbul–Cappadocia–coast itineraries with hotels, internal flights, transfers and guiding in one price":
+    "Pauschalreisen: Mehrstädte-Routen Istanbul–Kappadokien–Küste mit Hotels, Inlandsflügen, Transfers und Führungen zu einem Preis",
+  "Stays: Bosphorus-view hotels, Cappadocia cave suites, Aegean boutique villas and family resorts in Antalya, Bodrum and Fethiye":
+    "Unterkünfte: Hotels mit Bosporusblick, Höhlensuiten in Kappadokien, ägäische Boutique-Villen und Familienresorts in Antalya, Bodrum und Fethiye",
+  "Gulet cruises and boat days: private and cabin-charter Turquoise Coast voyages, Bosphorus dinner cruises, Ölüdeniz boat days":
+    "Gulet-Kreuzfahrten und Bootstage: private und Kabinen-Charter-Törns an der Türkisküste, Bosporus-Dinnerfahrten, Bootstage in Ölüdeniz",
+  "Transfers and mobility: airport meet-and-greet, private chauffeur days, self-drive hire, high-speed trains, coaches, ferries and domestic flights":
+    "Transfers und Mobilität: Flughafenempfang, private Chauffeurtage, Mietwagen, Hochgeschwindigkeitszüge, Fernbusse, Fähren und Inlandsflüge",
+  "Experiences: balloon flights, meyhane nights, cooking classes, bazaar and street-food walks, historic hammams, photography sessions":
+    "Erlebnisse: Ballonfahrten, Meyhane-Abende, Kochkurse, Basar- und Streetfood-Touren, historische Hamams, Fotosessions",
+  "Health and dental travel packages with clinic accreditation, treatment plan, hotel, transfers and aftercare bundled and priced up front":
+    "Gesundheits- und Dentalreisepakete mit Klinikakkreditierung, Behandlungsplan, Hotel, Transfers und Nachsorge — gebündelt und vorab bepreist",
+  "All-in pricing in GBP, EUR, USD or TRY at live rates; shop, app and guides in English, French, German and Spanish":
+    "Komplettpreise in GBP, EUR, USD oder TRY zu Live-Kursen; Shop, App und Reiseführer auf Englisch, Französisch, Deutsch und Spanisch",
+  "Vetted suppliers only — every hotel, boat and guide visited by our team, with licence and insurance documents kept current":
+    "Nur geprüfte Anbieter — jedes Hotel, jedes Boot und jeder Guide von unserem Team besucht, Lizenz- und Versicherungsnachweise stets aktuell",
+  "Free city and country guides: best months, regions and climate, e-Visa, money, tipping, dress and etiquette, what to skip":
+    "Kostenlose Städte- und Länderführer: beste Reisemonate, Regionen und Klima, e-Visum, Geld, Trinkgeld, Kleidung und Etikette, was man auslassen kann",
+  "Travelling-inside-Türkiye planner: real hop times for domestic flights, high-speed rail, coaches, ferries and driving":
+    "Reiseplaner für die Türkei: realistische Fahrzeiten für Inlandsflüge, Hochgeschwindigkeitszüge, Fernbusse, Fähren und Selbstfahrer",
+  "Getting there and onward: Istanbul, Antalya and Izmir gateways plus onward links to Greece, Cyprus, Georgia and Dubai":
+    "An- und Weiterreise: Drehkreuze Istanbul, Antalya und Izmir sowie Anschlüsse nach Griechenland, Zypern, Georgien und Dubai",
+  "Offline traveller wallet on iOS, Android and PWA: vouchers, pickup times, driver updates and trip reminders without signal":
+    "Offline-Reisemappe für iOS, Android und PWA: Voucher, Abholzeiten, Fahrer-Updates und Reiseerinnerungen ohne Netz",
+  "Named trip planner with in-app messaging, WhatsApp and email, plus 24/7 in-country care while the traveller is on the ground":
+    "Namentlicher Reiseplaner per In-App-Chat, WhatsApp und E-Mail sowie Betreuung vor Ort rund um die Uhr während der Reise",
+  "Supplier CRM: availability, seasonal rates, allocations, enquiries, contracts, rostering, reviews and same-cycle payouts":
+    "Lieferanten-CRM: Verfügbarkeit, Saisonpreise, Kontingente, Anfragen, Verträge, Einsatzplanung, Bewertungen und Auszahlungen im selben Zyklus",
+  "Region-based subscription pricing so local Turkish suppliers pay local rates and never a booking commission":
+    "Regionale Abopreise, damit lokale türkische Anbieter lokale Tarife zahlen und niemals eine Buchungsprovision",
+  "Supplier subscriptions are region-priced by purchasing power, in local currency, with a two-month free trial and no commission at any tier":
+    "Anbieter-Abos werden nach Kaufkraft der Region in Landeswährung bepreist, mit zwei Monaten kostenloser Testphase und ohne Provision in jeder Stufe",
+  "Tier 1 — Türkiye (local suppliers): Guide ₺349/mo · Hotel Starter ₺749/mo · Hotel Pro ₺1,999/mo · Boat & Activity ₺1,199/mo · Transfer & Car Hire ₺1,499/mo · DMC ₺5,999/mo":
+    "Stufe 1 — Türkei (lokale Anbieter): Guide 349 ₺/Mon. · Hotel Starter 749 ₺/Mon. · Hotel Pro 1.999 ₺/Mon. · Boot & Aktivität 1.199 ₺/Mon. · Transfer & Mietwagen 1.499 ₺/Mon. · Incoming-Agentur 5.999 ₺/Mon.",
+  "Tier 2 — UK: Guide £19/mo · Hotel Starter £29/mo · Hotel Pro £89/mo · Boat & Activity £39/mo · Transfer & Car Hire £49/mo · DMC / multi-brand £299/mo":
+    "Stufe 2 — Großbritannien: Guide 19 £/Mon. · Hotel Starter 29 £/Mon. · Hotel Pro 89 £/Mon. · Boot & Aktivität 39 £/Mon. · Transfer & Mietwagen 49 £/Mon. · Incoming-Agentur / Multi-Marke 299 £/Mon.",
+  "Tier 2 — EU / DACH (EUR): Guide €22/mo · Hotel Starter €34/mo · Hotel Pro €99/mo · Boat & Activity €45/mo · Transfer & Car Hire €55/mo · DMC €339/mo":
+    "Stufe 2 — EU / DACH (EUR): Guide 22 €/Mon. · Hotel Starter 34 €/Mon. · Hotel Pro 99 €/Mon. · Boot & Aktivität 45 €/Mon. · Transfer & Mietwagen 55 €/Mon. · Incoming-Agentur 339 €/Mon.",
+  "Tier 2 — US / Canada / AU-NZ (USD): Guide $24/mo · Hotel Starter $36/mo · Hotel Pro $109/mo · Boat & Activity $49/mo · Transfer & Car Hire $59/mo · DMC $369/mo":
+    "Stufe 2 — USA / Kanada / AU-NZ (USD): Guide 24 $/Mon. · Hotel Starter 36 $/Mon. · Hotel Pro 109 $/Mon. · Boot & Aktivität 49 $/Mon. · Transfer & Mietwagen 59 $/Mon. · Incoming-Agentur 369 $/Mon.",
+  "Tier 3 — Gulf & Middle East: Guide AED 79/mo · Hotel Starter AED 129/mo · Hotel Pro AED 379/mo · Boat & Activity AED 169/mo · Transfer & Car Hire AED 209/mo · DMC AED 1,199/mo":
+    "Stufe 3 — Golfstaaten & Naher Osten: Guide 79 AED/Mon. · Hotel Starter 129 AED/Mon. · Hotel Pro 379 AED/Mon. · Boot & Aktivität 169 AED/Mon. · Transfer & Mietwagen 209 AED/Mon. · Incoming-Agentur 1.199 AED/Mon.",
+  "Tier 4 — Balkans, Caucasus, North Africa & South Asia: from $9/mo (guide) to $99/mo (DMC), billed in USD or local currency where supported":
+    "Stufe 4 — Balkan, Kaukasus, Nordafrika & Südasien: ab 9 $/Mon. (Guide) bis 99 $/Mon. (Incoming-Agentur), abgerechnet in USD oder, wo möglich, in Landeswährung",
+  "Health & dental partners: Clinic £149/mo (Tier 2) / ₺3,999/mo (Türkiye) — treatment catalogue, accreditation file, patient CRM, package builder and aftercare tracking":
+    "Gesundheits- & Dentalpartner: Klinik 149 £/Mon. (Stufe 2) / 3.999 ₺/Mon. (Türkei) — Behandlungskatalog, Akkreditierungsakte, Patienten-CRM, Paketkonfigurator und Nachsorge-Tracking",
+  "Optional add-ons at every tier: extra property or vessel £9/mo-equivalent, additional driver or guide app seat £4/mo-equivalent, API access included from Pro upward":
+    "Optionale Zusatzmodule in jeder Stufe: weiteres Objekt oder Schiff im Gegenwert von 9 £/Mon., zusätzlicher Fahrer- oder Guide-App-Zugang im Gegenwert von 4 £/Mon., API-Zugriff ab Pro inklusive",
+  "Geo-aware shop in EN/FR/DE/ES with currency switching: tours, packages, stays, gulets, transfers, experiences and health packages at live all-in prices.":
+    "Standortbewusster Shop auf EN/FR/DE/ES mit Währungsumschaltung: Touren, Pauschalreisen, Unterkünfte, Guleten, Transfers, Erlebnisse und Gesundheitspakete zu Live-Komplettpreisen.",
+  "Offline vouchers, pickup times, trip reminders, driver updates, wishlists and chat with your named trip planner.":
+    "Offline-Voucher, Abholzeiten, Reiseerinnerungen, Fahrer-Updates, Merklisten und Chat mit dem eigenen Reiseplaner.",
+  "Same offline wallet, reminders and planner chat for Android travellers, installable as a PWA from the web.":
+    "Dieselbe Offline-Reisemappe, Erinnerungen und Planer-Chat für Android-Reisende, als PWA direkt aus dem Web installierbar.",
+  "Hotels, gulet owners, balloon and activity operators and transfer companies manage availability, seasonal rates, enquiries, contracts and payouts.":
+    "Hotels, Gulet-Eigner, Ballon- und Aktivitätsanbieter sowie Transferfirmen verwalten Verfügbarkeit, Saisonpreise, Anfragen, Verträge und Auszahlungen.",
+  "Internal planners quote, route multi-city Türkiye itineraries, handle in-trip exceptions and run 24/7 in-country care.":
+    "Interne Planer kalkulieren, planen Mehrstädte-Routen in der Türkei, lösen Probleme während der Reise und betreuen rund um die Uhr vor Ort.",
+  "Dental and health partners manage treatment catalogues, accreditation documents, patient enquiries, package pricing and aftercare.":
+    "Dental- und Gesundheitspartner verwalten Behandlungskataloge, Akkreditierungsunterlagen, Patientenanfragen, Paketpreise und Nachsorge.",
+  "Connects supplier inventory, channel managers, domestic air and rail feeds and multi-currency payment providers.":
+    "Verbindet Anbieterbestände, Channel-Manager, Inlandsflug- und Bahndaten sowie Zahlungsanbieter mit Mehrwährungsunterstützung.",
+  "City-break and culture traveller":
+    "Städtereise- und Kulturreisende",
+  "Books Istanbul days, Cappadocia balloons and Ephesus tours at one all-in price and carries them offline.":
+    "Bucht Istanbul-Tage, Ballonfahrten in Kappadokien und Ephesus-Touren zu einem Komplettpreis und hat sie offline dabei.",
+  "Coast and resort traveller":
+    "Küsten- und Resortreisende",
+  "Combines Antalya, Bodrum or Fethiye stays with boat days and transfers in a single itinerary.":
+    "Kombiniert Aufenthalte in Antalya, Bodrum oder Fethiye mit Bootstagen und Transfers in einer Route.",
+  "Honeymoon / private-charter buyer":
+    "Hochzeitsreise-/Privatcharter-Kunde",
+  "Prices a private gulet week or tailor-made multi-city trip with clear inclusions and upgrades.":
+    "Kalkuliert eine private Gulet-Woche oder maßgeschneiderte Mehrstädte-Reise mit klaren Leistungen und Upgrades.",
+  "Health and dental travel patient":
+    "Gesundheits- und Dentalreisepatient",
+  "Compares accredited clinics with treatment plan, hotel, transfers and aftercare bundled and priced up front.":
+    "Vergleicht akkreditierte Kliniken mit Behandlungsplan, Hotel, Transfers und Nachsorge — gebündelt und vorab bepreist.",
+  "Boutique / cave hotel":
+    "Boutique-/Höhlenhotel",
+  "Sells rooms commission-free with seasonal rates, allocations and same-cycle payouts.":
+    "Verkauft Zimmer provisionsfrei mit Saisonpreisen, Kontingenten und Auszahlungen im selben Zyklus.",
+  "Licensed guide":
+    "Lizenzierter Guide",
+  "Gulet, boat and balloon operator":
+    "Gulet-, Boots- und Ballonbetreiber",
+  "Lists cabins, charters and flight slots with instant-confirmation availability and weather rebooking rules.":
+    "Listet Kabinen, Charter und Flugzeiten mit sofort bestätigter Verfügbarkeit und Umbuchungsregeln bei Wetter.",
+  "Transfer and car-hire company":
+    "Transfer- und Mietwagenunternehmen",
+  "Takes airport, chauffeur and intercity jobs and dispatches them through the driver app.":
+    "Übernimmt Flughafen-, Chauffeur- und Überlandaufträge und disponiert sie über die Fahrer-App.",
+  "Inbound DMC / reseller":
+    "Incoming-Agentur / Wiederverkäufer",
+  "Runs multiple brands and regions with contracts, consolidated invoicing and API inventory feeds.":
+    "Betreibt mehrere Marken und Regionen mit Verträgen, Sammelrechnung und API-Bestandsdaten.",
+  "They take 15–25% commission and sell beds only; we take zero commission, price all-in and assemble the whole Türkiye itinerary including gulets, balloons and transfers":
+    "Sie nehmen 15–25 % Provision und verkaufen nur Betten; wir nehmen null Provision, zeigen Komplettpreise und stellen die gesamte Türkei-Route inklusive Guleten, Ballonfahrten und Transfers zusammen",
+  "20–30% commission and no aftercare; our operators keep 100% and every traveller gets a named planner and 24/7 in-country care":
+    "20–30 % Provision und keine Nachbetreuung; unsere Anbieter behalten 100 %, und jeder Reisende erhält einen namentlichen Planer sowie Betreuung vor Ort rund um die Uhr",
+  "TUI / Jet2 and UK package operators":
+    "TUI / Jet2 und britische Pauschalveranstalter",
+  "Trusted ATOL packages and charter flight capacity":
+    "Vertraute ATOL-Pauschalreisen und Charterflugkapazität",
+  "Fixed resort inventory and rigid dates; we tailor-make across eight destinations with local boutique supply at supplier-direct prices":
+    "Feste Resortkontingente und starre Termine; wir stellen maßgeschneiderte Reisen über acht Destinationen mit lokalem Boutique-Angebot zu Direktpreisen zusammen",
+  "Local Turkish agencies and brokers":
+    "Lokale türkische Agenturen und Vermittler",
+  "Cheap, on-the-ground and personally recommended":
+    "Günstig, vor Ort und persönlich empfohlen",
+  "No contract, no cancellation policy, cash payments and no recourse; we keep the local operator but add verified licences, escrowed deposits, vouchers and accountability":
+    "Kein Vertrag, keine Stornoregelung, Barzahlung und keine Absicherung; wir behalten den lokalen Anbieter, ergänzen aber geprüfte Lizenzen, treuhänderische Anzahlungen, Voucher und Verantwortlichkeit",
+  "Own ground handling and hotel allocations":
+    "Eigene Betreuung vor Ort und Hotelkontingente",
+  "They add a margin layer and run on email; we sell them the software instead and let travellers reach the supplier price directly":
+    "Sie fügen eine Margenebene hinzu und arbeiten per E-Mail; wir verkaufen ihnen stattdessen die Software und lassen Reisende den Anbieterpreis direkt erreichen",
+  "Dental / health tourism lead brokers":
+    "Lead-Broker für Dental- und Gesundheitstourismus",
+  "Aggressive paid acquisition and low headline prices":
+    "Aggressive bezahlte Kundengewinnung und niedrige Lockpreise",
+  "Lead fees with no clinical verification and hidden extras; we verify accreditation, publish the full package price with hotel, transfers and aftercare, and charge the clinic a flat fee":
+    "Lead-Gebühren ohne klinische Prüfung und mit versteckten Zusatzkosten; wir prüfen die Akkreditierung, veröffentlichen den vollen Paketpreis inklusive Hotel, Transfers und Nachsorge und berechnen der Klinik eine Pauschale",
+  "Direct WhatsApp booking with hotels and captains":
+    "Direktbuchung per WhatsApp bei Hotels und Kapitänen",
+  "Free and familiar for suppliers":
+    "Kostenlos und vertraut für Anbieter",
+  "No availability control, no vouchers, no reviews and slow payment; the Partner Console replaces the notebook and pays out the same cycle":
+    "Keine Verfügbarkeitssteuerung, keine Voucher, keine Bewertungen und langsame Zahlung; die Partner-Konsole ersetzt das Notizbuch und zahlt im selben Zyklus aus",
+  "Slower supply-side onboarding across eight destinations":
+    "Langsameres Onboarding der Anbieter über acht Destinationen",
+  "Concierge onboarding city by city, launch with a curated core of hotels, guides and boats per corridor, and reuse shared group sales capacity.":
+    "Concierge-Onboarding Stadt für Stadt, Start mit einem kuratierten Kern aus Hotels, Guides und Booten je Korridor und Nutzung der gemeinsamen Vertriebskapazität der Gruppe.",
+  "Traveller trust in a new brand for high-value private trips and health packages":
+    "Vertrauen der Reisenden in eine neue Marke bei hochpreisigen Privatreisen und Gesundheitspaketen",
+  "Licensed, insured and accredited suppliers only, escrowed deposits, written cancellation windows, verified reviews and a named planner on every booking.":
+    "Ausschließlich lizenzierte, versicherte und akkreditierte Anbieter, treuhänderische Anzahlungen, schriftliche Stornofristen, verifizierte Bewertungen und ein namentlicher Planer bei jeder Buchung.",
+  "Seasonality and weather-dependent products (balloons, gulets)":
+    "Saisonalität und wetterabhängige Produkte (Ballonfahrten, Guleten)",
+  "Automatic weather rebooking rules, shoulder-season pricing content, and a city-break and health mix that sells year-round.":
+    "Automatische Umbuchungsregeln bei Wetter, Preisinhalte für die Nebensaison und ein Städtereise- und Gesundheitsmix, der ganzjährig verkauft.",
+  "Turkish lira volatility and FX exposure":
+    "Volatilität der türkischen Lira und Währungsrisiko",
+  "Multi-currency collection with live rates, local payout rails in TRY, region-priced subscriptions reviewed quarterly and hedged group settlement.":
+    "Zahlungseingang in mehreren Währungen zu Live-Kursen, lokale Auszahlungswege in TRY, quartalsweise überprüfte regionale Abopreise und abgesicherter Konzernausgleich.",
+  "Regulatory change in tourism licensing or health tourism approval":
+    "Regulatorische Änderungen bei Tourismuslizenzen oder Zulassungen im Gesundheitstourismus",
+  "Shared legal and compliance function tracks TÜRSAB, ministry and clinic accreditation rules and adapts terms centrally.":
+    "Die gemeinsame Rechts- und Compliance-Funktion verfolgt TÜRSAB-, Ministeriums- und Klinikakkreditierungsregeln und passt die Bedingungen zentral an.",
+  "Guide-led SEO across city and country guides in four languages, diaspora and photography community channels, and cross-sell from sister travel brands rather than paid-only growth.":
+    "Ratgeberbasiertes SEO über Städte- und Länderführer in vier Sprachen, Diaspora- und Fotografie-Communitys sowie Cross-Selling aus Schwestermarken statt rein bezahltem Wachstum.",
+  "Today Türkiye travel is sold either by global OTAs taking 15–30% on beds and single activities, by UK and European package operators tied to fixed resort inventory and charter dates, or through a local broker, DMC and wholesaler chain that adds cost before the traveller ever sees a price. Health and dental travel is largely run by lead brokers with no clinical verification and undisclosed extras. Nobody assembles a full multi-city trip — Istanbul, Cappadocia, the Aegean coast, domestic flights, high-speed rail, transfers, gulets, guides and museum passes — in one place at an all-in price, and most boutique hotels, captains and guides still run on WhatsApp, notebooks and spreadsheets.":
+    "Heute werden Türkei-Reisen entweder von globalen OTAs verkauft, die 15–30 % auf Betten und Einzelaktivitäten nehmen, von britischen und europäischen Pauschalveranstaltern mit festen Resortkontingenten und Charterterminen oder über eine Kette aus lokalem Vermittler, Incoming-Agentur und Reiseveranstalter, die Kosten aufschlägt, bevor der Reisende überhaupt einen Preis sieht. Gesundheits- und Dentalreisen werden überwiegend von Lead-Brokern ohne klinische Prüfung und mit verdeckten Zusatzkosten vermittelt. Niemand stellt eine komplette Mehrstädte-Reise — Istanbul, Kappadokien, Ägäisküste, Inlandsflüge, Hochgeschwindigkeitszüge, Transfers, Guleten, Guides und Museumspässe — an einem Ort zu einem Komplettpreis zusammen, und die meisten Boutiquehotels, Kapitäne und Guides arbeiten weiter mit WhatsApp, Notizbüchern und Tabellen.",
+  "≈55m international arrivals a year, with tens of thousands of hotels, licensed guides, boat and balloon operators, transfer companies and clinics serving them — the large majority with no purpose-built software of their own.":
+    "Ca. 55 Mio. internationale Ankünfte pro Jahr, bedient von Zehntausenden Hotels, lizenzierten Guides, Boots- und Ballonbetreibern, Transferfirmen und Kliniken — die große Mehrheit ohne eigene, dafür gebaute Software.",
+  "≈$55bn Turkish tourism receipts a year, of which medical and dental tourism alone exceeds $2bn. Most of the software-shaped share of that value is currently extracted as OTA, broker and wholesaler commission from suppliers' income rather than paid for as software — exactly the margin BOSPORIVA returns to Turkish operators while charging a flat, region-priced subscription.":
+    "Ca. 55 Mrd. $ Tourismuseinnahmen der Türkei pro Jahr, davon allein über 2 Mrd. $ Medizin- und Dentaltourismus. Der softwareförmige Anteil dieses Werts wird heute überwiegend als OTA-, Vermittler- und Veranstalterprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diese Marge gibt BOSPORIVA an türkische Betriebe zurück und berechnet stattdessen ein pauschales, regional bepreistes Abo.",
 };
