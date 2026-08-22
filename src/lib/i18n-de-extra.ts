@@ -1336,4 +1336,181 @@ export const DE_EXTRA: Record<string, string> = {
     "Zweistellige Millionenzahlen internationaler Ankünfte pro Jahr in den neun Ländern, bedient von mehreren Tausend Camps, Lodges, Resorts, Bootsbetreibern und lizenzierten Guides — die große Mehrheit ohne eigene, dafür gebaute Software.",
   "≈€35bn African inbound leisure travel. Most of the software-shaped share of that value is currently extracted as OTA and wholesaler commission from suppliers' income rather than paid for as software — exactly the margin SAVANSEA returns to camps, guides and communities while charging a flat subscription.":
     "≈35 Mrd. € Incoming-Urlaubsreisen in Afrika. Der software-nahe Anteil dieses Werts wird heute als OTA- und Veranstalterprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diese Marge gibt SAVANSEA an Camps, Guides und Gemeinschaften zurück und berechnet stattdessen ein Pauschalabo.",
+  // CRICLUME (UK)
+  "Every ball. Every angle. Every advantage.":
+    "Jeder Ball. Jede Perspektive. Jeder Vorteil.",
+  "CRICLUME is the commission-free match-day and coaching operating system for cricket: fast ball-by-ball scoring, a multi-phone camera room that films every delivery from four or more synced angles, live broadcast-ready scoreboards, auto-built league tables and player records, and a coaching review room where the whole squad can slow a delivery down frame by frame, draw on it and swap voice notes before the next session. Clubs, leagues and academies run fixtures, squads, availability, officials, memberships and subs in one place, and choose exactly who watches a match live — the opposition, the league office, followers or a public supporter link. Coaches, analysts, videographers and ground/net providers can also list paid services in a zero-commission marketplace and keep 100% of what they charge; CRICLUME charges a flat monthly subscription instead. Live now as a test site at criclume.itechlounge.co.uk; the real domain criclume.com follows.":
+    "CRICLUME ist das provisionsfreie Spieltag- und Coaching-Betriebssystem für Cricket: schnelles Ball-für-Ball-Scoring, ein Multi-Handy-Kameraraum, der jeden Ball aus vier oder mehr synchronisierten Perspektiven filmt, live broadcast-fähige Anzeigetafeln, automatisch erzeugte Tabellen und Spielerstatistiken sowie ein Coaching-Analyseraum, in dem das ganze Team einen Ball Bild für Bild verlangsamen, darauf zeichnen und Sprachnotizen austauschen kann — noch vor dem nächsten Training. Clubs, Ligen und Akademien verwalten Spielpläne, Kader, Verfügbarkeiten, Schiedsrichter, Mitgliedschaften und Beiträge an einem Ort und entscheiden genau, wer ein Spiel live verfolgt — der Gegner, die Ligageschäftsstelle, Follower oder ein öffentlicher Fan-Link. Trainer, Analysten, Videografen und Netz-/Platzbetreiber können außerdem bezahlte Leistungen in einem provisionsfreien Marktplatz anbieten und behalten 100 % ihres Honorars; CRICLUME berechnet stattdessen ein monatliches Pauschalabo. Aktuell live als Testseite unter criclume.itechlounge.co.uk; die echte Domain criclume.com folgt.",
+  "≈€1.5bn global cricket technology, coaching and grassroots services spend. In England and Wales alone there are ~5,000 ECB-affiliated clubs, ~10,000 teams and hundreds of leagues, plus a fast-growing academy and private-coaching market across the UK, India, Pakistan, Australia, South Africa and the Gulf.":
+    "≈1,5 Mrd. € Ausgaben für Cricket-Technologie, Coaching und Breitensportleistungen weltweit. Allein in England und Wales gibt es ~5.000 ECB-angeschlossene Clubs, ~10.000 Teams und Hunderte Ligen, dazu einen schnell wachsenden Akademie- und Privattrainingsmarkt in UK, Indien, Pakistan, Australien, Südafrika und am Golf.",
+  "Club captains, scorers and volunteers, league secretaries and competition administrators, academies and school/college cricket programmes, coaches and analysts, players and parents — plus the supply side: freelance coaches, video analysts, indoor net and ground operators, umpires and scorers, and club shops and kit suppliers.":
+    "Club-Kapitäne, Scorer und Ehrenamtliche, Ligageschäftsführer und Wettbewerbsverwalter, Akademien und Schul-/College-Cricketprogramme, Trainer und Analysten, Spieler und Eltern — sowie die Angebotsseite: freie Trainer, Videoanalysten, Indoor-Netz- und Platzbetreiber, Schiedsrichter und Scorer sowie Clubshops und Ausrüstungslieferanten.",
+  "CRICLUME exists because grassroots cricket generates more data and more video than any other amateur sport, and almost none of it is kept. Scoring happens in a paper book or a clunky app that only produces a scorecard; the footage a parent films on a phone from one end never reaches the coach, and if it does it is a 90-minute file with no idea which ball is which. League administrators chase result cards by email on a Sunday night, tables are typed up by hand, and player records disappear at the end of the season. Video analysis that professional academies take for granted — synced angles per delivery, frame stepping, annotated feedback — costs thousands in hardware and is out of reach for a club with a £3,000 annual budget. Meanwhile coaches, analysts and net providers who want to sell their time either work through commission-taking booking sites or run everything on WhatsApp with no diary, contract or payment trail. CRICLUME puts scoring, video, admin and paid services on one platform that a volunteer can run from a phone, and gives every delivery a permanent, watchable record.":
+    "CRICLUME existiert, weil Breitensport-Cricket mehr Daten und mehr Video erzeugt als jede andere Amateursportart — und fast nichts davon aufbewahrt wird. Gescort wird im Papierbuch oder in einer sperrigen App, die nur einen Scorebogen ausspuckt; das Video, das ein Elternteil vom einen Ende mit dem Handy filmt, erreicht den Trainer nie, und wenn doch, ist es eine 90-Minuten-Datei, in der niemand weiß, welcher Ball welcher ist. Ligaverwalter jagen sonntagabends per E-Mail Ergebnismeldungen, Tabellen werden von Hand getippt, und Spielerstatistiken verschwinden am Saisonende. Videoanalyse, die Profiakademien selbstverständlich nutzen — synchrone Perspektiven pro Ball, Einzelbildschritte, kommentiertes Feedback — kostet Tausende an Hardware und ist für einen Club mit 3.000 £ Jahresbudget unerreichbar. Trainer, Analysten und Netzbetreiber, die ihre Zeit verkaufen wollen, arbeiten entweder über provisionspflichtige Buchungsportale oder organisieren alles per WhatsApp — ohne Kalender, Vertrag oder Zahlungsnachweis. CRICLUME bringt Scoring, Video, Verwaltung und bezahlte Leistungen auf eine Plattform, die eine ehrenamtliche Person vom Handy aus bedienen kann, und gibt jedem Ball einen dauerhaften, ansehbaren Datensatz.",
+  "One platform for the whole season, with no commission taken from anyone. A scorer logs a delivery in under a second — runs, dots, wides, no-balls, byes, leg-byes, penalties and every dismissal type, with undo and a timestamp on every ball — and that timestamp automatically links the synced camera angles filmed on ordinary phones paired at both ends and side-on. Live scoreboards stream to a public link or as an overlay for a club's own stream, and standings, run rates, batting and bowling records and player profiles build themselves from the balls already scored, so nobody types a table again. After the match, the review room turns the same data into coaching: pick any delivery, watch four angles, step frames, draw lines, record a voice note and assign it to a player, who sees it in the squad app. Leagues get a competition console for fixtures, results, points, discipline and officials. Coaches, analysts, videographers and net or ground providers list availability and prices, take bookings and keep 100% of the fee for a flat monthly subscription with a two-month free trial. Built on the shared iTechLounge stack, it launches fast and costs a club a fraction of a single analysis camera.":
+    "Eine Plattform für die ganze Saison — ohne Provision für irgendjemanden. Ein Scorer erfasst einen Ball in unter einer Sekunde — Runs, Dots, Wides, No-Balls, Byes, Leg-Byes, Strafläufe und jede Art des Ausscheidens, mit Rückgängig-Funktion und Zeitstempel auf jedem Ball — und dieser Zeitstempel verknüpft automatisch die synchronen Kameraperspektiven, die mit gewöhnlichen Handys an beiden Enden und von der Seite gefilmt wurden. Live-Anzeigetafeln laufen über einen öffentlichen Link oder als Overlay für den eigenen Stream des Clubs, und Tabellen, Run Rates, Schlag- und Wurfstatistiken sowie Spielerprofile entstehen automatisch aus den erfassten Bällen — niemand tippt mehr eine Tabelle. Nach dem Spiel wird daraus Coaching: beliebigen Ball wählen, vier Perspektiven ansehen, Einzelbilder durchgehen, Linien zeichnen, Sprachnotiz aufnehmen und einem Spieler zuweisen, der sie in der Kader-App sieht. Ligen erhalten eine Wettbewerbskonsole für Spielplan, Ergebnisse, Punkte, Sportgerichtsbarkeit und Schiedsrichter. Trainer, Analysten, Videografen sowie Netz- und Platzbetreiber hinterlegen Verfügbarkeiten und Preise, nehmen Buchungen an und behalten 100 % des Honorars — für ein monatliches Pauschalabo mit zwei Monaten Gratistest. Auf dem gemeinsamen iTechLounge-Stack gebaut, startet es schnell und kostet einen Club einen Bruchteil einer einzigen Analysekamera.",
+  "Fast ball-by-ball scoring: runs, dots, wides, no-balls, byes, leg-byes, penalties and every dismissal type, with undo and a timestamp on every delivery":
+    "Schnelles Ball-für-Ball-Scoring: Runs, Dots, Wides, No-Balls, Byes, Leg-Byes, Strafläufe und jede Art des Ausscheidens, mit Rückgängig-Funktion und Zeitstempel pro Ball",
+  "Multi-phone camera room: pair phones at both ends and side-on, or add as many angles as the moment needs, in one tap":
+    "Multi-Handy-Kameraraum: Handys an beiden Enden und seitlich koppeln oder beliebig viele Perspektiven hinzufügen — mit einem Tap",
+  "Every angle stays linked to the exact ball it captured — no scrubbing through a 90-minute file":
+    "Jede Perspektive bleibt mit genau dem Ball verknüpft, den sie aufgenommen hat — kein Suchen in einer 90-Minuten-Datei",
+  "Live broadcast-ready scoreboards: score, batters, bowlers, over timeline and fall of wickets, usable as a stream overlay":
+    "Live broadcast-fähige Anzeigetafeln: Spielstand, Schlagleute, Werfer, Over-Zeitleiste und Wicket-Verlauf, nutzbar als Stream-Overlay",
+  "Share live scoring with the opposition club, followers, the league office or a public supporter link — you choose":
+    "Live-Scoring teilen mit dem Gegnerclub, Followern, der Ligageschäftsstelle oder über einen öffentlichen Fan-Link — Sie entscheiden",
+  "Coaching review room: frame-by-frame stepping, slow motion, drawing tools, voice notes and assignments to players":
+    "Coaching-Analyseraum: Einzelbildschritte, Slow Motion, Zeichenwerkzeuge, Sprachnotizen und Zuweisungen an Spieler",
+  "Standings, run rates, batting and bowling records and player profiles build themselves from every ball scored":
+    "Tabellen, Run Rates, Schlag- und Wurfstatistiken und Spielerprofile entstehen automatisch aus jedem erfassten Ball",
+  "Season admin: fixtures, squads, availability, officials, result cards, discipline and rain-affected rescheduling":
+    "Saisonverwaltung: Spielplan, Kader, Verfügbarkeiten, Schiedsrichter, Ergebnismeldungen, Sportgerichtsbarkeit und Neuterminierung bei Regen",
+  "Full match history kept permanently — every season, every player, every delivery":
+    "Vollständige Spielhistorie dauerhaft gespeichert — jede Saison, jeder Spieler, jeder Ball",
+  "League and competition console for secretaries: divisions, points, tables, cups and result approval":
+    "Liga- und Wettbewerbskonsole für Geschäftsführer: Staffeln, Punkte, Tabellen, Pokalwettbewerbe und Ergebnisfreigabe",
+  "Academy mode: player development plans, session plans, attendance, benchmarking and parent access":
+    "Akademie-Modus: Spielerentwicklungspläne, Trainingspläne, Anwesenheit, Benchmarking und Elternzugang",
+  "Zero-commission marketplace: coaches, analysts, videographers, umpires, scorers and net/ground providers keep 100% of their fee":
+    "Provisionsfreier Marktplatz: Trainer, Analysten, Videografen, Schiedsrichter, Scorer und Netz-/Platzbetreiber behalten 100 % ihres Honorars",
+  "Memberships, match fees and subs collection with reminders and club-level reporting":
+    "Mitgliedschaften, Spielgebühren und Beitragseinzug mit Erinnerungen und Reporting auf Clubebene",
+  "Works offline at grounds with poor signal and syncs when connection returns":
+    "Funktioniert offline auf Plätzen mit schlechtem Empfang und synchronisiert, sobald wieder Verbindung besteht",
+  "Multi-language and multi-currency for UK, Gulf and South Asian clubs and academies":
+    "Mehrsprachig und mehrwährungsfähig für Clubs und Akademien in UK, am Golf und in Südasien",
+  "Players, parents and supporters: free — watch, follow and receive coaching feedback at no cost":
+    "Spieler, Eltern und Fans: kostenlos — zuschauen, verfolgen und Coaching-Feedback erhalten, ohne Gebühr",
+  "Club Starter — £19/mo: one club, unlimited fixtures and scoring, live scoreboard and public link":
+    "Club Starter — 19 £/Monat: ein Club, unbegrenzte Spiele und Scoring, Live-Anzeigetafel und öffentlicher Link",
+  "Club Pro — £49/mo: all teams, multi-phone camera room, review room, memberships and subs collection":
+    "Club Pro — 49 £/Monat: alle Teams, Multi-Handy-Kameraraum, Analyseraum, Mitgliedschaften und Beitragseinzug",
+  "Academy — £99/mo: development plans, session planning, attendance, benchmarking and parent portal":
+    "Akademie — 99 £/Monat: Entwicklungspläne, Trainingsplanung, Anwesenheit, Benchmarking und Elternportal",
+  "League / Competition — £149/mo: divisions, fixtures and points, result approval, discipline and league-wide stats":
+    "Liga/Wettbewerb — 149 £/Monat: Staffeln, Spielplan und Punkte, Ergebnisfreigabe, Sportgerichtsbarkeit und ligaweite Statistiken",
+  "Coach / Analyst — £19/mo: public profile, diary, paid bookings and review-room access, zero commission":
+    "Trainer/Analyst — 19 £/Monat: öffentliches Profil, Kalender, bezahlte Buchungen und Zugang zum Analyseraum, null Provision",
+  "Net / Ground Operator — £39/mo: facility inventory, slot booking, deposits and dispatch, zero commission":
+    "Netz-/Platzbetreiber — 39 £/Monat: Anlagenbestand, Slot-Buchung, Anzahlungen und Disposition, null Provision",
+  "Two-month free trial on every plan; no commission and no lock-in contract at any tier":
+    "Zwei Monate Gratistest bei jedem Tarif; keine Provision und keine Vertragsbindung in keiner Stufe",
+  "Club and league hub: fixtures, live scoreboards, tables, player records, review room and marketplace listings.":
+    "Club- und Liga-Hub: Spielplan, Live-Anzeigetafeln, Tabellen, Spielerstatistiken, Analyseraum und Marktplatzangebote.",
+  "One-tap ball-by-ball scoring with undo, offline play and automatic sync to the live scoreboard.":
+    "Ball-für-Ball-Scoring mit einem Tap, Rückgängig-Funktion, Offline-Betrieb und automatischer Synchronisierung mit der Live-Anzeigetafel.",
+  "Same offline-first scoring for Android scorers and volunteers at the ground.":
+    "Dasselbe Offline-First-Scoring für Android-Scorer und Ehrenamtliche am Platz.",
+  "Pairs multiple phones as synced match cameras and links each clip to the delivery it captured.":
+    "Koppelt mehrere Handys als synchrone Spielkameras und verknüpft jeden Clip mit dem aufgenommenen Ball.",
+  "Availability, selection, match fees, assigned coaching clips, voice notes and personal stats for players and parents.":
+    "Verfügbarkeit, Aufstellung, Spielgebühren, zugewiesene Coaching-Clips, Sprachnotizen und persönliche Statistiken für Spieler und Eltern.",
+  "Committee back office: teams, memberships, subs, officials, grounds, reporting and marketplace bookings.":
+    "Backoffice für den Vorstand: Teams, Mitgliedschaften, Beiträge, Schiedsrichter, Plätze, Reporting und Marktplatzbuchungen.",
+  "Secretaries run divisions, fixtures, points, cups, discipline and result approval across every affiliated club.":
+    "Geschäftsführer steuern Staffeln, Spielpläne, Punkte, Pokalwettbewerbe, Sportgerichtsbarkeit und Ergebnisfreigaben über alle angeschlossenen Clubs.",
+  "Feeds live scores to overlays, club websites, league sites and third-party streaming tools.":
+    "Liefert Live-Ergebnisse an Overlays, Clubwebsites, Ligaseiten und externe Streaming-Tools.",
+  "Club scorer / volunteer":
+    "Club-Scorer/Ehrenamtliche(r)",
+  "Scores every ball in under a second on a phone, offline if needed, and never types up a scorecard again.":
+    "Erfasst jeden Ball in unter einer Sekunde am Handy, wenn nötig offline, und tippt nie wieder einen Scorebogen ab.",
+  "Club captain / selector":
+    "Club-Kapitän/Aufstellungsverantwortliche(r)",
+  "Runs availability, selection and match fees, and shares the live link with the opposition and supporters.":
+    "Steuert Verfügbarkeiten, Aufstellung und Spielgebühren und teilt den Live-Link mit Gegner und Fans.",
+  "Coach":
+    "Trainer",
+  "Pulls any delivery in the review room, compares angles, annotates it and assigns feedback to the player before the next session.":
+    "Ruft jeden Ball im Analyseraum auf, vergleicht Perspektiven, kommentiert ihn und weist dem Spieler Feedback vor dem nächsten Training zu.",
+  "Sees personal stats built from every ball plus coaching clips and voice notes in the squad app.":
+    "Sieht persönliche Statistiken aus jedem Ball sowie Coaching-Clips und Sprachnotizen in der Kader-App.",
+  "Follows the live scoreboard from work and sees their child's development plan and attendance.":
+    "Verfolgt die Live-Anzeigetafel von der Arbeit aus und sieht Entwicklungsplan und Anwesenheit des Kindes.",
+  "League secretary":
+    "Ligageschäftsführer(in)",
+  "Gets results and points automatically, approves cards, handles discipline and publishes tables without manual entry.":
+    "Erhält Ergebnisse und Punkte automatisch, gibt Meldungen frei, bearbeitet Sportgerichtsfälle und veröffentlicht Tabellen ohne manuelle Eingabe.",
+  "Academy director":
+    "Akademieleiter(in)",
+  "Runs development plans, benchmarking and session attendance across age groups with parent visibility.":
+    "Steuert Entwicklungspläne, Benchmarking und Trainingsanwesenheit über alle Altersklassen — mit Einsicht für Eltern.",
+  "Freelance coach / analyst":
+    "Freie(r) Trainer(in)/Analyst(in)",
+  "Lists availability and prices, takes bookings through the platform and keeps 100% of the fee.":
+    "Hinterlegt Verfügbarkeiten und Preise, nimmt Buchungen über die Plattform an und behält 100 % des Honorars.",
+  "Net / ground operator":
+    "Netz-/Platzbetreiber",
+  "Sells indoor net and ground slots with deposits and calendars, commission-free.":
+    "Verkauft Indoor-Netz- und Platz-Slots mit Anzahlungen und Kalendern — provisionsfrei.",
+  "Play-Cricket / ECB affiliated systems":
+    "Play-Cricket / ECB-angeschlossene Systeme",
+  "Official league integration and near-universal UK club adoption":
+    "Offizielle Ligaanbindung und nahezu flächendeckende Nutzung in UK-Clubs",
+  "Admin-only: no video, no coaching layer and a dated experience; we keep the scoring and result flow but add synced multi-angle video, a review room and a modern mobile app":
+    "Nur Verwaltung: kein Video, keine Coaching-Ebene und eine veraltete Bedienung; wir behalten Scoring und Ergebnisfluss, ergänzen aber synchrones Multi-Perspektiv-Video, einen Analyseraum und eine moderne Mobile-App",
+  "PlayHQ / TeamApp style club platforms":
+    "Clubplattformen im Stil von PlayHQ/TeamApp",
+  "Broad club administration and communication features":
+    "Breite Clubverwaltung und Kommunikationsfunktionen",
+  "Scoring, video and coaching sit in separate tools; we unify match day, film and development in one record per delivery":
+    "Scoring, Video und Coaching liegen in getrennten Tools; wir vereinen Spieltag, Film und Entwicklung in einem Datensatz pro Ball",
+  "Veo / Pixellot / Trace automated cameras":
+    "Automatische Kameras von Veo/Pixellot/Trace",
+  "Genuinely automatic filming with strong pro and semi-pro reputation":
+    "Wirklich automatisches Filmen mit starkem Ruf im Profi- und Halbprofibereich",
+  "£1,000-£3,000 hardware plus annual licence per club and a single wide angle; we use the phones a club already owns for four or more synced angles at £49/mo":
+    "1.000–3.000 £ Hardware plus Jahreslizenz pro Club und nur eine Weitwinkelperspektive; wir nutzen die Handys, die der Club schon hat, für vier oder mehr synchrone Perspektiven für 49 £/Monat",
+  "Hudl / Dartfish analysis suites":
+    "Analyse-Suites wie Hudl/Dartfish",
+  "Deep professional analysis toolset":
+    "Umfangreiches professionelles Analysewerkzeug",
+  "Priced and designed for pro setups with manual video import; our angles arrive already tagged to the ball, so a volunteer coach can review a match in 20 minutes":
+    "Preis und Design für Profistrukturen mit manuellem Videoimport; bei uns sind die Perspektiven bereits dem Ball zugeordnet, sodass ein ehrenamtlicher Trainer ein Spiel in 20 Minuten analysiert",
+  "CricHeroes and similar scoring apps":
+    "CricHeroes und ähnliche Scoring-Apps",
+  "Huge free grassroots user base, especially in South Asia":
+    "Riesige kostenlose Breitensport-Nutzerbasis, besonders in Südasien",
+  "Ad-funded with paid feature gates and no true multi-angle coaching room, league console or paid-services marketplace; we charge a flat club fee with no ads and no commission":
+    "Werbefinanziert mit kostenpflichtigen Funktionssperren und ohne echten Multi-Perspektiv-Analyseraum, Ligakonsole oder Marktplatz für bezahlte Leistungen; wir berechnen eine Clubpauschale ohne Werbung und ohne Provision",
+  "Manual scorebooks, spreadsheets and WhatsApp groups":
+    "Papier-Scorebücher, Tabellen und WhatsApp-Gruppen",
+  "Free, familiar and trusted by volunteers":
+    "Kostenlos, vertraut und bei Ehrenamtlichen etabliert",
+  "Nothing survives the season and no video is usable; we save hours per match, keep permanent records and still work offline at the ground":
+    "Nichts überlebt die Saison und kein Video ist nutzbar; wir sparen Stunden pro Spiel, halten Daten dauerhaft und funktionieren dennoch offline am Platz",
+  "Commission-taking coach booking sites":
+    "Provisionspflichtige Trainer-Buchungsportale",
+  "Ready demand and payment handling for coaches":
+    "Vorhandene Nachfrage und Zahlungsabwicklung für Trainer",
+  "They take 15-25% of every session; our coaches keep 100% and get a diary, contract and review room for a flat £19/mo":
+    "Sie nehmen 15–25 % jeder Einheit; unsere Trainer behalten 100 % und erhalten Kalender, Vertrag und Analyseraum für pauschal 19 £/Monat",
+  "Volunteer adoption of a new scoring app mid-season":
+    "Akzeptanz einer neuen Scoring-App bei Ehrenamtlichen mitten in der Saison",
+  "Under-a-second scoring, offline-first design, import of existing fixtures and squads, and free onboarding sessions run per league rather than per club.":
+    "Scoring in unter einer Sekunde, Offline-First-Design, Import bestehender Spielpläne und Kader sowie kostenlose Onboarding-Schulungen pro Liga statt pro Club.",
+  "Official league data must still flow to affiliated systems":
+    "Offizielle Ligadaten müssen weiterhin an angeschlossene Systeme fließen",
+  "Result and scorecard export plus API feeds so leagues can keep their existing reporting obligations while clubs gain the video and coaching layer.":
+    "Export von Ergebnissen und Scorebögen plus API-Feeds, damit Ligen ihre bestehenden Meldepflichten erfüllen und Clubs zugleich die Video- und Coaching-Ebene erhalten.",
+  "Video storage and bandwidth costs at scale":
+    "Kosten für Videospeicher und Bandbreite bei Skalierung",
+  "Per-delivery clip segmentation, tiered retention by plan, on-device pre-processing and shared group infrastructure pricing.":
+    "Clip-Segmentierung pro Ball, gestaffelte Aufbewahrung je Tarif, Vorverarbeitung auf dem Gerät und günstige Infrastrukturkonditionen der Gruppe.",
+  "Safeguarding and consent for filming juniors":
+    "Kinderschutz und Einwilligung beim Filmen von Jugendlichen",
+  "Consent capture per player, guardian-controlled visibility, private-by-default junior matches, role-based access and full audit trails.":
+    "Einwilligung je Spieler, von Erziehungsberechtigten gesteuerte Sichtbarkeit, Jugendspiele standardmäßig privat, rollenbasierte Zugriffe und vollständige Prüfprotokolle.",
+  "Seasonality of outdoor cricket revenue":
+    "Saisonalität der Erlöse im Outdoor-Cricket",
+  "Indoor nets, academy and winter-training use cases keep subscriptions active, plus Gulf and South Asian seasons that run counter to the UK summer.":
+    "Indoor-Netze, Akademie- und Wintertrainingsnutzung halten Abos aktiv, dazu Saisons am Golf und in Südasien, die gegenläufig zum britischen Sommer verlaufen.",
+  "League-level land-and-expand (one secretary brings 20 clubs), club-network referrals, and shared group SEO and content rather than paid-only growth.":
+    "Einstieg auf Ligaebene mit Ausbreitung (ein Geschäftsführer bringt 20 Clubs), Empfehlungen im Clubnetzwerk sowie gemeinsames SEO und Content der Gruppe statt rein bezahltem Wachstum.",
+  "Today a club splits its season across a paper scorebook or an affiliated admin system that only produces a scorecard, a WhatsApp group for selection, a spreadsheet for subs, and — if it can afford one — a £1,000+ fixed camera that films a single wide angle nobody has time to review. Leagues collect results by email and type tables by hand. Coaching video is either absent or an unusable long file. Coaches and net providers sell their time through commission-taking sites or informally, with no diary or payment record.":
+    "Heute verteilt ein Club seine Saison auf ein Papier-Scorebuch oder ein angeschlossenes Verwaltungssystem, das nur einen Scorebogen erzeugt, eine WhatsApp-Gruppe für die Aufstellung, eine Tabelle für Beiträge und — falls bezahlbar — eine feste Kamera ab 1.000 £, die eine einzige Weitwinkelperspektive filmt, für deren Auswertung niemand Zeit hat. Ligen sammeln Ergebnisse per E-Mail und tippen Tabellen von Hand. Coaching-Video fehlt entweder ganz oder liegt als unbrauchbar lange Datei vor. Trainer und Netzbetreiber verkaufen ihre Zeit über provisionspflichtige Portale oder informell, ohne Kalender oder Zahlungsnachweis.",
+  "~5,000 affiliated clubs and ~10,000 teams in England and Wales alone, plus hundreds of leagues, thousands of academies and school programmes, and tens of thousands of coaches, scorers and umpires — the vast majority with no video or coaching software at all.":
+    "~5.000 angeschlossene Clubs und ~10.000 Teams allein in England und Wales, dazu Hunderte Ligen, Tausende Akademien und Schulprogramme sowie Zehntausende Trainer, Scorer und Schiedsrichter — die große Mehrheit ohne jede Video- oder Coaching-Software.",
+  "≈€1.5bn global cricket technology, coaching and grassroots services spend. Most of it goes to camera hardware, pro analysis licences and commission taken from coaches and facility bookings rather than to affordable club software — the spend CRICLUME replaces with a flat subscription.":
+    "≈1,5 Mrd. € weltweite Ausgaben für Cricket-Technologie, Coaching und Breitensportleistungen. Der größte Teil fließt in Kamera-Hardware, Profi-Analyselizenzen und Provisionen auf Trainer- und Anlagenbuchungen statt in bezahlbare Clubsoftware — genau diese Ausgaben ersetzt CRICLUME durch ein Pauschalabo.",
 };
