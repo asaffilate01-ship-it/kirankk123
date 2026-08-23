@@ -3911,4 +3911,138 @@ const BASE_BRANDS: Brand[] = [
   },
 ];
 
-export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS];
+// ---------- Brand groups: one brand name, two entities, separate income & costs ----------
+
+export type BrandGroup = {
+  id: string;
+  name: string;
+  blurb: string;
+  /** brand ids, DE entity first */
+  entities: string[];
+};
+
+export const BRAND_GROUPS: BrandGroup[] = [
+  {
+    id: "kinderstars",
+    name: "KINDERSTARS",
+    blurb: "One brand, two entities: kinderstars24.de (GmbH, Germany) and kinderstars.co.uk (Ltd, UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["kinderstars", "kinderstarsuk"],
+  },
+  {
+    id: "haccora",
+    name: "HACCORA",
+    blurb: "One brand, two entities: haccora.de (Germany) and haccora.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["haccora", "haccora-uk"],
+  },
+  {
+    id: "eventplanr",
+    name: "EVENTPLANR",
+    blurb: "One brand, two entities: eventplanr.de (Germany) and eventplanr.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["eventplanrger", "eventplanruk"],
+  },
+  {
+    id: "xpertjobs",
+    name: "STELLENXPERT / XPERTJOBS",
+    blurb: "One recruitment product under two market names: stellenxpert.de (Germany) and xpertjobs.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["stellenxpert", "xpertjobs"],
+  },
+  {
+    id: "dokuvera",
+    name: "DOKUVERA",
+    blurb: "One brand, two entities: dokuvera.de (Germany) and dokuvera.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["docuvera-de", "docuvera-uk"],
+  },
+  {
+    id: "craftvaro",
+    name: "CRAFTVARO",
+    blurb: "One brand, two entities: craftvaro.de (Germany) and craftvaro.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["craftvaro-de", "craftvaro-uk"],
+  },
+];
+
+/** International travel network operated under the TRAVENEXA platform — all .com, sold cross-border. */
+export const TRAVENEXA_FAMILY: string[] = [
+  "travenexa",
+  "flightlounge",
+  "hexareve",
+  "bosporiva",
+  "eastamira",
+  "rangvaya",
+  "savansea",
+  "nilevella",
+  "marelyra",
+  "corazora",
+  "fiftyroam",
+  "canavelle",
+  "oceavela",
+  "adrilume",
+  "iberaviva",
+  "euralume",
+  "niyyahnoor",
+  "qiyavo",
+  "uzvoya",
+  "nimah",
+  "silkroaduz",
+  "dubaitrips",
+  "marocways",
+];
+
+type BrandOverride = Partial<Pick<Brand, "region" | "domain" | "group" | "entityLabel" | "family">>;
+
+const de = (domain: string, group: string): BrandOverride => ({
+  region: "DE",
+  domain,
+  group,
+  entityLabel: `Germany · ${domain}`,
+});
+const uk = (domain: string, group: string): BrandOverride => ({
+  region: "UK",
+  domain,
+  group,
+  entityLabel: `United Kingdom · ${domain}`,
+});
+
+const OVERRIDES: Record<string, BrandOverride> = {
+  kinderstars: de("kinderstars24.de", "kinderstars"),
+  kinderstarsuk: uk("kinderstars.co.uk", "kinderstars"),
+  haccora: de("haccora.de", "haccora"),
+  "haccora-uk": uk("haccora.co.uk", "haccora"),
+  eventplanrger: de("eventplanr.de", "eventplanr"),
+  eventplanruk: uk("eventplanr.co.uk", "eventplanr"),
+  stellenxpert: de("stellenxpert.de", "xpertjobs"),
+  xpertjobs: uk("xpertjobs.co.uk", "xpertjobs"),
+  "docuvera-de": de("dokuvera.de", "dokuvera"),
+  "docuvera-uk": uk("dokuvera.co.uk", "dokuvera"),
+  "craftvaro-de": de("craftvaro.de", "craftvaro"),
+  "craftvaro-uk": uk("craftvaro.co.uk", "craftvaro"),
+  // Travel brands are international .com properties running on the TRAVENEXA platform.
+  hexareve: { region: "INT", domain: "hexareve.com" },
+  bosporiva: { region: "INT", domain: "bosporiva.com" },
+  eastamira: { region: "INT", domain: "eastamira.com" },
+  rangvaya: { region: "INT", domain: "rangvaya.com" },
+  savansea: { region: "INT", domain: "savansea.com" },
+  nilevella: { region: "INT", domain: "nilevella.com" },
+  marelyra: { region: "INT", domain: "marelyra.com" },
+};
+
+export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS].map((b) => {
+  const merged: Brand = { ...b, ...OVERRIDES[b.id] };
+  if (TRAVENEXA_FAMILY.includes(b.id)) merged.family = "TRAVENEXA";
+  return merged;
+});
+
+export function brandById(id: string): Brand | undefined {
+  return BRANDS.find((b) => b.id === id);
+}
+
+export function groupOf(b: Brand): BrandGroup | undefined {
+  return b.group ? BRAND_GROUPS.find((g) => g.id === b.group) : undefined;
+}
+
+/** Sister entity in the same brand group, if any. */
+export function siblingOf(b: Brand): Brand | undefined {
+  const g = groupOf(b);
+  if (!g) return undefined;
+  const otherId = g.entities.find((id) => id !== b.id);
+  return otherId ? brandById(otherId) : undefined;
+}
