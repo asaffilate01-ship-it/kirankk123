@@ -984,7 +984,21 @@ export const DE: Record<string, string> = {
  "At run-rate / mo": "Bei Run-Rate / Mon.",
  "Dividends to M36": "Dividenden bis M36",
  "Payback": "Amortisation",
- "Cash ROI": "Cash-ROI",
+  "Cash ROI": "Cash-ROI",
+  "When your ROI happens": "Wann sich Ihre Investition rechnet",
+  "Capital is called 20% on signing then 80% over 12 months, so your cash out and cash in overlap. Every month below re-forecasts live when you move the growth, subscriber, cost or pricing sliders.":
+    "Das Kapital wird zu 20 % bei Vertragsschluss und zu 80 % über 12 Monate abgerufen, Ein- und Auszahlungen überlappen sich also. Alle Monate unten werden live neu berechnet, wenn Sie Wachstum, Abonnenten, Kosten oder Preise verändern.",
+  "Cash-flow positive (dividends > capital paid in)": "Cashflow-positiv (Dividenden > eingezahltes Kapital)",
+  "Profit-share breakeven (accrued, incl. retained)": "Break-even Gewinnanteil (inkl. einbehaltener Gewinne)",
+  "Month your cumulative share of net profit equals your investment, counting profit kept in the business.":
+    "Monat, in dem Ihr kumulierter Anteil am Nettogewinn Ihrer Investition entspricht – einschließlich im Unternehmen verbleibender Gewinne.",
+  "1x back in cash dividends": "1x zurück über Bardividenden",
+  "2x / 3x in cash dividends": "2x / 3x über Bardividenden",
+  "Capital paid in": "Eingezahltes Kapital",
+  "Dividends received": "Erhaltene Dividenden",
+  "Net cash position": "Netto-Cash-Position",
+  "Cash multiple": "Cash-Multiple",
+
  "Option": "Option",
  "Scope": "Umfang",
  "All brands": "Alle Marken",
