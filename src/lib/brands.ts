@@ -23,12 +23,12 @@ export type Brand = {
   proposition: string;
   features: string[];
   /** Optional public pricing / packaging lines. */
-  /** Optional public pricing / packaging lines. */
   pricing?: string[];
   /** Optional explicit positives / strengths. Falls back to derived list in brand-insights. */
   positives?: string[];
   /** Optional explicit revenue-model lines. Falls back to derived model in brand-insights. */
   monetisation?: string[];
+
 
   apps: { name: string; kind: "SaaS" | "Web" | "iOS" | "Android" | "API" | "Admin"; purpose: string }[];
   userTypes: { type: string; useCase: string }[];
