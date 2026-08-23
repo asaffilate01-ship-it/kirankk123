@@ -1875,4 +1875,90 @@ export const DE_EXTRA: Record<string, string> = {
     "Ca. 100 Mio. internationale Ankünfte pro Jahr, bedient von Hunderttausenden registrierten Ferienunterkünften, Schlössern, Hotels und Campingplätzen sowie Zehntausenden lizenzierten Guides, Fahrern, Köchen und Aktivitätsanbietern — die große Mehrheit ohne eigens dafür gebaute Plattform.",
   "≈€60bn of international tourism receipts in France a year. The software-shaped share of that value is currently extracted as OTA, agency and wholesaler commission from suppliers' income rather than paid for as software — exactly the margin HEXARÊVE returns to French operators while charging a flat, region-priced subscription.":
     "Ca. 60 Mrd. € internationale Tourismuseinnahmen in Frankreich pro Jahr. Der softwareförmige Anteil dieses Werts wird heute als OTA-, Agentur- und Veranstalterprovision aus den Einnahmen der Anbieter entnommen statt als Software bezahlt — genau diese Marge gibt HEXARÊVE an französische Betriebe zurück und berechnet stattdessen ein pauschales, regional bepreistes Abo.",
+
+  // TraveNexia family labels
+  "TraveNexia international travel network":
+    "TraveNexia internationales Reisenetzwerk",
+  "All travel brands are international .com properties running on the shared TraveNexia booking engine, sold cross-border in multiple currencies.":
+    "Alle Reisemarken sind internationale .com-Marken auf der gemeinsamen TraveNexia-Buchungsmaschine, grenzüberschreitend in mehreren Währungen verkauft.",
+  "International .com brand running on the shared TraveNexia booking engine — sold cross-border in multiple currencies.":
+    "Internationale .com-Marke auf der gemeinsamen TraveNexia-Buchungsmaschine — grenzüberschreitend in mehreren Währungen verkauft.",
+
+  // Farenivo
+  "Farenivo is a worldwide flight, train and coach booking platform with AI-assisted search, a full booking engine and a licensable travel distribution SaaS. It covers multi-modal transport, airport transfers and car hire, with fare search, enquiry-based reservations, vouchers, webhooks and commission reconciliation for both travellers and partner agencies.":
+    "Farenivo ist eine weltweite Buchungsplattform für Flüge, Züge und Busse mit KI-gestützter Suche, einer vollständigen Buchungsmaschine und einer lizenzierbaren Reisevertriebs-SaaS. Sie deckt multimodalen Transport, Flughafentransfers und Autovermietung ab, mit Tarifsuche, anfragebasierten Reservierungen, Gutscheinen, Webhooks und Provisionsabstimmung für Reisende und Partneragenturen.",
+  "Farenivo exists because travellers still compare flights on one site, trains on another and coaches on a third, and small agencies pay heavily for GDS access. One multi-modal search with transparent all-in pricing serves both.":
+    "Farenivo existiert, weil Reisende Flüge auf einer Seite, Züge auf einer anderen und Busse auf einer dritten vergleichen — und kleine Agenturen teuer für GDS-Zugänge zahlen. Eine multimodale Suche mit transparenten All-in-Preisen bedient beide Seiten.",
+  "Multi-modal search: flights, trains, coaches":
+    "Multimodale Suche: Flüge, Züge, Busse",
+  "All-in fare display including bags and seats":
+    "All-in-Tarifanzeige inklusive Gepäck und Sitzplätzen",
+  "Enquiry, hold and reservation flow with human support":
+    "Anfrage-, Halte- und Reservierungsflow mit menschlicher Unterstützung",
+  "Airport transfers and car hire attached to any journey":
+    "Flughafentransfers und Autovermietung an jede Reise angehängt",
+  "Agency / white-label access for sister brands":
+    "Agentur- / White-Label-Zugang für Schwester-Marken",
+  "Back office: leads, payments due, commissions, supplier settlement":
+    "Backoffice: Leads, fällige Zahlungen, Provisionen, Lieferantenabrechnung",
+  "Farenivo Web": "Farenivo Web",
+  "Multi-modal fare search and reservation requests.":
+    "Multimodale Tarifsuche und Reservierungsanfragen.",
+  "Farenivo Traveller App": "Farenivo Traveller App",
+  "Tickets, gate and platform updates, disruption alerts.":
+    "Tickets, Gate- und Bahnsteig-Updates, Störungswarnungen.",
+  "Farenivo Agent Console": "Farenivo Agent Console",
+  "Reservations team and partner agencies quote, hold and ticket.":
+    "Reservierungsteam und Partneragenturen zitieren, halten und ticketen.",
+  "Farenivo Distribution API": "Farenivo Distribution API",
+  "Supplies transport inventory to the group's travel brands.":
+    "Bereitstellung von Transportinventar für die Reisemarken der Gruppe.",
+  "Compares air, rail and coach for one route and books the best total.":
+    "Vergleicht Flug, Bahn und Bus für eine Route und bucht das beste Gesamtergebnis.",
+  "Sells transport under its own brand using the shared engine.":
+    "Verkauft Transport unter eigener Marke mit der gemeinsamen Maschine.",
+  "Handles held bookings, changes and disruption rebooking.":
+    "Bearbeitet gehaltene Buchungen, Änderungen und Störungsumbuchungen.",
+  "Tracks segment margin, commissions and supplier settlement.":
+    "Verfolgt Segmentmarge, Provisionen und Lieferantenabrechnung.",
+
+  // TraveNexia
+  "The shared travel technology platform behind every iTechLounge travel brand: inventory and availability, enquiries, reservations, payments, supplier allocations, commissions and CRM — also licensed to third-party tour operators and agencies as white-label SaaS.":
+    "Die gemeinsame Reise-Technologieplattform hinter jeder iTechLounge-Reisemarke: Inventar und Verfügbarkeit, Anfragen, Reservierungen, Zahlungen, Lieferantenallokationen, Provisionen und CRM — auch als White-Label-SaaS an Drittveranstalter und Agenturen lizenziert.",
+  "TraveNexia exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.":
+    "TraveNexia existiert, weil jede Reisemarke der Gruppe dieselbe Maschine braucht und unabhängige Betreiber für weit weniger Unternehmenspreise zahlen. Einmal bauen und lizenzieren verwandelt interne Infrastruktur in eine Einnahmequelle.",
+  "One booking engine for tours, stays and transport: enquiry-to-payment flow, supplier allocations, commission and settlement tracking, multi-locale storefronts and white-label deployment in days rather than months.":
+    "Eine Buchungsmaschine für Touren, Unterkünfte und Transport: Anfrage-bis-Zahlung-Flow, Lieferantenallokationen, Provisions- und Abrechnungs-Tracking, mehrsprachige Storefronts und White-Label-Bereitstellung in Tagen statt Monaten.",
+  "Inventory, availability and allocation management":
+    "Inventar-, Verfügbarkeits- und Allokationsmanagement",
+  "Enquiry, quote, reservation and payment workflow":
+    "Anfrage-, Angebot-, Reservierungs- und Zahlungsworkflow",
+  "Leads, bookings, payments due and received in one CRM":
+    "Leads, Buchungen, fällige und erhaltene Zahlungen in einem CRM",
+  "Commission dues and supplier settlement tracking":
+    "Provisionsforderungen und Lieferantenabrechnungs-Tracking",
+  "Multi-locale, multi-currency white-label storefronts":
+    "Mehrsprachige, multwährige White-Label-Storefronts",
+  "Distribution API and channel-manager connectors":
+    "Vertriebs-API und Channel-Manager-Anbindungen",
+  "TraveNexia Platform": "TraveNexia Platform",
+  "Core operator workspace for inventory, bookings and finance.":
+    "Zentraler Betreiber-Arbeitsbereich für Inventar, Buchungen und Finanzen.",
+  "TraveNexia Storefront": "TraveNexia Storefront",
+  "White-label multi-locale booking site per brand or client.":
+    "White-Label-Buchungsseite je Marke oder Kunde in mehreren Sprachen.",
+  "TraveNexia Distribution API": "TraveNexia Distribution API",
+  "Inventory, availability and booking endpoints for partners.":
+    "Inventar-, Verfügbarkeits- und Buchungs-Endpunkte für Partner.",
+  "TraveNexia Admin": "TraveNexia Admin",
+  "Group-level tenancy, pricing and reporting control.":
+    "Konzernweite Mandanten-, Preis- und Reporting-Steuerung.",
+  "Runs the whole business — inventory, bookings, payouts — on one system.":
+    "Führt das gesamte Geschäft — Inventar, Buchungen, Auszahlungen — in einem System.",
+  "Quotes and books group inventory with commission tracking.":
+    "Zitiert und bucht Gruppeninventar mit Provisions-Tracking.",
+  "Uses the engine under its own brand at zero build cost.":
+    "Nutzt die Maschine unter eigener Marke ohne Entwicklungskosten.",
+  "Manages tenants, take rates and consolidated reporting.":
+    "Verwaltet Mandanten, Take-Rates und konsolidiertes Reporting.",
 };
