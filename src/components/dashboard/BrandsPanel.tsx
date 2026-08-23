@@ -124,8 +124,89 @@ export function BrandsPanel() {
 
   const groupedIds = new Set(BRAND_GROUPS.flatMap((g) => g.entities));
 
+  const FilterBar = () => (
+    <Card className="space-y-3 p-4">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("Country")}</span>
+        {COUNTRIES.map((c) => (
+          <button
+            key={c.id}
+            type="button"
+            onClick={() => toggle(countries, c.id, setCountries)}
+            className={`rounded-full border px-3 py-1 text-xs transition ${
+              countries.includes(c.id)
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border bg-background hover:bg-muted"
+            }`}
+          >
+            {c.flag} {t(c.label)} <span className="opacity-70">({cCounts[c.id]})</span>
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("Business type")}</span>
+        {SECTORS.map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            onClick={() => toggle(sectors, s.id, setSectors)}
+            className={`rounded-full border px-3 py-1 text-xs transition ${
+              sectors.includes(s.id)
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border bg-background hover:bg-muted"
+            }`}
+          >
+            {t(s.label)} <span className="opacity-70">({sCounts[s.id] ?? 0})</span>
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <Input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={t("Search brand, domain or tagline…")}
+          className="h-9 max-w-xs text-sm"
+        />
+        {filtering && (
+          <>
+            <span className="text-xs text-muted-foreground">
+              {filtered.length} {t("brands")}
+            </span>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                setCountries([]);
+                setSectors([]);
+                setQuery("");
+              }}
+            >
+              {t("Clear filters")}
+            </Button>
+          </>
+        )}
+      </div>
+    </Card>
+  );
+
+  if (filtering) {
+    return (
+      <div className="space-y-6">
+        <FilterBar />
+        {filtered.length === 0 ? (
+          <p className="text-sm text-muted-foreground">{t("No brands match these filters.")}</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {filtered.map((b) => <BrandCard key={b.id} b={b} />)}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8">
+      <FilterBar />
       {/* Dual-market brands: one brand name, two entities, separate books */}
       <section>
         <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b pb-2">
