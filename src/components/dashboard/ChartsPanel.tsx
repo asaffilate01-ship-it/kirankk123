@@ -129,6 +129,78 @@ export function ChartsPanel() {
   const totalProfit = rows.reduce((sum, row) => sum + row.netProfit, 0);
   const margin = totalRevenue > 0 ? totalProfit / totalRevenue : 0;
 
+  // ---- Mix pies (last month of selected period) ----
+  const groupMix = (key: (b: (typeof BRANDS)[number]) => string) => {
+    const acc = new Map<string, number>();
+    if (!last) return [] as { name: string; value: number; fill: string }[];
+    for (const brand of BRANDS) {
+      const value = Math.round(last.perBrandRevenue[brand.id] ?? 0);
+      if (value <= 0) continue;
+      const label = key(brand);
+      acc.set(label, (acc.get(label) ?? 0) + value);
+    }
+    return [...acc.entries()]
+      .map(([name, value], i) => ({ name, value, fill: PIE_COLORS[i % PIE_COLORS.length] }))
+      .sort((a, b) => b.value - a.value)
+      .map((d, i) => ({ ...d, fill: PIE_COLORS[i % PIE_COLORS.length] }));
+  };
+
+  const countryMix = groupMix((b) => countryLabel(countryOf(b)));
+  const sectorMix = groupMix((b) => sectorLabel(sectorOf(b)));
+
+  const costMix = last
+    ? [
+        { name: t("Direct"), value: Math.round(last.directCosts), fill: "var(--chart-1)" },
+        { name: t("HQ"), value: Math.round(last.hqCost), fill: "var(--chart-4)" },
+        { name: t("Tech"), value: Math.round(last.techCost), fill: "var(--chart-3)" },
+        { name: t("Marketing"), value: Math.round(last.marketingCost), fill: "var(--chart-5)" },
+        { name: t("Variable opex"), value: Math.round(last.variableOpex), fill: "var(--chart-2)" },
+        { name: t("Custom"), value: Math.round(last.customCost), fill: CHART.other },
+      ].filter((d) => d.value > 0)
+    : [];
+
+  const profitMix = last
+    ? [
+        { name: t("Total costs"), value: Math.round(Math.max(0, last.totalCost)), fill: CHART.costs },
+        { name: t("Tax"), value: Math.round(Math.max(0, last.tax)), fill: CHART.dividends },
+        { name: t("Net profit"), value: Math.round(Math.max(0, last.netProfit)), fill: CHART.profit },
+      ].filter((d) => d.value > 0)
+    : [];
+
+  // ---- Fundamentals ----
+  const arr = last ? last.revenue * 12 : 0;
+  const customers = last
+    ? Object.values(last.perBrandUsers).reduce((s, v) => s + v, 0)
+    : 0;
+  const blendedArpu = customers > 0 && last ? last.revenue / customers : 0;
+  const breakevenMonth = allRows.find((r) => r.netProfit > 0)?.month ?? null;
+  const cashPositiveMonth = allRows.find((r) => r.cashBalance > 0)?.month ?? null;
+  const peakCashNeed = Math.min(0, ...allRows.map((r) => r.cashBalance));
+  const totalFunding = allRows.reduce((s, r) => s + r.fundingIn, 0);
+  const runRateMargin = last && last.revenue > 0 ? last.netProfit / last.revenue : 0;
+  const costPerEuro = last && last.revenue > 0 ? last.totalCost / last.revenue : 0;
+
+  // ---- Investor ROI (whole-company deal) ----
+  const invested = state.global.trancheSize * state.global.trancheCount;
+  const investorDividends = allRows.reduce((s, r) => s + r.investorShare, 0);
+  const exitMultiple = 4;
+  const equityValue = arr * exitMultiple * state.global.investorEquityPct;
+  const totalReturn = investorDividends + equityValue;
+  const moic = invested > 0 ? totalReturn / invested : 0;
+  const roiPct = invested > 0 ? (totalReturn - invested) / invested : 0;
+  let cumDiv = 0;
+  let paybackMonth: number | null = null;
+  for (const r of allRows) {
+    cumDiv += r.investorShare;
+    if (cumDiv >= invested) {
+      paybackMonth = r.month;
+      break;
+    }
+  }
+  const years = allRows.length / 12;
+  const irr = moic > 0 && years > 0 ? Math.pow(moic, 1 / years) - 1 : 0;
+
+
   if (!last) {
     return <Card className="p-6 text-sm text-muted-foreground">{t("No forecast data available.")}</Card>;
   }
