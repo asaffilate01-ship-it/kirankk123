@@ -2200,13 +2200,13 @@ export const EXTRA_BRANDS: Brand[] = [
     },
   },
   {
-    id: "flightlounge",
-    name: "FLIGHTLOUNGE",
+    id: "farenivo",
+    name: "Farenivo",
     region: "INT",
-    domain: "flightlounge.com",
+    domain: "farenivo.com",
     tagline: "Where every journey takes off.",
     description:
-      "FlightLounge is a worldwide flight, train and coach booking platform with AI-assisted search, a full booking engine and a licensable travel distribution SaaS. It covers multi-modal transport, airport transfers and car hire, with fare search, enquiry-based reservations, vouchers, webhooks and commission reconciliation for both travellers and partner agencies.",
+      "Farenivo is a worldwide flight, train and coach booking platform with AI-assisted search, a full booking engine and a licensable travel distribution SaaS. It covers multi-modal transport, airport transfers and car hire, with fare search, enquiry-based reservations, vouchers, webhooks and commission reconciliation for both travellers and partner agencies.",
     market: "≈€700bn global air travel distribution; €120bn European rail and coach ticketing.",
     audience: "Leisure and SME business travellers, plus the sister travel brands using it as booking engine.",
     color: "#1d4ed8",
@@ -2218,7 +2218,7 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultAddlRevenue: 9000,
     defaultDirectCost: 4000,
     reason:
-      "FLIGHTLOUNGE exists because travellers still compare flights on one site, trains on another and coaches on a third, and small agencies pay heavily for GDS access. One multi-modal search with transparent all-in pricing serves both.",
+      "Farenivo exists because travellers still compare flights on one site, trains on another and coaches on a third, and small agencies pay heavily for GDS access. One multi-modal search with transparent all-in pricing serves both.",
     proposition:
       "One search across air, rail and coach with all-in pricing, held enquiries, human reservations support and a partner console — and it doubles as the transport engine behind every iTechLounge travel brand.",
     features: [
@@ -2230,10 +2230,10 @@ export const EXTRA_BRANDS: Brand[] = [
       "Back office: leads, payments due, commissions, supplier settlement",
     ],
     apps: [
-      { name: "FLIGHTLOUNGE Web", kind: "Web", purpose: "Multi-modal fare search and reservation requests." },
-      { name: "FLIGHTLOUNGE Traveller App", kind: "iOS", purpose: "Tickets, gate and platform updates, disruption alerts." },
-      { name: "FLIGHTLOUNGE Agent Console", kind: "SaaS", purpose: "Reservations team and partner agencies quote, hold and ticket." },
-      { name: "FLIGHTLOUNGE Distribution API", kind: "API", purpose: "Supplies transport inventory to the group's travel brands." },
+      { name: "Farenivo Web", kind: "Web", purpose: "Multi-modal fare search and reservation requests." },
+      { name: "Farenivo Traveller App", kind: "iOS", purpose: "Tickets, gate and platform updates, disruption alerts." },
+      { name: "Farenivo Agent Console", kind: "SaaS", purpose: "Reservations team and partner agencies quote, hold and ticket." },
+      { name: "Farenivo Distribution API", kind: "API", purpose: "Supplies transport inventory to the group's travel brands." },
     ],
     userTypes: [
       { type: "Traveller", useCase: "Compares air, rail and coach for one route and books the best total." },
@@ -2319,7 +2319,7 @@ export const EXTRA_BRANDS: Brand[] = [
   },
   {
     id: "travenexa",
-    name: "TRAVENEXA",
+    name: "TraveNexia",
     region: "INT",
     domain: "travenexa.com",
     tagline: "Every journey, intelligently connected. — travel booking engine",
@@ -2336,7 +2336,7 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultAddlRevenue: 6000,
     defaultDirectCost: 4500,
     reason:
-      "TRAVENEXA exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.",
+      "TraveNexia exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.",
     proposition:
       "One booking engine for tours, stays and transport: enquiry-to-payment flow, supplier allocations, commission and settlement tracking, multi-locale storefronts and white-label deployment in days rather than months.",
     features: [
@@ -2348,10 +2348,10 @@ export const EXTRA_BRANDS: Brand[] = [
       "Distribution API and channel-manager connectors",
     ],
     apps: [
-      { name: "TRAVENEXA Platform", kind: "SaaS", purpose: "Core operator workspace for inventory, bookings and finance." },
-      { name: "TRAVENEXA Storefront", kind: "Web", purpose: "White-label multi-locale booking site per brand or client." },
-      { name: "TRAVENEXA Distribution API", kind: "API", purpose: "Inventory, availability and booking endpoints for partners." },
-      { name: "TRAVENEXA Admin", kind: "Admin", purpose: "Group-level tenancy, pricing and reporting control." },
+      { name: "TraveNexia Platform", kind: "SaaS", purpose: "Core operator workspace for inventory, bookings and finance." },
+      { name: "TraveNexia Storefront", kind: "Web", purpose: "White-label multi-locale booking site per brand or client." },
+      { name: "TraveNexia Distribution API", kind: "API", purpose: "Inventory, availability and booking endpoints for partners." },
+      { name: "TraveNexia Admin", kind: "Admin", purpose: "Group-level tenancy, pricing and reporting control." },
     ],
     userTypes: [
       { type: "Tour operator / DMC", useCase: "Runs the whole business — inventory, bookings, payouts — on one system." },
