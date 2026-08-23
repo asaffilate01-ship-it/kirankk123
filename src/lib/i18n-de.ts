@@ -1,5 +1,7 @@
 // AUTO-GENERATED German translations (English source string -> German).
 export const DE: Record<string, string> = {
+  "All countries": "Alle Länder",
+  "All business types": "Alle Geschäftsfelder",
  "≈€8bn German event industry; ≈€320m/yr flows to event-tech platforms and per-lead vendor fees.": "Ca. 8 Mrd. € deutscher Eventmarkt; ca. 320 Mio. €/Jahr fließen an Event-Tech-Plattformen und gebührenbasierte Anbieterprovisionen.",
  "Filterable venue search (capacity, PLZ, price, style)": "Filterbare Locationsuche (Kapazität, PLZ, Preis, Stil)",
  "Vendor marketplace: catering, DJ, florist, photographer": "Anbieter-Marktplatz: Catering, DJ, Florist, Fotograf",
