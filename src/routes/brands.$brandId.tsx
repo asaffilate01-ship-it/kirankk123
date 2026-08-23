@@ -1,6 +1,6 @@
 import { t, useLang } from "@/lib/i18n";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { BRANDS, SHARED_ADVANTAGE, type Brand } from "@/lib/brands";
+import { BRANDS, SHARED_ADVANTAGE, groupOf, siblingOf, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -117,6 +117,25 @@ function BrandDetail() {
             >
               {brand.domain} <ExternalLink className="h-3 w-3" />
             </a>
+            {(() => {
+              const sister = siblingOf(brand);
+              const group = groupOf(brand);
+              if (!sister || !group) return null;
+              return (
+                <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
+                  {t("Part of the")} <span className="font-semibold">{group.name}</span> {t("brand group — this entity is")}{" "}
+                  <span className="font-semibold">{brand.entityLabel}</span>. {t("Separate revenue, costs, marketing and P&L from the sister entity:")}{" "}
+                  <Link to="/brands/$brandId" params={{ brandId: sister.id }} className="font-medium text-primary hover:underline">
+                    {sister.name} ({sister.domain})
+                  </Link>
+                </p>
+              );
+            })()}
+            {brand.family === "TRAVENEXA" && (
+              <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
+                {t("International .com brand running on the shared TRAVENEXA booking engine — sold cross-border in multiple currencies.")}
+              </p>
+            )}
           </div>
           <p className="text-sm">{t(brand.description)}</p>
 
