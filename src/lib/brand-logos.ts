@@ -52,7 +52,7 @@ import skillfinchLogo from "@/assets/skillfinch-logo.png.asset.json";
 import dearnextLogo from "@/assets/dearnext-logo.png.asset.json";
 import gableyLogo from "@/assets/gabley-logo.png.asset.json";
 import euralumeLogo from "@/assets/euralume-logo.png.asset.json";
-import farenivoLogo from "@/assets/farenivo-logo.png";
+import farenivoLogo from "@/assets/farenivo-logo.png.asset.json";
 import niyyahnoorLogo from "@/assets/niyyahnoor-logo.png.asset.json";
 import travenexiaLogo from "@/assets/travenexia-logo.png";
 import marelyraLogo from "@/assets/marelyra-logo.png.asset.json";
