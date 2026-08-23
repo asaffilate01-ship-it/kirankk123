@@ -399,6 +399,110 @@ export function InvestorCalculator() {
         </table>
       </div>
 
+      <div className="space-y-2">
+        <div>
+          <h4 className="text-sm font-semibold">{t("Every tranche option for this scope")}</h4>
+          <p className="text-xs text-muted-foreground">
+            {t("Each tranche is a fixed ticket. Buy one, buy all ten — the table shows exactly what each level returns on the live forecast.")}
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b text-muted-foreground">
+                <th className="py-1 text-left font-medium">{t("Tranches")}</th>
+                <th className="py-1 text-right font-medium">{t("Invested")}</th>
+                <th className="py-1 text-right font-medium">{t("Share")}</th>
+                <th className="py-1 text-right font-medium">{t("Profit share / mo (avg)")}</th>
+                <th className="py-1 text-right font-medium">{t("At run-rate / mo")}</th>
+                <th className="py-1 text-right font-medium">{t("Dividends to M36")}</th>
+                <th className="py-1 text-right font-medium">{t("Payback")}</th>
+                <th className="py-1 text-right font-medium">{t("Cash ROI")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ladder.map((o) => (
+                <tr
+                  key={o.key}
+                  className={`border-b last:border-0 ${o.tickets === tickets ? "bg-primary/5 font-medium" : ""}`}
+                >
+                  <td className="py-1">
+                    {o.tickets} × {fmtEURk(DEALS[mode].ticket)}
+                  </td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.invested)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtPct(o.share, 2)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.avgMonthly)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.runRateMonthly)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.dividends)}</td>
+                  <td className="py-1 text-right tabular-nums">
+                    {o.payback ? `M${o.payback}` : t("beyond forecast")}
+                  </td>
+                  <td
+                    className={`py-1 text-right tabular-nums ${o.roi >= 1 ? "text-emerald-500" : ""}`}
+                  >
+                    {fmtPct(o.roi, 0)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <div>
+          <h4 className="text-sm font-semibold">{t("Compare all three deal types")}</h4>
+          <p className="text-xs text-muted-foreground">
+            {t("Minimum ticket versus full allocation for each structure, using the brands selected above.")}
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b text-muted-foreground">
+                <th className="py-1 text-left font-medium">{t("Option")}</th>
+                <th className="py-1 text-left font-medium">{t("Scope")}</th>
+                <th className="py-1 text-right font-medium">{t("Invested")}</th>
+                <th className="py-1 text-right font-medium">{t("Share")}</th>
+                <th className="py-1 text-right font-medium">{t("At run-rate / mo")}</th>
+                <th className="py-1 text-right font-medium">{t("Dividends to M36")}</th>
+                <th className="py-1 text-right font-medium">{t("Payback")}</th>
+                <th className="py-1 text-right font-medium">{t("Cash ROI")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {compare.map((o) => (
+                <tr key={o.key} className="border-b last:border-0">
+                  <td className="py-1">
+                    {o.label}
+                    <span className="ml-1 text-muted-foreground">
+                      ({o.tickets} × {fmtEURk(o.invested / o.tickets)})
+                    </span>
+                  </td>
+                  <td className="py-1 text-muted-foreground">{o.scope}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.invested)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtPct(o.share, 2)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.runRateMonthly)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.dividends)}</td>
+                  <td className="py-1 text-right tabular-nums">
+                    {o.payback ? `M${o.payback}` : t("beyond forecast")}
+                  </td>
+                  <td
+                    className={`py-1 text-right tabular-nums ${o.roi >= 1 ? "text-emerald-500" : ""}`}
+                  >
+                    {fmtPct(o.roi, 0)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[11px] leading-snug text-muted-foreground">
+          {t("Brand-level options are limited to 10 investors at 2.5% each per location; the company round is limited to 10 investors at 4% each. Location-only investors receive 10% of any future location; whole-brand investors keep 25% of every location.")}
+        </p>
+      </div>
+
+
       <p className="text-xs text-muted-foreground">
         {t("Total profit share attributable to you over the forecast:")}{" "}
         <b>{fmtEUR(attributableTotal)}</b>{" "}
