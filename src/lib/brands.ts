@@ -3966,10 +3966,10 @@ export const BRAND_GROUPS: BrandGroup[] = [
   },
 ];
 
-/** International travel network operated under the TRAVENEXA platform — all .com, sold cross-border. */
+/** International travel network operated under the TraveNexia platform — all .com, sold cross-border. */
 export const TRAVENEXA_FAMILY: string[] = [
   "travenexa",
-  "flightlounge",
+  "farenivo",
   "hexareve",
   "bosporiva",
   "eastamira",
