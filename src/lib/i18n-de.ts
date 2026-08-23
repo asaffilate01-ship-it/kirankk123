@@ -872,6 +872,31 @@ export const DE: Record<string, string> = {
  "A location-only investor receives 10% of any future location opened for that brand.": "Ein Investor eines einzelnen Standorts erhält 10 % an jedem künftig für diese Marke eröffneten Standort.",
  "A whole-brand investor keeps 25% across current and future locations.": "Ein Investor der gesamten Marke behält 25 % an allen bestehenden und zukünftigen Standorten.",
  "Payment schedule": "Zahlungsplan",
+ "Pick what you are buying — the whole company, a single brand in one location, or a dual-location brand — then set how many tranches you buy. Every figure below re-forecasts from the live assumptions for exactly that scope.":
+   "Wählen Sie, was Sie kaufen — das Gesamtunternehmen, eine Marke an einem Standort oder eine Marke mit zwei Standorten — und legen Sie dann fest, wie viele Tranchen Sie erwerben. Alle Werte unten werden für genau diesen Umfang neu berechnet.",
+ "1 tranche": "1 Tranche",
+ tranche: "Tranche",
+ tranches: "Tranchen",
+ of: "von",
+ "10 tranches available in total, maximum 10 investors in the company round.":
+   "Insgesamt 10 Tranchen verfügbar, maximal 10 Investoren in der Unternehmensrunde.",
+ "10 tranches per brand location. A location-only investor receives 10% of any future location opened for that brand.":
+   "10 Tranchen pro Markenstandort. Ein Investor eines einzelnen Standorts erhält 10 % an jedem künftig für diese Marke eröffneten Standort.",
+ "10 tranches per brand. A whole-brand investor keeps 25% across current and future locations.":
+   "10 Tranchen pro Marke. Ein Investor der gesamten Marke behält 25 % an allen bestehenden und künftigen Standorten.",
+ "Choose the brand location": "Markenstandort auswählen",
+ "Choose the dual-location brand": "Marke mit zwei Standorten auswählen",
+ "Whole company (all brands)": "Gesamtunternehmen (alle Marken)",
+ "both locations": "beide Standorte",
+ "of the company": "des Unternehmens",
+ "of this brand entity": "dieser Markengesellschaft",
+ "You are investing in": "Sie investieren in",
+ "full allocation taken": "vollständige Zuteilung erworben",
+ "Future locations of this brand: you receive 10% of each new location.":
+   "Künftige Standorte dieser Marke: Sie erhalten 10 % an jedem neuen Standort.",
+ "Future locations of this brand: your 25% share carries over in full.":
+   "Künftige Standorte dieser Marke: Ihr Anteil von 25 % überträgt sich vollständig.",
+ "Net profit after tax (your scope)": "Nettogewinn nach Steuern (Ihr Umfang)",
  "20% on signing and the remaining 80% in equal instalments over 12 months.": "20 % bei Unterzeichnung und die verbleibenden 80 % in gleichen Raten über 12 Monate.",
  "The company round is €3m for 40% of iTechLounge. Up to 10 investors may participate at €300k for 4% each.": "Die Unternehmensrunde umfasst 3 Mio. € für 40 % an iTechLounge. Bis zu 10 Investoren können sich mit jeweils 300.000 € für 4 % beteiligen.",
  "Every investment is paid 20% upfront, with the remaining 80% paid in equal instalments over 12 months.": "Jede Investition wird zu 20 % im Voraus und zu 80 % in gleichen Raten über 12 Monate gezahlt.",
