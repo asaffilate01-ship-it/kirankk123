@@ -1,5 +1,6 @@
 import nearcuraLogo from "@/assets/nearcura-logo.png";
 import haccoraLogo from "@/assets/haccora-logo-de.png.asset.json";
+import haccoraUkLogo from "@/assets/haccora-logo-en.png.asset.json";
 import bidlumoLogo from "@/assets/bidlumo-logo.png.asset.json";
 import ilmveroLogo from "@/assets/ilmvero-logo-v2.png.asset.json";
 import marktpassLogo from "@/assets/marktpass-logo.png.asset.json";
