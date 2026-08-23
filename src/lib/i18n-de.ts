@@ -979,7 +979,6 @@ export const DE: Record<string, string> = {
  "Compare all three deal types": "Alle drei Beteiligungsformen vergleichen",
  "Minimum ticket versus full allocation for each structure, using the brands selected above.": "Mindestticket gegenüber voller Zuteilung je Struktur, basierend auf den oben gewählten Marken.",
  "Tranches": "Tranchen",
- "Invested": "Investiert",
  "Share": "Anteil",
  "Profit share / mo (avg)": "Gewinnanteil / Mon. (Ø)",
  "At run-rate / mo": "Bei Run-Rate / Mon.",
