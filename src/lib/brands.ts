@@ -3958,6 +3958,12 @@ export const BRAND_GROUPS: BrandGroup[] = [
     blurb: "One brand, two entities: craftvaro.de (Germany) and craftvaro.co.uk (UK) — separate revenue, costs, marketing and P&L.",
     entities: ["craftvaro-de", "craftvaro-uk"],
   },
+  {
+    id: "zivvo",
+    name: "ZIVVO",
+    blurb: "One brand, two entities: zivvo.de (Germany) and zivvo.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["zivvo", "zivvouk"],
+  },
 ];
 
 /** International travel network operated under the TRAVENEXA platform — all .com, sold cross-border. */
@@ -3989,17 +3995,15 @@ export const TRAVENEXA_FAMILY: string[] = [
 
 type BrandOverride = Partial<Pick<Brand, "region" | "domain" | "group" | "entityLabel" | "family">>;
 
-const de = (domain: string, group: string): BrandOverride => ({
+const de = (domain: string, group?: string): BrandOverride => ({
   region: "DE",
   domain,
-  group,
-  entityLabel: `Germany · ${domain}`,
+  ...(group ? { group, entityLabel: `Germany · ${domain}` } : {}),
 });
-const uk = (domain: string, group: string): BrandOverride => ({
+const uk = (domain: string, group?: string): BrandOverride => ({
   region: "UK",
   domain,
-  group,
-  entityLabel: `United Kingdom · ${domain}`,
+  ...(group ? { group, entityLabel: `United Kingdom · ${domain}` } : {}),
 });
 
 const OVERRIDES: Record<string, BrandOverride> = {
@@ -4015,6 +4019,36 @@ const OVERRIDES: Record<string, BrandOverride> = {
   "docuvera-uk": uk("dokuvera.co.uk", "dokuvera"),
   "craftvaro-de": de("craftvaro.de", "craftvaro"),
   "craftvaro-uk": uk("craftvaro.co.uk", "craftvaro"),
+  // ZIVVO is a dual-market brand: zivvo.de (Germany) and zivvo.co.uk (UK).
+  zivvo: de("zivvo.de", "zivvo"),
+  zivvouk: uk("zivvo.co.uk", "zivvo"),
+  // Germany-only brands (single market for now).
+  rettio: de("rettio.de"),
+  kiezio: de("kiezio.de"),
+  zorynnexus: de("zorynpay.de"),
+  zoryn: de("zorynrewards.de"),
+  marktpass: de("marktpass.de"),
+  parkpunkt: de("parkpunkt.de"),
+  traindirekt: de("traindirekt.de"),
+  immoviq: de("immoviq.de"),
+  beinstandplus: de("beistandplus.de"),
+  beratermarkt: de("beratermarkt.de"),
+  viazeno: de("viazeno.de"),
+  stylesyncger: de("schonova.de"),
+  // UK-only brands (single market for now).
+  cirqiva: uk("cirqiva.co.uk"),
+  motoresq: uk("motoresq.co.uk"),
+  premisora: uk("premisora.co.uk"),
+  lessonahead: uk("lessonahead.co.uk"),
+  gabley: uk("gabley.co.uk"),
+  dearnext: uk("dearnext.co.uk"),
+  hmoflow: uk("hmoflow.co.uk"),
+  saathera: uk("saathera.co.uk"),
+  sharedbricks: uk("sharedbricks.co.uk"),
+  skillfinch: uk("skillfinch.co.uk"),
+  amityos: uk("amityos.co.uk"),
+  stylesyncuk: uk("stylesync.uk"),
+  traderos: uk("traderos.co.uk"),
   // Travel brands are international .com properties running on the TRAVENEXA platform.
   hexareve: { region: "INT", domain: "hexareve.com" },
   bosporiva: { region: "INT", domain: "bosporiva.com" },
