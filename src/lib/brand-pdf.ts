@@ -2,6 +2,8 @@ import { t } from "@/lib/i18n";
 import { jsPDF } from "jspdf";
 import type { Brand } from "@/lib/brands";
 import { SHARED_ADVANTAGE } from "@/lib/brands";
+import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
+
 
 type Metrics = {
   launchMonth: number;
