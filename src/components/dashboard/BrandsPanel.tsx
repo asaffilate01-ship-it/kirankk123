@@ -88,6 +88,12 @@ export function BrandsPanel() {
             >
               {b.domain} ↗
             </a>
+            <div className="mt-2 flex flex-wrap gap-1">
+              <Badge variant="secondary" className="text-[10px]">
+                {COUNTRIES.find((c) => c.id === countryOf(b))?.flag} {t(countryLabel(countryOf(b)))}
+              </Badge>
+              <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
+            </div>
           </div>
           <Switch
             checked={a.enabled}
