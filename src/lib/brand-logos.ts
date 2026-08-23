@@ -123,7 +123,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   dearnext: dearnextLogo.url,
   gabley: gableyLogo.url,
   euralume: euralumeLogo.url,
-  farenivo: farenivoLogo,
+  farenivo: farenivoLogo.url,
   niyyahnoor: niyyahnoorLogo.url,
   travenexa: travenexiaLogo,
   marelyra: marelyraLogo.url,
