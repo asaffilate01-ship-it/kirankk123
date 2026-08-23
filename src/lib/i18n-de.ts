@@ -616,6 +616,8 @@ export const DE: Record<string, string> = {
  "Marketing per launched brand / mo": "Marketing pro eingeführte Marke / Monat",
  "Mitigation:": "Gegenmaßnahme:",
  "Month": "Monat",
+  "beyond forecast": "nach Prognosezeitraum",
+
  "Monthly P&L (all months)": "Monatliche Gewinn- und Verlustrechnung (alle Monate)",
  "Monthly churn": "Monatliche Abwanderung",
  "Monthly growth %": "Monatliches Wachstum in %",
