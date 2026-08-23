@@ -1,3 +1,4 @@
+import nearcuraLogo from "@/assets/nearcura-logo.png";
 import haccoraLogo from "@/assets/haccora-logo-de.png.asset.json";
 import haccoraUkLogo from "@/assets/haccora-logo-en.png.asset.json";
 import bidlumoLogo from "@/assets/bidlumo-logo.png.asset.json";
@@ -103,6 +104,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   zivvouk: zivvoLogo.url,
   dishbee: dishbeeLogo.url,
   saathera: saatheraLogo.url,
+  nearcura: nearcuraLogo,
   fleetsora: fleetsoraLogo.url,
   immoviq: immoviqLogo.url,
   omniqora: omniqoraLogo,
