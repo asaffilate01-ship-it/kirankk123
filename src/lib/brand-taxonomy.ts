@@ -90,6 +90,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   // Care & family
   kinderstars: "care", kinderstarsuk: "care", amityos: "care", beinstandplus: "care",
   saathera: "care", kidevia: "care", pawivon: "care", nafsi: "care", nimah: "care",
+  nearcura: "care",
   // Education
   traindirekt: "education", lessonahead: "education", stemcoach: "education",
   unipathway: "education", ilmvero: "education", qiyavo: "education",
