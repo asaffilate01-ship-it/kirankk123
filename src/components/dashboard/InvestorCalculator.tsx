@@ -54,37 +54,45 @@ export function InvestorCalculator() {
     return [];
   }, [mode, brandId, dualBrandId]);
 
-  // Monthly net profit after tax for the selected scope.
-  const scopeRows = useMemo(() => {
-    if (selectedIds.length === 0) {
-      return rows.map((r) => ({ month: r.month, netProfit: r.netProfit }));
-    }
+  // Monthly net profit after tax for any scope (empty ids = whole company).
+  const netForIds = useMemo(() => {
     const perBrandFixed = g.hqPerBrand + g.techPerBrand + g.marketingPerBrand;
-    return rows.map((r) => {
-      let net = 0;
-      for (const id of selectedIds) {
-        const a = state.brands[id];
-        if (!a || !a.enabled || r.month < a.launchMonth) continue;
-        const revenue = r.perBrandRevenue[id] ?? 0;
-        const cost = a.directCost + perBrandFixed + revenue * g.variableOpexPct;
-        net += revenue - cost;
-      }
-      const tax = net > 0 ? net * g.taxRate : 0;
-      return { month: r.month, netProfit: net - tax };
-    });
-  }, [rows, selectedIds, state.brands, g]);
+    return (ids: string[]) => {
+      if (ids.length === 0) return rows.map((r) => r.netProfit);
+      return rows.map((r) => {
+        let net = 0;
+        for (const id of ids) {
+          const a = state.brands[id];
+          if (!a || !a.enabled || r.month < a.launchMonth) continue;
+          const revenue = r.perBrandRevenue[id] ?? 0;
+          const cost = a.directCost + perBrandFixed + revenue * g.variableOpexPct;
+          net += revenue - cost;
+        }
+        const tax = net > 0 ? net * g.taxRate : 0;
+        return net - tax;
+      });
+    };
+  }, [rows, state.brands, g]);
 
-  // Dividends on the selected scope, using the same 6-monthly distribution policy.
-  const dividendRows = useMemo(() => {
+  // Dividends on any scope, using the same 6-monthly distribution policy.
+  const dividendsFrom = (net: number[]) => {
     let undistributed = 0;
-    return scopeRows.map((r) => {
-      undistributed += r.netProfit;
-      const pct = DIVIDEND_SCHEDULE[r.month] ?? 0;
+    return net.map((v, i) => {
+      undistributed += v;
+      const pct = DIVIDEND_SCHEDULE[rows[i]?.month ?? i + 1] ?? 0;
       const paid = pct > 0 && undistributed > 0 ? undistributed * pct : 0;
       undistributed -= paid;
       return paid;
     });
-  }, [scopeRows]);
+  };
+
+  const scopeRows = useMemo(
+    () => netForIds(selectedIds).map((netProfit, i) => ({ month: rows[i].month, netProfit })),
+    [netForIds, selectedIds, rows]
+  );
+
+  const dividendRows = useMemo(() => dividendsFrom(scopeRows.map((r) => r.netProfit)), [scopeRows]);
+
 
   const totalNet = scopeRows.reduce((s, r) => s + r.netProfit, 0);
   const attributableTotal = totalNet * share;
@@ -107,7 +115,91 @@ export function InvestorCalculator() {
     ? scopeRows[scopeRows.length - 1].netProfit * share
     : 0;
 
+  // ---- All options, side by side -------------------------------------------
+  type OptionMetrics = {
+    key: string;
+    label: string;
+    scope: string;
+    tickets: number;
+    invested: number;
+    share: number;
+    avgMonthly: number;
+    runRateMonthly: number;
+    dividends: number;
+    payback: number | null;
+    roi: number;
+  };
+
+  const dualIdsFor = (id: string) => {
+    const b = brandById(id);
+    if (!b) return [];
+    const sib = siblingOf(b);
+    return sib ? [b.id, sib.id] : [b.id];
+  };
+
+  const metricsFor = (m: Mode, n: number): OptionMetrics => {
+    const d = DEALS[m];
+    const ids = m === "company" ? [] : m === "location" ? (brandId ? [brandId] : []) : dualIdsFor(dualBrandId);
+    const net = netForIds(ids);
+    const divs = dividendsFrom(net);
+    const shareN = Math.min(d.fullPct, d.ticketPct * n);
+    const investedN = d.ticket * n;
+    const totalNetN = net.reduce((s, v) => s + v, 0);
+    const mine = divs.map((v) => v * shareN);
+    let run = 0;
+    let pb: number | null = null;
+    for (let i = 0; i < mine.length; i++) {
+      run += mine[i];
+      if (run >= investedN) {
+        pb = rows[i].month;
+        break;
+      }
+    }
+    const cum = mine.reduce((s, v) => s + v, 0);
+    return {
+      key: `${m}-${n}`,
+      label:
+        m === "company"
+          ? t("Whole company")
+          : m === "location"
+            ? t("One brand location")
+            : t("Dual-location brand"),
+      scope:
+        m === "company"
+          ? t("All brands")
+          : m === "location"
+            ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
+            : `${brandById(dualBrandId)?.name ?? ""} — ${t("both locations")}`,
+      tickets: n,
+      invested: investedN,
+      share: shareN,
+      avgMonthly: (totalNetN * shareN) / (net.length || 1),
+      runRateMonthly: (net[net.length - 1] ?? 0) * shareN,
+      dividends: cum,
+      payback: pb,
+      roi: investedN > 0 ? cum / investedN : 0,
+    };
+  };
+
+  const ladder = useMemo(
+    () => Array.from({ length: DEALS[mode].maxTickets }, (_, i) => metricsFor(mode, i + 1)),
+    [mode, brandId, dualBrandId, netForIds, rows]
+  );
+
+  const compare = useMemo(
+    () => [
+      metricsFor("company", 1),
+      metricsFor("company", DEALS.company.maxTickets),
+      metricsFor("location", 1),
+      metricsFor("location", DEALS.location.maxTickets),
+      metricsFor("brand", 1),
+      metricsFor("brand", DEALS.brand.maxTickets),
+    ],
+    [brandId, dualBrandId, netForIds, rows]
+  );
+
   const scopeLabel =
+
     mode === "company"
       ? t("Whole company (all brands)")
       : mode === "location"
@@ -306,6 +398,110 @@ export function InvestorCalculator() {
           </tbody>
         </table>
       </div>
+
+      <div className="space-y-2">
+        <div>
+          <h4 className="text-sm font-semibold">{t("Every tranche option for this scope")}</h4>
+          <p className="text-xs text-muted-foreground">
+            {t("Each tranche is a fixed ticket. Buy one, buy all ten — the table shows exactly what each level returns on the live forecast.")}
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b text-muted-foreground">
+                <th className="py-1 text-left font-medium">{t("Tranches")}</th>
+                <th className="py-1 text-right font-medium">{t("Invested")}</th>
+                <th className="py-1 text-right font-medium">{t("Share")}</th>
+                <th className="py-1 text-right font-medium">{t("Profit share / mo (avg)")}</th>
+                <th className="py-1 text-right font-medium">{t("At run-rate / mo")}</th>
+                <th className="py-1 text-right font-medium">{t("Dividends to M36")}</th>
+                <th className="py-1 text-right font-medium">{t("Payback")}</th>
+                <th className="py-1 text-right font-medium">{t("Cash ROI")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ladder.map((o) => (
+                <tr
+                  key={o.key}
+                  className={`border-b last:border-0 ${o.tickets === tickets ? "bg-primary/5 font-medium" : ""}`}
+                >
+                  <td className="py-1">
+                    {o.tickets} × {fmtEURk(DEALS[mode].ticket)}
+                  </td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.invested)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtPct(o.share, 2)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.avgMonthly)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.runRateMonthly)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.dividends)}</td>
+                  <td className="py-1 text-right tabular-nums">
+                    {o.payback ? `M${o.payback}` : t("beyond forecast")}
+                  </td>
+                  <td
+                    className={`py-1 text-right tabular-nums ${o.roi >= 1 ? "text-emerald-500" : ""}`}
+                  >
+                    {fmtPct(o.roi, 0)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <div>
+          <h4 className="text-sm font-semibold">{t("Compare all three deal types")}</h4>
+          <p className="text-xs text-muted-foreground">
+            {t("Minimum ticket versus full allocation for each structure, using the brands selected above.")}
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b text-muted-foreground">
+                <th className="py-1 text-left font-medium">{t("Option")}</th>
+                <th className="py-1 text-left font-medium">{t("Scope")}</th>
+                <th className="py-1 text-right font-medium">{t("Invested")}</th>
+                <th className="py-1 text-right font-medium">{t("Share")}</th>
+                <th className="py-1 text-right font-medium">{t("At run-rate / mo")}</th>
+                <th className="py-1 text-right font-medium">{t("Dividends to M36")}</th>
+                <th className="py-1 text-right font-medium">{t("Payback")}</th>
+                <th className="py-1 text-right font-medium">{t("Cash ROI")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {compare.map((o) => (
+                <tr key={o.key} className="border-b last:border-0">
+                  <td className="py-1">
+                    {o.label}
+                    <span className="ml-1 text-muted-foreground">
+                      ({o.tickets} × {fmtEURk(o.invested / o.tickets)})
+                    </span>
+                  </td>
+                  <td className="py-1 text-muted-foreground">{o.scope}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.invested)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtPct(o.share, 2)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.runRateMonthly)}</td>
+                  <td className="py-1 text-right tabular-nums">{fmtEUR(o.dividends)}</td>
+                  <td className="py-1 text-right tabular-nums">
+                    {o.payback ? `M${o.payback}` : t("beyond forecast")}
+                  </td>
+                  <td
+                    className={`py-1 text-right tabular-nums ${o.roi >= 1 ? "text-emerald-500" : ""}`}
+                  >
+                    {fmtPct(o.roi, 0)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[11px] leading-snug text-muted-foreground">
+          {t("Brand-level options are limited to 10 investors at 2.5% each per location; the company round is limited to 10 investors at 4% each. Location-only investors receive 10% of any future location; whole-brand investors keep 25% of every location.")}
+        </p>
+      </div>
+
 
       <p className="text-xs text-muted-foreground">
         {t("Total profit share attributable to you over the forecast:")}{" "}
