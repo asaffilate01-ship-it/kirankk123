@@ -131,49 +131,53 @@ export function BrandsPanel() {
 
   const groupedIds = new Set(BRAND_GROUPS.flatMap((g) => g.entities));
 
+  const selectedCountry = countries[0] ?? "all";
+  const selectedSector = sectors[0] ?? "all";
+
   const FilterBar = () => (
-    <Card className="space-y-3 p-4">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("Country")}</span>
-        {COUNTRIES.map((c) => (
-          <button
-            key={c.id}
-            type="button"
-            onClick={() => toggle(countries, c.id, setCountries)}
-            className={`rounded-full border px-3 py-1 text-xs transition ${
-              countries.includes(c.id)
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-border bg-background hover:bg-muted"
-            }`}
-          >
-            {c.flag} {t(c.label)} <span className="opacity-70">({cCounts[c.id]})</span>
-          </button>
-        ))}
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("Business type")}</span>
-        {SECTORS.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            onClick={() => toggle(sectors, s.id, setSectors)}
-            className={`rounded-full border px-3 py-1 text-xs transition ${
-              sectors.includes(s.id)
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-border bg-background hover:bg-muted"
-            }`}
-          >
-            {t(s.label)} <span className="opacity-70">({sCounts[s.id] ?? 0})</span>
-          </button>
-        ))}
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
+    <Card className="p-4">
+      <div className="flex flex-wrap items-center gap-3">
+        <Select
+          value={selectedCountry}
+          onValueChange={(v) => setCountries(v === "all" ? [] : [v as CountryId])}
+        >
+          <SelectTrigger className="w-44 text-sm">
+            <SelectValue placeholder={t("Country")} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">{t("All countries")}</SelectItem>
+            {COUNTRIES.map((c) => (
+              <SelectItem key={c.id} value={c.id}>
+                {c.flag} {t(c.label)} ({cCounts[c.id]})
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        <Select
+          value={selectedSector}
+          onValueChange={(v) => setSectors(v === "all" ? [] : [v as SectorId])}
+        >
+          <SelectTrigger className="w-52 text-sm">
+            <SelectValue placeholder={t("Business type")} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">{t("All business types")}</SelectItem>
+            {SECTORS.map((s) => (
+              <SelectItem key={s.id} value={s.id}>
+                {t(s.label)} ({sCounts[s.id] ?? 0})
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t("Search brand, domain or tagline…")}
-          className="h-9 max-w-xs text-sm"
+          className="h-9 w-56 text-sm"
         />
+
         {filtering && (
           <>
             <span className="text-xs text-muted-foreground">
