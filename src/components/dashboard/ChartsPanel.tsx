@@ -340,7 +340,120 @@ export function ChartsPanel() {
           </div>
         </Card>
       </div>
+
+      <div>
+        <h2 className="text-xl font-semibold">{t("Revenue and cost mix")}</h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          {`${t("Share of the monthly run rate at")} M${last.month}`}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <MixPie title={t("Revenue by country")} detail={t("Where the monthly revenue is earned")} data={countryMix} />
+        <MixPie title={t("Revenue by business type")} detail={t("Sector concentration of the portfolio")} data={sectorMix} />
+        <MixPie title={t("Cost composition")} detail={t("How each euro of cost is spent")} data={costMix} />
+        <MixPie title={t("Revenue split")} detail={t("Costs, tax and net profit out of revenue")} data={profitMix} />
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold">{t("Fundamentals")}</h2>
+        <p className="mt-1 text-sm text-muted-foreground">{t("Key operating metrics investors ask for first")}</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        <Metric label={t("Run-rate ARR")} value={fmtEURk(arr)} />
+        <Metric label={`${t("Monthly revenue")} @ M${last.month}`} value={fmtEURk(last.revenue)} />
+        <Metric label={t("Run-rate net margin")} value={fmtPct(runRateMargin)} />
+        <Metric label={t("Cost per €1 of revenue")} value={`€${costPerEuro.toFixed(2)}`} />
+        <Metric label={t("Paying customers")} value={fmtNum(customers)} />
+        <Metric label={t("Blended ARPU")} value={fmtEUR(blendedArpu)} />
+        <Metric label={t("Brands live")} value={`${last.brandsLaunched} / ${BRANDS.length}`} />
+        <Metric label={t("Total funding drawn")} value={fmtEURk(totalFunding)} />
+        <Metric label={t("First profitable month")} value={breakevenMonth ? `M${breakevenMonth}` : "—"} />
+        <Metric label={t("Cash positive from")} value={cashPositiveMonth ? `M${cashPositiveMonth}` : "—"} />
+        <Metric label={t("Peak cash requirement")} value={fmtEURk(Math.abs(peakCashNeed))} />
+        <Metric label={t("Cumulative dividends")} value={fmtEURk(allRows.reduce((s, r) => s + r.dividendPaid, 0))} />
+      </div>
+
+      <Card className="p-4">
+        <ChartHeading
+          title={t("Investor return — whole company deal")}
+          detail={`${t("Based on")} ${fmtEURk(invested)} ${t("for")} ${fmtPct(state.global.investorEquityPct, 0)} ${t("equity, dividends per the declared schedule, and a")} ${exitMultiple}× ARR ${t("terminal valuation at M")}${allRows.length}.`}
+        />
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <Metric label={t("Invested")} value={fmtEURk(invested)} />
+          <Metric label={t("Dividends to investors")} value={fmtEURk(investorDividends)} />
+          <Metric label={t("Equity value at exit")} value={fmtEURk(equityValue)} />
+          <Metric label={t("Total return")} value={fmtEURk(totalReturn)} />
+          <Metric label={t("Multiple on invested capital")} value={`${moic.toFixed(2)}×`} />
+          <Metric label={t("ROI")} value={fmtPct(roiPct, 0)} />
+          <Metric label={t("Annualised return (IRR proxy)")} value={fmtPct(irr, 0)} />
+          <Metric label={t("Dividend payback")} value={paybackMonth ? `M${paybackMonth}` : t("After M36")} />
+        </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          {t(
+            "Terminal value is illustrative only and assumes a SaaS multiple of 4× run-rate ARR. Dividends follow the 20/30/40% distribution schedule; the remainder is retained in the business.",
+          )}
+        </p>
+      </Card>
     </div>
+  );
+}
+
+function MixPie({
+  title,
+  detail,
+  data,
+}: {
+  title: string;
+  detail: string;
+  data: { name: string; value: number; fill: string }[];
+}) {
+  const total = data.reduce((s, d) => s + d.value, 0);
+  return (
+    <Card className="p-4">
+      <ChartHeading title={title} detail={detail} />
+      {total > 0 ? (
+        <>
+          <div className="h-56 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={data}
+                  dataKey="value"
+                  nameKey="name"
+                  innerRadius="52%"
+                  outerRadius="80%"
+                  paddingAngle={2}
+                  stroke="var(--background)"
+                  strokeWidth={2}
+                >
+                  {data.map((slice) => (
+                    <Cell key={slice.name} fill={slice.fill} />
+                  ))}
+                </Pie>
+                <Tooltip content={<FinanceTooltip />} />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <ul className="mt-2 space-y-1 text-xs">
+            {data.slice(0, 6).map((slice) => (
+              <li key={slice.name} className="flex items-center justify-between gap-3">
+                <span className="flex min-w-0 items-center gap-2 text-muted-foreground">
+                  <span className="h-2 w-2 shrink-0 rounded-sm" style={{ backgroundColor: slice.fill }} />
+                  <span className="truncate">{slice.name}</span>
+                </span>
+                <span className="shrink-0 font-medium tabular-nums">{fmtPct(slice.value / total, 0)}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <div className="flex h-56 items-center justify-center text-sm text-muted-foreground">
+          {t("No data in this period.")}
+        </div>
+      )}
+    </Card>
   );
 }
 
