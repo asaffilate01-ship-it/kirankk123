@@ -115,7 +115,91 @@ export function InvestorCalculator() {
     ? scopeRows[scopeRows.length - 1].netProfit * share
     : 0;
 
+  // ---- All options, side by side -------------------------------------------
+  type OptionMetrics = {
+    key: string;
+    label: string;
+    scope: string;
+    tickets: number;
+    invested: number;
+    share: number;
+    avgMonthly: number;
+    runRateMonthly: number;
+    dividends: number;
+    payback: number | null;
+    roi: number;
+  };
+
+  const dualIdsFor = (id: string) => {
+    const b = brandById(id);
+    if (!b) return [];
+    const sib = siblingOf(b);
+    return sib ? [b.id, sib.id] : [b.id];
+  };
+
+  const metricsFor = (m: Mode, n: number): OptionMetrics => {
+    const d = DEALS[m];
+    const ids = m === "company" ? [] : m === "location" ? (brandId ? [brandId] : []) : dualIdsFor(dualBrandId);
+    const net = netForIds(ids);
+    const divs = dividendsFrom(net);
+    const shareN = Math.min(d.fullPct, d.ticketPct * n);
+    const investedN = d.ticket * n;
+    const totalNetN = net.reduce((s, v) => s + v, 0);
+    const mine = divs.map((v) => v * shareN);
+    let run = 0;
+    let pb: number | null = null;
+    for (let i = 0; i < mine.length; i++) {
+      run += mine[i];
+      if (run >= investedN) {
+        pb = rows[i].month;
+        break;
+      }
+    }
+    const cum = mine.reduce((s, v) => s + v, 0);
+    return {
+      key: `${m}-${n}`,
+      label:
+        m === "company"
+          ? t("Whole company")
+          : m === "location"
+            ? t("One brand location")
+            : t("Dual-location brand"),
+      scope:
+        m === "company"
+          ? t("All brands")
+          : m === "location"
+            ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
+            : `${brandById(dualBrandId)?.name ?? ""} — ${t("both locations")}`,
+      tickets: n,
+      invested: investedN,
+      share: shareN,
+      avgMonthly: (totalNetN * shareN) / (net.length || 1),
+      runRateMonthly: (net[net.length - 1] ?? 0) * shareN,
+      dividends: cum,
+      payback: pb,
+      roi: investedN > 0 ? cum / investedN : 0,
+    };
+  };
+
+  const ladder = useMemo(
+    () => Array.from({ length: DEALS[mode].maxTickets }, (_, i) => metricsFor(mode, i + 1)),
+    [mode, brandId, dualBrandId, netForIds, rows]
+  );
+
+  const compare = useMemo(
+    () => [
+      metricsFor("company", 1),
+      metricsFor("company", DEALS.company.maxTickets),
+      metricsFor("location", 1),
+      metricsFor("location", DEALS.location.maxTickets),
+      metricsFor("brand", 1),
+      metricsFor("brand", DEALS.brand.maxTickets),
+    ],
+    [brandId, dualBrandId, netForIds, rows]
+  );
+
   const scopeLabel =
+
     mode === "company"
       ? t("Whole company (all brands)")
       : mode === "location"
