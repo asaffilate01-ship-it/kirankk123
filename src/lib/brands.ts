@@ -3958,6 +3958,12 @@ export const BRAND_GROUPS: BrandGroup[] = [
     blurb: "One brand, two entities: craftvaro.de (Germany) and craftvaro.co.uk (UK) — separate revenue, costs, marketing and P&L.",
     entities: ["craftvaro-de", "craftvaro-uk"],
   },
+  {
+    id: "zivvo",
+    name: "ZIVVO",
+    blurb: "One brand, two entities: zivvo.de (Germany) and zivvo.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    entities: ["zivvo", "zivvouk"],
+  },
 ];
 
 /** International travel network operated under the TRAVENEXA platform — all .com, sold cross-border. */
