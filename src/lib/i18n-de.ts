@@ -842,7 +842,6 @@ export const DE: Record<string, string> = {
  "Monthly forecast": "Monatsprognose",
  "Monthly costs": "Monatskosten",
  "Net revenue": "Nettoergebnis",
- "Month": "Monat",
  "Total to M": "Summe bis M",
  "Monthly revenue, costs & net revenue (launch \u2192 M36)": "Monatsumsatz, Kosten & Nettoergebnis (Start \u2192 M36)",
  "Brand is switched off \u2014 enable it to see the monthly forecast.": "Marke ist deaktiviert \u2014 aktivieren, um die Monatsprognose zu sehen.",
