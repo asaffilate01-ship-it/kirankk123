@@ -839,4 +839,12 @@ export const DE: Record<string, string> = {
  "Liability and changes": "Haftung und \u00c4nderungen",
  "Provider information for this dashboard.": "Anbieterangaben f\u00fcr dieses Dashboard.",
  "Pricing & packaging": "Preise & Pakete",
+ "Monthly forecast": "Monatsprognose",
+ "Monthly costs": "Monatskosten",
+ "Net revenue": "Nettoergebnis",
+ "Month": "Monat",
+ "Total to M": "Summe bis M",
+ "Monthly revenue, costs & net revenue (launch \u2192 M36)": "Monatsumsatz, Kosten & Nettoergebnis (Start \u2192 M36)",
+ "Brand is switched off \u2014 enable it to see the monthly forecast.": "Marke ist deaktiviert \u2014 aktivieren, um die Monatsprognose zu sehen.",
+ "Costs include direct brand cost plus this brand's share of HQ, tech, marketing and variable opex.": "Kosten umfassen direkte Markenkosten sowie den Anteil der Marke an Verwaltung, Technik, Marketing und variablen Betriebskosten.",
 };
