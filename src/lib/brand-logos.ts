@@ -73,6 +73,9 @@ import tripenvoLogo from "@/assets/tripenvo-logo.png.asset.json";
 import drivarynLogo from "@/assets/drivaryn-logo.png.asset.json";
 import kideviaLogo from "@/assets/kidevia-logo.png.asset.json";
 import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
+import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
+import tendryvaLogo from "@/assets/tendryva-logo.png.asset.json";
+import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -154,6 +157,9 @@ export const BRAND_LOGOS: Record<string, string> = {
   drivaryn: drivarynLogo.url,
   kidevia: kideviaLogo.url,
   gearivon: gearivonLogo.url,
+  avenesto: avenestoLogo.url,
+  tendryva: tendryvaLogo.url,
+  syndriva: syndrivaLogo.url,
 };
 
 /**
