@@ -2,9 +2,10 @@ import { t } from "@/lib/i18n";
 import { useMemo, useState } from "react";
 import { useFinance, buildModel } from "@/lib/finance-store";
 import { BRANDS } from "@/lib/brands";
+import { countryLabel, countryOf, sectorLabel, sectorOf } from "@/lib/brand-taxonomy";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { fmtEURk, fmtPct } from "./format";
+import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "./format";
 import {
   Area,
   Bar,
@@ -14,6 +15,8 @@ import {
   ComposedChart,
   Legend,
   Line,
+  Pie,
+  PieChart,
   ReferenceLine,
   ResponsiveContainer,
   Tooltip,
@@ -33,7 +36,18 @@ const CHART = {
   axis: "var(--muted-foreground)",
 } as const;
 
+const PIE_COLORS = [
+  "var(--chart-1)",
+  "var(--chart-2)",
+  "var(--chart-3)",
+  "var(--chart-4)",
+  "var(--chart-5)",
+  "var(--primary)",
+  "var(--muted-foreground)",
+] as const;
+
 const periods = [12, 24, 36] as const;
+
 
 type TooltipEntry = { name?: string; value?: number | string; color?: string };
 
