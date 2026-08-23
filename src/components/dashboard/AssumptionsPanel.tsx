@@ -20,7 +20,7 @@ export function AssumptionsPanel() {
           value={g.upfrontFunding}
           min={0}
           max={1500000}
-          step={50000}
+          step={100000}
           onChange={(v) => s.setGlobal({ upfrontFunding: v })}
           format={fmtEURk}
         />
@@ -29,7 +29,7 @@ export function AssumptionsPanel() {
           value={g.monthlyFunding}
           min={0}
           max={500000}
-          step={10000}
+          step={20000}
           onChange={(v) => s.setGlobal({ monthlyFunding: v })}
           format={fmtEURk}
         />
@@ -43,9 +43,9 @@ export function AssumptionsPanel() {
         <SliderRow
           label={t("Tranche size")}
           value={g.trancheSize}
-          min={10000}
+          min={50000}
           max={500000}
-          step={5000}
+          step={50000}
           onChange={(v) => s.setGlobal({ trancheSize: v })}
           format={fmtEURk}
         />
@@ -53,7 +53,7 @@ export function AssumptionsPanel() {
           label={t("Number of tranches")}
           value={g.trancheCount}
           min={1}
-          max={100}
+          max={10}
           onChange={(v) => s.setGlobal({ trancheCount: v })}
         />
         <SliderRow
@@ -75,6 +75,10 @@ export function AssumptionsPanel() {
             {fmtPct(g.trancheCount > 0 ? g.investorEquityPct / g.trancheCount : 0, 2)} equity and
             the same share of net profit.
           </div>
+        </div>
+        <div className="rounded-md border p-3 text-xs text-muted-foreground">
+          <div className="mb-1 font-medium text-foreground">{t("Brand investment options")}</div>
+          <div>{t("One location: €50k for 25% (10 × €5k tickets at 2.5%). Dual-location whole brand: €80k for 25% (10 × €8k tickets at 2.5%). All options use 20% upfront and 80% over 12 months.")}</div>
         </div>
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
           <div className="mb-1 font-medium text-foreground">{t("Dividend schedule")}</div>

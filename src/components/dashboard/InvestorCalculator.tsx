@@ -48,6 +48,35 @@ export function InvestorCalculator() {
         </p>
       </div>
 
+      <div className="grid gap-3 md:grid-cols-3">
+        <DealOption
+          title={t("Whole company")}
+          price="€3m"
+          stake="40%"
+          ticket="€300k = 4%"
+          detail={t("Maximum 10 investors in the company round.")}
+        />
+        <DealOption
+          title={t("One brand location")}
+          price="€50k"
+          stake="25%"
+          ticket="€5k = 2.5%"
+          detail={t("A location-only investor receives 10% of any future location opened for that brand.")}
+        />
+        <DealOption
+          title={t("Dual-location brand")}
+          price="€80k"
+          stake="25%"
+          ticket="€8k = 2.5%"
+          detail={t("A whole-brand investor keeps 25% across current and future locations.")}
+        />
+      </div>
+
+      <div className="rounded-md border bg-muted/30 p-3 text-xs text-muted-foreground">
+        <span className="font-medium text-foreground">{t("Payment schedule")}:</span>{" "}
+        {t("20% on signing and the remaining 80% in equal instalments over 12 months.")}
+      </div>
+
       <SliderRow
         label={t("Tranches purchased")}
         value={tranches}
@@ -137,6 +166,32 @@ export function InvestorCalculator() {
         ) : null}
       </p>
     </Card>
+  );
+}
+
+function DealOption({
+  title,
+  price,
+  stake,
+  ticket,
+  detail,
+}: {
+  title: string;
+  price: string;
+  stake: string;
+  ticket: string;
+  detail: string;
+}) {
+  return (
+    <div className="rounded-md border p-3">
+      <div className="text-xs font-medium text-muted-foreground">{title}</div>
+      <div className="mt-1 flex items-baseline justify-between gap-2">
+        <span className="text-lg font-semibold">{price}</span>
+        <span className="text-sm font-semibold text-primary">{stake}</span>
+      </div>
+      <div className="mt-2 text-xs font-medium">{ticket}</div>
+      <p className="mt-1 text-[11px] leading-snug text-muted-foreground">{detail}</p>
+    </div>
   );
 }
 

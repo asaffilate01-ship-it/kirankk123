@@ -20,7 +20,6 @@ export function OverviewPanel() {
   const cumDividend = cumInvestor + cumFounder;
   const monthAtMilestone = rows.find((r) => r.revenue >= 1_000_000)?.month;
   const minCash = rows.reduce((m, r) => Math.min(m, r.cashBalance), Infinity);
-  const equityPerTranche = g.trancheCount > 0 ? g.investorEquityPct / g.trancheCount : 0;
   const investorPctLabel = `${Math.round(state.global.investorEquityPct * 100)}%`;
 
   const activeBrands = BRANDS.filter((b) => state.brands[b.id]?.enabled).length;
@@ -91,19 +90,15 @@ export function OverviewPanel() {
       <Card className="space-y-2 p-4 text-sm">
         <h3 className="font-semibold">{t("Investor terms")}</h3>
         <p className="text-muted-foreground">
-          {t("Total raise:")} <b>{fmtEURk(totalFunding)}</b> {t("for")}{" "}
-          <b>{fmtPct(g.investorEquityPct)} {t("equity")}</b> {t("and")}{" "}
-          <b>{fmtPct(g.investorProfitSharePct)} {t("of net profit after all costs and taxes")}</b>.{" "}
-          {t("Investors may buy the whole round or take it in tranches — each")}{" "}
-          <b>{fmtEURk(g.trancheSize)}</b> {t("tranche buys")} <b>{fmtPct(equityPerTranche, 2)}</b>{" "}
-          {t("equity and the same share of profit")}.{" "}
-          {t("Paid as")} <b>{fmtEURk(g.upfrontFunding)}</b> {t("upfront, then")}{" "}
-          <b>{fmtEURk(g.monthlyFunding)}</b> {t("per month over")} {g.fundingMonths}{" "}
-          {t("months.")}
+          {t("The company round is €3m for 40% of iTechLounge. Up to 10 investors may participate at €300k for 4% each.")}{" "}
+          {t("Every investment is paid 20% upfront, with the remaining 80% paid in equal instalments over 12 months.")}
         </p>
         <ul className="space-y-1 text-muted-foreground">
           {[
-            `${g.trancheCount} × ${fmtEURk(g.trancheSize)} ${t("tranches")} — ${t("each tranche =")} ${fmtPct(equityPerTranche, 2)} ${t("equity and")} ${fmtPct(equityPerTranche, 2)} ${t("of net profit")}. ${t("Investors may buy more than one tranche.")}`,
+            "Single-location brand investment: €50k for 25%, or up to 10 investors at €5k for 2.5% each.",
+            "Dual-location whole-brand investment: €80k for 25%, or up to 10 investors at €8k for 2.5% each.",
+            "A whole-brand investor receives 25% of the brand in every current location and any location added later.",
+            "A location-only investor receives 25% of the purchased location and 10% of each new location added later.",
             "Funds are spent on finalising the native apps, legal & compliance, then sales & marketing — the core tech is already built.",
             "All shareholdings are legally recorded by lawyers under the relevant country law. No further investment rounds are planned.",
             "Investors can sell their equity, with first refusal to the company; valuation is set independently by auditors for full transparency.",
