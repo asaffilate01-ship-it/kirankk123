@@ -76,6 +76,7 @@ import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
 import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
 import tendryvaLogo from "@/assets/tendryva-logo.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
+import athlyvoLogo from "@/assets/athlyvo-logo.png.asset.json";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -160,6 +161,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   avenesto: avenestoLogo.url,
   tendryva: tendryvaLogo.url,
   syndriva: syndrivaLogo.url,
+  athlyvo: athlyvoLogo.url,
 };
 
 /**
