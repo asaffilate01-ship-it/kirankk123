@@ -13,6 +13,8 @@ import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
+import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
+
 
 
 export const Route = createFileRoute("/brands/$brandId")({
@@ -229,11 +231,33 @@ function BrandDetail() {
             </div>
           </Section>
 
+          <Section title={t("Positives — why this wins")}>
+            <ul className="grid grid-cols-1 gap-2 text-sm md:grid-cols-2">
+              {brandPositives(brand).map((p) => (
+                <li key={p} className="flex gap-2 rounded-md border p-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+                  <span>{t(p)}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title={t("How we make money")}>
+            <div className="space-y-2">
+              {brandMoneyModel(brand).map((line) => (
+                <div key={line.label} className="rounded-md border p-3 text-sm">
+                  <div className="font-semibold">{t(line.label)}</div>
+                  <div className="mt-1 text-xs text-muted-foreground">{t(line.detail)}</div>
+                </div>
+              ))}
+            </div>
+          </Section>
+
           <Section title={t("Competition & how we break their strength")}>
             <div className="space-y-2">
-              {brand.competitors.map((c) => (
+              {brandCompetition(brand).map((c) => (
                 <div key={c.name} className="rounded-md border p-3 text-sm">
-                  <div className="font-semibold">{c.name}</div>
+                  <div className="font-semibold">{t(c.name)}</div>
                   <div className="mt-1 text-xs text-muted-foreground">{t("Strength:")} {t(c.strength)}</div>
                   <div className="mt-1 text-xs">
                     <span className="font-semibold text-emerald-500">{t("Counter:")}</span> {t(c.counter)}
@@ -259,9 +283,9 @@ function BrandDetail() {
             </ul>
           </Section>
 
-          <Section title={t("Risks & how we reduce them to nil")}>
+          <Section title={t("Negatives, risks & how we reduce them")}>
             <div className="space-y-2">
-              {brand.risks.map((r) => (
+              {brandNegatives(brand).map((r) => (
                 <div key={r.risk} className="rounded-md border p-3 text-sm">
                   <div className="font-semibold text-amber-500">{t("Risk:")} {t(r.risk)}</div>
                   <div className="mt-1 text-xs">
@@ -271,6 +295,7 @@ function BrandDetail() {
               ))}
             </div>
           </Section>
+
           <Section title={t("Monthly revenue, costs & net revenue (launch → M36)")}>
             <BrandMonthlyTable brandId={brand.id} />
           </Section>

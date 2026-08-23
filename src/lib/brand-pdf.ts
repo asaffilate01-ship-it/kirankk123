@@ -2,6 +2,8 @@ import { t } from "@/lib/i18n";
 import { jsPDF } from "jspdf";
 import type { Brand } from "@/lib/brands";
 import { SHARED_ADVANTAGE } from "@/lib/brands";
+import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
+
 
 type Metrics = {
   launchMonth: number;
@@ -172,12 +174,21 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   labelValue(t("Revenue today"), t(brand.currentMarket.revenue));
   y += 4;
 
+  subheading("Positives — why this wins");
+  bullets(brandPositives(brand).map(t));
+
+  subheading("How we make money");
+  brandMoneyModel(brand).forEach((line) => {
+    labelValue(t(line.label), t(line.detail));
+    y += 2;
+  });
+
   subheading("Competition & how we break their strength");
-  brand.competitors.forEach((c) => {
+  brandCompetition(brand).forEach((c) => {
     doc.setFont("helvetica", "bold");
     doc.setFontSize(10.5);
     ensure(14);
-    doc.text(c.name, margin, y);
+    doc.text(t(c.name), margin, y);
     y += 14;
     labelValue(t("Strength"), t(c.strength));
     labelValue(t("Counter"), t(c.counter));
@@ -187,12 +198,13 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   subheading("Competitive advantage — one team, 100+ brands");
   bullets(SHARED_ADVANTAGE.map(t));
 
-  subheading("Risks & mitigations");
-  brand.risks.forEach((r) => {
+  subheading("Negatives, risks & mitigations");
+  brandNegatives(brand).forEach((r) => {
     labelValue(t("Risk"), t(r.risk));
     labelValue(t("Mitigation"), t(r.mitigation));
     y += 2;
   });
+
 
   // Footer with page numbers
   const pages = doc.getNumberOfPages();
