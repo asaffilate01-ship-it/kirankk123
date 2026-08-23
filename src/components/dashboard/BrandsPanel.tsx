@@ -8,6 +8,13 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { fmtEURk, fmtNum } from "./format";
 import { buildModel } from "@/lib/finance-store";
 import { brandLogo } from "@/lib/brand-logos";
