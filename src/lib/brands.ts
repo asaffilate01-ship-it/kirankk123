@@ -4057,6 +4057,8 @@ const OVERRIDES: Record<string, BrandOverride> = {
   savansea: { region: "INT", domain: "savansea.com" },
   nilevella: { region: "INT", domain: "nilevella.com" },
   marelyra: { region: "INT", domain: "marelyra.com" },
+  autohashi: { region: "UK", domain: "autohashi.com" },
+  baytcircle: { region: "INT", domain: "baytcircle.com" },
 };
 
 export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS].map((b) => {
