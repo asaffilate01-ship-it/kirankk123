@@ -52,8 +52,8 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
-// Full portfolio target: 77 brands, 5 launches per month to month 12.
-export const TARGET_BRAND_COUNT = 97;
+// Full portfolio target: 98 brands, 5 launches per month to month 12.
+export const TARGET_BRAND_COUNT = 98;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
