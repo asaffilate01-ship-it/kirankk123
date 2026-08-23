@@ -63,6 +63,16 @@ import eventplanrLogoDe from "@/assets/eventplanr-logo-de.png.asset.json";
 import eventplanrLogoEn from "@/assets/eventplanr-logo-en.png.asset.json";
 import cirqivaLogo from "@/assets/cirqiva-logo.png.asset.json";
 import omniqoraLogo from "@/assets/omniqora-logo.webp";
+import depotmeshLogo from "@/assets/depotmesh-logo.png.asset.json";
+import pawivonLogo from "@/assets/pawivon-logo.png.asset.json";
+import deskivonLogo from "@/assets/deskivon-logo.png.asset.json";
+import formevynLogo from "@/assets/formevyn-logo.png.asset.json";
+import glowevynLogo from "@/assets/glowevyn-logo.png.asset.json";
+import fixorlynLogo from "@/assets/fixorlyn-logo.png.asset.json";
+import tripenvoLogo from "@/assets/tripenvo-logo.png.asset.json";
+import drivarynLogo from "@/assets/drivaryn-logo.png.asset.json";
+import kideviaLogo from "@/assets/kidevia-logo.png.asset.json";
+import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -134,6 +144,16 @@ export const BRAND_LOGOS: Record<string, string> = {
   "craftvaro-de": craftvaroLogoDe.url,
   eventplanrger: eventplanrLogoDe.url,
   eventplanruk: eventplanrLogoEn.url,
+  depotmesh: depotmeshLogo.url,
+  pawivon: pawivonLogo.url,
+  deskivon: deskivonLogo.url,
+  formevyn: formevynLogo.url,
+  glowevyn: glowevynLogo.url,
+  fixorlyn: fixorlynLogo.url,
+  tripenvo: tripenvoLogo.url,
+  drivaryn: drivarynLogo.url,
+  kidevia: kideviaLogo.url,
+  gearivon: gearivonLogo.url,
 };
 
 /**
