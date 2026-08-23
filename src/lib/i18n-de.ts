@@ -974,6 +974,23 @@ export const DE: Record<string, string> = {
  "Cross-sell channel from day one — every sister brand's customer base is a warm list for this product.": "Cross-Selling ab Tag eins – der Kundenstamm jeder Schwestermarke ist eine warme Liste für dieses Produkt.",
  "Two-month free trial removes the buying risk: operators only pay once the product is embedded in their daily workflow.": "Zwei Monate kostenlos nehmen das Kaufrisiko: Betriebe zahlen erst, wenn das Produkt im Tagesgeschäft verankert ist.",
  "Two-market brand: one product build, two separate P&Ls — the second market is nearly pure margin.": "Marke in zwei Märkten: eine Produktentwicklung, zwei getrennte GuV – der zweite Markt ist nahezu reine Marge.",
+ "Every tranche option for this scope": "Alle Tranchen-Optionen für diesen Umfang",
+ "Each tranche is a fixed ticket. Buy one, buy all ten — the table shows exactly what each level returns on the live forecast.": "Jede Tranche ist ein festes Ticket. Eine oder alle zehn – die Tabelle zeigt genau, was jede Stufe laut aktueller Prognose bringt.",
+ "Compare all three deal types": "Alle drei Beteiligungsformen vergleichen",
+ "Minimum ticket versus full allocation for each structure, using the brands selected above.": "Mindestticket gegenüber voller Zuteilung je Struktur, basierend auf den oben gewählten Marken.",
+ "Tranches": "Tranchen",
+ "Invested": "Investiert",
+ "Share": "Anteil",
+ "Profit share / mo (avg)": "Gewinnanteil / Mon. (Ø)",
+ "At run-rate / mo": "Bei Run-Rate / Mon.",
+ "Dividends to M36": "Dividenden bis M36",
+ "Payback": "Amortisation",
+ "Cash ROI": "Cash-ROI",
+ "Option": "Option",
+ "Scope": "Umfang",
+ "All brands": "Alle Marken",
+ "Brand-level options are limited to 10 investors at 2.5% each per location; the company round is limited to 10 investors at 4% each. Location-only investors receive 10% of any future location; whole-brand investors keep 25% of every location.": "Markenbeteiligungen sind auf 10 Investoren mit je 2,5 % pro Standort begrenzt; die Unternehmensrunde auf 10 Investoren mit je 4 %. Investoren eines einzelnen Standorts erhalten 10 % an jedem neuen Standort; Investoren einer ganzen Marke behalten 25 % an jedem Standort.",
 };
+
 
 
