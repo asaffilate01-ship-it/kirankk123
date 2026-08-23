@@ -115,6 +115,44 @@ export function InvestorCalculator() {
     ? scopeRows[scopeRows.length - 1].netProfit * share
     : 0;
 
+  // ---- When ROI happens (all live off the sliders above) --------------------
+  // Capital is called 20% on signing (M1) then 80% in 12 equal instalments (M2-M13).
+  const capitalCalled = scopeRows.map((_, i) => {
+    const m = i + 1;
+    if (m === 1) return invested * 0.2;
+    if (m >= 2 && m <= 13) return (invested * 0.8) / 12;
+    return 0;
+  });
+
+  const roiTimeline = (() => {
+    let paidIn = 0;
+    let divCum = 0;
+    let accrualCum = 0;
+    let accrualBreakeven: number | null = null;
+    let cashPositive: number | null = null;
+    let x1: number | null = null;
+    let x2: number | null = null;
+    let x3: number | null = null;
+    const series: { month: number; paidIn: number; dividends: number; net: number; multiple: number }[] = [];
+    for (let i = 0; i < scopeRows.length; i++) {
+      const month = scopeRows[i].month;
+      paidIn += capitalCalled[i];
+      divCum += yourDividends[i];
+      accrualCum += scopeRows[i].netProfit * share;
+      if (accrualBreakeven === null && accrualCum >= invested) accrualBreakeven = month;
+      if (cashPositive === null && divCum >= paidIn && divCum > 0) cashPositive = month;
+      if (x1 === null && divCum >= invested) x1 = month;
+      if (x2 === null && divCum >= invested * 2) x2 = month;
+      if (x3 === null && divCum >= invested * 3) x3 = month;
+      series.push({ month, paidIn, dividends: divCum, net: divCum - paidIn, multiple: invested > 0 ? divCum / invested : 0 });
+    }
+    return { accrualBreakeven, cashPositive, x1, x2, x3, series };
+  })();
+
+  const roiMonths = [6, 12, 18, 24, 30, 36];
+  const mLabel = (m: number | null) => (m ? `M${m}` : t("beyond forecast"));
+
+
   // ---- All options, side by side -------------------------------------------
   type OptionMetrics = {
     key: string;
