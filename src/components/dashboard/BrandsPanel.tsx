@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { t, useLang } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { BRANDS, BRAND_GROUPS, REGIONS, regionOf, brandById, type Brand } from "@/lib/brands";
@@ -5,15 +6,51 @@ import { useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { fmtEURk, fmtNum } from "./format";
 import { buildModel } from "@/lib/finance-store";
 import { brandLogo } from "@/lib/brand-logos";
+import {
+  COUNTRIES,
+  SECTORS,
+  countryOf,
+  sectorOf,
+  countryCounts,
+  sectorCounts,
+  countryLabel,
+  sectorLabel,
+  type CountryId,
+  type SectorId,
+} from "@/lib/brand-taxonomy";
 
 export function BrandsPanel() {
   const state = useFinance();
   const { lang } = useLang();
   const rows = buildModel(state);
   const lastRow = rows[rows.length - 1];
+
+  const [countries, setCountries] = useState<CountryId[]>([]);
+  const [sectors, setSectors] = useState<SectorId[]>([]);
+  const [query, setQuery] = useState("");
+
+  const cCounts = useMemo(() => countryCounts(), []);
+  const sCounts = useMemo(() => sectorCounts(), []);
+
+  const toggle = <T,>(list: T[], v: T, set: (x: T[]) => void) =>
+    set(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
+
+  const filtering = countries.length > 0 || sectors.length > 0 || query.trim().length > 0;
+  const q = query.trim().toLowerCase();
+  const filtered = BRANDS.filter(
+    (b) =>
+      (countries.length === 0 || countries.includes(countryOf(b))) &&
+      (sectors.length === 0 || sectors.includes(sectorOf(b))) &&
+      (q === "" ||
+        b.name.toLowerCase().includes(q) ||
+        b.domain.toLowerCase().includes(q) ||
+        b.tagline.toLowerCase().includes(q)),
+  );
 
   const metrics = (id: string) => ({
     mrr: lastRow.perBrandRevenue[id] ?? 0,
