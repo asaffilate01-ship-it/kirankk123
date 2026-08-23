@@ -32,6 +32,12 @@ export type Brand = {
     users: string;
     revenue: string;
   };
+  /** Brand group key — two legal entities sharing one brand name (DE + UK), each with its own P&L. */
+  group?: string;
+  /** Label of this entity inside its group, e.g. "Germany · kinderstars24.de". */
+  entityLabel?: string;
+  /** Portfolio family, e.g. "TRAVENEXA" for the international travel network. */
+  family?: string;
 };
 
 export type Region = "DE" | "UK" | "INT";
