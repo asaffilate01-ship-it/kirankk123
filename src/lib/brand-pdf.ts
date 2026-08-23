@@ -184,7 +184,7 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
     y += 2;
   });
 
-  subheading("Competitive advantage — one team, ten brands");
+  subheading("Competitive advantage — one team, 100+ brands");
   bullets(SHARED_ADVANTAGE.map(t));
 
   subheading("Risks & mitigations");

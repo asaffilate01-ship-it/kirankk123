@@ -243,10 +243,10 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("Competitive advantage — one team, ten brands")}>
+          <Section title={t("Competitive advantage — one team, 100+ brands")}>
             <p className="text-sm text-muted-foreground">
               Unlike standalone SaaS businesses, {brand.name} shares every non-product function with the
-              other nine iTechLounge brands. Each additional product therefore benefits from economies of
+              other 99+ iTechLounge brands. Each additional product therefore benefits from economies of
               scale and cross-selling opportunities.
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-1 text-sm md:grid-cols-2">

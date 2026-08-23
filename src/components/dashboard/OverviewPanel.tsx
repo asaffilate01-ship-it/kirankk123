@@ -125,8 +125,8 @@ export function OverviewPanel() {
       <InvestorCalculator />
 
       <Card className="space-y-3 p-4 text-sm">
-        <h3 className="font-semibold">{t("Our system — one team, ten brands")}</h3>
-        <p className="text-muted-foreground">{t("iTechLounge operates as a single company that ships and runs ten German-focused digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the other nine.")}</p>
+        <h3 className="font-semibold">{t("Our system — one team, 100+ brands")}</h3>
+        <p className="text-muted-foreground">{t("iTechLounge operates as a single company that ships and runs 100+ digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the others.")}</p>
         <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
           {SHARED_ADVANTAGE.map((s) => (
             <li key={s} className="flex gap-2">
