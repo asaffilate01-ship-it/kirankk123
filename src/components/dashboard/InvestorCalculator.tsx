@@ -397,6 +397,68 @@ export function InvestorCalculator() {
         />
       </div>
 
+      <div className="rounded-lg border bg-muted/30 p-3 space-y-3">
+        <div>
+          <h4 className="text-sm font-semibold">{t("When your ROI happens")}</h4>
+          <p className="text-xs text-muted-foreground">
+            {t("Capital is called 20% on signing then 80% over 12 months, so your cash out and cash in overlap. Every month below re-forecasts live when you move the growth, subscriber, cost or pricing sliders.")}
+          </p>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Cell
+            label={t("Cash-flow positive (dividends > capital paid in)")}
+            value={mLabel(roiTimeline.cashPositive)}
+            tone={roiTimeline.cashPositive ? "good" : undefined}
+          />
+          <Cell
+            label={t("Profit-share breakeven (accrued, incl. retained)")}
+            value={mLabel(roiTimeline.accrualBreakeven)}
+            hint={t("Month your cumulative share of net profit equals your investment, counting profit kept in the business.")}
+            tone={roiTimeline.accrualBreakeven ? "good" : undefined}
+          />
+          <Cell label={t("1x back in cash dividends")} value={mLabel(roiTimeline.x1)} />
+          <Cell
+            label={t("2x / 3x in cash dividends")}
+            value={`${mLabel(roiTimeline.x2)} / ${mLabel(roiTimeline.x3)}`}
+          />
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b text-muted-foreground">
+                <th className="py-1 text-left font-medium">{t("Month")}</th>
+                <th className="py-1 text-right font-medium">{t("Capital paid in")}</th>
+                <th className="py-1 text-right font-medium">{t("Dividends received")}</th>
+                <th className="py-1 text-right font-medium">{t("Net cash position")}</th>
+                <th className="py-1 text-right font-medium">{t("Cash multiple")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {roiMonths.map((m) => {
+                const row = roiTimeline.series[m - 1];
+                if (!row) return null;
+                return (
+                  <tr key={m} className="border-b last:border-0">
+                    <td className="py-1">M{row.month}</td>
+                    <td className="py-1 text-right tabular-nums">{fmtEUR(row.paidIn)}</td>
+                    <td className="py-1 text-right tabular-nums">{fmtEUR(row.dividends)}</td>
+                    <td
+                      className={`py-1 text-right tabular-nums ${row.net >= 0 ? "text-emerald-600 dark:text-emerald-400" : ""}`}
+                    >
+                      {fmtEUR(row.net)}
+                    </td>
+                    <td className="py-1 text-right tabular-nums">{row.multiple.toFixed(2)}x</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
       <div className="overflow-x-auto">
         <table className="w-full text-xs">
           <thead>
