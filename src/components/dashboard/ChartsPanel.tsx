@@ -202,8 +202,8 @@ export function ChartsPanel() {
                   <YAxis type="category" dataKey="name" width={92} tick={{ fontSize: 10, fill: CHART.axis }} tickLine={false} axisLine={false} />
                   <Tooltip content={<FinanceTooltip />} cursor={{ fill: "var(--muted)" }} />
                   <Bar dataKey="value" name={t("Revenue")} radius={[0, 3, 3, 0]}>
-                    {brandData.map((brand) => (
-                      <Cell key={brand.id} fill={brand.fill} />
+                    {brandData.map((brand, index) => (
+                      <Cell key={`${brand.id}-${brand.name}-${index}`} fill={brand.fill} />
                     ))}
                   </Bar>
                 </BarChart>
