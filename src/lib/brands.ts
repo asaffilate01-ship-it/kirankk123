@@ -4049,7 +4049,7 @@ const OVERRIDES: Record<string, BrandOverride> = {
   amityos: uk("amityos.co.uk"),
   stylesyncuk: uk("stylesync.uk"),
   traderos: uk("traderos.co.uk"),
-  // Travel brands are international .com properties running on the TRAVENEXA platform.
+  // Travel brands are international .com properties running on the TraveNexia platform.
   hexareve: { region: "INT", domain: "hexareve.com" },
   bosporiva: { region: "INT", domain: "bosporiva.com" },
   eastamira: { region: "INT", domain: "eastamira.com" },
