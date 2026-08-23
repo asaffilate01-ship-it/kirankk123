@@ -104,6 +104,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   zivvouk: zivvoLogo.url,
   dishbee: dishbeeLogo.url,
   saathera: saatheraLogo.url,
+  nearcura: nearcuraLogo,
   fleetsora: fleetsoraLogo.url,
   immoviq: immoviqLogo.url,
   omniqora: omniqoraLogo,
