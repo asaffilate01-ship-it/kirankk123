@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { t, useLang } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { BRANDS, BRAND_GROUPS, REGIONS, regionOf, brandById, type Brand } from "@/lib/brands";
@@ -5,15 +6,51 @@ import { useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { fmtEURk, fmtNum } from "./format";
 import { buildModel } from "@/lib/finance-store";
 import { brandLogo } from "@/lib/brand-logos";
+import {
+  COUNTRIES,
+  SECTORS,
+  countryOf,
+  sectorOf,
+  countryCounts,
+  sectorCounts,
+  countryLabel,
+  sectorLabel,
+  type CountryId,
+  type SectorId,
+} from "@/lib/brand-taxonomy";
 
 export function BrandsPanel() {
   const state = useFinance();
   const { lang } = useLang();
   const rows = buildModel(state);
   const lastRow = rows[rows.length - 1];
+
+  const [countries, setCountries] = useState<CountryId[]>([]);
+  const [sectors, setSectors] = useState<SectorId[]>([]);
+  const [query, setQuery] = useState("");
+
+  const cCounts = useMemo(() => countryCounts(), []);
+  const sCounts = useMemo(() => sectorCounts(), []);
+
+  const toggle = <T,>(list: T[], v: T, set: (x: T[]) => void) =>
+    set(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
+
+  const filtering = countries.length > 0 || sectors.length > 0 || query.trim().length > 0;
+  const q = query.trim().toLowerCase();
+  const filtered = BRANDS.filter(
+    (b) =>
+      (countries.length === 0 || countries.includes(countryOf(b))) &&
+      (sectors.length === 0 || sectors.includes(sectorOf(b))) &&
+      (q === "" ||
+        b.name.toLowerCase().includes(q) ||
+        b.domain.toLowerCase().includes(q) ||
+        b.tagline.toLowerCase().includes(q)),
+  );
 
   const metrics = (id: string) => ({
     mrr: lastRow.perBrandRevenue[id] ?? 0,
@@ -51,6 +88,12 @@ export function BrandsPanel() {
             >
               {b.domain} ↗
             </a>
+            <div className="mt-2 flex flex-wrap gap-1">
+              <Badge variant="secondary" className="text-[10px]">
+                {COUNTRIES.find((c) => c.id === countryOf(b))?.flag} {t(countryLabel(countryOf(b)))}
+              </Badge>
+              <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
+            </div>
           </div>
           <Switch
             checked={a.enabled}
@@ -81,8 +124,89 @@ export function BrandsPanel() {
 
   const groupedIds = new Set(BRAND_GROUPS.flatMap((g) => g.entities));
 
+  const FilterBar = () => (
+    <Card className="space-y-3 p-4">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("Country")}</span>
+        {COUNTRIES.map((c) => (
+          <button
+            key={c.id}
+            type="button"
+            onClick={() => toggle(countries, c.id, setCountries)}
+            className={`rounded-full border px-3 py-1 text-xs transition ${
+              countries.includes(c.id)
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border bg-background hover:bg-muted"
+            }`}
+          >
+            {c.flag} {t(c.label)} <span className="opacity-70">({cCounts[c.id]})</span>
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("Business type")}</span>
+        {SECTORS.map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            onClick={() => toggle(sectors, s.id, setSectors)}
+            className={`rounded-full border px-3 py-1 text-xs transition ${
+              sectors.includes(s.id)
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border bg-background hover:bg-muted"
+            }`}
+          >
+            {t(s.label)} <span className="opacity-70">({sCounts[s.id] ?? 0})</span>
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <Input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={t("Search brand, domain or tagline…")}
+          className="h-9 max-w-xs text-sm"
+        />
+        {filtering && (
+          <>
+            <span className="text-xs text-muted-foreground">
+              {filtered.length} {t("brands")}
+            </span>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                setCountries([]);
+                setSectors([]);
+                setQuery("");
+              }}
+            >
+              {t("Clear filters")}
+            </Button>
+          </>
+        )}
+      </div>
+    </Card>
+  );
+
+  if (filtering) {
+    return (
+      <div className="space-y-6">
+        <FilterBar />
+        {filtered.length === 0 ? (
+          <p className="text-sm text-muted-foreground">{t("No brands match these filters.")}</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {filtered.map((b) => <BrandCard key={b.id} b={b} />)}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8">
+      <FilterBar />
       {/* Dual-market brands: one brand name, two entities, separate books */}
       <section>
         <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b pb-2">
