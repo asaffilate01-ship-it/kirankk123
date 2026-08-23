@@ -918,10 +918,8 @@ export const DE: Record<string, string> = {
  "Fundamentals": "Kennzahlen",
  "Key operating metrics investors ask for first": "Die wichtigsten operativen Kennzahlen für Investoren",
  "Run-rate ARR": "ARR (Run-Rate)",
- "Monthly revenue": "Monatsumsatz",
  "Run-rate net margin": "Netto-Marge (Run-Rate)",
  "Cost per €1 of revenue": "Kosten pro 1 € Umsatz",
- "Paying customers": "Zahlende Kunden",
  "Blended ARPU": "Durchschnittlicher ARPU",
  "Brands live": "Live-Marken",
  "Total funding drawn": "Gesamt abgerufene Finanzierung",
@@ -931,7 +929,6 @@ export const DE: Record<string, string> = {
  "Cumulative dividends": "Kumulierte Dividenden",
  "Investor return — whole company deal": "Investorenrendite – Gesamtunternehmen",
  "Based on": "Basierend auf",
- "for": "für",
  "equity, dividends per the declared schedule, and a": "Eigenkapital, Dividenden gemäß Plan und einer",
  "terminal valuation at M": "Endbewertung in M",
  "Invested": "Investiert",
@@ -945,6 +942,5 @@ export const DE: Record<string, string> = {
  "After M36": "Nach M36",
  "Terminal value is illustrative only and assumes a SaaS multiple of 4× run-rate ARR. Dividends follow the 20/30/40% distribution schedule; the remainder is retained in the business.": "Der Endwert ist nur illustrativ und unterstellt ein SaaS-Multiple von 4× der ARR-Run-Rate. Dividenden folgen dem Ausschüttungsplan von 20/30/40 %; der Rest bleibt im Unternehmen.",
  "No data in this period.": "Keine Daten in diesem Zeitraum.",
- "Tax": "Steuern",
 };
 
