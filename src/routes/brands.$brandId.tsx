@@ -12,6 +12,8 @@ import { GateGuard } from "@/components/GateGuard";
 import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
+
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
