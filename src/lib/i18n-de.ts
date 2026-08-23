@@ -724,7 +724,7 @@ export const DE: Record<string, string> = {
  "The page you're looking for doesn't exist or has been moved.": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
  "This page didn't load": "Diese Seite konnte nicht geladen werden",
  "Try again": "Erneut versuchen",
- "iTechLounge operates as a single company that ships and runs ten German-focused digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the other nine.": "iTechLounge operiert als ein einziges Unternehmen, das zehn auf Deutschland fokussierte Digitalmarken versendet und betreibt. Jede Marke teilt dasselbe operative Chassis, sodass jedes neue Produkt, das auf unserer Plattform eingeführt wird, von Skaleneffekten und Cross-Selling in den bestehenden Kundenstamm der anderen neun Marken profitiert.",
+ "iTechLounge operates as a single company that ships and runs 100+ digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the others.": "iTechLounge operiert als ein einziges Unternehmen, das 100+ Digitalmarken versendet und betreibt. Jede Marke teilt dasselbe operative Chassis, sodass jedes neue Produkt, das auf unserer Plattform eingeführt wird, von Skaleneffekten und Cross-Selling in den bestehenden Kundenstamm der anderen Marken profitiert.",
  "Counter": "Gegenzug",
  "Mitigation": "Gegenmaßnahme",
  "Risk": "Risiko",
