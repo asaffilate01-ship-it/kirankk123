@@ -2319,7 +2319,7 @@ export const EXTRA_BRANDS: Brand[] = [
   },
   {
     id: "travenexa",
-    name: "TRAVENEXA",
+    name: "TraveNexia",
     region: "INT",
     domain: "travenexa.com",
     tagline: "Every journey, intelligently connected. — travel booking engine",
@@ -2336,7 +2336,7 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultAddlRevenue: 6000,
     defaultDirectCost: 4500,
     reason:
-      "TRAVENEXA exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.",
+      "TraveNexia exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.",
     proposition:
       "One booking engine for tours, stays and transport: enquiry-to-payment flow, supplier allocations, commission and settlement tracking, multi-locale storefronts and white-label deployment in days rather than months.",
     features: [
@@ -2348,10 +2348,10 @@ export const EXTRA_BRANDS: Brand[] = [
       "Distribution API and channel-manager connectors",
     ],
     apps: [
-      { name: "TRAVENEXA Platform", kind: "SaaS", purpose: "Core operator workspace for inventory, bookings and finance." },
-      { name: "TRAVENEXA Storefront", kind: "Web", purpose: "White-label multi-locale booking site per brand or client." },
-      { name: "TRAVENEXA Distribution API", kind: "API", purpose: "Inventory, availability and booking endpoints for partners." },
-      { name: "TRAVENEXA Admin", kind: "Admin", purpose: "Group-level tenancy, pricing and reporting control." },
+      { name: "TraveNexia Platform", kind: "SaaS", purpose: "Core operator workspace for inventory, bookings and finance." },
+      { name: "TraveNexia Storefront", kind: "Web", purpose: "White-label multi-locale booking site per brand or client." },
+      { name: "TraveNexia Distribution API", kind: "API", purpose: "Inventory, availability and booking endpoints for partners." },
+      { name: "TraveNexia Admin", kind: "Admin", purpose: "Group-level tenancy, pricing and reporting control." },
     ],
     userTypes: [
       { type: "Tour operator / DMC", useCase: "Runs the whole business — inventory, bookings, payouts — on one system." },
