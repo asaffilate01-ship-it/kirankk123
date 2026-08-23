@@ -13,6 +13,8 @@ import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
+import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
+
 
 
 export const Route = createFileRoute("/brands/$brandId")({
