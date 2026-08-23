@@ -54,37 +54,45 @@ export function InvestorCalculator() {
     return [];
   }, [mode, brandId, dualBrandId]);
 
-  // Monthly net profit after tax for the selected scope.
-  const scopeRows = useMemo(() => {
-    if (selectedIds.length === 0) {
-      return rows.map((r) => ({ month: r.month, netProfit: r.netProfit }));
-    }
+  // Monthly net profit after tax for any scope (empty ids = whole company).
+  const netForIds = useMemo(() => {
     const perBrandFixed = g.hqPerBrand + g.techPerBrand + g.marketingPerBrand;
-    return rows.map((r) => {
-      let net = 0;
-      for (const id of selectedIds) {
-        const a = state.brands[id];
-        if (!a || !a.enabled || r.month < a.launchMonth) continue;
-        const revenue = r.perBrandRevenue[id] ?? 0;
-        const cost = a.directCost + perBrandFixed + revenue * g.variableOpexPct;
-        net += revenue - cost;
-      }
-      const tax = net > 0 ? net * g.taxRate : 0;
-      return { month: r.month, netProfit: net - tax };
-    });
-  }, [rows, selectedIds, state.brands, g]);
+    return (ids: string[]) => {
+      if (ids.length === 0) return rows.map((r) => r.netProfit);
+      return rows.map((r) => {
+        let net = 0;
+        for (const id of ids) {
+          const a = state.brands[id];
+          if (!a || !a.enabled || r.month < a.launchMonth) continue;
+          const revenue = r.perBrandRevenue[id] ?? 0;
+          const cost = a.directCost + perBrandFixed + revenue * g.variableOpexPct;
+          net += revenue - cost;
+        }
+        const tax = net > 0 ? net * g.taxRate : 0;
+        return net - tax;
+      });
+    };
+  }, [rows, state.brands, g]);
 
-  // Dividends on the selected scope, using the same 6-monthly distribution policy.
-  const dividendRows = useMemo(() => {
+  // Dividends on any scope, using the same 6-monthly distribution policy.
+  const dividendsFrom = (net: number[]) => {
     let undistributed = 0;
-    return scopeRows.map((r) => {
-      undistributed += r.netProfit;
-      const pct = DIVIDEND_SCHEDULE[r.month] ?? 0;
+    return net.map((v, i) => {
+      undistributed += v;
+      const pct = DIVIDEND_SCHEDULE[rows[i]?.month ?? i + 1] ?? 0;
       const paid = pct > 0 && undistributed > 0 ? undistributed * pct : 0;
       undistributed -= paid;
       return paid;
     });
-  }, [scopeRows]);
+  };
+
+  const scopeRows = useMemo(
+    () => netForIds(selectedIds).map((netProfit, i) => ({ month: rows[i].month, netProfit })),
+    [netForIds, selectedIds, rows]
+  );
+
+  const dividendRows = useMemo(() => dividendsFrom(scopeRows.map((r) => r.netProfit)), [scopeRows]);
+
 
   const totalNet = scopeRows.reduce((s, r) => s + r.netProfit, 0);
   const attributableTotal = totalNet * share;
