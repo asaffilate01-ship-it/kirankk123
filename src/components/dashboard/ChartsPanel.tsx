@@ -10,6 +10,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  Cell,
   ComposedChart,
   Legend,
   Line,
@@ -202,7 +203,7 @@ export function ChartsPanel() {
                   <Tooltip content={<FinanceTooltip />} cursor={{ fill: "var(--muted)" }} />
                   <Bar dataKey="value" name={t("Revenue")} radius={[0, 3, 3, 0]}>
                     {brandData.map((brand) => (
-                      <BarCell key={brand.id} fill={brand.fill} />
+                      <Cell key={brand.id} fill={brand.fill} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -255,10 +256,6 @@ export function ChartsPanel() {
       </div>
     </div>
   );
-}
-
-function BarCell({ fill }: { fill: string }) {
-  return <rect fill={fill} />;
 }
 
 function Metric({ label, value }: { label: string; value: string }) {
