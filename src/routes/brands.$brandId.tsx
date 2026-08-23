@@ -12,6 +12,8 @@ import { GateGuard } from "@/components/GateGuard";
 import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
+
 
 export const Route = createFileRoute("/brands/$brandId")({
   loader: async ({ params }) => {
@@ -269,7 +271,11 @@ function BrandDetail() {
               ))}
             </div>
           </Section>
+          <Section title={t("Monthly revenue, costs & net revenue (launch → M36)")}>
+            <BrandMonthlyTable brandId={brand.id} />
+          </Section>
         </div>
+
 
         <Card className="flex h-fit flex-col gap-3 p-4">
           <div className="flex items-center justify-between">
