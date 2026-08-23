@@ -876,7 +876,7 @@ export const DE: Record<string, string> = {
    "Wählen Sie, was Sie kaufen — das Gesamtunternehmen, eine Marke an einem Standort oder eine Marke mit zwei Standorten — und legen Sie dann fest, wie viele Tranchen Sie erwerben. Alle Werte unten werden für genau diesen Umfang neu berechnet.",
  "1 tranche": "1 Tranche",
  tranche: "Tranche",
- tranches: "Tranchen",
+ 
  of: "von",
  "10 tranches available in total, maximum 10 investors in the company round.":
    "Insgesamt 10 Tranchen verfügbar, maximal 10 Investoren in der Unternehmensrunde.",
