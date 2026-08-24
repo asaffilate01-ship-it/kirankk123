@@ -36,6 +36,12 @@ function entityName(b: Brand): string {
   return `${base} ${suffix}`;
 }
 
+function dualGroupName(id: string): string {
+  const b = brandById(id);
+  if (!b) return "";
+  return groupOf(b)?.name ?? b.name;
+}
+
 /** Label listing both entities of a dual brand, e.g. "DOKUVERA GER (dokuvera.de) + DOKUVERA UK (dokuvera.co.uk)". */
 function dualEntityLabel(id: string): string {
   const b = brandById(id);
@@ -282,7 +288,7 @@ export function InvestorCalculator() {
       ? t("Whole company (all brands)")
       : mode === "location"
         ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
-        : `${groupOf(brandById(dualBrandId)!)?.name ?? brandById(dualBrandId)?.name ?? ""} — ${t("both locations")}: ${dualEntityLabel(dualBrandId)}`;
+        : `${dualGroupName(dualBrandId)} — ${t("both locations")}: ${dualEntityLabel(dualBrandId)}`;
 
   return (
     <Card className="space-y-4 p-4 text-sm">
