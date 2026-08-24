@@ -11,6 +11,7 @@ import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
 import { ArrowLeft, ChevronDown, Download, ExternalLink } from "lucide-react";
 import { GateGuard } from "@/components/GateGuard";
 import { brandLogo } from "@/lib/brand-logos";
+import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
@@ -83,34 +84,24 @@ function BrandDetail() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b bg-card/50 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-3 py-3 sm:px-4">
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />{t("Back to dashboard")}</Link>
           <div className="flex items-center gap-3">
             <LanguageToggle />
             <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
               <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
-            {logo ? (
-              <div className="flex h-26 w-[120px] items-center justify-center">
-                <img src={logo} alt={`${brand.name} logo`} className="max-h-full w-auto max-w-full object-contain" />
-              </div>
-            ) : (
-              <span className="h-3 w-3 rounded-full" style={{ background: brand.color }} aria-hidden />
-            )}
-            <span className="text-sm font-semibold">{brand.name}</span>
+            <BrandLogoBox src={logo} name={brand.name} color={brand.color} size="sm" align="center" />
+            <span className="hidden text-sm font-semibold sm:inline">{brand.name}</span>
           </div>
         </div>
       </header>
-      <main className="mx-auto grid max-w-6xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
+      <main className="mx-auto grid max-w-6xl gap-4 px-3 py-5 sm:gap-6 sm:px-4 sm:py-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
           <div>
             {logo && (
-              <div className="mb-3 flex h-26 w-[200px] shrink-0 items-center justify-start overflow-hidden">
-                <img
-                  src={logo}
-                  alt={`${brand.name} logo`}
-                  className="h-full w-full object-contain object-left"
-                />
+              <div className="mb-3">
+                <BrandLogoBox src={logo} name={brand.name} color={brand.color} size="lg" />
               </div>
             )}
             <h1 className="text-2xl font-semibold tracking-tight">{brand.name}</h1>
