@@ -883,9 +883,9 @@ const BASE_BRANDS: Brand[] = [
   },
   {
     id: "omniqora",
-    region: "UK",
+    region: "INT",
     name: "OMNIQORA",
-    tagline: "Every conversation. One intelligent core.",
+    tagline: "The complete AI business operating system.",
     description:
       "OmniQora is the omnichannel customer-conversation OS: WhatsApp, Instagram, Messenger, SMS, e-mail, web-chat, Telegram and voice land in one team inbox, and every conversation becomes a case with qualification, appointment, document request, quote, payment, third-party fulfilment and follow-up. One engine sold three ways — embedded add-on inside any iTechLounge brand, standalone SaaS for independent SMEs, and a partner/white-label edition for agencies, groups and resellers. No commission on anything our customers earn: flat regional subscriptions plus transparent pass-through of channel, model and payment-provider fees.",
     market:
@@ -916,7 +916,7 @@ const BASE_BRANDS: Brand[] = [
     defaultAddlRevenue: 6000,
     defaultDirectCost: 5200,
     color: "#2563EB",
-    domain: "omniqora.itechlounge.co.uk",
+    domain: "omniqora.com",
     reason:
       "Customers now start every relationship in a chat window, but SMEs answer them from a personal phone with no audit trail, no consent record, no SLA and no link to the job, invoice or payment. Enterprise tools solve part of it at enterprise prices; WhatsApp inboxes solve messaging but not the business process. OmniQora gives every SME — and every iTechLounge brand — one compliant, case-based, AI-assisted conversation core, priced for its own region and free of commission on the revenue it generates.",
     proposition:
