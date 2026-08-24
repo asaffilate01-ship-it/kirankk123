@@ -529,10 +529,10 @@ export const EXTRA_BRANDS: Brand[] = [
     },
   },
   {
-    id: "taxnuvia",
-    name: "TAXNUVIA",
+    id: "taxcenda",
+    name: "TAXCENDA",
     region: "INT",
-    domain: "taxnuvia.com",
+    domain: "taxcenda.com",
     tagline: "Cross-border VAT and tax automation",
     description: "Registers, calculates and files indirect tax across multiple jurisdictions for online sellers, with OSS/IOSS, UK VAT and GCC VAT support.",
     market: "≈€6bn global indirect-tax compliance software market.",
@@ -545,7 +545,7 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultChurn: 0.02,
     defaultAddlRevenue: 1500,
     defaultDirectCost: 3000,
-    reason: "TAXNUVIA exists because this market is still served by fragmented intermediaries, spreadsheets and phone calls. Buyers pay more for less transparency, and suppliers lose margin to middlemen. A single well-built platform removes that friction.",
+    reason: "TAXCENDA exists because this market is still served by fragmented intermediaries, spreadsheets and phone calls. Buyers pay more for less transparency, and suppliers lose margin to middlemen. A single well-built platform removes that friction.",
     proposition: "One platform for tax: transparent pricing, verified counterparties, digital paperwork and automated follow-up — built on the shared iTechLounge stack so it launches fast and costs a fraction of a standalone product.",
     features: [
       "Verified supplier and customer onboarding",
@@ -555,7 +555,7 @@ export const EXTRA_BRANDS: Brand[] = [
       "Multi-language and multi-currency support",
       "Dashboards, exports and audit trails",
     ],
-    apps: [{ name: "TAXNUVIA Web App", kind: "SaaS", purpose: "Core workspace where day-to-day work is done." },{ name: "TAXNUVIA Mobile", kind: "iOS", purpose: "On-the-go access, notifications and quick actions." },{ name: "TAXNUVIA Android", kind: "Android", purpose: "Same mobile experience on Android devices." },{ name: "TAXNUVIA API & Admin", kind: "API", purpose: "Integrations, reporting and group-level administration." }],
+    apps: [{ name: "TAXCENDA Web App", kind: "SaaS", purpose: "Core workspace where day-to-day work is done." },{ name: "TAXCENDA Mobile", kind: "iOS", purpose: "On-the-go access, notifications and quick actions." },{ name: "TAXCENDA Android", kind: "Android", purpose: "Same mobile experience on Android devices." },{ name: "TAXCENDA API & Admin", kind: "API", purpose: "Integrations, reporting and group-level administration." }],
     userTypes: [
       { type: "Customer", useCase: "Finds, compares and buys with clear pricing and support." },
       { type: "Supplier / partner", useCase: "Lists inventory or services and gets paid on time." },
