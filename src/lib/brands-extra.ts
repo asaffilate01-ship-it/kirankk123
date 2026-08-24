@@ -3101,7 +3101,7 @@ export const EXTRA_BRANDS: Brand[] = [
     id: "nearcura",
     name: "NearCura",
     region: "UK",
-    domain: "nearcura.co.uk",
+    domain: "nearcura.com",
     tagline: "Your Trusted Care Network",
     description:
       "NearCura is the UK care network that connects families with trusted, vetted local carers, home care providers and support services. One platform covers care matching, care planning, scheduling, secure payments, family visibility and real-time carer check-ins, with dedicated apps for families, carers, agencies and local authorities. Built on the shared iTechLounge stack so it launches fast and runs at a fraction of the cost of a standalone product.",
