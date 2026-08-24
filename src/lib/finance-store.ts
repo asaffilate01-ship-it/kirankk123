@@ -251,7 +251,7 @@ export function buildModel(state: State): MonthRow[] {
     const tax = ebit > 0 ? ebit * g.taxRate : 0;
     const netProfit = ebit - tax;
     undistributed += netProfit;
-    const dividendPct = DIVIDEND_SCHEDULE[m] ?? 0;
+    const dividendPct = payoutPct(m - start + 1);
     const dividendPaid = dividendPct > 0 && undistributed > 0 ? undistributed * dividendPct : 0;
     undistributed -= dividendPaid;
     const investorShare = dividendPaid * g.investorEquityPct;
