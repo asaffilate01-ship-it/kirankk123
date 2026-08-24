@@ -81,6 +81,7 @@ export function BalanceSheetPanel() {
         </Table>
       </div>
       <p className="mt-3 text-xs text-muted-foreground">{t("Simplified balance sheet. Fixed assets and matching liabilities are a small placeholder capitalisation. Equity = investor paid-in capital + retained earnings (net profit left in the business: 100% M1–M12, 80% M13–M18, 70% M19–M24, 60% M25–M30, 50% M31–M36).")}</p>
-    </Card>
+      </Card>
+    </div>
   );
 }
