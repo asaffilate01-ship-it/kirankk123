@@ -62,7 +62,8 @@ type State = {
  * Baseline assumptions — identical for every brand, adjustable per brand
  * in the UI. 100 sign-ups at launch, 15% monthly growth, 3 cancellations
  * per 100 customers, €39/mo in Germany and £39/mo (≈€45) in the UK,
- * no additional revenue, €2,000 of expenses per brand per month.
+ * no additional revenue, and no direct brand cost (all overhead sits in the
+ * shared HQ / tech / marketing engine).
  * ------------------------------------------------------------------ */
 export const BASELINE = {
   initialUsers: 100,
