@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { fmtEURk } from "./format";
+import { PanelIntro, ScrollHint } from "./Explain";
 import {
   Area,
   AreaChart,
@@ -39,11 +40,19 @@ export function CashFlowPanel() {
 
   return (
     <div className="space-y-4">
+      <PanelIntro
+        title={t("Where the cash sits")}
+        description={t("Profit is not the same as cash. This page tracks the actual money in the bank each month: profit earned, funding received, dividends paid out and the running balance.")}
+        tips={[
+          t("The “trough” is the lowest cash point — it must stay above zero."),
+          t("Green figures add cash, red figures take cash out."),
+        ]}
+      />
       <Card className="p-4">
         <div className="mb-2 flex items-center justify-between">
           <h3 className="font-semibold">{t("Cash balance over time")}</h3>
           <div className="text-xs text-muted-foreground">
-            Trough: <b className={minCash < 0 ? "text-red-500" : "text-emerald-500"}>{fmtEURk(minCash)}</b> at M{minMonth}
+            {t("Lowest cash")}: <b className={minCash < 0 ? "text-red-500" : "text-emerald-500"}>{fmtEURk(minCash)}</b> at M{minMonth}
           </div>
         </div>
         <div className="h-80">
@@ -68,11 +77,12 @@ export function CashFlowPanel() {
 
       <Card className="p-4">
         <h3 className="mb-3 font-semibold">{t("Cash flow statement (monthly)")}</h3>
+        <ScrollHint />
         <div className="max-h-96 overflow-auto">
           <Table>
             <TableHeader className="sticky top-0 bg-background">
               <TableRow>
-                <TableHead>{t("Month")}</TableHead>
+                <TableHead className="sticky left-0 bg-background">{t("Month")}</TableHead>
                 <TableHead className="text-right">{t("Net profit")}</TableHead>
                 <TableHead className="text-right">{t("Funding in")}</TableHead>
                 <TableHead className="text-right">{t("Dividend paid")}</TableHead>
@@ -85,7 +95,7 @@ export function CashFlowPanel() {
             <TableBody>
               {rows.map((r) => (
                 <TableRow key={r.month}>
-                  <TableCell>M{r.month}</TableCell>
+                  <TableCell className="sticky left-0 bg-background font-medium">M{r.month}</TableCell>
                   <TableCell className="text-right tabular-nums">{fmtEURk(r.netProfit)}</TableCell>
                   <TableCell className="text-right tabular-nums text-emerald-500">
                     {fmtEURk(r.fundingIn)}
