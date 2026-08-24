@@ -17,10 +17,10 @@ export function BrandLogoBox({
 }) {
   const box =
     size === "sm"
-      ? "h-24 w-[236px]"
+      ? "h-28 w-[280px]"
       : size === "lg"
-        ? "h-40 w-[412px] sm:h-48 sm:w-[496px]"
-        : "h-28 w-[316px] sm:h-32 sm:w-[380px]";
+        ? "h-48 w-[496px] sm:h-56 sm:w-[580px]"
+        : "h-32 w-[380px] sm:h-40 sm:w-[460px]";
 
   if (!src) {
     return (
