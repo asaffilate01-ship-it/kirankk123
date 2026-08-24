@@ -153,6 +153,54 @@ export function OverviewPanel() {
         ]}
       />
 
+      <Section
+        title={t("Why we are raising — and exactly where the money goes")}
+        description={t("The platform and the 100+ brands are already built. The raise is not for building software: it is for finishing the native apps, getting every brand legally launch-ready, buying the first customers, and funding the team that runs and supports it all until subscriptions cover the cost base.")}
+      >
+        <div className="space-y-4 text-sm">
+          <p className="text-muted-foreground">
+            {t("Each brand launches with a free trial and grows month by month, so revenue arrives after the spend. The raise bridges that gap: it pays for launch, marketing and running costs during the months where a brand is live but not yet paying for itself. Once a brand passes its own break-even, its cash contributes to the next launches instead of the raise.")}
+          </p>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            {[
+              {
+                head: "Sales & marketing — buying the first customers",
+                body: "The single largest use of funds. Paid search and social, app-store presence, local SEO and content per country, influencer and partner deals, referral incentives and launch campaigns for each brand, plus a small sales team for the B2B verticals. Marketing is the shared engine (base spend plus a per-brand amount) so we can push hard on the brands that respond and pull back on the ones that do not.",
+              },
+              {
+                head: "Legal, compliance & entity set-up",
+                body: "Company and subsidiary formation per market (DE, UK, EU, Gulf, US), lawyer-recorded shareholdings for every investor, trademark and domain protection across 100+ brands, GDPR/UK-GDPR work (DPAs, records of processing, hosting agreements), terms and privacy documentation per brand, sector rules where they apply (childcare, care, food safety, legal and tax advice, transport, financial data), insurance, and annual audits.",
+              },
+              {
+                head: "Ongoing tech, hosting & security",
+                body: "Finishing and shipping the native iOS/Android apps, app-store and developer accounts, shared infrastructure (servers, CDN, backups, monitoring), AI usage costs, payments and billing fees, third-party APIs and data, penetration testing and security reviews, and continuous release work across the shared codebase so an improvement lands in every brand at once.",
+              },
+              {
+                head: "Admin, support & operations",
+                body: "Customer support and onboarding in local languages, content and translation, moderation and quality control on marketplaces, finance and bookkeeping, payroll, HR and recruitment as the team scales, investor reporting and the live investor portal, plus office, tooling and software licences.",
+              },
+              {
+                head: "Working capital & runway buffer",
+                body: "Cash held back so the plan survives slower months: later launches, a market that takes longer to convert, refunds and churn above plan, or a marketing channel that needs to be replaced. This is what keeps the cash trough above zero without asking for a second round.",
+              },
+              {
+                head: "Why now, and why one raise",
+                body: "The cost of a launch is mostly fixed and shared, so launching 100+ brands from one chassis is dramatically cheaper per brand than funding them separately. Doing it now — while the platform is built and the domains and brands are secured — captures the launch window before competitors in each vertical react. No further rounds are planned; dividends start in month 13 from launch.",
+              },
+            ].map((b) => (
+              <div key={b.head} className="rounded-lg border p-3">
+                <div className="text-sm font-semibold">{t(b.head)}</div>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t(b.body)}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground">
+            {t("Every one of these costs is visible and adjustable in the model: shared HQ, tech and marketing spend (base plus per-brand) sit in the Assumptions tab, and variable operating costs are set as a percentage of revenue. Change any of them and the P&L, cash flow and balance sheet re-forecast instantly.")}
+          </p>
+        </div>
+      </Section>
+
+
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Kpi label={t("Active brands")} value={`${activeBrands} / ${TARGET_BRAND_COUNT}`} />
         <Kpi
