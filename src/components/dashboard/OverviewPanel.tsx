@@ -136,25 +136,8 @@ export function OverviewPanel() {
             </li>
           ))}
         </ul>
-        <div className="grid grid-cols-1 gap-2 pt-2 md:grid-cols-2">
-          {BRANDS.map((b) => (
-            <div key={b.id} className="flex items-center justify-between rounded-md border p-2 text-xs">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full" style={{ background: b.color }} />
-                <span className="font-semibold">{b.name}</span>
-                <span className="text-muted-foreground">· {t("launches")} M{state.brands[b.id].launchMonth}</span>
-              </div>
-              <a
-                href={`https://${b.domain}`}
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium text-primary hover:underline"
-              >
-                {b.domain} ↗
-              </a>
-            </div>
-          ))}
-        </div>
+        <BrandDirectory />
+
       </Card>
 
       <Card className="space-y-3 p-4 text-sm">
