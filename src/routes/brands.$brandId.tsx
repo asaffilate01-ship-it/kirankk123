@@ -301,6 +301,9 @@ function BrandDetail() {
           <Section title={t("Monthly revenue, costs & net revenue (launch → M36)")} defaultOpen={false}>
             <BrandMonthlyTable brandId={brand.id} />
           </Section>
+
+          <BrandInvestment brand={brand} />
+
         </div>
 
 
