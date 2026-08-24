@@ -78,6 +78,19 @@ import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
 import tendryvaLogo from "@/assets/tendryva-logo.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
 import athlyvoLogo from "@/assets/athlyvo-logo.png.asset.json";
+import taxloungeNewLogo from "@/assets/taxlounge-logo.png";
+import formationgenieNewLogo from "@/assets/formationgenie-logo.png";
+import merqanoNewLogo from "@/assets/merqano-logo.png";
+import silkroaduzNewLogo from "@/assets/silkroaduz-logo.png";
+import dubaitripsNewLogo from "@/assets/dubaitrips-logo.png";
+import marocwaysNewLogo from "@/assets/marocways-logo.png";
+import sharedbricksNewLogo from "@/assets/sharedbricks-logo.png";
+import stemcoachNewLogo from "@/assets/stemcoach-logo.png";
+import onyngoNewLogo from "@/assets/onyngo-logo.png";
+import hmoflowNewLogo from "@/assets/hmoflow-logo.png";
+import nafsiNewLogo from "@/assets/nafsi-logo.png";
+import nimahNewLogo from "@/assets/nimah-logo.png";
+import motoresqNewLogo from "@/assets/motoresq-logo.png";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -165,6 +178,19 @@ export const BRAND_LOGOS: Record<string, string> = {
   tendryva: tendryvaLogo.url,
   syndriva: syndrivaLogo.url,
   athlyvo: athlyvoLogo.url,
+  taxlounge: taxloungeNewLogo,
+  formationgenie: formationgenieNewLogo,
+  merqano: merqanoNewLogo,
+  silkroaduz: silkroaduzNewLogo,
+  dubaitrips: dubaitripsNewLogo,
+  marocways: marocwaysNewLogo,
+  sharedbricks: sharedbricksNewLogo,
+  stemcoach: stemcoachNewLogo,
+  onyngo: onyngoNewLogo,
+  hmoflow: hmoflowNewLogo,
+  nafsi: nafsiNewLogo,
+  nimah: nimahNewLogo,
+  motoresq: motoresqNewLogo,
 };
 
 /**
