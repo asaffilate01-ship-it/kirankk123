@@ -887,7 +887,7 @@ const BASE_BRANDS: Brand[] = [
     name: "OMNIQORA",
     tagline: "The complete AI business operating system.",
     description:
-      "OmniQora is the omnichannel customer-conversation OS: WhatsApp, Instagram, Messenger, SMS, e-mail, web-chat, Telegram and voice land in one team inbox, and every conversation becomes a case with qualification, appointment, document request, quote, payment, third-party fulfilment and follow-up. One engine sold three ways — embedded add-on inside any iTechLounge brand, standalone SaaS for independent SMEs, and a partner/white-label edition for agencies, groups and resellers. No commission on anything our customers earn: flat regional subscriptions plus transparent pass-through of channel, model and payment-provider fees.",
+      "Omniqora is the complete AI business operating system — sold as Omniqora One with six modules (Connect, Voice, Flow, Agents, Exchange and the Qora assistant) on one login and one bill. At its core is the omnichannel customer-conversation engine: WhatsApp, Instagram, Messenger, SMS, e-mail, web-chat, Telegram and voice land in one team inbox, and every conversation becomes a case with qualification, appointment, document request, quote, payment, third-party fulfilment and follow-up. One engine sold three ways — embedded add-on inside any iTechLounge brand, standalone SaaS for independent SMEs, and a partner/white-label edition for agencies, groups and resellers. No commission on anything our customers earn: flat regional subscriptions plus transparent pass-through of channel, model and payment-provider fees.",
     market:
       "≈33m SMEs across the UK, EU/DACH and the Gulf/South Asia markets we serve; the customer-conversation and workflow stack (omnichannel inbox, helpdesk, CRM, appointments, invoicing, AI reception) is a ≈€14bn/yr addressable spend, of which ≈£2.6bn/yr sits in the UK alone.",
     audience:
@@ -960,6 +960,13 @@ const BASE_BRANDS: Brand[] = [
       "White-label: own domain, brand, from-name, templates and tenant console per partner",
     ],
     apps: [
+      { name: "Omniqora One", kind: "SaaS", purpose: "omniqora.com — the complete AI business operating system: one account, one data core, one bill across every module" },
+      { name: "Omniqora Connect", kind: "SaaS", purpose: "Every conversation. One intelligent core — omnichannel team inbox with cases, SLAs and templates" },
+      { name: "Omniqora Voice", kind: "SaaS", purpose: "Every call, intelligently handled — AI receptionist, routing, callbacks and 24/7 cover" },
+      { name: "Omniqora Flow", kind: "SaaS", purpose: "Put your business in motion — workflow automation from intake to quote, booking, fulfilment and follow-up" },
+      { name: "Omniqora Agents", kind: "SaaS", purpose: "Your AI team, ready to work — task-scoped AI employees for reception, sales, admin and billing" },
+      { name: "Omniqora Exchange", kind: "SaaS", purpose: "Connect more. Achieve more — integration marketplace for calendars, CRM, accounting, payments and channels" },
+      { name: "Qora", kind: "SaaS", purpose: "The central AI assistant across the platform: asks, drafts, summarises and acts inside every module" },
       { name: "OmniQora Web", kind: "Web", purpose: "app.omniqora.com — agent & manager console: inbox, cases, workflows, analytics, account" },
       { name: "OmniQora Mobile", kind: "iOS", purpose: "Native mobile inbox with bottom navigation, push notifications and on-the-go case handling" },
       { name: "OmniQora Mobile Android", kind: "Android", purpose: "Same native experience on Android" },
