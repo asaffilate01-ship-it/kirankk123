@@ -134,13 +134,23 @@ export function OverviewPanel() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-        <BrandLogo className="h-32" />
+        <BrandLogo className="h-24 sm:h-32" />
         <div>
           <h1 className="text-2xl font-bold tracking-tight">{t("iTechLounge")}</h1>
           <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
           <p className="text-sm text-muted-foreground">{t("Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to re-forecast P&L, cash flow and balance sheet in real time.")}</p>
         </div>
       </div>
+
+      <PanelIntro
+        title={t("Start here")}
+        description={t("This page is the headline view: the key numbers first, then the investor terms, the calculator and the brand list. Open only the sections you need — everything is collapsible.")}
+        tips={[
+          t("Every figure updates live when you change a slider in Assumptions or Brands."),
+          t("Hover or tap a “?” icon for a plain-English explanation of any number."),
+          t("All amounts are in euros (€). “M12” means month 12 of the forecast."),
+        ]}
+      />
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Kpi label={t("Active brands")} value={`${activeBrands} / ${TARGET_BRAND_COUNT}`} />
@@ -149,10 +159,10 @@ export function OverviewPanel() {
           value={fmtEURk(last.revenue)}
           hint={t("Money coming in every month from subscriptions (MRR)")}
         />
-        <Kpi label={t("Funding raised")} value={fmtEURk(totalFunding)} />
+        <Kpi label={t("Funding raised")} value={fmtEURk(totalFunding)} hint={t("Total investment paid into the business over the period")} />
         <Kpi
           label={t("€1m/mo hit at")}
-          value={monthAtMilestone ? `M${monthAtMilestone}` : "not reached"}
+          value={monthAtMilestone ? `M${monthAtMilestone}` : t("not reached")}
           hint={t("Month when monthly revenue first reaches €1 million")}
         />
         <Kpi
@@ -161,13 +171,13 @@ export function OverviewPanel() {
           tone={minCash < 0 ? "bad" : "good"}
           hint={t("Lowest money-in-the-bank point across the forecast")}
         />
-        <Kpi label={`${t("Money in the bank")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} />
+        <Kpi label={`${t("Money in the bank")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} hint={t("Cash left in the business at the end of the forecast")} />
         <Kpi
           label={`${t("Investor dividends")} (${investorPctLabel})`}
           value={fmtEURk(cumInvestor)}
           hint={t("Profit paid out to investors over the whole period")}
         />
-        <Kpi label={t("Total dividends paid")} value={fmtEURk(cumDividend)} />
+        <Kpi label={t("Total dividends paid")} value={fmtEURk(cumDividend)} hint={t("Profit paid out to investors and founders combined")} />
         <Kpi
           label={`${t("Profit margin")} @ M${rows.length}`}
           value={last.revenue > 0 ? fmtPct(last.ebit / last.revenue) : "—"}
@@ -175,8 +185,10 @@ export function OverviewPanel() {
         />
       </div>
 
-      <Card className="p-4">
-        <h3 className="mb-3 font-semibold">{t("Year-by-year summary")}</h3>
+      <Section
+        title={t("Year-by-year summary")}
+        description={t("The same forecast rolled up into three simple yearly columns.")}
+      >
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
           {years.map((y) => (
             <div key={y.year} className="rounded-lg border p-3">
@@ -192,10 +204,13 @@ export function OverviewPanel() {
             </div>
           ))}
         </div>
-      </Card>
+      </Section>
 
-      <Card className="space-y-2 p-4 text-sm">
-        <h3 className="font-semibold">{t("Investor terms")}</h3>
+      <Section
+        title={t("Investor terms")}
+        description={t("What you get, what you pay and when dividends start.")}
+      >
+        <div className="space-y-2 text-sm">
         <p className="text-muted-foreground">
           {t("The company round is €3m for 40% of iTechLounge. Up to 10 investors may participate at €300k for 4% each.")}{" "}
           {t("Every investment is paid 20% upfront, with the remaining 80% paid in equal instalments over 12 months.")}
@@ -227,13 +242,18 @@ export function OverviewPanel() {
           {t("Brands launch on a 3-week rolling cadence with a")} {g.freeTrialMonths}
           {t("-month free trial.")}
         </p>
-
-      </Card>
+        </div>
+      </Section>
 
       <InvestorCalculator />
 
-      <Card className="space-y-3 p-4 text-sm">
-        <h3 className="font-semibold">{t("Our system — one team, 100+ brands")}</h3>
+      <Section
+        title={t("Our system — one team, 100+ brands")}
+        description={t("How one shared platform runs the whole portfolio — plus the searchable brand list.")}
+        defaultOpen={false}
+        badge={`${BRANDS.length} ${t("brands")}`}
+      >
+        <div className="space-y-3 text-sm">
         <p className="text-muted-foreground">{t("iTechLounge operates as a single company that ships and runs 100+ digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the others.")}</p>
         <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
           {SHARED_ADVANTAGE.map((s) => (
@@ -244,12 +264,11 @@ export function OverviewPanel() {
           ))}
         </ul>
         <BrandDirectory />
+        </div>
+      </Section>
 
-      </Card>
-
-      <Card className="space-y-3 p-4 text-sm">
-        <h3 className="font-semibold">{t("Company & domains")}</h3>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      <Section title={t("Company & domains")} defaultOpen={false}>
+        <div className="grid grid-cols-1 gap-3 text-sm md:grid-cols-2">
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("United Kingdom")}</div>
             <div className="font-semibold">ITECHLOUNGE LTD</div>
@@ -261,7 +280,8 @@ export function OverviewPanel() {
             <a href="https://itechlounge.de" target="_blank" rel="noreferrer" className="text-primary hover:underline">itechlounge.de ↗</a>
           </div>
         </div>
-      </Card>
+      </Section>
+
 
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">{t("Brand marks")}</h3>
