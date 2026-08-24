@@ -19,6 +19,7 @@ import { fmtEURk, fmtNum } from "./format";
 import { PanelIntro } from "./Explain";
 import { buildModel } from "@/lib/finance-store";
 import { brandLogo } from "@/lib/brand-logos";
+import { BrandLogoBox } from "./BrandLogoBox";
 import {
   COUNTRIES,
   SECTORS,
