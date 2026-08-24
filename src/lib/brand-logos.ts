@@ -84,6 +84,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   cirqiva: cirqivaLogo.url,
   haccora: haccoraLogo.url,
   kinderstars: kinderstarsLogo.url,
+  kinderstarsuk: kinderstarsLogo.url,
   viazeno: viazenoLogo.url,
   rettio: rettioLogoV2.url,
   stellenxpert: stellenxpertLogo.url,
