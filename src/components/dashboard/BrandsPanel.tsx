@@ -251,22 +251,19 @@ export function BrandsPanel() {
                     return (
                       <div key={e.id} className="flex flex-col gap-2 rounded-md border p-3">
                         <div className="flex items-start justify-between gap-2">
-                          <div className="flex min-w-0 items-start gap-2">
-                            <BrandLogoBox src={brandLogo(e.id, lang)} name={e.name} color={e.color} size="sm" />
-                            <div className="min-w-0">
-                              <div className="text-xs font-semibold">{e.name}</div>
-                              <div className="text-[11px] text-muted-foreground">
-                                {regionOf(e) === "DE" ? t("Germany") : t("United Kingdom")}
-                              </div>
-                              <a
-                                href={`https://${e.domain}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-[11px] font-medium text-primary hover:underline"
-                              >
-                                {e.domain} ↗
-                              </a>
+                          <div className="min-w-0">
+                            <div className="text-xs font-semibold">{e.name}</div>
+                            <div className="text-[11px] text-muted-foreground">
+                              {regionOf(e) === "DE" ? t("Germany") : t("United Kingdom")}
                             </div>
+                            <a
+                              href={`https://${e.domain}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-[11px] font-medium text-primary hover:underline"
+                            >
+                              {e.domain} ↗
+                            </a>
                           </div>
 
                           <Switch
