@@ -1,119 +1,11 @@
 import { t } from "@/lib/i18n";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
-import { BRANDS, SHARED_ADVANTAGE, TARGET_BRAND_COUNT } from "@/lib/brands";
+import { BRANDS, TARGET_BRAND_COUNT } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  COUNTRIES,
-  SECTORS,
-  countryOf,
-  sectorOf,
-  type CountryId,
-  type SectorId,
-} from "@/lib/brand-taxonomy";
 import { fmtEURk, fmtPct } from "./format";
-import { logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
 import { BrandLogo } from "@/components/BrandLogo";
-import { InvestorCalculator } from "./InvestorCalculator";
 import { PanelIntro, Section } from "./Explain";
-
-function __UNUSED_BrandDirectory() {
-  const state = useFinance();
-  const [country, setCountry] = useState<CountryId | "all">("all");
-  const [sector, setSector] = useState<SectorId | "all">("all");
-  const [query, setQuery] = useState("");
-
-  const q = query.trim().toLowerCase();
-  const filtered = useMemo(
-    () =>
-      BRANDS.filter(
-        (b) =>
-          (country === "all" || countryOf(b) === country) &&
-          (sector === "all" || sectorOf(b) === sector) &&
-          (q === "" ||
-            b.name.toLowerCase().includes(q) ||
-            b.domain.toLowerCase().includes(q)),
-      ),
-    [country, sector, q],
-  );
-
-  return (
-    <div className="space-y-3 pt-2">
-      <div className="flex flex-wrap items-center gap-2">
-        <Select value={country} onValueChange={(v) => setCountry(v as CountryId | "all")}>
-          <SelectTrigger className="h-9 w-[190px]">
-            <SelectValue placeholder={t("Country")} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">{t("All countries")}</SelectItem>
-            {COUNTRIES.map((c) => (
-              <SelectItem key={c.id} value={c.id}>
-                {c.flag} {t(c.label)}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select value={sector} onValueChange={(v) => setSector(v as SectorId | "all")}>
-          <SelectTrigger className="h-9 w-[210px]">
-            <SelectValue placeholder={t("Business type")} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">{t("All business types")}</SelectItem>
-            {SECTORS.map((s) => (
-              <SelectItem key={s.id} value={s.id}>
-                {t(s.label)}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={t("Search brand or domain")}
-          className="h-9 w-[220px]"
-        />
-        <span className="text-xs text-muted-foreground">
-          {filtered.length} / {BRANDS.length} {t("brands")}
-        </span>
-      </div>
-
-      <div className="max-h-[420px] overflow-y-auto rounded-md border">
-        <div className="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
-          {filtered.map((b) => (
-            <div key={b.id} className="flex items-center justify-between gap-2 rounded-md border p-2 text-xs">
-              <div className="flex min-w-0 items-center gap-2">
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: b.color }} />
-                <span className="truncate font-semibold">{b.name}</span>
-                <span className="shrink-0 text-muted-foreground">
-                  · {t("launches")} M{state.brands[b.id]?.launchMonth}
-                </span>
-              </div>
-              <a
-                href={`https://${b.domain}`}
-                target="_blank"
-                rel="noreferrer"
-                className="shrink-0 font-medium text-primary hover:underline"
-              >
-                {b.domain} ↗
-              </a>
-            </div>
-          ))}
-          {filtered.length === 0 ? (
-            <p className="p-2 text-xs text-muted-foreground">{t("No brands match these filters.")}</p>
-          ) : null}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 export function OverviewPanel() {
@@ -145,7 +37,7 @@ export function OverviewPanel() {
 
       <PanelIntro
         title={t("Start here")}
-        description={t("This page is the headline view: the key numbers first, then the investor terms, the calculator and the brand list. Open only the sections you need — everything is collapsible.")}
+        description={t("This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list and platform detail live in the System tab.")}
         tips={[
           t("Every figure updates live when you change a slider in Assumptions or Brands."),
           t("Hover or tap a “?” icon for a plain-English explanation of any number."),
