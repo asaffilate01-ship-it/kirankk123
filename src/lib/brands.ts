@@ -2192,10 +2192,10 @@ const BASE_BRANDS: Brand[] = [
   {
     id: "merqano",
     name: "MERQANO",
-    region: "UK",
+    region: "INT",
     tagline: "Build. Sell. Grow.",
     domain: "merqano.com",
-    description: "Multi-store commerce software on a landlord-and-tenant model: the platform owner onboards brands, and every tenant gets its own branded storefront with payments, catalogue, delivery rules, roles and analytics from one codebase.",
+    description: "Multi-store commerce software on a landlord-and-tenant model: the platform owner onboards brands, and every tenant gets its own branded storefront with payments, catalogue, delivery rules, roles and analytics from one codebase. Sold internationally.",
     market: "≈£1.1bn UK/EU SaaS spend on ecommerce platforms and franchise/multi-location commerce tooling.",
     audience: "Franchise groups, multi-brand retailers, agencies, marketplace and platform operators, single shops ready to scale.",
     color: "#ff6b45",
