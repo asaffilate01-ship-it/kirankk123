@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { t, useLang } from "@/lib/i18n";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { BRANDS, SHARED_ADVANTAGE, groupOf, siblingOf, type Brand } from "@/lib/brands";
@@ -7,7 +8,7 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
-import { ArrowLeft, Download, ExternalLink } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download, ExternalLink } from "lucide-react";
 import { GateGuard } from "@/components/GateGuard";
 import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
@@ -215,7 +216,7 @@ function BrandDetail() {
             </div>
           </div>
 
-          <Section title={t("How this market is served in Germany today")}>
+          <Section title={t("How this market is served in Germany today")} defaultOpen={false}>
             <div className="space-y-2">
               <p className="text-sm">{t(brand.currentMarket.howServed)}</p>
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -267,7 +268,7 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("Competitive advantage — one team, 100+ brands")}>
+          <Section title={t("Competitive advantage — one team, 100+ brands")} defaultOpen={false}>
             <p className="text-sm text-muted-foreground">
               Unlike standalone SaaS businesses, {brand.name} shares every non-product function with the
               other 99+ iTechLounge brands. Each additional product therefore benefits from economies of
@@ -283,7 +284,7 @@ function BrandDetail() {
             </ul>
           </Section>
 
-          <Section title={t("Negatives, risks & how we reduce them")}>
+          <Section title={t("Negatives, risks & how we reduce them")} defaultOpen={false}>
             <div className="space-y-2">
               {brandNegatives(brand).map((r) => (
                 <div key={r.risk} className="rounded-md border p-3 text-sm">
@@ -296,7 +297,7 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("Monthly revenue, costs & net revenue (launch → M36)")}>
+          <Section title={t("Monthly revenue, costs & net revenue (launch → M36)")} defaultOpen={false}>
             <BrandMonthlyTable brandId={brand.id} />
           </Section>
         </div>
