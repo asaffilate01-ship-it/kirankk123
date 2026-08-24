@@ -78,7 +78,7 @@ import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
 import tendryvaLogo from "@/assets/tendryva-logo.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
 import athlyvoLogo from "@/assets/athlyvo-logo.png.asset.json";
-import taxnuviaAsset from "@/assets/taxnuvia-logo.png.asset.json";
+import taxnuviaAsset from "@/assets/taxnuvia-logo-v2.png.asset.json";
 const taxnuviaNewLogo = taxnuviaAsset.url;
 import formationgenieNewLogo from "@/assets/formationgenie-logo.png";
 import merqanoNewLogo from "@/assets/merqano-logo.png";
