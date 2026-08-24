@@ -1402,11 +1402,11 @@ const BASE_BRANDS: Brand[] = [
     },
   },
   {
-    id: "taxlounge",
-    name: "TAXLOUNGE",
+    id: "taxnuvia",
+    name: "TAXNUVIA",
     region: "UK",
     tagline: "Find and compare UK accountants \u2014 free",
-    domain: "taxlounge.co.uk",
+    domain: "taxnuvia.co.uk",
     description: "A matching marketplace where businesses describe their needs and receive vetted, fixed-price quotes from UK accountants. Transparent pricing, verified ICAEW/ACCA credentials, and reviews from real clients.",
     market: "\u22485.6m UK businesses; \u2248\u00a312bn spent annually on accountancy and bookkeeping.",
     audience: "Sole traders, limited-company directors, landlords, small practices seeking clients.",
@@ -1418,7 +1418,7 @@ const BASE_BRANDS: Brand[] = [
     defaultChurn: 0.03,
     defaultAddlRevenue: 7000,
     defaultDirectCost: 5000,
-    reason: "Choosing an accountant is opaque: no published prices, no verified credentials, and referral sites simply sell the same lead to five firms. TAXLOUNGE publishes fixed prices and verifies every practice.",
+    reason: "Choosing an accountant is opaque: no published prices, no verified credentials, and referral sites simply sell the same lead to five firms. TAXNUVIA publishes fixed prices and verifies every practice.",
     proposition: "Free for the business: answer 8 questions, get 3 verified fixed-price quotes within 24 hours. Accountants pay a subscription for verified-practice status plus a success fee on won clients \u2014 no blind lead-selling.",
     features: [
       "Guided needs questionnaire",
@@ -1434,22 +1434,22 @@ const BASE_BRANDS: Brand[] = [
     ],
     apps: [
       {
-        name: "TaxLounge Marketplace",
+        name: "TaxNuvia Marketplace",
         kind: "Web",
         purpose: "Search, quote requests, profiles",
       },
       {
-        name: "TaxLounge Practice",
+        name: "TaxNuvia Practice",
         kind: "SaaS",
         purpose: "Leads, quotes, client onboarding",
       },
       {
-        name: "TaxLounge Vault",
+        name: "TaxNuvia Vault",
         kind: "Web",
         purpose: "Secure document exchange",
       },
       {
-        name: "TaxLounge Admin",
+        name: "TaxNuvia Admin",
         kind: "Admin",
         purpose: "Verification and dispute handling",
       },
@@ -2119,7 +2119,7 @@ const BASE_BRANDS: Brand[] = [
       "Share cap tables and share issues",
       "Compliance calendar with deadline alerts",
       "Templates: shareholder agreements, contracts, policies",
-      "Accountant marketplace referral (via TAXLOUNGE)",
+      "Accountant marketplace referral (via TAXNUVIA)",
     ],
     apps: [
       {
