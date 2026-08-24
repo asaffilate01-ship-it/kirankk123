@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { t } from "@/lib/i18n";
 import { useFinance, buildModel, yearSummaries, payoutPct } from "@/lib/finance-store";
-import { BRANDS, brandById, siblingOf } from "@/lib/brands";
+import { BRANDS, BRAND_GROUPS, brandById, siblingOf, groupOf, type Brand } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import {
   Select,
@@ -24,7 +24,26 @@ const DEALS: Record<
   brand: { ticket: 8000, ticketPct: 0.025, maxTickets: 10, full: 80000, fullPct: 0.25 },
 };
 
-const DUAL_BRANDS = BRANDS.filter((b) => b.group);
+/** One option per dual-location brand group, represented by its first entity id. */
+const DUAL_BRANDS = BRAND_GROUPS.map((g) => brandById(g.entities[0])).filter(
+  (b): b is Brand => Boolean(b),
+);
+
+/** "DOKUVERA GER" / "DOKUVERA UK" — always market-suffixed. */
+function entityName(b: Brand): string {
+  const base = b.name.replace(/\s+(UK|GER|DE|GERMANY|DEUTSCHLAND)$/i, "");
+  const suffix = b.region === "DE" ? "GER" : b.region === "UK" ? "UK" : b.region;
+  return `${base} ${suffix}`;
+}
+
+/** Label listing both entities of a dual brand, e.g. "DOKUVERA GER (dokuvera.de) + DOKUVERA UK (dokuvera.co.uk)". */
+function dualEntityLabel(id: string): string {
+  const b = brandById(id);
+  if (!b) return "";
+  const g = groupOf(b);
+  const list = (g?.entities ?? [b.id]).map((x) => brandById(x)).filter((x): x is Brand => Boolean(x));
+  return list.map((e) => `${entityName(e)} (${e.domain})`).join(" + ");
+}
 
 export function InvestorCalculator() {
   const state = useFinance();
@@ -228,7 +247,7 @@ export function InvestorCalculator() {
           ? t("All brands")
           : m === "location"
             ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
-            : `${brandById(dualBrandId)?.name ?? ""} — ${t("both locations")}`,
+            : dualEntityLabel(dualBrandId),
       tickets: n,
       invested: investedN,
       share: shareN,
@@ -263,7 +282,7 @@ export function InvestorCalculator() {
       ? t("Whole company (all brands)")
       : mode === "location"
         ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
-        : `${brandById(dualBrandId)?.name ?? ""} — ${t("both locations")}`;
+        : `${groupOf(brandById(dualBrandId)!)?.name ?? brandById(dualBrandId)?.name ?? ""} — ${t("both locations")}: ${dualEntityLabel(dualBrandId)}`;
 
   return (
     <Card className="space-y-4 p-4 text-sm">
@@ -341,7 +360,7 @@ export function InvestorCalculator() {
             <SelectContent className="max-h-72">
               {DUAL_BRANDS.map((b) => (
                 <SelectItem key={b.id} value={b.id}>
-                  {b.name} · {b.entityLabel ?? b.domain}
+                  {groupOf(b)?.name ?? b.name} · {dualEntityLabel(b.id)}
                 </SelectItem>
               ))}
             </SelectContent>
