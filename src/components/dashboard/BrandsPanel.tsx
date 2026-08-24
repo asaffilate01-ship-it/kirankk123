@@ -227,15 +227,23 @@ export function BrandsPanel() {
             const combinedMrr = entities.reduce((s, e) => s + metrics(e.id).mrr, 0);
             return (
               <Card key={g.id} className="flex flex-col gap-3 p-4">
-                <div>
-                  <div className="flex flex-wrap items-baseline gap-x-2">
-                    <h3 className="font-semibold">{g.name}</h3>
-                    <span className="text-[11px] text-muted-foreground">
-                      {entities.length} {t("entities")} · {fmtEURk(combinedMrr)} {t("combined monthly revenue")} @ M{rows.length}
-                    </span>
+                <div className="flex items-start gap-3">
+                  <BrandLogoBox
+                    src={brandLogo(entities[0]?.id ?? g.id, lang)}
+                    name={g.name}
+                    color={entities[0]?.color}
+                  />
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-baseline gap-x-2">
+                      <h3 className="font-semibold">{g.name}</h3>
+                      <span className="text-[11px] text-muted-foreground">
+                        {entities.length} {t("entities")} · {fmtEURk(combinedMrr)} {t("combined monthly revenue")} @ M{rows.length}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-xs text-muted-foreground">{t(g.blurb)}</p>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{t(g.blurb)}</p>
                 </div>
+
                 <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
                   {entities.map((e) => {
                     const a = state.brands[e.id];
