@@ -104,7 +104,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   "docuvera-uk": "compliance", lawquo: "compliance", beratermarkt: "compliance",
   formationgenie: "compliance", rettio: "compliance",
   // Finance
-  taxlounge: "finance", taxnuvia: "finance", zorynnexus: "finance", zoryn: "finance",
+  taxlounge: "finance", taxcenda: "finance", zorynnexus: "finance", zoryn: "finance",
   // Trades & home
   "craftvaro-de": "trades", "craftvaro-uk": "trades", fixorlyn: "trades", tareevo: "trades",
   // Local discovery
