@@ -172,9 +172,18 @@ export function OverviewPanel() {
                 body: "Company and subsidiary formation per market (DE, UK, EU, Gulf, US), lawyer-recorded shareholdings for every investor, trademark and domain protection across 100+ brands, GDPR/UK-GDPR work (DPAs, records of processing, hosting agreements), terms and privacy documentation per brand, sector rules where they apply (childcare, care, food safety, legal and tax advice, transport, financial data), insurance, and annual audits.",
               },
               {
-                head: "Ongoing tech, hosting & security",
-                body: "Finishing and shipping the native iOS/Android apps, app-store and developer accounts, shared infrastructure (servers, CDN, backups, monitoring), AI usage costs, payments and billing fees, third-party APIs and data, penetration testing and security reviews, and continuous release work across the shared codebase so an improvement lands in every brand at once.",
+                head: "Hosting & cloud infrastructure",
+                body: "Servers and databases per region, Cloudflare CDN and DDoS protection, object storage for images and documents, daily encrypted backups and disaster recovery, staging environments, logging, uptime monitoring and alerting, email and SMS delivery, plus the domain and SSL renewals for 100+ brands. Because every brand runs on one shared cluster, hosting scales far cheaper per brand than 100 separate stacks.",
               },
+              {
+                head: "AI running costs",
+                body: "Ongoing model usage through our AI gateway: matching and ranking, search and recommendations, document and invoice extraction, translation into each market language, chat and support assistants, moderation and fraud checks, and content generation for listings and SEO. This is a real per-request cost that grows with usage, so it is budgeted as a running cost and monitored per brand — with caching and smaller models used wherever quality allows.",
+              },
+              {
+                head: "Ongoing tech, apps & security",
+                body: "Finishing and shipping the native iOS/Android apps, app-store and developer accounts, continuous release work on the shared codebase so an improvement lands in every brand at once, payments and billing fees, third-party APIs and data feeds, engineering tooling and CI, penetration testing, security reviews and bug fixing, and the on-call rota that keeps every brand online.",
+              },
+
               {
                 head: "Admin, support & operations",
                 body: "Customer support and onboarding in local languages, content and translation, moderation and quality control on marketplaces, finance and bookkeeping, payroll, HR and recruitment as the team scales, investor reporting and the live investor portal, plus office, tooling and software licences.",
