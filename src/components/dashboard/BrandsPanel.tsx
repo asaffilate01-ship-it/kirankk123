@@ -19,6 +19,7 @@ import { fmtEURk, fmtNum } from "./format";
 import { PanelIntro } from "./Explain";
 import { buildModel } from "@/lib/finance-store";
 import { brandLogo } from "@/lib/brand-logos";
+import { BrandLogoBox } from "./BrandLogoBox";
 import {
   COUNTRIES,
   SECTORS,
@@ -71,19 +72,9 @@ export function BrandsPanel() {
     return (
       <Card className="flex flex-col gap-3 p-4">
         <div className="flex items-start justify-between gap-2">
-          <div>
-            <div className="flex items-center gap-2">
-              {brandLogo(b.id, lang) ? (
-                <div className="flex h-16 w-[200px] shrink-0 items-center justify-start overflow-hidden">
-                  <img
-                    src={brandLogo(b.id, lang)}
-                    alt={`${b.name} logo`}
-                    className="h-full w-full object-contain object-left"
-                  />
-                </div>
-              ) : (
-                <span className="h-4 w-4 rounded-full" style={{ background: b.color }} aria-hidden />
-              )}
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <BrandLogoBox src={brandLogo(b.id, lang)} name={b.name} color={b.color} />
               <h3 className="font-semibold">{b.name}</h3>
             </div>
             <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
@@ -136,13 +127,13 @@ export function BrandsPanel() {
   const selectedSector = sectors[0] ?? "all";
 
   const FilterBar = () => (
-    <Card className="p-4">
-      <div className="flex flex-wrap items-center gap-3">
+    <Card className="p-3 sm:p-4">
+      <div className="grid grid-cols-1 items-center gap-2 sm:grid-cols-2 sm:gap-3 lg:flex lg:flex-wrap">
         <Select
           value={selectedCountry}
           onValueChange={(v) => setCountries(v === "all" ? [] : [v as CountryId])}
         >
-          <SelectTrigger className="w-44 text-sm">
+          <SelectTrigger className="w-full text-sm lg:w-44">
             <SelectValue placeholder={t("Country")} />
           </SelectTrigger>
           <SelectContent>
@@ -159,7 +150,7 @@ export function BrandsPanel() {
           value={selectedSector}
           onValueChange={(v) => setSectors(v === "all" ? [] : [v as SectorId])}
         >
-          <SelectTrigger className="w-52 text-sm">
+          <SelectTrigger className="w-full text-sm lg:w-52">
             <SelectValue placeholder={t("Business type")} />
           </SelectTrigger>
           <SelectContent>
@@ -176,11 +167,11 @@ export function BrandsPanel() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t("Search brand, domain or tagline…")}
-          className="h-9 w-56 text-sm"
+          className="h-9 w-full text-sm sm:col-span-2 lg:w-56"
         />
 
         {filtering && (
-          <>
+          <div className="flex items-center gap-2 sm:col-span-2 lg:contents">
             <span className="text-xs text-muted-foreground">
               {filtered.length} {t("brands")}
             </span>
@@ -195,7 +186,7 @@ export function BrandsPanel() {
             >
               {t("Clear filters")}
             </Button>
-          </>
+          </div>
         )}
       </div>
     </Card>
