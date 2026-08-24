@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { t } from "@/lib/i18n";
-import { useFinance, buildModel, yearSummaries, DIVIDEND_SCHEDULE } from "@/lib/finance-store";
+import { useFinance, buildModel, yearSummaries, payoutPct } from "@/lib/finance-store";
 import { BRANDS, brandById, siblingOf } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import {
