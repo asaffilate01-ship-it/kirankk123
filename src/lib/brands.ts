@@ -4067,9 +4067,19 @@ const OVERRIDES: Record<string, BrandOverride> = {
   baytcircle: { region: "INT", domain: "baytcircle.com" },
 };
 
+/* Baseline assumptions applied to every brand (adjustable per brand in the UI):
+   100 sign-ups at launch, 15% monthly growth, 3% cancellations, no additional
+   revenue, EUR 2,000 expenses per brand per month, EUR 39/mo in Germany and
+   international markets, GBP 39/mo (~EUR 45) in the UK. */
 export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS].map((b) => {
   const merged: Brand = { ...b, ...OVERRIDES[b.id] };
   if (TRAVENEXA_FAMILY.includes(b.id)) merged.family = "TRAVENEXA";
+  merged.defaultInitialUsers = 100;
+  merged.defaultUserGrowth = 0.15;
+  merged.defaultChurn = 0.03;
+  merged.defaultAddlRevenue = 0;
+  merged.defaultDirectCost = 2000;
+  merged.defaultArpu = merged.region === "UK" ? 45 : 39;
   return merged;
 });
 
