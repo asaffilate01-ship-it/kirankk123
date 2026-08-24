@@ -6,6 +6,7 @@ import { countryLabel, countryOf, sectorLabel, sectorOf } from "@/lib/brand-taxo
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "./format";
+import { PanelIntro } from "./Explain";
 import {
   Area,
   Bar,
@@ -221,6 +222,14 @@ export function ChartsPanel() {
 
   return (
     <div className="space-y-4">
+      <PanelIntro
+        title={t("The picture in charts")}
+        description={t("Same forecast as the tables, drawn as pictures: how revenue, costs and profit move, where the money is spent, which brands earn most, and how cash builds up.")}
+        tips={[
+          t("Use the 12 / 24 / 36 month buttons to change the time window."),
+          t("Hover or tap any point to see the exact figures for that month."),
+        ]}
+      />
       <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
         <div>
           <h2 className="text-xl font-semibold">{t("Financial performance")}</h2>

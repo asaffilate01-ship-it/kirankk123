@@ -7,12 +7,22 @@ import { Input } from "@/components/ui/input";
 import { SliderRow } from "./SliderRow";
 import { fmtEURk, fmtPct } from "./format";
 import { Trash2, Plus } from "lucide-react";
+import { PanelIntro, Section } from "./Explain";
 
 export function AssumptionsPanel() {
   const s = useFinance();
   const g = s.global;
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div className="space-y-4">
+      <PanelIntro
+        title={t("Change any assumption, see it everywhere")}
+        description={t("These are the dials behind the whole model. Drag a slider or type an exact number — the P&L, cash flow, balance sheet and charts all re-forecast instantly.")}
+        tips={[
+          t("Nothing here is saved for other viewers; use Reset all assumptions to return to our base case."),
+          t("Per-brand sign-ups, pricing and growth live in the Brands tab."),
+        ]}
+      />
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <Card className="space-y-4 p-4">
         <h3 className="font-semibold">{t("Funding & investor terms")}</h3>
         <SliderRow
@@ -191,9 +201,13 @@ export function AssumptionsPanel() {
       <CustomLinesEditor kind="revenue" />
       <CustomLinesEditor kind="cost" />
 
-      <Card className="p-4 lg:col-span-2">
+      <Card className="flex flex-wrap items-center justify-between gap-3 p-4 lg:col-span-2">
+        <p className="text-xs text-muted-foreground">
+          {t("Changed too much? Put every assumption back to our base case.")}
+        </p>
         <Button variant="outline" onClick={() => s.reset()}>{t("Reset all assumptions")}</Button>
       </Card>
+      </div>
     </div>
   );
 }
@@ -207,13 +221,17 @@ function CustomLinesEditor({ kind }: { kind: "revenue" | "cost" }) {
   const [name, setName] = useState("");
 
   return (
-    <Card className="space-y-3 p-4">
-      <h3 className="font-semibold">
-        Custom {kind === "revenue" ? "revenue" : "cost"} lines
-      </h3>
-      <p className="text-xs text-muted-foreground">
-        Add ancillary {kind === "revenue" ? "revenue streams (ads, partnerships, upsells)" : "cost items (agencies, one-off spend, contractors)"}.
-      </p>
+    <Section
+      title={kind === "revenue" ? t("Extra revenue lines (optional)") : t("Extra cost lines (optional)")}
+      description={
+        kind === "revenue"
+          ? t("Add other income such as ads, partnerships or upsells.")
+          : t("Add other spend such as agencies, contractors or one-offs.")
+      }
+      defaultOpen={false}
+      badge={`${lines.length}`}
+    >
+      <div className="space-y-3">
       <div className="flex gap-2">
         <Input
           value={name}
@@ -282,6 +300,7 @@ function CustomLinesEditor({ kind }: { kind: "revenue" | "cost" }) {
           </div>
         ))}
       </div>
-    </Card>
+      </div>
+    </Section>
   );
 }

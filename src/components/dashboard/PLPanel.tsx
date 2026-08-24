@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { fmtEURk, fmtPct } from "./format";
+import { PanelIntro, ScrollHint } from "./Explain";
 import {
   Bar,
   BarChart,
@@ -40,6 +41,14 @@ export function PLPanel() {
 
   return (
     <div className="space-y-4">
+      <PanelIntro
+        title={t("Profit & loss, in plain English")}
+        description={t("Revenue is money coming in, costs are money going out, and profit is what is left. The charts show it month by month; the tables show the same story as yearly and monthly rows.")}
+        tips={[
+          t("Operating profit (EBIT) is profit before tax; net profit is after tax."),
+          t("Change any assumption in the Assumptions tab and every figure here updates instantly."),
+        ]}
+      />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card className="p-4">
           <h3 className="mb-2 font-semibold">{t("Revenue vs Costs (monthly)")}</h3>
@@ -79,6 +88,7 @@ export function PLPanel() {
       <Card className="p-4">
         <h3 className="mb-1 font-semibold">{t("Annual P&L")}</h3>
         <p className="mb-3 text-xs text-muted-foreground">{t("P&L means profit and loss: revenue in, costs out, profit left over.")}</p>
+        <ScrollHint />
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
@@ -116,11 +126,12 @@ export function PLPanel() {
 
       <Card className="p-4">
         <h3 className="mb-3 font-semibold">{t("Monthly P&L (all months)")}</h3>
+        <ScrollHint />
         <div className="max-h-96 overflow-auto">
           <Table>
             <TableHeader className="sticky top-0 bg-background">
               <TableRow>
-                <TableHead>{t("Month")}</TableHead>
+                <TableHead className="sticky left-0 bg-background">{t("Month")}</TableHead>
                 <TableHead className="text-right">{t("Revenue")}</TableHead>
                 <TableHead className="text-right">{t("Direct")}</TableHead>
                 <TableHead className="text-right">{t("HQ")}</TableHead>
@@ -134,7 +145,7 @@ export function PLPanel() {
             <TableBody>
               {rows.map((r) => (
                 <TableRow key={r.month}>
-                  <TableCell>M{r.month}</TableCell>
+                  <TableCell className="sticky left-0 bg-background font-medium">M{r.month}</TableCell>
                   <TableCell className="text-right tabular-nums">{fmtEURk(r.revenue)}</TableCell>
                   <TableCell className="text-right tabular-nums">{fmtEURk(r.directCosts)}</TableCell>
                   <TableCell className="text-right tabular-nums">{fmtEURk(r.hqCost)}</TableCell>

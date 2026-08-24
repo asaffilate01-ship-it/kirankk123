@@ -16,6 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { fmtEURk, fmtNum } from "./format";
+import { PanelIntro } from "./Explain";
 import { buildModel } from "@/lib/finance-store";
 import { brandLogo } from "@/lib/brand-logos";
 import {
@@ -203,6 +204,7 @@ export function BrandsPanel() {
   if (filtering) {
     return (
       <div className="space-y-6">
+        <BrandsIntro />
         <FilterBar />
         {filtered.length === 0 ? (
           <p className="text-sm text-muted-foreground">{t("No brands match these filters.")}</p>
@@ -217,6 +219,7 @@ export function BrandsPanel() {
 
   return (
     <div className="space-y-8">
+      <BrandsIntro />
       <FilterBar />
       {/* Dual-market brands: one brand name, two entities, separate books */}
       <section>
@@ -325,5 +328,19 @@ export function BrandsPanel() {
         );
       })}
     </div>
+  );
+}
+
+function BrandsIntro() {
+  return (
+    <PanelIntro
+      title={t("Browse the portfolio")}
+      description={t("Every brand in the group, with its launch month, paying customers and monthly revenue. Filter by country or business type, or search a name or domain.")}
+      tips={[
+        t("Open a brand to read the full case and edit its own assumptions."),
+        t("Dual-market brands share a name but keep separate books for each country."),
+        t("Use the toggle on a card to include or exclude a brand from the forecast."),
+      ]}
+    />
   );
 }

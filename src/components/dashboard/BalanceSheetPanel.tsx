@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { fmtEURk } from "./format";
+import { PanelIntro, ScrollHint } from "./Explain";
 
 export function BalanceSheetPanel() {
   const state = useFinance();
@@ -18,8 +19,15 @@ export function BalanceSheetPanel() {
   const bs = useMemo(() => balanceSheets(rows, state.global), [rows, state.global]);
 
   return (
-    <Card className="p-4">
+    <div className="space-y-4">
+      <PanelIntro
+        title={t("What the business owns and owes")}
+        description={t("A balance sheet is a snapshot at year end. Assets are what the company owns (mostly cash), equity is what shareholders have put in plus profit kept in the business, and liabilities are what is owed.")}
+        tips={[t("Total assets always equal total equity plus liabilities — that is the “balance”.")]}
+      />
+      <Card className="p-4">
       <h3 className="mb-3 font-semibold">{t("Year-end balance sheets")}</h3>
+      <ScrollHint />
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
@@ -73,6 +81,7 @@ export function BalanceSheetPanel() {
         </Table>
       </div>
       <p className="mt-3 text-xs text-muted-foreground">{t("Simplified balance sheet. Fixed assets and matching liabilities are a small placeholder capitalisation. Equity = investor paid-in capital + retained earnings (net profit left in the business: 100% M1–M12, 80% M13–M18, 70% M19–M24, 60% M25–M30, 50% M31–M36).")}</p>
-    </Card>
+      </Card>
+    </div>
   );
 }
