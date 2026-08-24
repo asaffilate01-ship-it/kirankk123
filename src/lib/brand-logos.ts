@@ -52,6 +52,7 @@ import amityosLogo from "@/assets/amityos-logo.png.asset.json";
 import skillfinchLogo from "@/assets/skillfinch-logo.png.asset.json";
 import dearnextLogo from "@/assets/dearnext-logo.png.asset.json";
 import gableyLogo from "@/assets/gabley-logo.png.asset.json";
+import gableyRetrofitLogo from "@/assets/gabley-retrofit-logo.png.asset.json";
 import euralumeLogo from "@/assets/euralume-logo.png.asset.json";
 import farenivoLogo from "@/assets/farenivo-logo.png.asset.json";
 import niyyahnoorLogo from "@/assets/niyyahnoor-logo.png.asset.json";
@@ -154,6 +155,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   skillfinch: skillfinchLogo.url,
   dearnext: dearnextLogo.url,
   gabley: gableyLogo.url,
+  gableyretrofit: gableyRetrofitLogo.url,
   euralume: euralumeLogo.url,
   farenivo: farenivoLogo.url,
   niyyahnoor: niyyahnoorLogo.url,

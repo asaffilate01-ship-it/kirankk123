@@ -83,7 +83,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   uzvoya: "travel", dubaitrips: "travel", marocways: "travel",
   niyyahnoor: "travel", viazeno: "travel", tripenvo: "travel",
   // Property
-  immoviq: "property", gabley: "property", hmoflow: "property", sharedbricks: "property",
+  immoviq: "property", gabley: "property", gableyretrofit: "property", hmoflow: "property", sharedbricks: "property",
   premisora: "property", dearnext: "property", baytcircle: "property", avenesto: "property",
   // Jobs
   stellenxpert: "jobs", xpertjobs: "jobs", skillfinch: "jobs",

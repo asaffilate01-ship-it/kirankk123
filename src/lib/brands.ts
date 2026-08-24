@@ -3971,6 +3971,7 @@ const OVERRIDES: Record<string, BrandOverride> = {
   premisora: uk("premisora.co.uk"),
   lessonahead: uk("lessonahead.co.uk"),
   gabley: uk("gabley.co.uk"),
+  gableyretrofit: uk("gableyretrofit.co.uk"),
   dearnext: uk("dearnext.co.uk"),
   hmoflow: uk("hmoflow.co.uk"),
   saathera: uk("saathera.co.uk"),
