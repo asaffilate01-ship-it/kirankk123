@@ -2196,7 +2196,7 @@ const BASE_BRANDS: Brand[] = [
     tagline: "Build. Sell. Grow.",
     domain: "merqano.com",
     description: "Multi-store commerce software on a landlord-and-tenant model: the platform owner onboards brands, and every tenant gets its own branded storefront with payments, catalogue, delivery rules, roles and analytics from one codebase. Sold internationally.",
-    market: "≈£1.1bn UK/EU SaaS spend on ecommerce platforms and franchise/multi-location commerce tooling.",
+    market: "≈$8bn global SaaS spend on ecommerce platforms and franchise/multi-location commerce tooling.",
     audience: "Franchise groups, multi-brand retailers, agencies, marketplace and platform operators, single shops ready to scale.",
     color: "#ff6b45",
     defaultLaunchMonth: 16,
@@ -2289,8 +2289,8 @@ const BASE_BRANDS: Brand[] = [
     ],
     currentMarket: {
       howServed: "Groups stack one Shopify or WooCommerce subscription per store with no consolidated view, bolt on paid apps for delivery slots and roles, or commission an agency build. Marketplaces take 20–30% commission for the traffic.",
-      users: "≈5m active online stores across the UK and EU; hundreds of thousands run more than one brand or location.",
-      revenue: "≈£1.1bn annual platform and app subscription spend, plus agency build budgets of £20k–£150k per brand.",
+      users: "≈28m active online stores worldwide; millions run more than one brand or location.",
+      revenue: "≈$8bn annual platform and app subscription spend, plus agency build budgets of $25k–$180k per brand.",
     },
   },
   {
