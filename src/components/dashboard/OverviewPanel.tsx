@@ -23,6 +23,7 @@ import { fmtEURk, fmtPct } from "./format";
 import { logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
 import { BrandLogo } from "@/components/BrandLogo";
 import { InvestorCalculator } from "./InvestorCalculator";
+import { PanelIntro, Section } from "./Explain";
 
 function BrandDirectory() {
   const state = useFinance();
