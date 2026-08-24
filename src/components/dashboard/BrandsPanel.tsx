@@ -71,19 +71,9 @@ export function BrandsPanel() {
     return (
       <Card className="flex flex-col gap-3 p-4">
         <div className="flex items-start justify-between gap-2">
-          <div>
-            <div className="flex items-center gap-2">
-              {brandLogo(b.id, lang) ? (
-                <div className="flex h-16 w-[200px] shrink-0 items-center justify-start overflow-hidden">
-                  <img
-                    src={brandLogo(b.id, lang)}
-                    alt={`${b.name} logo`}
-                    className="h-full w-full object-contain object-left"
-                  />
-                </div>
-              ) : (
-                <span className="h-4 w-4 rounded-full" style={{ background: b.color }} aria-hidden />
-              )}
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <BrandLogoBox src={brandLogo(b.id, lang)} name={b.name} color={b.color} />
               <h3 className="font-semibold">{b.name}</h3>
             </div>
             <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
