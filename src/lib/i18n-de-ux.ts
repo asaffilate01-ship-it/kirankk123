@@ -131,4 +131,42 @@ export const DE_UX: Record<string, string> = {
     "Eine gemeinsame Plattform betreibt alle Marken. Vollständige Markenliste durchsuchen, Gruppengesellschaften und Markenzeichen ansehen.",
   "This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list and platform detail live in the System tab.":
     "Diese Seite ist die Übersicht: die wichtigsten Zahlen und die Jahresübersicht. Konditionen und Investorenrechner finden Sie im Tab Investment; die vollständige Markenliste und Plattformdetails im Tab Unser System.",
+  "Invest in this brand — tickets & ROI": "In diese Marke investieren – Tickets & ROI",
+  "What a ticket costs, what it owns, the dividends it earns from month 13 after launch, and when it pays back.":
+    "Was ein Ticket kostet, welchen Anteil es hält, welche Dividenden ab Monat 13 nach Launch anfallen und wann es sich amortisiert.",
+  "This location — 25%": "Dieser Standort – 25%",
+  "This location — 2.5% (small ticket)": "Dieser Standort – 2,5% (kleines Ticket)",
+  "Whole brand, both locations — 25%": "Gesamte Marke, beide Standorte – 25%",
+  "Whole brand, both locations — 2.5% (small ticket)": "Gesamte Marke, beide Standorte – 2,5% (kleines Ticket)",
+  "This location": "Dieser Standort",
+  "Whole brand": "Gesamte Marke",
+  "Ticket": "Ticket",
+  "Price": "Preis",
+  "Equity": "Anteil",
+  "20% upfront": "20% sofort",
+  "Then / month × 12": "Dann / Monat × 12",
+  "First dividend": "Erste Dividende",
+  "Dividends to M": "Dividenden bis M",
+  "Payback": "Amortisation",
+  "after M": "nach M",
+  "Revenue to M": "Umsatz bis M",
+  "Costs to M": "Kosten bis M",
+  "Net profit after tax to M": "Nettogewinn nach Steuern bis M",
+  "Corporation tax": "Körperschaftsteuer",
+  "This brand is part of": "Diese Marke gehört zu",
+  "you can buy this location only, or the whole brand across both locations":
+    "Sie können nur diesen Standort oder die gesamte Marke über beide Standorte kaufen",
+  "Single-location brand. If we later launch a second location, a whole-brand investor receives 25% of it; a location-only investor receives 10% of it.":
+    "Marke mit einem Standort. Bei einem späteren zweiten Standort erhält ein Gesamtmarken-Investor 25% davon, ein Standort-Investor 10%.",
+  "Dividend build-up — 25% ticket": "Dividendenaufbau – 25%-Ticket",
+  "Nothing is paid for the first 12 months from launch (100% stays in the brand), then 20% M13–M18, 30% M19–M24, 40% M25–M30, 50% M31–M36 of after-tax profit is distributed.":
+    "In den ersten 12 Monaten nach Launch keine Auszahlung (100% bleiben in der Marke), danach 20% M13–M18, 30% M19–M24, 40% M25–M30, 50% M31–M36 des Gewinns nach Steuern.",
+  "Cumulative": "Kumuliert",
+  "Dividends are paid from net profit after": "Dividenden werden aus dem Nettogewinn nach",
+  "corporation tax and split pro-rata by equity. Up to 10 investors per brand location at 2.5% each. Every figure here re-forecasts when you change the assumptions.":
+    "Körperschaftsteuer gezahlt und anteilig nach Beteiligung verteilt. Bis zu 10 Investoren pro Markenstandort mit je 2,5%. Alle Werte werden bei Änderung der Annahmen neu berechnet.",
+  "Tax": "Steuern",
+  "Net after tax": "Netto nach Steuern",
+  "Dividends distributed": "Ausgeschüttete Dividenden",
+  "Kept in the brand": "In der Marke belassen",
 };
