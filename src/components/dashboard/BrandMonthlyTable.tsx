@@ -1,6 +1,6 @@
 import { t } from "@/lib/i18n";
 import { Card } from "@/components/ui/card";
-import { buildModel, useFinance } from "@/lib/finance-store";
+import { buildModel, payoutPct, useFinance } from "@/lib/finance-store";
 import { fmtEURk, fmtNum } from "./format";
 
 /**
@@ -18,18 +18,33 @@ export function BrandMonthlyTable({ brandId }: { brandId: string }) {
 
   const perBrandFixed = g.hqPerBrand + g.techPerBrand + g.marketingPerBrand;
 
+  let undistributed = 0;
   const months = rows
     .filter((r) => r.month >= a.launchMonth)
     .map((r) => {
       const revenue = r.perBrandRevenue[brandId] ?? 0;
       const users = r.perBrandUsers[brandId] ?? 0;
       const cost = a.directCost + perBrandFixed + revenue * g.variableOpexPct;
-      return { month: r.month, revenue, users, cost, net: revenue - cost };
+      const net = revenue - cost;
+      const tax = net > 0 ? net * g.taxRate : 0;
+      const afterTax = net - tax;
+      undistributed += afterTax;
+      const pct = payoutPct(r.month - a.launchMonth + 1);
+      const pool = pct > 0 && undistributed > 0 ? undistributed * pct : 0;
+      undistributed -= pool;
+      return { month: r.month, revenue, users, cost, net, tax, afterTax, pool, retained: undistributed };
     });
 
   const total = months.reduce(
-    (s, m) => ({ revenue: s.revenue + m.revenue, cost: s.cost + m.cost, net: s.net + m.net }),
-    { revenue: 0, cost: 0, net: 0 },
+    (s, m) => ({
+      revenue: s.revenue + m.revenue,
+      cost: s.cost + m.cost,
+      net: s.net + m.net,
+      tax: s.tax + m.tax,
+      afterTax: s.afterTax + m.afterTax,
+      pool: s.pool + m.pool,
+    }),
+    { revenue: 0, cost: 0, net: 0, tax: 0, afterTax: 0, pool: 0 },
   );
 
   if (!a.enabled) {
@@ -59,6 +74,10 @@ export function BrandMonthlyTable({ brandId }: { brandId: string }) {
               <th className="px-2 py-2 font-medium">{t("Monthly revenue")}</th>
               <th className="px-2 py-2 font-medium">{t("Monthly costs")}</th>
               <th className="px-2 py-2 font-medium">{t("Net revenue")}</th>
+              <th className="px-2 py-2 font-medium">{t("Tax")}</th>
+              <th className="px-2 py-2 font-medium">{t("Net after tax")}</th>
+              <th className="px-2 py-2 font-medium">{t("Dividends distributed")}</th>
+              <th className="px-2 py-2 font-medium">{t("Kept in the brand")}</th>
             </tr>
           </thead>
           <tbody>
@@ -73,6 +92,10 @@ export function BrandMonthlyTable({ brandId }: { brandId: string }) {
                 >
                   {fmtEURk(m.net)}
                 </td>
+                <td className="px-2 py-1.5">{fmtEURk(m.tax)}</td>
+                <td className="px-2 py-1.5">{fmtEURk(m.afterTax)}</td>
+                <td className="px-2 py-1.5">{m.pool > 0 ? fmtEURk(m.pool) : "—"}</td>
+                <td className="px-2 py-1.5">{fmtEURk(m.retained)}</td>
               </tr>
             ))}
           </tbody>
@@ -88,6 +111,10 @@ export function BrandMonthlyTable({ brandId }: { brandId: string }) {
               >
                 {fmtEURk(total.net)}
               </td>
+              <td className="px-2 py-2 font-semibold">{fmtEURk(total.tax)}</td>
+              <td className="px-2 py-2 font-semibold">{fmtEURk(total.afterTax)}</td>
+              <td className="px-2 py-2 font-semibold">{fmtEURk(total.pool)}</td>
+              <td className="px-2 py-2 font-semibold">—</td>
             </tr>
           </tfoot>
         </table>

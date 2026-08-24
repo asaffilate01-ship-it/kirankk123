@@ -14,6 +14,7 @@ import { brandLogo } from "@/lib/brand-logos";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
+import { BrandInvestment } from "@/components/dashboard/BrandInvestment";
 import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
 
 
@@ -300,6 +301,9 @@ function BrandDetail() {
           <Section title={t("Monthly revenue, costs & net revenue (launch → M36)")} defaultOpen={false}>
             <BrandMonthlyTable brandId={brand.id} />
           </Section>
+
+          <BrandInvestment brand={brand} />
+
         </div>
 
 
