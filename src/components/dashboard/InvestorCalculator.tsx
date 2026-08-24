@@ -200,7 +200,7 @@ export function InvestorCalculator() {
     const d = DEALS[m];
     const ids = m === "company" ? [] : m === "location" ? (brandId ? [brandId] : []) : dualIdsFor(dualBrandId);
     const net = netForIds(ids);
-    const divs = dividendsFrom(net);
+    const divs = dividendsFrom(net, startMonthFor(ids));
     const shareN = Math.min(d.fullPct, d.ticketPct * n);
     const investedN = d.ticket * n;
     const totalNetN = net.reduce((s, v) => s + v, 0);
