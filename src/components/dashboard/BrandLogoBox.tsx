@@ -15,12 +15,7 @@ export function BrandLogoBox({
   size?: "sm" | "md" | "lg";
   align?: "left" | "center";
 }) {
-  const box =
-    size === "sm"
-      ? "h-24 w-[240px]"
-      : size === "lg"
-        ? "h-24 w-[240px]"
-        : "h-24 w-[240px]";
+  const box = "h-20 w-[200px]";
 
   if (!src) {
     return (
