@@ -81,7 +81,6 @@ import athlyvoLogo from "@/assets/athlyvo-logo.png.asset.json";
 import taxnuviaNewLogo from "@/assets/taxnuvia-logo.png";
 import formationgenieNewLogo from "@/assets/formationgenie-logo.png";
 import merqanoNewLogo from "@/assets/merqano-logo.png";
-import silkroaduzNewLogo from "@/assets/silkroaduz-logo.png";
 import dubaitripsNewLogo from "@/assets/dubaitrips-logo.png";
 import marocwaysNewLogo from "@/assets/marocways-logo.png";
 import sharedbricksAsset from "@/assets/sharedbricks-logo.png.asset.json";
@@ -182,7 +181,6 @@ export const BRAND_LOGOS: Record<string, string> = {
   taxnuvia: taxnuviaNewLogo,
   formationgenie: formationgenieNewLogo,
   merqano: merqanoNewLogo,
-  silkroaduz: silkroaduzNewLogo,
   dubaitrips: dubaitripsNewLogo,
   marocways: marocwaysNewLogo,
   sharedbricks: sharedbricksNewLogo,
