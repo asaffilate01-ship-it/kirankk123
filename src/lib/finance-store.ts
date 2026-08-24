@@ -58,6 +58,30 @@ type State = {
   reset: () => void;
 };
 
+/* ------------------------------------------------------------------ *
+ * Baseline assumptions — identical for every brand, adjustable per brand
+ * in the UI. 100 sign-ups at launch, 15% monthly growth, 3 cancellations
+ * per 100 customers, €39/mo in Germany and £39/mo (≈€45) in the UK,
+ * no additional revenue, €2,000 of expenses per brand per month.
+ * ------------------------------------------------------------------ */
+export const BASELINE = {
+  initialUsers: 100,
+  userGrowth: 0.15,
+  churn: 0.03,
+  addlRevenue: 0,
+  directCost: 2000,
+  arpuEur: 39,
+  arpuGbp: 39,
+  gbpToEur: 1.15,
+};
+
+/** Monthly fee in EUR: €39 in Germany/international, £39 (converted) in the UK. */
+export function baselineArpu(b: Brand): number {
+  return b.region === "UK"
+    ? Math.round(BASELINE.arpuGbp * BASELINE.gbpToEur)
+    : BASELINE.arpuEur;
+}
+
 const defaultBrands = (): Record<string, BrandAssumption> =>
   Object.fromEntries(
     BRANDS.map((b: Brand) => [
@@ -66,12 +90,12 @@ const defaultBrands = (): Record<string, BrandAssumption> =>
         id: b.id,
         enabled: true,
         launchMonth: b.defaultLaunchMonth,
-        initialUsers: b.defaultInitialUsers,
-        userGrowth: b.defaultUserGrowth,
-        arpu: b.defaultArpu,
-        churn: b.defaultChurn,
-        addlRevenue: b.defaultAddlRevenue,
-        directCost: b.defaultDirectCost,
+        initialUsers: BASELINE.initialUsers,
+        userGrowth: BASELINE.userGrowth,
+        arpu: baselineArpu(b),
+        churn: BASELINE.churn,
+        addlRevenue: BASELINE.addlRevenue,
+        directCost: BASELINE.directCost,
       },
     ]),
   );
@@ -82,11 +106,11 @@ const defaultGlobal = (): GlobalAssumptions => ({
   taxRate: 0.3,
   variableOpexPct: 0.15,
   hqBase: 30000,
-  hqPerBrand: 8000,
+  hqPerBrand: 0,
   techBase: 8000,
-  techPerBrand: 2500,
+  techPerBrand: 0,
   marketingBase: 5000,
-  marketingPerBrand: 4000,
+  marketingPerBrand: 0,
   trancheSize: 300000,
   trancheCount: 10,
   investorEquityPct: 0.4,
