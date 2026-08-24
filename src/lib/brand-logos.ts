@@ -75,7 +75,7 @@ import drivarynLogo from "@/assets/drivaryn-logo.png.asset.json";
 import kideviaLogo from "@/assets/kidevia-logo.png.asset.json";
 import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
 import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
-import tendryvaLogo from "@/assets/tendryva-logo.png.asset.json";
+import tendryvaLogo from "@/assets/tendryva-logo-v2.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
 import athlyvoLogo from "@/assets/athlyvo-logo.png.asset.json";
 import taxnuviaAsset from "@/assets/taxnuvia-logo-v2.png.asset.json";
@@ -88,7 +88,7 @@ import marocwaysNewLogo from "@/assets/marocways-logo.png";
 import sharedbricksAsset from "@/assets/sharedbricks-logo.png.asset.json";
 const sharedbricksNewLogo = sharedbricksAsset.url;
 import stemcoachNewLogo from "@/assets/stemcoach-logo.png";
-import onyngoNewLogo from "@/assets/onyngo-logo.png";
+import onyngoNewLogo from "@/assets/onyngo-logo-v2.png.asset.json";
 import hmoflowNewLogo from "@/assets/hmoflow-logo.png";
 import nafsiNewLogo from "@/assets/nafsi-logo.png";
 import nimahNewLogo from "@/assets/nimah-logo.png";
@@ -187,7 +187,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   marocways: marocwaysNewLogo,
   sharedbricks: sharedbricksNewLogo,
   stemcoach: stemcoachNewLogo,
-  onyngo: onyngoNewLogo,
+  onyngo: onyngoNewLogo.url,
   hmoflow: hmoflowNewLogo,
   nafsi: nafsiNewLogo,
   nimah: nimahNewLogo,
