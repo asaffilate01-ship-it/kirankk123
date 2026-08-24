@@ -200,6 +200,8 @@ export function buildModel(state: State): MonthRow[] {
   const rows: MonthRow[] = [];
   let cash = g.openingCash;
   let undistributed = 0;
+  const start = firstLaunchMonth(state);
+
 
   for (let m = 1; m <= g.months; m++) {
     const perBrandRevenue: Record<string, number> = {};
