@@ -62,14 +62,15 @@ type State = {
  * Baseline assumptions — identical for every brand, adjustable per brand
  * in the UI. 100 sign-ups at launch, 15% monthly growth, 3 cancellations
  * per 100 customers, €39/mo in Germany and £39/mo (≈€45) in the UK,
- * no additional revenue, €2,000 of expenses per brand per month.
+ * no additional revenue, and no direct brand cost (all overhead sits in the
+ * shared HQ / tech / marketing engine).
  * ------------------------------------------------------------------ */
 export const BASELINE = {
   initialUsers: 100,
   userGrowth: 0.15,
   churn: 0.03,
   addlRevenue: 0,
-  directCost: 2000,
+  directCost: 0,
   arpuEur: 39,
   arpuGbp: 39,
   gbpToEur: 1.15,
@@ -103,14 +104,14 @@ const defaultBrands = (): Record<string, BrandAssumption> =>
 const defaultGlobal = (): GlobalAssumptions => ({
   months: 36,
   freeTrialMonths: 2,
-  taxRate: 0.3,
-  variableOpexPct: 0.15,
-  hqBase: 30000,
-  hqPerBrand: 0,
-  techBase: 8000,
-  techPerBrand: 0,
-  marketingBase: 5000,
-  marketingPerBrand: 0,
+  taxRate: 0.25,
+  variableOpexPct: 0.1,
+  hqBase: 25000,
+  hqPerBrand: 250,
+  techBase: 25000,
+  techPerBrand: 250,
+  marketingBase: 50000,
+  marketingPerBrand: 500,
   trancheSize: 300000,
   trancheCount: 10,
   investorEquityPct: 0.4,
