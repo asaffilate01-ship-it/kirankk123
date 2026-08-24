@@ -127,13 +127,13 @@ export function BrandsPanel() {
   const selectedSector = sectors[0] ?? "all";
 
   const FilterBar = () => (
-    <Card className="p-4">
-      <div className="flex flex-wrap items-center gap-3">
+    <Card className="p-3 sm:p-4">
+      <div className="grid grid-cols-1 items-center gap-2 sm:grid-cols-2 sm:gap-3 lg:flex lg:flex-wrap">
         <Select
           value={selectedCountry}
           onValueChange={(v) => setCountries(v === "all" ? [] : [v as CountryId])}
         >
-          <SelectTrigger className="w-44 text-sm">
+          <SelectTrigger className="w-full text-sm lg:w-44">
             <SelectValue placeholder={t("Country")} />
           </SelectTrigger>
           <SelectContent>
@@ -150,7 +150,7 @@ export function BrandsPanel() {
           value={selectedSector}
           onValueChange={(v) => setSectors(v === "all" ? [] : [v as SectorId])}
         >
-          <SelectTrigger className="w-52 text-sm">
+          <SelectTrigger className="w-full text-sm lg:w-52">
             <SelectValue placeholder={t("Business type")} />
           </SelectTrigger>
           <SelectContent>
@@ -167,11 +167,11 @@ export function BrandsPanel() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t("Search brand, domain or tagline…")}
-          className="h-9 w-56 text-sm"
+          className="h-9 w-full text-sm sm:col-span-2 lg:w-56"
         />
 
         {filtering && (
-          <>
+          <div className="flex items-center gap-2 sm:col-span-2 lg:contents">
             <span className="text-xs text-muted-foreground">
               {filtered.length} {t("brands")}
             </span>
@@ -186,7 +186,7 @@ export function BrandsPanel() {
             >
               {t("Clear filters")}
             </Button>
-          </>
+          </div>
         )}
       </div>
     </Card>
