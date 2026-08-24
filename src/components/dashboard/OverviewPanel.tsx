@@ -16,8 +16,6 @@ import {
   SECTORS,
   countryOf,
   sectorOf,
-  countryLabel,
-  sectorLabel,
   type CountryId,
   type SectorId,
 } from "@/lib/brand-taxonomy";
