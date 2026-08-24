@@ -101,7 +101,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   dishbee: "food", eventplanrger: "food", eventplanruk: "food",
   // Compliance & legal
   haccora: "compliance", "haccora-uk": "compliance", "docuvera-de": "compliance",
-  "docuvera-uk": "compliance", lawquo: "compliance", beratermarkt: "compliance",
+  "docuvera-uk": "compliance", lawquo: "compliance", beratermarkt: "compliance", tendryva: "compliance",
   formationgenie: "compliance", rettio: "compliance",
   // Finance
   taxnuvia: "finance", taxcenda: "finance", zorynnexus: "finance", zoryn: "finance",
@@ -110,7 +110,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   // Local discovery
   kiezio: "local", marktpass: "local", parkpunkt: "local",
   // Marketplace & retail
-  merqano: "commerce", merqora: "commerce", bidlumo: "commerce", tendryva: "commerce",
+  merqano: "commerce", merqora: "commerce", bidlumo: "commerce",
   traderos: "commerce", onyngo: "commerce", cirqiva: "commerce",
   // Sport & wellbeing
   athlyvo: "sport", criclume: "sport", formevyn: "sport", glowevyn: "sport",
