@@ -404,7 +404,7 @@ export function InvestorCalculator() {
         <Cell
           label={t("Dividends paid to you (cash)")}
           value={fmtEUR(cumDividends)}
-          hint={t("Cash actually distributed at M6/12/18/24/30/36; the balance stays in the business and grows your equity value.")}
+          hint={t("Cash distributed monthly from M13 after launch (20% M13–M18, 30% M19–M24, 40% M25–M30, 50% M31–M36); the balance stays in the business and grows your equity value.")}
         />
         <Cell
           label={t("Payback (cash dividends)")}
