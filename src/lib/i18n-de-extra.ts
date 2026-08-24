@@ -1961,4 +1961,26 @@ export const DE_EXTRA: Record<string, string> = {
     "Nutzt die Maschine unter eigener Marke ohne Entwicklungskosten.",
   "Manages tenants, take rates and consolidated reporting.":
     "Verwaltet Mandanten, Take-Rates und konsolidiertes Reporting.",
+  "No dividends for the first 12 months from launch — 100% of after-tax profit stays in the business. From M13 dividends are paid monthly from net profit after tax: 20% distributed M13–M18 (80% retained), 30% M19–M24 (70% retained), 40% M25–M30 (60% retained), 50% M31–M36 (50% retained). After M36 distributions are reviewed against the cash balance.":
+    "In den ersten 12 Monaten nach Start keine Dividenden — 100% des Gewinns nach Steuern bleiben im Unternehmen. Ab M13 monatliche Ausschüttung aus dem Nettogewinn nach Steuern: 20% ausgeschüttet M13–M18 (80% verbleiben), 30% M19–M24 (70% verbleiben), 40% M25–M30 (60% verbleiben), 50% M31–M36 (50% verbleiben). Nach M36 werden Ausschüttungen anhand des Kassenbestands festgelegt.",
+  "Split by equity":
+    "Aufteilung nach Beteiligung",
+  "Dividends start in month 13 from launch — of the brand you invest in, or of the first brand if you invest in the whole company. Everything before that stays in the business:":
+    "Dividenden beginnen im 13. Monat nach Start — der Marke, in die investiert wird, oder der ersten Marke bei einer Investition in das gesamte Unternehmen. Alles davor bleibt im Unternehmen:",
+  "100% retained M1–M12":
+    "100% verbleiben M1–M12",
+  "80% retained / 20% paid M13–M18":
+    "80% verbleiben / 20% ausgeschüttet M13–M18",
+  "70% / 30% M19–M24":
+    "70% / 30% M19–M24",
+  "60% / 40% M25–M30":
+    "60% / 40% M25–M30",
+  "50% / 50% M31–M36":
+    "50% / 50% M31–M36",
+  "Paid from net profit after tax and split pro-rata by equity; after M36 dividends are set against the cash balance.":
+    "Ausgeschüttet aus dem Nettogewinn nach Steuern und anteilig nach Beteiligung; nach M36 richten sich Dividenden nach dem Kassenbestand.",
+  "Cash distributed monthly from M13 after launch (20% M13–M18, 30% M19–M24, 40% M25–M30, 50% M31–M36); the balance stays in the business and grows your equity value.":
+    "Ab M13 nach Start monatlich ausgeschüttet (20% M13–M18, 30% M19–M24, 40% M25–M30, 50% M31–M36); der Rest bleibt im Unternehmen und erhöht den Wert Ihrer Beteiligung.",
+  "Simplified balance sheet. Fixed assets and matching liabilities are a small placeholder capitalisation. Equity = investor paid-in capital + retained earnings (net profit left in the business: 100% M1–M12, 80% M13–M18, 70% M19–M24, 60% M25–M30, 50% M31–M36).":
+    "Vereinfachte Bilanz. Anlagevermögen und passende Verbindlichkeiten sind eine kleine Platzhalter-Kapitalisierung. Eigenkapital = eingezahltes Kapital + Gewinnrücklagen (im Unternehmen verbleibender Nettogewinn: 100% M1–M12, 80% M13–M18, 70% M19–M24, 60% M25–M30, 50% M31–M36).",
 };

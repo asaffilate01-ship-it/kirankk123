@@ -113,13 +113,14 @@ export function OverviewPanel() {
           ))}
         </ul>
         <p className="text-muted-foreground">
-          {t("Shareholders draw dividends every six months from undistributed net profit —")}{" "}
-          <b>{t("20% at M6")}</b>, <b>{t("30% at M12")}</b>, {t("then")}{" "}
-          <b>{t("40% at M18, M24, M30 and M36")}</b> —{" "}
-          {t("split pro-rata by equity; the rest stays in the business.")}{" "}
+          {t("Dividends start in month 13 from launch — of the brand you invest in, or of the first brand if you invest in the whole company. Everything before that stays in the business:")}{" "}
+          <b>{t("100% retained M1–M12")}</b>, {t("then")} <b>{t("80% retained / 20% paid M13–M18")}</b>,{" "}
+          <b>{t("70% / 30% M19–M24")}</b>, <b>{t("60% / 40% M25–M30")}</b>, <b>{t("50% / 50% M31–M36")}</b>.{" "}
+          {t("Paid from net profit after tax and split pro-rata by equity; after M36 dividends are set against the cash balance.")}{" "}
           {t("Brands launch on a 3-week rolling cadence with a")} {g.freeTrialMonths}
           {t("-month free trial.")}
         </p>
+
       </Card>
 
       <InvestorCalculator />

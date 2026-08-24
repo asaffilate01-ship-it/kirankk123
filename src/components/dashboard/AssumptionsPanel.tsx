@@ -82,9 +82,10 @@ export function AssumptionsPanel() {
         </div>
         <div className="rounded-md border p-3 text-xs text-muted-foreground">
           <div className="mb-1 font-medium text-foreground">{t("Dividend schedule")}</div>
-          Shareholders draw dividends from undistributed net profit: 20% at M6, 30% at M12,
-          40% at M18/24/30/36. Split by equity (investor {Math.round(g.investorEquityPct * 100)}% / founder{" "}
+          {t("No dividends for the first 12 months from launch — 100% of after-tax profit stays in the business. From M13 dividends are paid monthly from net profit after tax: 20% distributed M13–M18 (80% retained), 30% M19–M24 (70% retained), 40% M25–M30 (60% retained), 50% M31–M36 (50% retained). After M36 distributions are reviewed against the cash balance.")}{" "}
+          {t("Split by equity")} (investor {Math.round(g.investorEquityPct * 100)}% / founder{" "}
           {100 - Math.round(g.investorEquityPct * 100)}%).
+
         </div>
         <SliderRow
           label={t("Opening cash")}

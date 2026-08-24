@@ -163,20 +163,45 @@ function lineAtMonth(l: CustomLine, m: number) {
   return l.amount * Math.pow(1 + l.growth, m - l.startMonth);
 }
 
-export const DIVIDEND_SCHEDULE: Record<number, number> = {
-  6: 0.2,
-  12: 0.3,
-  18: 0.4,
-  24: 0.4,
-  30: 0.4,
-  36: 0.4,
-};
+/**
+ * Distribution policy (months counted from launch of the brand, or from the
+ * launch of the first brand when investing in the whole company):
+ *  M1–M12  → 100% retained in the business (no dividends)
+ *  M13–M18 → 80% retained, 20% distributed
+ *  M19–M24 → 70% retained, 30% distributed
+ *  M25–M30 → 60% retained, 40% distributed
+ *  M31–M36 → 50% retained, 50% distributed
+ * After M36 distributions are reviewed against the cash balance.
+ */
+export function payoutPct(monthFromStart: number): number {
+  if (monthFromStart <= 12) return 0;
+  if (monthFromStart <= 18) return 0.2;
+  if (monthFromStart <= 24) return 0.3;
+  if (monthFromStart <= 30) return 0.4;
+  return 0.5;
+}
+
+export function retainedPct(monthFromStart: number): number {
+  return 1 - payoutPct(monthFromStart);
+}
+
+export function firstLaunchMonth(state: State): number {
+  let min = Infinity;
+  for (const b of BRANDS) {
+    const a = state.brands[b.id];
+    if (a?.enabled) min = Math.min(min, a.launchMonth);
+  }
+  return Number.isFinite(min) ? min : 1;
+}
+
 
 export function buildModel(state: State): MonthRow[] {
   const g = state.global;
   const rows: MonthRow[] = [];
   let cash = g.openingCash;
   let undistributed = 0;
+  const start = firstLaunchMonth(state);
+
 
   for (let m = 1; m <= g.months; m++) {
     const perBrandRevenue: Record<string, number> = {};
@@ -226,7 +251,7 @@ export function buildModel(state: State): MonthRow[] {
     const tax = ebit > 0 ? ebit * g.taxRate : 0;
     const netProfit = ebit - tax;
     undistributed += netProfit;
-    const dividendPct = DIVIDEND_SCHEDULE[m] ?? 0;
+    const dividendPct = payoutPct(m - start + 1);
     const dividendPaid = dividendPct > 0 && undistributed > 0 ? undistributed * dividendPct : 0;
     undistributed -= dividendPaid;
     const investorShare = dividendPaid * g.investorEquityPct;

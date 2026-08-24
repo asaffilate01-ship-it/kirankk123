@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { t } from "@/lib/i18n";
-import { useFinance, buildModel, yearSummaries, DIVIDEND_SCHEDULE } from "@/lib/finance-store";
+import { useFinance, buildModel, yearSummaries, payoutPct } from "@/lib/finance-store";
 import { BRANDS, brandById, siblingOf } from "@/lib/brands";
 import { Card } from "@/components/ui/card";
 import {
@@ -74,12 +74,29 @@ export function InvestorCalculator() {
     };
   }, [rows, state.brands, g]);
 
-  // Dividends on any scope, using the same 6-monthly distribution policy.
-  const dividendsFrom = (net: number[]) => {
+  // First month of activity for a scope: launch of the brand(s), or of the first
+  // brand in the portfolio when investing in the whole company.
+  const startMonthFor = (ids: string[]) => {
+    const pool = ids.length ? ids : Object.keys(state.brands);
+    let min = Infinity;
+    for (const id of pool) {
+      const a = state.brands[id];
+      if (a?.enabled) min = Math.min(min, a.launchMonth);
+    }
+    return Number.isFinite(min) ? min : 1;
+  };
+
+  /**
+   * Dividends for any scope. Nothing is distributed for the first 12 months from
+   * launch (100% retained), then 20% (M13–M18), 30% (M19–M24), 40% (M25–M30),
+   * 50% (M31–M36) of after-tax profit is paid out.
+   */
+  const dividendsFrom = (net: number[], startMonth: number) => {
     let undistributed = 0;
     return net.map((v, i) => {
       undistributed += v;
-      const pct = DIVIDEND_SCHEDULE[rows[i]?.month ?? i + 1] ?? 0;
+      const m = rows[i]?.month ?? i + 1;
+      const pct = payoutPct(m - startMonth + 1);
       const paid = pct > 0 && undistributed > 0 ? undistributed * pct : 0;
       undistributed -= paid;
       return paid;
@@ -91,7 +108,11 @@ export function InvestorCalculator() {
     [netForIds, selectedIds, rows]
   );
 
-  const dividendRows = useMemo(() => dividendsFrom(scopeRows.map((r) => r.netProfit)), [scopeRows]);
+  const dividendRows = useMemo(
+    () => dividendsFrom(scopeRows.map((r) => r.netProfit), startMonthFor(selectedIds)),
+    [scopeRows, selectedIds]
+  );
+
 
 
   const totalNet = scopeRows.reduce((s, r) => s + r.netProfit, 0);
@@ -179,7 +200,7 @@ export function InvestorCalculator() {
     const d = DEALS[m];
     const ids = m === "company" ? [] : m === "location" ? (brandId ? [brandId] : []) : dualIdsFor(dualBrandId);
     const net = netForIds(ids);
-    const divs = dividendsFrom(net);
+    const divs = dividendsFrom(net, startMonthFor(ids));
     const shareN = Math.min(d.fullPct, d.ticketPct * n);
     const investedN = d.ticket * n;
     const totalNetN = net.reduce((s, v) => s + v, 0);
@@ -383,7 +404,7 @@ export function InvestorCalculator() {
         <Cell
           label={t("Dividends paid to you (cash)")}
           value={fmtEUR(cumDividends)}
-          hint={t("Cash actually distributed at M6/12/18/24/30/36; the balance stays in the business and grows your equity value.")}
+          hint={t("Cash distributed monthly from M13 after launch (20% M13–M18, 30% M19–M24, 40% M25–M30, 50% M31–M36); the balance stays in the business and grows your equity value.")}
         />
         <Cell
           label={t("Payback (cash dividends)")}
