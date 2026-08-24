@@ -8,6 +8,8 @@ import { PLPanel } from "@/components/dashboard/PLPanel";
 import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
+import { FundingPanel } from "@/components/dashboard/FundingPanel";
+import { SystemPanel } from "@/components/dashboard/SystemPanel";
 import { BrandLogo } from "@/components/BrandLogo";
 import { TARGET_BRAND_COUNT } from "@/lib/brands";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -29,6 +31,8 @@ import {
   Wallet,
   Scale,
   LineChart,
+  HandCoins,
+  Network,
   MoreHorizontal,
 } from "lucide-react";
 
@@ -72,14 +76,16 @@ function Index() {
 
   const primary = [
     { value: "overview", label: t("Overview"), icon: LayoutDashboard },
+    { value: "funding", label: t("Investment"), icon: HandCoins },
     { value: "brands", label: t("Brands"), icon: Boxes },
-    { value: "assumptions", label: t("Assumptions"), icon: SlidersHorizontal },
-    { value: "pl", label: t("P&L"), icon: Receipt },
+    { value: "charts", label: t("Charts"), icon: LineChart },
   ];
   const secondary = [
+    { value: "assumptions", label: t("Assumptions"), icon: SlidersHorizontal },
+    { value: "pl", label: t("P&L"), icon: Receipt },
     { value: "cash", label: t("Cash flow"), icon: Wallet },
     { value: "bs", label: t("Balance sheet"), icon: Scale },
-    { value: "charts", label: t("Charts"), icon: LineChart },
+    { value: "system", label: t("Our system"), icon: Network },
   ];
   const moreActive = secondary.some((s) => s.value === tab);
 
@@ -117,6 +123,8 @@ function Index() {
             {[...primary, ...secondary].find((i) => i.value === tab)?.label}
           </h2>
           <TabsContent value="overview"><OverviewPanel /></TabsContent>
+          <TabsContent value="funding"><FundingPanel /></TabsContent>
+          <TabsContent value="system"><SystemPanel /></TabsContent>
           <TabsContent value="brands"><BrandsPanel /></TabsContent>
           <TabsContent value="assumptions"><AssumptionsPanel /></TabsContent>
           <TabsContent value="pl"><PLPanel /></TabsContent>

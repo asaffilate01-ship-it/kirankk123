@@ -118,4 +118,17 @@ export const DE_UX: Record<string, string> = {
     "Marken in zwei Märkten teilen den Namen, führen aber getrennte Bücher je Land.",
   "Use the toggle on a card to include or exclude a brand from the forecast.":
     "Mit dem Schalter auf der Karte eine Marke in die Prognose ein- oder ausschließen.",
+  "Investment": "Investment",
+  "Our system": "Unser System",
+  "Investment & funding": "Investment & Finanzierung",
+  "Why we are raising, where the money goes, the deal terms, and a calculator that shows your return live.":
+    "Warum wir Kapital aufnehmen, wohin das Geld fließt, die Konditionen und ein Rechner, der Ihre Rendite live zeigt.",
+  "Funding raised over the period: ": "Aufgenommenes Kapital im Zeitraum: ",
+  "Investor dividends across the forecast: ": "Investoren-Dividenden über die Prognose: ",
+  "Change any assumption and these numbers re-forecast instantly.":
+    "Jede Annahme ändern – diese Zahlen werden sofort neu berechnet.",
+  "One shared platform runs every brand. Search the full brand list, see the group companies and the brand marks.":
+    "Eine gemeinsame Plattform betreibt alle Marken. Vollständige Markenliste durchsuchen, Gruppengesellschaften und Markenzeichen ansehen.",
+  "This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list and platform detail live in the System tab.":
+    "Diese Seite ist die Übersicht: die wichtigsten Zahlen und die Jahresübersicht. Konditionen und Investorenrechner finden Sie im Tab Investment; die vollständige Markenliste und Plattformdetails im Tab Unser System.",
 };
