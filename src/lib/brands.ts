@@ -2957,105 +2957,6 @@ const BASE_BRANDS: Brand[] = [
     },
   },
   {
-    id: "silkroaduz",
-    name: "SILKROADUZ",
-    region: "INT",
-    tagline: "AI travel companion for Uzbekistan and the Silk Road",
-    domain: "silkroaduz.com",
-    description: "AI-planned Silk Road travel: itineraries, halal-friendly stays, train and tour booking, eSIM and a Telegram concierge for travellers to Uzbekistan and Central Asia.",
-    market: "\u22486.6m annual international visitors to Uzbekistan, growing >20% a year; \u2248$2.5bn tourism revenue.",
-    audience: "Cultural travellers, halal-conscious tourists, diaspora visitors, tour operators.",
-    color: "#06b6d4",
-    defaultLaunchMonth: 22,
-    defaultInitialUsers: 350,
-    defaultUserGrowth: 0.21,
-    defaultArpu: 39,
-    defaultChurn: 0.045,
-    defaultAddlRevenue: 17000,
-    defaultDirectCost: 8000,
-    reason: "Uzbekistan is one of the fastest-growing tourism markets on earth, but booking it means Telegram groups, cash payments and unbookable train tickets. SILKROADUZ makes the whole trip planable and payable online.",
-    proposition: "An AI itinerary engine that turns 'ten days, Samarkand and Bukhara, halal food' into a bookable trip \u2014 trains, hotels, guides, transfers and eSIM in one checkout \u2014 with a Telegram concierge for in-country support in English, Russian and Uzbek.",
-    features: [
-      "AI itinerary generation and day-by-day planning",
-      "Afrosiyob train seat booking",
-      "Halal-friendly hotel and restaurant filters",
-      "Licensed guide and tour marketplace",
-      "Airport transfers and driver hire",
-      "eSIM and connectivity bundles",
-      "Telegram concierge with human escalation",
-      "Multi-currency payment (card, UZS, crypto-off)",
-      "Offline itinerary and maps",
-      "Operator dashboard for local suppliers",
-    ],
-    apps: [
-      {
-        name: "SilkRoadUZ Web",
-        kind: "Web",
-        purpose: "Planning and booking",
-      },
-      {
-        name: "SilkRoadUZ Concierge",
-        kind: "API",
-        purpose: "Telegram bot and support routing",
-      },
-      {
-        name: "SilkRoadUZ Supplier",
-        kind: "SaaS",
-        purpose: "Inventory, pricing, payouts",
-      },
-      {
-        name: "SilkRoadUZ Mobile",
-        kind: "iOS",
-        purpose: "Offline itinerary and tickets",
-      },
-    ],
-    userTypes: [
-      {
-        type: "Cultural traveller",
-        useCase: "Plans a two-week Silk Road route and books it once.",
-      },
-      {
-        type: "Halal-conscious family",
-        useCase: "Filters stays and restaurants confidently.",
-      },
-      {
-        type: "Local guide",
-        useCase: "Sells directly instead of through agencies.",
-      },
-      {
-        type: "Tour operator",
-        useCase: "White-labels the itinerary engine.",
-      },
-    ],
-    competitors: [
-      {
-        name: "GetYourGuide / Viator",
-        strength: "Global activity inventory and trust",
-        counter: "Deep local supply GetYourGuide does not carry \u2014 trains, licensed guides, transfers \u2014 and full multi-day itineraries rather than isolated day tours",
-      },
-      {
-        name: "Advantour / local agencies",
-        strength: "On-the-ground relationships",
-        counter: "Instant online booking and transparent pricing versus email quotes and cash payment, plus AI planning that removes the agency's core work",
-      },
-    ],
-    risks: [
-      {
-        risk: "Regional instability or visa change",
-        mitigation: "Multi-country coverage across Kazakhstan, Kyrgyzstan and Tajikistan reduces single-country dependency.",
-      },
-      {
-        risk: "Supplier payment friction",
-        mitigation: "Local entity and UZS settlement account with weekly payouts.",
-      },
-    ],
-    currentMarket: {
-      howServed: "Travellers plan on TripAdvisor and blogs, then book through email with local agencies (Advantour, Peopletravel), pay by wire or cash, and buy train tickets in person. GetYourGuide carries only shallow day-tour inventory.",
-      users: "\u22486.6m international visitors/yr; fewer than 15% book online end-to-end.",
-      revenue: "\u2248$2.5bn tourism revenue; \u2248$400m/yr addressable in bookable tours, transport and stays.",
-    },
-  },
-  {
     id: "dubaitrips",
     name: "DUBAITRIPS4U",
     region: "INT",
@@ -4008,7 +3909,6 @@ export const TRAVENEXA_FAMILY: string[] = [
   "qiyavo",
   "uzvoya",
   "nimah",
-  "silkroaduz",
   "dubaitrips",
   "marocways",
 ];
