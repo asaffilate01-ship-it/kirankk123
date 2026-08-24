@@ -2566,11 +2566,11 @@ export const EXTRA_BRANDS: Brand[] = [
   {
     id: "criclume",
     name: "CRICLUME",
-    region: "UK",
-    domain: "criclume.itechlounge.co.uk",
+    region: "INT",
+    domain: "criclume.com",
     tagline: "See every ball. Shape every game.",
     description:
-      "CRICLUME is the commission-free match-day and coaching operating system for cricket: fast ball-by-ball scoring, a multi-phone camera room that films every delivery from four or more synced angles, live broadcast-ready scoreboards, auto-built league tables and player records, and a coaching review room where the whole squad can slow a delivery down frame by frame, draw on it and swap voice notes before the next session. Clubs, leagues and academies run fixtures, squads, availability, officials, memberships and subs in one place, and choose exactly who watches a match live — the opposition, the league office, followers or a public supporter link. Coaches, analysts, videographers and ground/net providers can also list paid services in a zero-commission marketplace and keep 100% of what they charge; CRICLUME charges a flat monthly subscription instead. Live now as a test site at criclume.itechlounge.co.uk; the real domain criclume.com follows.",
+      "CRICLUME is the commission-free match-day and coaching operating system for cricket: fast ball-by-ball scoring, a multi-phone camera room that films every delivery from four or more synced angles, live broadcast-ready scoreboards, auto-built league tables and player records, and a coaching review room where the whole squad can slow a delivery down frame by frame, draw on it and swap voice notes before the next session. Clubs, leagues and academies run fixtures, squads, availability, officials, memberships and subs in one place, and choose exactly who watches a match live — the opposition, the league office, followers or a public supporter link. Coaches, analysts, videographers and ground/net providers can also list paid services in a zero-commission marketplace and keep 100% of what they charge; CRICLUME charges a flat monthly subscription instead. Live internationally at criclume.com.",
     market:
       "≈€1.5bn global cricket technology, coaching and grassroots services spend. In England and Wales alone there are ~5,000 ECB-affiliated clubs, ~10,000 teams and hundreds of leagues, plus a fast-growing academy and private-coaching market across the UK, India, Pakistan, Australia, South Africa and the Gulf.",
     audience:
