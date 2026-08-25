@@ -374,8 +374,8 @@ export function ChartsPanel() {
         <Metric label={`${t("Monthly revenue")} @ M${last.month}`} value={fmtEURk(last.revenue)} />
         <Metric label={t("Run-rate net margin")} value={fmtPct(runRateMargin)} />
         <Metric label={t("Cost per €1 of revenue")} value={`€${costPerEuro.toFixed(2)}`} />
-        <Metric label={t("Paying customers")} value={fmtNum(customers)} />
-        <Metric label={t("Blended ARPU")} value={fmtEUR(blendedArpu)} />
+        <Metric label={t("Paying revenue units")} value={fmtNum(customers)} />
+        <Metric label={t("Blended revenue per unit")} value={fmtEUR(blendedArpu)} />
         <Metric label={t("Brands live")} value={`${last.brandsLaunched} / ${BRANDS.length}`} />
         <Metric label={t("Total funding drawn")} value={fmtEURk(totalFunding)} />
         <Metric label={t("First profitable month")} value={breakevenMonth ? `M${breakevenMonth}` : "—"} />

@@ -94,6 +94,9 @@ export function BrandsPanel() {
                 {COUNTRIES.find((c) => c.id === countryOf(b))?.flag} {t(countryLabel(countryOf(b)))}
               </Badge>
               <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
+              <Badge variant="outline" className="text-[10px]">
+                {b.payerModel?.side === "consumer" ? "User-funded" : "Business-funded"}
+              </Badge>
             </div>
           </div>
           <Switch
@@ -302,7 +305,7 @@ export function BrandsPanel() {
                             <div className="font-semibold">M{a.launchMonth}</div>
                           </div>
                           <div>
-                            <div className="text-muted-foreground">{t("Paying customers")}</div>
+                            <div className="text-muted-foreground">{brandVolumeLabel(e)}</div>
                             <div className="font-semibold">{fmtNum(users)}</div>
                           </div>
                           <div>
@@ -364,12 +367,15 @@ export function BrandsPanel() {
 }
 
 function BrandsIntro() {
+  const businessFunded = BRANDS.filter((brand) => brand.payerModel?.side === "business").length;
+  const userFunded = BRANDS.length - businessFunded;
   return (
     <PanelIntro
       title={t("Browse the portfolio")}
-      description={t("Every brand in the group, with its launch month, paying customers and monthly revenue. Filter by country or business type, or search a name or domain.")}
+      description={t(`Every brand has one paying side: ${businessFunded} are funded by businesses and ${userFunded} by end users. No marketplace charges both its users and its business side. Each card shows the relevant paying accounts and monthly revenue.`)}
       tips={[
         t("Open a brand to read the full case and edit its own assumptions."),
+        t("Business-funded products keep the consumer, player, parent, candidate or traveller side free."),
         t("Dual-market brands share a name but keep separate books for each country."),
         t("Use the toggle on a card to include or exclude a brand from the forecast."),
       ]}

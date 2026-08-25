@@ -447,7 +447,7 @@ export function InvestorCalculator() {
         <div>
           <h4 className="text-sm font-semibold">{t("When your ROI happens")}</h4>
           <p className="text-xs text-muted-foreground">
-            {t("Capital is called 20% on signing then 80% over 12 months, so your cash out and cash in overlap. Every month below re-forecasts live when you move the growth, subscriber, cost or pricing sliders.")}
+            {t("Capital is called 20% on signing then 80% over 12 months, so your cash out and cash in overlap. Every month below re-forecasts live when you move the growth, paying-account, cost or pricing sliders.")}
           </p>
         </div>
 

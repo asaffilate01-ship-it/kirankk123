@@ -1,5 +1,6 @@
 import { EXTRA_BRANDS } from "./brands-extra";
 import { AFFIVON_BRAND, BRAND_CONTENT_OVERRIDES } from "./brand-content-overrides";
+import { brandPayerModel, type BrandPayerModel } from "./brand-commercial-model";
 
 export type Brand = {
   id: string;
@@ -34,6 +35,9 @@ export type Brand = {
   revenueUnit?: "subscription" | "affiliate-order";
   /** Keep brand-specific forecast assumptions instead of applying the shared subscription baseline. */
   preserveFinancialDefaults?: boolean;
+
+  /** The single side of the marketplace that funds this brand. */
+  payerModel?: BrandPayerModel;
 
 
   apps: { name: string; kind: "SaaS" | "Web" | "iOS" | "Android" | "API" | "Admin"; purpose: string }[];
@@ -4013,6 +4017,11 @@ export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS, AFFIVON_BRAND].
     merged.defaultDirectCost = 2000;
     merged.defaultArpu = merged.region === "UK" ? 45 : 39;
   }
+  merged.payerModel = brandPayerModel(merged);
+  const keepDetailedSingleSidePricing = merged.id === "athlyvo" || merged.id === "criclume";
+  merged.pricing = keepDetailedSingleSidePricing ? merged.pricing : merged.payerModel.pricing;
+  merged.monetisation = keepDetailedSingleSidePricing ? merged.monetisation : merged.payerModel.monetisation;
+  merged.currentMarket = { ...merged.currentMarket, revenue: merged.payerModel.investorRevenue };
   return merged;
 });
 
