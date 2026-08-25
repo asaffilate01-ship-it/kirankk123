@@ -1,4 +1,4 @@
-/** German translations for brand copy (taglines, descriptions, market, audience, reason, proposition). */
+/** German translations for brand copy. */
 export const DE_BRAND_COPY: Record<string, string> = {
   "Experten finden. Sicher entscheiden.": "Experten finden. Sicher entscheiden.",
   "Immobilien. Einfach geregelt.": "Immobilien. Einfach geregelt.",
