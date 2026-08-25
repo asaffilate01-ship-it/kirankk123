@@ -1,3 +1,4 @@
+import { t } from "./i18n";
 import type { Brand } from "./brands";
 import { countryLabel, countryOf, sectorLabel, sectorOf, type CountryId, type SectorId } from "./brand-taxonomy";
 import {
@@ -153,24 +154,24 @@ export function plainBusinessPlan(
       businessType: sectorLabel(sector),
       stage: "Concept only",
       summary: brandPlainEnglish(brand),
-      customer: "Not yet approved.",
-      marketOpportunity: "No reliable market estimate should be shown until the customer and product scope are approved.",
-      problem: "The customer problem has not yet been approved, so no market or revenue claim should be treated as an active business plan.",
-      solution: "Complete a written product brief, customer interviews, competitor check and legal review before development or investor forecasting.",
+      customer: t("Not yet approved."),
+      marketOpportunity: t("No reliable market estimate should be shown until the customer and product scope are approved."),
+      problem: t("The customer problem has not yet been approved, so no market or revenue claim should be treated as an active business plan."),
+      solution: t("Complete a written product brief, customer interviews, competitor check and legal review before development or investor forecasting."),
       revenue: brandRevenuePlainEnglish(brand),
-      salesPlan: "No sales spending should begin until the target customer and offer are approved.",
-      operations: "No operating team should be assigned until scope, ownership and launch conditions are approved.",
-      territoryPlan: TERRITORY_PLANS[country],
-      expansionPlan: "Expansion should be considered only after the first territory and business model are approved.",
+      salesPlan: t("No sales spending should begin until the target customer and offer are approved."),
+      operations: t("No operating team should be assigned until scope, ownership and launch conditions are approved."),
+      territoryPlan: t(TERRITORY_PLANS[country]),
+      expansionPlan: t("Expansion should be considered only after the first territory and business model are approved."),
       milestones: [
-        "Approve the customer, problem and product scope.",
-        "Interview at least 20 potential customers and test willingness to pay.",
-        "Complete competitor, legal and unit-economics checks.",
-        "Only then set a launch date and financial forecast.",
+        t("Approve the customer, problem and product scope."),
+        t("Interview at least 20 potential customers and test willingness to pay."),
+        t("Complete competitor, legal and unit-economics checks."),
+        t("Only then set a launch date and financial forecast."),
       ],
-      successMeasures: ["Approved product brief", "Evidence of customer demand", "Credible pricing test", "Named launch owner"],
-      reasonsItCanWin: ["Not yet established — this must be proven through customer and competitor research."],
-      mainRisks: ["The product, customer, pricing and route to market are not yet defined."],
+      successMeasures: [t("Approved product brief"), t("Evidence of customer demand"), t("Credible pricing test"), t("Named launch owner")],
+      reasonsItCanWin: [t("Not yet established — this must be proven through customer and competitor research.")],
+      mainRisks: [t("The product, customer, pricing and route to market are not yet defined.")],
     };
   }
 
@@ -180,36 +181,36 @@ export function plainBusinessPlan(
     stage: "Defined product",
     summary: brandPlainEnglish(brand),
     customer: brand.payerModel
-      ? `Paying side: ${brand.payerModel.payer}. Free side: ${brand.payerModel.freeSide}.`
-      : simplifyInvestorLanguage(brand.audience),
-    marketOpportunity: simplifyInvestorLanguage(brand.market),
-    problem: affiliateStore ? simplifyInvestorLanguage(brand.reason) : PROBLEMS[sector],
-    solution: `${brandPlainEnglish(brand)} The first release focuses on the smallest complete customer journey, with extra features added only after real usage proves the need.`,
+      ? `${t("Paying side:")} ${t(brand.payerModel.payer)}. ${t("Free side:")} ${t(brand.payerModel.freeSide)}.`
+      : t(simplifyInvestorLanguage(brand.audience)),
+    marketOpportunity: t(simplifyInvestorLanguage(brand.market)),
+    problem: affiliateStore ? t(simplifyInvestorLanguage(brand.reason)) : t(PROBLEMS[sector]),
+    solution: `${brandPlainEnglish(brand)} ${t("The first release focuses on the smallest complete customer journey, with extra features added only after real usage proves the need.")}`,
     revenue: brand.payerModel
-      ? brand.payerModel.investorRevenue
+      ? t(brand.payerModel.investorRevenue)
       : affiliateStore
-        ? `Shoppers pay nothing to use the site. An approved retailer pays commission after a referred shopper completes an eligible order. The forecast uses ${currency}${arpu.toFixed(2)} average confirmed commission per order; the actual rate depends on the retailer, category and country.`
+        ? `${t("Shoppers pay nothing to use the site. An approved retailer pays commission after a referred shopper completes an eligible order. The forecast uses")} ${currency}${arpu.toFixed(2)} ${t("average confirmed commission per order; the actual rate depends on the retailer, category and country.")}`
         : brand.monetisation?.length
           ? `${simplifyInvestorLanguage(brand.monetisation.slice(0, 3).join(". "))}.`
-          : `Paying customers are modelled at an average of ${currency}${arpu} per month after a two-month free trial. The detailed forecast can also include setup, optional extras and partner income.`,
+          : `${t("Paying customers are modelled at an average of")} ${currency}${arpu} ${t("per month after a two-month free trial. The detailed forecast can also include setup, optional extras and partner income.")}`,
     salesPlan: affiliateStore
       ? "Publish genuinely useful buying guides for high-intent questions, earn search and social traffic, build an email audience and send shoppers only to approved retailers through clearly disclosed tracked links."
       : venueFundedSport
         ? "Build each launch area postcode by postcode. Add factual venue information from lawful public sources, clearly label unclaimed profiles, and invite operators to claim, correct and verify them. Bring players in free through clubs, leagues, schools, employers and community groups. Demonstrate to venues that live availability, confirmations, waitlists and off-peak promotion increase filled hours and reduce administration, then convert the venue after its 60-day trial."
         : brand.payerModel
           ? `${SALES_PLANS[sector]} Commercial rule: the sales team targets only ${brand.payerModel.payer}. The other side remains free, helping the paying customer receive more value without creating a second charging barrier.`
-          : SALES_PLANS[sector],
+          : t(SALES_PLANS[sector]),
     operations: affiliateStore
       ? "Affivon imports approved retailer data, creates tracked links and reports confirmed commission. A human editor remains responsible for product claims, comparison quality, disclosure and removing stale or misleading content. The retailer handles payment, delivery and returns."
       : venueFundedSport
         ? "The shared team maintains venue data, claim checks, booking technology, payments and support. Unclaimed profiles show only factual public information and cannot publish live availability. A venue must prove ownership or authority before controlling its profile. Venues set their own prices, availability and cancellation rules; Athlyvo organises the booking and confirmation record."
-        : OPERATIONS[sector],
+        : t(OPERATIONS[sector]),
     territoryPlan: venueFundedSport
       ? "Launch in one UK area with pound pricing, postcode and distance search, UK card payments and UK-based support. Build dense coverage across football and five-a-side, cricket, padel, tennis and pickleball before opening the next area. Complete UK GDPR, marketplace, payment, safeguarding, facility-booking and consumer terms, and give every unclaimed venue a clear correction, claim and removal route."
-      : TERRITORY_PLANS[country],
+      : t(TERRITORY_PLANS[country]),
     expansionPlan: venueFundedSport
       ? "Expand across England postcode by postcode only after the first areas show repeated player use, useful venue occupancy gains and retained paying venues. Then localise facility rules, governing-body relationships and public-sector procurement for Wales, Scotland and Northern Ireland before considering Ireland or other countries."
-      : EXPANSION_PLANS[country],
+      : t(EXPANSION_PLANS[country]),
     milestones: affiliateStore
       ? [
           "Before launch: obtain approval for each retailer programme, create the correct country tracking IDs, publish affiliate disclosures and test every product link.",
