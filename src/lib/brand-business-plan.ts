@@ -1,3 +1,4 @@
+import { t } from "./i18n";
 import type { Brand } from "./brands";
 import { countryLabel, countryOf, sectorLabel, sectorOf, type CountryId, type SectorId } from "./brand-taxonomy";
 import {
@@ -146,24 +147,24 @@ export function plainBusinessPlan(
       businessType: sectorLabel(sector),
       stage: "Concept only",
       summary: brandPlainEnglish(brand),
-      customer: "Not yet approved.",
-      marketOpportunity: "No reliable market estimate should be shown until the customer and product scope are approved.",
-      problem: "The customer problem has not yet been approved, so no market or revenue claim should be treated as an active business plan.",
-      solution: "Complete a written product brief, customer interviews, competitor check and legal review before development or investor forecasting.",
+      customer: t("Not yet approved."),
+      marketOpportunity: t("No reliable market estimate should be shown until the customer and product scope are approved."),
+      problem: t("The customer problem has not yet been approved, so no market or revenue claim should be treated as an active business plan."),
+      solution: t("Complete a written product brief, customer interviews, competitor check and legal review before development or investor forecasting."),
       revenue: brandRevenuePlainEnglish(brand),
-      salesPlan: "No sales spending should begin until the target customer and offer are approved.",
-      operations: "No operating team should be assigned until scope, ownership and launch conditions are approved.",
-      territoryPlan: TERRITORY_PLANS[country],
-      expansionPlan: "Expansion should be considered only after the first territory and business model are approved.",
+      salesPlan: t("No sales spending should begin until the target customer and offer are approved."),
+      operations: t("No operating team should be assigned until scope, ownership and launch conditions are approved."),
+      territoryPlan: t(TERRITORY_PLANS[country]),
+      expansionPlan: t("Expansion should be considered only after the first territory and business model are approved."),
       milestones: [
-        "Approve the customer, problem and product scope.",
-        "Interview at least 20 potential customers and test willingness to pay.",
-        "Complete competitor, legal and unit-economics checks.",
-        "Only then set a launch date and financial forecast.",
+        t("Approve the customer, problem and product scope."),
+        t("Interview at least 20 potential customers and test willingness to pay."),
+        t("Complete competitor, legal and unit-economics checks."),
+        t("Only then set a launch date and financial forecast."),
       ],
-      successMeasures: ["Approved product brief", "Evidence of customer demand", "Credible pricing test", "Named launch owner"],
-      reasonsItCanWin: ["Not yet established — this must be proven through customer and competitor research."],
-      mainRisks: ["The product, customer, pricing and route to market are not yet defined."],
+      successMeasures: [t("Approved product brief"), t("Evidence of customer demand"), t("Credible pricing test"), t("Named launch owner")],
+      reasonsItCanWin: [t("Not yet established — this must be proven through customer and competitor research.")],
+      mainRisks: [t("The product, customer, pricing and route to market are not yet defined.")],
     };
   }
 
@@ -172,56 +173,56 @@ export function plainBusinessPlan(
     businessType: sectorLabel(sector),
     stage: "Defined product",
     summary: brandPlainEnglish(brand),
-    customer: simplifyInvestorLanguage(brand.audience),
-    marketOpportunity: simplifyInvestorLanguage(brand.market),
-    problem: affiliateStore ? simplifyInvestorLanguage(brand.reason) : PROBLEMS[sector],
-    solution: `${brandPlainEnglish(brand)} The first release focuses on the smallest complete customer journey, with extra features added only after real usage proves the need.`,
+    customer: t(simplifyInvestorLanguage(brand.audience)),
+    marketOpportunity: t(simplifyInvestorLanguage(brand.market)),
+    problem: affiliateStore ? t(simplifyInvestorLanguage(brand.reason)) : t(PROBLEMS[sector]),
+    solution: `${brandPlainEnglish(brand)} ${t("The first release focuses on the smallest complete customer journey, with extra features added only after real usage proves the need.")}`,
     revenue: affiliateStore
-        ? `Shoppers pay nothing to use the site. An approved retailer pays commission after a referred shopper completes an eligible order. The forecast uses ${currency}${arpu.toFixed(2)} average confirmed commission per order; the actual rate depends on the retailer, category and country.`
+        ? `${t("Shoppers pay nothing to use the site. An approved retailer pays commission after a referred shopper completes an eligible order. The forecast uses")} ${currency}${arpu.toFixed(2)} ${t("average confirmed commission per order; the actual rate depends on the retailer, category and country.")}`
       : brand.monetisation?.length
         ? `${simplifyInvestorLanguage(brand.monetisation.slice(0, 3).join(". "))}.`
-        : `Paying customers are modelled at an average of ${currency}${arpu} per month after a two-month free trial. The detailed forecast can also include setup, optional extras and partner income.`,
+        : `${t("Paying customers are modelled at an average of")} ${currency}${arpu} ${t("per month after a two-month free trial. The detailed forecast can also include setup, optional extras and partner income.")}`,
     salesPlan: affiliateStore
-      ? "Publish genuinely useful buying guides for high-intent questions, earn search and social traffic, build an email audience and send shoppers only to approved retailers through clearly disclosed tracked links."
-      : SALES_PLANS[sector],
+      ? t("Publish genuinely useful buying guides for high-intent questions, earn search and social traffic, build an email audience and send shoppers only to approved retailers through clearly disclosed tracked links.")
+      : t(SALES_PLANS[sector]),
     operations: affiliateStore
-      ? "Affivon imports approved retailer data, creates tracked links and reports confirmed commission. A human editor remains responsible for product claims, comparison quality, disclosure and removing stale or misleading content. The retailer handles payment, delivery and returns."
-      : OPERATIONS[sector],
-    territoryPlan: TERRITORY_PLANS[country],
-    expansionPlan: EXPANSION_PLANS[country],
+      ? t("Affivon imports approved retailer data, creates tracked links and reports confirmed commission. A human editor remains responsible for product claims, comparison quality, disclosure and removing stale or misleading content. The retailer handles payment, delivery and returns.")
+      : t(OPERATIONS[sector]),
+    territoryPlan: t(TERRITORY_PLANS[country]),
+    expansionPlan: t(EXPANSION_PLANS[country]),
     milestones: affiliateStore
       ? [
-          "Before launch: obtain approval for each retailer programme, create the correct country tracking IDs, publish affiliate disclosures and test every product link.",
-          "Months 1–2: launch the first useful category and buying-guide pages, measure search visibility, clicks and retailer-reported orders, and correct weak or misleading content.",
-          `Months 3–6: publish the highest-intent buying guides and work toward ${initialUsers.toLocaleString("en-GB")} confirmed affiliate orders while measuring earnings per visitor and per article.`,
-          "Months 7–12: refresh winning content, add only approved retailers and countries, build email and direct traffic and stop work on pages that do not earn or help shoppers.",
+          t("Before launch: obtain approval for each retailer programme, create the correct country tracking IDs, publish affiliate disclosures and test every product link."),
+          t("Months 1–2: launch the first useful category and buying-guide pages, measure search visibility, clicks and retailer-reported orders, and correct weak or misleading content."),
+          `${t("Months 3–6: publish the highest-intent buying guides and work toward")} ${initialUsers.toLocaleString("en-GB")} ${t("confirmed affiliate orders while measuring earnings per visitor and per article.")}`,
+          t("Months 7–12: refresh winning content, add only approved retailers and countries, build email and direct traffic and stop work on pages that do not earn or help shoppers."),
         ]
       : [
-          `Before launch: finish the core journey, payments, local legal documents, support training and a controlled customer test in ${countryLabel(country)}.`,
-          `Months 1–2: onboard the first trial customers, watch how they use the product and fix the main reasons they do not complete the journey.`,
-          `Months 3–6: convert trials to paid plans and work toward ${initialUsers.toLocaleString("en-GB")} paying customers while measuring the true cost of winning and supporting each account.`,
-          "Months 7–12: grow the channels that produce retained customers, add selected partners and pause any channel that loses money.",
+          `${t("Before launch: finish the core journey, payments, local legal documents, support training and a controlled customer test in")} ${t(countryLabel(country))}.`,
+          t("Months 1–2: onboard the first trial customers, watch how they use the product and fix the main reasons they do not complete the journey."),
+          `${t("Months 3–6: convert trials to paid plans and work toward")} ${initialUsers.toLocaleString("en-GB")} ${t("paying customers while measuring the true cost of winning and supporting each account.")}`,
+          t("Months 7–12: grow the channels that produce retained customers, add selected partners and pause any channel that loses money."),
         ],
     successMeasures: affiliateStore
       ? [
-          `${initialUsers.toLocaleString("en-GB")} confirmed affiliate orders in the starting revenue month`,
-          `${currency}${arpu.toFixed(2)} average confirmed commission per eligible order`,
-          `${(userGrowth * 100).toFixed(0)}% modelled monthly growth in confirmed orders`,
-          "Retailer links, prices and disclosures checked and kept current",
-          `Direct monthly brand cost kept near ${currency}${directCost.toLocaleString("en-GB")}`,
+          `${initialUsers.toLocaleString("en-GB")} ${t("confirmed affiliate orders in the starting revenue month")}`,
+          `${currency}${arpu.toFixed(2)} ${t("average confirmed commission per eligible order")}`,
+          `${(userGrowth * 100).toFixed(0)}% ${t("modelled monthly growth in confirmed orders")}`,
+          t("Retailer links, prices and disclosures checked and kept current"),
+          `${t("Direct monthly brand cost kept near")} ${currency}${directCost.toLocaleString("en-GB")}`,
         ]
       : [
-          `${initialUsers.toLocaleString("en-GB")} starting paying customers after the free-trial period`,
-          `${currency}${arpu} average monthly revenue per paying customer`,
-          `${(userGrowth * 100).toFixed(0)}% modelled monthly customer growth`,
-          `${(churn * 100).toFixed(1)}% or lower monthly customer cancellations`,
-          `Direct monthly brand cost kept near ${currency}${directCost.toLocaleString("en-GB")}`,
+          `${initialUsers.toLocaleString("en-GB")} ${t("starting paying customers after the free-trial period")}`,
+          `${currency}${arpu} ${t("average monthly revenue per paying customer")}`,
+          `${(userGrowth * 100).toFixed(0)}% ${t("modelled monthly customer growth")}`,
+          `${(churn * 100).toFixed(1)}% ${t("or lower monthly customer cancellations")}`,
+          `${t("Direct monthly brand cost kept near")} ${currency}${directCost.toLocaleString("en-GB")}`,
         ],
     reasonsItCanWin: brand.competitors.slice(0, 3).map(
-      (competitor) => `Against ${competitor.name}: ${simplifyInvestorLanguage(competitor.counter)}`,
+      (competitor) => `${t("Against")} ${competitor.name}: ${t(simplifyInvestorLanguage(competitor.counter))}`,
     ),
     mainRisks: brand.risks.slice(0, 3).map(
-      (risk) => `${simplifyInvestorLanguage(risk.risk)} — response: ${simplifyInvestorLanguage(risk.mitigation)}`,
+      (risk) => `${t(simplifyInvestorLanguage(risk.risk))} — ${t("response")}: ${t(simplifyInvestorLanguage(risk.mitigation))}`,
     ),
   };
 }
