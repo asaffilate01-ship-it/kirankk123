@@ -32,6 +32,7 @@ import {
   type CountryId,
   type SectorId,
 } from "@/lib/brand-taxonomy";
+import { brandPlainEnglish, brandVolumeLabel } from "@/lib/brand-investor-summary";
 
 export function BrandsPanel() {
   const state = useFinance();
@@ -58,7 +59,8 @@ export function BrandsPanel() {
       (q === "" ||
         b.name.toLowerCase().includes(q) ||
         b.domain.toLowerCase().includes(q) ||
-        b.tagline.toLowerCase().includes(q)),
+        b.tagline.toLowerCase().includes(q) ||
+        brandPlainEnglish(b).toLowerCase().includes(q)),
   );
 
   const metrics = (id: string) => ({
@@ -105,7 +107,7 @@ export function BrandsPanel() {
             <div className="font-semibold">M{a.launchMonth}</div>
           </div>
           <div>
-            <div className="text-muted-foreground">{t("Paying customers")} @ M{rows.length}</div>
+            <div className="text-muted-foreground">{brandVolumeLabel(b)} @ M{rows.length}</div>
             <div className="font-semibold">{fmtNum(users)}</div>
           </div>
           <div>
@@ -113,9 +115,12 @@ export function BrandsPanel() {
             <div className="font-semibold">{fmtEURk(mrr)}</div>
           </div>
         </div>
-        <p className="line-clamp-3 text-xs text-muted-foreground">{t(b.description)}</p>
+        <div className="rounded-md bg-primary/5 p-3">
+          <div className="text-[10px] font-semibold uppercase tracking-wide text-primary">What it does</div>
+          <p className="mt-1 line-clamp-4 text-xs leading-relaxed">{brandPlainEnglish(b)}</p>
+        </div>
         <Button asChild variant="outline" size="sm" className="mt-auto">
-          <Link to="/brands/$brandId" params={{ brandId: b.id }}>{t("Open brand · edit assumptions")}</Link>
+          <Link to="/brands/$brandId" params={{ brandId: b.id }}>View business plan</Link>
         </Button>
       </Card>
     );
@@ -305,8 +310,12 @@ export function BrandsPanel() {
                             <div className="font-semibold">{fmtEURk(mrr)}</div>
                           </div>
                         </div>
+                        <div className="rounded bg-primary/5 p-2.5">
+                          <div className="text-[10px] font-semibold uppercase tracking-wide text-primary">What it does</div>
+                          <p className="mt-1 text-[11px] leading-relaxed">{brandPlainEnglish(e)}</p>
+                        </div>
                         <Button asChild variant="outline" size="sm">
-                          <Link to="/brands/$brandId" params={{ brandId: e.id }}>{t("Open brand · edit assumptions")}</Link>
+                          <Link to="/brands/$brandId" params={{ brandId: e.id }}>View business plan</Link>
                         </Button>
                       </div>
                     );

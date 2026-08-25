@@ -17,6 +17,9 @@ import { LanguageToggle } from "@/components/LanguageToggle";
 import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
 import { BrandInvestment } from "@/components/dashboard/BrandInvestment";
 import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
+import { BrandBusinessPlan } from "@/components/dashboard/BrandBusinessPlan";
+import { countryLabel, countryOf } from "@/lib/brand-taxonomy";
+import { brandAttritionLabel, brandRevenuePerUnitLabel, brandVolumeLabel } from "@/lib/brand-investor-summary";
 
 
 
@@ -72,11 +75,13 @@ function BrandDetail() {
   const handleDownloadPdf = () => {
     downloadBrandPdf(brand, {
       launchMonth: a.launchMonth,
+      initialUsers: a.initialUsers,
       users,
       mrr,
       arpu: a.arpu,
       churn: a.churn,
       growth: a.userGrowth,
+      directCost: a.directCost,
       horizonMonths: rows.length,
     });
   };
@@ -133,18 +138,29 @@ function BrandDetail() {
                 {t("International .com brand running on the shared TraveNexia booking engine — sold cross-border in multiple currencies.")}
               </p>
             )}
+            {brand.family === "AFFIVON" && (
+              <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
+                {brand.id === "affivon"
+                  ? "Shared landlord platform for the ten Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting."
+                  : "One of ten focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders."}
+              </p>
+            )}
           </div>
-          <p className="text-sm">{t(brand.description)}</p>
+          <BrandBusinessPlan brand={brand} assumptions={a} />
 
-          <Section title={t("Why this product exists")}>
+          <Section title={t("Detailed product description")} defaultOpen={false}>
+            <p className="text-sm">{t(brand.description)}</p>
+          </Section>
+
+          <Section title={t("Detailed reason for the product")} defaultOpen={false}>
             <p className="text-sm">{t(brand.reason)}</p>
           </Section>
 
-          <Section title={t("Proposition")}>
+          <Section title={t("Detailed offer")} defaultOpen={false}>
             <p className="text-sm">{t(brand.proposition)}</p>
           </Section>
 
-          <Section title={t("Features")}>
+          <Section title={t("Detailed feature list")} defaultOpen={false}>
             <ul className="grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
               {brand.features.map((f) => (
                 <li key={t(f)} className="flex gap-2">
@@ -155,7 +171,7 @@ function BrandDetail() {
             </ul>
           </Section>
 
-          <Section title={t("SaaS platform & apps")}>
+          <Section title={t("Detailed product and app list")} defaultOpen={false}>
             {brand.pricing && brand.pricing.length > 0 && (
               <div className="mb-4">
                 <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -186,7 +202,7 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("User types")}>
+          <Section title={t("Detailed users and examples")} defaultOpen={false}>
             <div className="space-y-2">
               {brand.userTypes.map((u) => (
                 <div key={t(u.type)} className="rounded-md border p-3 text-sm">
@@ -197,18 +213,20 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-            <div className="rounded-md border p-3 text-sm">
-              <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Market")}</div>
-              <div className="mt-1">{t(brand.market)}</div>
+          <Section title={t("Source market estimate and detailed customer list")} defaultOpen={false}>
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+              <div className="rounded-md border p-3 text-sm">
+                <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Market")}</div>
+                <div className="mt-1">{t(brand.market)}</div>
+              </div>
+              <div className="rounded-md border p-3 text-sm">
+                <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Audience")}</div>
+                <div className="mt-1">{t(brand.audience)}</div>
+              </div>
             </div>
-            <div className="rounded-md border p-3 text-sm">
-              <div className="text-xs font-semibold uppercase text-muted-foreground">{t("Audience")}</div>
-              <div className="mt-1">{t(brand.audience)}</div>
-            </div>
-          </div>
+          </Section>
 
-          <Section title={t("How this market is served in Germany today")} defaultOpen={false}>
+          <Section title={t(`How this market works in ${countryLabel(countryOf(brand))} today`)} defaultOpen={false}>
             <div className="space-y-2">
               <p className="text-sm">{t(brand.currentMarket.howServed)}</p>
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -224,7 +242,7 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("Positives — why this wins")}>
+          <Section title={t("Detailed strengths")} defaultOpen={false}>
             <ul className="grid grid-cols-1 gap-2 text-sm md:grid-cols-2">
               {brandPositives(brand).map((p) => (
                 <li key={p} className="flex gap-2 rounded-md border p-3">
@@ -235,7 +253,7 @@ function BrandDetail() {
             </ul>
           </Section>
 
-          <Section title={t("How we make money")}>
+          <Section title={t("Detailed revenue model")} defaultOpen={false}>
             <div className="space-y-2">
               {brandMoneyModel(brand).map((line) => (
                 <div key={line.label} className="rounded-md border p-3 text-sm">
@@ -246,7 +264,7 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("Competition & how we break their strength")}>
+          <Section title={t("Detailed competitor analysis")} defaultOpen={false}>
             <div className="space-y-2">
               {brandCompetition(brand).map((c) => (
                 <div key={c.name} className="rounded-md border p-3 text-sm">
@@ -260,10 +278,10 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t("Competitive advantage — one team, 100+ brands")} defaultOpen={false}>
+          <Section title={`Competitive advantage — one team, ${BRANDS.length} brands`} defaultOpen={false}>
             <p className="text-sm text-muted-foreground">
               Unlike standalone SaaS businesses, {brand.name} shares every non-product function with the
-              other 99+ iTechLounge brands. Each additional product therefore benefits from economies of
+              other {BRANDS.length - 1} iTechLounge brand entities. Each additional product therefore benefits from economies of
               scale and cross-selling opportunities.
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
@@ -315,7 +333,7 @@ function BrandDetail() {
               <div className="font-semibold">M{a.launchMonth}</div>
             </div>
             <div>
-              <div className="text-muted-foreground">{t("Paying customers")} @ M{rows.length}</div>
+              <div className="text-muted-foreground">{brandVolumeLabel(brand)} @ M{rows.length}</div>
               <div className="font-semibold">{fmtNum(users)}</div>
             </div>
             <div>
@@ -325,16 +343,16 @@ function BrandDetail() {
           </div>
           <SliderRow label={t("Launch month")} value={a.launchMonth} min={1} max={state.global.months}
             onChange={(v) => state.setBrand(brand.id, { launchMonth: v })} />
-          <SliderRow label={t("Starting paying customers (after free trial)")} value={a.initialUsers} min={0} max={2000} step={10}
+          <SliderRow label={brand.revenueUnit === "affiliate-order" ? "Starting confirmed affiliate orders" : t("Starting paying customers (after free trial)")} value={a.initialUsers} min={0} max={5000} step={10}
             onChange={(v) => state.setBrand(brand.id, { initialUsers: v })} format={fmtNum} />
           <SliderRow label={t("New customers added each month")} value={Math.round(a.userGrowth * 1000) / 10}
             min={0} max={40} step={0.5}
             onChange={(v) => state.setBrand(brand.id, { userGrowth: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
-          <SliderRow label={t("Average price per customer / month")} value={a.arpu} min={0} max={500} step={1}
+          <SliderRow label={brandRevenuePerUnitLabel(brand)} value={a.arpu} min={0} max={500} step={brand.revenueUnit === "affiliate-order" ? 0.1 : 1}
             onChange={(v) => state.setBrand(brand.id, { arpu: v })}
-            format={(v) => `€${v.toFixed(0)}/mo`} />
-          <SliderRow label={t("Customers cancelling each month")} value={Math.round(a.churn * 1000) / 10}
+            format={(v) => brand.revenueUnit === "affiliate-order" ? `€${v.toFixed(2)}/order` : `€${v.toFixed(0)}/mo`} />
+          <SliderRow label={brandAttritionLabel(brand)} value={Math.round(a.churn * 1000) / 10}
             min={0} max={15} step={0.1}
             onChange={(v) => state.setBrand(brand.id, { churn: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
@@ -344,7 +362,7 @@ function BrandDetail() {
             onChange={(v) => state.setBrand(brand.id, { directCost: v })} format={fmtEURk} />
           <div className="grid grid-cols-2 gap-2 rounded-md bg-muted/50 p-3 text-xs">
             <div>{t("Free trial:")} <b>{state.global.freeTrialMonths} mo</b></div>
-            <div>{t("Price per customer:")} <b>{fmtEUR(a.arpu)}</b></div>
+            <div>{brand.revenueUnit === "affiliate-order" ? "Commission per order:" : t("Price per customer:")} <b>{brand.revenueUnit === "affiliate-order" ? `€${a.arpu.toFixed(2)}` : fmtEUR(a.arpu)}</b></div>
             <div>{t("Cancellations:")} <b>{fmtPct(a.churn)}</b></div>
             <div>{t("Growth:")} <b>{fmtPct(a.userGrowth)}</b></div>
           </div>

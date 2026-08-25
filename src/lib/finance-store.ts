@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { BRANDS, type Brand } from "./brands";
+import { brandDefinitionStage } from "./brand-investor-summary";
 
 export type BrandAssumption = {
   id: string;
@@ -59,11 +60,9 @@ type State = {
 };
 
 /* ------------------------------------------------------------------ *
- * Baseline assumptions — identical for every brand, adjustable per brand
- * in the UI. 100 sign-ups at launch, 15% monthly growth, 3 cancellations
- * per 100 customers, €39/mo in Germany and £39/mo (≈€45) in the UK,
- * no additional revenue, and no direct brand cost (all overhead sits in the
- * shared HQ / tech / marketing engine).
+ * Standard subscription baseline helpers. Most brands use these values;
+ * affiliate storefronts use confirmed-order volume and commission per order
+ * instead. Every final assumption remains adjustable in the UI.
  * ------------------------------------------------------------------ */
 export const BASELINE = {
   initialUsers: 100,
@@ -89,14 +88,15 @@ const defaultBrands = (): Record<string, BrandAssumption> =>
       b.id,
       {
         id: b.id,
-        enabled: true,
+        // Only a fully defined product is included in the forecast by default.
+        enabled: brandDefinitionStage(b) === "defined",
         launchMonth: b.defaultLaunchMonth,
-        initialUsers: BASELINE.initialUsers,
-        userGrowth: BASELINE.userGrowth,
-        arpu: baselineArpu(b),
-        churn: BASELINE.churn,
-        addlRevenue: BASELINE.addlRevenue,
-        directCost: BASELINE.directCost,
+        initialUsers: b.defaultInitialUsers,
+        userGrowth: b.defaultUserGrowth,
+        arpu: b.defaultArpu,
+        churn: b.defaultChurn,
+        addlRevenue: b.defaultAddlRevenue,
+        directCost: b.defaultDirectCost,
       },
     ]),
   );

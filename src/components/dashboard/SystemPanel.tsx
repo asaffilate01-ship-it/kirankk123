@@ -22,6 +22,7 @@ import {
 import { logoEn, logoDe, logoEnDark, logoDeDark } from "@/lib/logo";
 import { BrandLogo } from "@/components/BrandLogo";
 import { PanelIntro, Section } from "./Explain";
+import { portfolioDefinitionCounts } from "@/lib/brand-investor-summary";
 
 function BrandDirectory() {
   const state = useFinance();
@@ -114,6 +115,7 @@ function BrandDirectory() {
 }
 
 export function SystemPanel() {
+  const definitionCounts = portfolioDefinitionCounts(BRANDS);
   return (
     <div className="space-y-4">
       <PanelIntro
@@ -122,12 +124,14 @@ export function SystemPanel() {
       />
 
       <Section
-        title={t("Our system — one team, 100+ brands")}
+        title={`Our system — one team, ${BRANDS.length} brand entities`}
         description={t("How one shared platform runs the whole portfolio — plus the searchable brand list.")}
                 badge={`${BRANDS.length} ${t("brands")}`}
       >
         <div className="space-y-3 text-sm">
-        <p className="text-muted-foreground">{t("iTechLounge operates as a single company that ships and runs 100+ digital brands. Every brand shares the same operating chassis, so each new product launched on our platform benefits from economies of scale and cross-selling into the existing customer base of the others.")}</p>
+        <p className="text-muted-foreground">
+          All {definitionCounts.defined} brand entities now have a defined product plan. They share technology and central teams, reducing repeated cost and creating cross-selling opportunities.
+        </p>
         <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
           {SHARED_ADVANTAGE.map((s) => (
             <li key={s} className="flex gap-2">
