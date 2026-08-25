@@ -1,3 +1,4 @@
+import { t } from "./i18n";
 import type { Brand } from "./brands";
 
 /**
@@ -118,35 +119,35 @@ export function brandDefinitionStage(brand: Brand): BrandDefinitionStage {
 
 export function brandPlainEnglish(brand: Brand): string {
   if (CONCEPT_ONLY_IDS.has(brand.id)) {
-    return `${brand.name} is a reserved brand and domain. Its product, target customer and business model have not yet been approved.`;
+    return `${brand.name} ${t("is a reserved brand and domain. Its product, target customer and business model have not yet been approved.")}`;
   }
-  return PLAIN_ENGLISH_SUMMARIES[brand.id] ?? brand.description;
+  return t(PLAIN_ENGLISH_SUMMARIES[brand.id] ?? brand.description);
 }
 
 export function brandRevenuePlainEnglish(brand: Brand): string {
   if (CONCEPT_ONLY_IDS.has(brand.id)) {
-    return "No revenue model should be presented to investors until the product scope is approved.";
+    return t("No revenue model should be presented to investors until the product scope is approved.");
   }
   const currency = brand.region === "UK" ? "£" : "€";
   if (brand.revenueUnit === "affiliate-order") {
-    return `Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of ${currency}${brand.defaultArpu} confirmed revenue per order.`;
+    return `${t("Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of")} ${currency}${brand.defaultArpu} ${t("confirmed revenue per order.")}`;
   }
   const otherIncome = brand.defaultAddlRevenue > 0
-    ? " It can also earn from setup, optional extras and partner services."
+    ? " " + t("It can also earn from setup, optional extras and partner services.")
     : "";
-  return `Paying customers are modelled at an average of ${currency}${brand.defaultArpu} per month after a two-month free trial.${otherIncome}`;
+  return `${t("Paying customers are modelled at an average of")} ${currency}${brand.defaultArpu} ${t("per month after a two-month free trial.")}${otherIncome}`;
 }
 
 export function brandVolumeLabel(brand: Brand): string {
-  return brand.revenueUnit === "affiliate-order" ? "Confirmed affiliate orders" : "Paying customers";
+  return brand.revenueUnit === "affiliate-order" ? t("Confirmed affiliate orders") : t("Paying customers");
 }
 
 export function brandRevenuePerUnitLabel(brand: Brand): string {
-  return brand.revenueUnit === "affiliate-order" ? "Average commission per order" : "Average price per customer / month";
+  return brand.revenueUnit === "affiliate-order" ? t("Average commission per order") : t("Average price per customer / month");
 }
 
 export function brandAttritionLabel(brand: Brand): string {
-  return brand.revenueUnit === "affiliate-order" ? "Monthly order drop-off" : "Customers cancelling each month";
+  return brand.revenueUnit === "affiliate-order" ? t("Monthly order drop-off") : t("Customers cancelling each month");
 }
 
 export function investorSummaryCoverage(brands: Brand[]) {
