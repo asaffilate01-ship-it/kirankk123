@@ -1,70 +1,76 @@
 import json
 
-input_file = '/tmp/chunk5.json'
-output_file = '/tmp/out5.json'
+input_file = '/tmp/chunk1.json'
+output_file = '/tmp/out1.json'
 
-with open(input_file, 'r') as f:
-    original_strings = json.load(f)
+with open(input_file, 'r', encoding='utf-8') as f:
+    data = json.load(f)
 
-translations = [
-    "Ganzjährige Aufenthalte auf atlantischen Inseln, Aktivitäten-Bundles und Winter-Langzeitpakete zu Direktlieferanten-Preisen.",
-    "≈16m jährliche Besucher auf den Kanarischen Inseln; starke Nachfrage nach Winter-Langzeitaufenthalten.",
-    "Winter-Langzeitreisende, Familien, Remote-Mitarbeiter.",
-    "CANAVELLE existiert, weil dieser Markt immer noch von fragmentierten Vermittlern, Tabellenkalkulationen und Telefonanrufen bedient wird. Käufer zahlen mehr für weniger Transparenz, und Anbieter verlieren Marge an Zwischenhändler. Eine einzige, gut konzipierte Plattform beseitigt diese Reibungsverluste.",
-    "Segeln, Charter und Inselhopping",
-    "Yacht- und Katamaran-Charter, Routen mit Skipper und Inselhopping-Pakete mit transparenter All-in-Preisgestaltung.",
-    "≈€25bn globaler Yacht-Chartermarkt.",
-    "Charter-Gruppen, Familien, Segelclubs, Firmenausflüge.",
-    "OCEAVELA existiert, weil dieser Markt immer noch von fragmentierten Vermittlern, Tabellenkalkulationen und Telefonanrufen bedient wird. Käufer zahlen mehr für weniger Transparenz, und Anbieter verlieren Marge an Zwischenhändler. Eine einzige, gut konzipierte Plattform beseitigt diese Reibungsverluste.",
-    "≈15m jährliche Besucher in Ägypten; Tourismus ist einer der drei wichtigsten Devisenbringer, und allein der Markt für Nilkreuzfahrten übersteigt jährlich €1.5bn.",
-    "Italien und die Adria, in neuem Licht.",
-    "Kuratierte Aufenthalte an der italienischen und adriatischen Küste, Segelrouten, Inseltransfers und lokale Erlebnisse, direkt bei den Eigentümern gebucht durch transparente All-in-Preisgestaltung.",
-    "≈80m jährliche Besucher in Italien und der Adria-Küstenregion.",
-    "Segel- und Strandreisende, Familien, Gruppen.",
-    "ADRILUME existiert, weil dieser Markt immer noch von fragmentierten Vermittlern, Tabellenkalkulationen und Telefonanrufen bedient wird. Käufer zahlen mehr für weniger Transparenz, und Anbieter verlieren Marge an Zwischenhändler. Eine einzige, gut konzipierte Plattform beseitigt diese Reibungsverluste.",
-    "Iberische Aktiv- und Wellnessreisen",
-    "Jakobsweg-Wanderungen, Radrouten, Thermalbäder und Aktiv-Retreats in ganz Spanien und Portugal mit Gepäcktransfer und Unterstützung.",
-    "≈€20bn europäischer Markt für Aktiv- und Wellnessreisen.",
-    "Wanderer, Radfahrer, Käufer von Wellness-Retreats.",
-    "IBERAVIVA existiert, weil dieser Markt immer noch von fragmentierten Vermittlern, Tabellenkalkulationen und Telefonanrufen bedient wird. Käufer zahlen mehr für weniger Transparenz, und Anbieter verlieren Marge an Zwischenhändler. Eine einzige, gut konzipierte Plattform beseitigt diese Reibungsverluste.",
-    "Nördliche Seele. Zentraler Charme. — Europa-Touren, Aufenthalte & Transfers",
-    "Länderübergreifende europäische Reisemarke für Nord- und Mitteleuropa: Stadttouren, bahnbasierte Reiserouten, Aufenthalte, Flughafentransfers und Mietwagen, mit lokalisierten Inhalten in jeder europäischen Hauptsprache und einer Partnerkonsole für lokale Betreiber.",
-    "≈740m internationale Ankünfte in Europa pro Jahr; €70bn Ausgaben für Touren & Aktivitäten.",
-    "Städtereisende, Bahnreisende, Familien und kleine Gruppen in ganz Europa.",
-    "EURALUME existiert, weil grenzüberschreitende Europareisen immer noch aus separaten Bahn-, Hotel-, Transfer- und Aktivitäten-Websites zusammengestückelt werden. Reisende zahlen zu viel für weniger Transparenz, und lokale Betreiber verlieren Marge an Aggregatoren. Eine plattformübergreifende Lösung beseitigt diese Reibungsverluste.",
-    "Eine europäische Reiseplattform: mehrsprachige SEO-Landingpages pro Reiseziel, All-in-Preisgestaltung, Anfrage-zu-Buchung-Flow, verifizierte lokale Betreiber, Reisenden-App mit Dokumenten und Reiseführern — aufgebaut auf dem gemeinsamen iTechLounge-Stack.",
-    "Wo jede Reise beginnt.",
-    "≈€700bn weltweite Flugreisedistribution; €120bn europäisches Bahn- und Fernbus-Ticketing.",
-    "Freizeit- und KMU-Geschäftsreisende sowie die Schwester-Reisemarken, die es als Buchungsmaschine nutzen.",
-    "Eine Suche über Flug, Bahn und Fernbus mit All-in-Preisgestaltung, reservierten Anfragen, persönlichem Reservierungssupport und einer Partnerkonsole — und es dient gleichzeitig als Transport-Engine hinter jeder iTechLounge-Reisemarke.",
-    "Beginnen Sie mit Absicht. Reisen Sie mit Glauben. — Saudi-Arabien & religiöse Reisen",
-    "Plattform für Saudi-Arabien-Reisen und religiöse Fahrten: Umrah- und Hajj-nahe Reiserouten, Aufenthalte in Medina und Mekka, Touren in Riad und AlUla, Wüstenerlebnisse, Flughafentransfers und geführte Stadttouren, mit arabischen und englischen Inhalten.",
-    "≈€40bn Ziel für den Inbound-Tourismus in Saudi-Arabien bis 2030; ≈€25bn jährliche Ausgaben für Umrah- und Pilgerreisen.",
-    "Muslimische Familien und Gruppen, die für Umrah- und Kulturerbereisen reisen, sowie saudische Freizeit- und Vision-2030-Touristen.",
-    "NIYYAHNOOR existiert, weil religiöse Reisen immer noch über undurchsichtige Agenturpakete mit Bareinzahlungen, WhatsApp-Bestätigungen und ohne schriftliche Reiseroute verkauft werden. Familien verdienen transparente Preise, verifizierte Anbieter und eine ordnungsgemäße Dokumentation.",
-    "Transparente, respektvolle Saudi-Arabien- und religiöse Reisen: verifizierte Anbieter, All-in-Preisgestaltung, schriftliche Reiserouten, gebetsbewusste Zeitplanung und arabisch/englischer Support — auf der gemeinsamen iTechLounge-Plattform.",
-    "Jede Reise, intelligent verbunden. — Reisebuchungs-Engine",
-    "≈€9bn Markt für Reisetechnologie und Buchungssystem-Software.",
-    "Reiseveranstalter, DMCs, Reisebüros — sowie die konzerneigenen Reisemarken.",
-    "Finden. Beauftragen. Erledigt. — Aufträge, Material und Lieferung für das britische Handwerk",
-    "Dreiseitige Handwerkerplattform: Auftragsmanagement und Angebotserstellung für Handwerker, Materialbestellung zu Fachhandelspreisen bei Partnergroßhändlern und Lieferung am selben Tag zur Baustelle — mit einem Kundenportal für Angebote, Fortschrittsfotos und Zahlungen.",
-    "≈900,000 britische Handwerksbetriebe; ≈£29bn Ausgaben im Baustoffhandel.",
-    "CRAFTVARO UK existiert, weil ein Handwerker täglich etwa eine Stunde verliert, um zu einem Händler zu fahren, Angebote auf Zetteln schreibt und Rechnungen wochenlang hinterherläuft. Den Händler, den Papierkram und die Lieferung in einer Smartphone-App zu vereinen, löst alle drei Probleme auf einmal.",
-    "Kostenlose Auftragssoftware, finanziert durch Material- und Liefermarge: Angebote und Rechnungen vor Ort erstellen mit automatisch kalkulierten Materialkosten, Bestellung zu ausgehandelten Fachhandelspreisen, Lieferung zur Baustelle innerhalb weniger Stunden — dieselbe Engine wie TRADEROS, lokalisiert für diesen Markt.",
-    "Finden. Beauftragen. Erledigt. — Aufträge, Material und Lieferung für Handwerker",
-    "≈560,000 Handwerksbetriebe in Deutschland; ≈€40bn Umsatz im Baustoffhandel.",
-    "Elektriker, Installateure, Bauunternehmen, Hausbesitzer, Baustoffhändler, Fahrer.",
-    "CRAFTVARO existiert, weil ein Handwerker täglich etwa eine Stunde verliert, um zu einem Händler zu fahren, Angebote auf Zetteln schreibt und Rechnungen wochenlang hinterherläuft. Den Händler, den Papierkram und die Lieferung in einer Smartphone-App zu vereinen, löst alle drei Probleme auf einmal.",
-    "Mutig führen. Die Zukunft bauen. — UAE-Unternehmensgründung, Finanzierung & Compliance",
-    "Betriebssystem für Geschäfte in den VAE: Unternehmensgründung in Mainland und Freizonen, Gründungsfinanzierung zu einem festen, offengelegten Gewinn über 12–18 Monate, Investoren- und Mitarbeitervisa, Bankkontoeröffnung, Buchhaltung, Körperschaftsteuer- und MwSt-Compliance, WPS-Gehaltsabrechnung und ein Partner-Marktplatz — mit englischer und arabischer Benutzeroberfläche und einer nativen mobilen App.",
-    "≈90,000 neue Unternehmensregistrierungen in den VAE pro Jahr; ≈€4bn Markt für Unternehmensgründung, PRO- und Compliance-Dienstleistungen."
-]
+translations = {
+    "Care Certificate and mandatory modules delivered as short, gamified mobile lessons with practical observation sign-off, plus a live training matrix that shows any inspector exactly who is compliant and who expires next month.": "Care Certificate und Pflichtmodule, bereitgestellt als kurze, spielerische mobile Lerneinheiten mit praktischer Abnahme vor Ort, ergänzt durch eine Live-Schulungsmatrix, die jedem Prüfer genau anzeigt, wer konform ist und wessen Zertifizierung im nächsten Monat abläuft.",
+    "Company formation, compliance and growth tools": "Tools für Unternehmensgründung, Compliance und Wachstum",
+    "Transparent UK company formation with everything that comes after it: registered office, Companies House filings, VAT/PAYE registration, business banking and compliance reminders.": "Transparente britische Unternehmensgründung mit allem, was dazugehört: eingetragener Geschäftssitz, Einreichungen beim Companies House, MwSt.-/Lohnsteuer-Registrierung (VAT/PAYE), Geschäftskonten und Compliance-Erinnerungen.",
+    "≈800,000 UK companies incorporated each year; ≈£450m formation and company-secretarial market.": "≈800.000 britische Unternehmensgründungen pro Jahr; ≈£450 Mio. Markt für Gründungen und Sekretariatsdienstleistungen.",
+    "First-time founders, contractors, overseas entrepreneurs, accountants.": "Erstgründer, Auftragnehmer, Unternehmer aus dem Ausland, Steuerberater.",
+    "Formation agents advertise £12 incorporations and then bill for the registered office, the confirmation statement, the VAT registration and the mail forwarding. Founders discover the real cost in year two.": "Gründungsagenturen werben mit Gründungen für £12 und stellen dann den Geschäftssitz, das Bestätigungsschreiben, die MwSt.-Registrierung und die Postweiterleitung in Rechnung. Gründer stellen die tatsächlichen Kosten erst im zweiten Jahr fest.",
+    "One transparent monthly plan covering incorporation, registered office and director service address, all Companies House filings, VAT/PAYE registration and deadline management — plus banking, accounting and insurance partners on revenue share.": "Ein transparenter Monatsplan, der Gründung, Geschäftssitz und Serviceadresse für Geschäftsführer, alle Einreichungen beim Companies House, MwSt.-/Lohnsteuer-Registrierung (VAT/PAYE) und Fristenmanagement abdeckt – plus Partner für Banking, Buchhaltung und Versicherungen auf Umsatzbeteiligungsbasis.",
+    "Build. Sell. Grow.": "Aufbauen. Verkaufen. Wachsen.",
+    "Multi-store commerce software on a landlord-and-tenant model: the platform owner onboards brands, and every tenant gets its own branded storefront with payments, catalogue, delivery rules, roles and analytics from one codebase. Sold internationally.": "Multi-Store-Commerce-Software auf Basis eines Landlord-and-Tenant-Modells: Der Plattformbetreiber bindet Marken ein, und jeder Mandant erhält seinen eigenen gebrandeten Storefront mit Zahlungen, Katalog, Lieferregeln, Rollen und Analysen aus einer gemeinsamen Codebasis. Internationaler Vertrieb.",
+    "≈$8bn global SaaS spend on ecommerce platforms and franchise/multi-location commerce tooling.": "≈$8 Mrd. weltweite SaaS-Ausgaben für E-Commerce-Plattformen und Tools für Franchise- oder Multi-Standort-Handel.",
+    "Franchise groups, multi-brand retailers, agencies, marketplace and platform operators, single shops ready to scale.": "Franchise-Gruppen, Multi-Brand-Einzelhändler, Agenturen, Marktplatz- und Plattformbetreiber, Einzelgeschäfte mit Skalierungspotenzial.",
+    "Brands that want several stores are forced to either pay per-store Shopify subscriptions with no group view, or commission a bespoke build. MERQANO ships the expensive, boring parts of commerce once — payments, orders, delivery logic, roles, SEO — so a new brand is a configuration change, not a new project.": "Marken, die mehrere Stores wünschen, sind gezwungen, entweder Shopify-Abonnements pro Store ohne Gesamtübersicht zu bezahlen oder eine Individualentwicklung in Auftrag zu geben. MERQANO liefert die teuren, aufwendigen Teile des E-Commerce einmalig – Zahlungen, Bestellungen, Lieferlogik, Rollen, SEO – sodass eine neue Marke nur eine Konfigurationsänderung und kein neues Projekt ist.",
+    "One platform, many tenants: themes, catalogues and domains are data, so a store can be branded, loaded, connected to payouts and trading on its own domain in days. The landlord sees platform-wide revenue and commission; each tenant sees only their own shop, enforced at database level.": "Eine Plattform, viele Mandanten: Themes, Kataloge und Domains sind Daten, sodass ein Store innerhalb weniger Tage gebrandet, befüllt, mit Auszahlungen verknüpft und auf der eigenen Domain live gehen kann. Der Betreiber sieht den plattformweiten Umsatz und die Provisionen; jeder Mandant sieht nur seinen eigenen Shop, abgesichert auf Datenbankebene.",
+    "Beauty finden. Direkt buchen.": "Beauty finden. Direkt buchen.",
+    "German edition of STYLESYNC: online booking marketplace plus salon management for Friseure, Kosmetik and Barbershops, with DSGVO-compliant client records, TSE-ready checkout and SEPA payments.": "Deutsche Edition von STYLESYNC: Online-Buchungsmarktplatz plus Salon-Management für Friseure, Kosmetik und Barbershops, mit DSGVO-konformen Kundenakten, TSE-fähiger Kasse und SEPA-Zahlungen.",
+    "≈80,000 Friseur- und Kosmetikbetriebe in Germany; ≈€22bn consumer spend.": "≈80.000 Friseur- und Kosmetikbetriebe in Deutschland; ≈€22 Mrd. Verbraucherausgaben.",
+    "Salon owners, self-employed stylists, beauty studios, clients.": "Salonbesitzer, selbstständige Stylisten, Beautystudios, Kunden.",
+    "German salons still run paper appointment books and lose double-digit revenue to no-shows, while Treatwell charges commission on every new client. SCHONOVA offers flat-fee software with deposits built in.": "Deutsche Salons führen noch immer Terminkalender aus Papier und verlieren zweistellige Umsätze durch Nichterscheinen, während Treatwell Provisionen auf jeden Neukunden erhebt. SCHONOVA bietet eine Software mit Pauschalgebühr und integrierten Anzahlungen.",
+    "Flat monthly fee, no booking commission: online booking with deposits, staff rota, stock, TSE/GoBD-compliant checkout, DSGVO-safe client and patch-test records, and automated WhatsApp reminders in German.": "Feste monatliche Gebühr, keine Buchungsprovision: Online-Buchung mit Anzahlungen, Dienstplan, Lagerbestand, TSE/GoBD-konforme Kasse, DSGVO-sichere Kunden- und Patch-Test-Unterlagen sowie automatisierte WhatsApp-Erinnerungen auf Deutsch.",
+    "Finden. Parken. Bezahlen.": "Finden. Parken. Bezahlen.",
+    "Parking operating system for drivers, operators and cities: one app to find, book and pay for on-street, barrier and private parking, plus a management layer for operators.": "Park-Betriebssystem für Fahrer, Betreiber und Städte: Eine App zum Finden, Buchen und Bezahlen von Parkplätzen am Straßenrand, hinter Schranken und auf Privatflächen, plus eine Verwaltungsebene für Betreiber.",
+    "≈48m registered cars in Germany; ≈€3.9bn parking revenue.": "≈48 Mio. registrierte Pkw in Deutschland; ≈€3,9 Mrd. Parkumsatz.",
+    "Drivers, parking operators, municipalities, property owners with spare bays.": "Fahrer, Parkplatzbetreiber, Kommunen, Immobilienbesitzer mit freien Stellplätzen.",
+    "German drivers need a different app in every city — Handyparken, EasyPark, PARK NOW, plus each operator's own barrier system. PARKPUNKT is one wallet that works everywhere and pays operators faster.": "Deutsche Autofahrer benötigen in jeder Stadt eine andere App – Handyparken, EasyPark, PARK NOW, plus das jeweilige Schrankensystem des Betreibers. PARKPUNKT ist eine Wallet, die überall funktioniert und Betreiber schneller auszahlt.",
+    "Consumer app free with a low transaction margin; operators pay SaaS for occupancy, dynamic pricing, ANPR/barrier integration and settlement; cities get enforcement and utilisation data. Revenue from three sides of the same transaction.": "Endkunden-App kostenlos mit geringer Transaktionsmarge; Betreiber zahlen SaaS für Auslastung, dynamische Preisgestaltung, ANPR-/Schranken-Integration und Abrechnung; Städte erhalten Daten zur Durchsetzung und Auslastung. Einnahmen von drei Seiten derselben Transaktion.",
+    "The legal operating system for clients and law firms": "Das Rechts-Betriebssystem für Mandanten und Kanzleien",
+    "Verified lawyer marketplace plus secure case management: clients find vetted solicitors, agree milestone-based fees, and every document and payment sits in one audited case file.": "Marktplatz für verifizierte Anwälte plus sicheres Case-Management: Mandanten finden geprüfte Anwälte, vereinbaren meilensteinbasierte Gebühren, und jedes Dokument sowie jede Zahlung befindet sich in einer geprüften Fallakte.",
+    "≈$900bn global legal services market; millions of law firms across the UK, EU, Gulf and South Asia.": "≈$900 Mrd. globaler Markt für Rechtsdienstleistungen; Millionen von Anwaltskanzleien in Großbritannien, der EU, den Golfstaaten und Südasien.",
+    "Private clients, SMEs, law firms, in-house counsel, expats.": "Privatmandanten, KMU, Kanzleien, Unternehmensjuristen, Expats.",
+    "Legal fees are opaque and cross-border cases are chaotic: email attachments, wire transfers and no shared timeline. LAWQUO makes fees fixed and milestone-based, and the case file auditable.": "Anwaltsgebühren sind intransparent und grenzüberschreitende Fälle chaotisch: E-Mail-Anhänge, Überweisungen und kein gemeinsamer Zeitplan. LAWQUO macht Gebühren fix und meilensteinbasiert und die Fallakte prüfbar.",
+    "Clients get verified lawyers with published fixed-fee packages and escrowed milestone payments. Firms get full case-management SaaS — matters, deadlines (Fristen), documents, time capture, beA-ready filing and billing — with new-client flow included.": "Mandanten erhalten verifizierte Anwälte mit veröffentlichten Festpreis-Paketen und treuhänderisch verwalteten Meilensteinzahlungen. Kanzleien erhalten ein vollständiges Case-Management-SaaS – Akten, Fristen, Dokumente, Zeiterfassung, beA-fähige Ablage und Abrechnung – inklusive Neukundenzulauf.",
+    "Mehr als nur Punkte.": "Mehr als nur Punkte.",
+    "Shared loyalty infrastructure for the whole group: one wallet for points, cashback, affiliate shopping, local offers and merchant rewards — spanning direct Zoryn merchants, our own products (KIEZIO, RETTIO, HACCORA, TRAINDIREKT), affiliate retailers and card-linked offer partners.": "Gemeinsame Loyalty-Infrastruktur für die gesamte Gruppe: Eine Wallet für Punkte, Cashback, Affiliate-Shopping, lokale Angebote und Händlerprämien – über direkte Zoryn-Händler, unsere eigenen Produkte (KIEZIO, RETTIO, HACCORA, TRAINDIREKT), Affiliate-Einzelhändler und Partner für kartenbasierte Angebote.",
+    "≈70m German consumers; ≈€2.6bn loyalty and rewards market.": "≈70 Mio. deutsche Konsumenten; ≈€2,6 Mrd. Markt für Loyalty und Prämien.",
+    "Consumers, local retailers, hospitality venues, online merchants.": "Verbraucher, lokale Einzelhändler, Gastronomiebetriebe, Online-Händler.",
+    "Germany's loyalty landscape is Payback, Deutschlandcard and a drawer full of paper stamp cards. Small local merchants are locked out because enterprise loyalty schemes cost more than they can earn.": "Deutschlands Loyalty-Landschaft besteht aus Payback, Deutschlandcard und einer Schublade voller Stempelkarten aus Papier. Kleine lokale Händler sind ausgeschlossen, da Enterprise-Loyalty-Programme mehr kosten, als sie einbringen.",
+    "Free for consumers; merchants pay a small monthly fee for digital stamp cards, targeted campaigns and cashback funding, with settlement through our own payment rails. One wallet spanning the Kiez shop and the online checkout.": "Kostenlos für Verbraucher; Händler zahlen eine geringe monatliche Gebühr für digitale Stempelkarten, gezielte Kampagnen und Cashback-Finanzierung, mit Abrechnung über unsere eigenen Zahlungswege. Eine Wallet, die den Kiez-Laden und den Online-Checkout verbindet.",
+    "EU marketplace compliance operating system": "Compliance-Betriebssystem für EU-Marktplätze",
+    "Compliance OS for products sold into the EU: GPSR, EPR, WEEE, packaging and battery registrations, responsible-person data and per-marketplace documentation, verified before you ship.": "Compliance-OS für in die EU verkaufte Produkte: GPSR, EPR, WEEE, Verpackungs- und Batterieregistrierungen, Daten zur verantwortlichen Person und marktplatzspezifische Dokumentation, verifiziert vor dem Versand.",
+    "≈1.4m EU marketplace sellers affected by GPSR and EPR; ≈€1.2bn compliance-services market.": "≈1,4 Mio. EU-Marktplatzverkäufer, die von GPSR und EPR betroffen sind; ≈€1,2 Mrd. Markt für Compliance-Dienstleistungen.",
+    "Amazon/eBay sellers, D2C brands, importers, marketplace operators.": "Amazon-/eBay-Verkäufer, D2C-Marken, Importeure, Marktplatzbetreiber.",
+    "Since GPSR came into force, marketplaces delist non-compliant listings automatically, and EPR/LUCID registration failures carry five-figure fines. Most sellers manage this in a spreadsheet and find out when their listings go dark.": "Seit Inkrafttreten der GPSR nehmen Marktplätze nicht-konforme Angebote automatisch offline, und Verstöße gegen EPR/LUCID-Registrierungen ziehen fünfstellige Bußgelder nach sich. Die meisten Verkäufer verwalten dies in einer Tabellenkalkulation und erfahren erst davon, wenn ihre Angebote deaktiviert werden.",
+    "One product record generates every required EU compliance artefact — GPSR responsible person, LUCID/EPR numbers, WEEE and battery registration, declarations of conformity, labelling — and pushes them straight into Amazon, eBay, Kaufland and Otto seller accounts.": "Ein einziger Produktdatensatz generiert alle erforderlichen EU-Compliance-Artefakte – GPSR-verantwortliche Person, LUCID-/EPR-Nummern, WEEE- und Batterieregistrierung, Konformitätserklärungen, Kennzeichnung – und überträgt diese direkt in die Verkäuferkonten von Amazon, eBay, Kaufland und Otto.",
+    "Online ordering, EPOS and KDS for food businesses": "Online-Bestellung, EPOS und KDS für Lebensmittelbetriebe",
+    "The platform brand (landlord) behind our own St Albans venue: Café 1 St Albans runs as a tenant on Dishbee. Online ordering and delivery storefront, EPOS till, kitchen display, inventory and loyalty in one system, sold to independent food businesses worldwide.": "Die Plattformmarke (Betreiber) hinter unserem eigenen Standort in St. Albans: Café 1 St. Albans läuft als Mandant auf Dishbee. Online-Bestell- und Liefer-Storefront, EPOS-Kasse, Küchendisplay, Lagerbestand und Loyalty in einem System, verkauft an unabhängige Lebensmittelbetriebe weltweit.",
+    "≈8m independent food businesses worldwide; ≈$28bn restaurant-technology market.": "≈8 Mio. unabhängige Lebensmittelbetriebe weltweit; ≈$28 Mrd. Markt für Restaurant-Technologie.",
+    "Cafés, takeaways, small chains, dark kitchens, food trucks.": "Cafés, Imbisse, kleine Ketten, Ghost Kitchens, Foodtrucks.",
+    "Independents pay Deliveroo, Uber Eats and Just Eat 25-35% commission, then pay again for an EPOS, again for a KDS and again for loyalty. Café 1 is one system that keeps the order — and the customer — direct.": "Unabhängige Betriebe zahlen 25-35 % Provision an Deliveroo, Uber Eats und Just Eat, bezahlen dann erneut für ein EPOS, erneut für ein KDS und erneut für Loyalty. Café 1 ist ein System, das die Bestellung – und den Kunden – direkt hält.",
+    "A single subscription covering commission-free online ordering on the venue's own domain, EPOS, kitchen display, inventory and loyalty, multi-currency and multi-language — battle-tested in a live café before it was ever sold.": "Ein einziges Abonnement, das provisionsfreie Online-Bestellungen auf der eigenen Domain des Standorts, EPOS, Küchendisplay, Lagerbestand und Loyalty abdeckt, in mehreren Währungen und Sprachen – praxiserprobt in einem echten Café, bevor es jemals verkauft wurde.",
+    "Dubai experiences, tours and adventure booking": "Erlebnisse, Touren und Abenteuerbuchungen in Dubai",
+    "Curated Dubai and UAE experience marketplace: desert safaris, water sports, theme parks, dining and city tours with instant confirmation and clear pricing.": "Kuratierter Marktplatz für Erlebnisse in Dubai und den VAE: Wüstensafaris, Wassersport, Themenparks, Gastronomie und Stadtrundfahrten mit Sofortbestätigung und klarer Preisgestaltung."
+}
 
-if len(original_strings) != len(translations):
-    print(f"Error: length mismatch! {len(original_strings)} vs {len(translations)}")
-    exit(1)
+result = {}
+missing = []
+for item in data:
+    if item in translations:
+        result[item] = translations[item]
+    else:
+        missing.append(item)
 
-result = {orig: trans for orig, trans in zip(original_strings, translations)}
-
-with open(output_file, 'w') as f:
-    json.dump(result, f, ensure_ascii=False, indent=1)
+if missing:
+    print(f"Missing translations for: {missing}")
+else:
+    print(f"Successfully translated {len(result)} items.")
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)

@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const input = JSON.parse(fs.readFileSync('/tmp/chunk0.json', 'utf8'));
 
@@ -35,7 +35,7 @@ const translations = {
   "Consumer booking marketplace plus full salon management: calendar, staff rotas, stock, payments and marketing for hair, beauty and barber businesses.": "Endkunden-Buchungsmarktplatz plus vollständiges Salon-Management: Kalender, Dienstpläne, Lagerbestand, Zahlungen und Marketing für Friseur-, Beauty- und Barbershops.",
   "≈45,000 UK hair and beauty businesses; ≈£8.5bn consumer spend.": "≈45.000 britische Friseur- und Beauty-Unternehmen; ≈8,5 Mrd. £ Konsumausgaben.",
   "Salon owners, independent stylists, barbers, beauty therapists, clients.": "Salonbesitzer, unabhängige Stylisten, Barbiere, Kosmetiker, Kunden.",
-  "Salons lose 15-20% of revenue to no-shows and pay marketplaces up to £3 per new-client booking on top of a monthly fee. STYLESYNC charges one flat subscription with zero commission on bookings.": "Salons verlieren 15–20 % ihres Umsatzes durch Nichterscheinen und zahlen Marktplätzen zusätzlich zu einer monatliche Gebühr bis zu 3 £ pro Neukundenbuchung. STYLESYNC berechnet ein pauschales Abonnement ohne Provision auf Buchungen.",
+  "Salons lose 15-20% of revenue to no-shows and pay marketplaces up to £3 per new-client booking on top of a monthly fee. STYLESYNC charges one flat subscription with zero commission on bookings.": "Salons verlieren 15–20 % ihres Umsatzes durch Nichterscheinen und zahlen Marktplätzen zusätzlich zu einer monatlichen Gebühr bis zu 3 £ pro Neukundenbuchung. STYLESYNC berechnet ein pauschales Abonnement ohne Provision auf Buchungen.",
   "Everything a salon needs — online booking, deposits that kill no-shows, rotas, stock, card payments and automated rebooking marketing — for a flat monthly fee with no per-booking commission, plus free exposure on the consumer marketplace.": "Alles, was ein Salon braucht – Online-Buchung, Anzahlungen gegen Nichterscheinen, Dienstpläne, Lagerbestand, Kartenzahlungen und automatisiertes Rebooking-Marketing – für eine monatliche Pauschale ohne Provision pro Buchung, plus kostenlose Präsenz auf dem Endkunden-Marktplatz.",
   "AI recruitment for engineering, medical, law and finance": "KI-Personalvermittlung für Technik, Medizin, Recht und Finanzen",
   "Specialist AI-matched job platform for regulated and technical professions: CV parsing, skills matching, compliance-document tracking and interview scheduling for candidates and employers.": "Spezialisierte KI-gestützte Jobplattform für reglementierte und technische Berufe: CV-Parsing, Skill-Matching, Tracking von Compliance-Dokumenten und Terminplanung für Vorstellungsgespräche für Bewerber und Arbeitgeber.",
@@ -48,7 +48,7 @@ const translations = {
   "≈900,000 UK trade businesses; ≈£29bn annual builders'-merchant spend.": "≈900.000 britische Handwerksbetriebe; ≈29 Mrd. £ jährliche Ausgaben bei Baustoffhändlern.",
   "Electricians, plumbers, builders, homeowners, merchants, van drivers.": "Elektriker, Klempner, Bauunternehmer, Hausbesitzer, Händler, Transporterfahrer.",
   "A tradesperson loses roughly an hour a day driving to a merchant, quotes on scraps of paper, and chases invoices for weeks. TRADEROS puts the merchant, the paperwork and the delivery in the van's phone.": "Ein Handwerker verliert täglich etwa eine Stunde durch die Fahrt zum Händler, schreibt Angebote auf Zettel und läuft wochenlang Rechnungen hinterher. TRADEROS bringt den Händler, den Papierkram und die Lieferung auf das Smartphone im Transporter.",
-  "Free job management (quotes, invoices, scheduling) funded by margin on materials and delivery: order at trade prices from partnered merchants, get it delivered to site within hours, and invoice the customer with materials auto-costed.": "Kostenloses Auftragsmanagement (Angebote, Rechnungen, Zeitplanung), finanziert durch die Marge auf Material und Lieferung: Bestellen Sie zu Fachhandelspreisen bei Partnervormärkten, lassen Sie sich die Ware innerhalb weniger Stunden auf die Baustelle liefern und stellen Sie dem Kunden die Rechnung mit automatisch kalkulierten Materialkosten.",
+  "Free job management (quotes, invoices, scheduling) funded by margin on materials and delivery: order at trade prices from partnered merchants, get it delivered to site within hours, and invoice the customer with materials auto-costed.": "Kostenloses Auftragsmanagement (Angebote, Rechnungen, Zeitplanung), finanziert durch die Marge auf Material und Lieferung: Bestellen Sie zu Fachhandelspreisen bei Partner-Händlern, lassen Sie sich die Ware innerhalb weniger Stunden auf die Baustelle liefern und stellen Sie dem Kunden die Rechnung mit automatisch kalkulierten Materialkosten.",
   "Gamified compliance training for care & education": "Gamifiziertes Compliance-Training für Pflege & Bildung",
   "Blended compliance training platform for CQC, Ofsted and Skills for Care providers: mandatory e-learning, practical sign-off, gamified progress and inspection-ready matrices.": "Blended-Compliance-Trainingsplattform für CQC-, Ofsted- und Skills for Care-Anbieter: verpflichtendes E-Learning, praktische Abnahme, gamifizierter Fortschritt und inspektionsbereite Matrizen.",
   "≈1.7m adult social care workers plus ≈600,000 early-years staff in England; ≈£900m training spend.": "≈1,7 Mio. Beschäftigte in der Erwachsenenpflege plus ≈600.000 Mitarbeiter im frühkindlichen Bereich in England; ≈900 Mio. £ Trainingsausgaben.",
@@ -61,7 +61,7 @@ input.forEach(key => {
   if (translations[key]) {
     output[key] = translations[key];
   } else {
-    console.error('Missing translation for:', key);
+    process.stderr.write('Missing translation for: ' + key + '\n');
   }
 });
 
