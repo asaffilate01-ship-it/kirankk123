@@ -24,11 +24,21 @@ export function brandPositives(b: Brand): string[] {
   const cur = currencyOf(b);
   const sector = sectorLabel(sectorOf(b));
   const country = countryLabel(countryOf(b));
+  if (b.revenueUnit === "affiliate-order") {
+    return [
+      "No stock, warehouse, checkout, delivery or returns operation — the approved retailer completes the sale.",
+      `The forecast uses ${cur}${b.defaultArpu.toFixed(2)} average confirmed commission per eligible order, not a charge to the shopper.`,
+      "The shared Affivon engine runs product feeds, affiliate links, content, disclosures and analytics across all ten storefront brands.",
+      "A focused product category supports more useful comparisons and clearer search intent than a general shopping website.",
+      "More than one approved retailer and country can reduce dependence on a single marketplace programme.",
+      "Content, link monitoring, finance, legal and marketing are shared across the portfolio.",
+    ];
+  }
   const out: string[] = [
     `Flat ${cur}${b.defaultArpu}/month subscription — no commission on customer revenue, so the value we create stays with the operator.`,
     `Two-month free trial removes the buying risk: operators only pay once the product is embedded in their daily workflow.`,
     `${sector} demand in ${country} is recurring and compliance- or operations-driven, not discretionary — churn stays low (${(b.defaultChurn * 100).toFixed(1)}%/mo modelled).`,
-    "Zero standalone overhead: engineering, AI, support, finance, legal and marketing are shared across the 98-brand portfolio.",
+    "No separate central team for every brand: engineering, AI, support, finance, legal and marketing are shared across the 98-brand portfolio.",
     "Launch cost is a fraction of an independent startup because the platform, billing, auth and infrastructure already exist.",
     "Cross-sell channel from day one — every sister brand's customer base is a warm list for this product.",
   ];
@@ -117,6 +127,26 @@ export function brandMoneyModel(b: Brand): { label: string; detail: string }[] {
     return b.monetisation.map((line) => ({ label: "Revenue line", detail: line }));
   }
   const cur = currencyOf(b);
+  if (b.revenueUnit === "affiliate-order") {
+    return [
+      {
+        label: "Retailer-paid affiliate commission",
+        detail: `The shopper pays nothing to the storefront. When an approved retailer confirms an eligible referred order, the retailer pays the category- and country-specific commission. The model currently uses ${cur}${b.defaultArpu.toFixed(2)} average confirmed revenue per order.`,
+      },
+      {
+        label: "Order growth",
+        detail: `${b.defaultInitialUsers.toLocaleString("en-GB")} confirmed orders in the starting revenue month, modelled to grow by ${(b.defaultUserGrowth * 100).toFixed(0)}% per month. This must be tested against real traffic, click and conversion data.`,
+      },
+      {
+        label: "Clearly labelled sponsorship",
+        detail: "Optional sponsored guides or placements may add revenue, but commercial payment is disclosed and never changes the editorial verdict.",
+      },
+      {
+        label: "Cost side",
+        detail: `Direct brand cost of ${cur}${b.defaultDirectCost.toLocaleString("en-GB")}/month covers content, promotion and its share of the Affivon platform. Retailers handle stock, payment, delivery and returns.`,
+      },
+    ];
+  }
   const lines: { label: string; detail: string }[] = [
     {
       label: "Core subscription",

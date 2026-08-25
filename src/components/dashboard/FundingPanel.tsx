@@ -4,8 +4,11 @@ import { useFinance, buildModel } from "@/lib/finance-store";
 import { fmtEURk } from "./format";
 import { InvestorCalculator } from "./InvestorCalculator";
 import { PanelIntro, Section } from "./Explain";
+import { BRANDS } from "@/lib/brands";
+import { portfolioDefinitionCounts } from "@/lib/brand-investor-summary";
 
 export function FundingPanel() {
+  const definitionCounts = portfolioDefinitionCounts(BRANDS);
   const state = useFinance();
   const rows = useMemo(() => buildModel(state), [state]);
   const g = state.global;
@@ -26,11 +29,11 @@ export function FundingPanel() {
 
       <Section
         title={t("Why we are raising — and exactly where the money goes")}
-        description={t("The platform and the 100+ brands are already built. The raise is not for building software: it is for finishing the native apps, getting every brand legally launch-ready, buying the first customers, and funding the team that runs and supports it all until subscriptions cover the cost base.")}
+        description={`All ${definitionCounts.defined} brand entities now have a defined product plan. The raise funds product completion, native apps, legal launch work, customer acquisition and the shared team until recurring and transaction income covers the cost base.`}
       >
         <div className="space-y-4 text-sm">
           <p className="text-muted-foreground">
-            {t("Each brand launches with a free trial and grows month by month, so revenue arrives after the spend. The raise bridges that gap: it pays for launch, marketing and running costs during the months where a brand is live but not yet paying for itself. Once a brand passes its own break-even, its cash contributes to the next launches instead of the raise.")}
+            {t("Subscription brands use a free trial; transaction and affiliate brands must first produce completed bookings or retailer-confirmed orders. In every case, revenue arrives after launch spending. The raise bridges that gap and funds launch, marketing and running costs until each brand reaches break-even.")}
           </p>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
@@ -40,11 +43,11 @@ export function FundingPanel() {
               },
               {
                 head: "Legal, compliance & entity set-up",
-                body: "Company and subsidiary formation per market (DE, UK, EU, Gulf, US), lawyer-recorded shareholdings for every investor, trademark and domain protection across 100+ brands, GDPR/UK-GDPR work (DPAs, records of processing, hosting agreements), terms and privacy documentation per brand, sector rules where they apply (childcare, care, food safety, legal and tax advice, transport, financial data), insurance, and annual audits.",
+                body: `Company and subsidiary formation per market (DE, UK, EU, Gulf, US), lawyer-recorded shareholdings for every investor, trademark and domain protection across the ${BRANDS.length} brand entities, GDPR/UK-GDPR work, terms and privacy documents per launched brand, sector rules where they apply, insurance and annual audits.`,
               },
               {
                 head: "Hosting & cloud infrastructure",
-                body: "Servers and databases per region, Cloudflare CDN and DDoS protection, object storage for images and documents, daily encrypted backups and disaster recovery, staging environments, logging, uptime monitoring and alerting, email and SMS delivery, plus the domain and SSL renewals for 100+ brands. Because every brand runs on one shared cluster, hosting scales far cheaper per brand than 100 separate stacks.",
+                body: "Servers and databases per region, protection against attacks, storage for images and documents, encrypted backups, test environments, uptime alerts, email and SMS delivery, plus domain and security-certificate renewals for the portfolio. Sharing infrastructure makes hosting cheaper than running a separate technical stack for every brand.",
               },
               {
                 head: "AI running costs",
@@ -65,7 +68,7 @@ export function FundingPanel() {
               },
               {
                 head: "Why now, and why one raise",
-                body: "The cost of a launch is mostly fixed and shared, so launching 100+ brands from one chassis is dramatically cheaper per brand than funding them separately. Doing it now — while the platform is built and the domains and brands are secured — captures the launch window before competitors in each vertical react. No further rounds are planned; dividends start in month 13 from launch.",
+                body: "Much of the launch cost is shared, so a portfolio can be cheaper per brand than funding every business separately. However, each defined brand still has to prove customer demand, legal readiness and profitable sales in its first territory before expansion. Reserved concepts do not receive launch spending until their plans are approved.",
               },
             ].map((b) => (
               <div key={b.head} className="rounded-lg border p-3">

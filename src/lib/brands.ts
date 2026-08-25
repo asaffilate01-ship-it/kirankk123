@@ -1,4 +1,5 @@
 import { EXTRA_BRANDS } from "./brands-extra";
+import { AFFIVON_BRAND, BRAND_CONTENT_OVERRIDES } from "./brand-content-overrides";
 
 export type Brand = {
   id: string;
@@ -29,6 +30,11 @@ export type Brand = {
   /** Optional explicit revenue-model lines. Falls back to derived model in brand-insights. */
   monetisation?: string[];
 
+  /** What the forecast's customer volume represents for this brand. */
+  revenueUnit?: "subscription" | "affiliate-order";
+  /** Keep brand-specific forecast assumptions instead of applying the shared subscription baseline. */
+  preserveFinancialDefaults?: boolean;
+
 
   apps: { name: string; kind: "SaaS" | "Web" | "iOS" | "Android" | "API" | "Admin"; purpose: string }[];
   userTypes: { type: string; useCase: string }[];
@@ -58,7 +64,7 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
-// Full portfolio target: 98 brands, 5 launches per month to month 12.
+// Current investor portfolio: 98 brand entities. Keep this aligned with BRANDS.
 export const TARGET_BRAND_COUNT = 98;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
@@ -3996,15 +4002,17 @@ const OVERRIDES: Record<string, BrandOverride> = {
    100 sign-ups at launch, 15% monthly growth, 3% cancellations, no additional
    revenue, EUR 2,000 expenses per brand per month, EUR 39/mo in Germany and
    international markets, GBP 39/mo (~EUR 45) in the UK. */
-export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS].map((b) => {
-  const merged: Brand = { ...b, ...OVERRIDES[b.id] };
+export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS, AFFIVON_BRAND].map((b) => {
+  const merged: Brand = { ...b, ...OVERRIDES[b.id], ...BRAND_CONTENT_OVERRIDES[b.id] };
   if (TRAVENEXA_FAMILY.includes(b.id)) merged.family = "TRAVENEXA";
-  merged.defaultInitialUsers = 100;
-  merged.defaultUserGrowth = 0.15;
-  merged.defaultChurn = 0.03;
-  merged.defaultAddlRevenue = 0;
-  merged.defaultDirectCost = 2000;
-  merged.defaultArpu = merged.region === "UK" ? 45 : 39;
+  if (merged.revenueUnit !== "affiliate-order" && !merged.preserveFinancialDefaults) {
+    merged.defaultInitialUsers = 100;
+    merged.defaultUserGrowth = 0.15;
+    merged.defaultChurn = 0.03;
+    merged.defaultAddlRevenue = 0;
+    merged.defaultDirectCost = 2000;
+    merged.defaultArpu = merged.region === "UK" ? 45 : 39;
+  }
   return merged;
 });
 

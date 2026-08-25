@@ -81,22 +81,22 @@ const SECTOR_MAP: Record<string, SectorId> = {
   rangvaya: "travel", oceavela: "travel", savansea: "travel", nilevella: "travel",
   adrilume: "travel", marelyra: "travel", iberaviva: "travel", euralume: "travel",
   uzvoya: "travel", dubaitrips: "travel", marocways: "travel",
-  niyyahnoor: "travel", viazeno: "travel", tripenvo: "travel",
+  niyyahnoor: "travel", viazeno: "travel",
   // Property
   immoviq: "property", gabley: "property", gableyretrofit: "property", hmoflow: "property", sharedbricks: "property",
-  premisora: "property", dearnext: "property", baytcircle: "property", avenesto: "property",
+  premisora: "property", dearnext: "property", baytcircle: "property",
   // Jobs
   stellenxpert: "jobs", xpertjobs: "jobs", skillfinch: "jobs",
   // Care & family
   kinderstars: "care", kinderstarsuk: "care", amityos: "care", beinstandplus: "care",
-  saathera: "care", kidevia: "care", pawivon: "care", nafsi: "care", nimah: "care",
+  saathera: "care", nafsi: "care", nimah: "care",
   nearcura: "care",
   // Education
   traindirekt: "education", lessonahead: "education", stemcoach: "education",
   unipathway: "education", ilmvero: "education", qiyavo: "education",
   // Automotive
   zivvo: "automotive", zivvouk: "automotive", autohashi: "automotive", motoresq: "automotive",
-  drivaryn: "automotive", recovrable: "automotive", gearivon: "automotive",
+  recovrable: "automotive",
   // Food & hospitality
   dishbee: "food", eventplanrger: "food", eventplanruk: "food",
   // Compliance & legal
@@ -106,19 +106,22 @@ const SECTOR_MAP: Record<string, SectorId> = {
   // Finance
   taxnuvia: "finance", taxcenda: "finance", zorynnexus: "finance", zoryn: "finance",
   // Trades & home
-  "craftvaro-de": "trades", "craftvaro-uk": "trades", fixorlyn: "trades", tareevo: "trades",
+  "craftvaro-de": "trades", "craftvaro-uk": "trades", tareevo: "trades",
   // Local discovery
   kiezio: "local", marktpass: "local", parkpunkt: "local",
   // Marketplace & retail
   merqano: "commerce", merqora: "commerce", bidlumo: "commerce",
-  traderos: "commerce", onyngo: "commerce", cirqiva: "commerce",
+  traderos: "commerce", onyngo: "commerce", cirqiva: "commerce", affivon: "commerce",
+  avenesto: "commerce", gearivon: "commerce", kidevia: "commerce", glowevyn: "commerce",
+  drivaryn: "commerce", fixorlyn: "commerce", tripenvo: "commerce", formevyn: "commerce",
+  pawivon: "commerce", deskivon: "commerce",
   // Sport & wellbeing
-  athlyvo: "sport", criclume: "sport", formevyn: "sport", glowevyn: "sport",
+  athlyvo: "sport", criclume: "sport",
   stylesyncuk: "sport", stylesyncger: "sport",
   // Logistics & fleet
   depotmesh: "logistics", fleetsora: "logistics",
   // Business software
-  omniqora: "software", deskivon: "software", syndriva: "software",
+  omniqora: "software", syndriva: "software",
 };
 
 export function sectorOf(b: Brand): SectorId {

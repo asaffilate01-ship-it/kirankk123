@@ -1,21 +1,32 @@
 import { t } from "@/lib/i18n";
 import { jsPDF } from "jspdf";
 import type { Brand } from "@/lib/brands";
-import { SHARED_ADVANTAGE } from "@/lib/brands";
+import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
 import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
+import { plainBusinessPlan } from "@/lib/brand-business-plan";
+import { brandAttritionLabel, brandRevenuePerUnitLabel, brandVolumeLabel } from "@/lib/brand-investor-summary";
 
 
 type Metrics = {
   launchMonth: number;
+  initialUsers: number;
   users: number;
   mrr: number;
   arpu: number;
   churn: number;
   growth: number;
+  directCost: number;
   horizonMonths: number;
 };
 
 export function downloadBrandPdf(brand: Brand, m: Metrics) {
+  const businessPlan = plainBusinessPlan(brand, {
+    initialUsers: m.initialUsers,
+    arpu: m.arpu,
+    userGrowth: m.growth,
+    churn: m.churn,
+    directCost: m.directCost,
+  });
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
@@ -122,11 +133,11 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   doc.setTextColor(90, 90, 90);
   const cells = [
     ["Launch", `M${m.launchMonth}`],
-    [`Paying customers @ M${m.horizonMonths}`, m.users.toLocaleString()],
+    [`${brandVolumeLabel(brand)} @ M${m.horizonMonths}`, m.users.toLocaleString()],
     [`Monthly revenue @ M${m.horizonMonths}`, `€${(m.mrr / 1000).toFixed(1)}k`],
-    ["Price per customer", `€${m.arpu.toFixed(0)}/mo`],
+    [brandRevenuePerUnitLabel(brand), brand.revenueUnit === "affiliate-order" ? `€${m.arpu.toFixed(2)}` : `€${m.arpu.toFixed(0)}/mo`],
     ["Monthly growth", `${(m.growth * 100).toFixed(1)}%`],
-    ["Monthly cancellations", `${(m.churn * 100).toFixed(1)}%`],
+    [brandAttritionLabel(brand), `${(m.churn * 100).toFixed(1)}%`],
   ];
   const cellW = maxW / cells.length;
   cells.forEach(([lbl, val], i) => {
@@ -142,6 +153,35 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   });
   y += 76;
 
+  subheading("Business plan in plain English");
+  labelValue("Status", businessPlan.stage);
+  labelValue("Territory", businessPlan.territory);
+  labelValue("Business type", businessPlan.businessType);
+  labelValue("What it does", businessPlan.summary);
+  labelValue("Who uses it", businessPlan.customer);
+  labelValue("Market opportunity (management estimate)", businessPlan.marketOpportunity);
+  labelValue("The customer problem", businessPlan.problem);
+  labelValue("What we provide", businessPlan.solution);
+  labelValue("Who pays and how we earn", businessPlan.revenue);
+  labelValue("How we find customers", businessPlan.salesPlan);
+  labelValue("How it runs day to day", businessPlan.operations);
+  labelValue(`Plan for ${businessPlan.territory}`, businessPlan.territoryPlan);
+  labelValue("Expansion plan", businessPlan.expansionPlan);
+  y += 4;
+
+  subheading("First 12-month plan");
+  bullets(businessPlan.milestones);
+
+  subheading("Numbers that show whether it is working");
+  bullets(businessPlan.successMeasures);
+
+  subheading("Why customers may choose us");
+  bullets(businessPlan.reasonsItCanWin);
+
+  subheading("Main risks and our response");
+  bullets(businessPlan.mainRisks);
+
+  subheading("Detailed product description");
   paragraph(t(brand.description));
 
   subheading("Why this product exists");
@@ -195,7 +235,7 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
     y += 2;
   });
 
-  subheading("Competitive advantage — one team, 100+ brands");
+  subheading(`Competitive advantage — one team, ${BRANDS.length} brands`);
   bullets(SHARED_ADVANTAGE.map(t));
 
   subheading("Negatives, risks & mitigations");
