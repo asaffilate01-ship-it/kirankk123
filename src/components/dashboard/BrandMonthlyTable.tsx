@@ -1,6 +1,8 @@
 import { t } from "@/lib/i18n";
 import { Card } from "@/components/ui/card";
 import { buildModel, payoutPct, useFinance } from "@/lib/finance-store";
+import { brandById } from "@/lib/brands";
+import { brandVolumeLabel } from "@/lib/brand-investor-summary";
 import { fmtEURk, fmtNum } from "./format";
 
 /**
@@ -14,6 +16,7 @@ export function BrandMonthlyTable({ brandId }: { brandId: string }) {
   const state = useFinance();
   const g = state.global;
   const a = state.brands[brandId];
+  const brand = brandById(brandId);
   const rows = buildModel(state);
 
   const perBrandFixed = g.hqPerBrand + g.techPerBrand + g.marketingPerBrand;
@@ -70,7 +73,7 @@ export function BrandMonthlyTable({ brandId }: { brandId: string }) {
           <thead className="sticky top-0 bg-muted/80 backdrop-blur">
             <tr>
               <th className="px-2 py-2 text-left font-medium">{t("Month")}</th>
-              <th className="px-2 py-2 font-medium">{t("Paying customers")}</th>
+              <th className="px-2 py-2 font-medium">{brand ? brandVolumeLabel(brand) : t("Paying revenue units")}</th>
               <th className="px-2 py-2 font-medium">{t("Monthly revenue")}</th>
               <th className="px-2 py-2 font-medium">{t("Monthly costs")}</th>
               <th className="px-2 py-2 font-medium">{t("Net revenue")}</th>

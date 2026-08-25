@@ -106,7 +106,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   formevyn: "Helps shoppers compare fitness, training and sports products before buying from approved retailers.",
   pawivon: "Helps pet owners compare pet products before buying from approved retailers.",
   deskivon: "Helps remote workers, students and businesses compare office and workspace products before buying from approved retailers.",
-  athlyvo: "Lets people find and book sports venues, organise teams, split payments, fill empty places and book coaches or officials.",
+  athlyvo: "Lets people organise and play sport for free, while venues pay to claim their profiles, publish live availability, fill empty slots and manage bookings.",
 };
 
 const CONCEPT_ONLY_IDS = new Set<string>();
@@ -129,8 +129,12 @@ export function brandRevenuePlainEnglish(brand: Brand): string {
     return t("No revenue model should be presented to investors until the product scope is approved.");
   }
   const currency = brand.region === "UK" ? "£" : "€";
+  if (brand.payerModel) return t(brand.payerModel.investorRevenue);
   if (brand.revenueUnit === "affiliate-order") {
     return `${t("Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of")} ${currency}${brand.defaultArpu} ${t("confirmed revenue per order.")}`;
+  }
+  if (brand.id === "athlyvo") {
+    return `${t("Players, organisers, teams, clubs, coaches and officials use Athlyvo free. Only venues pay; the forecast uses an average of")} ${currency}${brand.defaultArpu} ${t("per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.")}`;
   }
   const otherIncome = brand.defaultAddlRevenue > 0
     ? " " + t("It can also earn from setup, optional extras and partner services.")
@@ -139,14 +143,20 @@ export function brandRevenuePlainEnglish(brand: Brand): string {
 }
 
 export function brandVolumeLabel(brand: Brand): string {
+  if (brand.payerModel) return t(brand.payerModel.forecastVolumeLabel);
+  if (brand.id === "athlyvo") return t("Paying venue accounts");
   return brand.revenueUnit === "affiliate-order" ? t("Confirmed affiliate orders") : t("Paying customers");
 }
 
 export function brandRevenuePerUnitLabel(brand: Brand): string {
+  if (brand.payerModel) return t(brand.payerModel.revenuePerUnitLabel);
+  if (brand.id === "athlyvo") return t("Average revenue per paying venue / month");
   return brand.revenueUnit === "affiliate-order" ? t("Average commission per order") : t("Average price per customer / month");
 }
 
 export function brandAttritionLabel(brand: Brand): string {
+  if (brand.payerModel) return t(brand.payerModel.attritionLabel);
+  if (brand.id === "athlyvo") return t("Venues cancelling each month");
   return brand.revenueUnit === "affiliate-order" ? t("Monthly order drop-off") : t("Customers cancelling each month");
 }
 

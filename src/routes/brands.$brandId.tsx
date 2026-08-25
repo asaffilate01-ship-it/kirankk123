@@ -343,9 +343,9 @@ function BrandDetail() {
           </div>
           <SliderRow label={t("Launch month")} value={a.launchMonth} min={1} max={state.global.months}
             onChange={(v) => state.setBrand(brand.id, { launchMonth: v })} />
-          <SliderRow label={brand.revenueUnit === "affiliate-order" ? "Starting confirmed affiliate orders" : t("Starting paying customers (after free trial)")} value={a.initialUsers} min={0} max={5000} step={10}
+          <SliderRow label={`Starting ${brandVolumeLabel(brand).toLowerCase()} (after trial where applicable)`} value={a.initialUsers} min={0} max={5000} step={10}
             onChange={(v) => state.setBrand(brand.id, { initialUsers: v })} format={fmtNum} />
-          <SliderRow label={t("New customers added each month")} value={Math.round(a.userGrowth * 1000) / 10}
+          <SliderRow label={`Monthly growth in ${brandVolumeLabel(brand).toLowerCase()}`} value={Math.round(a.userGrowth * 1000) / 10}
             min={0} max={40} step={0.5}
             onChange={(v) => state.setBrand(brand.id, { userGrowth: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
@@ -362,7 +362,7 @@ function BrandDetail() {
             onChange={(v) => state.setBrand(brand.id, { directCost: v })} format={fmtEURk} />
           <div className="grid grid-cols-2 gap-2 rounded-md bg-muted/50 p-3 text-xs">
             <div>{t("Free trial:")} <b>{state.global.freeTrialMonths} mo</b></div>
-            <div>{brand.revenueUnit === "affiliate-order" ? "Commission per order:" : t("Price per customer:")} <b>{brand.revenueUnit === "affiliate-order" ? `€${a.arpu.toFixed(2)}` : fmtEUR(a.arpu)}</b></div>
+            <div>{brandRevenuePerUnitLabel(brand)}: <b>{brand.revenueUnit === "affiliate-order" ? `€${a.arpu.toFixed(2)}` : fmtEUR(a.arpu)}</b></div>
             <div>{t("Cancellations:")} <b>{fmtPct(a.churn)}</b></div>
             <div>{t("Growth:")} <b>{fmtPct(a.userGrowth)}</b></div>
           </div>

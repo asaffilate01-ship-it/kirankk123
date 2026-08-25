@@ -34,9 +34,13 @@ export function brandPositives(b: Brand): string[] {
       "Content, link monitoring, finance, legal and marketing are shared across the portfolio.",
     ];
   }
+  const payer = b.payerModel?.payer ?? "the paying organisation";
+  const freeSide = b.payerModel?.freeSide;
   const out: string[] = [
-    `Flat ${cur}${b.defaultArpu}/month subscription — no commission on customer revenue, so the value we create stays with the operator.`,
-    `Two-month free trial removes the buying risk: operators only pay once the product is embedded in their daily workflow.`,
+    `One paying side only: ${payer}. The forecast uses ${cur}${b.defaultArpu} average monthly revenue per paying account.`,
+    freeSide
+      ? `${freeSide}. We do not add a second platform fee to that side.`
+      : "The product does not charge a second side of the marketplace.",
     `${sector} demand in ${country} is recurring and compliance- or operations-driven, not discretionary — churn stays low (${(b.defaultChurn * 100).toFixed(1)}%/mo modelled).`,
     "No separate central team for every brand: engineering, AI, support, finance, legal and marketing are shared across the 98-brand portfolio.",
     "Launch cost is a fraction of an independent startup because the platform, billing, auth and infrastructure already exist.",
@@ -99,7 +103,7 @@ export function brandCompetition(b: Brand): CompetitorRow[] {
     {
       name: "Commission-based marketplaces",
       strength: "Existing demand and brand recognition in the category",
-      counter: `Flat ${cur}${b.defaultArpu}/month with 0% commission — operators keep every euro of the transaction value.`,
+      counter: `One clearly defined paying side, modelled at ${cur}${b.defaultArpu}/month, with no second-side platform fee.`,
     },
     {
       name: "Legacy / offline incumbents (spreadsheets, paper, agencies)",

@@ -181,6 +181,92 @@ export const AFFIVON_BRAND: Brand = {
 };
 
 export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
+  kinderstars: {
+    description:
+      "Kinderstars helps parents in Germany find and organise care with verified childminders. Registered childminders pay Kinderstars a monthly subscription for their profile, availability, bookings, attendance, invoices and records. Parents use Kinderstars free. The parent pays the childminder for the childcare itself, or an eligible government scheme funds the place, and the childminder receives that childcare payment.",
+    audience:
+      "Paying customers are registered childminders. Parents and families use the search and booking journey free; local authorities and government funding schemes may fund the childcare service but do not buy the Kinderstars software subscription.",
+    proposition:
+      "One clear money flow: the childminder pays Kinderstars a monthly software and marketplace subscription. Parents search, compare, book and receive records without a Kinderstars platform fee. The separate childcare charge is agreed with and paid to the childminder, either by the parent or through an eligible government funding route. Kinderstars helps the childminder manage availability, attendance, invoices and the evidence needed for funded places but does not take the childcare income.",
+  },
+  eventplanrger: {
+    proposition:
+      "Hosts plan free. Venues, suppliers and event agencies pay a flat monthly subscription for marketplace visibility, customer management, calendars, quotes, contracts and payments, and keep 100% of every booking. The host describes the event once, EventPlanr builds the task list, budget and supplier shortlist, collects comparable quotes, runs guest replies and seating, and gives everyone one shared event-day timeline. There is no host subscription, supplier commission or per-lead fee.",
+  },
+  eventplanruk: {
+    proposition:
+      "Hosts and guests use EventPlanr free. Venues, suppliers and event agencies pay a flat monthly subscription for marketplace visibility, customer management, calendars, quotes, contracts and payments, and keep 100% of every booking. The host describes the event once, EventPlanr builds the plan and budget, shortlists verified suppliers by postcode, collects comparable quotes, runs guest replies and seating, and gives everyone one shared event-day timeline. There is no host premium fee, supplier commission or per-lead charge.",
+  },
+  rettio: {
+    description:
+      "Food businesses publish surprise-bag inventory of surplus food and consumers discover and reserve it free. Rettio charges the merchant a flat monthly subscription and takes no fee from the consumer and no commission from the food sale.",
+    proposition:
+      "Food merchants pay one flat subscription per location to publish unlimited surplus bags, receive direct payment and keep the customer relationship. Consumers search, reserve and collect without a Rettio membership or platform fee. The merchant keeps the full sale value apart from normal card-processing costs.",
+  },
+  traindirekt: {
+    description:
+      "Online academy delivering approved German-language and technology courses funded by German public programmes or employers. Eligible learners study without paying Traindirekt directly.",
+    proposition:
+      "One academy with one paying side: the Agentur für Arbeit, Jobcenter, BAMF or an employer funds each eligible learner place. The learner pays no Traindirekt subscription. Courses combine live cohort sessions, on-demand video, AI tutors and recognised exam preparation, with attendance, outcomes and evidence reported back to the funding organisation.",
+  },
+  zivvo: {
+    proposition:
+      "One marketplace for the whole car lifecycle. Private buyers and sellers use the core marketplace free with verified identity, escrow-ready workflows and guided pricing. Dealers, dealer groups and fleet sellers fund Zivvo through subscriptions covering multi-channel stock listings, trade sourcing, auction tools, valuation, finance and warranty connections, and lead management. Zivvo does not also charge private users a premium listing or platform transaction fee.",
+  },
+  parkpunkt: {
+    proposition:
+      "Drivers use the ParkPunkt app free to find, book and pay the parking operator's published price. Parking operators, municipalities and property owners fund ParkPunkt through subscriptions for occupancy, pricing, barriers, number-plate recognition, settlement and utilisation reporting. ParkPunkt does not add a separate driver service fee or consumer transaction margin.",
+  },
+  formationgenie: {
+    proposition:
+      "Founders are the only paying side. They choose a clear formation package or ongoing compliance plan covering incorporation, registered office, service address, filings, VAT or PAYE registration and deadline reminders. Banks, accountants, insurers and other partners may connect to the journey but are not charged a second platform fee and do not change the price shown to the founder.",
+  },
+  stemcoach: {
+    proposition:
+      "Parents and learners are the only paying side. One household subscription provides exam-style questions across major curricula, AI marking with worked solutions, adaptive practice, timed mock exams and parent progress reporting. Schools and teachers can recommend and support use without a separate school licence, so the same product is not charged to both families and institutions.",
+  },
+  sharedbricks: {
+    proposition:
+      "Every property sits in its own appropriately structured vehicle with published documents, valuations and rental accounts. Property sponsors and owners pay the platform's listing, onboarding and ongoing asset-administration fees. Investors can browse, invest and monitor holdings without a second SharedBricks subscription or buyer-side platform fee. Each territory launches only after specialist financial-services and securities approval.",
+  },
+  criclume: {
+    preserveFinancialDefaults: true,
+    defaultInitialUsers: 75,
+    defaultUserGrowth: 0.12,
+    defaultArpu: 79,
+    defaultChurn: 0.025,
+    defaultAddlRevenue: 2500,
+    defaultDirectCost: 3500,
+    description:
+      "CricLume is the match-day, league and coaching operating system for cricket. Clubs, leagues, competitions and academies pay for ball-by-ball scoring, multi-phone match video, live scoreboards, fixtures, tables, player records, coaching review, memberships and administration. Players, parents, supporters, scorers, coaches, analysts and officials use the relevant apps and profiles free. Service providers may keep the full price of their own work; CricLume does not charge them a subscription or marketplace commission.",
+    audience:
+      "Paying customers are cricket clubs, leagues, competitions and academies. Free users include players, parents, supporters, captains, scorers, volunteers, coaches, analysts, videographers, umpires and other officials.",
+    proposition:
+      "One organisation-funded platform for the whole season. A scorer records every delivery and automatically links it to video from ordinary phones. Scoreboards, tables, records and player histories build from the same data. Clubs manage squads, availability, memberships and coaching; leagues manage fixtures, results, points, discipline and officials. Clubs, leagues, competitions and academies pay. Everyone participating in or supporting the game uses the included experience free, so CricLume never tries to earn from both the organisation and its players.",
+    pricing: [
+      "Players, parents, supporters, scorers, coaches, analysts and officials: free",
+      "Club Starter £29/month for scoring, fixtures, squads and live scoreboards",
+      "Club Pro £79/month including multi-phone video, coaching review and administration",
+      "Academy £99/month including development plans, attendance and parent access",
+      "League or Competition £149/month including divisions, fixtures, results, tables and discipline",
+      "Large associations and multi-competition groups from £299/month",
+      "60-day trial for organisations; no player fee, professional listing fee or marketplace commission",
+      "Local purchasing-power pricing is used outside the UK, tied to the organisation's billing country",
+    ],
+    monetisation: [
+      "Only clubs, leagues, competitions and academies pay recurring subscriptions",
+      "Larger cricket organisations can buy onboarding, data migration, storage and integration modules",
+      "Players, parents, supporters, scorers, coaches, analysts and officials are not charged by CricLume",
+    ],
+    currentMarket: {
+      howServed:
+        "Clubs split scoring, team messages, payments and video across paper books, basic scoring apps, spreadsheets and chat groups. Leagues still chase results and update tables manually, while useful coaching video is expensive or difficult to connect to a particular delivery.",
+      users:
+        "England and Wales alone have thousands of affiliated clubs and teams plus hundreds of leagues, with much larger cricket networks across South Asia, Australia, Southern Africa and the Gulf.",
+      revenue:
+        "CricLume earns only from subscriptions paid by clubs, leagues, competitions and academies. Individuals and service providers use it free.",
+    },
+  },
   depotmesh: {
     preserveFinancialDefaults: true,
     defaultInitialUsers: 10,
@@ -275,32 +361,36 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
   deskivon: affiliateStore({ name: "Deskivon", category: "office and home-workspace products", shopper: "Remote workers, students, professionals and small businesses comparing desks, chairs, storage, stationery and productivity equipment.", tagline: "Work smarter. Choose better.", examples: "desks, chairs, storage, stationery, lighting, monitors and productivity accessories" }),
   athlyvo: {
     preserveFinancialDefaults: true,
-    defaultInitialUsers: 100,
-    defaultUserGrowth: 0.15,
-    defaultArpu: 45,
-    defaultChurn: 0.03,
-    defaultAddlRevenue: 3000,
+    defaultInitialUsers: 50,
+    defaultUserGrowth: 0.12,
+    defaultArpu: 79,
+    defaultChurn: 0.025,
+    defaultAddlRevenue: 2500,
     defaultDirectCost: 4000,
     tagline: "Where sport comes together.",
     description:
-      "Athlyvo is a UK sports marketplace and operating platform connecting players, teams, clubs, coaches, officials and venue operators. The core journey is discover, book, split the cost, fill missing places, confirm, play, score, analyse and play again. It combines a player app, team and club hub, professional marketplace and venue operating system.",
+      "Athlyvo is a free sports discovery and organisation app for players, organisers, teams, clubs, coaches and officials, funded by venue subscriptions. It brings together the large number of sports venues and players that already exist but are scattered across separate websites, spreadsheets and message groups. Players can find a place or game, organise a team, split the venue price, fill missing places and confirm attendance. Venues can be listed before joining, then claim and verify their profile to control availability, prices, bookings and customer communication.",
     market:
-      "UK grassroots and recreational sport, beginning with football and five-a-side, cricket, padel, tennis and pickleball before expanding into other team, racket, combat, fitness and community activities.",
+      "UK grassroots and recreational sport, where thousands of public, private, school, club and community venues already serve millions of players but availability and demand are fragmented. Launch with football and five-a-side, cricket, padel, tennis and pickleball, then expand into other team, racket, combat, fitness and community activities.",
     audience:
-      "Casual players, organisers and captains, teams and clubs, coaches and trainers, referees and umpires, venue operators, schools, councils and community-sport partners.",
+      "Free users are casual players, organisers, captains, teams, clubs, coaches, trainers, referees and umpires. Paying customers are venue operators, schools, councils, leisure trusts, clubs with bookable facilities and multi-site sports groups.",
     reason:
-      "Local sport is organised through separate venue websites, spreadsheets and message groups. Players cannot easily find a game, organisers chase availability and money, teams struggle to replace drop-outs, and venues lose quiet-time capacity.",
+      "The UK already has plenty of venues and players, but they are not organised in one dependable system. Players cannot easily see genuine availability or find a suitable game. Organisers chase replies and money, teams struggle to replace drop-outs, and venues lose revenue from empty slots, late cancellations and uncertain attendance.",
     proposition:
-      "One journey from finding a venue or activity to playing again. People discover nearby sport, join or organise a game, split payments, fill empty places, book an official or coach, confirm attendance, arrange transport, record results and keep team or player history. Venues get calendars, pricing, access rules, payments, customer management and off-peak promotion.",
+      "Create useful local coverage quickly by adding factual public venue listings, clearly marking them as unclaimed and inviting each operator to claim and verify its profile. Players and organisers use Athlyvo free to discover nearby sport, join or organise a game, share the venue cost, fill empty places, confirm attendance and receive changes. Claimed venues control calendars, prices, rules, bookings, payments, customer messages and off-peak promotion. This gives venues better use of their facilities and gives players greater certainty that the slot and participants are confirmed.",
     features: [
-      "Search and book venues, courts, pitches, halls, studios and activity spaces",
+      "Free search and booking journey for players, organisers, teams, clubs, coaches and officials",
+      "Pre-listed public venue profiles with a clear unclaimed label and correction or removal route",
+      "Claim, ownership-check and verification workflow for venue operators",
+      "Search and book verified venues, courts, pitches, halls, studios and activity spaces",
       "Football, cricket, padel, tennis and pickleball launch categories",
       "Later support for martial arts, boxing, archery, gyms, trainers and rooms",
       "Create public, private, verified or invitation-only games and sessions",
       "Team availability, attendance confirmation and standby substitutes",
-      "Split payments, deposits, team subscriptions and match-fee collection",
-      "Find and pay coaches, trainers, referees, umpires, scorers and analysts",
+      "Share the venue cost, collect deposits and match fees without an Athlyvo player service charge",
+      "Free profiles and discovery for coaches, trainers, referees, umpires, scorers and analysts",
       "Off-peak pricing and promoted empty slots for venues",
+      "Waitlists, reminders, cancellation rules and replacement players to improve booking certainty",
       "Car-share coordination without operating as a transport provider",
       "Scores, tables, player records and optional performance analysis",
       "Privacy controls and optional face or body blurring for permitted video",
@@ -308,58 +398,60 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
       "Council, school and community programme reporting",
     ],
     pricing: [
-      "Player Plus £3.99/month",
-      "Team Pro £9.99 per team/month",
-      "Professional £14.99/month plus 5% on marketplace bookings",
-      "Venue Growth £49/month plus 5% on bookings",
-      "Venue Pro £119/month plus 2% on bookings",
-      "Enterprise from £299/month for councils, groups and multi-site operators",
-      "Payment-processing charges shown separately and passed through transparently",
+      "Players, organisers, teams, clubs, coaches and officials: free",
+      "Venue claim and verification: free, followed by a 60-day full trial",
+      "Venue Starter £39/month for one bookable venue",
+      "Venue Growth £79/month for more spaces, promotions and reporting",
+      "Venue Pro £149/month for advanced operations, staff and integrations",
+      "Multi-site, council and leisure groups from £299/month",
+      "No Athlyvo service fee for players and no commission on the venue's booking value; card-processing costs are shown separately to the venue",
     ],
     positives: [
-      "Connects demand, teams, professionals and venue supply in one repeat journey",
-      "Empty-place filling and off-peak offers create value without building new facilities",
-      "Four connected products share identity, payments, calendars and communication",
-      "Team and venue subscriptions provide recurring revenue alongside booking income",
+      "Free access removes the main barrier to bringing large numbers of players, teams and organisers into one network",
+      "Pre-listing lawful public venue information creates useful postcode coverage before every operator has joined",
+      "Claimed and verified profiles turn fragmented venue information into dependable live availability",
+      "Empty-place filling, confirmations and off-peak offers increase use of facilities without building new ones",
+      "Venue-only subscriptions make the payer and value exchange simple: venues pay because Athlyvo helps them fill and run capacity",
       "The UK beachhead can be launched locally and expanded sport by sport and area by area",
     ],
     monetisation: [
-      "Player, team, professional, venue and enterprise subscriptions",
-      "Booking commission on venue and professional marketplace transactions",
-      "Promoted off-peak offers, sponsored discovery and optional add-on modules",
-      "Transparent pass-through of payment-processing charges",
+      "Only venues pay: monthly subscriptions for claimed venue profiles, booking tools and operating features",
+      "Venues can buy promoted placement and off-peak campaigns; these are clearly labelled",
+      "Venue groups, councils and leisure trusts pay for multi-site onboarding, integrations and reporting",
+      "Players, organisers, teams, clubs, coaches and officials are not charged by Athlyvo",
     ],
     apps: [
       { name: "Athlyvo Player", kind: "iOS", purpose: "Discover, join, book, pay, confirm and track sport." },
       { name: "Athlyvo Player", kind: "Android", purpose: "The same player and organiser journey on Android." },
-      { name: "Athlyvo Team & Club", kind: "SaaS", purpose: "Teams, availability, subscriptions, fixtures, results and communication." },
-      { name: "Athlyvo Professional", kind: "Web", purpose: "Coaches, trainers and officials list services, availability and prices." },
-      { name: "Athlyvo Venue OS", kind: "SaaS", purpose: "Calendars, slots, pricing, bookings, access, customers and reporting." },
+      { name: "Athlyvo Team & Club", kind: "SaaS", purpose: "Free tools for teams, availability, fixtures, results and communication." },
+      { name: "Athlyvo Professional", kind: "Web", purpose: "Free discovery profiles for coaches, trainers and officials." },
+      { name: "Athlyvo Venue OS", kind: "SaaS", purpose: "The paid product: claims, calendars, slots, pricing, bookings, access, customers and reporting." },
       { name: "Athlyvo Admin", kind: "Admin", purpose: "Verification, safeguarding, disputes, payments, content and partner controls." },
     ],
     userTypes: [
-      { type: "Player", useCase: "Finds a nearby activity, joins, pays a share and receives updates." },
-      { type: "Organiser or captain", useCase: "Books the venue, confirms the team, fills gaps and collects money." },
-      { type: "Club administrator", useCase: "Runs teams, members, subscriptions, fixtures, officials and results." },
-      { type: "Coach or official", useCase: "Lists availability, takes bookings and gets paid through the professional marketplace." },
-      { type: "Venue operator", useCase: "Sells slots, promotes quiet periods and runs the site from one calendar." },
-      { type: "Council or community partner", useCase: "Promotes participation and sees programme and facility usage." },
+      { type: "Player (free)", useCase: "Finds a nearby activity, joins, pays only the agreed share of the venue price and receives confirmed updates." },
+      { type: "Organiser or captain (free)", useCase: "Books the venue, confirms the team, fills gaps and collects each person's share." },
+      { type: "Club administrator (free)", useCase: "Runs teams, members, fixtures, officials and results without an Athlyvo subscription." },
+      { type: "Coach or official (free)", useCase: "Creates a profile, shows availability and can be found by local organisers and venues." },
+      { type: "Venue operator (paying customer)", useCase: "Claims and verifies its profile, publishes live slots, promotes quiet periods and runs bookings from one calendar." },
+      { type: "Council or leisure group (paying customer)", useCase: "Manages several facilities, promotes participation and sees programme and usage reporting." },
     ],
     competitors: [
-      { name: "Playfinder and venue-booking directories", strength: "Existing venue supply and search traffic", counter: "Athlyvo continues after the booking with teams, split payments, substitutes, professionals, results and repeat play." },
-      { name: "Spond, TeamApp and club tools", strength: "Strong team communication and attendance", counter: "Athlyvo connects club administration to public discovery, venues, officials, coaches and payments." },
-      { name: "WhatsApp, spreadsheets and separate payment links", strength: "Free and familiar", counter: "One confirmed journey removes chasing and keeps attendance, money, bookings and results together." },
+      { name: "Playfinder and venue-booking directories", strength: "Existing venue supply and search traffic", counter: "Athlyvo is free to players and continues after discovery with confirmations, shared venue costs, substitutes, results and repeat play, while venues get an operating system." },
+      { name: "Spond, TeamApp and club tools", strength: "Strong team communication and attendance", counter: "Athlyvo keeps team tools free and connects them to public venue discovery, live slots, officials, coaches and bookings." },
+      { name: "WhatsApp, spreadsheets and separate payment links", strength: "Free and familiar", counter: "Athlyvo remains free for participants but gives both sides one confirmed record of the slot, attendance, money and changes." },
     ],
     risks: [
-      { risk: "A marketplace needs both local players and local venue supply", mitigation: "Launch in a controlled area with selected venues and clubs, then expand postcode by postcode and sport by sport." },
+      { risk: "A marketplace needs both local players and local venue supply", mitigation: "Pre-list venues from lawful public sources, label unclaimed records clearly, recruit players through clubs and community networks, and expand postcode by postcode and sport by sport." },
+      { risk: "Unclaimed venue information may be incomplete or become outdated", mitigation: "Show the source and last-checked date, provide correction and removal routes, suppress unverified availability and require ownership checks before a venue can manage bookings." },
       { risk: "Safeguarding, filming and personal data are sensitive", mitigation: "Age-aware permissions, guardian consent, private defaults, reporting, role controls and optional video blurring." },
       { risk: "Cancellations and no-shows create disputes", mitigation: "Clear policies, attendance confirmation, standby replacements, deposits and evidence-based refund workflows." },
       { risk: "Different sports and venues have different rules", mitigation: "Use a common booking core with configurable sport, venue and governing-body templates." },
     ],
     currentMarket: {
-      howServed: "Players search separate venue sites and organise through message groups; clubs use stand-alone admin tools; coaches and officials rely on referrals; venues market empty slots manually.",
-      users: "Millions of UK adults and children participate in grassroots, recreational and fitness activity, supported by thousands of clubs, professionals and public or private venues.",
-      revenue: "The opportunity combines venue bookings, coaching and officiating, club subscriptions, memberships and facility software rather than relying on one revenue source.",
+      howServed: "Venues and players already exist in large numbers, but discovery, availability, team organisation, payments and confirmations are split across search engines, separate venue sites, phone calls, spreadsheets and message groups.",
+      users: "Millions of UK adults and children participate in grassroots, recreational and fitness activity, supported by thousands of public, private, school, club and community venues.",
+      revenue: "Athlyvo charges only venues. Recurring revenue comes from claimed venue subscriptions, venue-funded promotion and multi-site venue services; players and other participants use the platform free.",
     },
   },
 };
