@@ -142,12 +142,12 @@ export function SystemPanel() {
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("United Kingdom")}</div>
             <div className="font-semibold">ITECHLOUNGE LTD</div>
-            <div className="text-xs text-muted-foreground">{t("United Kingdom operating company")}</div>
+            <div className="text-xs text-muted-foreground">{t("United Kingdom company structure ready")}</div>
           </div>
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("Germany")}</div>
             <div className="font-semibold">ITECHLOUNGE GMBH</div>
-            <div className="text-xs text-muted-foreground">{t("Germany operating company")}</div>
+            <div className="text-xs text-muted-foreground">{t("German company structure ready")}</div>
           </div>
         </div>
       </Section>

@@ -7,7 +7,6 @@ import { fmtEURk, fmtPct } from "./format";
 import { BrandLogo } from "@/components/BrandLogo";
 import { PanelIntro, Section } from "./Explain";
 
-
 export function OverviewPanel() {
   const state = useFinance();
   const rows = useMemo(() => buildModel(state), [state]);
@@ -31,21 +30,25 @@ export function OverviewPanel() {
         <div>
           <h1 className="text-2xl font-bold tracking-tight">{t("iTechLounge")}</h1>
           <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
-          <p className="text-sm text-muted-foreground">{t("Live dashboard — 10 German-focused digital brands, one operating team. Drag any slider to re-forecast P&L, cash flow and balance sheet in real time.")}</p>
+          <p className="text-sm text-muted-foreground">
+            {t(
+              "Private investor dashboard — 98 UK, German and international brand entities, one shared operating team. The Investment tab separates real launch evidence from editable financial forecasts.",
+            )}
+          </p>
         </div>
       </div>
 
       <PanelIntro
         title={t("Start here")}
-        description={t("This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list and platform detail live in the System tab.")}
+        description={t(
+          "This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list and platform detail live in the System tab.",
+        )}
         tips={[
           t("Every figure updates live when you change a slider in Assumptions or Brands."),
           t("Hover or tap a “?” icon for a plain-English explanation of any number."),
           t("All amounts are in euros (€). “M12” means month 12 of the forecast."),
         ]}
       />
-
-
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Kpi label={t("Active brands")} value={`${activeBrands} / ${TARGET_BRAND_COUNT}`} />
@@ -54,7 +57,11 @@ export function OverviewPanel() {
           value={fmtEURk(last.revenue)}
           hint={t("Money coming in every month from subscriptions (MRR)")}
         />
-        <Kpi label={t("Funding raised")} value={fmtEURk(totalFunding)} hint={t("Total investment paid into the business over the period")} />
+        <Kpi
+          label={t("Funding raised")}
+          value={fmtEURk(totalFunding)}
+          hint={t("Total investment paid into the business over the period")}
+        />
         <Kpi
           label={t("€1m/mo hit at")}
           value={monthAtMilestone ? `M${monthAtMilestone}` : t("not reached")}
@@ -66,13 +73,21 @@ export function OverviewPanel() {
           tone={minCash < 0 ? "bad" : "good"}
           hint={t("Lowest money-in-the-bank point across the forecast")}
         />
-        <Kpi label={`${t("Money in the bank")} @ M${rows.length}`} value={fmtEURk(last.cashBalance)} hint={t("Cash left in the business at the end of the forecast")} />
+        <Kpi
+          label={`${t("Money in the bank")} @ M${rows.length}`}
+          value={fmtEURk(last.cashBalance)}
+          hint={t("Cash left in the business at the end of the forecast")}
+        />
         <Kpi
           label={`${t("Investor dividends")} (${investorPctLabel})`}
           value={fmtEURk(cumInvestor)}
           hint={t("Profit paid out to investors over the whole period")}
         />
-        <Kpi label={t("Total dividends paid")} value={fmtEURk(cumDividend)} hint={t("Profit paid out to investors and founders combined")} />
+        <Kpi
+          label={t("Total dividends paid")}
+          value={fmtEURk(cumDividend)}
+          hint={t("Profit paid out to investors and founders combined")}
+        />
         <Kpi
           label={`${t("Profit margin")} @ M${rows.length}`}
           value={last.revenue > 0 ? fmtPct(last.ebit / last.revenue) : "—"}
@@ -93,17 +108,16 @@ export function OverviewPanel() {
                 <Row k={t("Operating profit (EBIT)")} v={fmtEURk(y.ebit)} />
                 <Row k={t("Profit margin")} v={fmtPct(y.margin)} />
                 <Row k={t("Net profit")} v={fmtEURk(y.netProfit)} />
-                <Row k={`${t("Investor dividends")} (${investorPctLabel})`} v={fmtEURk(y.investorShare)} />
+                <Row
+                  k={`${t("Investor dividends")} (${investorPctLabel})`}
+                  v={fmtEURk(y.investorShare)}
+                />
                 <Row k={t("Money in the bank at year end")} v={fmtEURk(y.endCash)} />
               </div>
             </div>
           ))}
         </div>
       </Section>
-
-
-
-
     </div>
   );
 }
@@ -129,7 +143,9 @@ function Kpi({
       >
         {value}
       </div>
-      {hint ? <div className="mt-1 text-[11px] leading-snug text-muted-foreground">{hint}</div> : null}
+      {hint ? (
+        <div className="mt-1 text-[11px] leading-snug text-muted-foreground">{hint}</div>
+      ) : null}
     </Card>
   );
 }
