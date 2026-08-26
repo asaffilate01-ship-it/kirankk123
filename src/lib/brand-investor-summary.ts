@@ -27,7 +27,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   immoviq:
     "Gives landlords and letting agents one system for tenants, leases, repairs, charges and property records.",
   beinstandplus:
-    "Guides newcomers through practical German tasks such as registering an address, arranging insurance and enrolling children in school.",
+    "Guides people through difficult practical tasks in Germany, including relocation, bereavement, funeral choices, likely costs and relevant policy or support routes.",
   traindirekt:
     "Provides online German-language and technology courses that may be paid for by government or employers.",
   zivvo: "A trusted German website for buying, selling, valuing and financing cars.",
@@ -49,7 +49,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   xpertjobs:
     "Matches skilled professionals with specialist jobs and helps employers check qualifications and arrange interviews.",
   traderos:
-    "Helps tradespeople find and manage jobs, buy materials and arrange delivery to the work site.",
+    "Gives self-directed traders explained market signals, risk tools, alerts and an honest record of results across forex, indices, commodities and crypto.",
   amityos:
     "Helps care providers run visits, medication, staff, records and billing, while helping families find trusted care.",
   skillfinch:
@@ -57,7 +57,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   formationgenie:
     "Sets up UK companies and then helps owners manage filings, tax registrations, banking and deadlines.",
   merqano:
-    "Lets one platform owner run many separate online shops for different businesses from the same system.",
+    "Creates and runs separate ecommerce websites for different customer businesses from one shared system.",
   stylesyncger:
     "Lets German customers book beauty services and gives salons tools for diaries, customers, payments and administration.",
   parkpunkt:
@@ -103,11 +103,11 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   gableyretrofit:
     "Guides a homeowner from assessing their property through quotes, funding, installation, evidence, warranties and energy savings.",
   baytcircle:
-    "Gives Gulf property owners, tenants and building managers one place for charges, repairs, documents and community decisions.",
+    "Helps Gulf families, home educators, expatriates and local residents find groups, arrange events and book spare capacity at trusted family venues.",
   taxcenda:
-    "Helps online sellers register, calculate and file VAT in the countries where they sell.",
+    "Prepares and files U.S. federal and state tax returns for taxpayer clients in America and abroad, using appropriately credentialed U.S. tax professionals.",
   nimah:
-    "Lets people calculate and give zakat or donations to verified causes and clearly see where the money went.",
+    "Lets food businesses in Saudi Arabia and Pakistan sell safe surplus food at reduced prices for nearby customers to reserve and collect.",
   ilmvero:
     "Gives schools one system for admissions, attendance, timetables, exams, fees, homework and parent communication.",
   dearnext:
@@ -118,7 +118,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   recovrable:
     "Helps businesses chase unpaid invoices, offer payment plans and prepare legal claims when needed.",
   merqora:
-    "Shows retailers competitor prices, missing product opportunities and where promotions may work.",
+    "Helps sellers and agencies manage and grow sales on Amazon and other online marketplaces from one workspace.",
   lessonahead:
     "Helps learners find checked tutors and driving instructors and gives providers tools for lessons, progress, scheduling and billing.",
   motoresq:
@@ -174,7 +174,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   nearcura:
     "Helps UK families find trusted local care and lets carers and agencies manage visits, plans, payments and family updates.",
   affivon:
-    "Runs ten separate affiliate shopping websites from one shared system for products, content, retailer links, compliance and commission reporting.",
+    "Runs multiple affiliate shopping websites from one shared system for products, content, retailer links, compliance and commission reporting.",
   depotmesh:
     "Helps bonded warehouses, ordinary warehouses and logistics depots control goods, customs status, storage, handling, documents and billing.",
   avenesto:

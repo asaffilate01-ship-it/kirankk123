@@ -322,10 +322,10 @@ export function BrandsPanel() {
             {travel.length > 0 && (
               <div className="mt-6">
                 <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b pb-2">
-                  <h3 className="text-base font-semibold tracking-tight">{t("TraveNexa international travel network")}</h3>
+                  <h3 className="text-base font-semibold tracking-tight">{t("TraveNexia international travel network")}</h3>
                   <span className="text-xs text-muted-foreground">{travel.length} {t("brands")}</span>
                   <p className="text-xs text-muted-foreground">
-                    {t("All travel brands run on the shared TraveNexa booking engine and are sold cross-border in multiple currencies.")}
+                    {t("All travel brands run on the shared TraveNexia booking engine and are sold cross-border in multiple currencies.")}
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">

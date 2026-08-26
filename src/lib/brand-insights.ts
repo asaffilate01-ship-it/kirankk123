@@ -28,7 +28,7 @@ export function brandPositives(b: Brand): string[] {
     return [
       "No stock, warehouse, checkout, delivery or returns operation — the approved retailer completes the sale.",
       `The forecast uses ${cur}${b.defaultArpu.toFixed(2)} average confirmed commission per eligible order, not a charge to the shopper.`,
-      "The shared Affivon engine runs product feeds, affiliate links, content, disclosures and analytics across all ten storefront brands.",
+      "The shared Affivon engine runs product feeds, affiliate links, content, disclosures and analytics across multiple storefront brands.",
       "A focused product category supports more useful comparisons and clearer search intent than a general shopping website.",
       "More than one approved retailer and country can reduce dependence on a single marketplace programme.",
       "Content, link monitoring, finance, legal and marketing are shared across the portfolio.",

@@ -23,10 +23,10 @@ export const DE_INVESTOR: Record<string, string> = {
   "Search brand or tagline…": "Marke oder Kurzbeschreibung suchen…",
   "Search brand": "Marke suchen",
   "Company entities": "Gesellschaften",
-  "Shared platform for the ten Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting.":
-    "Gemeinsame Plattform für zehn Affivon-Empfehlungs-Shops: ein System für Produkte, Inhalte, nachverfolgbare Links, Kennzeichnung und Berichte.",
-  "One of ten focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders.":
-    "Einer von zehn spezialisierten Empfehlungs-Shops auf Affivon. Der Händler schließt den Verkauf ab und zahlt für geeignete vermittelte Bestellungen eine Provision.",
+  "Shared platform for multiple Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting.":
+    "Gemeinsame Plattform für mehrere Affivon-Empfehlungs-Shops: ein System für Produkte, Inhalte, nachverfolgbare Links, Kennzeichnung und Berichte.",
+  "One of multiple focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders.":
+    "Einer von mehreren spezialisierten Empfehlungs-Shops auf Affivon. Der Händler schließt den Verkauf ab und zahlt für geeignete vermittelte Bestellungen eine Provision.",
   "Paying venue accounts": "Zahlende Sportstätten",
   "Paying clubs and leagues": "Zahlende Vereine und Ligen",
   "Paying childminder accounts": "Zahlende Betreuungspersonen",
@@ -84,8 +84,6 @@ export const DE_INVESTOR: Record<string, string> = {
   "Additional Haccora pipeline before paid advertising, alongside trial-ready customers for other brands.":
     "Zusätzliche Haccora-Pipeline vor bezahlter Werbung sowie testbereite Kunden für weitere Marken.",
   "Why the early demand matters": "Warum die frühe Nachfrage wichtig ist",
-  "These customers were found before a structured advertising campaign. That does not guarantee conversion, but it gives the UK launch a practical starting point: real businesses can test the products, produce usage data and become reference customers. Investor funding can therefore be used to accelerate evidence that already exists, rather than relying only on a theoretical market forecast.":
-    "Diese Kunden wurden vor einer strukturierten Werbekampagne gewonnen. Das garantiert keine Umwandlung in zahlende Kunden, gibt dem britischen Start aber einen praktischen Ausgangspunkt: Echte Betriebe können die Produkte testen, Nutzungsdaten liefern und Referenzkunden werden. Investorenkapital kann damit vorhandene Nachweise beschleunigen, statt sich nur auf eine theoretische Marktprognose zu stützen.",
   "UK traction and launch evidence": "Britische Nachfrage- und Startnachweise",
   "What is live, signed, ready, in the pipeline or still waiting for registration.":
     "Was live, unterzeichnet, testbereit, in der Pipeline oder noch im Registrierungsverfahren ist.",
@@ -235,9 +233,9 @@ export const DE_INVESTOR: Record<string, string> = {
     "Dividenden werden nur aus verfügbarem Gewinn nach Steuern und gemäß der endgültigen Gesellschaftervereinbarung gezahlt.",
   "The model currently uses a": "Das Modell verwendet derzeit eine",
   "Optional: detailed return calculator": "Optional: detaillierter Renditerechner",
-  "Open this only if you want to test tickets, assumptions, dividends and possible payback timings.":
-    "Nur öffnen, wenn Sie Einstiegssummen, Annahmen, Dividenden und mögliche Amortisationszeiten testen möchten.",
-  "Forecast, not a guarantee": "Prognose, keine Garantie",
+  "Explore illustrative investment tickets, dividends and possible payback timings using the assumptions in the financial model.":
+    "Betrachten Sie beispielhafte Investitionsbeträge, Dividenden und mögliche Amortisationszeiten anhand der Annahmen im Finanzmodell.",
+  "Illustrative forecast": "Beispielhafte Prognose",
   "Investor note": "Hinweis für Investoren",
   "Customer and pipeline figures above are management-provided as at 26 August 2026. They should be verified during due diligence. Live sites, signed trials, trial-ready prospects and pipeline opportunities are intentionally shown as different stages. Financial forecasts are illustrative assumptions and are not promises of revenue, profit, dividends or valuation.":
     "Die obigen Kunden- und Pipelinezahlen stammen von der Geschäftsleitung mit Stand 26. August 2026 und sollten in der Due-Diligence-Prüfung bestätigt werden. Live-Standorte, unterzeichnete Testphasen, testbereite Interessenten und Pipeline-Chancen werden bewusst als verschiedene Stufen gezeigt. Finanzprognosen sind beispielhafte Annahmen und keine Zusagen zu Umsatz, Gewinn, Dividenden oder Bewertung.",
@@ -249,4 +247,53 @@ export const DE_INVESTOR: Record<string, string> = {
     "Nur beispielhafte Prognose; tatsächliche Dividenden erfordern Gewinn, Liquidität und formelle Genehmigung.",
   "Private investor dashboard — 98 UK, German and international brand entities, one shared operating team. The Investment tab separates real launch evidence from editable financial forecasts.":
     "Privates Investoren-Dashboard — 98 britische, deutsche und internationale Markengesellschaften mit einem gemeinsamen Betriebsteam. Der Tab Investment trennt echte Startnachweise von veränderbaren Finanzprognosen.",
+  "The portfolio is not starting from zero. Products have been built, UK businesses are already live, signed, ready or interested, and this demand has been generated before paid advertising. Funding is now needed to fully manage, market, onboard and operate the whole system, complete compliant launches and turn the existing demand into recurring revenue.":
+    "Das Portfolio startet nicht bei null. Produkte sind gebaut, britische Unternehmen sind bereits live, haben unterschrieben, sind startbereit oder interessiert, und diese Nachfrage entstand vor bezahlter Werbung. Jetzt wird Kapital benötigt, um das gesamte System vollständig zu führen, zu vermarkten, Kunden einzuarbeiten und zu betreiben, regelkonforme Starts abzuschließen und die vorhandene Nachfrage in wiederkehrende Umsätze umzuwandeln.",
+  "From September 2026, the UK plan is to begin customer onboarding or active pipeline work across every B2B project.":
+    "Ab September 2026 sieht der britische Plan für jedes B2B-Projekt Kunden-Onboarding oder aktive Pipelinearbeit vor.",
+  "UK B2B launch breadth": "Breite des britischen B2B-Starts",
+  "Multiple sectors": "Mehrere Branchen",
+  "Food, events, trades, beauty, motor, education, accountancy, property, waste and childcare already have businesses or users ready or interested.":
+    "In Gastronomie, Veranstaltungen, Handwerk, Kosmetik, Fahrzeugen, Bildung, Buchhaltung, Immobilien, Abfall und Kinderbetreuung gibt es bereits startbereite oder interessierte Unternehmen beziehungsweise Nutzer.",
+  "These customers were found before a structured advertising campaign. This gives the UK launch a practical starting point: real businesses can test the products, produce usage data and become reference customers. Investor funding is needed to fully manage, market and operate the whole system and accelerate demand that already exists, rather than relying only on a theoretical market forecast.":
+    "Diese Kunden wurden vor einer strukturierten Werbekampagne gewonnen. Damit hat der britische Start einen praktischen Ausgangspunkt: Echte Betriebe können die Produkte testen, Nutzungsdaten liefern und Referenzkunden werden. Investorenkapital wird benötigt, um das gesamte System vollständig zu führen, zu vermarkten und zu betreiben und die bereits vorhandene Nachfrage zu beschleunigen, statt sich nur auf eine theoretische Marktprognose zu stützen.",
+  "Ofsted registration is under way, with interest from childminders and from parents and guardians looking for childcare.":
+    "Die Ofsted-Registrierung läuft; zugleich besteht Interesse von Betreuungspersonen sowie von Eltern und Erziehungsberechtigten, die Kinderbetreuung suchen.",
+  "Demand is forming on both sides of the service before launch. KinderStars provides the software and organisation for independent registered childminders and families.":
+    "Schon vor dem Start entsteht Nachfrage auf beiden Seiten. KinderStars stellt die Software und Organisation für selbständige registrierte Betreuungspersonen und Familien bereit.",
+  "Complete the relevant registration and compliance work, organise childminder onboarding and build the family waiting list.":
+    "Die erforderliche Registrierung und Compliance abschließen, das Onboarding der Betreuungspersonen organisieren und die Warteliste der Familien aufbauen.",
+  "These figures are management-provided commercial updates. 'Ready for trial' means a business has expressed readiness to onboard. 'Pipeline' means an active sales opportunity. Paid subscription revenue begins after the applicable free trial.":
+    "Diese Zahlen sind geschäftliche Angaben der Geschäftsleitung. „Testbereit“ bedeutet, dass ein Betrieb seine Bereitschaft zum Onboarding erklärt hat. „Pipeline“ bedeutet eine aktive Verkaufschance. Bezahlte Abo-Umsätze beginnen nach der jeweils geltenden kostenlosen Testphase.",
+  "Accountants and accountancy practices are ready to start.":
+    "Buchhalter und Buchhaltungskanzleien sind startbereit.",
+  "This gives the accountant marketplace an initial professional supply base before coordinated marketing begins.":
+    "Damit erhält der Buchhalter-Marktplatz schon vor dem koordinierten Marketing eine erste professionelle Anbieterbasis.",
+  "Accountants and accountancy practices pay the subscription. Businesses and individuals request and compare quotes free.":
+    "Buchhalter und Buchhaltungskanzleien zahlen das Abo. Unternehmen und Privatpersonen fragen Angebote kostenlos an und vergleichen sie.",
+  "Verify the practices, complete their profiles and start routing suitable enquiries through the platform.":
+    "Kanzleien prüfen, Profile vervollständigen und passende Anfragen über die Plattform weiterleiten.",
+  "Estate agents are ready to start.": "Immobilienmakler sind startbereit.",
+  "The first agencies can provide real property stock, workflow feedback and local market coverage.":
+    "Die ersten Agenturen können echte Immobilienbestände, Rückmeldungen zu Arbeitsabläufen und lokale Marktabdeckung liefern.",
+  "Estate agents, letting agents and professional landlords pay. Buyers and tenants search and use their portal free.":
+    "Immobilien- und Vermietungsmakler sowie professionelle Vermieter zahlen. Käufer und Mieter suchen und nutzen ihr Portal kostenlos.",
+  "Onboard the first agencies, import their stock and test enquiries, sales, lettings and property-management workflows.":
+    "Die ersten Agenturen einrichten, ihre Bestände importieren und Anfragen, Verkauf, Vermietung und Verwaltungsabläufe testen.",
+  "Waste-management and waste-removal businesses are ready to start.":
+    "Abfallwirtschafts- und Entsorgungsunternehmen sind startbereit.",
+  "The first operators can test collection requests, quotes, job management, routes and compliance records.":
+    "Die ersten Betreiber können Abholanfragen, Angebote, Auftragsverwaltung, Routen und Compliance-Nachweise testen.",
+  "Waste carriers, recycling facilities and service operators pay. Businesses requesting collections use their side free.":
+    "Entsorger, Recyclinganlagen und Dienstleistungsbetreiber zahlen. Unternehmen, die Abholungen anfragen, nutzen ihre Seite kostenlos.",
+  "Verify licences and service areas, onboard operators and measure collection requests and completed jobs.":
+    "Lizenzen und Einsatzgebiete prüfen, Betreiber einrichten und Abholanfragen sowie abgeschlossene Aufträge messen.",
+  "The launch plan is to begin customer onboarding or active pipeline work across every UK B2B project from September 2026.":
+    "Der Startplan sieht vor, ab September 2026 bei jedem britischen B2B-Projekt mit Kunden-Onboarding oder aktiver Pipelinearbeit zu beginnen.",
+  "Interest already reaches childcare, food safety, events, trades, beauty, cars, hospitality, education, accountancy, property and waste before a coordinated advertising campaign.":
+    "Schon vor einer koordinierten Werbekampagne besteht Interesse in Kinderbetreuung, Lebensmittelsicherheit, Veranstaltungen, Handwerk, Kosmetik, Fahrzeugen, Gastronomie, Bildung, Buchhaltung, Immobilien und Abfallwirtschaft.",
+  "Each project keeps one clearly defined paying side, normally the business receiving the software, customers or operating tools.":
+    "Jedes Projekt behält eine klar definierte zahlende Seite, normalerweise das Unternehmen, das Software, Kunden oder Betriebswerkzeuge erhält.",
+  "Fund the central management, marketing, onboarding, administration and support team needed to operate the whole system properly.":
+    "Das zentrale Team für Leitung, Marketing, Onboarding, Verwaltung und Support finanzieren, das für den ordnungsgemäßen Betrieb des gesamten Systems erforderlich ist.",
 };

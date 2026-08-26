@@ -24,7 +24,7 @@ function affiliateStore(config: AffiliateStoreConfig): Partial<Brand> {
     reason:
       `Shoppers face thousands of similar ${category} products, unreliable reviews and changing prices. Most affiliate websites are thin lists built for search engines rather than useful decisions. ${name} exists to make the choice easier and more trustworthy.`,
     proposition:
-      `A focused ${category} storefront with plain-English comparisons, product advantages and disadvantages, price and availability checks, clear affiliate disclosure and direct links to the retailer. The same Affivon engine controls product feeds, affiliate tracking, content, translations, link health, analytics and regional retailer routing across all ten storefronts.`,
+      `A focused ${category} storefront with plain-English comparisons, product advantages and disadvantages, price and availability checks, clear affiliate disclosure and direct links to the retailer. The same Affivon engine controls product feeds, affiliate tracking, content, translations, link health, analytics and regional retailer routing across multiple storefronts.`,
     features: [
       `Curated ${category} collections: ${examples}`,
       "Plain-English buying guides and side-by-side comparisons",
@@ -45,7 +45,7 @@ function affiliateStore(config: AffiliateStoreConfig): Partial<Brand> {
     ],
     positives: [
       "No stock purchase, warehouse, fulfilment, refunds or consumer payment handling",
-      "One Affivon engine runs ten focused brands, so feeds, analytics, compliance and content tools are not rebuilt ten times",
+      "One Affivon engine runs multiple focused brands, so feeds, analytics, compliance and content tools are shared rather than rebuilt for every storefront",
       "A narrow category creates more useful search pages and stronger buyer trust than a general shopping site",
       "Retailer routing allows the same content to earn across supported countries and marketplaces",
       "Content can keep earning after publication while being refreshed centrally when prices or products change",
@@ -60,7 +60,7 @@ function affiliateStore(config: AffiliateStoreConfig): Partial<Brand> {
       { name: `${name} Mobile`, kind: "Web", purpose: "Fast mobile shopping journey with country-aware retailer links." },
       { name: "Affivon Tenant Workspace", kind: "SaaS", purpose: "Content, products, campaigns, disclosures and performance for this storefront." },
       { name: "Affivon Product Feed", kind: "API", purpose: "Imports approved retailer data and monitors product links and availability." },
-      { name: "Affivon Landlord", kind: "Admin", purpose: "Controls all ten storefronts, retailer programmes, tracking, roles and compliance." },
+      { name: "Affivon Landlord", kind: "Admin", purpose: "Controls multiple storefronts, retailer programmes, tracking, roles and compliance." },
     ],
     userTypes: [
       { type: "Shopper", useCase: `Compares ${category} products, understands the trade-offs and completes the purchase with the retailer.` },
@@ -102,7 +102,7 @@ export const AFFIVON_BRAND: Brand = {
   family: "AFFIVON",
   preserveFinancialDefaults: true,
   description:
-    "Affivon is the shared affiliate-commerce platform behind ten focused shopping websites. One landlord dashboard controls retailer programmes, product feeds, affiliate links, content, translations, disclosures, analytics and regional routing while each storefront keeps its own name, domain and audience.",
+    "Affivon is the shared affiliate-commerce platform behind multiple focused shopping websites. One landlord dashboard controls retailer programmes, product feeds, affiliate links, content, translations, disclosures, analytics and regional routing while each storefront keeps its own name, domain and audience.",
   market:
     "Global affiliate commerce across Amazon and approved regional marketplaces, initially covering supported programmes in the UK, US, Germany, France, India, Pakistan, the UAE and Saudi Arabia.",
   audience:
@@ -116,7 +116,7 @@ export const AFFIVON_BRAND: Brand = {
   defaultAddlRevenue: 0,
   defaultDirectCost: 3000,
   reason:
-    "Running ten affiliate websites separately would duplicate product imports, link management, analytics, disclosure rules, content workflows and technical maintenance. Affivon turns those repeated tasks into one shared operating system.",
+    "Running multiple affiliate websites separately would duplicate product imports, link management, analytics, disclosure rules, content workflows and technical maintenance. Affivon turns those repeated tasks into one shared operating system.",
   proposition:
     "Create and operate many independent storefronts from one engine. Each tenant gets its own domain, branding, categories and content, while Affivon manages approved retailer feeds, affiliate tags, country routing, link health, editorial workflow, search pages and commission reporting centrally.",
   features: [
@@ -134,20 +134,20 @@ export const AFFIVON_BRAND: Brand = {
     "White-label tenant onboarding for future external publishers",
   ],
   pricing: [
-    "Internal portfolio edition — shared platform cost allocated across the ten owned storefronts",
+    "Internal portfolio edition — shared platform cost allocated across the owned storefronts",
     "Future Publisher plan — monthly subscription per storefront with usage limits",
     "Future Agency plan — multi-store allowance, team roles, client reporting and custom domains",
     "Retailer commissions belong to the relevant storefront; Affivon records and reconciles them",
   ],
   positives: [
-    "One product and data engine supports ten revenue-producing storefronts",
+    "One product and data engine supports multiple revenue-producing storefronts",
     "No consumer stock, warehouse, checkout, delivery or returns operation",
     "New countries, retailers and compliance changes are connected once for every tenant",
     "Portfolio reporting shows which categories, content and markets deserve further investment",
     "The landlord edition can later be licensed to other affiliate publishers and agencies",
   ],
   monetisation: [
-    "Shared enablement of affiliate commission earned by the ten owned storefronts",
+    "Shared enablement of affiliate commission earned by the owned storefronts",
     "Future monthly subscriptions for external publishers and agencies",
     "Optional onboarding, feed integration, custom-domain and white-label fees",
   ],
@@ -171,7 +171,7 @@ export const AFFIVON_BRAND: Brand = {
   risks: [
     { risk: "Dependence on third-party retailer programmes", mitigation: "Support several approved retailers and countries, record terms per programme and never forecast unapproved partnerships." },
     { risk: "Poor or duplicated content fails to win search traffic", mitigation: "Require useful original editorial content, human approval, source notes and quality thresholds before indexing." },
-    { risk: "Ten stores spread editorial attention too thinly", mitigation: "Launch categories in stages and use performance gates before expanding content or paid promotion." },
+    { risk: "Multiple stores could spread editorial attention too thinly", mitigation: "Launch categories in stages and use performance gates before expanding content or paid promotion." },
   ],
   currentMarket: {
     howServed: "Affiliate publishers commonly run separate WordPress sites, feeds, spreadsheets and retailer dashboards, making portfolio control and compliance difficult.",
@@ -181,6 +181,323 @@ export const AFFIVON_BRAND: Brand = {
 };
 
 export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
+  merqora: {
+    tagline: "Manage and grow marketplace sales",
+    description:
+      "Merqora is a sales-management and growth SaaS/app for sellers and agencies operating on Amazon and other online marketplaces. It brings product listings, stock, pricing, advertising, orders, account health, customer-service tasks and sales reporting into one workspace so teams can manage daily work and identify practical ways to grow.",
+    market:
+      "Amazon sellers, marketplace agencies and multichannel ecommerce businesses that need to manage and grow sales across several marketplace accounts, countries and product catalogues.",
+    audience:
+      "The paying customers are Amazon and other online-marketplace sellers, seller agencies and ecommerce teams. Shoppers and marketplace customers are not charged by Merqora.",
+    reason:
+      "Marketplace sellers often switch between separate seller portals, advertising screens, spreadsheets, stock systems and reporting tools. Agencies repeat the same work across client accounts, while important listing, inventory, advertising and account-health problems can be missed until sales fall.",
+    proposition:
+      "One clear workspace for running and improving marketplace sales. Merqora gathers authorised account data, shows the actions that need attention, helps teams improve listings and advertising, tracks stock and margins, and reports which products, marketplaces and campaigns are producing sustainable sales. The seller remains in control of every marketplace change and budget.",
+    features: [
+      "Connect authorised Amazon and other supported marketplace seller accounts",
+      "Combined sales, orders, fees, refunds and margin reporting",
+      "Product-listing quality checks and guided content improvements",
+      "Inventory levels, low-stock warnings and replenishment planning",
+      "Advertising performance, budget alerts and campaign action lists",
+      "Buy Box, pricing and competitor-position monitoring where marketplace rules permit",
+      "Account-health, policy, suppressed-listing and performance notifications",
+      "Review, message and customer-service task management within marketplace rules",
+      "Product and market opportunity research based on supported data",
+      "Agency workspace with separate client access, roles and reporting",
+      "Country, marketplace, product and campaign performance comparisons",
+      "Approval history and audit trail for important account changes",
+    ],
+    pricing: [
+      "Monthly seller subscription based on connected accounts, marketplaces, users and catalogue size",
+      "Agency subscription with separate client workspaces and consolidated reporting",
+      "Optional onboarding, catalogue clean-up and approved system-integration services",
+      "No fee charged to shoppers and no percentage taken from the seller's marketplace sales",
+    ],
+    positives: [
+      "Brings daily marketplace work and growth reporting into one organised system",
+      "Helps agencies manage several seller accounts without mixing client data",
+      "Prioritised actions help teams focus on stock, listings, advertising and account issues that affect sales",
+      "Subscription income is clear to investors and does not depend on charging both sellers and shoppers",
+      "Can add supported marketplaces and countries as authorised connections become available",
+    ],
+    monetisation: [
+      "Seller subscriptions based on accounts, marketplaces, users and catalogue size",
+      "Agency subscriptions for multi-client management and reporting",
+      "Optional onboarding, data migration, catalogue clean-up and approved integrations",
+    ],
+    apps: [
+      { name: "Merqora Seller", kind: "SaaS", purpose: "Listings, stock, advertising, orders, account health, tasks and sales performance in one workspace." },
+      { name: "Merqora Mobile", kind: "iOS", purpose: "Urgent account, stock, order and advertising alerts with approval controls." },
+      { name: "Merqora Mobile", kind: "Android", purpose: "The same marketplace monitoring and action workflow on Android." },
+      { name: "Merqora Agency", kind: "SaaS", purpose: "Separate client workspaces, team roles, action tracking and consolidated agency reporting." },
+      { name: "Merqora Connect", kind: "API", purpose: "Authorised marketplace and ecommerce-system connections with permissions, rate limits and audit logs." },
+    ],
+    userTypes: [
+      { type: "Marketplace seller", useCase: "Runs products, stock, advertising and account-health work and sees where profitable sales can improve." },
+      { type: "Seller agency", useCase: "Manages several client marketplace accounts through separate controlled workspaces." },
+      { type: "Ecommerce manager", useCase: "Coordinates catalogue, operations, advertising and reporting across marketplaces and countries." },
+      { type: "Account owner", useCase: "Approves important changes, controls permissions and reviews sales, fees and margin." },
+    ],
+    competitors: [
+      { name: "Amazon Seller Central and other marketplace portals", strength: "Official account controls and complete marketplace data", counter: "Merqora organises authorised data and actions across supported accounts and marketplaces in one clearer operating view." },
+      { name: "Jungle Scout, Helium 10 and seller-tool suites", strength: "Recognised research, listing and advertising features", counter: "Merqora focuses on one joined daily workflow for sellers and agencies, with action ownership, client separation and plain-English management reporting." },
+      { name: "Spreadsheets and specialist agencies", strength: "Flexible and familiar with human expertise", counter: "Merqora gives the agency and seller a shared live task record, controlled account access and repeatable reporting without replacing human judgement." },
+    ],
+    risks: [
+      { risk: "Marketplace APIs, permissions or policies can change", mitigation: "Use only authorised connections, monitor marketplace requirements and disable affected functions until they are compliant and reliable." },
+      { risk: "Incorrect automated changes could damage listings, advertising or sales", mitigation: "Keep important changes approval based, show the evidence and expected effect, enforce budget limits and retain a complete audit trail." },
+      { risk: "Sales-growth claims could create unrealistic expectations", mitigation: "Report observed actions and results without guaranteeing sales, rank, Buy Box position or advertising returns." },
+    ],
+    currentMarket: {
+      howServed:
+        "Sellers currently work inside each marketplace portal and add separate research, advertising, inventory and reporting tools. Agencies then combine client information in spreadsheets and presentations, creating repeated work and delayed decisions.",
+      users:
+        "Amazon and other supported marketplace sellers, marketplace agencies and multichannel ecommerce teams managing products in one or more countries.",
+      revenue:
+        "Merqora earns business subscriptions from sellers and agencies, plus optional onboarding and approved integration fees. Shoppers are not charged, and Merqora does not take a percentage of marketplace sales.",
+    },
+  },
+  baytcircle: {
+    tagline: "Families, activities and community in one place",
+    description:
+      "BaytCircle is a Gulf family-and-community hub for local residents, expatriate families and home educators. Families use it free to find trusted groups, arrange meetups and events, discover classes and activities, and book spare capacity at swimming pools, soft-play centres, sports spaces, learning venues and other family-friendly places.",
+    market:
+      "Family activities, home-education groups, community events and underused venue capacity across the UAE first, followed by selected Gulf cities.",
+    audience:
+      "Free users are parents, guardians, children, home-educating families, expatriates and local residents. Paying customers are family venues, activity providers, tutors, clubs and community organisations that claim profiles and use booking, promotion and administration tools.",
+    reason:
+      "Gulf cities already have many families, activities and useful venues, but information is scattered across messaging groups, social pages and individual booking systems. Families struggle to find the right local option, while pools, soft-play centres, classrooms and clubs have unsold spaces and quiet times.",
+    proposition:
+      "Build a trusted local directory area by area, add factual venue and activity profiles, clearly label unclaimed entries and invite each provider to claim and verify its page. Families use BaytCircle free to discover groups, organise events and book suitable activities. Providers pay for profile control, live availability, bookings, customer communication and promotion of spare or off-peak capacity, while keeping the full price of their service apart from normal payment-processing charges.",
+    features: [
+      "Family activity and community search by neighbourhood, age, date, language and distance",
+      "Home-education groups, co-learning sessions, tutors, clubs and resource sharing",
+      "Local and expatriate family groups with public, private and invitation-only membership",
+      "Create meetups, family events, classes, trips and recurring activities",
+      "Book spare capacity at swimming pools, soft-play centres, sports spaces, studios and learning venues",
+      "Off-peak offers, waiting lists and last-minute availability controlled by the provider",
+      "Pre-listed factual profiles with clear unclaimed labels and correction, claim or removal routes",
+      "Provider ownership checks, verification and safeguarding information",
+      "Attendance confirmation, reminders, capacity limits and family booking records",
+      "English and Arabic first, with additional community languages by launch area",
+      "Age, accessibility, family-facility and guardian requirements shown clearly",
+      "Venue and provider dashboard for calendars, bookings, messages and utilisation",
+    ],
+    apps: [
+      { name: "BaytCircle Family", kind: "iOS", purpose: "Discover groups and activities, organise events and manage family bookings." },
+      { name: "BaytCircle Family", kind: "Android", purpose: "The same family and community journey on Android." },
+      { name: "BaytCircle Provider", kind: "SaaS", purpose: "Claim profiles, publish availability, manage capacity, bookings and customer messages." },
+      { name: "BaytCircle Community", kind: "Web", purpose: "Run home-education groups, clubs, meetups and community events." },
+      { name: "BaytCircle Admin", kind: "Admin", purpose: "Verification, safeguarding escalation, moderation and city-by-city coverage." },
+    ],
+    userTypes: [
+      { type: "Parent or guardian", useCase: "Finds suitable local activities, groups and available family venues without paying BaytCircle." },
+      { type: "Home-educating family", useCase: "Finds co-learning groups, tutors, resources, trips and bookable spaces." },
+      { type: "Expatriate or local resident", useCase: "Joins relevant community groups and family events by area, language and interest." },
+      { type: "Venue or activity provider", useCase: "Claims its profile, fills spare capacity and manages availability and bookings." },
+      { type: "Community organiser", useCase: "Creates safe public, private or invitation-only events and manages attendance." },
+    ],
+    competitors: [
+      { name: "Facebook, WhatsApp and community groups", strength: "Large existing local audiences and familiar communication", counter: "BaytCircle adds structured search, verified providers, availability, bookings, age filters and a dependable event record." },
+      { name: "General event and ticketing platforms", strength: "Strong ticketing and event discovery", counter: "BaytCircle is built around recurring family activity, home education, safeguarding details and nearby venue capacity rather than one-off public tickets." },
+      { name: "Individual venue booking sites", strength: "Accurate information for that venue", counter: "Families compare many suitable places and activities in one local search, while smaller providers gain professional booking tools." },
+    ],
+    risks: [
+      { risk: "Family and child safety concerns", mitigation: "Verify providers and organisers where appropriate, show safeguarding information, restrict child data, provide reporting tools and require guardian-controlled accounts." },
+      { risk: "Unclaimed profiles may contain stale or incorrect information", mitigation: "Show factual public data only, mark it unclaimed, timestamp sources and provide fast correction, claim and removal routes." },
+      { risk: "A city may launch without enough local activity coverage", mitigation: "Seed one neighbourhood and category cluster at a time, onboard anchor venues and home-education groups, and expand only after useful local density is reached." },
+      { risk: "Local activity, advertising or venue rules vary across Gulf markets", mitigation: "Launch country by country with local legal review, provider terms and permit checks before adding each activity type." },
+    ],
+    currentMarket: {
+      howServed:
+        "Families currently search social media, messaging groups, school chats and separate venue websites. Organisers use spreadsheets and payment links, while many venues cannot easily publish quiet-time capacity to suitable nearby families.",
+      users:
+        "Parents, guardians, children, home educators, expatriates and local residents in Gulf cities, together with family venues, tutors, clubs and community organisations.",
+      revenue:
+        "BaytCircle earns only from provider and organisation subscriptions for claimed profiles, booking tools and promotion. Families use the platform free, and providers retain their activity or venue income apart from normal payment-processing charges.",
+    },
+  },
+  beinstandplus: {
+    name: "BEISTANDPLUS",
+    tagline: "Practical support when life becomes complicated",
+    description:
+      "BeistandPlus is a guided-support platform for people and families dealing with difficult practical tasks in Germany. It brings relocation and everyday administration together with bereavement support: understanding funeral choices and likely costs, recording wishes, organising documents, comparing suitable funeral providers and finding relevant funeral-cost policies or other funding and support routes through approved partners.",
+    market:
+      "German employers, community organisations and service partners supporting international staff and families, plus the large recurring need for guided bereavement, funeral-cost and life-administration support.",
+    audience:
+      "Employers, insurers, care and community organisations buying support for staff, members or families. The people receiving relocation, administration or bereavement help use the included service without a second BeistandPlus platform fee.",
+    reason:
+      "Important life administration is fragmented across public offices, insurers, employers, funeral providers and paper documents. During relocation or bereavement, people often do not know what must be done, what a funeral may cost, whether a policy or public support applies, or which provider is suitable. BeistandPlus gives them one guided route and a clear record.",
+    proposition:
+      "One guided case with a named support route, plain-language tasks, secure documents and approved specialist partners. The platform can help a family understand funeral options and costs, compare suitable providers, check whether an existing funeral-cost policy may apply and identify possible support routes. BeistandPlus coordinates and explains; regulated insurance advice, policy sales and legal decisions remain with authorised partners.",
+    features: [
+      "Guided case plan for relocation, family administration, bereavement and other difficult life events",
+      "Plain-language funeral choices, expected cost categories and planning checklist",
+      "Funeral wishes, contacts, documents and instructions stored securely",
+      "Comparison and referral to suitable verified funeral providers",
+      "Check for relevant funeral-cost policies, existing cover and possible support routes",
+      "Warm referral to authorised insurance, legal or benefits specialists where regulated advice is required",
+      "German administration support including address registration, residence tasks, health insurance and school enrolment",
+      "Multilingual guidance and human caseworker escalation",
+      "Employer, insurer or community-partner dashboard with consent-based case status",
+      "Document reminders, translation and appointment coordination",
+    ],
+    apps: [
+      { name: "BeistandPlus Family", kind: "iOS", purpose: "Guided tasks, funeral planning, documents, reminders and secure support messages." },
+      { name: "BeistandPlus Family", kind: "Android", purpose: "The same guided support journey on Android." },
+      { name: "BeistandPlus Partner", kind: "Web", purpose: "Consent-based referrals and case progress for employers, insurers, care and community organisations." },
+      { name: "BeistandPlus Support", kind: "Web", purpose: "Caseworker triage, document checks, appointments and approved-partner referrals." },
+    ],
+    userTypes: [
+      { type: "Bereaved family", useCase: "Understands the next steps, likely funeral costs, suitable providers and possible policy or support routes." },
+      { type: "Relocating employee or family", useCase: "Completes registration, insurance, school and other German administration through one guided case." },
+      { type: "Employer or member organisation", useCase: "Funds practical support and sees consent-based progress without handling sensitive family details." },
+      { type: "Approved specialist partner", useCase: "Receives an appropriate referral for regulated insurance, legal, benefits or funeral services." },
+    ],
+    competitors: [
+      { name: "Funeral comparison and planning websites", strength: "Focused provider information and funeral planning", counter: "BeistandPlus joins funeral costs and provider comparison to policies, documents, wider family administration and human support in one guided case." },
+      { name: "Relocation agencies", strength: "Experienced corporate administration support", counter: "BeistandPlus covers a wider set of difficult life events and offers a scalable mid-market platform rather than a high-cost manual relocation package." },
+      { name: "Charities and public advice services", strength: "Trusted and often free", counter: "They remain referral partners; BeistandPlus adds organised tasks, secure documents, progress tracking and funded caseworker capacity." },
+    ],
+    risks: [
+      { risk: "Insurance or legal guidance could cross into regulated advice", mitigation: "BeistandPlus provides information and coordination only; recommendations, policy sales and regulated advice are handled by authorised partners with clear disclosures." },
+      { risk: "Bereavement is sensitive and poor automation could damage trust", mitigation: "Use calm human-reviewed content, optional human support and no pressure-selling, ranking manipulation or automated decisions about a family's needs." },
+      { risk: "Partner-funded support could expose sensitive personal information", mitigation: "Share only consented status information, separate sponsor and family records, and apply strict role-based access and audit logs." },
+    ],
+    currentMarket: {
+      howServed:
+        "Families currently contact funeral providers, insurers, employers, public offices, charities and legal advisers separately. Relocation and bereavement administration is managed through phone calls, paper files and disconnected websites, leaving no single trusted case record.",
+      users:
+        "People and families in Germany facing relocation, bereavement or complex life administration, reached through employers, insurers, care providers and community organisations.",
+      revenue:
+        "BeistandPlus is funded by organisation subscriptions or support packages. Families are not charged a second platform fee, and any regulated policy or professional service is provided under a separate transparent agreement with an authorised partner.",
+    },
+  },
+  traderos: {
+    tagline: "Clearer signals. Better-controlled decisions.",
+    description:
+      "TraderOS is a subscription trading-signals and market-analysis SaaS/app for self-directed traders. It brings live market data from licensed sources, charts, technical indicators, AI-assisted signal explanations, alerts, risk levels, entry zones, stop-loss and take-profit planning, a trading journal and performance analysis into one system across forex, indices, commodities and crypto.",
+    market:
+      "Self-directed traders in the UK first, followed by selected international markets where the required market-data, financial-promotion and product rules have been completed.",
+    audience:
+      "Self-directed individual traders who want one transparent system for market monitoring, signal research, risk planning, alerts and performance review.",
+    reason:
+      "Retail traders currently combine charting tools, broker screens, social channels and opaque signal groups. They often cannot see why a signal appeared, how it performed historically or whether losses are being hidden. TraderOS makes the signal logic, risk and track record visible in one place.",
+    proposition:
+      "One subscription for clearly explained, timestamped market signals and disciplined risk tools. Each signal shows the market evidence behind it, possible entry area, invalidation level, stop-loss, take-profit scenarios and historical performance. TraderOS does not promise profit, hold client funds or present a forecast as certainty; the trader remains in control of every decision.",
+    features: [
+      "Forex, indices, commodities and crypto watchlists",
+      "Licensed live or appropriately delayed market-data feeds",
+      "Moving averages, RSI, MACD, Fibonacci, volume and order-book analysis where data is available",
+      "AI-assisted signal explanation with source indicators shown",
+      "Entry zones, invalidation levels, stop-loss and take-profit scenarios",
+      "Risk-per-trade and position-size calculator",
+      "Confidence and evidence score without profit guarantees",
+      "Web, mobile, email, Telegram and Discord alerts",
+      "Trading journal with screenshots, notes and outcome tracking",
+      "Transparent signal history including losing and expired signals",
+      "Backtesting and strategy comparison using clearly stated assumptions",
+      "Optional broker connection for user-approved execution with limits and emergency stop controls",
+    ],
+    apps: [
+      { name: "TraderOS Web", kind: "SaaS", purpose: "Charts, signals, strategy comparison, journal and performance analysis." },
+      { name: "TraderOS Mobile", kind: "iOS", purpose: "Watchlists, signal explanations, alerts and risk checks on iPhone." },
+      { name: "TraderOS Mobile", kind: "Android", purpose: "The same monitored trading workflow on Android." },
+      { name: "TraderOS Connect", kind: "API", purpose: "Controlled market-data, alert and optional broker connections without holding client money." },
+    ],
+    userTypes: [
+      { type: "Self-directed trader", useCase: "Reviews explained signals, chooses personal risk and decides whether to place a trade." },
+      { type: "Developing trader", useCase: "Uses the journal and historical results to understand discipline and repeated mistakes." },
+      { type: "Active trader", useCase: "Monitors several markets and receives filtered alerts without watching charts all day." },
+    ],
+    competitors: [
+      { name: "TradingView", strength: "Excellent charts, community scripts and broad market coverage", counter: "TraderOS combines explained multi-indicator signals, risk planning, a complete outcome record and guided review in one focused subscription." },
+      { name: "MetaTrader and broker platforms", strength: "Direct execution and a large strategy ecosystem", counter: "TraderOS is broker-independent and focuses on transparent cross-market analysis, evidence and risk controls rather than pushing one broker's products." },
+      { name: "Telegram, Discord and social signal groups", strength: "Fast, familiar and often cheap", counter: "Every TraderOS signal is timestamped, explained and retained in the performance history, including losses and expired ideas." },
+    ],
+    risks: [
+      { risk: "Users may treat signals as guaranteed or personalised financial advice", mitigation: "Use prominent risk wording, suitability boundaries, no profit promises and specialist UK review of financial-promotion and regulatory scope before launch." },
+      { risk: "Market-data or broker terms may restrict use", mitigation: "Contract only with licensed data and integration providers, enforce exchange entitlements and launch each asset class only after rights are confirmed." },
+      { risk: "Backtests can overstate likely performance", mitigation: "Show assumptions, costs, slippage and out-of-sample results, retain losing signals and separate historical tests from live performance." },
+      { risk: "Automated execution can increase losses quickly", mitigation: "Keep execution optional and user-approved with position limits, daily loss limits, kill switches and no custody of client funds." },
+    ],
+    currentMarket: {
+      howServed:
+        "Traders currently piece together charts, broker tools, indicator subscriptions, spreadsheets and social signal groups. Performance reporting is inconsistent and losing calls can disappear.",
+      users:
+        "UK self-directed traders across forex, indices, commodities and crypto, followed only by countries where product, promotion and data rules permit launch.",
+      revenue:
+        "TraderOS earns only from trader subscriptions. Brokers, exchanges and data providers are integrations or suppliers, not a second paying customer side, and TraderOS does not take a share of trading gains or losses.",
+    },
+  },
+  taxcenda: {
+    preserveFinancialDefaults: true,
+    defaultInitialUsers: 60,
+    defaultUserGrowth: 0.12,
+    defaultArpu: 179,
+    defaultChurn: 0,
+    defaultAddlRevenue: 0,
+    defaultDirectCost: 5000,
+    tagline: "U.S. tax returns, prepared wherever you live",
+    description:
+      "TaxCenda prepares and files U.S. federal and applicable state tax returns for taxpayer clients living in the United States or abroad. Each case is reviewed by an IRS Enrolled Agent or another appropriately authorised U.S. tax professional, with secure document collection, clear fixed pricing, electronic signature and filing through an authorised IRS e-file provider where the return is eligible for e-file.",
+    market:
+      "U.S. citizens, residents, expatriates, non-residents and eligible small businesses with U.S. federal or state filing obligations, including clients who live outside the United States.",
+    audience:
+      "The single paying side is the taxpayer client: individuals, families, expatriates, non-residents and eligible small businesses purchasing U.S. return preparation and filing. The IRS, tax authorities and professional partners are not charged by TaxCenda.",
+    reason:
+      "U.S. tax filing can remain compulsory even when a person lives abroad, while non-residents and internationally connected businesses face unfamiliar forms, deadlines, income classifications and identity requirements. Generic do-it-yourself software does not always explain cross-border facts clearly, and local accountants outside the U.S. may not prepare or e-file U.S. returns.",
+    proposition:
+      "One secure case from eligibility check to filed return. The client answers a plain-language questionnaire, uploads evidence and receives a fixed scope and price. A suitably credentialed U.S. tax professional prepares and reviews the return, explains important positions, obtains the required authorisation and files through the appropriate authorised channel. TaxCenda does not promise a refund or invent deductions, and the client approves the completed return before filing.",
+    features: [
+      "Plain-language U.S. federal and state tax intake",
+      "Service for U.S.-based and overseas taxpayer clients",
+      "Individual, expatriate and non-resident return workflows",
+      "Eligible sole-trader and small-business return workflows",
+      "Secure upload and checklist for income, expenses and supporting evidence",
+      "Identity, filing-status, residency and treaty-information questions",
+      "Preparation and review by an IRS Enrolled Agent or other appropriately authorised U.S. tax professional",
+      "Paid-preparer PTIN recorded where required",
+      "Electronic signature and filing through an authorised IRS e-file provider where eligible",
+      "Federal and applicable state submission tracking",
+      "Clear explanation of tax due, refund position and payment options without guaranteeing an outcome",
+      "Year-round document vault, deadline reminders and optional notice-response support",
+    ],
+    apps: [
+      { name: "TaxCenda Client", kind: "Web", purpose: "Questionnaire, fixed quote, document upload, review, signature and filing status." },
+      { name: "TaxCenda Client", kind: "iOS", purpose: "Secure document capture, messages, reminders and status on iPhone." },
+      { name: "TaxCenda Client", kind: "Android", purpose: "The same secure filing journey on Android." },
+      { name: "TaxCenda Professional", kind: "SaaS", purpose: "Credential-controlled preparation, review, workpapers, authorisations and quality checks." },
+      { name: "TaxCenda E-file Connect", kind: "API", purpose: "Controlled connection to an authorised IRS e-file provider and approved tax-software workflow." },
+    ],
+    userTypes: [
+      { type: "U.S. resident taxpayer", useCase: "Completes a guided federal and applicable state return with professional review." },
+      { type: "U.S. citizen or resident living abroad", useCase: "Organises overseas income and U.S. filing information in one secure case." },
+      { type: "Non-resident with U.S. filing needs", useCase: "Receives the correct intake and professional review for relevant U.S. income and forms." },
+      { type: "Eligible small-business taxpayer", useCase: "Provides business records and receives a properly scoped federal and state filing service." },
+      { type: "Enrolled Agent or authorised tax professional", useCase: "Prepares, reviews, signs and supports returns within their credentials and assigned role." },
+    ],
+    competitors: [
+      { name: "TurboTax and other do-it-yourself software", strength: "Recognised brands, automated interviews and large U.S. customer bases", counter: "TaxCenda adds named professional preparation and review, with a workflow designed for overseas and internationally connected clients." },
+      { name: "U.S. tax firms specialising in expatriates", strength: "Deep cross-border expertise and established professional teams", counter: "TaxCenda combines that professional review with a simpler multilingual digital intake, transparent scope and year-round case record." },
+      { name: "Local accountants outside the United States", strength: "Local language, trust and knowledge of the client's home country", counter: "TaxCenda supplies the U.S. return-preparation and authorised filing capability and can coordinate with the client's local adviser without charging that adviser." },
+    ],
+    risks: [
+      { risk: "Incorrect or incomplete client information could produce an inaccurate return", mitigation: "Use evidence checklists, validation rules, professional review, client representations and a final approval step before submission." },
+      { risk: "Paid-preparer or e-file credentials are missing, expired or used outside their permitted role", mitigation: "Verify and monitor PTINs, professional credentials, EFIN-linked provider access and role permissions; block filing when any required authority is not current." },
+      { risk: "Cross-border returns may require advice outside the team's competence", mitigation: "Use a written scope and escalation matrix, accept only supported return types and refer specialist treaty, entity, estate or criminal matters to suitably qualified counsel or advisers." },
+      { risk: "Taxpayer records are highly sensitive", mitigation: "Maintain a written information-security programme, encryption, least-privilege access, audit logs, secure retention and incident procedures appropriate to tax-preparer obligations." },
+      { risk: "Marketing could imply guaranteed refunds or IRS endorsement", mitigation: "Never promise an outcome or describe TaxCenda itself as IRS-approved; state the actual credentials of the responsible preparer and authorised e-file provider accurately." },
+    ],
+    currentMarket: {
+      howServed:
+        "Clients use do-it-yourself software, a U.S. tax firm, an expatriate-tax specialist or a local accountant who may then need a separate U.S. preparer. Documents, questions, signatures and filing status are often spread across email and several portals.",
+      users:
+        "Taxpayer clients in the United States and abroad who have supported U.S. federal or state filing needs, including individuals, expatriates, non-residents and eligible small businesses.",
+      revenue:
+        "TaxCenda earns fixed preparation and filing fees or an annual taxpayer support plan from the taxpayer client only. It does not charge the IRS, tax authorities or professional partners and does not earn a percentage of a refund or tax saving.",
+    },
+  },
   kinderstars: {
     description:
       "Kinderstars helps parents in Germany find and organise care with verified childminders. Registered childminders pay Kinderstars a monthly subscription for their profile, availability, bookings, attendance, invoices and records. Parents use Kinderstars free. The parent pays the childminder for the childcare itself, or an eligible government scheme funds the place, and the childminder receives that childcare payment.",

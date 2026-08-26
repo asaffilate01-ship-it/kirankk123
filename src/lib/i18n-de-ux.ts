@@ -5,8 +5,6 @@ export const DE_UX: Record<string, string> = {
   "Show less": "Weniger anzeigen",
 
   "Start here": "Hier starten",
-  "This page is the headline view: the key numbers first, then the investor terms, the calculator and the brand list. Open only the sections you need — everything is collapsible.":
-    "Diese Seite ist die Übersicht: zuerst die wichtigsten Zahlen, dann die Investorenkonditionen, der Rechner und die Markenliste. Öffnen Sie nur die Abschnitte, die Sie brauchen — alles ist ein- und ausklappbar.",
   "Every figure updates live when you change a slider in Assumptions or Brands.":
     "Jede Zahl aktualisiert sich live, wenn Sie einen Regler in Annahmen oder Marken verändern.",
   "Hover or tap a “?” icon for a plain-English explanation of any number.":
@@ -121,8 +119,6 @@ export const DE_UX: Record<string, string> = {
   "Investment": "Investment",
   "Our system": "Unser System",
   "Investment & funding": "Investment & Finanzierung",
-  "Why we are raising, where the money goes, the deal terms, and a calculator that shows your return live.":
-    "Warum wir Kapital aufnehmen, wohin das Geld fließt, die Konditionen und ein Rechner, der Ihre Rendite live zeigt.",
   "Funding raised over the period: ": "Aufgenommenes Kapital im Zeitraum: ",
   "Investor dividends across the forecast: ": "Investoren-Dividenden über die Prognose: ",
   "Change any assumption and these numbers re-forecast instantly.":
@@ -170,3 +166,7 @@ export const DE_UX: Record<string, string> = {
   "Dividends distributed": "Ausgeschüttete Dividenden",
   "Kept in the brand": "In der Marke belassen",
 };
+  "This page is the headline view: the key numbers first, then the investor terms, the calculator and the brand list. Open only the sections you need — everything is collapsible.":
+    "Diese Seite ist die Übersicht: zuerst die wichtigsten Zahlen, dann die Investorenkonditionen, der Rechner und die Markenliste. Öffnen Sie nur die Abschnitte, die Sie brauchen — alles ist ein- und ausklappbar.",
+  "Why we are raising, where the money goes, the deal terms, and a calculator that shows your return live.":
+    "Warum wir Kapital aufnehmen, wohin das Geld fließt, die Konditionen und ein Rechner, der Ihre Rendite live zeigt.",

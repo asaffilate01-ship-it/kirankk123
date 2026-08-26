@@ -75,7 +75,7 @@ export const SECTORS: { id: SectorId; label: string }[] = [
 ];
 
 const SECTOR_MAP: Record<string, SectorId> = {
-  // Travel — the whole TraveNexa network
+  // Travel — the whole TraveNexia network
   travenexa: "travel", farenivo: "travel", hexareve: "travel", bosporiva: "travel",
   eastamira: "travel", corazora: "travel", fiftyroam: "travel", canavelle: "travel",
   rangvaya: "travel", oceavela: "travel", savansea: "travel", nilevella: "travel",
@@ -84,12 +84,12 @@ const SECTOR_MAP: Record<string, SectorId> = {
   niyyahnoor: "travel", viazeno: "travel",
   // Property
   immoviq: "property", gabley: "property", gableyretrofit: "property", hmoflow: "property", sharedbricks: "property",
-  premisora: "property", dearnext: "property", baytcircle: "property",
+  premisora: "property", dearnext: "property",
   // Jobs
   stellenxpert: "jobs", xpertjobs: "jobs", skillfinch: "jobs",
   // Care & family
   kinderstars: "care", kinderstarsuk: "care", amityos: "care", beinstandplus: "care",
-  saathera: "care", nafsi: "care", nimah: "care",
+  saathera: "care", nafsi: "care",
   nearcura: "care",
   // Education
   traindirekt: "education", lessonahead: "education", stemcoach: "education",
@@ -98,20 +98,20 @@ const SECTOR_MAP: Record<string, SectorId> = {
   zivvo: "automotive", zivvouk: "automotive", autohashi: "automotive", motoresq: "automotive",
   recovrable: "automotive",
   // Food & hospitality
-  dishbee: "food", eventplanrger: "food", eventplanruk: "food",
+  dishbee: "food", eventplanrger: "food", eventplanruk: "food", nimah: "food",
   // Compliance & legal
   haccora: "compliance", "haccora-uk": "compliance", "docuvera-de": "compliance",
   "docuvera-uk": "compliance", lawquo: "compliance", beratermarkt: "compliance", tendryva: "compliance",
   formationgenie: "compliance", rettio: "compliance",
   // Finance
-  taxnuvia: "finance", taxcenda: "finance", zorynnexus: "finance", zoryn: "finance",
+  taxnuvia: "finance", taxcenda: "finance", zorynnexus: "finance", zoryn: "finance", traderos: "finance",
   // Trades & home
   "craftvaro-de": "trades", "craftvaro-uk": "trades", tareevo: "trades",
   // Local discovery
-  kiezio: "local", marktpass: "local", parkpunkt: "local",
+  kiezio: "local", marktpass: "local", parkpunkt: "local", baytcircle: "local",
   // Marketplace & retail
   merqano: "commerce", merqora: "commerce", bidlumo: "commerce",
-  traderos: "commerce", onyngo: "commerce", cirqiva: "commerce", affivon: "commerce",
+  onyngo: "commerce", cirqiva: "commerce", affivon: "commerce",
   avenesto: "commerce", gearivon: "commerce", kidevia: "commerce", glowevyn: "commerce",
   drivaryn: "commerce", fixorlyn: "commerce", tripenvo: "commerce", formevyn: "commerce",
   pawivon: "commerce", deskivon: "commerce",
