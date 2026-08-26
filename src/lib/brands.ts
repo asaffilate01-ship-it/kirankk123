@@ -3907,7 +3907,7 @@ export const BRAND_GROUPS: BrandGroup[] = [
   },
 ];
 
-/** International travel network operated under the TraveNexia platform. */
+/** International travel network operated under the TraveNexa platform. */
 export const TRAVENEXA_FAMILY: string[] = [
   "travenexa",
   "farenivo",
@@ -3926,7 +3926,6 @@ export const TRAVENEXA_FAMILY: string[] = [
   "iberaviva",
   "euralume",
   "niyyahnoor",
-  "qiyavo",
   "uzvoya",
   "nimah",
   "dubaitrips",
@@ -3990,7 +3989,7 @@ const OVERRIDES: Record<string, BrandOverride> = {
   amityos: uk("amityos.co.uk"),
   stylesyncuk: uk("stylesync.uk"),
   traderos: uk("traderos.co.uk"),
-  // Travel brands are international .com properties running on the TraveNexia platform.
+  // Travel brands are international .com properties running on the TraveNexa platform.
   hexareve: { region: "INT", domain: "hexareve.com" },
   bosporiva: { region: "INT", domain: "bosporiva.com" },
   eastamira: { region: "INT", domain: "eastamira.com" },
