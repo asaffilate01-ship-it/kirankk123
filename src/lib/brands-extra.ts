@@ -1232,7 +1232,7 @@ export const EXTRA_BRANDS: Brand[] = [
     region: "UK",
     domain: "hexareve.itechlounge.co.uk",
     tagline: "France, beautifully discovered.",
-    description: "HEXARÊVE is the commission-free, full-service travel platform for France: Paris and city tours, Provence and Riviera days, Loire châteaux, Normandy history, Bordeaux and Burgundy wine tours, Alps mountain weeks, attraction tickets, boat trips and yacht charters, beach and adventure days, cycling, scuba, markets and food halls, plus châteaux, villas, hotels, apartments and campsites, private chefs, licensed guides, childcare and nannies, spa and wellness, and destination weddings. Eight destination regions, everything a French holiday needs — getting there (ferries, Eurostar and TGV, driving to France, car hire) and getting around — with the shop and guides in English, French, German and Arabic and all-in prices in GBP, EUR, USD or CHF at live rates. Every château, villa, driver, chef and guide is identity-checked, licence-checked and insurance-checked before activation and keeps 100% of the fare; HEXARÊVE charges them a flat monthly subscription instead of commission, priced by region. Traveller apps on iOS, Android and PWA hold vouchers, addresses and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, compliance documents, payouts and support. Live now as a test site at hexareve.itechlounge.co.uk; the real domain hexareve.com follows (HEXARÊVE is a trading name of TraveNexia Ltd).",
+    description: "HEXARÊVE is the commission-free, full-service travel platform for France: Paris and city tours, Provence and Riviera days, Loire châteaux, Normandy history, Bordeaux and Burgundy wine tours, Alps mountain weeks, attraction tickets, boat trips and yacht charters, beach and adventure days, cycling, scuba, markets and food halls, plus châteaux, villas, hotels, apartments and campsites, private chefs, licensed guides, childcare and nannies, spa and wellness, and destination weddings. Eight destination regions, everything a French holiday needs — getting there (ferries, Eurostar and TGV, driving to France, car hire) and getting around — with the shop and guides in English, French, German and Arabic and all-in prices in GBP, EUR, USD or CHF at live rates. Every château, villa, driver, chef and guide is identity-checked, licence-checked and insurance-checked before activation and keeps 100% of the fare; HEXARÊVE charges them a flat monthly subscription instead of commission, priced by region. Traveller apps on iOS, Android and PWA hold vouchers, addresses and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, compliance documents, payouts and support. Live now as a test site at hexareve.itechlounge.co.uk; the real domain hexareve.com follows (HEXARÊVE is a trading name of TraveNexa Ltd).",
     market: "≈100m annual visitors to France, the world's most visited country, with ≈€60bn of international tourism receipts a year; French holiday-rental, campsite and château-stay supply alone runs to hundreds of thousands of properties.",
     audience: "UK, German, US, Gulf and Swiss travellers to France — couples, families, wine and gastronomy buyers, ski and Alps travellers, wedding and celebration groups, campsite and road-trip families — plus the supply side: châteaux, villas, boutique hotels, apartments, campsites, private drivers and taxi firms, licensed guides, chefs and caterers, childcare providers, activity and boat operators, spas and wedding planners.",
     color: "#3b82f6",
@@ -1325,7 +1325,7 @@ export const EXTRA_BRANDS: Brand[] = [
     region: "UK",
     domain: "bosporiva.itechlounge.co.uk",
     tagline: "A bridge between continents.",
-    description: "BOSPORIVA is the commission-free, full-service travel platform for Türkiye: Istanbul old-city and Bosphorus days, Cappadocia balloon mornings and valley hikes, Ephesus and Pamukkale, Gallipoli and Troy, Aegean gulet voyages and Turquoise Coast boat days, boutique and cave hotels, Antalya and Bodrum resorts, licensed guides, airport transfers, chauffeur days, self-drive hire, domestic flights and high-speed trains — plus food, hammam, cooking and photography experiences, and health and dental travel packages. Eight destinations, 300+ tours and experiences, in-country care 24/7, with the shop and guides in English, French, German and Spanish and all-in prices in GBP, EUR, USD or TRY at live rates. Every hotel, gulet, guide and transfer company is visited and vetted by our team in Türkiye and keeps 100% of the fare; BOSPORIVA charges them a flat monthly subscription instead of commission, priced by region. Traveller apps on iOS, Android and PWA hold vouchers and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, payouts and support. Live now as a test site at bosporiva.itechlounge.co.uk; the real domain bosporiva.com follows (BOSPORIVA is a trading name of TraveNexia Ltd).",
+    description: "BOSPORIVA is the commission-free, full-service travel platform for Türkiye: Istanbul old-city and Bosphorus days, Cappadocia balloon mornings and valley hikes, Ephesus and Pamukkale, Gallipoli and Troy, Aegean gulet voyages and Turquoise Coast boat days, boutique and cave hotels, Antalya and Bodrum resorts, licensed guides, airport transfers, chauffeur days, self-drive hire, domestic flights and high-speed trains — plus food, hammam, cooking and photography experiences, and health and dental travel packages. Eight destinations, 300+ tours and experiences, in-country care 24/7, with the shop and guides in English, French, German and Spanish and all-in prices in GBP, EUR, USD or TRY at live rates. Every hotel, gulet, guide and transfer company is visited and vetted by our team in Türkiye and keeps 100% of the fare; BOSPORIVA charges them a flat monthly subscription instead of commission, priced by region. Traveller apps on iOS, Android and PWA hold vouchers and pickup times offline, and a full supplier CRM runs enquiries, availability, contracts, payouts and support. Live now as a test site at bosporiva.itechlounge.co.uk; the real domain bosporiva.com follows (BOSPORIVA is a trading name of TraveNexa Ltd).",
     market: "≈55m annual visitors to Türkiye, a top-five global destination; medical and dental tourism alone exceeds $2bn a year and Cappadocia ballooning, gulet charter and Antalya resort travel each run into the billions.",
     audience: "UK and European city-break, culture and coast travellers, families, honeymooners, gulet and small-group charters, balloon and photography buyers, health and dental travel patients, Turkish diaspora — plus the supply side: licensed tour operators and guides, boutique and cave hotels, resorts, gulet and boat owners, transfer, chauffeur and car-hire companies, balloon operators, clinics and inbound DMCs.",
     color: "#e11d48",
@@ -2361,7 +2361,7 @@ export const EXTRA_BRANDS: Brand[] = [
   },
   {
     id: "travenexa",
-    name: "TraveNexia",
+    name: "TraveNexa",
     region: "INT",
     domain: "travenexa.com",
     tagline: "Every journey, intelligently connected. — travel booking engine",
@@ -2378,7 +2378,7 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultAddlRevenue: 6000,
     defaultDirectCost: 4500,
     reason:
-      "TraveNexia exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.",
+      "TraveNexa exists because every travel brand in the group needs the same engine, and independent operators pay enterprise prices for far less. Building it once and licensing it turns internal infrastructure into a revenue line.",
     proposition:
       "One booking engine for tours, stays and transport: enquiry-to-payment flow, supplier allocations, commission and settlement tracking, multi-locale storefronts and white-label deployment in days rather than months.",
     features: [
@@ -2390,10 +2390,10 @@ export const EXTRA_BRANDS: Brand[] = [
       "Distribution API and channel-manager connectors",
     ],
     apps: [
-      { name: "TraveNexia Platform", kind: "SaaS", purpose: "Core operator workspace for inventory, bookings and finance." },
-      { name: "TraveNexia Storefront", kind: "Web", purpose: "White-label multi-locale booking site per brand or client." },
-      { name: "TraveNexia Distribution API", kind: "API", purpose: "Inventory, availability and booking endpoints for partners." },
-      { name: "TraveNexia Admin", kind: "Admin", purpose: "Group-level tenancy, pricing and reporting control." },
+      { name: "TraveNexa Platform", kind: "SaaS", purpose: "Core operator workspace for inventory, bookings and finance." },
+      { name: "TraveNexa Storefront", kind: "Web", purpose: "White-label multi-locale booking site per brand or client." },
+      { name: "TraveNexa Distribution API", kind: "API", purpose: "Inventory, availability and booking endpoints for partners." },
+      { name: "TraveNexa Admin", kind: "Admin", purpose: "Group-level tenancy, pricing and reporting control." },
     ],
     userTypes: [
       { type: "Tour operator / DMC", useCase: "Runs the whole business — inventory, bookings, payouts — on one system." },
