@@ -1,8 +1,8 @@
-import { t } from "@/lib/i18n";
 import type { Brand } from "@/lib/brands";
 import { plainBusinessPlan, type BusinessPlanAssumptions } from "@/lib/brand-business-plan";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { t, useLang } from "@/lib/i18n";
 
 export function BrandBusinessPlan({
   brand,
@@ -11,7 +11,8 @@ export function BrandBusinessPlan({
   brand: Brand;
   assumptions?: BusinessPlanAssumptions;
 }) {
-  const plan = plainBusinessPlan(brand, assumptions);
+  const { lang } = useLang();
+  const plan = plainBusinessPlan(brand, assumptions, lang);
   const conceptOnly = plan.stage === "Concept only";
 
   return (
@@ -19,7 +20,7 @@ export function BrandBusinessPlan({
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="text-xs font-semibold uppercase tracking-wider text-primary">{t("Investor quick read")}</div>
-          <h2 className="mt-1 text-xl font-semibold">{t("Business plan in plain English")}</h2>
+          <h2 className="mt-1 text-xl font-semibold">{t("Business plan in plain language")}</h2>
         </div>
         <div className="flex flex-wrap gap-1.5">
           <Badge variant={conceptOnly ? "destructive" : "secondary"}>{t(plan.stage)}</Badge>
@@ -44,7 +45,7 @@ export function BrandBusinessPlan({
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <PlanCard title={t("How we will find customers")} body={plan.salesPlan} />
         <PlanCard title={t("How the business runs day to day")} body={plan.operations} />
-        <PlanCard title={`${t("Plan for")} ${t(plan.territory)}`} body={plan.territoryPlan} />
+        <PlanCard title={lang === "de" ? `Plan für ${plan.territory}` : `Plan for ${plan.territory}`} body={plan.territoryPlan} />
         <PlanCard title={t("Expansion after the first market works")} body={plan.expansionPlan} />
       </div>
 

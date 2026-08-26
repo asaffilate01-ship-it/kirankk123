@@ -3866,48 +3866,48 @@ export const BRAND_GROUPS: BrandGroup[] = [
   {
     id: "kinderstars",
     name: "KINDERSTARS",
-    blurb: "One brand, two entities: kinderstars24.de (GmbH, Germany) and kinderstars.co.uk (Ltd, UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One brand with separate German and UK entities, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["kinderstars", "kinderstarsuk"],
   },
   {
     id: "haccora",
     name: "HACCORA",
-    blurb: "One brand, two entities: haccora.de (Germany) and haccora.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One brand with separate German and UK entities, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["haccora", "haccora-uk"],
   },
   {
     id: "eventplanr",
     name: "EVENTPLANR",
-    blurb: "One brand, two entities: eventplanr.de (Germany) and eventplanr.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One brand with separate German and UK entities, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["eventplanrger", "eventplanruk"],
   },
   {
     id: "xpertjobs",
     name: "STELLENXPERT / XPERTJOBS",
-    blurb: "One recruitment product under two market names: stellenxpert.de (Germany) and xpertjobs.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One recruitment product with separate German and UK market names, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["stellenxpert", "xpertjobs"],
   },
   {
     id: "dokuvera",
     name: "DOKUVERA",
-    blurb: "One brand, two entities: dokuvera.de (Germany) and dokuvera.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One brand with separate German and UK entities, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["docuvera-de", "docuvera-uk"],
   },
   {
     id: "craftvaro",
     name: "CRAFTVARO",
-    blurb: "One brand, two entities: craftvaro.de (Germany) and craftvaro.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One brand with separate German and UK entities, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["craftvaro-de", "craftvaro-uk"],
   },
   {
     id: "zivvo",
     name: "ZIVVO",
-    blurb: "One brand, two entities: zivvo.de (Germany) and zivvo.co.uk (UK) — separate revenue, costs, marketing and P&L.",
+    blurb: "One brand with separate German and UK entities, revenue, costs, marketing and profit-and-loss reporting.",
     entities: ["zivvo", "zivvouk"],
   },
 ];
 
-/** International travel network operated under the TraveNexia platform — all .com, sold cross-border. */
+/** International travel network operated under the TraveNexia platform. */
 export const TRAVENEXA_FAMILY: string[] = [
   "travenexa",
   "farenivo",

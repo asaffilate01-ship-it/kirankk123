@@ -42,13 +42,13 @@ function dualGroupName(id: string): string {
   return groupOf(b)?.name ?? b.name;
 }
 
-/** Label listing both entities of a dual brand, e.g. "DOKUVERA GER (dokuvera.de) + DOKUVERA UK (dokuvera.co.uk)". */
+/** Label listing both market entities without exposing private portfolio domains. */
 function dualEntityLabel(id: string): string {
   const b = brandById(id);
   if (!b) return "";
   const g = groupOf(b);
   const list = (g?.entities ?? [b.id]).map((x) => brandById(x)).filter((x): x is Brand => Boolean(x));
-  return list.map((e) => `${entityName(e)} (${e.domain})`).join(" + ");
+  return list.map(entityName).join(" + ");
 }
 
 export function InvestorCalculator() {
@@ -252,7 +252,7 @@ export function InvestorCalculator() {
         m === "company"
           ? t("All brands")
           : m === "location"
-            ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
+            ? `${brandById(brandId)?.name ?? ""}`
             : dualEntityLabel(dualBrandId),
       tickets: n,
       invested: investedN,
@@ -287,7 +287,7 @@ export function InvestorCalculator() {
     mode === "company"
       ? t("Whole company (all brands)")
       : mode === "location"
-        ? `${brandById(brandId)?.name ?? ""} · ${brandById(brandId)?.domain ?? ""}`
+        ? `${brandById(brandId)?.name ?? ""}`
         : `${dualGroupName(dualBrandId)} — ${t("both locations")}: ${dualEntityLabel(dualBrandId)}`;
 
   return (
@@ -348,7 +348,7 @@ export function InvestorCalculator() {
             <SelectContent className="max-h-72">
               {BRANDS.map((b) => (
                 <SelectItem key={b.id} value={b.id}>
-                  {b.name} · {b.domain}
+                  {b.name}
                 </SelectItem>
               ))}
             </SelectContent>

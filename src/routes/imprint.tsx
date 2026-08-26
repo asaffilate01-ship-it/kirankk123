@@ -22,11 +22,11 @@ function ImprintRoute() {
       <p>{t("Provider information for this dashboard.")}</p>
       <section className="space-y-2">
         <h2>{t("United Kingdom")}</h2>
-        <p>ITECHLOUNGE LTD<br />{t("Registered in England & Wales")}<br />privacy@itechlounge.co.uk</p>
+        <p>ITECHLOUNGE LTD<br />{t("Registered in England & Wales")}<br />{t("Contact details available on request")}</p>
       </section>
       <section className="space-y-2">
         <h2>{t("Germany")}</h2>
-        <p>iTechLounge Digitallösungen GmbH<br />{t("Registered in Germany")}<br />privacy@itechlounge.de</p>
+        <p>iTechLounge Digitallösungen GmbH<br />{t("Registered in Germany")}<br />{t("Contact details available on request")}</p>
       </section>
       <p className="text-xs">
         {t(
