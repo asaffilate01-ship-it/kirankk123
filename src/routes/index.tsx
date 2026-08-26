@@ -43,13 +43,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Interactive dashboard for iTechLounge — 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+          "Private investor dashboard for iTechLounge — 98 UK, German and international brand entities, launch traction, live financial forecasts and per-brand plans.",
       },
       { property: "og:title", content: "iTechLounge Dashboard — Live Financial Model" },
       {
         property: "og:description",
         content:
-          "Interactive dashboard for iTechLounge with 10 German digital brands, live P&L, cash flow, balance sheet and per-brand assumptions.",
+          "Private investor dashboard for iTechLounge with 98 UK, German and international brand entities, launch traction and live financial forecasts.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -98,12 +98,15 @@ function Index() {
             <div className="min-w-0">
               <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
               <p className="truncate text-[11px] text-muted-foreground sm:text-xs">
-                {t("Live dashboard")} · {TARGET_BRAND_COUNT} {t("brands")} · {t("36-month forecast")}
+                {t("Live dashboard")} · {TARGET_BRAND_COUNT} {t("brands")} ·{" "}
+                {t("36-month forecast")}
               </p>
             </div>
           </div>
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-            <span className="hidden text-xs text-muted-foreground sm:inline">{t("All figures € · assumptions editable")}</span>
+            <span className="hidden text-xs text-muted-foreground sm:inline">
+              {t("All figures € · assumptions editable")}
+            </span>
             <LanguageToggle />
             <Button variant="outline" size="sm" onClick={handleLock} className="px-2 sm:px-3">
               <LogOut className="h-3.5 w-3.5 sm:mr-1" />
@@ -116,21 +119,41 @@ function Index() {
         <Tabs value={tab} onValueChange={setTab} className="space-y-4 sm:space-y-6">
           <TabsList className="hidden flex-wrap md:flex">
             {[...primary, ...secondary].map((i) => (
-              <TabsTrigger key={i.value} value={i.value}>{i.label}</TabsTrigger>
+              <TabsTrigger key={i.value} value={i.value}>
+                {i.label}
+              </TabsTrigger>
             ))}
           </TabsList>
           <h2 className="text-lg font-semibold tracking-tight md:hidden">
             {[...primary, ...secondary].find((i) => i.value === tab)?.label}
           </h2>
-          <TabsContent value="overview"><OverviewPanel /></TabsContent>
-          <TabsContent value="funding"><FundingPanel /></TabsContent>
-          <TabsContent value="system"><SystemPanel /></TabsContent>
-          <TabsContent value="brands"><BrandsPanel /></TabsContent>
-          <TabsContent value="assumptions"><AssumptionsPanel /></TabsContent>
-          <TabsContent value="pl"><PLPanel /></TabsContent>
-          <TabsContent value="cash"><CashFlowPanel /></TabsContent>
-          <TabsContent value="bs"><BalanceSheetPanel /></TabsContent>
-          <TabsContent value="charts"><ChartsPanel /></TabsContent>
+          <TabsContent value="overview">
+            <OverviewPanel />
+          </TabsContent>
+          <TabsContent value="funding">
+            <FundingPanel />
+          </TabsContent>
+          <TabsContent value="system">
+            <SystemPanel />
+          </TabsContent>
+          <TabsContent value="brands">
+            <BrandsPanel />
+          </TabsContent>
+          <TabsContent value="assumptions">
+            <AssumptionsPanel />
+          </TabsContent>
+          <TabsContent value="pl">
+            <PLPanel />
+          </TabsContent>
+          <TabsContent value="cash">
+            <CashFlowPanel />
+          </TabsContent>
+          <TabsContent value="bs">
+            <BalanceSheetPanel />
+          </TabsContent>
+          <TabsContent value="charts">
+            <ChartsPanel />
+          </TabsContent>
         </Tabs>
       </main>
 
