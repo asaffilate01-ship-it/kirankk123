@@ -32,7 +32,7 @@ import {
   type CountryId,
   type SectorId,
 } from "@/lib/brand-taxonomy";
-import { brandPlainEnglish, brandVolumeLabel } from "@/lib/brand-investor-summary";
+import { brandPlainLanguage, brandVolumeLabel } from "@/lib/brand-investor-summary";
 
 export function BrandsPanel() {
   const state = useFinance();
@@ -58,9 +58,8 @@ export function BrandsPanel() {
       (sectors.length === 0 || sectors.includes(sectorOf(b))) &&
       (q === "" ||
         b.name.toLowerCase().includes(q) ||
-        b.domain.toLowerCase().includes(q) ||
         b.tagline.toLowerCase().includes(q) ||
-        brandPlainEnglish(b).toLowerCase().includes(q)),
+        brandPlainLanguage(b, lang).toLowerCase().includes(q)),
   );
 
   const metrics = (id: string) => ({
@@ -80,22 +79,13 @@ export function BrandsPanel() {
               <h3 className="font-semibold">{b.name}</h3>
             </div>
             <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
-            <a
-              href={`https://${b.domain}`}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-1 inline-block text-[11px] font-medium text-primary hover:underline"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {b.domain} ↗
-            </a>
             <div className="mt-2 flex flex-wrap gap-1">
               <Badge variant="secondary" className="text-[10px]">
                 {COUNTRIES.find((c) => c.id === countryOf(b))?.flag} {t(countryLabel(countryOf(b)))}
               </Badge>
               <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
               <Badge variant="outline" className="text-[10px]">
-                {b.payerModel?.side === "consumer" ? "User-funded" : "Business-funded"}
+                {t(b.payerModel?.side === "consumer" ? "User-funded" : "Business-funded")}
               </Badge>
             </div>
           </div>
@@ -110,7 +100,7 @@ export function BrandsPanel() {
             <div className="font-semibold">M{a.launchMonth}</div>
           </div>
           <div>
-            <div className="text-muted-foreground">{brandVolumeLabel(b)} @ M{rows.length}</div>
+            <div className="text-muted-foreground">{t(brandVolumeLabel(b))} @ M{rows.length}</div>
             <div className="font-semibold">{fmtNum(users)}</div>
           </div>
           <div>
@@ -119,11 +109,11 @@ export function BrandsPanel() {
           </div>
         </div>
         <div className="rounded-md bg-primary/5 p-3">
-          <div className="text-[10px] font-semibold uppercase tracking-wide text-primary">What it does</div>
-          <p className="mt-1 line-clamp-4 text-xs leading-relaxed">{brandPlainEnglish(b)}</p>
+          <div className="text-[10px] font-semibold uppercase tracking-wide text-primary">{t("What it does")}</div>
+          <p className="mt-1 line-clamp-4 text-xs leading-relaxed">{brandPlainLanguage(b, lang)}</p>
         </div>
         <Button asChild variant="outline" size="sm" className="mt-auto">
-          <Link to="/brands/$brandId" params={{ brandId: b.id }}>View business plan</Link>
+          <Link to="/brands/$brandId" params={{ brandId: b.id }}>{t("View business plan")}</Link>
         </Button>
       </Card>
     );
@@ -174,7 +164,7 @@ export function BrandsPanel() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder={t("Search brand, domain or tagline…")}
+          placeholder={t("Search brand or tagline…")}
           className="h-9 w-full text-sm sm:col-span-2 lg:w-56"
         />
 
@@ -267,14 +257,6 @@ export function BrandsPanel() {
                                 <div className="text-[11px] text-muted-foreground">
                                   {regionOf(e) === "DE" ? t("Germany") : t("United Kingdom")}
                                 </div>
-                                <a
-                                  href={`https://${e.domain}`}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-[11px] font-medium text-primary hover:underline"
-                                >
-                                  {e.domain} ↗
-                                </a>
                               </div>
                             </div>
                           ) : (
@@ -283,14 +265,6 @@ export function BrandsPanel() {
                               <div className="text-[11px] text-muted-foreground">
                                 {regionOf(e) === "DE" ? t("Germany") : t("United Kingdom")}
                               </div>
-                              <a
-                                href={`https://${e.domain}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-[11px] font-medium text-primary hover:underline"
-                              >
-                                {e.domain} ↗
-                              </a>
                             </div>
                           )}
 
@@ -305,7 +279,7 @@ export function BrandsPanel() {
                             <div className="font-semibold">M{a.launchMonth}</div>
                           </div>
                           <div>
-                            <div className="text-muted-foreground">{brandVolumeLabel(e)}</div>
+                            <div className="text-muted-foreground">{t(brandVolumeLabel(e))}</div>
                             <div className="font-semibold">{fmtNum(users)}</div>
                           </div>
                           <div>
@@ -314,11 +288,11 @@ export function BrandsPanel() {
                           </div>
                         </div>
                         <div className="rounded bg-primary/5 p-2.5">
-                          <div className="text-[10px] font-semibold uppercase tracking-wide text-primary">What it does</div>
-                          <p className="mt-1 text-[11px] leading-relaxed">{brandPlainEnglish(e)}</p>
+                          <div className="text-[10px] font-semibold uppercase tracking-wide text-primary">{t("What it does")}</div>
+                          <p className="mt-1 text-[11px] leading-relaxed">{brandPlainLanguage(e, lang)}</p>
                         </div>
                         <Button asChild variant="outline" size="sm">
-                          <Link to="/brands/$brandId" params={{ brandId: e.id }}>View business plan</Link>
+                          <Link to="/brands/$brandId" params={{ brandId: e.id }}>{t("View business plan")}</Link>
                         </Button>
                       </div>
                     );
@@ -351,7 +325,7 @@ export function BrandsPanel() {
                   <h3 className="text-base font-semibold tracking-tight">{t("TraveNexia international travel network")}</h3>
                   <span className="text-xs text-muted-foreground">{travel.length} {t("brands")}</span>
                   <p className="text-xs text-muted-foreground">
-                    {t("All travel brands are international .com properties running on the shared TraveNexia booking engine, sold cross-border in multiple currencies.")}
+                    {t("All travel brands run on the shared TraveNexia booking engine and are sold cross-border in multiple currencies.")}
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">

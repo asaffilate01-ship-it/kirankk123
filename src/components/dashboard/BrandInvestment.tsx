@@ -5,6 +5,7 @@ import { buildModel, payoutPct, useFinance } from "@/lib/finance-store";
 import { BRANDS, siblingOf, groupOf, type Brand } from "@/lib/brands";
 import { fmtEURk, fmtPct } from "./format";
 import { Section } from "./Explain";
+import { countryLabel, countryOf } from "@/lib/brand-taxonomy";
 
 type Ticket = {
   key: string;
@@ -78,7 +79,7 @@ export function BrandInvestment({ brand }: { brand: Brand }) {
       {
         key: "loc-25",
         label: t("This location — 25%"),
-        scope: `${brand.name} (${brand.domain})`,
+        scope: `${brand.name} — ${t(countryLabel(countryOf(brand)))}`,
         price: 50_000,
         equity: 0.25,
         ids: [brand.id],
@@ -86,14 +87,14 @@ export function BrandInvestment({ brand }: { brand: Brand }) {
       {
         key: "loc-2.5",
         label: t("This location — 2.5% (small ticket)"),
-        scope: `${brand.name} (${brand.domain})`,
+        scope: `${brand.name} — ${t(countryLabel(countryOf(brand)))}`,
         price: 5_000,
         equity: 0.025,
         ids: [brand.id],
       },
     ];
     if (dual && sibling) {
-      const scope = `${brand.name} (${brand.domain}) + ${sibling.name} (${sibling.domain})`;
+      const scope = `${brand.name} — ${t(countryLabel(countryOf(brand)))} + ${sibling.name} — ${t(countryLabel(countryOf(sibling)))}`;
       list.push(
         {
           key: "dual-25",
@@ -181,7 +182,7 @@ export function BrandInvestment({ brand }: { brand: Brand }) {
 
         {group && sibling ? (
           <p className="text-xs text-muted-foreground">
-            {t("This brand is part of")} <b>{group.name}</b> — {t("you can buy this location only, or the whole brand across both locations")} ({brand.domain} + {sibling.domain}).
+            {t("This brand is part of")} <b>{group.name}</b> — {t("you can buy this location only, or the whole brand across both locations")}.
           </p>
         ) : (
           <p className="text-xs text-muted-foreground">

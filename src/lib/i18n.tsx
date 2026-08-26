@@ -17,10 +17,12 @@ import { DE_KIEZIO } from "./i18n-de-kiezio";
 import { DE_MOTORESQ } from "./i18n-de-motoresq";
 import { DE_MARELYRA } from "./i18n-de-marelyra";
 import { DE_EASTAMIRA } from "./i18n-de-eastamira";
+import { DE_INVESTOR } from "./i18n-de-investor";
 import { DE_PLAN } from "./i18n-de-plan";
 import { DE_BRAND_COPY } from "./i18n-de-brand-copy";
+import { BRANDS } from "./brands";
 
-const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA, ...DE_EASTAMIRA, ...DE_PLAN, ...DE_BRAND_COPY, ...DE_UX, ...DE_LEGAL };
+const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA, ...DE_EASTAMIRA, ...DE_PLAN, ...DE_BRAND_COPY, ...DE_UX, ...DE_LEGAL, ...DE_INVESTOR };
 
 export type Lang = "en" | "de";
 
@@ -35,9 +37,41 @@ const GERMAN_ZONES = [
 /** Module-level current language so `t()` works without a hook, incl. in nested helpers. */
 let currentLang: Lang = "en";
 
+const HIDDEN_PORTFOLIO_DOMAINS = Array.from(new Set([
+  ...BRANDS.map((brand) => brand.domain),
+  "itechlounge.co.uk",
+  "itechlounge.de",
+])).sort((a, b) => b.length - a.length);
+
+/** Keep owned sites private in investor mode without deleting them from the data model. */
+export function hidePortfolioDomains(text: string): string {
+  let output = text
+    .replace(/(?:Live now|Currently live|Now live|Aktuell live|Jetzt live)(?:[^.!?]|\.(?!\s|$))*[.!?]?/gi, "")
+    .replace(/(?:the real domains?|the production domains?|die echte Domain|die echten Domains)(?:[^.!?]|\.(?!\s|$))*[.!?]?/gi, "")
+    .replace(/(?:https?:\/\/)?(?:www\.)?\b[a-z0-9.-]+\.(?:lovable\.app|lovableproject\.com)\b/gi, "")
+    .replace(/(?:https?:\/\/)?(?:www\.)?\b[a-z0-9.-]+\.itechlounge\.co\.uk\b/gi, "");
+  for (const domain of HIDDEN_PORTFOLIO_DOMAINS) {
+    const escaped = domain.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    output = output.replace(new RegExp(`(?:https?:\\/\\/)?(?:www\\.)?${escaped}`, "gi"), "");
+  }
+  return output
+    .replace(/https?:\/\/(?:www\.)?/gi, "")
+    .replace(/\(\s*\)/g, "")
+    .replace(/^\s*[;,:-]+\s*/g, "")
+    .replace(/\b(?:and|or|und|oder)\s+(?=[,.;:]|$)/gi, "")
+    .replace(/\s+([,.;:])/g, "$1")
+    .replace(/([.;:])\s*\1+/g, "$1")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 export function t(text: string): string {
-  if (currentLang === "en") return text;
-  return DICT[text] ?? text;
+  const translated = currentLang === "en" ? text : (DICT[text] ?? text);
+  return hidePortfolioDomains(translated);
+}
+
+export function getCurrentLang(): Lang {
+  return currentLang;
 }
 
 export function detectLang(): Lang {

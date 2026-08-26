@@ -8,7 +8,7 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
-import { ArrowLeft, ChevronDown, Download, ExternalLink } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download } from "lucide-react";
 import { GateGuard } from "@/components/GateGuard";
 import { brandLogo } from "@/lib/brand-logos";
 import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
@@ -111,14 +111,6 @@ function BrandDetail() {
             )}
             <h1 className="text-2xl font-semibold tracking-tight">{brand.name}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{t(brand.tagline)}</p>
-            <a
-              href={`https://${brand.domain}`}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
-            >
-              {brand.domain} <ExternalLink className="h-3 w-3" />
-            </a>
             {(() => {
               const sister = siblingOf(brand);
               const group = groupOf(brand);
@@ -126,23 +118,23 @@ function BrandDetail() {
               return (
                 <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
                   {t("Part of the")} <span className="font-semibold">{group.name}</span> {t("brand group — this entity is")}{" "}
-                  <span className="font-semibold">{brand.entityLabel}</span>. {t("Separate revenue, costs, marketing and P&L from the sister entity:")}{" "}
+                  <span className="font-semibold">{t(countryLabel(countryOf(brand)))}</span>. {t("Separate revenue, costs, marketing and P&L from the sister entity:")}{" "}
                   <Link to="/brands/$brandId" params={{ brandId: sister.id }} className="font-medium text-primary hover:underline">
-                    {sister.name} ({sister.domain})
+                    {sister.name} — {t(countryLabel(countryOf(sister)))}
                   </Link>
                 </p>
               );
             })()}
             {brand.family === "TRAVENEXA" && (
               <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
-                {t("International .com brand running on the shared TraveNexia booking engine — sold cross-border in multiple currencies.")}
+                {t("International brand running on the shared TraveNexia booking engine — sold cross-border in multiple currencies.")}
               </p>
             )}
             {brand.family === "AFFIVON" && (
               <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
-                {brand.id === "affivon"
-                  ? "Shared landlord platform for the ten Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting."
-                  : "One of ten focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders."}
+                {t(brand.id === "affivon"
+                  ? "Shared platform for the ten Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting."
+                  : "One of ten focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders.")}
               </p>
             )}
           </div>
@@ -278,11 +270,11 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={`Competitive advantage — one team, ${BRANDS.length} brands`} defaultOpen={false}>
+          <Section title={lang === "de" ? `Wettbewerbsvorteil — ein Team, ${BRANDS.length} Marken` : `Competitive advantage — one team, ${BRANDS.length} brands`} defaultOpen={false}>
             <p className="text-sm text-muted-foreground">
-              Unlike standalone SaaS businesses, {brand.name} shares every non-product function with the
-              other {BRANDS.length - 1} iTechLounge brand entities. Each additional product therefore benefits from economies of
-              scale and cross-selling opportunities.
+              {lang === "de"
+                ? `${brand.name} teilt sich alle Aufgaben außerhalb der eigentlichen Produktentwicklung mit den anderen ${BRANDS.length - 1} Marken von iTechLounge. Dadurch profitiert jedes weitere Produkt von gemeinsamen Kosten, Wissen und Vertriebsmöglichkeiten.`
+                : `Unlike standalone software businesses, ${brand.name} shares every non-product function with the other ${BRANDS.length - 1} iTechLounge brand entities. Each additional product therefore benefits from economies of scale and cross-selling opportunities.`}
             </p>
             <ul className="mt-2 grid grid-cols-1 gap-1 text-sm md:grid-cols-2">
               {SHARED_ADVANTAGE.map((s) => (
@@ -333,7 +325,7 @@ function BrandDetail() {
               <div className="font-semibold">M{a.launchMonth}</div>
             </div>
             <div>
-              <div className="text-muted-foreground">{brandVolumeLabel(brand)} @ M{rows.length}</div>
+              <div className="text-muted-foreground">{t(brandVolumeLabel(brand))} @ M{rows.length}</div>
               <div className="font-semibold">{fmtNum(users)}</div>
             </div>
             <div>
@@ -343,16 +335,16 @@ function BrandDetail() {
           </div>
           <SliderRow label={t("Launch month")} value={a.launchMonth} min={1} max={state.global.months}
             onChange={(v) => state.setBrand(brand.id, { launchMonth: v })} />
-          <SliderRow label={`Starting ${brandVolumeLabel(brand).toLowerCase()} (after trial where applicable)`} value={a.initialUsers} min={0} max={5000} step={10}
+          <SliderRow label={lang === "de" ? `Startwert: ${t(brandVolumeLabel(brand)).toLowerCase()} (nach Testphase, falls zutreffend)` : `Starting ${brandVolumeLabel(brand).toLowerCase()} (after trial where applicable)`} value={a.initialUsers} min={0} max={5000} step={10}
             onChange={(v) => state.setBrand(brand.id, { initialUsers: v })} format={fmtNum} />
-          <SliderRow label={`Monthly growth in ${brandVolumeLabel(brand).toLowerCase()}`} value={Math.round(a.userGrowth * 1000) / 10}
+          <SliderRow label={lang === "de" ? `Monatliches Wachstum der ${t(brandVolumeLabel(brand)).toLowerCase()}` : `Monthly growth in ${brandVolumeLabel(brand).toLowerCase()}`} value={Math.round(a.userGrowth * 1000) / 10}
             min={0} max={40} step={0.5}
             onChange={(v) => state.setBrand(brand.id, { userGrowth: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
-          <SliderRow label={brandRevenuePerUnitLabel(brand)} value={a.arpu} min={0} max={500} step={brand.revenueUnit === "affiliate-order" ? 0.1 : 1}
+          <SliderRow label={t(brandRevenuePerUnitLabel(brand))} value={a.arpu} min={0} max={500} step={brand.revenueUnit === "affiliate-order" ? 0.1 : 1}
             onChange={(v) => state.setBrand(brand.id, { arpu: v })}
             format={(v) => brand.revenueUnit === "affiliate-order" ? `€${v.toFixed(2)}/order` : `€${v.toFixed(0)}/mo`} />
-          <SliderRow label={brandAttritionLabel(brand)} value={Math.round(a.churn * 1000) / 10}
+          <SliderRow label={t(brandAttritionLabel(brand))} value={Math.round(a.churn * 1000) / 10}
             min={0} max={15} step={0.1}
             onChange={(v) => state.setBrand(brand.id, { churn: v / 100 })}
             format={(v) => `${v.toFixed(1)}%`} />
@@ -362,7 +354,7 @@ function BrandDetail() {
             onChange={(v) => state.setBrand(brand.id, { directCost: v })} format={fmtEURk} />
           <div className="grid grid-cols-2 gap-2 rounded-md bg-muted/50 p-3 text-xs">
             <div>{t("Free trial:")} <b>{state.global.freeTrialMonths} mo</b></div>
-            <div>{brandRevenuePerUnitLabel(brand)}: <b>{brand.revenueUnit === "affiliate-order" ? `€${a.arpu.toFixed(2)}` : fmtEUR(a.arpu)}</b></div>
+            <div>{t(brandRevenuePerUnitLabel(brand))}: <b>{brand.revenueUnit === "affiliate-order" ? `€${a.arpu.toFixed(2)}` : fmtEUR(a.arpu)}</b></div>
             <div>{t("Cancellations:")} <b>{fmtPct(a.churn)}</b></div>
             <div>{t("Growth:")} <b>{fmtPct(a.userGrowth)}</b></div>
           </div>

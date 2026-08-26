@@ -1,4 +1,4 @@
-import { t } from "@/lib/i18n";
+import { getCurrentLang, t } from "@/lib/i18n";
 import { jsPDF } from "jspdf";
 import type { Brand } from "@/lib/brands";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
@@ -20,13 +20,14 @@ type Metrics = {
 };
 
 export function downloadBrandPdf(brand: Brand, m: Metrics) {
+  const lang = getCurrentLang();
   const businessPlan = plainBusinessPlan(brand, {
     initialUsers: m.initialUsers,
     arpu: m.arpu,
     userGrowth: m.growth,
     churn: m.churn,
     directCost: m.directCost,
-  });
+  }, lang);
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
@@ -118,11 +119,7 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   doc.setTextColor(90, 90, 90);
   doc.text(t(brand.tagline), margin, y);
   y += 16;
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(10);
-  doc.setTextColor(0, 100, 200);
-  doc.textWithLink(brand.domain, margin, y, { url: `https://${brand.domain}` });
-  y += 20;
+  y += 8;
 
   // Key metrics box
   ensure(70);
@@ -132,12 +129,12 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   doc.setFontSize(9);
   doc.setTextColor(90, 90, 90);
   const cells = [
-    ["Launch", `M${m.launchMonth}`],
-    [`${brandVolumeLabel(brand)} @ M${m.horizonMonths}`, m.users.toLocaleString()],
-    [`Monthly revenue @ M${m.horizonMonths}`, `€${(m.mrr / 1000).toFixed(1)}k`],
-    [brandRevenuePerUnitLabel(brand), brand.revenueUnit === "affiliate-order" ? `€${m.arpu.toFixed(2)}` : `€${m.arpu.toFixed(0)}/mo`],
-    ["Monthly growth", `${(m.growth * 100).toFixed(1)}%`],
-    [brandAttritionLabel(brand), `${(m.churn * 100).toFixed(1)}%`],
+    [t("Launch"), `M${m.launchMonth}`],
+    [`${t(brandVolumeLabel(brand))} @ M${m.horizonMonths}`, m.users.toLocaleString(lang === "de" ? "de-DE" : "en-GB")],
+    [`${t("Monthly revenue")} @ M${m.horizonMonths}`, `€${(m.mrr / 1000).toFixed(1)}k`],
+    [t(brandRevenuePerUnitLabel(brand)), brand.revenueUnit === "affiliate-order" ? `€${m.arpu.toFixed(2)}` : `€${m.arpu.toFixed(0)}/${lang === "de" ? "Monat" : "mo"}`],
+    [t("Monthly growth"), `${(m.growth * 100).toFixed(1)}%`],
+    [t(brandAttritionLabel(brand)), `${(m.churn * 100).toFixed(1)}%`],
   ];
   const cellW = maxW / cells.length;
   cells.forEach(([lbl, val], i) => {
@@ -153,32 +150,32 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   });
   y += 76;
 
-  subheading("Business plan in plain English");
-  labelValue("Status", businessPlan.stage);
-  labelValue("Territory", businessPlan.territory);
-  labelValue("Business type", businessPlan.businessType);
-  labelValue("What it does", businessPlan.summary);
-  labelValue("Who uses it", businessPlan.customer);
-  labelValue("Market opportunity (management estimate)", businessPlan.marketOpportunity);
-  labelValue("The customer problem", businessPlan.problem);
-  labelValue("What we provide", businessPlan.solution);
-  labelValue("Who pays and how we earn", businessPlan.revenue);
-  labelValue("How we find customers", businessPlan.salesPlan);
-  labelValue("How it runs day to day", businessPlan.operations);
-  labelValue(`Plan for ${businessPlan.territory}`, businessPlan.territoryPlan);
-  labelValue("Expansion plan", businessPlan.expansionPlan);
+  subheading(t("Business plan in plain language"));
+  labelValue(t("Status"), t(businessPlan.stage));
+  labelValue(t("Territory"), businessPlan.territory);
+  labelValue(t("Business type"), t(businessPlan.businessType));
+  labelValue(t("What it does"), businessPlan.summary);
+  labelValue(t("Who uses it"), businessPlan.customer);
+  labelValue(t("Market opportunity (management estimate)"), businessPlan.marketOpportunity);
+  labelValue(t("The customer problem"), businessPlan.problem);
+  labelValue(t("What we provide"), businessPlan.solution);
+  labelValue(t("Who pays and how we earn"), businessPlan.revenue);
+  labelValue(t("How we find customers"), businessPlan.salesPlan);
+  labelValue(t("How it runs day to day"), businessPlan.operations);
+  labelValue(lang === "de" ? `Plan für ${businessPlan.territory}` : `Plan for ${businessPlan.territory}`, businessPlan.territoryPlan);
+  labelValue(t("Expansion plan"), businessPlan.expansionPlan);
   y += 4;
 
-  subheading("First 12-month plan");
+  subheading(t("First 12-month plan"));
   bullets(businessPlan.milestones);
 
-  subheading("Numbers that show whether it is working");
+  subheading(t("Numbers that show whether it is working"));
   bullets(businessPlan.successMeasures);
 
-  subheading("Why customers may choose us");
+  subheading(t("Why customers may choose us"));
   bullets(businessPlan.reasonsItCanWin);
 
-  subheading("Main risks and our response");
+  subheading(t("Main risks and our response"));
   bullets(businessPlan.mainRisks);
 
   subheading("Detailed product description");
@@ -254,11 +251,11 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
     doc.text(
-      `iTechLounge · ${brand.name} · ${new Date().toLocaleDateString()}`,
+      `iTechLounge · ${brand.name} · ${new Date().toLocaleDateString(lang === "de" ? "de-DE" : "en-GB")}`,
       margin,
       pageH - 24,
     );
-    doc.text(`Page ${i} of ${pages}`, pageW - margin, pageH - 24, { align: "right" });
+    doc.text(lang === "de" ? `Seite ${i} von ${pages}` : `Page ${i} of ${pages}`, pageW - margin, pageH - 24, { align: "right" });
   }
 
   doc.save(`${brand.id}-loungetech.pdf`);

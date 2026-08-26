@@ -1,4 +1,4 @@
-import { t } from "@/lib/i18n";
+import { t, useLang } from "@/lib/i18n";
 import { useMemo, useState } from "react";
 import { useFinance } from "@/lib/finance-store";
 import { BRANDS, SHARED_ADVANTAGE } from "@/lib/brands";
@@ -37,9 +37,7 @@ function BrandDirectory() {
         (b) =>
           (country === "all" || countryOf(b) === country) &&
           (sector === "all" || sectorOf(b) === sector) &&
-          (q === "" ||
-            b.name.toLowerCase().includes(q) ||
-            b.domain.toLowerCase().includes(q)),
+          (q === "" || b.name.toLowerCase().includes(q)),
       ),
     [country, sector, q],
   );
@@ -76,7 +74,7 @@ function BrandDirectory() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder={t("Search brand or domain")}
+          placeholder={t("Search brand")}
           className="h-9 w-[220px]"
         />
         <span className="text-xs text-muted-foreground">
@@ -95,14 +93,6 @@ function BrandDirectory() {
                   · {t("launches")} M{state.brands[b.id]?.launchMonth}
                 </span>
               </div>
-              <a
-                href={`https://${b.domain}`}
-                target="_blank"
-                rel="noreferrer"
-                className="shrink-0 font-medium text-primary hover:underline"
-              >
-                {b.domain} ↗
-              </a>
             </div>
           ))}
           {filtered.length === 0 ? (
@@ -115,6 +105,7 @@ function BrandDirectory() {
 }
 
 export function SystemPanel() {
+  const { lang } = useLang();
   const definitionCounts = portfolioDefinitionCounts(BRANDS);
   return (
     <div className="space-y-4">
@@ -124,13 +115,15 @@ export function SystemPanel() {
       />
 
       <Section
-        title={`Our system — one team, ${BRANDS.length} brand entities`}
+        title={lang === "de" ? `Unser System — ein Team, ${BRANDS.length} Markengesellschaften` : `Our system — one team, ${BRANDS.length} brand entities`}
         description={t("How one shared platform runs the whole portfolio — plus the searchable brand list.")}
                 badge={`${BRANDS.length} ${t("brands")}`}
       >
         <div className="space-y-3 text-sm">
         <p className="text-muted-foreground">
-          All {definitionCounts.defined} brand entities now have a defined product plan. They share technology and central teams, reducing repeated cost and creating cross-selling opportunities.
+          {lang === "de"
+            ? `Alle ${definitionCounts.defined} Markengesellschaften haben jetzt einen definierten Produktplan. Sie teilen Technik und zentrale Teams. Das vermeidet doppelte Kosten und schafft gemeinsame Vertriebsmöglichkeiten.`
+            : `All ${definitionCounts.defined} brand entities now have a defined product plan. They share technology and central teams, reducing repeated cost and creating cross-selling opportunities.`}
         </p>
         <ul className="grid grid-cols-1 gap-1 md:grid-cols-2">
           {SHARED_ADVANTAGE.map((s) => (
@@ -144,17 +137,17 @@ export function SystemPanel() {
         </div>
       </Section>
 
-      <Section title={t("Company & domains")} defaultOpen={false}>
+      <Section title={t("Company entities")} defaultOpen={false}>
         <div className="grid grid-cols-1 gap-3 text-sm md:grid-cols-2">
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("United Kingdom")}</div>
             <div className="font-semibold">ITECHLOUNGE LTD</div>
-            <a href="https://itechlounge.co.uk" target="_blank" rel="noreferrer" className="text-primary hover:underline">itechlounge.co.uk ↗</a>
+            <div className="text-xs text-muted-foreground">{t("United Kingdom operating company")}</div>
           </div>
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("Germany")}</div>
             <div className="font-semibold">ITECHLOUNGE GMBH</div>
-            <a href="https://itechlounge.de" target="_blank" rel="noreferrer" className="text-primary hover:underline">itechlounge.de ↗</a>
+            <div className="text-xs text-muted-foreground">{t("Germany operating company")}</div>
           </div>
         </div>
       </Section>

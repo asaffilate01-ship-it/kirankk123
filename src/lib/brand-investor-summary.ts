@@ -1,5 +1,6 @@
-import { t } from "./i18n";
 import type { Brand } from "./brands";
+import type { Lang } from "./i18n";
+import { PLAIN_GERMAN_SUMMARIES } from "./brand-investor-summary-de";
 
 /**
  * A deliberately jargon-free answer to the first question an investor asks:
@@ -119,45 +120,53 @@ export function brandDefinitionStage(brand: Brand): BrandDefinitionStage {
 
 export function brandPlainEnglish(brand: Brand): string {
   if (CONCEPT_ONLY_IDS.has(brand.id)) {
-    return `${brand.name} ${t("is a reserved brand and domain. Its product, target customer and business model have not yet been approved.")}`;
+    return `${brand.name} is a reserved brand and domain. Its product, target customer and business model have not yet been approved.`;
   }
-  return t(PLAIN_ENGLISH_SUMMARIES[brand.id] ?? brand.description);
+  return PLAIN_ENGLISH_SUMMARIES[brand.id] ?? brand.description;
+}
+
+export function brandPlainLanguage(brand: Brand, lang: Lang): string {
+  if (lang === "de") {
+    return PLAIN_GERMAN_SUMMARIES[brand.id]
+      ?? `${brand.name} bietet eine digitale Lösung für ${brand.audience}.`;
+  }
+  return brandPlainEnglish(brand);
 }
 
 export function brandRevenuePlainEnglish(brand: Brand): string {
   if (CONCEPT_ONLY_IDS.has(brand.id)) {
-    return t("No revenue model should be presented to investors until the product scope is approved.");
+    return "No revenue model should be presented to investors until the product scope is approved.";
   }
   const currency = brand.region === "UK" ? "£" : "€";
-  if (brand.payerModel) return t(brand.payerModel.investorRevenue);
+  if (brand.payerModel) return brand.payerModel.investorRevenue;
   if (brand.revenueUnit === "affiliate-order") {
-    return `${t("Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of")} ${currency}${brand.defaultArpu} ${t("confirmed revenue per order.")}`;
+    return `Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of ${currency}${brand.defaultArpu} confirmed revenue per order.`;
   }
   if (brand.id === "athlyvo") {
-    return `${t("Players, organisers, teams, clubs, coaches and officials use Athlyvo free. Only venues pay; the forecast uses an average of")} ${currency}${brand.defaultArpu} ${t("per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.")}`;
+    return `Players, organisers, teams, clubs, coaches and officials use Athlyvo free. Only venues pay; the forecast uses an average of ${currency}${brand.defaultArpu} per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.`;
   }
   const otherIncome = brand.defaultAddlRevenue > 0
-    ? " " + t("It can also earn from setup, optional extras and partner services.")
+    ? " It can also earn from setup, optional extras and partner services."
     : "";
-  return `${t("Paying customers are modelled at an average of")} ${currency}${brand.defaultArpu} ${t("per month after a two-month free trial.")}${otherIncome}`;
+  return `Paying customers are modelled at an average of ${currency}${brand.defaultArpu} per month after a two-month free trial.${otherIncome}`;
 }
 
 export function brandVolumeLabel(brand: Brand): string {
-  if (brand.payerModel) return t(brand.payerModel.forecastVolumeLabel);
-  if (brand.id === "athlyvo") return t("Paying venue accounts");
-  return brand.revenueUnit === "affiliate-order" ? t("Confirmed affiliate orders") : t("Paying customers");
+  if (brand.payerModel) return brand.payerModel.forecastVolumeLabel;
+  if (brand.id === "athlyvo") return "Paying venue accounts";
+  return brand.revenueUnit === "affiliate-order" ? "Confirmed affiliate orders" : "Paying customers";
 }
 
 export function brandRevenuePerUnitLabel(brand: Brand): string {
-  if (brand.payerModel) return t(brand.payerModel.revenuePerUnitLabel);
-  if (brand.id === "athlyvo") return t("Average revenue per paying venue / month");
-  return brand.revenueUnit === "affiliate-order" ? t("Average commission per order") : t("Average price per customer / month");
+  if (brand.payerModel) return brand.payerModel.revenuePerUnitLabel;
+  if (brand.id === "athlyvo") return "Average revenue per paying venue / month";
+  return brand.revenueUnit === "affiliate-order" ? "Average commission per order" : "Average price per customer / month";
 }
 
 export function brandAttritionLabel(brand: Brand): string {
-  if (brand.payerModel) return t(brand.payerModel.attritionLabel);
-  if (brand.id === "athlyvo") return t("Venues cancelling each month");
-  return brand.revenueUnit === "affiliate-order" ? t("Monthly order drop-off") : t("Customers cancelling each month");
+  if (brand.payerModel) return brand.payerModel.attritionLabel;
+  if (brand.id === "athlyvo") return "Venues cancelling each month";
+  return brand.revenueUnit === "affiliate-order" ? "Monthly order drop-off" : "Customers cancelling each month";
 }
 
 export function investorSummaryCoverage(brands: Brand[]) {
