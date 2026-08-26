@@ -209,17 +209,18 @@ export function FundingPanel() {
         <SnapshotCard
           icon={<Store className="h-4 w-4" />}
           label={t("Operating now")}
-          value={t("3 live sites")}
-          detail={t("Dishbee has real operating sites, with 3 more expected in September 2026.")}
+          value={t("Live and trading")}
+          detail={t("Dishbee is already live and operating with multiple restaurant sites, and more go live in September 2026.")}
           tone="good"
         />
         <SnapshotCard
           icon={<CheckCircle2 className="h-4 w-4" />}
           label={t("Signed launch customers")}
-          value={t("3 restaurants")}
-          detail={t("Haccora trials are due to begin on 1 September 2026 for 60 days.")}
+          value={t("Multiple signed")}
+          detail={t("Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.")}
           tone="good"
         />
+
         <SnapshotCard
           icon={<TrendingUp className="h-4 w-4" />}
           label={t("UK B2B launch breadth")}
