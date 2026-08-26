@@ -133,8 +133,8 @@ function BrandDetail() {
             {brand.family === "AFFIVON" && (
               <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
                 {t(brand.id === "affivon"
-                  ? "Shared platform for the ten Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting."
-                  : "One of ten focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders.")}
+                  ? "Shared platform for multiple Affivon affiliate storefront brands — one engine for products, content, tracked links, disclosures and reporting."
+                  : "One of multiple focused affiliate storefronts running on Affivon. The retailer completes the sale; this brand earns retailer-paid commission on eligible referred orders.")}
               </p>
             )}
           </div>

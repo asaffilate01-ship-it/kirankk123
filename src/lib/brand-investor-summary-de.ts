@@ -19,7 +19,7 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   immoviq:
     "Gibt Vermietern und Hausverwaltungen ein System für Mieter, Verträge, Reparaturen, Kosten und Unterlagen.",
   beinstandplus:
-    "Begleitet Zugezogene durch praktische Aufgaben in Deutschland, etwa Anmeldung, Versicherung und Schulanmeldung.",
+    "Begleitet Menschen in Deutschland bei schwierigen praktischen Aufgaben, darunter Umzug, Trauerfall, Bestattungsmöglichkeiten, voraussichtliche Kosten sowie passende Versicherungs- oder Unterstützungswege.",
   traindirekt:
     "Bietet deutschsprachige Sprach- und Technikkurse, die von Arbeitgebern oder öffentlichen Stellen bezahlt werden können.",
   zivvo:
@@ -43,7 +43,7 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   xpertjobs:
     "Bringt qualifizierte Fachkräfte mit passenden Stellen zusammen und hilft Arbeitgebern bei Prüfung und Gesprìhen.",
   traderos:
-    "Hilft Handwerksbetrieben, Aufträge zu finden und zu verwalten sowie Material und Baustellenlieferungen zu organisieren.",
+    "Bietet selbstentscheidenden Tradern erklärte Marktsignale, Risikowerkzeuge, Warnungen und eine vollständige Ergebnisübersicht für Devisen, Indizes, Rohstoffe und Kryptowährungen.",
   amityos:
     "Hilft Pflegeanbietern bei Besuchen, Medikamenten, Personal, Nachweisen und Abrechnung und Familien bei der Suche nach guter Pflege.",
   skillfinch:
@@ -51,7 +51,7 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   formationgenie:
     "Gründet britische Firmen und hilft danach bei Meldungen, Steuern, Bankkonto und Fristen.",
   merqano:
-    "Ermöglicht einem Betreiber, viele getrennte Onlineshops für verschiedene Unternehmen mit demselben System zu betreiben.",
+    "Erstellt und betreibt getrennte E-Commerce-Websites für unterschiedliche Geschäftskunden mit einem gemeinsamen System.",
   stylesyncger:
     "Lässt Kunden Schönheitstermine buchen und gibt deutschen Salons Werkzeuge für Termine, Kunden, Zahlungen und Verwaltung.",
   parkpunkt:
@@ -98,11 +98,11 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   gableyretrofit:
     "Begleitet Hauseigentümer von der Gebäudeprüfung über Angebote und Förderung bis zu Einbau, Nachweisen und Energieeinsparung.",
   baytcircle:
-    "Gibt Eigentümern, Mietern und Gebäudeverwaltern im Golfraum einen Ort für Kosten, Reparaturen, Dokumente und Entscheidungen.",
+    "Hilft Familien, Homeschooling-Gruppen, Zugezogenen und Einheimischen in der Golfregion, Gruppen zu finden, Veranstaltungen zu organisieren und freie Kapazitäten familienfreundlicher Orte zu buchen.",
   taxcenda:
-    "Hilft Onlinehändlern, Umsatzsteuer in ihren Verkaufsländern zu registrieren, zu berechnen und zu melden.",
+    "Erstellt und übermittelt US-Bundes- und Bundesstaaten-Steuererklärungen für Steuerpflichtige in den USA und im Ausland mit entsprechend qualifizierten US-Steuerfachleuten.",
   nimah:
-    "Lässt Menschen Zakat und Spenden berechnen, an geprüfte Zwecke geben und die Verwendung nachvollziehen.",
+    "Lässt Lebensmittelbetriebe in Saudi-Arabien und Pakistan sichere Überschüsse günstiger anbieten, damit Kunden in der Nähe sie reservieren und abholen können.",
   ilmvero:
     "Gibt Schulen ein System für Aufnahme, Anwesenheit, Stundenpläne, Prüfungen, Gebühren, Hausaufgaben und Elternkontakt.",
   dearnext:
@@ -114,7 +114,7 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   recovrable:
     "Hilft Unternehmen, offene Rechnungen einzuziehen, Ratenpläne anzubieten und bei Bedarf Klagen vorzubereiten.",
   merqora:
-    "Zeigt Händlern Preise der Konkurrenz, fehlende Produkte und sinnvolle Werbemöglichkeiten.",
+    "Hilft Verkäufern und Agenturen, ihre Verkäufe auf Amazon und anderen Online-Marktplätzen in einem System zu verwalten und auszubauen.",
   lessonahead:
     "Hilft Lernenden, geprüfte Nachhilfelehrer und Fahrlehrer zu finden, und Anbietern bei Unterricht, Fortschritt, Terminen und Abrechnung.",
   motoresq:

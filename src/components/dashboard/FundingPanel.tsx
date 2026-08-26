@@ -34,12 +34,13 @@ const TRACTION: TractionItem[] = [
   {
     brand: "KinderStars UK",
     status: "registration",
-    headline: "Ofsted registration process is under way.",
+    headline:
+      "Ofsted registration is under way, with interest from childminders and from parents and guardians looking for childcare.",
     detail:
-      "KinderStars is software for parents and independent registered childminders; it is not being presented as a live nationwide childminder agency.",
+      "Demand is forming on both sides of the service before launch. KinderStars provides the software and organisation for independent registered childminders and families.",
     payer:
       "Registered childminders pay the software subscription. Parents use the platform free and pay childcare fees directly to the childminder, or eligible government funding pays the childminder.",
-    next: "Complete the relevant registration and compliance work before making live-service claims.",
+    next: "Complete the relevant registration and compliance work, organise childminder onboarding and build the family waiting list.",
   },
   {
     brand: "Haccora UK",
@@ -110,6 +111,47 @@ const TRACTION: TractionItem[] = [
       "Tutors, driving instructors, tuition centres and schools pay. Parents and learners use their side free.",
     next: "Onboard both instructors and measure lessons managed, learner use and trial-to-paid conversion.",
   },
+  {
+    brand: "TaxNuvia",
+    status: "ready",
+    headline: "Accountants and accountancy practices are ready to start.",
+    detail:
+      "This gives the accountant marketplace an initial professional supply base before coordinated marketing begins.",
+    payer:
+      "Accountants and accountancy practices pay the subscription. Businesses and individuals request and compare quotes free.",
+    next: "Verify the practices, complete their profiles and start routing suitable enquiries through the platform.",
+  },
+  {
+    brand: "Gabley",
+    status: "ready",
+    headline: "Estate agents are ready to start.",
+    detail:
+      "The first agencies can provide real property stock, workflow feedback and local market coverage.",
+    payer:
+      "Estate agents, letting agents and professional landlords pay. Buyers and tenants search and use their portal free.",
+    next: "Onboard the first agencies, import their stock and test enquiries, sales, lettings and property-management workflows.",
+  },
+  {
+    brand: "Cirqiva",
+    status: "ready",
+    headline: "Waste-management and waste-removal businesses are ready to start.",
+    detail:
+      "The first operators can test collection requests, quotes, job management, routes and compliance records.",
+    payer:
+      "Waste carriers, recycling facilities and service operators pay. Businesses requesting collections use their side free.",
+    next: "Verify licences and service areas, onboard operators and measure collection requests and completed jobs.",
+  },
+  {
+    brand: "UK B2B portfolio",
+    status: "ready",
+    headline:
+      "The launch plan is to begin customer onboarding or active pipeline work across every UK B2B project from September 2026.",
+    detail:
+      "Interest already reaches childcare, food safety, events, trades, beauty, cars, hospitality, education, accountancy, property and waste before a coordinated advertising campaign.",
+    payer:
+      "Each project keeps one clearly defined paying side, normally the business receiving the software, customers or operating tools.",
+    next: "Fund the central management, marketing, onboarding, administration and support team needed to operate the whole system properly.",
+  },
 ];
 
 const STATUS_LABELS: Record<TractionStatus, string> = {
@@ -142,7 +184,7 @@ export function FundingPanel() {
       <PanelIntro
         title={t("Investment in one minute")}
         description={t(
-          "The portfolio is not starting from zero. Products have been built, UK businesses are already live, signed or waiting to trial, and customer interest has been generated before paid advertising. Investment is mainly for compliant launches, onboarding, sales and the team needed to turn that demand into recurring revenue.",
+          "The portfolio is not starting from zero. Products have been built, UK businesses are already live, signed, ready or interested, and this demand has been generated before paid advertising. Funding is now needed to fully manage, market, onboard and operate the whole system, complete compliant launches and turn the existing demand into recurring revenue.",
         )}
         tips={[
           t(
@@ -152,7 +194,7 @@ export function FundingPanel() {
             "Live, signed, ready and pipeline are shown separately so they are not confused with revenue.",
           ),
           t(
-            "Germany has not launched yet and is presented as the next funded growth market, not as proven traction.",
+            "From September 2026, the UK plan is to begin customer onboarding or active pipeline work across every B2B project.",
           ),
         ]}
       />
@@ -167,23 +209,24 @@ export function FundingPanel() {
         <SnapshotCard
           icon={<Store className="h-4 w-4" />}
           label={t("Operating now")}
-          value={t("3 live sites")}
-          detail={t("Dishbee has real operating sites, with 3 more expected in September 2026.")}
+          value={t("Live and trading")}
+          detail={t("Dishbee is already live and operating with multiple restaurant sites, and more go live in September 2026.")}
           tone="good"
         />
         <SnapshotCard
           icon={<CheckCircle2 className="h-4 w-4" />}
           label={t("Signed launch customers")}
-          value={t("3 restaurants")}
-          detail={t("Haccora trials are due to begin on 1 September 2026 for 60 days.")}
+          value={t("Multiple signed")}
+          detail={t("Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.")}
           tone="good"
         />
+
         <SnapshotCard
           icon={<TrendingUp className="h-4 w-4" />}
-          label={t("Visible near-term demand")}
-          value={t("30 restaurants")}
+          label={t("UK B2B launch breadth")}
+          value={t("Multiple sectors")}
           detail={t(
-            "Additional Haccora pipeline before paid advertising, alongside trial-ready customers for other brands.",
+            "Food, events, trades, beauty, motor, education, accountancy, property, waste and childcare already have businesses or users ready or interested.",
           )}
         />
       </div>
@@ -195,7 +238,7 @@ export function FundingPanel() {
             <h2 className="text-sm font-semibold">{t("Why the early demand matters")}</h2>
             <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
               {t(
-                "These customers were found before a structured advertising campaign. That does not guarantee conversion, but it gives the UK launch a practical starting point: real businesses can test the products, produce usage data and become reference customers. Investor funding can therefore be used to accelerate evidence that already exists, rather than relying only on a theoretical market forecast.",
+                "These customers were found before a structured advertising campaign. This gives the UK launch a practical starting point: real businesses can test the products, produce usage data and become reference customers. Investor funding is needed to fully manage, market and operate the whole system and accelerate demand that already exists, rather than relying only on a theoretical market forecast.",
               )}
             </p>
           </div>
@@ -224,7 +267,7 @@ export function FundingPanel() {
           </div>
           <p className="text-[11px] leading-relaxed text-muted-foreground">
             {t(
-              "These figures are management-provided commercial updates. 'Ready for trial' means a business has expressed readiness to onboard; it is not counted as paying revenue until the trial converts and payment is received. 'Pipeline' is an opportunity, not a signed customer.",
+              "These figures are management-provided commercial updates. 'Ready for trial' means a business has expressed readiness to onboard. 'Pipeline' means an active sales opportunity. Paid subscription revenue begins after the applicable free trial.",
             )}
           </p>
         </div>
@@ -421,10 +464,10 @@ export function FundingPanel() {
       <Section
         title={t("Optional: detailed return calculator")}
         description={t(
-          "Open this only if you want to test tickets, assumptions, dividends and possible payback timings.",
+          "Explore illustrative investment tickets, dividends and possible payback timings using the assumptions in the financial model.",
         )}
         defaultOpen={false}
-        badge={t("Forecast, not a guarantee")}
+        badge={t("Illustrative forecast")}
       >
         <InvestorCalculator />
       </Section>

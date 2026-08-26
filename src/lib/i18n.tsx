@@ -21,9 +21,10 @@ import { DE_INVESTOR } from "./i18n-de-investor";
 import { DE_PLAN } from "./i18n-de-plan";
 import { DE_BRAND_COPY } from "./i18n-de-brand-copy";
 import { DE_BRAND_COPY2 } from "./i18n-de-brand-copy2";
+import { DE_BRAND_CORRECTIONS } from "./i18n-de-brand-corrections";
 import { BRANDS } from "./brands";
 
-const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA, ...DE_EASTAMIRA, ...DE_PLAN, ...DE_BRAND_COPY, ...DE_BRAND_COPY2, ...DE_UX, ...DE_LEGAL, ...DE_INVESTOR };
+const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA, ...DE_EASTAMIRA, ...DE_PLAN, ...DE_BRAND_COPY, ...DE_BRAND_COPY2, ...DE_UX, ...DE_LEGAL, ...DE_INVESTOR, ...DE_BRAND_CORRECTIONS };
 
 export type Lang = "en" | "de";
 

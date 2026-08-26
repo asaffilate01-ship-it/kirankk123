@@ -130,6 +130,328 @@ const EXPANSION_PLANS: Record<CountryId, string> = {
   INT: "Expand in waves: prove one or two anchor markets, measure acquisition cost and retention, then open the next territory only when local partners, payments and compliance are ready.",
 };
 
+const BRAND_PROBLEMS: Record<string, string> = {
+  beinstandplus:
+    "People facing relocation, bereavement or another difficult life event must contact several offices and providers separately, often without knowing the correct next step, likely funeral costs or whether insurance or other support may apply.",
+  traderos:
+    "Self-directed traders piece together charts, broker screens and opaque signal groups, but often cannot see why a signal appeared, what risk it carries or whether losing results have been removed.",
+  baytcircle:
+    "Families search scattered message groups and social pages for activities and community events, while suitable pools, play centres, learning spaces and clubs have spare capacity they cannot easily offer to nearby families.",
+  taxcenda:
+    "People and small businesses with U.S. filing obligations—especially those living abroad—face unfamiliar forms, deadlines and cross-border questions, while local advisers may not be able to prepare or electronically file the U.S. return.",
+  merqora:
+    "Amazon and other marketplace sellers switch between seller portals, advertising screens, stock tools and spreadsheets. Agencies repeat this work for every client, and important listing, inventory, advertising or account-health problems can be missed until sales fall.",
+  merqano:
+    "Many businesses need a professional ecommerce website but a custom build is expensive and slow. Building and maintaining a separate technical system for every customer repeats the same checkout, payment, order, delivery, security and reporting work.",
+  nimah:
+    "Food outlets regularly finish the day with safe unsold meals, bakery goods and groceries that may no longer sell at full price. Disposing of them loses ingredients, staff effort and possible income, while nearby customers are looking for affordable food.",
+};
+
+const BRAND_SALES_PLANS: Record<string, string> = {
+  beinstandplus:
+    "Sell funded support packages to employers, insurers, care organisations and community partners, then let their staff, members and families use the service without a second platform fee. Build referral relationships with authorised insurance, legal, benefits and funeral specialists without selling access to vulnerable families.",
+  traderos:
+    "Win self-directed traders through useful market education, transparent live signal history, trial access and trading communities. Market the quality of the evidence, journal and risk controls—not profit claims—and do not accept broker payments that would create a second paying side or distort recommendations.",
+  baytcircle:
+    "Seed one neighbourhood at a time with factual family-venue and activity profiles, home-education groups and anchor providers. Invite providers to claim and verify their page, attract families free through schools and community groups, and sell providers the measurable benefit of filled spare capacity and simpler administration.",
+  taxcenda:
+    "Reach taxpayer clients through expatriate communities, useful U.S. filing guides, employer mobility teams and referral relationships with accountants outside the United States. Partners are not charged; the taxpayer buys a clear fixed-scope preparation and filing service.",
+  merqora:
+    "Recruit Amazon and other marketplace sellers through ecommerce agencies, seller communities, practical account audits and a guided trial. Show how Merqora reduces repeated admin and identifies clear actions across listings, stock, advertising and account health; sell only to sellers and agencies, never shoppers.",
+  merqano:
+    "Sell directly to independent retailers, growing brands, franchise businesses and agencies that need professional ecommerce websites. Demonstrate one complete customer website, provide guided product and payment setup, and show how the business receives its own brand, customer relationship and operating dashboard without funding a custom technical build.",
+  nimah:
+    "Build one dense launch district at a time. Recruit anchor restaurants, cafés, bakeries, hotels and supermarkets directly, give staff guided setup and a trial, then attract nearby customers through local creators, universities, employers, community groups and participating outlets' own channels. Sell only to food businesses; customers use Ni'mah without a platform fee.",
+};
+
+const BRAND_OPERATIONS: Record<string, string> = {
+  beinstandplus:
+    "A trained support team manages consent-based cases, documents, tasks and appointments. Authorised partners handle regulated insurance, legal or benefits advice, while sensitive bereavement cases can move from digital guidance to a human caseworker at any time.",
+  traderos:
+    "The platform receives licensed market data, calculates indicators, records every signal and distributes alerts. The team monitors data quality, model behaviour, compliance and support; traders control every decision, and any broker connection is optional, limited and never gives TraderOS custody of funds.",
+  baytcircle:
+    "The shared team maintains local coverage, checks claims and moderates family content. Providers control their own availability, prices and bookings. Safeguarding reports and sensitive issues go to trained human review, and child accounts remain guardian controlled.",
+  taxcenda:
+    "Credentialed preparers work inside role-controlled cases with checklists, workpapers and review. Required PTIN and professional credentials are monitored, electronic submissions use an authorised IRS e-file provider, and the client reviews and authorises the completed return before filing.",
+  merqora:
+    "The shared team maintains authorised marketplace connections, data quality, alerts and support. Sellers and agencies control account permissions, budgets and approvals. Important listing, pricing or advertising changes remain approval based and every action is recorded.",
+  merqano:
+    "Merqano maintains the shared commerce technology, security, payments, updates and support. Each customer business controls only its own website, branding, catalogue, prices, orders, customers, delivery rules and staff through a separate protected dashboard.",
+  nimah:
+    "Each food outlet controls what it lists, the reduced price, quantity, ingredients, allergens and collection window and remains responsible for food safety. Ni'mah verifies businesses, runs discovery, reservations, payments, codes and support, removes expired offers automatically and escalates safety reports to trained staff.",
+};
+
+const BRAND_TERRITORY_PLANS: Record<string, string> = {
+  beinstandplus:
+    "Launch in Germany with German contracts, euro pricing, multilingual support and GDPR controls. Before offering funeral-policy help, define the boundary between information and regulated insurance advice and contract with authorised partners for any recommendation or sale.",
+  traderos:
+    "Launch in the UK only after specialist review of the product boundary and every financial promotion, confirmation of market-data licences, clear risk disclosures and controls for any optional broker connection. No client-money custody and no guaranteed-return claims.",
+  baytcircle:
+    "Launch in one UAE city with English and Arabic, neighbourhood and distance search, local payments, provider verification and family-safety rules. Confirm activity, advertising, venue and child-safeguarding requirements before opening each category.",
+  taxcenda:
+    "The service is U.S.-tax focused but can serve clients globally. Launch only with current preparer credentials, an authorised e-file route, supported federal and state forms, written data-security procedures, engagement terms and a clear escalation list for unsupported cross-border cases.",
+  merqora:
+    "Start with UK-based Amazon sellers and agencies using only authorised marketplace connections, pound pricing and UK support. Confirm marketplace developer terms, data permissions, account security, UK GDPR and advertising controls before connecting live seller accounts.",
+  merqano:
+    "Start with a small group of UK customer businesses using pound pricing, UK payment processing, separate customer data and UK support. Complete payment, tax, privacy, consumer, delivery and cancellation terms before each ecommerce website begins trading.",
+  nimah:
+    "Launch separately in one Saudi city district and one Pakistani city district. Saudi Arabia uses Arabic and English, Saudi-riyal prices and supported local payments; Pakistan uses Urdu and English, Pakistani-rupee prices and supported local payments. Complete local business verification, food-safety, allergen, payment, refund, consumer and tax rules before accepting live offers in either country.",
+};
+
+const BRAND_EXPANSION_PLANS: Record<string, string> = {
+  beinstandplus:
+    "Expand from selected employer and organisation programmes only after case quality, consent controls and partner response times are proven. Add further German regions and support categories before considering another country with different insurance and welfare rules.",
+  traderos:
+    "Add asset classes and countries only after live results, data rights and local promotion rules are proven. Keep a separate compliance approval for each broker connection and jurisdiction, and publish the full signal record as the product grows.",
+  baytcircle:
+    "Expand neighbourhood by neighbourhood across the UAE after the first area has enough families and verified providers for useful matching. Enter another Gulf country only after local activity, venue, advertising, payment and safeguarding rules are reviewed.",
+  taxcenda:
+    "Add states, entity types and international fact patterns only when qualified staff, approved software and review checklists are ready. Growth outside the United States means reaching more U.S. taxpayers abroad, not offering another country's tax return without a separately qualified service.",
+  merqora:
+    "Add marketplaces and countries one at a time after the first Amazon seller workflows are reliable and retained. Each expansion requires an authorised connection, supported data, local tax and currency handling, translated workflows and a clear support owner.",
+  merqano:
+    "Expand by launching more customer ecommerce websites on the proven shared system, then add countries only when local currency, payments, tax, consumer terms, delivery and support are ready. Keep every customer's website, data and permissions separate as Merqano grows.",
+  nimah:
+    "Expand district by district only after the first launch area has enough daily offers, repeat customers, reliable collections and retained paying outlets. Grow into the next Saudi or Pakistani city with its own supply team and local operating checks rather than opening both countries nationally at once.",
+};
+
+const DE_BRAND_PROBLEMS: Record<string, string> = {
+  beinstandplus:
+    "Menschen bei Umzug, Trauerfall oder einem anderen schwierigen Lebensereignis müssen mehrere Stellen getrennt ansprechen und wissen häufig weder den richtigen nächsten Schritt noch die voraussichtlichen Bestattungskosten oder mögliche Versicherungs- und Unterstützungswege.",
+  traderos:
+    "Selbstentscheidende Trader kombinieren Charts, Brokeroberflächen und undurchsichtige Signalgruppen, können aber oft nicht erkennen, warum ein Signal entstand, welches Risiko es trägt oder ob Verlustresultate entfernt wurden.",
+  baytcircle:
+    "Familien suchen in verstreuten Nachrichtengruppen und sozialen Seiten nach Aktivitäten, während geeignete Schwimmbäder, Spielzentren, Lernräume und Vereine freie Kapazitäten nicht einfach nahe gelegenen Familien anbieten können.",
+  taxcenda:
+    "Menschen und Kleinunternehmen mit US-Erklärungspflichten stehen besonders im Ausland vor ungewohnten Formularen, Fristen und grenzüberschreitenden Fragen, während lokale Berater die US-Erklärung häufig nicht erstellen oder elektronisch einreichen können.",
+  merqora:
+    "Verkäufer auf Amazon und anderen Marktplätzen wechseln zwischen Verkäuferportalen, Werbeansichten, Lagerwerkzeugen und Tabellen. Agenturen wiederholen diese Arbeit je Kunde; wichtige Probleme bei Angeboten, Bestand, Werbung oder Kontozustand werden oft erst nach Umsatzverlust erkannt.",
+  merqano:
+    "Viele Unternehmen benötigen eine professionelle E-Commerce-Website, doch eine individuelle Entwicklung ist teuer und langsam. Ein getrenntes technisches System für jeden Kunden wiederholt dieselbe Arbeit für Kasse, Zahlungen, Bestellungen, Lieferung, Sicherheit und Berichte.",
+  nimah:
+    "Lebensmittelbetriebe haben am Tagesende regelmäßig sichere unverkaufte Mahlzeiten, Backwaren und Lebensmittel, die nicht mehr zum vollen Preis verkauft werden. Entsorgung verliert Warenwert, Arbeitszeit und mögliche Einnahmen, während Menschen in der Nähe bezahlbare Lebensmittel suchen.",
+};
+
+const DE_BRAND_SALES: Record<string, string> = {
+  beinstandplus:
+    "Finanzierte Unterstützungspakete an Arbeitgeber, Versicherer, Pflege- und Gemeinschaftsorganisationen verkaufen. Mitarbeitende, Mitglieder und Familien nutzen den Service ohne zweite Plattformgebühr; autorisierte Fachpartner erhalten passende, einwilligungsbasierte Weiterleitungen.",
+  traderos:
+    "Selbstentscheidende Trader durch nützliche Marktbildung, eine transparente Live-Signalhistorie, Testzugang und Trading-Communities gewinnen. Belegqualität, Tagebuch und Risikokontrollen vermarkten, nicht Gewinnversprechen.",
+  baytcircle:
+    "Ein Viertel nach dem anderen mit sachlichen Familienort- und Aktivitätsprofilen, Homeschooling-Gruppen und Ankeranbietern aufbauen. Familien kostenlos gewinnen und Anbietern den messbaren Nutzen aus gefüllten freien Zeiten und einfacherer Verwaltung verkaufen.",
+  taxcenda:
+    "Steuerpflichtige über Expat-Gemeinschaften, nützliche US-Steuerinformationen, Arbeitgeber-Mobility-Teams und Empfehlungen von Buchhaltern außerhalb der USA erreichen. Der Steuerpflichtige kauft eine klar abgegrenzte Festpreisleistung; Partner zahlen nicht.",
+  merqora:
+    "Amazon- und andere Marktplatzverkäufer über E-Commerce-Agenturen, Verkäufergemeinschaften, praktische Kontoanalysen und eine begleitete Testphase gewinnen. Den Nutzen aus weniger Verwaltung und klaren Maßnahmen für Angebote, Bestand, Werbung und Kontozustand zeigen; nur Verkäufer und Agenturen zahlen.",
+  merqano:
+    "Direkt an unabhängige Händler, wachsende Marken, Franchiseunternehmen und Agenturen verkaufen, die professionelle E-Commerce-Websites benötigen. Eine vollständige Kundenwebsite zeigen, Produkte und Zahlungen gemeinsam einrichten und erklären, dass der Betrieb seine eigene Marke, Kundenbeziehung und Verwaltung erhält, ohne eine Sonderentwicklung zu finanzieren.",
+  nimah:
+    "Jeweils ein dichtes Startviertel aufbauen. Ankerbetriebe wie Restaurants, Cafés, Bäckereien, Hotels und Supermärkte direkt gewinnen, Mitarbeitende begleitet einrichten und eine Testphase anbieten. Kunden über lokale Creator, Hochschulen, Arbeitgeber, Gemeinschaftsgruppen und die Kanäle der teilnehmenden Betriebe erreichen. Nur Lebensmittelbetriebe zahlen; Kunden nutzen Ni'mah ohne Plattformgebühr.",
+};
+
+const DE_BRAND_OPERATIONS: Record<string, string> = {
+  beinstandplus:
+    "Ein geschultes Supportteam verwaltet einwilligungsbasierte Fälle, Unterlagen, Aufgaben und Termine. Autorisierte Partner übernehmen regulierte Versicherungs-, Rechts- oder Sozialleistungsberatung; sensible Trauerfälle können jederzeit an einen Menschen übergeben werden.",
+  traderos:
+    "Die Plattform empfängt lizenzierte Marktdaten, berechnet Indikatoren, speichert jedes Signal und verteilt Warnungen. Das Team überwacht Datenqualität, Modelle, Compliance und Support; der Trader entscheidet selbst und TraderOS verwahrt keine Kundengelder.",
+  baytcircle:
+    "Das gemeinsame Team pflegt lokale Abdeckung, prüft Profilübernahmen und moderiert Familieninhalte. Anbieter kontrollieren Verfügbarkeit, Preise und Buchungen; Schutzmeldungen gehen an geschulte Menschen und Kinderkonten bleiben unter Kontrolle der Erziehungsberechtigten.",
+  taxcenda:
+    "Qualifizierte Ersteller arbeiten in rollenbasierten Fällen mit Checklisten, Arbeitspapieren und Prüfung. Erforderliche PTIN- und Berufsberechtigungen werden überwacht, elektronische Einreichungen laufen über einen autorisierten IRS-E-File-Anbieter und der Kunde genehmigt die Erklärung vor dem Versand.",
+  merqora:
+    "Das gemeinsame Team pflegt autorisierte Marktplatzverbindungen, Datenqualität, Warnungen und Support. Verkäufer und Agenturen kontrollieren Rechte, Budgets und Freigaben; wichtige Änderungen bleiben freigabepflichtig und werden vollständig protokolliert.",
+  merqano:
+    "Merqano pflegt die gemeinsame Handelstechnik, Sicherheit, Zahlungen, Aktualisierungen und den Support. Jeder Geschäftskunde kontrolliert über eine getrennte geschützte Verwaltung nur seine eigene Website, Marke, Produkte, Preise, Bestellungen, Kunden, Lieferregeln und Mitarbeitendenzugänge.",
+  nimah:
+    "Jeder Lebensmittelbetrieb bestimmt Angebot, reduzierten Preis, Menge, Zutaten, Allergene und Abholzeit und bleibt für Lebensmittelsicherheit verantwortlich. Ni'mah prüft Betriebe, betreibt Suche, Reservierung, Zahlung, Abholcodes und Support, entfernt abgelaufene Angebote automatisch und gibt Sicherheitsmeldungen an geschulte Mitarbeitende.",
+};
+
+const DE_BRAND_TERRITORY: Record<string, string> = {
+  beinstandplus:
+    "In Deutschland mit deutschen Verträgen, Euro-Preisen, mehrsprachigem Support und DSGVO-Kontrollen starten. Vor Hilfe zu Bestattungsvorsorge die Grenze zwischen Information und regulierter Versicherungsberatung festlegen und autorisierte Partner vertraglich einbinden.",
+  traderos:
+    "Im Vereinigten Königreich erst nach Fachprüfung von Produktgrenze und Finanzwerbung, bestätigten Marktdatenlizenzen, klaren Risikohinweisen und Kontrollen für optionale Brokerverbindungen starten. Keine Kundengeldverwahrung und keine garantierten Renditeversprechen.",
+  baytcircle:
+    "In einer Stadt der VAE mit Englisch und Arabisch, Viertel- und Entfernungssuche, lokalen Zahlungen, Anbieterprüfung und Familienschutzregeln starten. Anforderungen für Aktivitäten, Werbung, Orte und Kinderschutz vor jeder Kategorie prüfen.",
+  taxcenda:
+    "Der Service betrifft US-Steuern, kann aber Kunden weltweit bedienen. Start nur mit aktuellen Erstellerberechtigungen, autorisiertem E-File-Weg, unterstützten Bundes- und Bundesstaatenformularen, schriftlicher Datensicherheit und klarer Eskalationsliste für nicht unterstützte Auslandsfälle.",
+  merqora:
+    "Mit britischen Amazon-Verkäufern und Agenturen, Pfund-Preisen und britischem Support starten und nur autorisierte Marktplatzverbindungen nutzen. Entwicklerbedingungen, Datenrechte, Kontosicherheit, britischen Datenschutz und Werbekontrollen vor Live-Verbindungen abschließen.",
+  merqano:
+    "Mit einer kleinen Gruppe britischer Geschäftskunden, Pfund-Preisen, britischer Zahlungsabwicklung, getrennten Kundendaten und Support starten. Zahlungs-, Steuer-, Datenschutz-, Verbraucher-, Liefer- und Widerrufsregeln vor dem Start jeder E-Commerce-Website abschließen.",
+  nimah:
+    "Getrennt in einem Stadtviertel in Saudi-Arabien und einem in Pakistan starten. Saudi-Arabien nutzt Arabisch und Englisch, Saudi-Riyal und unterstützte lokale Zahlungen; Pakistan nutzt Urdu und Englisch, Pakistanische Rupien und unterstützte lokale Zahlungen. Betriebliche Prüfung, Lebensmittelsicherheit, Allergene, Zahlungen, Erstattungen, Verbraucher- und Steuerregeln vor Live-Angeboten je Land abschließen.",
+};
+
+const DE_BRAND_EXPANSION: Record<string, string> = {
+  beinstandplus:
+    "Erst nach belegter Fallqualität, Einwilligungskontrolle und Partnerreaktion aus ausgewählten Organisationsprogrammen wachsen. Weitere deutsche Regionen und Hilfekategorien vor Ländern mit anderen Versicherungs- und Sozialsystemen ergänzen.",
+  traderos:
+    "Anlageklassen und Länder erst ergänzen, wenn Live-Ergebnisse, Datenrechte und lokale Werberegeln belegt sind. Jede Brokerverbindung und jedes Land getrennt freigeben und die vollständige Signalhistorie veröffentlichen.",
+  baytcircle:
+    "Nach ausreichender Dichte aus Familien und geprüften Anbietern Viertel für Viertel in den VAE wachsen. Ein weiteres Golfland erst nach Prüfung lokaler Aktivitäts-, Orts-, Werbe-, Zahlungs- und Schutzregeln öffnen.",
+  taxcenda:
+    "Bundesstaaten, Unternehmenstypen und internationale Sachverhalte nur ergänzen, wenn qualifizierte Mitarbeitende, zugelassene Software und Prüfchecklisten bereitstehen. Wachstum im Ausland bedeutet mehr US-Steuerpflichtige im Ausland, nicht ungeprüfte Steuererklärungen anderer Länder.",
+  merqora:
+    "Marktplätze und Länder erst einzeln ergänzen, wenn die ersten Amazon-Verkäuferabläufe zuverlässig sind und Kunden gehalten werden. Jede Erweiterung braucht eine autorisierte Verbindung, unterstützte Daten, lokale Steuer- und Währungslogik, übersetzte Abläufe und einen klaren Supportverantwortlichen.",
+  merqano:
+    "Mehr Kunden-Websites auf dem bewährten gemeinsamen System starten und Länder erst ergänzen, wenn Währung, Zahlungen, Steuern, Verbraucherregeln, Lieferung und Support vorbereitet sind. Website, Daten und Rechte jedes Kunden bleiben beim Wachstum getrennt.",
+  nimah:
+    "Erst dann Viertel für Viertel wachsen, wenn das erste Gebiet genügend tägliche Angebote, wiederkehrende Kunden, zuverlässige Abholungen und gehaltene zahlende Betriebe hat. Die nächste saudische oder pakistanische Stadt mit eigenem Angebotsteam und lokalen Betriebskontrollen öffnen, statt beide Länder sofort landesweit zu starten.",
+};
+
+const BRAND_MILESTONES: Record<string, string[]> = {
+  beinstandplus: [
+    "Before launch: approve the support scope, consent model and referral rules and contract authorised partners for regulated insurance, legal and benefits work.",
+    "Months 1–2: run controlled relocation and bereavement cases with selected funding organisations and measure response time, completion and family feedback.",
+    "Months 3–6: turn successful pilots into organisation subscriptions or funded support packages and build a monitored partner network.",
+    "Months 7–12: expand only the support categories and German regions that maintain safe handovers, strong satisfaction and sustainable case cost.",
+  ],
+  traderos: [
+    "Before launch: confirm market-data rights, complete UK regulatory and financial-promotion review, publish risk wording and test every signal and alert path.",
+    "Months 1–2: run a controlled live-data beta, retain every signal and outcome, test alert speed and correct false or unclear explanations.",
+    "Months 3–6: publish the complete live track record and convert trial users into trader subscriptions based on evidence, usability and risk discipline.",
+    "Months 7–12: add only asset classes, strategies and channels that retain subscribers without weakening compliance, transparency or data quality.",
+  ],
+  baytcircle: [
+    "Before launch: seed accurate family-venue, activity and home-education profiles in one UAE area and complete claim, correction, safeguarding and removal controls.",
+    "Months 1–2: onboard anchor providers and community organisers, recruit families free and test discovery, attendance and spare-capacity bookings.",
+    "Months 3–6: convert useful provider trials into subscriptions and measure filled quiet-time places, repeat family use and provider administration saved.",
+    "Months 7–12: expand into nearby neighbourhoods only where family demand and verified provider coverage are dense enough to be dependable.",
+  ],
+  taxcenda: [
+    "Before launch: verify preparer credentials and authorised e-file access, approve supported return types, complete engagement terms, security procedures and professional review checklists.",
+    "Months 1–2: process a controlled set of U.S.-based and overseas client cases, measure document completeness, review corrections, rejects and filing turnaround.",
+    "Months 3–6: grow fixed-fee taxpayer cases through referral partners and useful filing guidance while monitoring accuracy, client approval and support cost.",
+    "Months 7–12: add states and return types only when qualified capacity, approved software and quality checks are ready.",
+  ],
+  merqora: [
+    "Before launch: complete authorised Amazon connections, permission controls, seller-data security, action approvals and accurate sales, fee, stock and advertising reporting.",
+    "Months 1–2: onboard a controlled group of sellers and agencies, compare Merqora data with their marketplace accounts and fix missing, late or unclear actions.",
+    "Months 3–6: convert useful trials into subscriptions and measure time saved, retained accounts, listing improvements, avoided stock-outs and advertising actions completed.",
+    "Months 7–12: add another marketplace or country only after the existing seller workflow, support cost and customer retention are dependable.",
+  ],
+  merqano: [
+    "Before launch: complete the central Merqano administration, separate customer dashboards, catalogue, checkout, payments, orders, delivery rules, permissions and customer-data separation tests.",
+    "Months 1–2: launch ecommerce websites for a controlled group of customer businesses, support their first orders and confirm that no customer can access another business's customers, products or reports.",
+    "Months 3–6: convert customer trials into business subscriptions and reduce the time and support effort needed to launch each additional ecommerce website.",
+    "Months 7–12: expand to more customer businesses only when checkout reliability, customer-data separation, subscription retention and support cost are dependable.",
+  ],
+  nimah: [
+    "Before launch: verify the first food outlets, complete local food-safety and payment checks, test expiry and allergen controls and make every price and collection window clear.",
+    "Months 1–2: launch controlled Saudi and Pakistani districts, support every outlet closely and measure live offers, reservations, collections, no-shows, complaints and food saved.",
+    "Months 3–6: convert useful outlet trials into subscriptions and improve daily offer density, sell-through, repeat customer use and recovered revenue per outlet.",
+    "Months 7–12: open nearby districts only where enough paying outlets and active customers can produce a reliable daily marketplace.",
+  ],
+};
+
+const BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
+  beinstandplus: [
+    "Funded organisation accounts and completed support cases",
+    "Time to first human response and to complete important tasks",
+    "Family satisfaction and safe handover to authorised specialists",
+    "No unconsented sponsor access or regulated advice by unqualified staff",
+    "Sustainable delivery cost per funded case",
+  ],
+  traderos: [
+    "Paying trader subscriptions and retained subscribers",
+    "Alert speed, data uptime and signal explanation completion",
+    "Complete published history including losing and expired signals",
+    "Subscriber use of risk limits, journal and review tools",
+    "No misleading profit claims, client-money custody or unapproved promotions",
+  ],
+  baytcircle: [
+    "Paying claimed provider profiles",
+    "Verified family activities and bookable spare-capacity places per launch area",
+    "Confirmed attendance, repeat family use and provider retention",
+    "Measured improvement in filled off-peak capacity",
+    "Safeguarding reports handled within the agreed response time",
+  ],
+  taxcenda: [
+    "Paid and completed taxpayer cases",
+    "Returns accepted without avoidable e-file rejection",
+    "Preparation and review turnaround after all documents are received",
+    "Current PTIN, professional and authorised e-file credentials for every assigned role",
+    "No refund-percentage fee, guaranteed outcome or unsupported return accepted",
+  ],
+  merqora: [
+    "Paying seller and agency subscriptions",
+    "Connected marketplace accounts retained after the trial",
+    "Accurate sales, fee, stock, advertising and account-health data",
+    "Seller actions completed and measurable administration time saved",
+    "No shopper fee, sales guarantee or unapproved marketplace account change",
+  ],
+  merqano: [
+    "Paying customer-business website subscriptions",
+    "Active ecommerce websites and retained business customers after the trial",
+    "Time and support cost required to launch each additional customer website",
+    "Successful checkouts, orders and payments with accurate customer-level reporting",
+    "No cross-shop data access and no Merqano fee charged to shoppers",
+  ],
+  nimah: [
+    "Paying food-outlet subscriptions after the trial",
+    "Daily live surplus offers and successful customer collections per launch district",
+    "Food-offer sell-through, repeat customers and recovered revenue for participating outlets",
+    "Low no-show, refund, complaint and safety-incident rates",
+    "Customers pay no Ni'mah platform fee and outlets keep their surplus-food sales income",
+  ],
+};
+
+const DE_BRAND_MILESTONES: Record<string, string[]> = {
+  beinstandplus: [
+    "Vor dem Start: Leistungsumfang, Einwilligungsmodell und Weiterleitungsregeln freigeben und autorisierte Partner für regulierte Versicherungs-, Rechts- und Sozialleistungsarbeit vertraglich binden.",
+    "Monate 1–2: kontrollierte Umzugs- und Trauerfälle mit ausgewählten finanzierenden Organisationen durchführen und Reaktionszeit, Abschluss und Familienfeedback messen.",
+    "Monate 3–6: erfolgreiche Piloten in Organisationsabos oder finanzierte Unterstützungspakete umwandeln und ein überwachtes Partnernetz aufbauen.",
+    "Monate 7–12: nur Hilfekategorien und deutsche Regionen ausweiten, die sichere Übergaben, hohe Zufriedenheit und tragfähige Fallkosten halten.",
+  ],
+  traderos: [
+    "Vor dem Start: Marktdatenrechte bestätigen, britische Regulierungs- und Finanzwerbeprüfung abschließen, Risikohinweise veröffentlichen und jeden Signal- und Warnweg testen.",
+    "Monate 1–2: kontrollierte Live-Daten-Beta durchführen, jedes Signal und Ergebnis speichern, Warnungsgeschwindigkeit prüfen und falsche oder unklare Erklärungen korrigieren.",
+    "Monate 3–6: vollständige Live-Ergebnisübersicht veröffentlichen und Testnutzer aufgrund von Belegen, Bedienbarkeit und Risikodisziplin in Trader-Abos umwandeln.",
+    "Monate 7–12: nur Anlageklassen, Strategien und Kanäle ergänzen, die Abonnenten halten, ohne Compliance, Transparenz oder Datenqualität zu schwächen.",
+  ],
+  baytcircle: [
+    "Vor dem Start: genaue Profile für Familienorte, Aktivitäten und Homeschooling in einem Gebiet der VAE anlegen und Übernahme-, Korrektur-, Schutz- und Entfernungswege abschließen.",
+    "Monate 1–2: Ankeranbieter und Organisatoren einrichten, Familien kostenlos gewinnen und Suche, Teilnahme sowie Buchung freier Kapazitäten testen.",
+    "Monate 3–6: nützliche Anbietertests in Abos umwandeln und gefüllte ruhige Zeiten, wiederholte Familiennutzung und gesparte Verwaltung messen.",
+    "Monate 7–12: nur in nahe Viertel wachsen, in denen Familiennachfrage und geprüfte Anbieterabdeckung eine verlässliche Dichte erreichen.",
+  ],
+  taxcenda: [
+    "Vor dem Start: Erstellerberechtigungen und autorisierten E-File-Zugang prüfen, unterstützte Erklärungstypen freigeben und Mandatsbedingungen, Sicherheit und Prüfchecklisten abschließen.",
+    "Monate 1–2: kontrollierte Fälle aus den USA und dem Ausland bearbeiten und Dokumentenvollständigkeit, Prüfungskorrekturen, Ablehnungen und Bearbeitungszeit messen.",
+    "Monate 3–6: Festpreisfälle über Empfehlungen und nützliche Steuerinformationen steigern und dabei Genauigkeit, Kundenfreigabe und Supportkosten überwachen.",
+    "Monate 7–12: Bundesstaaten und Erklärungstypen nur ergänzen, wenn qualifizierte Kapazität, zugelassene Software und Qualitätskontrollen bereitstehen.",
+  ],
+  merqora: [
+    "Vor dem Start: autorisierte Amazon-Verbindungen, Rechtekontrollen, Verkäuferdatensicherheit, Freigaben sowie genaue Umsatz-, Gebühren-, Bestands- und Werbeberichte abschließen.",
+    "Monate 1–2: eine kontrollierte Gruppe aus Verkäufern und Agenturen einrichten, Merqora-Daten mit ihren Marktplatzkonten vergleichen und fehlende, verspätete oder unklare Maßnahmen korrigieren.",
+    "Monate 3–6: nützliche Tests in Abos umwandeln und gesparte Zeit, gehaltene Konten, bessere Angebote, vermiedene Fehlbestände und erledigte Werbemaßnahmen messen.",
+    "Monate 7–12: erst dann einen weiteren Marktplatz oder ein weiteres Land ergänzen, wenn bestehende Abläufe, Supportkosten und Kundenbindung verlässlich sind.",
+  ],
+  merqano: [
+    "Vor dem Start: zentrale Merqano-Verwaltung, getrennte Kundenbereiche, Katalog, Kasse, Zahlungen, Bestellungen, Lieferregeln, Rechte und Kundendatentrennung abschließen.",
+    "Monate 1–2: E-Commerce-Websites für eine kontrollierte Gruppe von Geschäftskunden starten, erste Bestellungen begleiten und bestätigen, dass kein Kunde auf Kunden, Produkte oder Berichte eines anderen Betriebs zugreifen kann.",
+    "Monate 3–6: Kundentests in Geschäftsabos umwandeln und Zeit sowie Supportaufwand für jede weitere E-Commerce-Website senken.",
+    "Monate 7–12: nur bei verlässlicher Kasse, Kundendatentrennung, Abobindung und tragfähigen Supportkosten auf weitere Geschäftskunden ausweiten.",
+  ],
+  nimah: [
+    "Vor dem Start: erste Lebensmittelbetriebe prüfen, lokale Lebensmittelsicherheits- und Zahlungskontrollen abschließen, Ablauf- und Allergenkontrollen testen und Preise sowie Abholzeiten klar darstellen.",
+    "Monate 1–2: kontrollierte Gebiete in Saudi-Arabien und Pakistan starten, jeden Betrieb eng begleiten und Live-Angebote, Reservierungen, Abholungen, Nichterscheinen, Beschwerden und gerettete Lebensmittel messen.",
+    "Monate 3–6: nützliche Betriebstests in Abos umwandeln und tägliche Angebotsdichte, Abverkauf, wiederholte Kundennutzung und zurückgewonnene Einnahmen je Betrieb verbessern.",
+    "Monate 7–12: nahe Gebiete nur öffnen, wenn genügend zahlende Betriebe und aktive Kunden einen verlässlichen täglichen Marktplatz ermöglichen.",
+  ],
+};
+
+const DE_BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
+  beinstandplus: ["Finanzierende Organisationskonten und abgeschlossene Hilfefälle", "Zeit bis zur ersten menschlichen Antwort und bis zum Abschluss wichtiger Aufgaben", "Familienzufriedenheit und sichere Übergabe an autorisierte Fachleute", "Kein Sponsorzugriff ohne Einwilligung und keine regulierte Beratung durch unqualifizierte Mitarbeitende", "Tragfähige Kosten je finanziertem Fall"],
+  traderos: ["Zahlende Trader-Abos und gehaltene Abonnenten", "Warnungsgeschwindigkeit, Datenverfügbarkeit und vollständige Signalerklärungen", "Vollständige veröffentlichte Historie einschließlich Verlust- und abgelaufener Signale", "Nutzung von Risikolimits, Tagebuch und Auswertung", "Keine irreführenden Gewinnversprechen, Kundengeldverwahrung oder ungeprüfte Werbung"],
+  baytcircle: ["Zahlende übernommene Anbieterprofile", "Geprüfte Familienaktivitäten und buchbare freie Plätze je Startgebiet", "Bestätigte Teilnahme, wiederholte Familiennutzung und Anbieterbindung", "Messbar bessere Auslastung in schwachen Zeiten", "Schutzmeldungen innerhalb der vereinbarten Zeit bearbeitet"],
+  taxcenda: ["Bezahlte und abgeschlossene Steuerfälle", "Ohne vermeidbare E-File-Ablehnung angenommene Erklärungen", "Erstellungs- und Prüfzeit nach Eingang aller Unterlagen", "Aktuelle PTIN-, Berufs- und E-File-Berechtigungen für jede zugewiesene Rolle", "Keine prozentuale Erstattungsgebühr, Ergebnisgarantie oder Annahme nicht unterstützter Fälle"],
+  merqora: ["Zahlende Verkäufer- und Agenturabos", "Nach der Testphase gehaltene verbundene Marktplatzkonten", "Genaue Umsatz-, Gebühren-, Bestands-, Werbe- und Kontozustandsdaten", "Erledigte Verkäufermaßnahmen und messbar gesparte Verwaltungszeit", "Keine Käufergebühr, Umsatzgarantie oder ungeprüfte Änderung am Marktplatzkonto"],
+  merqano: ["Zahlende Website-Abos von Geschäftskunden", "Aktive E-Commerce-Websites und nach der Testphase gehaltene Geschäftskunden", "Zeit und Supportkosten für jede weitere Kundenwebsite", "Erfolgreiche Kassenabschlüsse, Bestellungen und Zahlungen mit genauen Kundenberichten", "Kein Datenzugriff zwischen Kunden-Websites und keine Merqano-Gebühr für Käufer"],
+  nimah: ["Zahlende Lebensmittelbetriebsabos nach der Testphase", "Tägliche Live-Überschussangebote und erfolgreiche Abholungen je Startgebiet", "Abverkauf, wiederkehrende Kunden und zurückgewonnene Einnahmen der teilnehmenden Betriebe", "Niedrige Quoten bei Nichterscheinen, Erstattungen, Beschwerden und Sicherheitsvorfällen", "Kunden zahlen keine Ni'mah-Plattformgebühr und Betriebe behalten ihre Einnahmen aus Überschussverkäufen"],
+};
+
 const DE_PROBLEMS: Record<SectorId, string> = {
   travel: "Reisende suchen heute auf mehreren Seiten, schreiben Anbieter einzeln an und erkennen trotzdem nur schwer, wer verlässlich ist und was am Ende alles kostet.",
   property: "Immobilienarbeit verteilt sich auf Portale, Tabellen, E-Mails, Papier und verschiedene Dienstleister. Dadurch gehen Aufgaben und ein verlässlicher Gesamtüberblick verloren.",
@@ -276,7 +598,9 @@ export function plainBusinessPlan(
       ? `Paying side: ${brand.payerModel.payer}. Free side: ${brand.payerModel.freeSide}.`
       : simplifyInvestorLanguage(brand.audience),
     marketOpportunity: simplifyInvestorLanguage(brand.market),
-    problem: affiliateStore ? simplifyInvestorLanguage(brand.reason) : PROBLEMS[sector],
+    problem: affiliateStore
+      ? simplifyInvestorLanguage(brand.reason)
+      : (BRAND_PROBLEMS[brand.id] ?? PROBLEMS[sector]),
     solution: `${brandPlainEnglish(brand)} The first release focuses on the smallest complete customer journey, with extra features added only after real usage proves the need.`,
     revenue: brand.payerModel
       ? brand.payerModel.investorRevenue
@@ -290,19 +614,19 @@ export function plainBusinessPlan(
       : venueFundedSport
         ? "Build each launch area postcode by postcode. Add factual venue information from lawful public sources, clearly label unclaimed profiles, and invite operators to claim, correct and verify them. Bring players in free through clubs, leagues, schools, employers and community groups. Demonstrate to venues that live availability, confirmations, waitlists and off-peak promotion increase filled hours and reduce administration, then convert the venue after its 60-day trial."
         : brand.payerModel
-          ? `${SALES_PLANS[sector]} Commercial rule: the sales team targets only ${brand.payerModel.payer}. The other side remains free, helping the paying customer receive more value without creating a second charging barrier.`
+          ? `${BRAND_SALES_PLANS[brand.id] ?? SALES_PLANS[sector]} Commercial rule: the sales team targets only ${brand.payerModel.payer}. The other side remains free, helping the paying customer receive more value without creating a second charging barrier.`
           : SALES_PLANS[sector],
     operations: affiliateStore
       ? "Affivon imports approved retailer data, creates tracked links and reports confirmed commission. A human editor remains responsible for product claims, comparison quality, disclosure and removing stale or misleading content. The retailer handles payment, delivery and returns."
       : venueFundedSport
         ? "The shared team maintains venue data, claim checks, booking technology, payments and support. Unclaimed profiles show only factual public information and cannot publish live availability. A venue must prove ownership or authority before controlling its profile. Venues set their own prices, availability and cancellation rules; Athlyvo organises the booking and confirmation record."
-        : OPERATIONS[sector],
+        : (BRAND_OPERATIONS[brand.id] ?? OPERATIONS[sector]),
     territoryPlan: venueFundedSport
       ? "Launch in one UK area with pound pricing, postcode and distance search, UK card payments and UK-based support. Build dense coverage across football and five-a-side, cricket, padel, tennis and pickleball before opening the next area. Complete UK GDPR, marketplace, payment, safeguarding, facility-booking and consumer terms, and give every unclaimed venue a clear correction, claim and removal route."
-      : TERRITORY_PLANS[country],
+      : (BRAND_TERRITORY_PLANS[brand.id] ?? TERRITORY_PLANS[country]),
     expansionPlan: venueFundedSport
       ? "Expand across England postcode by postcode only after the first areas show repeated player use, useful venue occupancy gains and retained paying venues. Then localise facility rules, governing-body relationships and public-sector procurement for Wales, Scotland and Northern Ireland before considering Ireland or other countries."
-      : EXPANSION_PLANS[country],
+      : (BRAND_EXPANSION_PLANS[brand.id] ?? EXPANSION_PLANS[country]),
     milestones: affiliateStore
       ? [
           "Before launch: obtain approval for each retailer programme, create the correct country tracking IDs, publish affiliate disclosures and test every product link.",
@@ -317,13 +641,13 @@ export function plainBusinessPlan(
           `Months 3–6: convert trials and work toward ${initialUsers.toLocaleString("en-GB")} paying venue accounts while keeping players, teams, clubs, coaches and officials free.`,
           "Months 7–12: expand only into nearby postcodes and sports where enough venue supply and player demand can create reliable local coverage.",
         ]
-        : [
+        : (BRAND_MILESTONES[brand.id] ?? [
           `Before launch: finish the core journey, payments, local legal documents, support training and a controlled customer test in ${countryLabel(country)}.`,
           `Months 1–2: onboard the first trial customers, watch how they use the product and fix the main reasons they do not complete the journey.`,
           `Months 3–6: convert trials to paid plans and work toward ${initialUsers.toLocaleString("en-GB")} ${volumeLabel.toLowerCase()} while measuring the true cost of winning and supporting each account.`,
           "Months 7–12: grow the channels that produce retained customers, add selected partners and pause any channel that loses money.",
-        ],
-    successMeasures: affiliateStore
+        ]),
+    successMeasures: BRAND_SUCCESS_MEASURES[brand.id] ?? (affiliateStore
       ? [
           `${initialUsers.toLocaleString("en-GB")} confirmed affiliate orders in the starting revenue month`,
           `${currency}${arpu.toFixed(2)} average confirmed commission per eligible order`,
@@ -347,7 +671,7 @@ export function plainBusinessPlan(
           `${(userGrowth * 100).toFixed(0)}% modelled monthly growth in ${volumeLabel.toLowerCase()}`,
           `${(churn * 100).toFixed(1)}% or lower ${attritionLabel.toLowerCase()}`,
           `Direct monthly brand cost kept near ${currency}${directCost.toLocaleString("en-GB")}`,
-        ],
+        ]),
     reasonsItCanWin: brand.competitors.slice(0, 3).map(
       (competitor) => `Against ${competitor.name}: ${simplifyInvestorLanguage(competitor.counter)}`,
     ),
@@ -378,20 +702,48 @@ function plainGermanBusinessPlan(
       : venueFundedSport
         ? "zahlende Sportstätten"
         : "zahlende Geschäftskonten";
-  const payer = brand.payerModel?.side === "consumer"
-    ? "die Endnutzer"
-    : affiliateStore
-      ? "zugelassene Händler"
-      : brand.id === "kinderstars"
-        ? "registrierte Tagesmütter und Tagesväter"
-        : brand.id === "athlyvo"
-          ? "Sportstätten und Betreiber buchbarer Anlagen"
-          : brand.id === "criclume"
-            ? "Cricketvereine, Ligen, Wettbewerbe und Akademien"
-            : DE_BUSINESS_PAYERS[sector];
-  const freeSide = brand.payerModel?.side === "consumer"
-    ? "Geschäftspartner zahlen keine zweite Plattformgebühr."
-    : "Die Nutzerseite bleibt kostenlos und wird nicht zusätzlich von der Plattform belastet.";
+  const payer = brand.id === "traderos"
+    ? "selbstentscheidende Trader"
+    : brand.id === "taxcenda"
+      ? "die Steuerpflichtigen, die eine US-Steuererklärung erstellen und einreichen lassen"
+      : brand.id === "beinstandplus"
+        ? "Arbeitgeber, Versicherer, Pflege- und Gemeinschaftsorganisationen"
+      : brand.id === "baytcircle"
+          ? "Familienorte, Aktivitätsanbieter, Tutoren, Vereine und Gemeinschaftsorganisationen"
+          : brand.id === "merqora"
+            ? "Amazon- und andere Online-Marktplatzverkäufer, Verkäuferagenturen und E-Commerce-Teams"
+            : brand.id === "merqano"
+              ? "Unternehmen und Agenturen, die eine professionelle eigene E-Commerce-Website benötigen"
+              : brand.id === "nimah"
+                ? "Restaurants, Cafés, Bäckereien, Hotels, Supermärkte, Caterer und andere Lebensmittelbetriebe"
+          : brand.payerModel?.side === "consumer"
+            ? "die Endnutzer"
+            : affiliateStore
+              ? "zugelassene Händler"
+              : brand.id === "kinderstars"
+                ? "registrierte Tagesmütter und Tagesväter"
+                : brand.id === "athlyvo"
+                  ? "Sportstätten und Betreiber buchbarer Anlagen"
+                  : brand.id === "criclume"
+                    ? "Cricketvereine, Ligen, Wettbewerbe und Akademien"
+                    : DE_BUSINESS_PAYERS[sector];
+  const freeSide = brand.id === "traderos"
+    ? "Broker, Börsen und Marktdatenanbieter sind Integrationen oder Lieferanten und keine zweite zahlende Kundenseite."
+    : brand.id === "taxcenda"
+      ? "Die IRS, Steuerbehörden und Fachpartner zahlen keine zweite Plattformgebühr."
+      : brand.id === "beinstandplus"
+        ? "Menschen und Familien erhalten die finanzierte Umzugs-, Alltags- oder Trauerfallhilfe ohne zweite Plattformgebühr."
+        : brand.id === "baytcircle"
+          ? "Familien, Homeschooling-Gruppen, Zugezogene und Einheimische nutzen Suche, Organisation und Buchung kostenlos."
+          : brand.id === "merqora"
+            ? "Käufer und Marktplatzkunden zahlen keine Merqora-Gebühr."
+            : brand.id === "merqano"
+              ? "Käufer nutzen die Website des jeweiligen Geschäftskunden ohne Merqano-Plattformgebühr."
+              : brand.id === "nimah"
+                ? "Kunden zahlen nur den angezeigten reduzierten Lebensmittelpreis an den Betrieb und keine Ni'mah-Mitglieds- oder Plattformgebühr."
+          : brand.payerModel?.side === "consumer"
+            ? "Geschäftspartner zahlen keine zweite Plattformgebühr."
+            : "Die Nutzerseite bleibt kostenlos und wird nicht zusätzlich von der Plattform belastet.";
 
   return {
     territory: DE_COUNTRY_LABELS[country],
@@ -400,34 +752,38 @@ function plainGermanBusinessPlan(
     summary: brandPlainLanguage(brand, "de"),
     customer: `Zahlender Kunde ist ${payer}. ${freeSide}`,
     marketOpportunity: `Die Geschäftsleitung sieht im Bereich ${DE_SECTOR_LABELS[sector]} in ${DE_COUNTRY_LABELS[country]} einen großen, aber noch zu bestätigenden Markt. Die Planung wird erst durch echte Kundengespräche, Testabschlüsse und belastbare lokale Quellen freigegeben.`,
-    problem: DE_PROBLEMS[sector],
+    problem: DE_BRAND_PROBLEMS[brand.id] ?? DE_PROBLEMS[sector],
     solution: `${brandPlainLanguage(brand, "de")} Die erste Version deckt nur den kleinsten vollständigen Kundenweg ab. Weitere Funktionen kommen erst hinzu, wenn echte Nutzung den Bedarf zeigt.`,
     revenue: affiliateStore
       ? `Käufer nutzen den Vergleich kostenlos. Ein zugelassener Händler zahlt nach einer geeigneten vermittelten Bestellung eine Provision. Die Planung rechnet im Schnitt mit ${currency}${arpu.toFixed(2)} bestätigter Provision je Bestellung.`
       : venueFundedSport
         ? `Spieler, Organisatoren, Teams, Vereine, Trainer und Offizielle nutzen Athlyvo kostenlos. Nur Sportstätten zahlen nach 60 Tagen Testphase ein Abo; geplant sind durchschnittlich ${currency}${arpu} je zahlender Sportstätte und Monat.`
+        : brand.id === "taxcenda"
+          ? `Nur der steuerpflichtige Kunde zahlt TaxCenda. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je abgeschlossenem unterstützten Steuerfall. IRS, Steuerbehörden und Fachpartner werden nicht belastet; TaxCenda erhält keinen Anteil an Erstattung oder Steuerersparnis.`
+        : brand.id === "nimah"
+          ? `Nur teilnehmende Lebensmittelbetriebe zahlen Ni'mah. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je zahlendem Betrieb und Monat. Kunden zahlen nur den angezeigten reduzierten Lebensmittelpreis an den Betrieb; Ni'mah verlangt keine Kundenplattformgebühr und erhält keinen prozentualen Anteil am Überschussverkauf.`
         : brand.id === "kinderstars"
           ? `Registrierte Tagesmütter und Tagesväter zahlen ein monatliches Abo. Eltern nutzen die Suche und Organisation kostenlos. Das Betreuungsgeld zahlen die Eltern oder eine berechtigte staatliche Stelle direkt an die Betreuungsperson.`
           : `Nur ${payer} zahlt. Die Planung rechnet nach zwei kostenlosen Testmonaten mit durchschnittlich ${currency}${arpu} je zahlendem Konto und Monat. ${freeSide}`,
     salesPlan: venueFundedSport
       ? "Eine Startregion lückenlos aufbauen, sachliche öffentliche Angaben zu Sportstätten aufnehmen und noch nicht übernommene Profile klar kennzeichnen. Betreiber zur Prüfung und Übernahme einladen, Spieler kostenlos über Vereine, Ligen, Schulen und Gemeinden gewinnen und dann den messbaren Nutzen für Auslastung und Verwaltung verkaufen."
-      : `${DE_SALES[sector]} Verkauft wird nur an die zahlende Seite; die andere Seite bleibt kostenlos.`,
+      : `${DE_BRAND_SALES[brand.id] ?? DE_SALES[sector]} Verkauft wird nur an die zahlende Seite; die andere Seite bleibt kostenlos.`,
     operations: affiliateStore
       ? "Affivon verwaltet zugelassene Händlerdaten, nachverfolgbare Links und bestätigte Provisionen. Menschen prüfen Aussagen, Vergleiche, Kennzeichnungen und veraltete Inhalte. Zahlung, Lieferung und Rückgabe bleiben beim Händler."
-      : DE_OPERATIONS[sector],
+      : (DE_BRAND_OPERATIONS[brand.id] ?? DE_OPERATIONS[sector]),
     territoryPlan: venueFundedSport
       ? "In einer britischen Region mit Pfund-Preisen, Postleitzahl- und Entfernungssuche, britischen Zahlungen und Support starten. Erst dichte Abdeckung für die wichtigsten Sportarten schaffen und Datenschutz, Zahlungen, Schutzpflichten, Buchungs- und Verbraucherregeln abschließen."
-      : DE_TERRITORY[country],
+      : (DE_BRAND_TERRITORY[brand.id] ?? DE_TERRITORY[country]),
     expansionPlan: venueFundedSport
       ? "Erst nach wiederholter Spielernutzung, besserer Auslastung und gehaltenen zahlenden Sportstätten Postleitzahl für Postleitzahl in England wachsen. Danach Regeln und Partnerschaften für Wales, Schottland und Nordirland anpassen."
-      : DE_EXPANSION[country],
-    milestones: [
+      : (DE_BRAND_EXPANSION[brand.id] ?? DE_EXPANSION[country]),
+    milestones: DE_BRAND_MILESTONES[brand.id] ?? [
       `Vor dem Start: Kernablauf, Zahlungen, lokale Verträge, Support und einen kontrollierten Kundentest in ${DE_COUNTRY_LABELS[country]} abschließen.`,
       "Monate 1–2: erste Testkunden einrichten, Nutzung beobachten und die wichtigsten Abbruchgründe beheben.",
       `Monate 3–6: Testkonten in bezahlte Konten umwandeln und auf ${initialUsers.toLocaleString("de-DE")} ${volume} hinarbeiten.`,
       "Monate 7–12: nur Vertriebskanäle ausbauen, die gehaltene Kunden bringen, und unwirtschaftliche Kanäle stoppen.",
     ],
-    successMeasures: [
+    successMeasures: DE_BRAND_SUCCESS_MEASURES[brand.id] ?? [
       `${initialUsers.toLocaleString("de-DE")} ${volume} zum geplanten Start der Einnahmen`,
       `${currency}${affiliateStore ? arpu.toFixed(2) : arpu} durchschnittlicher Erlös je zahlender Einheit`,
       `${(userGrowth * 100).toFixed(0)} % geplantes monatliches Wachstum`,

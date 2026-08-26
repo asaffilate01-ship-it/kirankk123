@@ -83,9 +83,9 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     pricingBasis: "subscription by managed property count",
   },
   beinstandplus: {
-    payer: "employers relocating international staff",
-    freeSide: "Employees and their families use the included relocation support free",
-    pricingBasis: "employer subscription or relocation package",
+    payer: "employers, insurers, care and community organisations funding support",
+    freeSide: "People and families receive the included relocation, life-administration or bereavement support without a second platform fee",
+    pricingBasis: "organisation subscription or funded support package",
   },
   traindirekt: {
     payer: "public funding bodies and employers",
@@ -138,11 +138,6 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     freeSide: "Candidates create profiles, match and apply free",
     pricingBasis: "employer subscription by roles and hiring volume",
   },
-  traderos: {
-    payer: "tradespeople, trade firms and merchants",
-    freeSide: "Homeowners and job customers request and track work free",
-    pricingBasis: "trade-business subscription",
-  },
   amityos: {
     payer: "care providers and care organisations",
     freeSide: "Care workers, families and professionals use the portals included by the provider",
@@ -154,9 +149,9 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     pricingBasis: "organisation subscription by site or learner band",
   },
   merqano: {
-    payer: "retail groups, franchise operators, agencies and marketplace owners",
-    freeSide: "Their shoppers are not charged by Merqano",
-    pricingBasis: "tenant and platform subscription",
+    payer: "businesses and agencies that need branded ecommerce websites",
+    freeSide: "Shoppers use each customer's online shop without a Merqano platform fee",
+    pricingBasis: "business subscription by website, plan and required features",
   },
   stylesyncger: {
     payer: "German salons, barbers and beauty studios",
@@ -266,19 +261,18 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     pricingBasis: "provider subscription by service area and team size",
   },
   baytcircle: {
-    payer: "owners' associations and property-management companies",
-    freeSide: "Owners and tenants use their building portal under the association account",
-    pricingBasis: "subscription by building or unit count",
-  },
-  taxcenda: {
-    payer: "ecommerce sellers, marketplaces and cross-border software companies",
-    freeSide: "Their end customers are not charged by Taxcenda",
-    pricingBasis: "business subscription by countries and transaction volume",
+    payer: "family venues, activity providers, tutors, clubs and community organisations",
+    freeSide: "Parents, guardians, home educators, expatriates and local residents discover, organise and book without a BaytCircle platform fee",
+    pricingBasis: "provider subscription for claimed profiles, booking tools and promotion",
   },
   nimah: {
-    payer: "charities, mosques and corporate-giving programmes",
-    freeSide: "Donors discover causes and give without a Nimah platform subscription",
-    pricingBasis: "organisation subscription and administration plan",
+    payer: "restaurants, cafés, bakeries, hotels, supermarkets, caterers and other food outlets",
+    freeSide: "Customers pay the outlet's displayed discounted food price but no Ni'mah membership or platform fee",
+    pricingBasis: "food-business subscription per outlet and optional business promotion or multi-location tools",
+    forecastVolumeLabel: "Paying food-outlet accounts",
+    forecastAccountLabel: "paying food outlet",
+    revenuePerUnitLabel: "Average revenue per paying food outlet / month",
+    attritionLabel: "Food outlets cancelling each month",
   },
   ilmvero: {
     payer: "schools, academies and training institutes",
@@ -301,9 +295,9 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     pricingBasis: "creditor subscription by case volume",
   },
   merqora: {
-    payer: "retailers, direct-to-consumer brands and marketplace sellers",
-    freeSide: "Shoppers are not charged by Merqora",
-    pricingBasis: "business subscription by catalogue and channels",
+    payer: "Amazon and other online-marketplace sellers, seller agencies and ecommerce teams",
+    freeSide: "Shoppers and marketplace customers are not charged by Merqora",
+    pricingBasis: "business subscription by seller accounts, marketplaces, users and catalogue size",
   },
   lessonahead: {
     payer: "tutors, driving instructors, tuition centres, agencies and schools",
@@ -468,6 +462,24 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
 };
 
 const CONSUMER_FUNDED: Record<string, ModelSeed> = {
+  taxcenda: {
+    payer: "taxpayer clients buying U.S. return preparation and filing",
+    freeSide: "The IRS, tax authorities and professional partners are not charged by TaxCenda",
+    pricingBasis: "fixed fee per supported return or annual taxpayer support plan",
+    forecastVolumeLabel: "Paying taxpayer cases",
+    forecastAccountLabel: "paying taxpayer case",
+    revenuePerUnitLabel: "Average revenue per completed taxpayer case",
+    attritionLabel: "Monthly change in filing case volume",
+  },
+  traderos: {
+    payer: "self-directed individual traders using the analysis and signal tools",
+    freeSide: "Brokers, exchanges and market-data providers are integrations or suppliers and are not charged as a second customer side",
+    pricingBasis: "individual monthly or annual subscription",
+    forecastVolumeLabel: "Paying trader subscriptions",
+    forecastAccountLabel: "paying trader subscription",
+    revenuePerUnitLabel: "Average revenue per paying trader / month",
+    attritionLabel: "Trader subscriptions cancelling each month",
+  },
   unipathway: {
     payer: "students and their families buying the admissions and visa-support package",
     freeSide: "Universities and service partners are not charged a second platform fee",
@@ -555,7 +567,54 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
   const accountLabel =
     seed.forecastAccountLabel ??
     (side === "business" ? "paying business account" : "paying user account");
-  const investorRevenue = `Only ${seed.payer} pay ${brand.name}. ${seed.freeSide}. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}; pricing is based on ${seed.pricingBasis}.`;
+  const investorRevenue = brand.id === "taxcenda"
+    ? `Only taxpayer clients pay TaxCenda. The IRS, tax authorities and professional partners are not charged. The forecast uses ${currency}${brand.defaultArpu} average revenue per completed supported taxpayer case; TaxCenda charges no percentage of a refund or tax saving.`
+    : brand.id === "nimah"
+      ? `Only participating food outlets pay Ni'mah. Customers pay the outlet's displayed discounted food price but no Ni'mah platform fee. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per paying food outlet; Ni'mah does not take a percentage of the outlet's surplus-food sales.`
+    : `Only ${seed.payer} pay ${brand.name}. ${seed.freeSide}. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}; pricing is based on ${seed.pricingBasis}.`;
+  const pricing = brand.id === "taxcenda"
+    ? [
+        "Only the taxpayer client pays TaxCenda",
+        `${seed.freeSide}`,
+        `Forecast working assumption: ${currency}${brand.defaultArpu} average revenue per completed supported taxpayer case`,
+        "Fixed price agreed from the supported return scope before preparation begins",
+        "No percentage of a refund or tax saving and no second-side platform fee",
+      ]
+    : brand.id === "nimah"
+      ? [
+          "Only participating food outlets pay Ni'mah",
+          "Customers pay only the outlet's displayed discounted food price and no Ni'mah platform fee",
+          `Forecast working assumption: ${currency}${brand.defaultArpu} average monthly revenue per paying food outlet`,
+          "Monthly subscription per outlet with optional multi-location and promotion tools",
+          "No percentage commission on surplus-food sales and no second paying side",
+        ]
+    : [
+        `Only ${seed.payer} pay ${brand.name}`,
+        `${seed.freeSide}`,
+        `Forecast working assumption: ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}`,
+        `Pricing basis: ${seed.pricingBasis}`,
+        "No second-side platform fee: we do not charge both the user side and the business side",
+      ];
+  const monetisation = brand.id === "taxcenda"
+    ? [
+        "Fixed preparation and filing fee paid only by the taxpayer client",
+        "Optional annual support or notice-response work sold only to that same taxpayer client",
+        "No IRS, tax-authority or professional-partner fee",
+        "No refund-percentage fee, tax-saving share or second paying side",
+      ]
+    : brand.id === "nimah"
+      ? [
+          "Monthly subscription paid only by participating food outlets",
+          "Optional multi-location, reporting and promoted-placement tools paid by that same business side",
+          "No customer membership or Ni'mah platform fee",
+          "No percentage commission on the outlet's surplus-food sales",
+        ]
+    : [
+        `Primary revenue comes only from ${seed.payer}`,
+        `Core charging method: ${seed.pricingBasis}`,
+        "Optional onboarding, promotion or extra modules may be sold only to that same paying side",
+        `The other side remains free: ${seed.freeSide}`,
+      ];
 
   return {
     side,
@@ -563,19 +622,8 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
     freeSide: seed.freeSide,
     pricingBasis: seed.pricingBasis,
     investorRevenue,
-    pricing: [
-      `Only ${seed.payer} pay ${brand.name}`,
-      `${seed.freeSide}`,
-      `Forecast working assumption: ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}`,
-      `Pricing basis: ${seed.pricingBasis}`,
-      "No second-side platform fee: we do not charge both the user side and the business side",
-    ],
-    monetisation: [
-      `Primary revenue comes only from ${seed.payer}`,
-      `Core charging method: ${seed.pricingBasis}`,
-      "Optional onboarding, promotion or extra modules may be sold only to that same paying side",
-      `The other side remains free: ${seed.freeSide}`,
-    ],
+    pricing,
+    monetisation,
     forecastVolumeLabel:
       seed.forecastVolumeLabel ??
       (side === "business" ? "Paying business accounts" : "Paying user accounts"),
