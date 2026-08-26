@@ -94,6 +94,7 @@ import hmoflowNewLogo from "@/assets/hmoflow-logo.png";
 import nafsiNewLogo from "@/assets/nafsi-logo.png";
 import nimahNewLogo from "@/assets/nimah-logo.png";
 import motoresqNewLogo from "@/assets/motoresq-logo.png";
+import affivonLogo from "@/assets/affivon-logo.png";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -194,6 +195,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   nafsi: nafsiNewLogo,
   nimah: nimahNewLogo,
   motoresq: motoresqNewLogo,
+  affivon: affivonLogo,
 };
 
 /**
