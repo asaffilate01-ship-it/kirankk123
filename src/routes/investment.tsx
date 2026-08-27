@@ -94,8 +94,8 @@ function Index() {
   const moreActive = secondary.some((s) => s.value === tab);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-30 border-b bg-card/80 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+    <div className="min-h-[100dvh] bg-background text-foreground">
+      <header className="safe-top sticky top-0 z-30 border-b bg-card/80 backdrop-blur supports-[backdrop-filter]:bg-card/60">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 sm:py-3">
           <div className="flex min-w-0 items-center gap-3">
             <BrandLogo className="h-9 shrink-0 sm:h-14" />
@@ -119,7 +119,7 @@ function Index() {
           </div>
         </div>
       </header>
-      <main className="mx-auto max-w-7xl px-4 py-4 pb-[calc(5.5rem+env(safe-area-inset-bottom))] sm:py-6 md:pb-6">
+      <main className="pb-tabbar mx-auto max-w-7xl px-4 py-4 sm:py-6 md:pb-6">
         <Tabs value={tab} onValueChange={setTab} className="space-y-4 sm:space-y-6">
           <TabsList className="hidden flex-wrap md:flex">
             {[...primary, ...secondary].map((i) => (
@@ -161,11 +161,11 @@ function Index() {
         </Tabs>
       </main>
 
-      <div className="pb-[calc(4.5rem+env(safe-area-inset-bottom))] md:pb-0">
+      <div className="pb-tabbar md:pb-0">
         <SiteFooter />
       </div>
 
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
+      <nav aria-label="Primary" className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 backdrop-blur md:hidden">
         <div className="grid grid-cols-5">
           {primary.map((i) => {
             const active = tab === i.value;
@@ -175,7 +175,7 @@ function Index() {
                 type="button"
                 onClick={() => setTab(i.value)}
                 aria-current={active ? "page" : undefined}
-                className={`flex flex-col items-center gap-1 px-1 py-2.5 text-[10px] font-medium transition-colors ${
+                className={`flex min-h-14 flex-col items-center justify-center gap-1 px-1 py-2 text-[10px] font-medium transition-colors ${
                   active ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -188,7 +188,7 @@ function Index() {
             <SheetTrigger asChild>
               <button
                 type="button"
-                className={`flex flex-col items-center gap-1 px-1 py-2.5 text-[10px] font-medium ${
+                className={`flex min-h-14 w-full flex-col items-center justify-center gap-1 px-1 py-2 text-[10px] font-medium ${
                   moreActive ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -196,7 +196,7 @@ function Index() {
                 <span>{t("More")}</span>
               </button>
             </SheetTrigger>
-            <SheetContent side="bottom" className="rounded-t-2xl">
+            <SheetContent side="bottom" className="safe-bottom max-h-[80dvh] overflow-y-auto rounded-t-2xl">
               <SheetHeader className="text-left">
                 <SheetTitle>{t("More")}</SheetTitle>
               </SheetHeader>

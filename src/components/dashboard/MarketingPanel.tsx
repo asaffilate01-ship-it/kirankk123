@@ -31,8 +31,8 @@ export function MarketingPanel() {
   return (
     <div className="space-y-4">
       <PanelIntro
-        title={t("Marketing is separate from investment")}
-        description={t("This section explains how each brand will find its paying customers and, where required, build the free user or supply side. It is an operating plan, not an investment-return forecast.")}
+        title={t("How marketing works across the portfolio")}
+        description={t("This section explains how each brand will find its paying customers and, where required, build the free user or supply side. It is a practical operating plan.")}
         tips={[
           t("Every brand below has its own 90-day action plan, channel mix, target audiences and scorecard."),
           t("Businesses pay in most products; free users are marketed only where their participation creates real value for the paying business."),

@@ -1,8 +1,8 @@
 export const DE_MARKETING: Record<string, string> = {
   "Marketing strategy": "Marketingstrategie",
   "Portfolio marketing": "Portfolio-Marketing",
-  "Marketing is separate from investment": "Marketing ist vom Investment getrennt",
-  "This section explains how each brand will find its paying customers and, where required, build the free user or supply side. It is an operating plan, not an investment-return forecast.": "Dieser Bereich erklärt, wie jede Marke ihre zahlenden Kunden gewinnt und – wo erforderlich – die kostenlose Nutzer- oder Angebotsseite aufbaut. Es ist ein Betriebsplan, keine Investitionsrendite-Prognose.",
+  "How marketing works across the portfolio": "So funktioniert Marketing im gesamten Portfolio",
+  "This section explains how each brand will find its paying customers and, where required, build the free user or supply side. It is a practical operating plan.": "Dieser Bereich erklärt, wie jede Marke ihre zahlenden Kunden gewinnt und – wo erforderlich – die kostenlose Nutzer- oder Angebotsseite aufbaut. Ein praxisnaher Betriebsplan.",
   "Every brand below has its own 90-day action plan, channel mix, target audiences and scorecard.": "Jede Marke hat unten einen eigenen 90-Tage-Aktionsplan, Kanalmix, Zielgruppen und Scorecard.",
   "Businesses pay in most products; free users are marketed only where their participation creates real value for the paying business.": "Bei den meisten Produkten zahlen Unternehmen; kostenlose Nutzer werden nur dort gewonnen, wo ihre Teilnahme echten Wert für das zahlende Unternehmen schafft.",
   "Marketing budgets move toward retained customers and away from vanity metrics.": "Marketingbudgets fließen zu gehaltenen Kunden und weg von reinen Reichweitenkennzahlen.",
