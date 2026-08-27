@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { BRANDS } from "@/lib/brands";
 
 const BASE_URL = "https://itechlounge.co.uk";
 
@@ -33,8 +32,6 @@ export const Route = createFileRoute("/sitemap.xml")({
             .filter(Boolean)
             .join("\n"),
         );
-
-        void BRANDS;
 
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,

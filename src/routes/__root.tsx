@@ -90,6 +90,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "iTechLounge",
+          url: "https://itechlounge.co.uk",
+          logo: "https://itechlounge.co.uk/favicon.png",
+          slogan: "digital ideas. beautifully built.",
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
