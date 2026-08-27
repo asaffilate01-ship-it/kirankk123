@@ -192,7 +192,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   sharedbricks: sharedbricksNewLogo,
   stemcoach: stemcoachNewLogo,
   onyngo: onyngoNewLogo.url,
-  hmoflow: hmoflowNewLogo,
+  hmoflow: hmoflowNewLogo.url,
   nafsi: nafsiNewLogo,
   nimah: nimahNewLogo,
   motoresq: motoresqNewLogo,
