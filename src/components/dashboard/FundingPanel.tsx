@@ -104,7 +104,7 @@ const TRACTION: TractionItem[] = [
   {
     brand: "LessonAhead",
     status: "ready",
-    headline: "2 driving instructors are ready to start from 1 September 2026.",
+    headline: "Multiple driving instructors are ready to start from 1 September 2026.",
     detail:
       "They provide an initial live test of scheduling, learner records, lesson progress and billing.",
     payer:
