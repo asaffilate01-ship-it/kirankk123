@@ -57,7 +57,7 @@ function Unlock() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="safe-top safe-bottom flex min-h-[100dvh] items-center justify-center bg-background px-4 py-6">
       <Card className="w-full max-w-sm space-y-5 p-6">
         <div className="flex justify-between">
           <Button asChild variant="ghost" size="sm"><Link to="/portfolio">{t("Public portfolio")}</Link></Button>
@@ -79,12 +79,12 @@ function Unlock() {
               placeholder={t("Password")}
               autoFocus
               required
-              className="pr-10"
+              className="h-12 pr-11 text-base"
             />
             <button
               type="button"
               onClick={() => setShowPassword((s) => !s)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground focus:outline-none"
+              className="absolute right-1 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-md text-muted-foreground hover:text-foreground focus:outline-none"
               aria-label={showPassword ? t("Hide password") : t("Show password")}
             >
               {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -96,7 +96,7 @@ function Unlock() {
           {error === "config" && (
             <p className="text-xs text-destructive">{t("Dashboard access is temporarily unavailable.")}</p>
           )}
-          <Button type="submit" className="w-full" disabled={busy}>
+          <Button type="submit" className="h-12 w-full text-base" disabled={busy}>
             {busy ? "Checking…" : "Enter"}
           </Button>
         </form>
