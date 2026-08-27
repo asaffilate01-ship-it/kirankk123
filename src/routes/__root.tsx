@@ -102,6 +102,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: "https://itechlounge.co.uk",
           logo: "https://itechlounge.co.uk/favicon.png",
           slogan: "digital ideas. beautifully built.",
+          email: "hello@itechlounge.co.uk",
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: "hello@itechlounge.co.uk",
+            },
+          ],
         }),
       },
     ],

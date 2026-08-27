@@ -22,13 +22,16 @@ function ImprintRoute() {
   return (
     <LegalPage title={t("Imprint / Impressum")}>
       <p>{t("Provider information for this dashboard.")}</p>
+      <p>
+        {t("Email")}: <a href="mailto:hello@itechlounge.co.uk">hello@itechlounge.co.uk</a>
+      </p>
       <section className="space-y-2">
         <h2>{t("United Kingdom")}</h2>
-        <p>ITECHLOUNGE LTD<br />{t("Registered in England & Wales")}<br />{t("Contact details available on request")}</p>
+        <p>ITECHLOUNGE LTD<br />{t("Registered in England & Wales")}<br />{t("Email")}: hello@itechlounge.co.uk</p>
       </section>
       <section className="space-y-2">
         <h2>{t("Germany")}</h2>
-        <p>iTechLounge Digitallösungen GmbH<br />{t("Registered in Germany")}<br />{t("Contact details available on request")}</p>
+        <p>iTechLounge Digitallösungen GmbH<br />{t("Registered in Germany")}<br />{t("Email")}: hello@itechlounge.co.uk</p>
       </section>
       <p className="text-xs">
         {t(

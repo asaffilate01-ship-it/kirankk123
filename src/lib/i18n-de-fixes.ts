@@ -1,5 +1,8 @@
 /** Final sweep: strings that were still rendering in English on the German site. */
 export const DE_FIXES: Record<string, string> = {
+  Email: "E-Mail",
+  "How this market works in": "So funktioniert dieser Markt in",
+  today: "heute",
   Top: "Nach oben",
   Investor: "Investor",
   Enter: "Öffnen",
