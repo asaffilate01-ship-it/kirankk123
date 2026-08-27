@@ -92,21 +92,25 @@ function BrandDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b bg-card/50 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-3 py-3 sm:px-4">
-          <Link to="/investment" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" />{t("Back to dashboard")}</Link>
-          <div className="flex items-center gap-3">
-            <LanguageToggle />
-            <Button size="sm" variant="outline" onClick={handleDownloadPdf}>
-              <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
+    <div className="min-h-[100dvh] bg-background text-foreground">
+      <header className="safe-top sticky top-0 z-30 border-b bg-card/90 backdrop-blur">
+        <div className="mx-auto grid max-w-5xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-2 py-2 sm:px-4 sm:py-3">
+          <Link to="/investment" aria-label={t("Back to dashboard")} className="inline-flex min-h-11 items-center gap-2 rounded-md px-2 text-sm text-muted-foreground hover:text-foreground">
+            <ArrowLeft className="h-5 w-5 shrink-0" />
+            <span className="hidden sm:inline">{t("Back to dashboard")}</span>
+          </Link>
+          <div className="flex min-w-0 items-center justify-center gap-2 sm:justify-end">
             <BrandLogoBox src={logo} name={brand.name} color={brand.color} size="sm" align="center" />
-            <span className="hidden text-sm font-semibold sm:inline">{brand.name}</span>
+            <span className="truncate text-sm font-semibold">{brand.name}</span>
+          </div>
+          <div className="flex shrink-0 items-center gap-1 sm:gap-3">
+            <LanguageToggle />
+            <Button size="sm" variant="outline" onClick={handleDownloadPdf} className="hidden sm:inline-flex">
+              <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
           </div>
         </div>
       </header>
-      <main className="mx-auto grid max-w-6xl gap-4 px-3 py-5 sm:gap-6 sm:px-4 sm:py-6 lg:grid-cols-[1.1fr_1fr]">
+      <main className="pb-tabbar mx-auto grid max-w-6xl gap-4 px-3 py-5 sm:gap-6 sm:px-4 sm:py-6 md:pb-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
           <div>
             {logo && (
