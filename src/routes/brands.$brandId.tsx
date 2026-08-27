@@ -372,7 +372,23 @@ function BrandDetail() {
           </Button>
         </Card>
       </main>
+
+      <div className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 px-3 py-2 backdrop-blur md:hidden">
+        <div className="flex items-center gap-2">
+          <Button asChild variant="outline" className="h-12 flex-1">
+            <Link to="/investment">
+              <ArrowLeft className="mr-1 h-4 w-4" />
+              {t("Dashboard")}
+            </Link>
+          </Button>
+          <Button onClick={handleDownloadPdf} className="h-12 flex-1">
+            <Download className="mr-1 h-4 w-4" />
+            {t("Download PDF")}
+          </Button>
+        </div>
+      </div>
     </div>
+
   );
 }
 
