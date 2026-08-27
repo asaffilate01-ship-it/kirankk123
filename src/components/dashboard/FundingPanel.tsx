@@ -95,11 +95,11 @@ const TRACTION: TractionItem[] = [
   {
     brand: "Dishbee",
     status: "live",
-    headline: "3 sites are already live, with another 3 expected during September 2026.",
+    headline: "Dishbee is live and trading with multiple restaurant sites, and more go live during September 2026.",
     detail: "Dishbee already has real operating sites rather than only a forecast or waiting list.",
     payer:
       "Restaurants, cafés and other food businesses pay per location. Diners are not charged a Dishbee platform fee.",
-    next: "Stabilise the live sites, bring the next 3 online and use actual retention and support data to guide growth.",
+    next: "Keep the live sites performing, bring the next wave online and use real retention and support data to guide growth.",
   },
   {
     brand: "LessonAhead",

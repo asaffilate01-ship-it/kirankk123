@@ -296,4 +296,14 @@ export const DE_INVESTOR: Record<string, string> = {
     "Jedes Projekt behält eine klar definierte zahlende Seite, normalerweise das Unternehmen, das Software, Kunden oder Betriebswerkzeuge erhält.",
   "Fund the central management, marketing, onboarding, administration and support team needed to operate the whole system properly.":
     "Das zentrale Team für Leitung, Marketing, Onboarding, Verwaltung und Support finanzieren, das für den ordnungsgemäßen Betrieb des gesamten Systems erforderlich ist.",
+  "Live and trading": "Live und im Betrieb",
+  "Dishbee is already live and operating with multiple restaurant sites, and more go live in September 2026.":
+    "Dishbee ist bereits live und mit mehreren Restaurantstandorten im Betrieb, weitere gehen im September 2026 live.",
+  "Multiple signed": "Mehrere unterzeichnet",
+  "Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.":
+    "Mehrere Restaurants haben Haccora-Testphasen ab dem 1. September 2026 unterzeichnet, dazu kommt eine weitere Pipeline interessierter Betriebe noch vor bezahlter Werbung.",
+  "Dishbee is live and trading with multiple restaurant sites, and more go live during September 2026.":
+    "Dishbee ist live und mit mehreren Restaurantstandorten im Betrieb, weitere gehen im September 2026 live.",
+  "Keep the live sites performing, bring the next wave online and use real retention and support data to guide growth.":
+    "Die Live-Standorte stabil betreiben, die nächste Welle live nehmen und Wachstum anhand echter Bindungs- und Supportdaten steuern.",
 };
