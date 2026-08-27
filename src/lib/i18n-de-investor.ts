@@ -242,9 +242,6 @@ export const DE_INVESTOR: Record<string, string> = {
   "Explore illustrative investment tickets, dividends and possible payback timings using the assumptions in the financial model.":
     "Betrachten Sie beispielhafte Investitionsbeträge, Dividenden und mögliche Amortisationszeiten anhand der Annahmen im Finanzmodell.",
   "Illustrative forecast": "Beispielhafte Prognose",
-  "Investor note": "Hinweis für Investoren",
-  "Customer and pipeline figures above are management-provided as at 26 August 2026. They should be verified during due diligence. Live sites, signed trials, trial-ready prospects and pipeline opportunities are intentionally shown as different stages. Financial forecasts are illustrative assumptions and are not promises of revenue, profit, dividends or valuation.":
-    "Die obigen Kunden- und Pipelinezahlen stammen von der Geschäftsleitung mit Stand 26. August 2026 und sollten in der Due-Diligence-Prüfung bestätigt werden. Live-Standorte, unterzeichnete Testphasen, testbereite Interessenten und Pipeline-Chancen werden bewusst als verschiedene Stufen gezeigt. Finanzprognosen sind beispielhafte Annahmen und keine Zusagen zu Umsatz, Gewinn, Dividenden oder Bewertung.",
   "Modelled funding over the period": "Modellierte Finanzierung im Zeitraum",
   "This follows the editable assumptions and is separate from customer traction.":
     "Dieser Wert folgt den veränderbaren Annahmen und ist von Kundennachweisen getrennt.",
