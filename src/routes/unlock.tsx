@@ -1,5 +1,5 @@
 import { t } from "@/lib/i18n";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
@@ -43,7 +43,7 @@ function Unlock() {
       const res = await unlock({ data: { password } });
       if (res.ok && res.token) {
         saveGateToken(res.token);
-        await navigate({ to: "/" });
+        await navigate({ to: "/investment" });
       } else {
         setError("invalid");
       }
@@ -57,7 +57,8 @@ function Unlock() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm space-y-5 p-6">
-        <div className="flex justify-end">
+        <div className="flex justify-between">
+          <Button asChild variant="ghost" size="sm"><Link to="/portfolio">{t("Public portfolio")}</Link></Button>
           <LanguageToggle />
         </div>
         <div className="flex flex-col items-center gap-3 text-center">

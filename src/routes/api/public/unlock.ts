@@ -34,7 +34,7 @@ export const Route = createFileRoute("/api/public/unlock")({
           const token = createUnlockToken(secret);
           const headers = new Headers(
             acceptsHtml
-              ? { Location: "/" }
+              ? { Location: "/investment" }
               : { "Content-Type": "application/json" },
           );
           headers.append("Set-Cookie", gateSetCookieHeader(request.headers.get("host") ?? "", token));

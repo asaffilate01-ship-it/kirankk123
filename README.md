@@ -24,3 +24,21 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Public and private areas
+
+- `/` redirects to `/portfolio`, the public, search-indexable showcase of all brands, their plain-language purpose and services. It contains no forecasts, private traction or portfolio domains.
+- `/investment` — private investor dashboard protected by `SITE_PASSWORD`.
+- `/marketing` — separate private marketing command centre protected by `MARKETING_PASSWORD`.
+
+Required production secrets:
+
+```sh
+SITE_PASSWORD=<investor-access-password>
+SESSION_SECRET=<long-random-investor-session-secret>
+MARKETING_PASSWORD=<different-marketing-access-password>
+# Optional. If omitted, a purpose-separated value is derived from SESSION_SECRET.
+MARKETING_SESSION_SECRET=<long-random-marketing-session-secret>
+```
+
+Use different investor and marketing passwords. The two gates use separate cookies, browser tokens and signed token purposes, so unlocking one area does not unlock the other.

@@ -94,12 +94,19 @@ export function BrandsPanel() {
                 )}
               </Badge>
             </div>
-
           </div>
-          <Switch
-            checked={a.enabled}
-            onCheckedChange={(v) => state.setBrand(b.id, { enabled: v })}
-          />
+          <div className="flex shrink-0 flex-col items-end gap-1">
+            <span className="text-[11px] font-medium text-muted-foreground">
+              {t(a.enabled ? "Included" : "Excluded")}
+            </span>
+            <Switch
+              aria-label={t("Include this brand in the forecast")}
+              title={t("Include this brand in the forecast")}
+              checked={a.enabled}
+              onCheckedChange={(v) => state.setBrand(b.id, { enabled: v })}
+            />
+          </div>
+
         </div>
         <div className="grid grid-cols-3 gap-2 rounded-md bg-muted/50 p-2 text-center text-xs">
           <div>

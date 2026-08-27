@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { t, useLang } from "@/lib/i18n";
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { BRANDS, SHARED_ADVANTAGE, groupOf, siblingOf, type Brand } from "@/lib/brands";
 import { buildModel, useFinance } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
@@ -20,10 +20,15 @@ import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } fro
 import { BrandBusinessPlan } from "@/components/dashboard/BrandBusinessPlan";
 import { countryLabel, countryOf } from "@/lib/brand-taxonomy";
 import { brandAttritionLabel, brandRevenuePerUnitLabel, brandVolumeLabel } from "@/lib/brand-investor-summary";
+import { requireUnlocked } from "@/lib/gate.functions";
 
 
 
 export const Route = createFileRoute("/brands/$brandId")({
+  beforeLoad: async () => {
+    const { unlocked } = await requireUnlocked();
+    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
+  },
   loader: async ({ params }) => {
     const brand = BRANDS.find((b) => b.id === params.brandId);
     if (!brand) throw notFound();
@@ -48,7 +53,7 @@ export const Route = createFileRoute("/brands/$brandId")({
   notFoundComponent: () => (
     <div className="mx-auto max-w-3xl p-8">
       <p className="text-sm text-muted-foreground">{t("Brand not found.")}</p>
-      <Link to="/" className="text-sm underline">{t("Back to dashboard")}</Link>
+      <Link to="/investment" className="text-sm underline">{t("Back to dashboard")}</Link>
     </div>
   ),
   errorComponent: ({ error }) => (
@@ -90,7 +95,7 @@ function BrandDetail() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b bg-card/50 backdrop-blur">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-3 py-3 sm:px-4">
-          <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
+          <Link to="/investment" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-4 w-4" />{t("Back to dashboard")}</Link>
           <div className="flex items-center gap-3">
             <LanguageToggle />

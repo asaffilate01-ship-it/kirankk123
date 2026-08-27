@@ -704,7 +704,7 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
       "Later support for martial arts, boxing, archery, gyms, trainers and rooms",
       "Create public, private, verified or invitation-only games and sessions",
       "Team availability, attendance confirmation and standby substitutes",
-      "Share the venue cost, collect deposits and match fees without an Kalethon player service charge",
+      "Share the venue cost, collect deposits and match fees without a Kalethon player service charge",
       "Free profiles and discovery for coaches, trainers, referees, umpires, scorers and analysts",
       "Off-peak pricing and promoted empty slots for venues",
       "Waitlists, reminders, cancellation rules and replacement players to improve booking certainty",
@@ -748,7 +748,7 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
     userTypes: [
       { type: "Player (free)", useCase: "Finds a nearby activity, joins, pays only the agreed share of the venue price and receives confirmed updates." },
       { type: "Organiser or captain (free)", useCase: "Books the venue, confirms the team, fills gaps and collects each person's share." },
-      { type: "Club administrator (free)", useCase: "Runs teams, members, fixtures, officials and results without an Kalethon subscription." },
+      { type: "Club administrator (free)", useCase: "Runs teams, members, fixtures, officials and results without a Kalethon subscription." },
       { type: "Coach or official (free)", useCase: "Creates a profile, shows availability and can be found by local organisers and venues." },
       { type: "Venue operator (paying customer)", useCase: "Claims and verifies its profile, publishes live slots, promotes quiet periods and runs bookings from one calendar." },
       { type: "Council or leisure group (paying customer)", useCase: "Manages several facilities, promotes participation and sees programme and usage reporting." },
