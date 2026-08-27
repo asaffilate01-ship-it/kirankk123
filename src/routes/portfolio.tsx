@@ -54,9 +54,21 @@ function PublicPortfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-30 border-b bg-card/90 backdrop-blur"><div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3"><Link to="/portfolio" className="flex items-center gap-3"><BrandLogo className="h-10 sm:h-14" /><span className="hidden text-sm font-semibold sm:inline">iTechLounge</span></Link><LanguageToggle /></div></header>
+      <header className="safe-top sticky top-0 z-30 border-b bg-card/90 backdrop-blur">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 sm:py-3">
+          <Link to="/portfolio" className="flex min-w-0 items-center gap-3"><BrandLogo className="h-10 shrink-0 sm:h-14" /><span className="hidden text-sm font-semibold sm:inline">iTechLounge</span></Link>
+          <LanguageToggle />
+        </div>
+        <div className="mx-auto max-w-7xl px-4 pb-2 md:hidden">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("Search brand, audience or purpose")} className="h-11 rounded-full pl-9" inputMode="search" enterKeyHint="search" />
+          </div>
+        </div>
+      </header>
 
-      <main>
+      <main className="pb-tabbar md:pb-0">
+
         <section className="border-b bg-gradient-to-br from-primary/[0.08] via-background to-background"><div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 md:grid-cols-[1.3fr_.7fr] md:items-center md:py-20"><div><Badge className="mb-4"><Sparkles className="mr-1 h-3.5 w-3.5" />{TARGET_BRAND_COUNT} {t("digital brands")}</Badge><h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl">{t("One portfolio. Practical digital services for real people and businesses.")}</h1><p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("Explore our UK, German and international brands in plain English. See what each service does, who it helps and the main tools it provides.")}</p><p className="mt-3 text-xs text-muted-foreground">{t("No investment forecasts, private traction or portfolio domains are shown in this public area.")}</p></div><div className="space-y-4"><img src={promoHero} alt={t("Connected network of iTechLounge digital platforms")} width={1600} height={912} className="w-full rounded-xl border object-cover shadow-lg" /><Card className="grid grid-cols-3 gap-3 p-5 text-center"><Metric value={TARGET_BRAND_COUNT} label={t("digital brands")} /><Metric value={COUNTRIES.length} label={t("territories")} /><Metric value={SECTORS.length} label={t("service sectors")} /></Card></div></div></section>
 
         <section className="mx-auto max-w-7xl px-4 py-10"><div className="mb-5"><h2 className="text-2xl font-semibold">{t("Browse every brand")}</h2><p className="mt-1 text-sm text-muted-foreground">{t("Filter by territory, sector or a word describing the service you need.")}</p></div>
