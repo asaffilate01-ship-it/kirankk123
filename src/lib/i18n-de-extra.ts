@@ -3,6 +3,8 @@ export const DE_EXTRA: Record<string, string> = {
   Included: "Enthalten",
   Excluded: "Ausgeschlossen",
   "Include this brand in the forecast": "Diese Marke in die Prognose einbeziehen",
+  "Show password": "Passwort anzeigen",
+  "Hide password": "Passwort verbergen",
   // MOTORESQ (UK)
   "Commission-free vehicle rescue, repair and mobile-mechanic marketplace":
     "Provisionsfreier Marktplatz für Pannenhilfe, Reparatur und mobile Mechaniker",
