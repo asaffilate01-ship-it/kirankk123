@@ -91,6 +91,7 @@ import sharedbricksAsset from "@/assets/sharedbricks-logo.png.asset.json";
 const sharedbricksNewLogo = sharedbricksAsset.url;
 import stemcoachNewLogo from "@/assets/stemcoach-logo.png";
 import onyngoNewLogo from "@/assets/onyngo-logo-v2.png.asset.json";
+import affivonNewLogo from "@/assets/affivon-logo.png.asset.json";
 import hmoflowNewLogo from "@/assets/hmoflow-logo.png.asset.json";
 import nafsiNewLogo from "@/assets/nafsi-logo.png";
 import nimahNewLogo from "@/assets/nimah-logo.png";
@@ -193,6 +194,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   sharedbricks: sharedbricksNewLogo,
   stemcoach: stemcoachNewLogo,
   onyngo: onyngoNewLogo.url,
+  affivon: affivonNewLogo.url,
   hmoflow: hmoflowNewLogo.url,
   nafsi: nafsiNewLogo,
   nimah: nimahNewLogo,
