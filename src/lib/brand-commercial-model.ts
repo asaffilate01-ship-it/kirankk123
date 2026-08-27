@@ -249,9 +249,9 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     pricingBasis: "business subscription by team and report volume",
   },
   bidlumo: {
-    payer: "companies and consultancies bidding for contracts",
-    freeSide: "Buying authorities are not charged by Bidlumo",
-    pricingBasis: "bid-team subscription",
+    payer: "sellers, creators and merchants hosting auctions and drops",
+    freeSide: "Buyers and viewers watch, bid and buy without a BIDORA platform fee",
+    pricingBasis: "seller subscription plus success fee on auction sales",
   },
   saathera: {
     payer: "care agencies, care providers and commissioning organisations",

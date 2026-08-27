@@ -90,7 +90,7 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   "docuvera-uk":
     "Hilft britischen Gutachtern und Prüfern, verlässliche Belege vor Ort zu erfassen und daraus professionelle Berichte zu erstellen.",
   bidlumo:
-    "Findet passende Ausschreibungen und hilft Unternehmen, vollständige und regelkonforme Angebote zu erstellen.",
+    "Ein Live-Bidding-Marktplatz, der social Video-Shopping in zeitlich begrenzte Auktionen und Flash-Drops verwandelt.",
   saathera:
     "Bringt ältere oder einsame Menschen mit geprüften Begleitpersonen für Besuche, Fahrten und Aktivitäten zusammen.",
   autohashi:
