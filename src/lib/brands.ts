@@ -68,8 +68,8 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
-// Current investor portfolio: 99 brand entities. Keep this aligned with BRANDS.
-export const TARGET_BRAND_COUNT = 99;
+// Current investor portfolio: 100 brand entities. Keep this aligned with BRANDS.
+export const TARGET_BRAND_COUNT = 100;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [
@@ -3907,7 +3907,7 @@ export const BRAND_GROUPS: BrandGroup[] = [
   },
 ];
 
-/** International travel network operated under the TraveNexa platform. */
+/** International travel network operated under the TraveNexia platform. */
 export const TRAVENEXA_FAMILY: string[] = [
   "travenexa",
   "farenivo",
@@ -3926,6 +3926,7 @@ export const TRAVENEXA_FAMILY: string[] = [
   "iberaviva",
   "euralume",
   "niyyahnoor",
+  "qiyavo",
   "uzvoya",
   "dubaitrips",
   "marocways",
@@ -3988,7 +3989,7 @@ const OVERRIDES: Record<string, BrandOverride> = {
   amityos: uk("amityos.co.uk"),
   stylesyncuk: uk("stylesync.uk"),
   traderos: uk("traderos.co.uk"),
-  // Travel brands are international .com properties running on the TraveNexa platform.
+  // Travel brands are international .com properties running on the TraveNexia platform.
   hexareve: { region: "INT", domain: "hexareve.com" },
   bosporiva: { region: "INT", domain: "bosporiva.com" },
   eastamira: { region: "INT", domain: "eastamira.com" },

@@ -9,6 +9,7 @@ import { countryLabel, countryOf, sectorLabel, sectorOf } from "./brand-taxonomy
  */
 
 const currencyOf = (b: Brand) => {
+  if (b.id === "yetkiva") return "$";
   const c = countryOf(b);
   if (c === "UK") return "£";
   if (c === "PK" || c === "AE" || c === "INT") return "€";
@@ -42,7 +43,7 @@ export function brandPositives(b: Brand): string[] {
       ? `${freeSide}. We do not add a second platform fee to that side.`
       : "The product does not charge a second side of the marketplace.",
     `${sector} demand in ${country} is recurring and compliance- or operations-driven, not discretionary — churn stays low (${(b.defaultChurn * 100).toFixed(1)}%/mo modelled).`,
-    "No separate central team for every brand: engineering, AI, support, finance, legal and marketing are shared across the 98-brand portfolio.",
+    "No separate central team for every brand: engineering, AI, support, finance, legal and marketing are shared across the 100-brand portfolio.",
     "Launch cost is a fraction of an independent startup because the platform, billing, auth and infrastructure already exist.",
     "Cross-sell channel from day one — every sister brand's customer base is a warm list for this product.",
   ];

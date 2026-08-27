@@ -117,6 +117,8 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   tareevo:
     "Helps UAE businesses manage visas, employee documents, payroll rules and government renewal deadlines.",
   uzvoya: "Lets travellers book Silk Road tours, guides, transfers and hotels across Central Asia.",
+  yetkiva:
+    "Gives Uzbekistan's marketplaces, merchants and delivery businesses one system for riders, vehicles, dispatch, tracking, direct orders and delivery costs.",
   recovrable:
     "Helps businesses chase unpaid invoices, offer payment plans and prepare legal claims when needed.",
   merqora:

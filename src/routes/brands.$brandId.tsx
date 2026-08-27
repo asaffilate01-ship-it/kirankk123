@@ -127,7 +127,7 @@ function BrandDetail() {
             })()}
             {brand.family === "TRAVENEXA" && (
               <p className="mt-2 rounded-md bg-muted/50 p-2 text-xs text-muted-foreground">
-                {t("International brand running on the shared TraveNexa booking engine — sold cross-border in multiple currencies.")}
+                {t("International brand running on the shared TraveNexia booking engine — sold cross-border in multiple currencies.")}
               </p>
             )}
             {brand.family === "AFFIVON" && (

@@ -113,6 +113,8 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
     "Hilft Unternehmen in den VAE bei Visa, Mitarbeiterunterlagen, Lohnregeln und Verlängerungsfristen.",
   uzvoya:
     "Lässt Reisende Seidenstraßen-Touren, Reiseleiter, Transfers und Hotels in Zentralasien buchen.",
+  yetkiva:
+    "Gibt Marktplätzen, Händlern und Lieferbetrieben in Usbekistan ein System für Fahrer, Fahrzeuge, Disposition, Sendungsverfolgung, Direktbestellungen und Lieferkosten.",
   recovrable:
     "Hilft Unternehmen, offene Rechnungen einzuziehen, Ratenpläne anzubieten und bei Bedarf Klagen vorzubereiten.",
   merqora:

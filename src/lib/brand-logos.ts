@@ -90,13 +90,12 @@ import sharedbricksAsset from "@/assets/sharedbricks-logo.png.asset.json";
 const sharedbricksNewLogo = sharedbricksAsset.url;
 import stemcoachNewLogo from "@/assets/stemcoach-logo.png";
 import onyngoNewLogo from "@/assets/onyngo-logo-v2.png.asset.json";
-import hmoflowAsset from "@/assets/hmoflow-logo-v2.png.asset.json";
-const hmoflowNewLogo = hmoflowAsset.url;
+import hmoflowNewLogo from "@/assets/hmoflow-logo.png";
 import nafsiNewLogo from "@/assets/nafsi-logo.png";
 import nimahNewLogo from "@/assets/nimah-logo.png";
 import motoresqNewLogo from "@/assets/motoresq-logo.png";
 import auvaneoneLogo from "@/assets/auvaneone-logo.png";
-import affivonLogo from "@/assets/affivon-logo.png";
+import yetkivaLogo from "@/assets/yetkiva-logo.png";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -198,7 +197,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   nimah: nimahNewLogo,
   motoresq: motoresqNewLogo,
   auvaneone: auvaneoneLogo,
-  affivon: affivonLogo,
+  yetkiva: yetkivaLogo,
 };
 
 /**
