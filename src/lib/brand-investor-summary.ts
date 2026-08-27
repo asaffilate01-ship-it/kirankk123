@@ -95,7 +95,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
     "Helps German surveyors and inspectors capture trustworthy site evidence and turn it into professional reports.",
   "docuvera-uk":
     "Helps UK surveyors and inspectors capture trustworthy site evidence and turn it into professional reports.",
-  bidlumo: "Finds suitable tenders and helps businesses prepare complete, compliant bids.",
+  bidlumo: "A live-bidding marketplace that turns social video shopping into timed auctions and flash drops.",
   saathera:
     "Matches older or isolated people with checked local companions for visits, transport and activities.",
   autohashi:
