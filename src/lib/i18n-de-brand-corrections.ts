@@ -1,6 +1,11 @@
 /** German copy for brand scopes corrected after the main translation pass. */
 export const DE_BRAND_CORRECTIONS: Record<string, string> = {
-  // BIDLUMO (replaces BIDLUMO tendering spec)
+  // BIDLUMO (live auction / social shopping spec)
+  "sellers, creators and merchants hosting auctions and drops": "Verkäufer, Creator und Händler, die Auktionen und Drops veranstalten",
+  "seller subscription plus success fee on auction sales": "Verkäufer-Abo plus Erfolgsgebühr auf Auktionsumsatz",
+  "Buyers and viewers watch, bid and buy without a BIDLUMO platform fee": "Käufer und Zuschauer schauen, bieten und kaufen ohne BIDLUMO-Plattformgebühr",
+  "One paying side only: sellers, creators and merchants hosting auctions and drops. The forecast uses €79 average monthly revenue per paying account.": "Nur eine zahlende Seite: Verkäufer, Creator und Händler, die Auktionen und Drops veranstalten. Prognose: 79 € Monatsumsatz pro zahlendem Konto.",
+  "Paying side: sellers, creators and merchants hosting auctions and drops. Free side: Buyers and viewers watch, bid and buy without a BIDLUMO platform fee.": "Zahlende Seite: Verkäufer, Creator und Händler mit Auktionen und Drops. Kostenfreie Seite: Käufer und Zuschauer zahlen keine BIDLUMO-Plattformgebühr.",
   "Tender and bid management platform": "Live-Auktions- und Drop-Marktplatz für Social Shopping",
   "Live auction and drop marketplace for social shopping": "Live-Auktions- und Drop-Marktplatz für Social Shopping",
   "A mobile-first live-bidding marketplace where sellers run timed auctions, flash drops and live-room deals for fashion, beauty, collectibles and everyday goods — like a TikTok Shop built around bidding instead of fixed-price checkout.": "Ein mobile-first Live-Bidding-Marktplatz, auf dem Verkäufer zeitlich begrenzte Auktionen, Flash-Drops und Live-Room-Deals für Mode, Beauty, Sammlerstücke und Alltagsartikel veranstalten — wie ein TikTok Shop, der auf Bieten statt auf Festpreis-Kauf setzt.",
