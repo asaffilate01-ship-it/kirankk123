@@ -32,7 +32,7 @@ export function OverviewPanel() {
           <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
           <p className="text-sm text-muted-foreground">
             {t(
-              "Private investor dashboard — 98 UK, German and international brand entities, one shared operating team. The Investment tab separates real launch evidence from editable financial forecasts.",
+              "Private investor dashboard — 100 UK, German and international brand entities, one shared operating team. The Investment tab separates real launch evidence from editable financial forecasts.",
             )}
           </p>
         </div>
