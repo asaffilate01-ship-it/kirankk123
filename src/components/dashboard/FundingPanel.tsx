@@ -104,7 +104,7 @@ const TRACTION: TractionItem[] = [
   {
     brand: "LessonAhead",
     status: "ready",
-    headline: "2 driving instructors are ready to start from 1 September 2026.",
+    headline: "Multiple driving instructors are ready to start from 1 September 2026.",
     detail:
       "They provide an initial live test of scheduling, learner records, lesson progress and billing.",
     payer:
@@ -471,12 +471,6 @@ export function FundingPanel() {
         <InvestorCalculator />
       </Section>
 
-      <Card className="border-amber-500/25 bg-amber-500/[0.06] p-4 text-xs leading-relaxed text-muted-foreground">
-        <b className="text-foreground">{t("Investor note")}: </b>
-        {t(
-          "Customer and pipeline figures above are management-provided as at 26 August 2026. They should be verified during due diligence. Live sites, signed trials, trial-ready prospects and pipeline opportunities are intentionally shown as different stages. Financial forecasts are illustrative assumptions and are not promises of revenue, profit, dividends or valuation.",
-        )}
-      </Card>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <SnapshotCard

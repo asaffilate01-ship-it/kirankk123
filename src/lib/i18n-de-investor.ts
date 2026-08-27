@@ -156,8 +156,8 @@ export const DE_INVESTOR: Record<string, string> = {
     "Restaurants, Cafés und andere Gastronomiebetriebe zahlen je Standort. Gästen wird keine Dishbee-Plattformgebühr berechnet.",
   "Stabilise the live sites, bring the next 3 online and use actual retention and support data to guide growth.":
     "Die Live-Standorte stabilisieren, die nächsten drei online bringen und echtes Bindungs- und Supportverhalten als Grundlage für Wachstum nutzen.",
-  "2 driving instructors are ready to start from 1 September 2026.":
-    "Zwei Fahrlehrer sind bereit, am 1. September 2026 zu starten.",
+  "Multiple driving instructors are ready to start from 1 September 2026.":
+    "Mehrere Fahrlehrer sind bereit, am 1. September 2026 zu starten.",
   "They provide an initial live test of scheduling, learner records, lesson progress and billing.":
     "Sie ermöglichen einen ersten Praxistest von Terminplanung, Schülerakten, Lernfortschritt und Abrechnung.",
   "Tutors, driving instructors, tuition centres and schools pay. Parents and learners use their side free.":
@@ -242,9 +242,6 @@ export const DE_INVESTOR: Record<string, string> = {
   "Explore illustrative investment tickets, dividends and possible payback timings using the assumptions in the financial model.":
     "Betrachten Sie beispielhafte Investitionsbeträge, Dividenden und mögliche Amortisationszeiten anhand der Annahmen im Finanzmodell.",
   "Illustrative forecast": "Beispielhafte Prognose",
-  "Investor note": "Hinweis für Investoren",
-  "Customer and pipeline figures above are management-provided as at 26 August 2026. They should be verified during due diligence. Live sites, signed trials, trial-ready prospects and pipeline opportunities are intentionally shown as different stages. Financial forecasts are illustrative assumptions and are not promises of revenue, profit, dividends or valuation.":
-    "Die obigen Kunden- und Pipelinezahlen stammen von der Geschäftsleitung mit Stand 26. August 2026 und sollten in der Due-Diligence-Prüfung bestätigt werden. Live-Standorte, unterzeichnete Testphasen, testbereite Interessenten und Pipeline-Chancen werden bewusst als verschiedene Stufen gezeigt. Finanzprognosen sind beispielhafte Annahmen und keine Zusagen zu Umsatz, Gewinn, Dividenden oder Bewertung.",
   "Modelled funding over the period": "Modellierte Finanzierung im Zeitraum",
   "This follows the editable assumptions and is separate from customer traction.":
     "Dieser Wert folgt den veränderbaren Annahmen und ist von Kundennachweisen getrennt.",
