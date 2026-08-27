@@ -639,7 +639,7 @@ export function plainBusinessPlan(
   const churn = assumptions.churn ?? brand.defaultChurn;
   const directCost = assumptions.directCost ?? brand.defaultDirectCost;
   const affiliateStore = brand.revenueUnit === "affiliate-order";
-  const venueFundedSport = brand.id === "athlyvo";
+  const venueFundedSport = brand.id === "kalethon";
   const volumeLabel = brandVolumeLabel(brand);
   const revenuePerUnitLabel = brandRevenuePerUnitLabel(brand);
   const attritionLabel = brandAttritionLabel(brand);
@@ -705,7 +705,7 @@ export function plainBusinessPlan(
     operations: affiliateStore
       ? "Affivon imports approved retailer data, creates tracked links and reports confirmed commission. A human editor remains responsible for product claims, comparison quality, disclosure and removing stale or misleading content. The retailer handles payment, delivery and returns."
       : venueFundedSport
-        ? "The shared team maintains venue data, claim checks, booking technology, payments and support. Unclaimed profiles show only factual public information and cannot publish live availability. A venue must prove ownership or authority before controlling its profile. Venues set their own prices, availability and cancellation rules; Athlyvo organises the booking and confirmation record."
+        ? "The shared team maintains venue data, claim checks, booking technology, payments and support. Unclaimed profiles show only factual public information and cannot publish live availability. A venue must prove ownership or authority before controlling its profile. Venues set their own prices, availability and cancellation rules; Kalethon organises the booking and confirmation record."
         : (BRAND_OPERATIONS[brand.id] ?? OPERATIONS[sector]),
     territoryPlan: venueFundedSport
       ? "Launch in one UK area with pound pricing, postcode and distance search, UK card payments and UK-based support. Build dense coverage across football and five-a-side, cricket, padel, tennis and pickleball before opening the next area. Complete UK GDPR, marketplace, payment, safeguarding, facility-booking and consumer terms, and give every unclaimed venue a clear correction, claim and removal route."
@@ -747,7 +747,7 @@ export function plainBusinessPlan(
           `${currency}${arpu} average monthly revenue per paying venue`,
           `${(userGrowth * 100).toFixed(0)}% modelled monthly growth in paying venues`,
           `${(churn * 100).toFixed(1)}% or lower monthly venue cancellations`,
-          "Players and organisers remain free, with no Athlyvo player service fee",
+          "Players and organisers remain free, with no Kalethon player service fee",
           "Measured improvement in filled venue hours, confirmed attendance and repeat bookings",
           `Direct monthly brand cost kept near ${currency}${directCost.toLocaleString("en-GB")}`,
         ]
@@ -780,7 +780,7 @@ function plainGermanBusinessPlan(
   const churn = assumptions.churn ?? brand.defaultChurn;
   const directCost = assumptions.directCost ?? brand.defaultDirectCost;
   const affiliateStore = brand.revenueUnit === "affiliate-order";
-  const venueFundedSport = brand.id === "athlyvo";
+  const venueFundedSport = brand.id === "kalethon";
   const volume = brand.payerModel?.side === "consumer"
     ? "zahlende Nutzerkonten"
     : brand.payerModel?.side === "hybrid"
@@ -814,7 +814,7 @@ function plainGermanBusinessPlan(
               ? "zugelassene Händler"
               : brand.id === "kinderstars"
                 ? "registrierte Tagesmütter und Tagesväter"
-                : brand.id === "athlyvo"
+                : brand.id === "kalethon"
                   ? "Sportstätten und Betreiber buchbarer Anlagen"
                   : brand.id === "criclume"
                     ? "Cricketvereine, Ligen, Wettbewerbe und Akademien"
@@ -855,7 +855,7 @@ function plainGermanBusinessPlan(
     revenue: affiliateStore
       ? `Käufer nutzen den Vergleich kostenlos. Ein zugelassener Händler zahlt nach einer geeigneten vermittelten Bestellung eine Provision. Die Planung rechnet im Schnitt mit ${currency}${arpu.toFixed(2)} bestätigter Provision je Bestellung.`
       : venueFundedSport
-        ? `Spieler, Organisatoren, Teams, Vereine, Trainer und Offizielle nutzen Athlyvo kostenlos. Nur Sportstätten zahlen nach 60 Tagen Testphase ein Abo; geplant sind durchschnittlich ${currency}${arpu} je zahlender Sportstätte und Monat.`
+        ? `Spieler, Organisatoren, Teams, Vereine, Trainer und Offizielle nutzen Kalethon kostenlos. Nur Sportstätten zahlen nach 60 Tagen Testphase ein Abo; geplant sind durchschnittlich ${currency}${arpu} je zahlender Sportstätte und Monat.`
         : brand.id === "taxcenda"
           ? `Nur der steuerpflichtige Kunde zahlt TaxCenda. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je abgeschlossenem unterstützten Steuerfall. IRS, Steuerbehörden und Fachpartner werden nicht belastet; TaxCenda erhält keinen Anteil an Erstattung oder Steuerersparnis.`
         : brand.id === "nimah"

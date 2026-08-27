@@ -200,7 +200,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   pawivon: "Helps pet owners compare pet products before buying from approved retailers.",
   deskivon:
     "Helps remote workers, students and businesses compare office and workspace products before buying from approved retailers.",
-  athlyvo:
+  kalethon:
     "Lets people organise and play sport for free, while venues pay to claim their profiles, publish live availability, fill empty slots and manage bookings.",
 };
 
@@ -238,8 +238,8 @@ export function brandRevenuePlainEnglish(brand: Brand): string {
   if (brand.revenueUnit === "affiliate-order") {
     return `Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of ${currency}${brand.defaultArpu} confirmed revenue per order.`;
   }
-  if (brand.id === "athlyvo") {
-    return `Players, organisers, teams, clubs, coaches and officials use Athlyvo free. Only venues pay; the forecast uses an average of ${currency}${brand.defaultArpu} per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.`;
+  if (brand.id === "kalethon") {
+    return `Players, organisers, teams, clubs, coaches and officials use Kalethon free. Only venues pay; the forecast uses an average of ${currency}${brand.defaultArpu} per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.`;
   }
   const otherIncome =
     brand.defaultAddlRevenue > 0
@@ -250,7 +250,7 @@ export function brandRevenuePlainEnglish(brand: Brand): string {
 
 export function brandVolumeLabel(brand: Brand): string {
   if (brand.payerModel) return brand.payerModel.forecastVolumeLabel;
-  if (brand.id === "athlyvo") return "Paying venue accounts";
+  if (brand.id === "kalethon") return "Paying venue accounts";
   return brand.revenueUnit === "affiliate-order"
     ? "Confirmed affiliate orders"
     : "Paying customers";
@@ -258,7 +258,7 @@ export function brandVolumeLabel(brand: Brand): string {
 
 export function brandRevenuePerUnitLabel(brand: Brand): string {
   if (brand.payerModel) return brand.payerModel.revenuePerUnitLabel;
-  if (brand.id === "athlyvo") return "Average revenue per paying venue / month";
+  if (brand.id === "kalethon") return "Average revenue per paying venue / month";
   return brand.revenueUnit === "affiliate-order"
     ? "Average commission per order"
     : "Average price per customer / month";
@@ -266,7 +266,7 @@ export function brandRevenuePerUnitLabel(brand: Brand): string {
 
 export function brandAttritionLabel(brand: Brand): string {
   if (brand.payerModel) return brand.payerModel.attritionLabel;
-  if (brand.id === "athlyvo") return "Venues cancelling each month";
+  if (brand.id === "kalethon") return "Venues cancelling each month";
   return brand.revenueUnit === "affiliate-order"
     ? "Monthly order drop-off"
     : "Customers cancelling each month";

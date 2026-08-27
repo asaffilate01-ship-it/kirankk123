@@ -116,7 +116,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   drivaryn: "commerce", fixorlyn: "commerce", tripenvo: "commerce", formevyn: "commerce",
   pawivon: "commerce", deskivon: "commerce",
   // Sport & wellbeing
-  athlyvo: "sport", criclume: "sport",
+  kalethon: "sport", criclume: "sport",
   stylesyncuk: "sport", stylesyncger: "sport",
   // Logistics & fleet
   depotmesh: "logistics", fleetsora: "logistics", yetkiva: "logistics",
