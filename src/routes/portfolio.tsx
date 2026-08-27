@@ -88,7 +88,6 @@ function PublicPortfolio() {
         items={[
           { label: t("Brands"), icon: Boxes, active: true, onClick: () => document.getElementById("brands")?.scrollIntoView({ behavior: "smooth", block: "start" }) },
           { label: t("Top"), icon: ArrowUp, onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
-          { label: t("Investor"), icon: LockKeyhole, to: "/unlock", search: { error: undefined } },
           { label: t("Marketing"), icon: Megaphone, to: "/marketing/unlock", search: { error: undefined } },
         ]}
       />
