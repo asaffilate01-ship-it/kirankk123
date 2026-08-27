@@ -971,7 +971,8 @@ export const DE: Record<string, string> = {
  "Launches are sequenced roughly one every three weeks with a single shared platform, so no brand needs its own team.": "Launches erfolgen etwa alle drei Wochen auf einer gemeinsamen Plattform – keine Marke braucht ein eigenes Team.",
  "Regulatory or platform rule changes in the target market": "Regulatorische oder Plattform-Änderungen im Zielmarkt",
  "One shared legal and compliance function monitors changes for the whole portfolio and ships fixes once for every brand.": "Eine gemeinsame Rechts- und Compliance-Funktion überwacht Änderungen für das gesamte Portfolio und setzt Anpassungen einmal für alle Marken um.",
- "Zero standalone overhead: engineering, AI, support, finance, legal and marketing are shared across the 98-brand portfolio.": "Kein eigener Overhead: Entwicklung, KI, Support, Finanzen, Recht und Marketing werden über alle 98 Marken geteilt.",
+ "Zero standalone overhead: engineering, AI, support, finance, legal and marketing are shared across the 100-brand portfolio.": "Kein eigener Overhead: Entwicklung, KI, Support, Finanzen, Recht und Marketing werden über alle 100 Marken geteilt.",
+ "No separate central team for every brand: engineering, AI, support, finance, legal and marketing are shared across the 100-brand portfolio.": "Kein separates zentrales Team für jede Marke: Entwicklung, KI, Support, Finanzen, Recht und Marketing werden über das Portfolio mit 100 Marken geteilt.",
  "Launch cost is a fraction of an independent startup because the platform, billing, auth and infrastructure already exist.": "Die Launch-Kosten sind ein Bruchteil eines eigenständigen Startups, da Plattform, Billing, Login und Infrastruktur bereits bestehen.",
  "Cross-sell channel from day one — every sister brand's customer base is a warm list for this product.": "Cross-Selling ab Tag eins – der Kundenstamm jeder Schwestermarke ist eine warme Liste für dieses Produkt.",
  "Two-month free trial removes the buying risk: operators only pay once the product is embedded in their daily workflow.": "Zwei Monate kostenlos nehmen das Kaufrisiko: Betriebe zahlen erst, wenn das Produkt im Tagesgeschäft verankert ist.",
@@ -1006,6 +1007,5 @@ export const DE: Record<string, string> = {
  "All brands": "Alle Marken",
  "Brand-level options are limited to 10 investors at 2.5% each per location; the company round is limited to 10 investors at 4% each. Location-only investors receive 10% of any future location; whole-brand investors keep 25% of every location.": "Markenbeteiligungen sind auf 10 Investoren mit je 2,5 % pro Standort begrenzt; die Unternehmensrunde auf 10 Investoren mit je 4 %. Investoren eines einzelnen Standorts erhalten 10 % an jedem neuen Standort; Investoren einer ganzen Marke behalten 25 % an jedem Standort.",
 };
-
 
 

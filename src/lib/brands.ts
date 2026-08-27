@@ -68,8 +68,8 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
-// Current investor portfolio: 99 brand entities. Keep this aligned with BRANDS.
-export const TARGET_BRAND_COUNT = 99;
+// Current investor portfolio: 100 brand entities. Keep this aligned with BRANDS.
+export const TARGET_BRAND_COUNT = 100;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [

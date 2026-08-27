@@ -147,6 +147,8 @@ const BRAND_PROBLEMS: Record<string, string> = {
     "Food outlets regularly finish the day with safe unsold meals, bakery goods and groceries that may no longer sell at full price. Disposing of them loses ingredients, staff effort and possible income, while nearby customers are looking for affordable food.",
   auvaneone:
     "Affluent members organise complex lifestyle requests through separate calls, messages, assistants and booking sites, while suppliers receive incomplete enquiries and independent concierges often lack secure technology. Nobody has one live plan or accountable owner across the full request.",
+  yetkiva:
+    "Uzbekistan businesses coordinate orders, riders, vehicles and customer updates through separate marketplace screens, calls, messaging groups and spreadsheets. That makes capacity, service failures and the real cost of each delivery difficult to see or control.",
 };
 
 const BRAND_SALES_PLANS: Record<string, string> = {
@@ -166,6 +168,8 @@ const BRAND_SALES_PLANS: Record<string, string> = {
     "Build one dense launch district at a time. Recruit anchor restaurants, cafés, bakeries, hotels and supermarkets directly, give staff guided setup and a trial, then attract nearby customers through local creators, universities, employers, community groups and participating outlets' own channels. Sell only to food businesses; customers use Ni'mah without a platform fee.",
   auvaneone:
     "Recruit founding members through trusted introductions, family offices, executive assistants, premium communities and experienced independent concierges. In parallel, build a verified supplier network city by city across hospitality, transport, travel, clubs, events and wellness. Sell member service levels and separate supplier access plans without disguising either side's fees.",
+  yetkiva:
+    "Sell controlled pilots to marketplaces, restaurant and retail groups, pharmacies, ecommerce sellers, courier companies and fleet operators. Start with a measurable city, route or merchant group, provide assisted setup and a 60-day software trial, and convert only when service level, time saved and delivery contribution are visible. Customers and riders are not a second paying side.",
 };
 
 const BRAND_OPERATIONS: Record<string, string> = {
@@ -185,6 +189,8 @@ const BRAND_OPERATIONS: Record<string, string> = {
     "Each food outlet controls what it lists, the reduced price, quantity, ingredients, allergens and collection window and remains responsible for food safety. Ni'mah verifies businesses, runs discovery, reservations, payments, codes and support, removes expired offers automatically and escalates safety reports to trained staff.",
   auvaneone:
     "AI converts app, web, voice and WhatsApp requests into structured tasks, supplier searches and draft itineraries. A named human concierge checks suitability, live availability, price and terms before confirmation and owns each handoff. City teams approve suppliers and handle urgent exceptions; regulated payment providers handle processed payments and supplier payouts.",
+  yetkiva:
+    "A Tashkent control team manages business onboarding, service areas, dispatch, rider and vehicle checks, support, incidents, invoicing and contribution reporting. Merchant, rider, tracking, fleet and admin apps share one order record. Human dispatchers can override automation, and every city has named operating, safety and financial owners.",
 };
 
 const BRAND_TERRITORY_PLANS: Record<string, string> = {
@@ -204,6 +210,8 @@ const BRAND_TERRITORY_PLANS: Record<string, string> = {
     "Launch separately in one Saudi city district and one Pakistani city district. Saudi Arabia uses Arabic and English, Saudi-riyal prices and supported local payments; Pakistan uses Urdu and English, Pakistani-rupee prices and supported local payments. Complete local business verification, food-safety, allergen, payment, refund, consumer and tax rules before accepting live offers in either country.",
   auvaneone:
     "Begin with tightly controlled service coverage in London, Paris, New York, Miami and the UAE. Each city requires a named operations owner, verified anchor suppliers, local member support, currency and payment setup, privacy and consumer terms, supplier contracts and clear boundaries for any regulated travel, ticketing, transport or payment activity.",
+  yetkiva:
+    "Launch in Tashkent with Uzbek, Russian and English-ready workflows, UZS billing, local business onboarding and a clearly bounded delivery zone. Complete local company, tax, labour or contractor, transport, vehicle, insurance, safety, payment, consumer and data rules before live operations; prove one Samarkand pilot only after Tashkent service control is dependable.",
 };
 
 const BRAND_EXPANSION_PLANS: Record<string, string> = {
@@ -223,6 +231,8 @@ const BRAND_EXPANSION_PLANS: Record<string, string> = {
     "Expand district by district only after the first launch area has enough daily offers, repeat customers, reliable collections and retained paying outlets. Grow into the next Saudi or Pakistani city with its own supply team and local operating checks rather than opening both countries nationally at once.",
   auvaneone:
     "Deepen supplier quality and request fulfilment in the five starting markets before adding another city. Expansion requires repeat member demand, strong response times, retained member and supplier accounts, a trusted local concierge lead and documented payment, privacy and sector rules.",
+  yetkiva:
+    "Expand from Tashkent to Samarkand and then Namangan, Andijan, Fergana and Bukhara only after retained business contracts, positive contribution per delivery, safe rider operations and reliable support are proven. Add cities in clusters with local hubs and business demand instead of buying fleet capacity ahead of contracts.",
 };
 
 const DE_BRAND_PROBLEMS: Record<string, string> = {
@@ -242,6 +252,8 @@ const DE_BRAND_PROBLEMS: Record<string, string> = {
     "Lebensmittelbetriebe haben am Tagesende regelmäßig sichere unverkaufte Mahlzeiten, Backwaren und Lebensmittel, die nicht mehr zum vollen Preis verkauft werden. Entsorgung verliert Warenwert, Arbeitszeit und mögliche Einnahmen, während Menschen in der Nähe bezahlbare Lebensmittel suchen.",
   auvaneone:
     "Vermögende Mitglieder organisieren komplexe Lifestyle-Wünsche über getrennte Anrufe, Nachrichten, Assistenzen und Buchungsseiten. Anbieter erhalten unvollständige Anfragen, unabhängigen Concierges fehlt oft sichere Technik und niemand verantwortet einen gemeinsamen Live-Plan für den gesamten Wunsch.",
+  yetkiva:
+    "Unternehmen in Usbekistan koordinieren Bestellungen, Fahrer, Fahrzeuge und Kundeninformationen über getrennte Marktplatzansichten, Anrufe, Nachrichtengruppen und Tabellen. Kapazität, Servicefehler und die echten Kosten jeder Lieferung bleiben dadurch schwer steuerbar.",
 };
 
 const DE_BRAND_SALES: Record<string, string> = {
@@ -261,6 +273,8 @@ const DE_BRAND_SALES: Record<string, string> = {
     "Jeweils ein dichtes Startviertel aufbauen. Ankerbetriebe wie Restaurants, Cafés, Bäckereien, Hotels und Supermärkte direkt gewinnen, Mitarbeitende begleitet einrichten und eine Testphase anbieten. Kunden über lokale Creator, Hochschulen, Arbeitgeber, Gemeinschaftsgruppen und die Kanäle der teilnehmenden Betriebe erreichen. Nur Lebensmittelbetriebe zahlen; Kunden nutzen Ni'mah ohne Plattformgebühr.",
   auvaneone:
     "Gründungsmitglieder über vertrauenswürdige Empfehlungen, Family Offices, Executive Assistants, Premium-Gemeinschaften und erfahrene unabhängige Concierges gewinnen. Gleichzeitig Stadt für Stadt ein geprüftes Anbieternetz für Gastgewerbe, Transport, Reisen, Clubs, Veranstaltungen und Wellness aufbauen. Mitglieder-Servicepläne und getrennte Anbieterzugänge verkaufen und alle Gebühren offen darstellen.",
+  yetkiva:
+    "Kontrollierte Tests an Marktplätze, Restaurant- und Handelsgruppen, Apotheken, E-Commerce-Verkäufer, Kurierfirmen und Flottenbetreiber verkaufen. Mit einer messbaren Stadt, Route oder Händlergruppe beginnen, die Einrichtung begleiten und 60 Tage testen. Nur bei sichtbarer Servicequalität, Zeitersparnis und Liefermarge umwandeln; Kunden und Fahrer sind keine zweite zahlende Seite.",
 };
 
 const DE_BRAND_OPERATIONS: Record<string, string> = {
@@ -280,6 +294,8 @@ const DE_BRAND_OPERATIONS: Record<string, string> = {
     "Jeder Lebensmittelbetrieb bestimmt Angebot, reduzierten Preis, Menge, Zutaten, Allergene und Abholzeit und bleibt für Lebensmittelsicherheit verantwortlich. Ni'mah prüft Betriebe, betreibt Suche, Reservierung, Zahlung, Abholcodes und Support, entfernt abgelaufene Angebote automatisch und gibt Sicherheitsmeldungen an geschulte Mitarbeitende.",
   auvaneone:
     "KI wandelt Wünsche aus App, Web, Sprache und WhatsApp in strukturierte Aufgaben, Anbietersuchen und Entwürfe für Reise- oder Tagespläne um. Ein benannter menschlicher Concierge prüft Eignung, Live-Verfügbarkeit, Preis und Bedingungen, bevor etwas bestätigt wird, und verantwortet jede Übergabe. Stadtteams prüfen Anbieter und bearbeiten dringende Ausnahmen; regulierte Zahlungsanbieter verarbeiten Zahlungen und Auszahlungen.",
+  yetkiva:
+    "Ein Tashkenter Kontrollteam steuert Geschäftseinrichtung, Liefergebiete, Disposition, Fahrer- und Fahrzeugprüfungen, Support, Vorfälle, Abrechnung und Margenberichte. Händler-, Fahrer-, Tracking-, Flotten- und Admin-Anwendungen nutzen denselben Auftragsdatensatz. Menschen können die Automatik jederzeit übersteuern; jede Stadt hat benannte Verantwortliche für Betrieb, Sicherheit und Finanzen.",
 };
 
 const DE_BRAND_TERRITORY: Record<string, string> = {
@@ -299,6 +315,8 @@ const DE_BRAND_TERRITORY: Record<string, string> = {
     "Getrennt in einem Stadtviertel in Saudi-Arabien und einem in Pakistan starten. Saudi-Arabien nutzt Arabisch und Englisch, Saudi-Riyal und unterstützte lokale Zahlungen; Pakistan nutzt Urdu und Englisch, Pakistanische Rupien und unterstützte lokale Zahlungen. Betriebliche Prüfung, Lebensmittelsicherheit, Allergene, Zahlungen, Erstattungen, Verbraucher- und Steuerregeln vor Live-Angeboten je Land abschließen.",
   auvaneone:
     "Mit eng begrenzter Serviceabdeckung in London, Paris, New York, Miami und den VAE beginnen. Jede Stadt braucht eine benannte Betriebsleitung, geprüfte Ankeranbieter, lokalen Mitgliedersupport, Währungs- und Zahlungseinrichtung, Datenschutz- und Verbraucherbedingungen, Anbieterverträge sowie klare Grenzen für regulierte Reise-, Ticket-, Transport- oder Zahlungsleistungen.",
+  yetkiva:
+    "In Tashkent mit usbekischen, russischen und englischen Abläufen, UZS-Abrechnung, lokaler Geschäftseinrichtung und klar begrenztem Liefergebiet starten. Unternehmens-, Steuer-, Arbeits- oder Auftragnehmer-, Transport-, Fahrzeug-, Versicherungs-, Sicherheits-, Zahlungs-, Verbraucher- und Datenschutzregeln vor Live-Betrieb abschließen. Samarkand erst nach verlässlicher Tashkenter Steuerung testen.",
 };
 
 const DE_BRAND_EXPANSION: Record<string, string> = {
@@ -318,6 +336,8 @@ const DE_BRAND_EXPANSION: Record<string, string> = {
     "Erst dann Viertel für Viertel wachsen, wenn das erste Gebiet genügend tägliche Angebote, wiederkehrende Kunden, zuverlässige Abholungen und gehaltene zahlende Betriebe hat. Die nächste saudische oder pakistanische Stadt mit eigenem Angebotsteam und lokalen Betriebskontrollen öffnen, statt beide Länder sofort landesweit zu starten.",
   auvaneone:
     "Anbieterqualität und Erfüllung in den fünf Startmärkten vertiefen, bevor eine weitere Stadt hinzukommt. Expansion erfordert wiederholte Mitgliedernachfrage, starke Reaktionszeiten, gehaltene Mitglieder- und Anbieterkonten, eine vertrauenswürdige lokale Concierge-Leitung und dokumentierte Zahlungs-, Datenschutz- und Branchenregeln.",
+  yetkiva:
+    "Von Tashkent nach Samarkand und danach nach Namangan, Andijan, Fergana und Bukhara nur bei gehaltenen Geschäftsverträgen, positiver Marge je Lieferung, sicherem Fahrerbetrieb und verlässlichem Support wachsen. Städte in Clustern mit lokalen Hubs und echter Geschäftsnachfrage öffnen, nicht Flottenkapazität vor Verträgen einkaufen.",
 };
 
 const BRAND_MILESTONES: Record<string, string[]> = {
@@ -368,6 +388,12 @@ const BRAND_MILESTONES: Record<string, string[]> = {
     "Months 1–2: onboard founding members and independent concierges, handle a controlled set of real requests and measure response time, confirmation rate, supplier performance, member satisfaction and gross margin by request type.",
     "Months 3–6: convert retained members and suppliers to paid plans, strengthen weak supplier categories and prove the WhatsApp-to-human-concierge workflow during evenings, weekends and urgent requests.",
     "Months 7–12: deepen coverage in the five starting markets and add no new city until fulfilment, privacy, payment accuracy, retention and service cost meet the agreed thresholds.",
+  ],
+  yetkiva: [
+    "Before launch: approve the business-funded pricing boundary, Tashkent service zones, local operating contracts, rider and vehicle checks, safety, insurance, tax, payment, privacy and support procedures.",
+    "Months 1–2: run controlled merchant, fleet and managed-delivery pilots; reconcile every order, rider payout, business invoice, proof record, service failure and delivery contribution.",
+    "Months 3–6: convert useful software trials and delivery pilots into retained business contracts, improve on-time delivery, reduce dispatch intervention and prove positive contribution by client and route.",
+    "Months 7–12: deepen Tashkent coverage and test Samarkand only when retained contracts, safe operations, support response and unit economics meet the agreed thresholds.",
   ],
 };
 
@@ -429,6 +455,14 @@ const BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
     "Revenue and direct service cost by membership, supplier plan, processed payment and wholesale-rate booking",
     "No hidden fee, unapproved AI confirmation, privacy breach or unowned member request",
   ],
+  yetkiva: [
+    "Paying and retained merchant, marketplace and fleet accounts",
+    "On-time pickup and delivery rate with accurate customer ETA",
+    "Positive contribution after rider pay, vehicle, support and local operating costs",
+    "Rider, vehicle and proof records complete with low fraud, accident and complaint rates",
+    "Merchant and dispatcher time saved with fewer missed or manually rescued orders",
+    "No customer membership, rider access fee or unapproved second paying side",
+  ],
 };
 
 const DE_BRAND_MILESTONES: Record<string, string[]> = {
@@ -480,6 +514,12 @@ const DE_BRAND_MILESTONES: Record<string, string[]> = {
     "Monate 3–6: gehaltene Mitglieder und Anbieter in bezahlte Pläne umwandeln, schwache Anbieterkategorien verstärken und den Ablauf von WhatsApp zum menschlichen Concierge abends, am Wochenende und bei dringenden Wünschen beweisen.",
     "Monate 7–12: Abdeckung in den fünf Startmärkten vertiefen und keine neue Stadt öffnen, bevor Erfüllung, Datenschutz, Zahlungsgenauigkeit, Bindung und Servicekosten die vereinbarten Schwellen erreichen.",
   ],
+  yetkiva: [
+    "Vor dem Start: geschäftsfinanzierte Preisgrenze, Tashkenter Lieferzonen, lokale Betriebsverträge, Fahrer- und Fahrzeugprüfungen sowie Sicherheit, Versicherung, Steuer, Zahlung, Datenschutz und Support freigeben.",
+    "Monate 1–2: kontrollierte Händler-, Flotten- und Lieferpiloten durchführen und jede Bestellung, Fahrerauszahlung, Geschäftsrechnung, Zustellbestätigung, Störung und Liefermarge abstimmen.",
+    "Monate 3–6: nützliche Softwaretests und Lieferpiloten in gehaltene Geschäftsverträge umwandeln, Pünktlichkeit verbessern, manuelle Disposition senken und positive Marge je Kunde und Route beweisen.",
+    "Monate 7–12: Tashkent verdichten und Samarkand erst testen, wenn Vertragsbindung, Betriebssicherheit, Supportreaktion und Stückwirtschaft die vereinbarten Schwellen erfüllen.",
+  ],
 };
 
 const DE_BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
@@ -491,6 +531,7 @@ const DE_BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
   merqano: ["Zahlende Website-Abos von Geschäftskunden", "Aktive E-Commerce-Websites und nach der Testphase gehaltene Geschäftskunden", "Zeit und Supportkosten für jede weitere Kundenwebsite", "Erfolgreiche Kassenabschlüsse, Bestellungen und Zahlungen mit genauen Kundenberichten", "Kein Datenzugriff zwischen Kunden-Websites und keine Merqano-Gebühr für Käufer"],
   nimah: ["Zahlende Lebensmittelbetriebsabos nach der Testphase", "Tägliche Live-Überschussangebote und erfolgreiche Abholungen je Startgebiet", "Abverkauf, wiederkehrende Kunden und zurückgewonnene Einnahmen der teilnehmenden Betriebe", "Niedrige Quoten bei Nichterscheinen, Erstattungen, Beschwerden und Sicherheitsvorfällen", "Kunden zahlen keine Ni'mah-Plattformgebühr und Betriebe behalten ihre Einnahmen aus Überschussverkäufen"],
   auvaneone: ["Zahlende und gehaltene Mitglieder- und Anbieterkonten", "Zeit bis zur ersten menschlichen Antwort, passenden Optionen und bestätigten Organisation", "Abgeschlossene Wünsche mit mehreren Anbietern und Mitgliederzufriedenheit", "Annahme-, Bestätigungs-, Ausfall- und Wiederverwendungsquote der Anbieter", "Einnahmen und direkte Servicekosten nach Mitgliedschaft, Anbieterplan, verarbeiteter Zahlung und Großhandelsbuchung", "Keine versteckte Gebühr, ungeprüfte KI-Bestätigung, Datenschutzverletzung oder unbeaufsichtigte Mitgliederanfrage"],
+  yetkiva: ["Zahlende und gehaltene Händler-, Marktplatz- und Flottenkonten", "Pünktliche Abholung und Zustellung mit genauer Kunden-ETA", "Positive Marge nach Fahrervergütung, Fahrzeug-, Support- und lokalen Betriebskosten", "Vollständige Fahrer-, Fahrzeug- und Zustellnachweise bei niedrigen Betrugs-, Unfall- und Beschwerdequoten", "Gesparte Händler- und Dispositionszeit mit weniger verpassten oder manuell geretteten Aufträgen", "Keine Kundenmitgliedschaft, Fahrerzugangsgebühr oder ungeprüfte zweite zahlende Seite"],
 };
 
 const DE_PROBLEMS: Record<SectorId, string> = {
@@ -591,7 +632,7 @@ export function plainBusinessPlan(
   const country = countryOf(brand);
   const sector = sectorOf(brand);
   const conceptOnly = brandDefinitionStage(brand) === "concept";
-  const currency = country === "UK" ? "£" : "€";
+  const currency = brand.id === "yetkiva" ? "$" : country === "UK" ? "£" : "€";
   const initialUsers = assumptions.initialUsers ?? brand.defaultInitialUsers;
   const arpu = assumptions.arpu ?? brand.defaultArpu;
   const userGrowth = assumptions.userGrowth ?? brand.defaultUserGrowth;
@@ -732,7 +773,7 @@ function plainGermanBusinessPlan(
 ): PlainBusinessPlan {
   const country = countryOf(brand);
   const sector = sectorOf(brand);
-  const currency = country === "UK" ? "£" : "€";
+  const currency = brand.id === "yetkiva" ? "$" : country === "UK" ? "£" : "€";
   const initialUsers = assumptions.initialUsers ?? brand.defaultInitialUsers;
   const arpu = assumptions.arpu ?? brand.defaultArpu;
   const userGrowth = assumptions.userGrowth ?? brand.defaultUserGrowth;
@@ -765,6 +806,8 @@ function plainGermanBusinessPlan(
                 ? "Restaurants, Cafés, Bäckereien, Hotels, Supermärkte, Caterer und andere Lebensmittelbetriebe"
                 : brand.id === "auvaneone"
                   ? "Auvane-One-Mitglieder und geprüfte Anbieter für Gastgewerbe, Reisen, Lifestyle und Erlebnisse"
+                : brand.id === "yetkiva"
+                  ? "Marktplätze, Händler, Lieferunternehmen und Flottenbetreiber in Usbekistan"
           : brand.payerModel?.side === "consumer"
             ? "die Endnutzer"
             : affiliateStore
@@ -792,6 +835,8 @@ function plainGermanBusinessPlan(
                 ? "Kunden zahlen nur den angezeigten reduzierten Lebensmittelpreis an den Betrieb und keine Ni'mah-Mitglieds- oder Plattformgebühr."
                 : brand.id === "auvaneone"
                   ? "Mitglieder- und Anbieterleistungen werden getrennt und transparent berechnet; direkte Zahlungen an Anbieter tragen keine Auvane-One-Provision."
+                : brand.id === "yetkiva"
+                  ? "Kunden nutzen die Sendungsverfolgung ohne Yetkiva-Mitgliedschaft; Fahrer erhalten die Arbeits-App über das Geschäftskonto und werden für ihre Arbeit bezahlt, statt für den Zugang zu Aufträgen belastet zu werden."
           : brand.payerModel?.side === "consumer"
             ? "Geschäftspartner zahlen keine zweite Plattformgebühr."
             : "Die Nutzerseite bleibt kostenlos und wird nicht zusätzlich von der Plattform belastet.";

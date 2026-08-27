@@ -197,6 +197,15 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     freeSide: "Drivers use the assigned operational app under the fleet account",
     pricingBasis: "fleet subscription by vehicle count",
   },
+  yetkiva: {
+    payer: "marketplaces, merchants, delivery companies and fleet operators",
+    freeSide: "Customers use tracking without a Yetkiva membership, while riders receive the work app under the business account and are paid rather than charged for access to jobs",
+    pricingBasis: "merchant subscription by location, fleet subscription by active vehicle, or contracted managed-delivery pricing by delivery, route, shift or dedicated fleet",
+    forecastVolumeLabel: "Paying Yetkiva business accounts",
+    forecastAccountLabel: "paying merchant, marketplace or fleet account",
+    revenuePerUnitLabel: "Average platform revenue per paying business account / month",
+    attritionLabel: "Yetkiva business accounts cancelling each month",
+  },
   sharedbricks: {
     payer: "property sponsors and owners raising capital through the platform",
     freeSide:
@@ -538,8 +547,8 @@ const AFFILIATE_STORES = new Set([
   "deskivon",
 ]);
 
-function currencyOf(brand: Pick<Brand, "region">) {
-  return brand.region === "UK" ? "£" : "€";
+function currencyOf(brand: Pick<Brand, "id" | "region">) {
+  return brand.id === "yetkiva" ? "$" : brand.region === "UK" ? "£" : "€";
 }
 
 export function brandPayerModel(brand: Brand): BrandPayerModel {

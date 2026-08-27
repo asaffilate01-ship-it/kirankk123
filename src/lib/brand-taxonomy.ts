@@ -119,7 +119,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   athlyvo: "sport", criclume: "sport",
   stylesyncuk: "sport", stylesyncger: "sport",
   // Logistics & fleet
-  depotmesh: "logistics", fleetsora: "logistics",
+  depotmesh: "logistics", fleetsora: "logistics", yetkiva: "logistics",
   // Business software
   omniqora: "software", syndriva: "software",
 };
