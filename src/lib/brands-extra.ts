@@ -223,7 +223,7 @@ export const EXTRA_BRANDS: Brand[] = [
   },
   {
     id: "bidlumo",
-    name: "BIDORA",
+    name: "BIDLUMO",
     region: "INT",
     domain: "bidlumo.com",
     tagline: "Live auction and drop marketplace for social shopping",
@@ -238,7 +238,7 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultChurn: 0.03,
     defaultAddlRevenue: 2200,
     defaultDirectCost: 3200,
-    reason: "BIDORA exists because social shopping is moving to video and live interaction, but most platforms rely on fixed-price checkout. A bidding layer turns viewers into active participants, increases time spent and lets sellers capture the real market price for hot items.",
+    reason: "BIDLUMO exists because social shopping is moving to video and live interaction, but most platforms rely on fixed-price checkout. A bidding layer turns viewers into active participants, increases time spent and lets sellers capture the real market price for hot items.",
     proposition: "One app where sellers go live, run countdown auctions and flash drops, and sell to the highest bidder in seconds. Buyers watch, bid, chat and pay without leaving the stream. Built on the shared iTechLounge stack for identity, payments, escrow and logistics.",
     features: [
       "Live video auction rooms with real-time bidding",
@@ -253,12 +253,12 @@ export const EXTRA_BRANDS: Brand[] = [
       "Multi-currency and cross-border checkout",
     ],
     apps: [
-      { name: "BIDORA Shopping App", kind: "iOS", purpose: "Where buyers watch live auctions, bid, chat and pay." },
-      { name: "BIDORA Shopping App", kind: "Android", purpose: "Same live auction and drop experience on Android." },
-      { name: "BIDORA Seller Studio", kind: "SaaS", purpose: "Live host controls, inventory, scheduling, analytics and payouts." },
-      { name: "BIDORA Seller Studio", kind: "iOS", purpose: "Go live and manage auctions from a phone or tablet." },
-      { name: "BIDORA Seller Studio", kind: "Android", purpose: "Same seller controls on Android devices." },
-      { name: "BIDORA API & Admin", kind: "API", purpose: "Platform ops, moderation, payments reconciliation and partner integrations." },
+      { name: "BIDLUMO Shopping App", kind: "iOS", purpose: "Where buyers watch live auctions, bid, chat and pay." },
+      { name: "BIDLUMO Shopping App", kind: "Android", purpose: "Same live auction and drop experience on Android." },
+      { name: "BIDLUMO Seller Studio", kind: "SaaS", purpose: "Live host controls, inventory, scheduling, analytics and payouts." },
+      { name: "BIDLUMO Seller Studio", kind: "iOS", purpose: "Go live and manage auctions from a phone or tablet." },
+      { name: "BIDLUMO Seller Studio", kind: "Android", purpose: "Same seller controls on Android devices." },
+      { name: "BIDLUMO API & Admin", kind: "API", purpose: "Platform ops, moderation, payments reconciliation and partner integrations." },
     ],
     userTypes: [
       { type: "Seller / creator", useCase: "Hosts live auctions, runs drops and builds a follower storefront." },

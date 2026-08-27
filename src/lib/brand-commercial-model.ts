@@ -250,7 +250,7 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
   },
   bidlumo: {
     payer: "sellers, creators and merchants hosting auctions and drops",
-    freeSide: "Buyers and viewers watch, bid and buy without a BIDORA platform fee",
+    freeSide: "Buyers and viewers watch, bid and buy without a BIDLUMO platform fee",
     pricingBasis: "seller subscription plus success fee on auction sales",
   },
   saathera: {

@@ -1,12 +1,12 @@
 /** German copy for brand scopes corrected after the main translation pass. */
 export const DE_BRAND_CORRECTIONS: Record<string, string> = {
-  // BIDORA (replaces BIDLUMO tendering spec)
+  // BIDLUMO (replaces BIDLUMO tendering spec)
   "Tender and bid management platform": "Live-Auktions- und Drop-Marktplatz für Social Shopping",
   "Live auction and drop marketplace for social shopping": "Live-Auktions- und Drop-Marktplatz für Social Shopping",
   "A mobile-first live-bidding marketplace where sellers run timed auctions, flash drops and live-room deals for fashion, beauty, collectibles and everyday goods — like a TikTok Shop built around bidding instead of fixed-price checkout.": "Ein mobile-first Live-Bidding-Marktplatz, auf dem Verkäufer zeitlich begrenzte Auktionen, Flash-Drops und Live-Room-Deals für Mode, Beauty, Sammlerstücke und Alltagsartikel veranstalten — wie ein TikTok Shop, der auf Bieten statt auf Festpreis-Kauf setzt.",
   "Social commerce is forecast to exceed $2tn globally; live shopping and auction formats drive urgency, higher conversion and true market pricing for sellers.": "Social Commerce soll weltweit über 2 Bio. $ erreichen; Live-Shopping- und Auktionsformate erzeugen Dringlichkeit, höhere Conversion und echte Marktpreise für Verkäufer.",
   "Creators, small brands, resellers and established merchants who want a live, video-first sales channel; buyers who want deals, drops and discovery through auction.": "Creator, kleine Marken, Reseller und etablierte Händler, die einen live-, video-first Vertriebskanal wollen; Käufer, die Deals, Drops und Entdeckung durch Auktionen suchen.",
-  "BIDORA exists because social shopping is moving to video and live interaction, but most platforms rely on fixed-price checkout. A bidding layer turns viewers into active participants, increases time spent and lets sellers capture the real market price for hot items.": "BIDORA existiert, weil Social Shopping zu Video und Live-Interaktion wechselt, die meisten Plattformen aber auf Festpreis-Kauf setzen. Eine Biet-Ebene verwandelt Zuschauer in aktive Teilnehmer, erhöht die Verweildauer und lässt Verkäufer den echten Marktpreis für begehrte Artikel erzielen.",
+  "BIDLUMO exists because social shopping is moving to video and live interaction, but most platforms rely on fixed-price checkout. A bidding layer turns viewers into active participants, increases time spent and lets sellers capture the real market price for hot items.": "BIDLUMO existiert, weil Social Shopping zu Video und Live-Interaktion wechselt, die meisten Plattformen aber auf Festpreis-Kauf setzen. Eine Biet-Ebene verwandelt Zuschauer in aktive Teilnehmer, erhöht die Verweildauer und lässt Verkäufer den echten Marktpreis für begehrte Artikel erzielen.",
   "One app where sellers go live, run countdown auctions and flash drops, and sell to the highest bidder in seconds. Buyers watch, bid, chat and pay without leaving the stream. Built on the shared iTechLounge stack for identity, payments, escrow and logistics.": "Eine App, in der Verkäufer live gehen, Countdown-Auktionen und Flash-Drops laufen lassen und in Sekunden an den Höchstbietenden verkaufen. Käufer schauen, bieten, chatten und zahlen, ohne den Stream zu verlassen. Aufgebaut auf dem gemeinsamen iTechLounge-Stack für Identität, Zahlungen, Treuhand und Logistik.",
   "Live video auction rooms with real-time bidding": "Live-Video-Auktionsräume mit Echtzeit-Bieten",
   "Timed drops and flash-deal listings": "Zeitlich begrenzte Drops und Flash-Deal-Listings",
@@ -18,9 +18,9 @@ export const DE_BRAND_CORRECTIONS: Record<string, string> = {
   "Order tracking and seller fulfilment dashboard": "Bestellverfolgung und Verkäufer-Fulfillment-Dashboard",
   "AI-powered auction timing and starting-price hints": "KI-gestützte Auktionstiming- und Startpreis-Empfehlungen",
   "Multi-currency and cross-border checkout": "Multiwährungs- und grenzüberschreitender Checkout",
-  "BIDORA Shopping App": "BIDORA Shopping-App",
+  "BIDLUMO Shopping App": "BIDLUMO Shopping-App",
   "Where buyers watch live auctions, bid, chat and pay.": "Hier schauen Käufer Live-Auktionen, bieten, chatten und zahlen.",
-  "BIDORA Seller Studio": "BIDORA Seller Studio",
+  "BIDLUMO Seller Studio": "BIDLUMO Seller Studio",
   "Same live auction and drop experience on Android.": "Dasselbe Live-Auktions- und Drop-Erlebnis auf Android.",
   "Go live and manage auctions from a phone or tablet.": "Live gehen und Auktionen vom Handy oder Tablet aus verwalten.",
   "Same seller controls on Android devices.": "Dieselben Verkäufer-Steuerelemente auf Android-Geräten.",
@@ -58,12 +58,12 @@ export const DE_BRAND_CORRECTIONS: Record<string, string> = {
   "Social commerce today is dominated by fixed-price checkout in live streams and short-video feeds. Auction-style selling is fragmented across legacy marketplaces and specialist collectibles apps, leaving everyday sellers without a live bidding channel.": "Social Commerce wird heute von Festpreis-Kauf in Livestreams und Kurzvideo-Feeds dominiert. Auktionsverkäufe sind über alte Marktplätze und Spezial-Sammler-Apps verteilt, sodass Alltagsverkäufer keinen Live-Bidding-Kanal haben.",
   "Hundreds of millions of social-commerce users globally; a fast-growing subset of sellers and buyers already comfortable with live video shopping and timed drops.": "Hunderte Millionen Social-Commerce-Nutzer weltweit; eine schnell wachsende Gruppe von Verkäufern und Käufern ist bereits mit Live-Video-Shopping und zeitlich begrenzten Drops vertraut.",
   "Social commerce TAM is forecast above $2tn; auction and drop formats capture higher engagement and seller yield, with commission and subscription revenue per active seller.": "Das Social-Commerce-TAM soll über 2 Bio. $ liegen; Auktions- und Drop-Formate erzielen höheres Engagement und bessere Verkäuferrenditen mit Provisionen und Abonnementeinnahmen pro aktivem Verkäufer.",
-  "Only companies and consultancies bidding for contracts pay BIDLUMO": "Nur Verkäufer, Creator und Händler, die Auktionen und Drops veranstalten, zahlen für BIDORA",
+  "Only companies and consultancies bidding for contracts pay BIDLUMO": "Nur Verkäufer, Creator und Händler, die Auktionen und Drops veranstalten, zahlen für BIDLUMO",
   "Pricing basis: bid-team subscription": "Preisbasis: Verkäufer-Abo plus Erfolgsgebühr auf Auktionsumsatz",
-  "Only companies and consultancies bidding for contracts pay BIDLUMO. Buying authorities are not charged by Bidlumo. The forecast uses €39 average monthly revenue per paying business account; pricing is based on bid-team subscription.": "Nur Verkäufer, Creator und Händler, die Auktionen und Drops veranstalten, zahlen für BIDORA. Käufer und Zuschauer zahlen keine BIDORA-Plattformgebühr. Die Prognose basiert auf einem durchschnittlichen monatlichen Umsatz von 79 € pro zahlendem Verkäuferkonto; die Preisgestaltung erfolgt über Verkäufer-Abo plus Erfolgsgebühr auf Auktionsumsatz.",
+  "Only companies and consultancies bidding for contracts pay BIDLUMO. Buying authorities are not charged by Bidlumo. The forecast uses €39 average monthly revenue per paying business account; pricing is based on bid-team subscription.": "Nur Verkäufer, Creator und Händler, die Auktionen und Drops veranstalten, zahlen für BIDLUMO. Käufer und Zuschauer zahlen keine BIDLUMO-Plattformgebühr. Die Prognose basiert auf einem durchschnittlichen monatlichen Umsatz von 79 € pro zahlendem Verkäuferkonto; die Preisgestaltung erfolgt über Verkäufer-Abo plus Erfolgsgebühr auf Auktionsumsatz.",
   "Primary revenue comes only from companies and consultancies bidding for contracts": "Der Hauptumsatz stammt ausschließlich von Verkäufern, Creatorn und Händlern, die Auktionen und Drops veranstalten",
   "Core charging method: bid-team subscription": "Kernabrechnungsmethode: Verkäufer-Abo plus Erfolgsgebühr auf Auktionsumsatz",
-  "The other side remains free: Buying authorities are not charged by Bidlumo": "Die andere Seite bleibt kostenlos: Käufer und Zuschauer zahlen nichts an BIDORA",
+  "The other side remains free: Buying authorities are not charged by Bidlumo": "Die andere Seite bleibt kostenlos: Käufer und Zuschauer zahlen nichts an BIDLUMO",
 
   "Practical support when life becomes complicated":
     "Praktische Hilfe, wenn das Leben kompliziert wird",
