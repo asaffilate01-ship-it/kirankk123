@@ -89,7 +89,8 @@ export function detectLang(): Lang {
     /* ignore */
   }
   const langs = typeof navigator !== "undefined" ? [navigator.language, ...(navigator.languages ?? [])] : [];
-  if (langs.some((l) => typeof l === "string" && /^de/i.test(l))) return "de";
+  // German language, or any locale in a German-speaking region (e.g. en-DE, tr-AT)
+  if (langs.some((l) => typeof l === "string" && (/^de\b/i.test(l) || /-(DE|AT|CH)$/i.test(l)))) return "de";
   return "en";
 }
 
