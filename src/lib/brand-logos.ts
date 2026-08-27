@@ -78,7 +78,7 @@ import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
 import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
 import tendryvaLogo from "@/assets/tendryva-logo-v2.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
-import kalethonLogo from "@/assets/kalethon-logo.png.asset.json";
+import kalethonLogo from "@/assets/kalethon-logo.jpg";
 import taxnuviaAsset from "@/assets/taxnuvia-logo-v2.png.asset.json";
 const taxnuviaNewLogo = taxnuviaAsset.url;
 import formationgenieNewLogo from "@/assets/formationgenie-logo.png";
@@ -90,14 +90,12 @@ import sharedbricksAsset from "@/assets/sharedbricks-logo.png.asset.json";
 const sharedbricksNewLogo = sharedbricksAsset.url;
 import stemcoachNewLogo from "@/assets/stemcoach-logo.png";
 import onyngoNewLogo from "@/assets/onyngo-logo-v2.png.asset.json";
-import hmoflowAsset from "@/assets/hmoflow-logo-v2.png.asset.json";
-const hmoflowNewLogo = hmoflowAsset.url;
+import hmoflowNewLogo from "@/assets/hmoflow-logo.png";
 import nafsiNewLogo from "@/assets/nafsi-logo.png";
 import nimahNewLogo from "@/assets/nimah-logo.png";
 import motoresqNewLogo from "@/assets/motoresq-logo.png";
 import auvaneoneLogo from "@/assets/auvaneone-logo.png";
-import yetkivaAsset from "@/assets/yetkiva-logo.png.asset.json";
-const yetkivaLogo = yetkivaAsset.url;
+import yetkivaLogo from "@/assets/yetkiva-logo.png";
 import type { Lang } from "@/lib/i18n";
 
 export const BRAND_LOGOS: Record<string, string> = {
@@ -185,7 +183,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   avenesto: avenestoLogo.url,
   tendryva: tendryvaLogo.url,
   syndriva: syndrivaLogo.url,
-  kalethon: kalethonLogo.url,
+  kalethon: kalethonLogo,
   taxnuvia: taxnuviaNewLogo,
   formationgenie: formationgenieNewLogo,
   merqano: merqanoNewLogo,

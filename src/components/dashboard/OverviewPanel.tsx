@@ -32,7 +32,7 @@ export function OverviewPanel() {
           <p className="text-sm font-medium">{t("Digital ideas. Beautifully built.")}</p>
           <p className="text-sm text-muted-foreground">
             {t(
-              "Private investor dashboard — 98 UK, German and international brand entities, one shared operating team. The Investment tab separates real launch evidence from editable financial forecasts.",
+              "Private investor dashboard — 100 UK, German and international brand entities, one shared operating team. The Investment tab separates real launch evidence from editable financial forecasts.",
             )}
           </p>
         </div>
@@ -41,7 +41,7 @@ export function OverviewPanel() {
       <PanelIntro
         title={t("Start here")}
         description={t(
-          "This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list and platform detail live in the System tab.",
+          "This page is the headline view: the key numbers and the year-by-year summary. Deal terms and the investor calculator live in the Investment tab; the full brand list is in Brands and platform detail is in Our system.",
         )}
         tips={[
           t("Every figure updates live when you change a slider in Assumptions or Brands."),
@@ -58,11 +58,10 @@ export function OverviewPanel() {
           hint={t("Money coming in every month from subscriptions (MRR)")}
         />
         <Kpi
-          label={t("Funding required")}
+          label={t("Funding raised")}
           value={fmtEURk(totalFunding)}
-          hint={t("Total investment required over the period")}
+          hint={t("Total investment paid into the business over the period")}
         />
-
         <Kpi
           label={t("€1m/mo hit at")}
           value={monthAtMilestone ? `M${monthAtMilestone}` : t("not reached")}

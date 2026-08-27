@@ -75,7 +75,7 @@ export const SECTORS: { id: SectorId; label: string }[] = [
 ];
 
 const SECTOR_MAP: Record<string, SectorId> = {
-  // Travel — the whole TraveNexa network
+  // Travel — the whole TraveNexia network
   travenexa: "travel", farenivo: "travel", hexareve: "travel", bosporiva: "travel",
   eastamira: "travel", corazora: "travel", fiftyroam: "travel", canavelle: "travel",
   rangvaya: "travel", oceavela: "travel", savansea: "travel", nilevella: "travel",

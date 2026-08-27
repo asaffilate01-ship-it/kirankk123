@@ -80,11 +80,11 @@ export function BrandsPanel() {
             </div>
             <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
             <div className="mt-2 flex flex-wrap gap-1">
-              <Badge variant="secondary" className="text-[11px]">
-                {t(countryLabel(countryOf(b)))}
+              <Badge variant="secondary" className="text-[10px]">
+                {COUNTRIES.find((c) => c.id === countryOf(b))?.flag} {t(countryLabel(countryOf(b)))}
               </Badge>
-              <Badge variant="outline" className="text-[11px]">{t(sectorLabel(sectorOf(b)))}</Badge>
-              <Badge variant="outline" className="text-[11px]">
+              <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
+              <Badge variant="outline" className="text-[10px]">
                 {t(
                   b.payerModel?.side === "consumer"
                     ? "User-funded"
@@ -94,7 +94,6 @@ export function BrandsPanel() {
                 )}
               </Badge>
             </div>
-
           </div>
           <Switch
             checked={a.enabled}
@@ -329,10 +328,10 @@ export function BrandsPanel() {
             {travel.length > 0 && (
               <div className="mt-6">
                 <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b pb-2">
-                  <h3 className="text-base font-semibold tracking-tight">{t("TraveNexa international travel network")}</h3>
+                  <h3 className="text-base font-semibold tracking-tight">{t("TraveNexia international travel network")}</h3>
                   <span className="text-xs text-muted-foreground">{travel.length} {t("brands")}</span>
                   <p className="text-xs text-muted-foreground">
-                    {t("All travel brands run on the shared TraveNexa booking engine and are sold cross-border in multiple currencies.")}
+                    {t("All travel brands run on the shared TraveNexia booking engine and are sold cross-border in multiple currencies.")}
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
