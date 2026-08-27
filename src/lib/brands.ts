@@ -3926,7 +3926,6 @@ export const TRAVENEXA_FAMILY: string[] = [
   "iberaviva",
   "euralume",
   "niyyahnoor",
-  "qiyavo",
   "uzvoya",
   "dubaitrips",
   "marocways",
