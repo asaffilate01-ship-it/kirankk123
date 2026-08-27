@@ -80,11 +80,11 @@ export function BrandsPanel() {
             </div>
             <p className="mt-1 text-xs text-muted-foreground">{t(b.tagline)}</p>
             <div className="mt-2 flex flex-wrap gap-1">
-              <Badge variant="secondary" className="text-[10px]">
-                {COUNTRIES.find((c) => c.id === countryOf(b))?.flag} {t(countryLabel(countryOf(b)))}
+              <Badge variant="secondary" className="text-[11px]">
+                {t(countryLabel(countryOf(b)))}
               </Badge>
-              <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
-              <Badge variant="outline" className="text-[10px]">
+              <Badge variant="outline" className="text-[11px]">{t(sectorLabel(sectorOf(b)))}</Badge>
+              <Badge variant="outline" className="text-[11px]">
                 {t(
                   b.payerModel?.side === "consumer"
                     ? "User-funded"
@@ -94,6 +94,7 @@ export function BrandsPanel() {
                 )}
               </Badge>
             </div>
+
           </div>
           <Switch
             checked={a.enabled}

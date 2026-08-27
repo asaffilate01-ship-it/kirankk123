@@ -675,6 +675,8 @@ export const DE: Record<string, string> = {
  "Funding & investor terms": "Finanzierungs- & Investorenbedingungen",
  "Funding in": "Finanzierung in",
  "Funding raised": "Eingeworbene Finanzierung",
+ "Funding required": "Benötigtes Kapital",
+ "Total investment required over the period": "Gesamter Kapitalbedarf im Zeitraum",
  "Funding summary": "Finanzierungsübersicht",
  "German · for dark backgrounds": "Deutsch · für dunkle Hintergründe",
  "German · for light backgrounds": "Deutsch · für helle Hintergründe",
