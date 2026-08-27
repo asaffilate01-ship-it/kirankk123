@@ -221,3 +221,18 @@
     opacity: 0.9;
   }
 }
+
+/* Native momentum scrolling for every horizontally scrollable table/panel */
+.overflow-x-auto,
+.overflow-y-auto,
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Sliders get a finger-sized thumb on touch devices */
+@media (pointer: coarse) {
+  [role="slider"] {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
