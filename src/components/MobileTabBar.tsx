@@ -21,7 +21,9 @@ export function MobileTabBar({ items }: { items: MobileTabItem[] }) {
   // Lets fixed overlays (cookie banner, toasts) sit above the tab bar.
   useEffect(() => {
     document.documentElement.style.setProperty("--tabbar-h", "4.25rem");
-    return () => document.documentElement.style.removeProperty("--tabbar-h");
+    return () => {
+      document.documentElement.style.removeProperty("--tabbar-h");
+    };
   }, []);
 
   return (
