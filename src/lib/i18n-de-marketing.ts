@@ -87,4 +87,5 @@ export const DE_MARKETING: Record<string, string> = {
   "One order of work across three market groups.": "Eine Arbeitsreihenfolge über drei Marktgruppen.",
   "Shared people and tools, with separate evidence and messaging for every brand.": "Gemeinsame Menschen und Werkzeuge, mit getrennten Nachweisen und Botschaften für jede Marke.",
   "Starting allocations; actual budgets move according to retained customer results.": "Startverteilung; tatsächliche Budgets folgen den Ergebnissen gehaltener Kunden.",
+  "Connected network of iTechLounge digital platforms": "Vernetztes Netzwerk der digitalen iTechLounge-Plattformen",
 };
