@@ -83,7 +83,7 @@ export const DE_MARKETING: Record<string, string> = {
   "Private access": "Privater Zugang",
   "Investor dashboard": "Investoren-Dashboard",
   "Marketing command centre": "Marketing-Kommandozentrale",
-  "This public portfolio explains products only. Financial and marketing details are available to authorised users.": "Dieses öffentliche Portfolio erklärt nur die Produkte. Finanz- und Marketingdetails stehen autorisierten Nutzern zur Verfügung.",
+  "This public portfolio explains products only. Marketing details are available to authorised users.": "Dieses öffentliche Portfolio erklärt nur die Produkte. Marketingdetails stehen autorisierten Nutzern zur Verfügung.",
   "One order of work across three market groups.": "Eine Arbeitsreihenfolge über drei Marktgruppen.",
   "Shared people and tools, with separate evidence and messaging for every brand.": "Gemeinsame Menschen und Werkzeuge, mit getrennten Nachweisen und Botschaften für jede Marke.",
   "Starting allocations; actual budgets move according to retained customer results.": "Startverteilung; tatsächliche Budgets folgen den Ergebnissen gehaltener Kunden.",
