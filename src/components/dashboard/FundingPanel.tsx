@@ -95,11 +95,11 @@ const TRACTION: TractionItem[] = [
   {
     brand: "Dishbee",
     status: "live",
-    headline: "3 sites are already live, with another 3 expected during September 2026.",
+    headline: "Dishbee is live and trading with multiple restaurant sites, and more go live during September 2026.",
     detail: "Dishbee already has real operating sites rather than only a forecast or waiting list.",
     payer:
       "Restaurants, cafés and other food businesses pay per location. Diners are not charged a Dishbee platform fee.",
-    next: "Stabilise the live sites, bring the next 3 online and use actual retention and support data to guide growth.",
+    next: "Keep the live sites performing, bring the next wave online and use real retention and support data to guide growth.",
   },
   {
     brand: "LessonAhead",
@@ -220,7 +220,6 @@ export function FundingPanel() {
           detail={t("Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.")}
           tone="good"
         />
-
         <SnapshotCard
           icon={<TrendingUp className="h-4 w-4" />}
           label={t("UK B2B launch breadth")}

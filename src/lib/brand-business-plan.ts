@@ -145,6 +145,8 @@ const BRAND_PROBLEMS: Record<string, string> = {
     "Many businesses need a professional ecommerce website but a custom build is expensive and slow. Building and maintaining a separate technical system for every customer repeats the same checkout, payment, order, delivery, security and reporting work.",
   nimah:
     "Food outlets regularly finish the day with safe unsold meals, bakery goods and groceries that may no longer sell at full price. Disposing of them loses ingredients, staff effort and possible income, while nearby customers are looking for affordable food.",
+  auvaneone:
+    "Affluent members organise complex lifestyle requests through separate calls, messages, assistants and booking sites, while suppliers receive incomplete enquiries and independent concierges often lack secure technology. Nobody has one live plan or accountable owner across the full request.",
 };
 
 const BRAND_SALES_PLANS: Record<string, string> = {
@@ -162,6 +164,8 @@ const BRAND_SALES_PLANS: Record<string, string> = {
     "Sell directly to independent retailers, growing brands, franchise businesses and agencies that need professional ecommerce websites. Demonstrate one complete customer website, provide guided product and payment setup, and show how the business receives its own brand, customer relationship and operating dashboard without funding a custom technical build.",
   nimah:
     "Build one dense launch district at a time. Recruit anchor restaurants, cafés, bakeries, hotels and supermarkets directly, give staff guided setup and a trial, then attract nearby customers through local creators, universities, employers, community groups and participating outlets' own channels. Sell only to food businesses; customers use Ni'mah without a platform fee.",
+  auvaneone:
+    "Recruit founding members through trusted introductions, family offices, executive assistants, premium communities and experienced independent concierges. In parallel, build a verified supplier network city by city across hospitality, transport, travel, clubs, events and wellness. Sell member service levels and separate supplier access plans without disguising either side's fees.",
 };
 
 const BRAND_OPERATIONS: Record<string, string> = {
@@ -179,6 +183,8 @@ const BRAND_OPERATIONS: Record<string, string> = {
     "Merqano maintains the shared commerce technology, security, payments, updates and support. Each customer business controls only its own website, branding, catalogue, prices, orders, customers, delivery rules and staff through a separate protected dashboard.",
   nimah:
     "Each food outlet controls what it lists, the reduced price, quantity, ingredients, allergens and collection window and remains responsible for food safety. Ni'mah verifies businesses, runs discovery, reservations, payments, codes and support, removes expired offers automatically and escalates safety reports to trained staff.",
+  auvaneone:
+    "AI converts app, web, voice and WhatsApp requests into structured tasks, supplier searches and draft itineraries. A named human concierge checks suitability, live availability, price and terms before confirmation and owns each handoff. City teams approve suppliers and handle urgent exceptions; regulated payment providers handle processed payments and supplier payouts.",
 };
 
 const BRAND_TERRITORY_PLANS: Record<string, string> = {
@@ -196,6 +202,8 @@ const BRAND_TERRITORY_PLANS: Record<string, string> = {
     "Start with a small group of UK customer businesses using pound pricing, UK payment processing, separate customer data and UK support. Complete payment, tax, privacy, consumer, delivery and cancellation terms before each ecommerce website begins trading.",
   nimah:
     "Launch separately in one Saudi city district and one Pakistani city district. Saudi Arabia uses Arabic and English, Saudi-riyal prices and supported local payments; Pakistan uses Urdu and English, Pakistani-rupee prices and supported local payments. Complete local business verification, food-safety, allergen, payment, refund, consumer and tax rules before accepting live offers in either country.",
+  auvaneone:
+    "Begin with tightly controlled service coverage in London, Paris, New York, Miami and the UAE. Each city requires a named operations owner, verified anchor suppliers, local member support, currency and payment setup, privacy and consumer terms, supplier contracts and clear boundaries for any regulated travel, ticketing, transport or payment activity.",
 };
 
 const BRAND_EXPANSION_PLANS: Record<string, string> = {
@@ -213,6 +221,8 @@ const BRAND_EXPANSION_PLANS: Record<string, string> = {
     "Expand by launching more customer ecommerce websites on the proven shared system, then add countries only when local currency, payments, tax, consumer terms, delivery and support are ready. Keep every customer's website, data and permissions separate as Merqano grows.",
   nimah:
     "Expand district by district only after the first launch area has enough daily offers, repeat customers, reliable collections and retained paying outlets. Grow into the next Saudi or Pakistani city with its own supply team and local operating checks rather than opening both countries nationally at once.",
+  auvaneone:
+    "Deepen supplier quality and request fulfilment in the five starting markets before adding another city. Expansion requires repeat member demand, strong response times, retained member and supplier accounts, a trusted local concierge lead and documented payment, privacy and sector rules.",
 };
 
 const DE_BRAND_PROBLEMS: Record<string, string> = {
@@ -230,6 +240,8 @@ const DE_BRAND_PROBLEMS: Record<string, string> = {
     "Viele Unternehmen benötigen eine professionelle E-Commerce-Website, doch eine individuelle Entwicklung ist teuer und langsam. Ein getrenntes technisches System für jeden Kunden wiederholt dieselbe Arbeit für Kasse, Zahlungen, Bestellungen, Lieferung, Sicherheit und Berichte.",
   nimah:
     "Lebensmittelbetriebe haben am Tagesende regelmäßig sichere unverkaufte Mahlzeiten, Backwaren und Lebensmittel, die nicht mehr zum vollen Preis verkauft werden. Entsorgung verliert Warenwert, Arbeitszeit und mögliche Einnahmen, während Menschen in der Nähe bezahlbare Lebensmittel suchen.",
+  auvaneone:
+    "Vermögende Mitglieder organisieren komplexe Lifestyle-Wünsche über getrennte Anrufe, Nachrichten, Assistenzen und Buchungsseiten. Anbieter erhalten unvollständige Anfragen, unabhängigen Concierges fehlt oft sichere Technik und niemand verantwortet einen gemeinsamen Live-Plan für den gesamten Wunsch.",
 };
 
 const DE_BRAND_SALES: Record<string, string> = {
@@ -247,6 +259,8 @@ const DE_BRAND_SALES: Record<string, string> = {
     "Direkt an unabhängige Händler, wachsende Marken, Franchiseunternehmen und Agenturen verkaufen, die professionelle E-Commerce-Websites benötigen. Eine vollständige Kundenwebsite zeigen, Produkte und Zahlungen gemeinsam einrichten und erklären, dass der Betrieb seine eigene Marke, Kundenbeziehung und Verwaltung erhält, ohne eine Sonderentwicklung zu finanzieren.",
   nimah:
     "Jeweils ein dichtes Startviertel aufbauen. Ankerbetriebe wie Restaurants, Cafés, Bäckereien, Hotels und Supermärkte direkt gewinnen, Mitarbeitende begleitet einrichten und eine Testphase anbieten. Kunden über lokale Creator, Hochschulen, Arbeitgeber, Gemeinschaftsgruppen und die Kanäle der teilnehmenden Betriebe erreichen. Nur Lebensmittelbetriebe zahlen; Kunden nutzen Ni'mah ohne Plattformgebühr.",
+  auvaneone:
+    "Gründungsmitglieder über vertrauenswürdige Empfehlungen, Family Offices, Executive Assistants, Premium-Gemeinschaften und erfahrene unabhängige Concierges gewinnen. Gleichzeitig Stadt für Stadt ein geprüftes Anbieternetz für Gastgewerbe, Transport, Reisen, Clubs, Veranstaltungen und Wellness aufbauen. Mitglieder-Servicepläne und getrennte Anbieterzugänge verkaufen und alle Gebühren offen darstellen.",
 };
 
 const DE_BRAND_OPERATIONS: Record<string, string> = {
@@ -264,6 +278,8 @@ const DE_BRAND_OPERATIONS: Record<string, string> = {
     "Merqano pflegt die gemeinsame Handelstechnik, Sicherheit, Zahlungen, Aktualisierungen und den Support. Jeder Geschäftskunde kontrolliert über eine getrennte geschützte Verwaltung nur seine eigene Website, Marke, Produkte, Preise, Bestellungen, Kunden, Lieferregeln und Mitarbeitendenzugänge.",
   nimah:
     "Jeder Lebensmittelbetrieb bestimmt Angebot, reduzierten Preis, Menge, Zutaten, Allergene und Abholzeit und bleibt für Lebensmittelsicherheit verantwortlich. Ni'mah prüft Betriebe, betreibt Suche, Reservierung, Zahlung, Abholcodes und Support, entfernt abgelaufene Angebote automatisch und gibt Sicherheitsmeldungen an geschulte Mitarbeitende.",
+  auvaneone:
+    "KI wandelt Wünsche aus App, Web, Sprache und WhatsApp in strukturierte Aufgaben, Anbietersuchen und Entwürfe für Reise- oder Tagespläne um. Ein benannter menschlicher Concierge prüft Eignung, Live-Verfügbarkeit, Preis und Bedingungen, bevor etwas bestätigt wird, und verantwortet jede Übergabe. Stadtteams prüfen Anbieter und bearbeiten dringende Ausnahmen; regulierte Zahlungsanbieter verarbeiten Zahlungen und Auszahlungen.",
 };
 
 const DE_BRAND_TERRITORY: Record<string, string> = {
@@ -281,6 +297,8 @@ const DE_BRAND_TERRITORY: Record<string, string> = {
     "Mit einer kleinen Gruppe britischer Geschäftskunden, Pfund-Preisen, britischer Zahlungsabwicklung, getrennten Kundendaten und Support starten. Zahlungs-, Steuer-, Datenschutz-, Verbraucher-, Liefer- und Widerrufsregeln vor dem Start jeder E-Commerce-Website abschließen.",
   nimah:
     "Getrennt in einem Stadtviertel in Saudi-Arabien und einem in Pakistan starten. Saudi-Arabien nutzt Arabisch und Englisch, Saudi-Riyal und unterstützte lokale Zahlungen; Pakistan nutzt Urdu und Englisch, Pakistanische Rupien und unterstützte lokale Zahlungen. Betriebliche Prüfung, Lebensmittelsicherheit, Allergene, Zahlungen, Erstattungen, Verbraucher- und Steuerregeln vor Live-Angeboten je Land abschließen.",
+  auvaneone:
+    "Mit eng begrenzter Serviceabdeckung in London, Paris, New York, Miami und den VAE beginnen. Jede Stadt braucht eine benannte Betriebsleitung, geprüfte Ankeranbieter, lokalen Mitgliedersupport, Währungs- und Zahlungseinrichtung, Datenschutz- und Verbraucherbedingungen, Anbieterverträge sowie klare Grenzen für regulierte Reise-, Ticket-, Transport- oder Zahlungsleistungen.",
 };
 
 const DE_BRAND_EXPANSION: Record<string, string> = {
@@ -298,6 +316,8 @@ const DE_BRAND_EXPANSION: Record<string, string> = {
     "Mehr Kunden-Websites auf dem bewährten gemeinsamen System starten und Länder erst ergänzen, wenn Währung, Zahlungen, Steuern, Verbraucherregeln, Lieferung und Support vorbereitet sind. Website, Daten und Rechte jedes Kunden bleiben beim Wachstum getrennt.",
   nimah:
     "Erst dann Viertel für Viertel wachsen, wenn das erste Gebiet genügend tägliche Angebote, wiederkehrende Kunden, zuverlässige Abholungen und gehaltene zahlende Betriebe hat. Die nächste saudische oder pakistanische Stadt mit eigenem Angebotsteam und lokalen Betriebskontrollen öffnen, statt beide Länder sofort landesweit zu starten.",
+  auvaneone:
+    "Anbieterqualität und Erfüllung in den fünf Startmärkten vertiefen, bevor eine weitere Stadt hinzukommt. Expansion erfordert wiederholte Mitgliedernachfrage, starke Reaktionszeiten, gehaltene Mitglieder- und Anbieterkonten, eine vertrauenswürdige lokale Concierge-Leitung und dokumentierte Zahlungs-, Datenschutz- und Branchenregeln.",
 };
 
 const BRAND_MILESTONES: Record<string, string[]> = {
@@ -342,6 +362,12 @@ const BRAND_MILESTONES: Record<string, string[]> = {
     "Months 1–2: launch controlled Saudi and Pakistani districts, support every outlet closely and measure live offers, reservations, collections, no-shows, complaints and food saved.",
     "Months 3–6: convert useful outlet trials into subscriptions and improve daily offer density, sell-through, repeat customer use and recovered revenue per outlet.",
     "Months 7–12: open nearby districts only where enough paying outlets and active customers can produce a reliable daily marketplace.",
+  ],
+  auvaneone: [
+    "Before launch: approve member and supplier terms, privacy controls, payment flows, concierge service levels and the first verified supplier network in each starting city.",
+    "Months 1–2: onboard founding members and independent concierges, handle a controlled set of real requests and measure response time, confirmation rate, supplier performance, member satisfaction and gross margin by request type.",
+    "Months 3–6: convert retained members and suppliers to paid plans, strengthen weak supplier categories and prove the WhatsApp-to-human-concierge workflow during evenings, weekends and urgent requests.",
+    "Months 7–12: deepen coverage in the five starting markets and add no new city until fulfilment, privacy, payment accuracy, retention and service cost meet the agreed thresholds.",
   ],
 };
 
@@ -395,6 +421,14 @@ const BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
     "Low no-show, refund, complaint and safety-incident rates",
     "Customers pay no Ni'mah platform fee and outlets keep their surplus-food sales income",
   ],
+  auvaneone: [
+    "Paying and retained member and supplier accounts",
+    "Time to first human response, suitable options and confirmed arrangement",
+    "Completed multi-supplier requests and member satisfaction",
+    "Supplier acceptance, confirmation, failure and repeat-use rates",
+    "Revenue and direct service cost by membership, supplier plan, processed payment and wholesale-rate booking",
+    "No hidden fee, unapproved AI confirmation, privacy breach or unowned member request",
+  ],
 };
 
 const DE_BRAND_MILESTONES: Record<string, string[]> = {
@@ -440,6 +474,12 @@ const DE_BRAND_MILESTONES: Record<string, string[]> = {
     "Monate 3–6: nützliche Betriebstests in Abos umwandeln und tägliche Angebotsdichte, Abverkauf, wiederholte Kundennutzung und zurückgewonnene Einnahmen je Betrieb verbessern.",
     "Monate 7–12: nahe Gebiete nur öffnen, wenn genügend zahlende Betriebe und aktive Kunden einen verlässlichen täglichen Marktplatz ermöglichen.",
   ],
+  auvaneone: [
+    "Vor dem Start: Mitglieder- und Anbieterbedingungen, Datenschutz, Zahlungswege, Concierge-Servicelevel und das erste geprüfte Anbieternetz in jeder Startstadt freigeben.",
+    "Monate 1–2: Gründungsmitglieder und unabhängige Concierges einrichten, kontrollierte echte Wünsche bearbeiten und Reaktionszeit, Bestätigungsquote, Anbieterleistung, Mitgliederzufriedenheit und Rohmarge je Wunschtyp messen.",
+    "Monate 3–6: gehaltene Mitglieder und Anbieter in bezahlte Pläne umwandeln, schwache Anbieterkategorien verstärken und den Ablauf von WhatsApp zum menschlichen Concierge abends, am Wochenende und bei dringenden Wünschen beweisen.",
+    "Monate 7–12: Abdeckung in den fünf Startmärkten vertiefen und keine neue Stadt öffnen, bevor Erfüllung, Datenschutz, Zahlungsgenauigkeit, Bindung und Servicekosten die vereinbarten Schwellen erreichen.",
+  ],
 };
 
 const DE_BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
@@ -450,6 +490,7 @@ const DE_BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
   merqora: ["Zahlende Verkäufer- und Agenturabos", "Nach der Testphase gehaltene verbundene Marktplatzkonten", "Genaue Umsatz-, Gebühren-, Bestands-, Werbe- und Kontozustandsdaten", "Erledigte Verkäufermaßnahmen und messbar gesparte Verwaltungszeit", "Keine Käufergebühr, Umsatzgarantie oder ungeprüfte Änderung am Marktplatzkonto"],
   merqano: ["Zahlende Website-Abos von Geschäftskunden", "Aktive E-Commerce-Websites und nach der Testphase gehaltene Geschäftskunden", "Zeit und Supportkosten für jede weitere Kundenwebsite", "Erfolgreiche Kassenabschlüsse, Bestellungen und Zahlungen mit genauen Kundenberichten", "Kein Datenzugriff zwischen Kunden-Websites und keine Merqano-Gebühr für Käufer"],
   nimah: ["Zahlende Lebensmittelbetriebsabos nach der Testphase", "Tägliche Live-Überschussangebote und erfolgreiche Abholungen je Startgebiet", "Abverkauf, wiederkehrende Kunden und zurückgewonnene Einnahmen der teilnehmenden Betriebe", "Niedrige Quoten bei Nichterscheinen, Erstattungen, Beschwerden und Sicherheitsvorfällen", "Kunden zahlen keine Ni'mah-Plattformgebühr und Betriebe behalten ihre Einnahmen aus Überschussverkäufen"],
+  auvaneone: ["Zahlende und gehaltene Mitglieder- und Anbieterkonten", "Zeit bis zur ersten menschlichen Antwort, passenden Optionen und bestätigten Organisation", "Abgeschlossene Wünsche mit mehreren Anbietern und Mitgliederzufriedenheit", "Annahme-, Bestätigungs-, Ausfall- und Wiederverwendungsquote der Anbieter", "Einnahmen und direkte Servicekosten nach Mitgliedschaft, Anbieterplan, verarbeiteter Zahlung und Großhandelsbuchung", "Keine versteckte Gebühr, ungeprüfte KI-Bestätigung, Datenschutzverletzung oder unbeaufsichtigte Mitgliederanfrage"],
 };
 
 const DE_PROBLEMS: Record<SectorId, string> = {
@@ -595,7 +636,9 @@ export function plainBusinessPlan(
     stage: "Defined product",
     summary: brandPlainEnglish(brand),
     customer: brand.payerModel
-      ? `Paying side: ${brand.payerModel.payer}. Free side: ${brand.payerModel.freeSide}.`
+      ? brand.payerModel.side === "hybrid"
+        ? `Paying groups: ${brand.payerModel.payer}. Transparency rule: ${brand.payerModel.freeSide}.`
+        : `Paying side: ${brand.payerModel.payer}. Free side: ${brand.payerModel.freeSide}.`
       : simplifyInvestorLanguage(brand.audience),
     marketOpportunity: simplifyInvestorLanguage(brand.market),
     problem: affiliateStore
@@ -613,6 +656,8 @@ export function plainBusinessPlan(
       ? "Publish genuinely useful buying guides for high-intent questions, earn search and social traffic, build an email audience and send shoppers only to approved retailers through clearly disclosed tracked links."
       : venueFundedSport
         ? "Build each launch area postcode by postcode. Add factual venue information from lawful public sources, clearly label unclaimed profiles, and invite operators to claim, correct and verify them. Bring players in free through clubs, leagues, schools, employers and community groups. Demonstrate to venues that live availability, confirmations, waitlists and off-peak promotion increase filled hours and reduce administration, then convert the venue after its 60-day trial."
+        : brand.payerModel?.side === "hybrid"
+          ? (BRAND_SALES_PLANS[brand.id] ?? SALES_PLANS[sector])
         : brand.payerModel
           ? `${BRAND_SALES_PLANS[brand.id] ?? SALES_PLANS[sector]} Commercial rule: the sales team targets only ${brand.payerModel.payer}. The other side remains free, helping the paying customer receive more value without creating a second charging barrier.`
           : SALES_PLANS[sector],
@@ -697,6 +742,8 @@ function plainGermanBusinessPlan(
   const venueFundedSport = brand.id === "athlyvo";
   const volume = brand.payerModel?.side === "consumer"
     ? "zahlende Nutzerkonten"
+    : brand.payerModel?.side === "hybrid"
+      ? "zahlende Mitglieder- und Anbieterkonten"
     : affiliateStore
       ? "bestätigte vermittelte Bestellungen"
       : venueFundedSport
@@ -716,6 +763,8 @@ function plainGermanBusinessPlan(
               ? "Unternehmen und Agenturen, die eine professionelle eigene E-Commerce-Website benötigen"
               : brand.id === "nimah"
                 ? "Restaurants, Cafés, Bäckereien, Hotels, Supermärkte, Caterer und andere Lebensmittelbetriebe"
+                : brand.id === "auvaneone"
+                  ? "Auvane-One-Mitglieder und geprüfte Anbieter für Gastgewerbe, Reisen, Lifestyle und Erlebnisse"
           : brand.payerModel?.side === "consumer"
             ? "die Endnutzer"
             : affiliateStore
@@ -741,6 +790,8 @@ function plainGermanBusinessPlan(
               ? "Käufer nutzen die Website des jeweiligen Geschäftskunden ohne Merqano-Plattformgebühr."
               : brand.id === "nimah"
                 ? "Kunden zahlen nur den angezeigten reduzierten Lebensmittelpreis an den Betrieb und keine Ni'mah-Mitglieds- oder Plattformgebühr."
+                : brand.id === "auvaneone"
+                  ? "Mitglieder- und Anbieterleistungen werden getrennt und transparent berechnet; direkte Zahlungen an Anbieter tragen keine Auvane-One-Provision."
           : brand.payerModel?.side === "consumer"
             ? "Geschäftspartner zahlen keine zweite Plattformgebühr."
             : "Die Nutzerseite bleibt kostenlos und wird nicht zusätzlich von der Plattform belastet.";
@@ -750,7 +801,9 @@ function plainGermanBusinessPlan(
     businessType: DE_SECTOR_LABELS[sector],
     stage: "Defined product",
     summary: brandPlainLanguage(brand, "de"),
-    customer: `Zahlender Kunde ist ${payer}. ${freeSide}`,
+    customer: brand.payerModel?.side === "hybrid"
+      ? `Zahlende Gruppen sind ${payer}. Transparenzregel: ${freeSide}`
+      : `Zahlender Kunde ist ${payer}. ${freeSide}`,
     marketOpportunity: `Die Geschäftsleitung sieht im Bereich ${DE_SECTOR_LABELS[sector]} in ${DE_COUNTRY_LABELS[country]} einen großen, aber noch zu bestätigenden Markt. Die Planung wird erst durch echte Kundengespräche, Testabschlüsse und belastbare lokale Quellen freigegeben.`,
     problem: DE_BRAND_PROBLEMS[brand.id] ?? DE_PROBLEMS[sector],
     solution: `${brandPlainLanguage(brand, "de")} Die erste Version deckt nur den kleinsten vollständigen Kundenweg ab. Weitere Funktionen kommen erst hinzu, wenn echte Nutzung den Bedarf zeigt.`,
@@ -762,11 +815,15 @@ function plainGermanBusinessPlan(
           ? `Nur der steuerpflichtige Kunde zahlt TaxCenda. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je abgeschlossenem unterstützten Steuerfall. IRS, Steuerbehörden und Fachpartner werden nicht belastet; TaxCenda erhält keinen Anteil an Erstattung oder Steuerersparnis.`
         : brand.id === "nimah"
           ? `Nur teilnehmende Lebensmittelbetriebe zahlen Ni'mah. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je zahlendem Betrieb und Monat. Kunden zahlen nur den angezeigten reduzierten Lebensmittelpreis an den Betrieb; Ni'mah verlangt keine Kundenplattformgebühr und erhält keinen prozentualen Anteil am Überschussverkauf.`
+        : brand.id === "auvaneone"
+          ? `Auvane One ist hybrid finanziert: Mitglieder zahlen für Concierge-Zugang und geprüfte Anbieter für Plattformzugang und Geschäftswerkzeuge. Direkte Zahlungen an Anbieter tragen keine Auvane-One-Provision. Verarbeitet Auvane One die Zahlung, trägt der Anbieter die Kartenkosten und das Mitglied eine offengelegte Servicegebühr von 0,3 %. Bei vereinbarten Großhandelspreisen kann Auvane One die offengelegte Differenz zum Mitgliederpreis behalten. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je zahlendem Mitglieder- oder Anbieterkonto und Monat.`
         : brand.id === "kinderstars"
           ? `Registrierte Tagesmütter und Tagesväter zahlen ein monatliches Abo. Eltern nutzen die Suche und Organisation kostenlos. Das Betreuungsgeld zahlen die Eltern oder eine berechtigte staatliche Stelle direkt an die Betreuungsperson.`
           : `Nur ${payer} zahlt. Die Planung rechnet nach zwei kostenlosen Testmonaten mit durchschnittlich ${currency}${arpu} je zahlendem Konto und Monat. ${freeSide}`,
     salesPlan: venueFundedSport
       ? "Eine Startregion lückenlos aufbauen, sachliche öffentliche Angaben zu Sportstätten aufnehmen und noch nicht übernommene Profile klar kennzeichnen. Betreiber zur Prüfung und Übernahme einladen, Spieler kostenlos über Vereine, Ligen, Schulen und Gemeinden gewinnen und dann den messbaren Nutzen für Auslastung und Verwaltung verkaufen."
+      : brand.payerModel?.side === "hybrid"
+        ? (DE_BRAND_SALES[brand.id] ?? DE_SALES[sector])
       : `${DE_BRAND_SALES[brand.id] ?? DE_SALES[sector]} Verkauft wird nur an die zahlende Seite; die andere Seite bleibt kostenlos.`,
     operations: affiliateStore
       ? "Affivon verwaltet zugelassene Händlerdaten, nachverfolgbare Links und bestätigte Provisionen. Menschen prüfen Aussagen, Vergleiche, Kennzeichnungen und veraltete Inhalte. Zahlung, Lieferung und Rückgabe bleiben beim Händler."

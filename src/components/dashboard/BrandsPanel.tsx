@@ -85,7 +85,13 @@ export function BrandsPanel() {
               </Badge>
               <Badge variant="outline" className="text-[10px]">{t(sectorLabel(sectorOf(b)))}</Badge>
               <Badge variant="outline" className="text-[10px]">
-                {t(b.payerModel?.side === "consumer" ? "User-funded" : "Business-funded")}
+                {t(
+                  b.payerModel?.side === "consumer"
+                    ? "User-funded"
+                    : b.payerModel?.side === "hybrid"
+                      ? "Hybrid-funded"
+                      : "Business-funded",
+                )}
               </Badge>
             </div>
           </div>
@@ -341,12 +347,10 @@ export function BrandsPanel() {
 }
 
 function BrandsIntro() {
-  const businessFunded = BRANDS.filter((brand) => brand.payerModel?.side === "business").length;
-  const userFunded = BRANDS.length - businessFunded;
   return (
     <PanelIntro
       title={t("Browse the portfolio")}
-      description={t(`Every brand has one paying side: ${businessFunded} are funded by businesses and ${userFunded} by end users. No marketplace charges both its users and its business side. Each card shows the relevant paying accounts and monthly revenue.`)}
+      description={t("Most brands have one paying side. Auvane One is the portfolio's hybrid-funded exception because its paid member concierge and paid supplier access are separate services. Each card shows the relevant paying accounts and monthly revenue.")}
       tips={[
         t("Open a brand to read the full case and edit its own assumptions."),
         t("Business-funded products keep the consumer, player, parent, candidate or traveller side free."),

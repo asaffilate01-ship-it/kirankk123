@@ -170,4 +170,3 @@ export const DE_UX: Record<string, string> = {
   "Why we are raising, where the money goes, the deal terms, and a calculator that shows your return live.":
     "Warum wir Kapital aufnehmen, wohin das Geld fließt, die Konditionen und ein Rechner, der Ihre Rendite live zeigt.",
 };
-

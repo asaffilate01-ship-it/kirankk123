@@ -103,6 +103,8 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
     "Erstellt und übermittelt US-Bundes- und Bundesstaaten-Steuererklärungen für Steuerpflichtige in den USA und im Ausland mit entsprechend qualifizierten US-Steuerfachleuten.",
   nimah:
     "Lässt Lebensmittelbetriebe in Saudi-Arabien und Pakistan sichere Überschüsse günstiger anbieten, damit Kunden in der Nähe sie reservieren und abholen können.",
+  auvaneone:
+    "Gibt internationalen Mitgliedern einen menschlich geführten Concierge für komplexe Lifestyle-, Reise-, Restaurant-, Veranstaltungs- und Transportwünsche per App, Web oder WhatsApp.",
   ilmvero:
     "Gibt Schulen ein System für Aufnahme, Anwesenheit, Stundenpläne, Prüfungen, Gebühren, Hausaufgaben und Elternkontakt.",
   dearnext:

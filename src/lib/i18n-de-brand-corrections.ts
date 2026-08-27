@@ -126,4 +126,155 @@ export const DE_BRAND_CORRECTIONS: Record<string, string> = {
     "Restaurants, Cafés, Bäckereien, Hotels, Supermärkte, Caterer und andere Lebensmittelbetriebe in saudischen und pakistanischen Städten sowie preisbewusste Kunden in der Nähe.",
   "Ni'mah earns subscriptions and optional business tools from participating food outlets only. Customers pay the outlet's displayed discounted food price but no separate Ni'mah platform fee, and Ni'mah does not take a percentage of each food sale.":
     "Ni'mah verdient ausschließlich an Abos und optionalen Geschäftswerkzeugen teilnehmender Lebensmittelbetriebe. Kunden zahlen den angezeigten reduzierten Lebensmittelpreis an den Betrieb, aber keine separate Ni'mah-Plattformgebühr; Ni'mah erhält keinen prozentualen Anteil an Lebensmittelverkäufen.",
+
+  "Life, exceptionally arranged.":
+    "Das Leben, außergewöhnlich arrangiert.",
+  "Auvane One is an international premium lifestyle and concierge platform. Members send a request through the app, website or WhatsApp—such as dinner and dancing in Mayfair for four people with a chauffeur—and the system turns it into a coordinated plan across verified restaurants, hotels, private clubs, chauffeurs, events and other trusted suppliers. AI organises the request and searches the approved network; a human concierge confirms the details and remains accountable for delivery.":
+    "Auvane One ist eine internationale Premium-Lifestyle- und Concierge-Plattform. Mitglieder senden einen Wunsch über App, Website oder WhatsApp – zum Beispiel Abendessen und Tanz in Mayfair für vier Personen mit Chauffeur – und das System erstellt daraus einen abgestimmten Plan mit geprüften Restaurants, Hotels, Privatclubs, Fahrdiensten, Veranstaltungen und weiteren vertrauenswürdigen Anbietern. KI strukturiert den Wunsch und durchsucht das zugelassene Netzwerk; ein menschlicher Concierge bestätigt die Einzelheiten und bleibt für die Durchführung verantwortlich.",
+  "Premium lifestyle management, luxury hospitality, travel, events and concierge services, launching through focused supplier networks in London, Paris, New York, Miami and the UAE before wider international expansion.":
+    "Premium-Lifestyle-Management, Luxushotellerie, Reisen, Veranstaltungen und Concierge-Leistungen, zunächst mit gezielten Anbieternetzen in London, Paris, New York, Miami und den VAE und danach mit weiterer internationaler Expansion.",
+  "Paying members include high-net-worth individuals, families, executives and family offices. Paying business users include approved restaurants, hotels, clubs, transport, travel, event, wellness and lifestyle suppliers. Independent concierges can use the workspace to serve their own clients and approved supplier relationships.":
+    "Zahlende Mitglieder sind vermögende Privatpersonen, Familien, Führungskräfte und Family Offices. Zahlende Geschäftsnutzer sind geprüfte Restaurants, Hotels, Clubs sowie Anbieter für Transport, Reisen, Veranstaltungen, Wellness und Lifestyle. Unabhängige Concierges nutzen den Arbeitsbereich für ihre eigenen Kunden und geprüften Anbieterbeziehungen.",
+  "Affluent clients still organise complex lifestyle requests through separate calls, messages, personal contacts and booking sites, with no single person responsible for the whole outcome. Excellent independent concierges often have valuable client and supplier relationships but lack secure technology, while premium suppliers want qualified customers without losing control of pricing or service. Auvane One joins those relationships in one accountable system.":
+    "Vermögende Kunden organisieren komplexe Lifestyle-Wünsche weiterhin über getrennte Anrufe, Nachrichten, persönliche Kontakte und Buchungsseiten, ohne eine einzige verantwortliche Person für das Gesamtergebnis. Erfahrene unabhängige Concierges besitzen wertvolle Kunden- und Anbieterbeziehungen, aber häufig keine sichere Technik. Premium-Anbieter wünschen qualifizierte Kunden, ohne die Kontrolle über Preis und Leistung zu verlieren. Auvane One verbindet diese Beziehungen in einem verantwortlichen System.",
+  "One request, one plan and one accountable concierge. The member can type, speak or send a WhatsApp message in normal language. Auvane One separates the request into places, timing, transport, preferences, guest details and budget, searches approved suppliers, prepares suitable options and lets the human concierge confirm availability and coordinate every handoff. Members see one itinerary and message thread; suppliers receive complete, qualified requests; independent concierges gain professional technology without giving up their own clients.":
+    "Ein Wunsch, ein Plan und ein verantwortlicher Concierge. Das Mitglied kann in normaler Sprache schreiben, sprechen oder eine WhatsApp-Nachricht senden. Auvane One gliedert den Wunsch in Orte, Zeiten, Transport, Vorlieben, Gästedaten und Budget, durchsucht geprüfte Anbieter, bereitet passende Optionen vor und lässt den menschlichen Concierge Verfügbarkeit bestätigen und jede Übergabe koordinieren. Mitglieder sehen einen Reise- oder Tagesplan und einen Nachrichtenverlauf; Anbieter erhalten vollständige qualifizierte Anfragen; unabhängige Concierges erhalten professionelle Technik, ohne ihre eigenen Kunden abzugeben.",
+  "Premium lifestyle requests are currently handled through personal assistants, independent concierges, travel advisers, members' clubs, hotel desks, private messaging and separate booking sites. The service depends heavily on personal contacts, and the member often has no single live plan or accountable owner across suppliers.":
+    "Premium-Lifestyle-Wünsche werden heute über persönliche Assistenzen, unabhängige Concierges, Reiseberater, Mitgliederclubs, Hotel-Concierges, private Nachrichten und getrennte Buchungsseiten bearbeitet. Die Leistung hängt stark von persönlichen Kontakten ab, und dem Mitglied fehlt häufig ein gemeinsamer Live-Plan mit einer verantwortlichen Person über alle Anbieter hinweg.",
+  "High-net-worth individuals, families, executives and family offices, together with experienced independent concierges and premium suppliers in London, Paris, New York, Miami and the UAE.":
+    "Vermögende Privatpersonen, Familien, Führungskräfte und Family Offices sowie erfahrene unabhängige Concierges und Premium-Anbieter in London, Paris, New York, Miami und den VAE.",
+  "Auvane One earns member subscriptions, supplier access-plan income, agreed wholesale-rate margin and disclosed payment-service income. Direct supplier payments carry no Auvane One commission. Where Auvane One processes payment, the supplier covers the card-processing cost and the member pays a disclosed 0.3% service fee.":
+    "Auvane One erzielt Einnahmen aus Mitgliederabos, Anbieterzugangsplänen, vereinbarten Margen auf Großhandelspreise und offengelegten Zahlungsservicegebühren. Direkte Zahlungen an Anbieter tragen keine Auvane-One-Provision. Verarbeitet Auvane One die Zahlung, trägt der Anbieter die Kartenkosten und das Mitglied eine offengelegte Servicegebühr von 0,3 %.",
+  "Member requests through mobile apps, web, voice and WhatsApp":
+    "Mitgliederwünsche über mobile Apps, Web, Sprache und WhatsApp",
+  "AI request understanding that separates venue, travel, timing, guest, preference and budget needs":
+    "KI-gestütztes Verständnis, das Ort, Reise, Zeit, Gäste, Vorlieben und Budget getrennt erfasst",
+  "Human concierge approval and responsibility before any recommendation or booking is confirmed":
+    "Prüfung und Verantwortung durch einen menschlichen Concierge vor jeder bestätigten Empfehlung oder Buchung",
+  "One live itinerary for dining, transport, accommodation, events and supporting arrangements":
+    "Ein gemeinsamer Live-Plan für Restaurants, Transport, Unterkunft, Veranstaltungen und ergänzende Organisation",
+  "Curated supplier network with identity, insurance, licence and service-quality checks where relevant":
+    "Ausgewähltes Anbieternetz mit Prüfung von Identität, Versicherung, Zulassung und Servicequalität, soweit erforderlich",
+  "Restaurants, boutique hotels, private members' clubs, gyms, sports clubs and wellness providers":
+    "Restaurants, Boutique-Hotels, private Mitgliederclubs, Fitnessstudios, Sportclubs und Wellnessanbieter",
+  "Chauffeurs, limousines, aviation, yachts, villas, security, personal shopping and specialist travel":
+    "Chauffeure, Limousinen, Luftfahrt, Yachten, Villen, Sicherheit, Personal Shopping und Spezialreisen",
+  "Access requests for major cultural, social and sporting occasions subject to lawful availability":
+    "Zugangswünsche für bedeutende kulturelle, gesellschaftliche und sportliche Anlässe vorbehaltlich rechtmäßiger Verfügbarkeit",
+  "Member preferences, dietary needs, accessibility, privacy and favourite suppliers stored with consent":
+    "Mit Einwilligung gespeicherte Vorlieben, Ernährungsbedürfnisse, Barrierefreiheit, Privatsphäre und bevorzugte Anbieter",
+  "Supplier portal for profile, availability, net or retail rates, requests, confirmations and service notes":
+    "Anbieterportal für Profil, Verfügbarkeit, Netto- oder Verkaufspreise, Anfragen, Bestätigungen und Servicenotizen",
+  "Independent-concierge workspace for personal clients, suppliers, tasks, itineraries and billing records":
+    "Arbeitsbereich für unabhängige Concierges mit eigenen Kunden, Anbietern, Aufgaben, Plänen und Abrechnungsunterlagen",
+  "Team assignment, service deadlines, escalation and complete concierge audit trail":
+    "Teamzuweisung, Servicefristen, Eskalation und vollständiges Concierge-Prüfprotokoll",
+  "Direct-to-supplier payment links where the supplier remains merchant of record":
+    "Direkte Zahlungslinks zum Anbieter, bei denen der Anbieter Vertragspartner der Zahlung bleibt",
+  "Regulated payment-provider checkout and supplier payout where Auvane One processes a transaction":
+    "Kasse und Anbieterauszahlung über regulierte Zahlungsanbieter, wenn Auvane One eine Transaktion verarbeitet",
+  "Clear separation of supplier price, card-processing cost and any disclosed Auvane One fee or wholesale margin":
+    "Klare Trennung von Anbieterpreis, Kartenkosten und jeder offengelegten Auvane-One-Gebühr oder Großhandelsmarge",
+  "Multi-currency, time-zone and language-aware requests for international members":
+    "Währungs-, Zeitzonen- und sprachbewusste Wünsche für internationale Mitglieder",
+  "Secure documents, identity details and limited-access high-privacy member profiles":
+    "Sichere Dokumente, Identitätsangaben und besonders geschützte Mitgliederprofile mit begrenztem Zugriff",
+  "Post-service confirmation, private feedback, supplier-quality monitoring and incident escalation":
+    "Bestätigung nach der Leistung, privates Feedback, Überwachung der Anbieterqualität und Eskalation von Vorfällen",
+  "Combines efficient AI request handling with accountable human concierge judgement":
+    "Verbindet effiziente KI-Bearbeitung mit verantwortlicher menschlicher Concierge-Beurteilung",
+  "WhatsApp fits how premium members already prefer to make requests":
+    "WhatsApp entspricht der bevorzugten Anfrageform vieler Premium-Mitglieder",
+  "Suppliers receive complete, qualified requests rather than anonymous leads":
+    "Anbieter erhalten vollständige qualifizierte Anfragen statt anonymer Kontakte",
+  "Independent concierges can professionalise their service without losing their client relationships":
+    "Unabhängige Concierges professionalisieren ihren Service, ohne ihre Kundenbeziehungen zu verlieren",
+  "A city-by-city curated network can build service quality before wider expansion":
+    "Ein Stadt für Stadt ausgewähltes Netzwerk baut Servicequalität vor einer breiteren Expansion auf",
+  "Revenue can come from memberships, supplier tools and agreed wholesale-rate margin without hiding the payment economics":
+    "Einnahmen können aus Mitgliedschaften, Anbieterwerkzeugen und vereinbarten Großhandelspreismargen entstehen, ohne die Zahlungslogik zu verbergen",
+  "Requests, WhatsApp-linked conversations, options, itineraries, approvals and support for members.":
+    "Wünsche, mit WhatsApp verbundene Gespräche, Optionen, Pläne, Freigaben und Support für Mitglieder.",
+  "The same premium member journey on Android.":
+    "Dasselbe Premium-Mitgliedererlebnis auf Android.",
+  "Secure member area for requests, travel documents, plans, preferences and payments.":
+    "Sicherer Mitgliederbereich für Wünsche, Reisedokumente, Pläne, Vorlieben und Zahlungen.",
+  "AI-assisted request triage, sourcing, supplier coordination, itineraries, deadlines and human approval.":
+    "KI-gestützte Anfrageprüfung, Beschaffung, Anbieterkoordination, Pläne, Fristen und menschliche Freigabe.",
+  "Approved suppliers manage profiles, availability, rates, requests, confirmations and service records.":
+    "Geprüfte Anbieter verwalten Profile, Verfügbarkeit, Preise, Anfragen, Bestätigungen und Servicenachweise.",
+  "Freelance concierges manage their own clients and suppliers using Auvane One technology.":
+    "Freie Concierges verwalten ihre eigenen Kunden und Anbieter mit der Technik von Auvane One.",
+  "Membership, supplier approval, privacy, payments, quality, incidents and city operations.":
+    "Mitgliedschaften, Anbieterprüfung, Datenschutz, Zahlungen, Qualität, Vorfälle und Stadtbetrieb.",
+  "Members pay a monthly or annual Auvane One concierge membership":
+    "Mitglieder zahlen eine monatliche oder jährliche Auvane-One-Concierge-Mitgliedschaft",
+  "Approved suppliers pay for access, profile, availability, booking and relationship-management tools":
+    "Geprüfte Anbieter zahlen für Zugang, Profil, Verfügbarkeit, Buchungs- und Beziehungswerkzeuge",
+  "Direct supplier payments carry no Auvane One commission":
+    "Direkte Zahlungen an Anbieter tragen keine Auvane-One-Provision",
+  "If Auvane One processes a payment, the supplier pays the card-processing cost and the member pays a disclosed 0.3% service fee":
+    "Verarbeitet Auvane One eine Zahlung, trägt der Anbieter die Kartenkosten und das Mitglied eine offengelegte Servicegebühr von 0,3 %",
+  "Where a supplier provides an agreed wholesale rate, Auvane One may sell at a clear member price and keep the difference rather than charge commission":
+    "Stellt ein Anbieter einen vereinbarten Großhandelspreis bereit, kann Auvane One zu einem klaren Mitgliederpreis verkaufen und die Differenz behalten, statt Provision zu verlangen",
+  "Member subscriptions for concierge access and service levels":
+    "Mitgliederabos für Concierge-Zugang und Servicelevel",
+  "Supplier access plans and optional business tools":
+    "Anbieterzugangspläne und optionale Geschäftswerkzeuge",
+  "Disclosed margin between an agreed wholesale supplier rate and the member price":
+    "Offengelegte Marge zwischen vereinbartem Großhandelspreis des Anbieters und Mitgliederpreis",
+  "Disclosed 0.3% member service fee only when Auvane One processes the payment; the supplier covers the card-processing cost":
+    "Offengelegte Mitglieder-Servicegebühr von 0,3 % nur bei Zahlungsabwicklung durch Auvane One; der Anbieter trägt die Kartenkosten",
+  "No Auvane One commission when the member pays the supplier directly":
+    "Keine Auvane-One-Provision, wenn das Mitglied den Anbieter direkt bezahlt",
+  "A supplier failure damages trust with a high-value member":
+    "Ein Anbieterausfall beschädigt das Vertrauen eines wertvollen Mitglieds",
+  "Approve suppliers carefully, confirm every critical booking, maintain backup options, monitor service history and provide immediate human escalation.":
+    "Anbieter sorgfältig prüfen, jede kritische Buchung bestätigen, Ersatzoptionen bereithalten, Serviceverlauf überwachen und sofortige menschliche Eskalation anbieten.",
+  "The promise becomes broader than the supplier network can fulfil":
+    "Das Leistungsversprechen wird breiter, als das Anbieternetz erfüllen kann",
+  "Launch city by city, state availability honestly, use service-level boundaries and accept a request only when a named concierge can own it.":
+    "Stadt für Stadt starten, Verfügbarkeit ehrlich angeben, klare Servicegrenzen nutzen und Wünsche nur annehmen, wenn ein benannter Concierge sie verantwortet.",
+  "Sensitive member information is exposed or used too widely":
+    "Sensible Mitgliederdaten werden offengelegt oder zu breit verwendet",
+  "Collect only necessary data, use role-based and time-limited access, encrypt sensitive records, record every access and provide private or off-platform handling for exceptional details.":
+    "Nur notwendige Daten erfassen, rollenbasierten und zeitlich begrenzten Zugriff nutzen, sensible Unterlagen verschlüsseln, jeden Zugriff protokollieren und außergewöhnliche Details privat oder außerhalb der Plattform bearbeiten.",
+  "Payment handling creates regulatory, refund or chargeback exposure":
+    "Zahlungsabwicklung erzeugt Risiken bei Regulierung, Erstattung oder Rückbelastung",
+  "Use regulated payment providers, keep supplier and Auvane One charges separate, avoid holding funds outside the approved flow and document refund responsibility before payment.":
+    "Regulierte Zahlungsanbieter nutzen, Anbieter- und Auvane-One-Beträge trennen, Gelder nicht außerhalb des freigegebenen Ablaufs halten und Erstattungsverantwortung vor der Zahlung dokumentieren.",
+  "AI suggests unavailable, unsafe or unsuitable options":
+    "KI schlägt nicht verfügbare, unsichere oder ungeeignete Optionen vor",
+  "Treat AI as preparation only; a human concierge checks suitability, live availability, price and supplier terms before anything reaches the member as confirmed.":
+    "KI nur zur Vorbereitung nutzen; ein menschlicher Concierge prüft Eignung, Live-Verfügbarkeit, Preis und Anbieterbedingungen, bevor etwas dem Mitglied als bestätigt gezeigt wird.",
+  "Private member": "Privatmitglied",
+  "Sends one natural-language request and receives coordinated, human-confirmed options and an itinerary.":
+    "Sendet einen Wunsch in normaler Sprache und erhält abgestimmte, menschlich bestätigte Optionen und einen Plan.",
+  "Family office or executive assistant": "Family Office oder Executive Assistant",
+  "Coordinates authorised requests, travellers, preferences, documents and approvals for several people.":
+    "Koordiniert autorisierte Wünsche, Reisende, Vorlieben, Dokumente und Freigaben für mehrere Personen.",
+  "Human concierge": "Menschlicher Concierge",
+  "Reviews AI-prepared requirements, sources options and remains accountable for every confirmed arrangement.":
+    "Prüft KI-vorbereitete Anforderungen, beschafft Optionen und bleibt für jede bestätigte Organisation verantwortlich.",
+  "Independent concierge": "Unabhängiger Concierge",
+  "Brings existing clients and suppliers and gains secure workflows, communication and itinerary tools.":
+    "Bringt bestehende Kunden und Anbieter mit und erhält sichere Abläufe, Kommunikation und Planungswerkzeuge.",
+  "Approved supplier": "Geprüfter Anbieter",
+  "Receives complete qualified requests, controls availability and rates and confirms what it can deliver.":
+    "Erhält vollständige qualifizierte Anfragen, kontrolliert Verfügbarkeit und Preise und bestätigt die lieferbare Leistung.",
+  "City operations manager": "Städtische Betriebsleitung",
+  "Builds local supplier depth, monitors service quality and resolves urgent exceptions.":
+    "Baut lokale Anbieterdichte auf, überwacht Servicequalität und löst dringende Ausnahmen.",
+  "Traditional premium concierge firms": "Traditionelle Premium-Concierge-Unternehmen",
+  "Established relationships and experienced human teams": "Etablierte Beziehungen und erfahrene menschliche Teams",
+  "Auvane One gives every concierge a shared live request record, AI-assisted sourcing, supplier tools and WhatsApp continuity without removing human accountability.":
+    "Auvane One gibt jedem Concierge eine gemeinsame Live-Anfrageakte, KI-gestützte Beschaffung, Anbieterwerkzeuge und durchgehende WhatsApp-Kommunikation, ohne die menschliche Verantwortung zu entfernen.",
+  "Luxury travel and lifestyle agencies": "Luxusreise- und Lifestyle-Agenturen",
+  "Strong specialist knowledge and negotiated supplier access": "Starkes Fachwissen und ausgehandelte Anbieterzugänge",
+  "Auvane One coordinates travel with dining, transport, clubs, events, wellness and everyday lifestyle requests through one member relationship.":
+    "Auvane One koordiniert Reisen, Restaurants, Transport, Clubs, Veranstaltungen, Wellness und alltägliche Lifestyle-Wünsche über eine Mitgliederbeziehung.",
+  "General booking and messaging apps": "Allgemeine Buchungs- und Nachrichten-Apps",
+  "Convenient self-service and large inventories": "Bequeme Selbstbedienung und große Angebote",
+  "Auvane One handles multi-part requests, verifies the supplier network and assigns a human concierge responsible for the complete outcome.":
+    "Auvane One bearbeitet mehrteilige Wünsche, prüft das Anbieternetz und weist einen menschlichen Concierge zu, der für das Gesamtergebnis verantwortlich ist.",
 };
