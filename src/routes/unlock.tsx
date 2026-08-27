@@ -35,6 +35,7 @@ function Unlock() {
   const unlock = useServerFn(unlockSite);
   const [error, setError] = useState<string | undefined>(searchError);
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
