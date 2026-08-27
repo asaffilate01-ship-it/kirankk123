@@ -60,7 +60,12 @@ function PublicPortfolio() {
       <header className="safe-top sticky top-0 z-30 border-b bg-card/90 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 sm:py-3">
           <Link to="/portfolio" className="flex min-w-0 items-center gap-3"><BrandLogo className="h-10 shrink-0 sm:h-14" /><span className="hidden text-sm font-semibold sm:inline">iTechLounge</span></Link>
-          <LanguageToggle />
+          <div className="flex shrink-0 items-center gap-2">
+            <Button asChild variant="outline" size="sm" className="hidden h-9 md:inline-flex">
+              <Link to="/marketing/unlock" search={{ error: undefined }}><Megaphone className="mr-1 h-3.5 w-3.5" />{t("Marketing command centre")}</Link>
+            </Button>
+            <LanguageToggle />
+          </div>
         </div>
         <div className="mx-auto max-w-7xl px-4 pb-2 md:hidden">
           <div className="relative">
@@ -79,7 +84,7 @@ function PublicPortfolio() {
           {brands.length ? <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{brands.map((brand) => <PublicBrandCard key={brand.id} brand={brand} lang={lang} />)}</div> : <Card className="p-10 text-center text-sm text-muted-foreground">{t("No brands match these filters.")}</Card>}
         </section>
 
-        <section className="border-t bg-muted/20"><div className="mx-auto max-w-7xl px-4 py-10"><div className="flex gap-3"><LockKeyhole className="mt-0.5 h-5 w-5 text-primary" /><div><h2 className="text-lg font-semibold">{t("Private access")}</h2><p className="mt-1 max-w-3xl text-sm text-muted-foreground">{t("This public portfolio explains products only. Marketing details are available to authorised users.")}</p><div className="mt-4 grid gap-2 sm:flex sm:flex-wrap"><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/marketing/unlock" search={{ error: undefined }}>{t("Marketing command centre")}</Link></Button></div></div></div></div></section>
+        <section className="border-t bg-muted/20 md:hidden"><div className="mx-auto max-w-7xl px-4 py-10"><div className="flex gap-3"><LockKeyhole className="mt-0.5 h-5 w-5 text-primary" /><div><h2 className="text-lg font-semibold">{t("Private access")}</h2><p className="mt-1 max-w-3xl text-sm text-muted-foreground">{t("This public portfolio explains products only. Marketing details are available to authorised users.")}</p><div className="mt-4 grid gap-2 sm:flex sm:flex-wrap"><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/marketing/unlock" search={{ error: undefined }}>{t("Marketing command centre")}</Link></Button></div></div></div></div></section>
       </main>
       <div className="pb-tabbar md:pb-0">
         <SiteFooter />
