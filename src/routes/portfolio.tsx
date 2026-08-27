@@ -79,7 +79,7 @@ function PublicPortfolio() {
           {brands.length ? <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{brands.map((brand) => <PublicBrandCard key={brand.id} brand={brand} lang={lang} />)}</div> : <Card className="p-10 text-center text-sm text-muted-foreground">{t("No brands match these filters.")}</Card>}
         </section>
 
-        <section className="border-t bg-muted/20"><div className="mx-auto max-w-7xl px-4 py-10"><div className="flex gap-3"><LockKeyhole className="mt-0.5 h-5 w-5 text-primary" /><div><h2 className="text-lg font-semibold">{t("Private access")}</h2><p className="mt-1 max-w-3xl text-sm text-muted-foreground">{t("This public portfolio explains products only. Financial and marketing details are available to authorised users.")}</p><div className="mt-4 grid gap-2 sm:flex sm:flex-wrap"><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/unlock" search={{ error: undefined }}>{t("Investor dashboard")}</Link></Button><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/marketing/unlock" search={{ error: undefined }}>{t("Marketing command centre")}</Link></Button></div></div></div></div></section>
+        <section className="border-t bg-muted/20"><div className="mx-auto max-w-7xl px-4 py-10"><div className="flex gap-3"><LockKeyhole className="mt-0.5 h-5 w-5 text-primary" /><div><h2 className="text-lg font-semibold">{t("Private access")}</h2><p className="mt-1 max-w-3xl text-sm text-muted-foreground">{t("This public portfolio explains products only. Marketing details are available to authorised users.")}</p><div className="mt-4 grid gap-2 sm:flex sm:flex-wrap"><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/marketing/unlock" search={{ error: undefined }}>{t("Marketing command centre")}</Link></Button></div></div></div></div></section>
       </main>
       <div className="pb-tabbar md:pb-0">
         <SiteFooter />
@@ -88,7 +88,6 @@ function PublicPortfolio() {
         items={[
           { label: t("Brands"), icon: Boxes, active: true, onClick: () => document.getElementById("brands")?.scrollIntoView({ behavior: "smooth", block: "start" }) },
           { label: t("Top"), icon: ArrowUp, onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
-          { label: t("Investor"), icon: LockKeyhole, to: "/unlock", search: { error: undefined } },
           { label: t("Marketing"), icon: Megaphone, to: "/marketing/unlock", search: { error: undefined } },
         ]}
       />
