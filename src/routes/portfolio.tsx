@@ -38,7 +38,19 @@ function PublicPortfolio() {
     (country === "all" || countryOf(brand) === country) &&
     (sector === "all" || sectorOf(brand) === sector) &&
     (!q || [brand.name, brand.tagline, brand.audience, brandPlainLanguage(brand, lang), ...brand.features].some((value) => value.toLowerCase().includes(q)))
-  ), [country, sector, q, lang]);
+  ).sort((a, b) => {
+    const rank = (brand: Brand) => {
+      if (brand.family === "TRAVENEXA") return 4;
+      if (brand.group) return 0;
+      const c = countryOf(brand);
+      return c === "UK" ? 1 : c === "DE" ? 2 : 3;
+    };
+    const ra = rank(a), rb = rank(b);
+    if (ra !== rb) return ra - rb;
+    if (ra === 0 && a.group !== b.group) return (a.group ?? "").localeCompare(b.group ?? "");
+    return a.name.localeCompare(b.name);
+  }), [country, sector, q, lang]);
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
