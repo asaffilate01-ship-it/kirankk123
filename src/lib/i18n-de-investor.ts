@@ -20,6 +20,9 @@ export const DE_INVESTOR: Record<string, string> = {
   "View business plan": "Geschäftsplan ansehen",
   "User-funded": "Von Nutzern finanziert",
   "Business-funded": "Von Unternehmen finanziert",
+  "Hybrid-funded": "Von Mitgliedern und Anbietern finanziert",
+  "Most brands have one paying side. Auvane One is the portfolio's hybrid-funded exception because its paid member concierge and paid supplier access are separate services. Each card shows the relevant paying accounts and monthly revenue.":
+    "Die meisten Marken haben nur eine zahlende Seite. Auvane One ist die hybride Ausnahme im Portfolio, weil die bezahlte Mitglieder-Concierge-Leistung und der bezahlte Anbieterzugang getrennte Leistungen sind. Jede Karte zeigt die passenden zahlenden Konten und monatlichen Einnahmen.",
   "Search brand or tagline…": "Marke oder Kurzbeschreibung suchen…",
   "Search brand": "Marke suchen",
   "Company entities": "Gesellschaften",
@@ -31,6 +34,9 @@ export const DE_INVESTOR: Record<string, string> = {
   "Paying clubs and leagues": "Zahlende Vereine und Ligen",
   "Paying childminder accounts": "Zahlende Betreuungspersonen",
   "Paying business accounts": "Zahlende Geschäftskonten",
+  "Paying member and supplier accounts": "Zahlende Mitglieder- und Anbieterkonten",
+  "Average platform revenue per paying member or supplier / month": "Durchschnittlicher Plattformumsatz je zahlendem Mitglied oder Anbieter / Monat",
+  "Paying member and supplier accounts cancelling each month": "Monatlich kündigende Mitglieder- und Anbieterkonten",
   "Paying customer accounts": "Zahlende Kundenkonten",
   "Paying customers": "Zahlende Kunden",
   "Confirmed affiliate orders": "Bestätigte vermittelte Bestellungen",
@@ -302,6 +308,9 @@ export const DE_INVESTOR: Record<string, string> = {
   "Multiple signed": "Mehrere unterzeichnet",
   "Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.":
     "Mehrere Restaurants haben Haccora-Testphasen ab dem 1. September 2026 unterzeichnet, dazu kommt eine weitere Pipeline interessierter Betriebe noch vor bezahlter Werbung.",
+  "Strong pipeline": "Starke Pipeline",
+  "A growing Haccora pipeline built before any paid advertising, alongside trial-ready customers across other brands.":
+    "Eine wachsende Haccora-Pipeline, aufgebaut noch vor bezahlter Werbung, dazu testbereite Kunden in weiteren Marken.",
   "Dishbee is live and trading with multiple restaurant sites, and more go live during September 2026.":
     "Dishbee ist live und mit mehreren Restaurantstandorten im Betrieb, weitere gehen im September 2026 live.",
   "Keep the live sites performing, bring the next wave online and use real retention and support data to guide growth.":

@@ -108,6 +108,8 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
     "Prepares and files U.S. federal and state tax returns for taxpayer clients in America and abroad, using appropriately credentialed U.S. tax professionals.",
   nimah:
     "Lets food businesses in Saudi Arabia and Pakistan sell safe surplus food at reduced prices for nearby customers to reserve and collect.",
+  auvaneone:
+    "Gives international members one human-led concierge for complex lifestyle, travel, dining, event and transport requests made through the app, web or WhatsApp.",
   ilmvero:
     "Gives schools one system for admissions, attendance, timetables, exams, fees, homework and parent communication.",
   dearnext:

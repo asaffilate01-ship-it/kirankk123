@@ -81,7 +81,7 @@ const SECTOR_MAP: Record<string, SectorId> = {
   rangvaya: "travel", oceavela: "travel", savansea: "travel", nilevella: "travel",
   adrilume: "travel", marelyra: "travel", iberaviva: "travel", euralume: "travel",
   uzvoya: "travel", dubaitrips: "travel", marocways: "travel",
-  niyyahnoor: "travel", viazeno: "travel",
+  niyyahnoor: "travel", viazeno: "travel", auvaneone: "travel",
   // Property
   immoviq: "property", gabley: "property", gableyretrofit: "property", hmoflow: "property", sharedbricks: "property",
   premisora: "property", dearnext: "property",

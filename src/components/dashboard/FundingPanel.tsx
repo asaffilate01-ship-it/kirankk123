@@ -220,7 +220,6 @@ export function FundingPanel() {
           detail={t("Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.")}
           tone="good"
         />
-
         <SnapshotCard
           icon={<TrendingUp className="h-4 w-4" />}
           label={t("UK B2B launch breadth")}

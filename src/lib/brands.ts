@@ -36,7 +36,7 @@ export type Brand = {
   /** Keep brand-specific forecast assumptions instead of applying the shared subscription baseline. */
   preserveFinancialDefaults?: boolean;
 
-  /** The single side of the marketplace that funds this brand. */
+  /** Who funds the brand; normally one side, with an explicit hybrid exception where defined. */
   payerModel?: BrandPayerModel;
 
 
@@ -68,8 +68,8 @@ export function regionOf(b: Brand): Region {
   return b.region ?? "DE";
 }
 
-// Current investor portfolio: 98 brand entities. Keep this aligned with BRANDS.
-export const TARGET_BRAND_COUNT = 98;
+// Current investor portfolio: 99 brand entities. Keep this aligned with BRANDS.
+export const TARGET_BRAND_COUNT = 99;
 
 // Shared platform advantage — identical for every brand, injected into detail page.
 export const SHARED_ADVANTAGE: string[] = [

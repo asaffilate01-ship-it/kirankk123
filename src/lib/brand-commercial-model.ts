@@ -1,6 +1,6 @@
 import type { Brand } from "./brands";
 
-export type PayerSide = "business" | "consumer";
+export type PayerSide = "business" | "consumer" | "hybrid";
 
 export type BrandPayerModel = {
   side: PayerSide;
@@ -26,10 +26,9 @@ type ModelSeed = {
 };
 
 /*
- * Investor rule: every brand has one paying side. A person may still pay the
- * underlying provider (for a meal, booking, lesson or service), but we do not
- * also charge that person a separate platform fee when the business side is
- * funding the product.
+ * Investor rule: brands normally have one paying side. Auvane One is the
+ * explicit hybrid exception because member concierge and supplier access are
+ * separate paid services with separately disclosed charges.
  */
 const BUSINESS_FUNDED: Record<string, ModelSeed> = {
   haccora: {
@@ -514,6 +513,18 @@ const CONSUMER_FUNDED: Record<string, ModelSeed> = {
   },
 };
 
+const HYBRID_FUNDED: Record<string, ModelSeed> = {
+  auvaneone: {
+    payer: "Auvane One members and approved hospitality, travel, lifestyle and experience suppliers",
+    freeSide: "Direct supplier prices and every Auvane One fee are shown separately before the member confirms",
+    pricingBasis: "member subscription, supplier access plan, agreed wholesale-rate margin and disclosed payment-service fees",
+    forecastVolumeLabel: "Paying member and supplier accounts",
+    forecastAccountLabel: "paying member or supplier account",
+    revenuePerUnitLabel: "Average platform revenue per paying member or supplier / month",
+    attritionLabel: "Paying member and supplier accounts cancelling each month",
+  },
+};
+
 const AFFILIATE_STORES = new Set([
   "avenesto",
   "gearivon",
@@ -560,17 +571,24 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
 
   const consumer = CONSUMER_FUNDED[brand.id];
   const business = BUSINESS_FUNDED[brand.id];
-  const seed = consumer ?? business;
-  if (!seed) throw new Error(`No single-side payer model has been defined for ${brand.id}`);
+  const hybrid = HYBRID_FUNDED[brand.id];
+  const seed = consumer ?? business ?? hybrid;
+  if (!seed) throw new Error(`No payer model has been defined for ${brand.id}`);
 
-  const side: PayerSide = consumer ? "consumer" : "business";
+  const side: PayerSide = hybrid ? "hybrid" : consumer ? "consumer" : "business";
   const accountLabel =
     seed.forecastAccountLabel ??
-    (side === "business" ? "paying business account" : "paying user account");
+    (side === "business"
+      ? "paying business account"
+      : side === "consumer"
+        ? "paying user account"
+        : "paying member or supplier account");
   const investorRevenue = brand.id === "taxcenda"
     ? `Only taxpayer clients pay TaxCenda. The IRS, tax authorities and professional partners are not charged. The forecast uses ${currency}${brand.defaultArpu} average revenue per completed supported taxpayer case; TaxCenda charges no percentage of a refund or tax saving.`
     : brand.id === "nimah"
       ? `Only participating food outlets pay Ni'mah. Customers pay the outlet's displayed discounted food price but no Ni'mah platform fee. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per paying food outlet; Ni'mah does not take a percentage of the outlet's surplus-food sales.`
+    : brand.id === "auvaneone"
+      ? `Auvane One is hybrid-funded: members pay for concierge access and approved suppliers pay for platform access and business tools. Direct supplier payments carry no Auvane One commission; where Auvane One processes the payment, the supplier pays the card-processing cost and the member pays a disclosed 0.3% service fee. Auvane One may also keep the disclosed difference between an agreed wholesale supplier rate and the member price. The forecast uses ${currency}${brand.defaultArpu} average monthly platform revenue per paying member or supplier account.`
     : `Only ${seed.payer} pay ${brand.name}. ${seed.freeSide}. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}; pricing is based on ${seed.pricingBasis}.`;
   const pricing = brand.id === "taxcenda"
     ? [
@@ -587,6 +605,15 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
           `Forecast working assumption: ${currency}${brand.defaultArpu} average monthly revenue per paying food outlet`,
           "Monthly subscription per outlet with optional multi-location and promotion tools",
           "No percentage commission on surplus-food sales and no second paying side",
+        ]
+    : brand.id === "auvaneone"
+      ? [
+          "Members pay a monthly or annual Auvane One concierge membership",
+          "Approved suppliers pay for access, profile, availability, booking and relationship-management tools",
+          `Forecast working assumption: ${currency}${brand.defaultArpu} average monthly platform revenue per paying member or supplier account`,
+          "Direct supplier payments carry no Auvane One commission",
+          "If Auvane One processes a payment, the supplier pays the card-processing cost and the member pays a disclosed 0.3% service fee",
+          "Where a supplier provides an agreed wholesale rate, Auvane One may sell at a clear member price and keep the difference rather than charge commission",
         ]
     : [
         `Only ${seed.payer} pay ${brand.name}`,
@@ -608,6 +635,14 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
           "Optional multi-location, reporting and promoted-placement tools paid by that same business side",
           "No customer membership or Ni'mah platform fee",
           "No percentage commission on the outlet's surplus-food sales",
+        ]
+    : brand.id === "auvaneone"
+      ? [
+          "Member subscriptions for concierge access and service levels",
+          "Supplier access plans and optional business tools",
+          "Disclosed margin between an agreed wholesale supplier rate and the member price",
+          "Disclosed 0.3% member service fee only when Auvane One processes the payment; the supplier covers the card-processing cost",
+          "No Auvane One commission when the member pays the supplier directly",
         ]
     : [
         `Primary revenue comes only from ${seed.payer}`,
