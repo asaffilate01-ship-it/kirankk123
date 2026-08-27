@@ -11,7 +11,9 @@ export const Route = createFileRoute("/imprint")({
       { property: "og:description", content: "Provider identification for the iTechLounge dashboard under § 5 DDG / UK company law." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://itechlounge.co.uk/imprint" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/imprint" }],
   }),
   component: ImprintRoute,
 });

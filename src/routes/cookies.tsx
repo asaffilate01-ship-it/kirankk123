@@ -13,7 +13,9 @@ export const Route = createFileRoute("/cookies")({
       { property: "og:description", content: "Full list of cookies used by the iTechLounge dashboard and how to manage your choices." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://itechlounge.co.uk/cookies" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/cookies" }],
   }),
   component: CookiesRoute,
 });

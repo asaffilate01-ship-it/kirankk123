@@ -11,7 +11,9 @@ export const Route = createFileRoute("/terms")({
       { property: "og:description", content: "Conditions for accessing the private iTechLounge investor dashboard and financial model." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://itechlounge.co.uk/terms" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/terms" }],
   }),
   component: TermsRoute,
 });
