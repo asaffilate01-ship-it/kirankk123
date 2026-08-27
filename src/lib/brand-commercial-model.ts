@@ -405,7 +405,7 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
   },
   travenexa: {
     payer: "tour operators, destination companies and travel agencies",
-    freeSide: "Travellers using powered storefronts are not charged by TraveNexia",
+    freeSide: "Travellers using powered storefronts are not charged by TraveNexa",
     pricingBasis: "business subscription, tenant and white-label licence",
   },
   "craftvaro-uk": {
