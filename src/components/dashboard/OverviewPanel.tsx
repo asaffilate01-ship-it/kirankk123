@@ -58,10 +58,11 @@ export function OverviewPanel() {
           hint={t("Money coming in every month from subscriptions (MRR)")}
         />
         <Kpi
-          label={t("Funding raised")}
+          label={t("Funding required")}
           value={fmtEURk(totalFunding)}
-          hint={t("Total investment paid into the business over the period")}
+          hint={t("Total investment required over the period")}
         />
+
         <Kpi
           label={t("€1m/mo hit at")}
           value={monthAtMilestone ? `M${monthAtMilestone}` : t("not reached")}
