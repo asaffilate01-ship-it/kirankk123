@@ -73,14 +73,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "apple-mobile-web-app-status-bar-style", content: "default" },
       { name: "apple-mobile-web-app-title", content: "iTechLounge" },
       { name: "theme-color", content: "#ffffff" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "iTechLounge — digital ideas. beautifully built." },
+      {
+        name: "description",
+        content:
+          "iTechLounge builds and operates 100 UK, German and international digital brands — practical software for businesses, families and communities.",
+      },
+      { name: "author", content: "iTechLounge" },
+      { property: "og:site_name", content: "iTechLounge" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -88,6 +90,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "iTechLounge",
+          url: "https://itechlounge.co.uk",
+          logo: "https://itechlounge.co.uk/favicon.png",
+          slogan: "digital ideas. beautifully built.",
+          email: "hello@itechlounge.co.uk",
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: "hello@itechlounge.co.uk",
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

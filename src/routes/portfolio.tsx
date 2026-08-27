@@ -25,7 +25,9 @@ export const Route = createFileRoute("/portfolio")({
     { property: "og:title", content: "iTechLounge digital brands" },
     { property: "og:description", content: "Explore practical digital services for businesses, families and communities." },
     { property: "og:type", content: "website" },
-  ] }),
+    { property: "og:url", content: "https://itechlounge.co.uk/portfolio" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ], links: [{ rel: "canonical", href: "https://itechlounge.co.uk/portfolio" }] }),
   component: PublicPortfolio,
 });
 

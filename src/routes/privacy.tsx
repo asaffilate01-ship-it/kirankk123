@@ -11,7 +11,9 @@ export const Route = createFileRoute("/privacy")({
       { property: "og:description", content: "How iTechLounge handles personal data for the investor dashboard, including your data-protection rights." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://itechlounge.co.uk/privacy" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/privacy" }],
   }),
   component: PrivacyRoute,
 });

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /unlock
+Disallow: /marketing
+Disallow: /investment
+
+Sitemap: https://itechlounge.co.uk/sitemap.xml

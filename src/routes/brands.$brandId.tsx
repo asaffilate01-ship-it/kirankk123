@@ -227,7 +227,7 @@ function BrandDetail() {
             </div>
           </Section>
 
-          <Section title={t(`How this market works in ${countryLabel(countryOf(brand))} today`)} defaultOpen={false}>
+          <Section title={`${t("How this market works in")} ${t(countryLabel(countryOf(brand)))} ${t("today")}`} defaultOpen={false}>
             <div className="space-y-2">
               <p className="text-sm">{t(brand.currentMarket.howServed)}</p>
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
