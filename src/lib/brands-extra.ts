@@ -3238,7 +3238,7 @@ export const EXTRA_BRANDS: Brand[] = [
     domain: "kalethon.co.uk",
     tagline: "The standard for sport.",
     description:
-      "KALETHON (kalethon.co.uk) is a newly secured iTechLounge UK brand for sport. Domain and brand identity are in place; the full product proposition, feature set, apps, pricing and competitive analysis will be added once the scope is confirmed.",
+      "Kalethon brings sports venues, players, organisers, teams, clubs, coaches and officials into one organised booking and participation system. Players use it free; venues pay to claim verified profiles, publish availability, fill unused capacity and manage bookings.",
     market: "To be confirmed — UK sport and grassroots activity market.",
     audience: "To be confirmed — clubs, coaches, players, venues and parents.",
     color: "#1f3a30",
@@ -3249,10 +3249,10 @@ export const EXTRA_BRANDS: Brand[] = [
     defaultChurn: 0.02,
     defaultAddlRevenue: 1500,
     defaultDirectCost: 1200,
-    reason: "Placeholder — detailed rationale to follow.",
+    reason: "Sports venues and players already exist in large numbers, but availability, bookings, attendance, payments and communication are fragmented across separate systems.",
     proposition:
-      "Zero-commission marketplace plus full-service SaaS, CRM and mobile apps on the shared iTechLounge platform, priced as a flat subscription. Specifics to follow.",
-    features: ["Full product scope to be confirmed"],
+      "A venue-funded platform that gives players free discovery and organisation tools while helping verified venues improve utilisation and booking certainty.",
+    features: ["Free player access, verified venue profiles, availability, bookings, team organisation, attendance, payments and venue operations"],
     apps: [
       { name: "KALETHON Web", kind: "Web", purpose: "Public marketplace / storefront — scope to be confirmed." },
       { name: "KALETHON SaaS", kind: "SaaS", purpose: "Club and operator back office — scope to be confirmed." },
