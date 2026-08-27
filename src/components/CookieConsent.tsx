@@ -44,7 +44,7 @@ export function CookieConsent() {
   return (
     <>
       {open && !settings && (
-        <div className="fixed inset-x-0 bottom-0 z-[60] p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] md:p-4">
+        <div className="fixed inset-x-0 bottom-0 z-[60] p-3 pb-[calc(5.5rem+env(safe-area-inset-bottom))] md:p-4 md:pb-4">
           <div className="mx-auto max-w-3xl rounded-2xl border bg-card p-4 shadow-lg">
             <div className="flex items-start gap-3">
               <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -60,7 +60,7 @@ export function CookieConsent() {
                 </p>
               </div>
             </div>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-3 grid gap-2 sm:flex sm:flex-wrap">
               <Button
                 size="sm"
                 onClick={() => {
