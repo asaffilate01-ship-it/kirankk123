@@ -165,8 +165,8 @@ export const DE_UX: Record<string, string> = {
   "Net after tax": "Netto nach Steuern",
   "Dividends distributed": "Ausgeschüttete Dividenden",
   "Kept in the brand": "In der Marke belassen",
-};
   "This page is the headline view: the key numbers first, then the investor terms, the calculator and the brand list. Open only the sections you need — everything is collapsible.":
     "Diese Seite ist die Übersicht: zuerst die wichtigsten Zahlen, dann die Investorenkonditionen, der Rechner und die Markenliste. Öffnen Sie nur die Abschnitte, die Sie brauchen — alles ist ein- und ausklappbar.",
   "Why we are raising, where the money goes, the deal terms, and a calculator that shows your return live.":
     "Warum wir Kapital aufnehmen, wohin das Geld fließt, die Konditionen und ein Rechner, der Ihre Rendite live zeigt.",
+};
