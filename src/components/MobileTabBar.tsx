@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 import type { LucideIcon } from "lucide-react";
 
 export type MobileTabItem = {
@@ -17,6 +18,12 @@ export type MobileTabItem = {
  * gives every page the same native app navigation feel.
  */
 export function MobileTabBar({ items }: { items: MobileTabItem[] }) {
+  // Lets fixed overlays (cookie banner, toasts) sit above the tab bar.
+  useEffect(() => {
+    document.documentElement.style.setProperty("--tabbar-h", "4.25rem");
+    return () => document.documentElement.style.removeProperty("--tabbar-h");
+  }, []);
+
   return (
     <nav
       className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 backdrop-blur md:hidden"

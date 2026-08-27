@@ -43,7 +43,7 @@ function MarketingUnlock() {
   }
 
   return (
-    <div className="safe-top safe-bottom flex min-h-[100dvh] items-center justify-center bg-background px-4 py-6">
+    <div className="safe-top safe-bottom flex min-h-[100dvh] items-start justify-center bg-background px-4 pb-56 pt-8 sm:items-center sm:pb-8">
       <Card className="w-full max-w-sm space-y-5 p-6">
         <div className="flex justify-between"><Button asChild variant="ghost" size="sm"><Link to="/portfolio">{t("Public portfolio")}</Link></Button><LanguageToggle /></div>
         <div className="flex flex-col items-center gap-3 text-center"><BrandLogo className="h-16" /><div><h1 className="text-lg font-semibold">{t("Marketing strategy")}</h1><p className="text-xs text-muted-foreground">{t("Enter the marketing access password.")}</p></div></div>
