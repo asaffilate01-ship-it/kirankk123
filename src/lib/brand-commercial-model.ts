@@ -447,10 +447,10 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
     freeSide: "Their audiences and brand customers are not charged by Syndriva",
     pricingBasis: "subscription by profiles, brands, users and processing allowance",
   },
-  athlyvo: {
+  kalethon: {
     payer:
       "sports venues, leisure trusts, schools with bookable facilities and multi-site operators",
-    freeSide: "Players, organisers, teams, clubs, coaches and officials use Athlyvo free",
+    freeSide: "Players, organisers, teams, clubs, coaches and officials use Kalethon free",
     pricingBasis: "venue subscription by locations, spaces and operating features",
     forecastVolumeLabel: "Paying venue accounts",
     forecastAccountLabel: "paying venue account",

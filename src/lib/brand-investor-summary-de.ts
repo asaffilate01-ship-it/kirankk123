@@ -193,6 +193,6 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   pawivon: "Hilft Tierhaltern, Tierprodukte vor dem Kauf zu vergleichen.",
   deskivon:
     "Hilft Heimarbeitern, Studierenden und Firmen, Büro- und Arbeitsplatzprodukte vor dem Kauf zu vergleichen.",
-  athlyvo:
+  kalethon:
     "Lässt Menschen kostenlos Sport organisieren und spielen; nur Sportstätten zahlen für Profil, freie Zeiten und Buchungsverwaltung.",
 };

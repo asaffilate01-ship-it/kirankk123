@@ -78,7 +78,7 @@ import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
 import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
 import tendryvaLogo from "@/assets/tendryva-logo-v2.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
-import athlyvoLogo from "@/assets/athlyvo-logo.png.asset.json";
+import kalethonLogo from "@/assets/kalethon-logo.png.asset.json";
 import taxnuviaAsset from "@/assets/taxnuvia-logo-v2.png.asset.json";
 const taxnuviaNewLogo = taxnuviaAsset.url;
 import formationgenieNewLogo from "@/assets/formationgenie-logo.png";
@@ -185,7 +185,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   avenesto: avenestoLogo.url,
   tendryva: tendryvaLogo.url,
   syndriva: syndrivaLogo.url,
-  athlyvo: athlyvoLogo.url,
+  kalethon: kalethonLogo.url,
   taxnuvia: taxnuviaNewLogo,
   formationgenie: formationgenieNewLogo,
   merqano: merqanoNewLogo,

@@ -3232,13 +3232,13 @@ export const EXTRA_BRANDS: Brand[] = [
   },
 
   {
-    id: "athlyvo",
-    name: "ATHLYVO",
+    id: "kalethon",
+    name: "KALETHON",
     region: "UK",
-    domain: "athlyvo.co.uk",
-    tagline: "Where sport comes together.",
+    domain: "kalethon.co.uk",
+    tagline: "The standard for sport.",
     description:
-      "ATHLYVO (athlyvo.co.uk) is a newly secured iTechLounge UK brand for sport. Domain and brand identity are in place; the full product proposition, feature set, apps, pricing and competitive analysis will be added once the scope is confirmed.",
+      "KALETHON (kalethon.co.uk) is a newly secured iTechLounge UK brand for sport. Domain and brand identity are in place; the full product proposition, feature set, apps, pricing and competitive analysis will be added once the scope is confirmed.",
     market: "To be confirmed — UK sport and grassroots activity market.",
     audience: "To be confirmed — clubs, coaches, players, venues and parents.",
     color: "#1f3a30",
@@ -3254,8 +3254,8 @@ export const EXTRA_BRANDS: Brand[] = [
       "Zero-commission marketplace plus full-service SaaS, CRM and mobile apps on the shared iTechLounge platform, priced as a flat subscription. Specifics to follow.",
     features: ["Full product scope to be confirmed"],
     apps: [
-      { name: "ATHLYVO Web", kind: "Web", purpose: "Public marketplace / storefront — scope to be confirmed." },
-      { name: "ATHLYVO SaaS", kind: "SaaS", purpose: "Club and operator back office — scope to be confirmed." },
+      { name: "KALETHON Web", kind: "Web", purpose: "Public marketplace / storefront — scope to be confirmed." },
+      { name: "KALETHON SaaS", kind: "SaaS", purpose: "Club and operator back office — scope to be confirmed." },
     ],
     userTypes: [{ type: "To be confirmed", useCase: "User types and journeys will be added with the full brand brief." }],
     competitors: [{ name: "To be confirmed", strength: "Incumbent scale", counter: "Flat subscription, zero commission and the shared iTechLounge platform" }],

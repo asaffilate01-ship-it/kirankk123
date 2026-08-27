@@ -4016,7 +4016,7 @@ export const BRANDS: Brand[] = [...BASE_BRANDS, ...EXTRA_BRANDS, AFFIVON_BRAND].
     merged.defaultArpu = merged.region === "UK" ? 45 : 39;
   }
   merged.payerModel = brandPayerModel(merged);
-  const keepDetailedSingleSidePricing = merged.id === "athlyvo" || merged.id === "criclume";
+  const keepDetailedSingleSidePricing = merged.id === "kalethon" || merged.id === "criclume";
   merged.pricing = keepDetailedSingleSidePricing ? merged.pricing : merged.payerModel.pricing;
   merged.monetisation = keepDetailedSingleSidePricing ? merged.monetisation : merged.payerModel.monetisation;
   merged.currentMarket = { ...merged.currentMarket, revenue: merged.payerModel.investorRevenue };
