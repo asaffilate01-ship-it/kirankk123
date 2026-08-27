@@ -71,14 +71,25 @@ function Unlock() {
           </div>
         </div>
         <form method="post" action="/api/public/unlock" onSubmit={onSubmit} className="space-y-3">
-          <Input
-            type="password"
-            name="password"
-            autoComplete="current-password"
-            placeholder={t("Password")}
-            autoFocus
-            required
-          />
+          <div className="relative">
+            <Input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              autoComplete="current-password"
+              placeholder={t("Password")}
+              autoFocus
+              required
+              className="pr-10"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((s) => !s)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground focus:outline-none"
+              aria-label={showPassword ? t("Hide password") : t("Show password")}
+            >
+              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+            </button>
+          </div>
           {error === "invalid" && (
             <p className="text-xs text-destructive">{t("Incorrect password. Try again.")}</p>
           )}

@@ -48,7 +48,17 @@ function MarketingUnlock() {
         <div className="flex justify-between"><Button asChild variant="ghost" size="sm"><Link to="/portfolio">{t("Public portfolio")}</Link></Button><LanguageToggle /></div>
         <div className="flex flex-col items-center gap-3 text-center"><BrandLogo className="h-16" /><div><h1 className="text-lg font-semibold">{t("Marketing strategy")}</h1><p className="text-xs text-muted-foreground">{t("Enter the separate marketing access password.")}</p></div></div>
         <form method="post" action="/api/public/marketing-unlock" onSubmit={onSubmit} className="space-y-3">
-          <Input type="password" name="password" autoComplete="current-password" placeholder={t("Password")} autoFocus required />
+          <div className="relative">
+            <Input type={showPassword ? "text" : "password"} name="password" autoComplete="current-password" placeholder={t("Password")} autoFocus required className="pr-10" />
+            <button
+              type="button"
+              onClick={() => setShowPassword((s) => !s)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground focus:outline-none"
+              aria-label={showPassword ? t("Hide password") : t("Show password")}
+            >
+              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+            </button>
+          </div>
           {error === "invalid" && <p className="text-xs text-destructive">{t("Incorrect password. Try again.")}</p>}
           {error === "config" && <p className="text-xs text-destructive">{t("Marketing access is temporarily unavailable.")}</p>}
           <Button type="submit" className="w-full" disabled={busy}>{busy ? t("Checking…") : t("Enter")}</Button>
