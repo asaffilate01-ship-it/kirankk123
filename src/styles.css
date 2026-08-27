@@ -143,3 +143,81 @@
     color: var(--color-foreground);
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * Native-app-like mobile behaviour
+ * ------------------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  /* iOS never zooms a focused field at >=16px */
+  @media (max-width: 767px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Safe-area helpers for sticky headers, bottom bars and page ends */
+@utility safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility safe-x {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Bottom-bar clearance so content is never hidden behind a fixed tab bar */
+@utility pb-tabbar {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+}
+
+/* Momentum scrolling row that hides its scrollbar (native segmented control feel) */
+@utility scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-x::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Touch press feedback instead of hover styling on mobile */
+@media (hover: none) {
+  button,
+  a[role="button"],
+  [data-press] {
+    transition: transform 120ms ease, opacity 120ms ease;
+  }
+
+  button:active,
+  a:active,
+  [data-press]:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+}
