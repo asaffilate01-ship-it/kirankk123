@@ -78,7 +78,7 @@ import gearivonLogo from "@/assets/gearivon-logo.png.asset.json";
 import avenestoLogo from "@/assets/avenesto-logo.png.asset.json";
 import tendryvaLogo from "@/assets/tendryva-logo-v2.png.asset.json";
 import syndrivaLogo from "@/assets/syndriva-logo.png.asset.json";
-import kalethonAsset from "@/assets/kalethon-logo.png.asset.json";
+import kalethonAsset from "@/assets/kalethon-play-logo.png.asset.json";
 const kalethonLogo = kalethonAsset.url;
 import taxnuviaAsset from "@/assets/taxnuvia-logo-v2.png.asset.json";
 const taxnuviaNewLogo = taxnuviaAsset.url;
