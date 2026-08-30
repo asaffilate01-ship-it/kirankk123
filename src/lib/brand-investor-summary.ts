@@ -57,7 +57,7 @@ const PLAIN_ENGLISH_SUMMARIES: Record<string, string> = {
   formationgenie:
     "Sets up UK companies and then helps owners manage filings, tax registrations, banking and deadlines.",
   merqano:
-    "Creates and runs separate ecommerce websites for different customer businesses from one shared system.",
+    "Creates and runs separate ecommerce websites for customer businesses from one shared system, with Meyzaar and KALËTHON as its first customer-store examples.",
   stylesyncger:
     "Lets German customers book beauty services and gives salons tools for diaries, customers, payments and administration.",
   parkpunkt:
@@ -239,7 +239,7 @@ export function brandRevenuePlainEnglish(brand: Brand): string {
     return `Shoppers use the site free. An approved retailer pays a commission after a referred shopper completes an eligible order; the forecast uses an average of ${currency}${brand.defaultArpu} confirmed revenue per order.`;
   }
   if (brand.id === "kalethon") {
-    return `Players, organisers, teams, clubs, coaches and officials use Kalethon free. Only venues pay; the forecast uses an average of ${currency}${brand.defaultArpu} per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.`;
+    return `Players, organisers, teams, clubs, coaches and officials use Kalëthon Play free. Only venues pay; the forecast uses an average of ${currency}${brand.defaultArpu} per paying venue each month after a 60-day trial, with optional venue-funded promotion and multi-site services.`;
   }
   const otherIncome =
     brand.defaultAddlRevenue > 0

@@ -51,7 +51,7 @@ export const PLAIN_GERMAN_SUMMARIES: Record<string, string> = {
   formationgenie:
     "Gründet britische Firmen und hilft danach bei Meldungen, Steuern, Bankkonto und Fristen.",
   merqano:
-    "Erstellt und betreibt getrennte E-Commerce-Websites für unterschiedliche Geschäftskunden mit einem gemeinsamen System.",
+    "Erstellt und betreibt getrennte E-Commerce-Websites für Geschäftskunden mit einem gemeinsamen System; Meyzaar und KALËTHON sind die ersten Kunden-Shop-Beispiele.",
   stylesyncger:
     "Lässt Kunden Schönheitstermine buchen und gibt deutschen Salons Werkzeuge für Termine, Kunden, Zahlungen und Verwaltung.",
   parkpunkt:

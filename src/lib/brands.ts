@@ -2205,7 +2205,7 @@ const BASE_BRANDS: Brand[] = [
     region: "INT",
     tagline: "Build. Sell. Grow.",
     domain: "merqano.com",
-    description: "Merqano creates and runs separate ecommerce websites for customer businesses from one shared system. Each customer gets its own branded online shop, products, orders, payments, delivery rules, staff access and reports, while Merqano maintains the underlying technology centrally.",
+    description: "Merqano creates and runs separate ecommerce websites for customer businesses from one shared system. Meyzaar and the KALËTHON clothing store are its first customer-store examples. Each customer gets its own branded online shop, products, orders, payments, delivery rules, staff access and reports, while Merqano maintains the underlying technology centrally.",
     market: "Global spending on ecommerce website platforms, online-shop software and business website services.",
     audience: "Independent retailers, growing brands, franchise businesses and agencies that need a professional branded ecommerce website.",
     color: "#ff6b45",
@@ -2219,6 +2219,7 @@ const BASE_BRANDS: Brand[] = [
     reason: "Many businesses need their own professional ecommerce website but custom development is expensive and slow, while maintaining separate systems for every customer repeats the same technical work. Merqano provides products, checkout, payments, orders, delivery, staff roles and reporting through one maintained platform, while every customer receives a separate branded website.",
     proposition: "Give each customer business its own professional ecommerce website without rebuilding the technology each time. The customer controls its branding, products, prices, orders, staff and customer relationships, while Merqano provides the secure shared commerce system, updates and support behind it.",
     features: [
+      "First customer-store examples: Meyzaar and KALËTHON, operated as separate brands with separate catalogues, customers and reporting",
       "Branded storefronts — homepage, collections, product pages, journal and legal pages designed for each customer business",
       "Hosted card checkout with Apple Pay and Google Pay, webhook-confirmed orders",
       "Catalogue, variants, sizes, dietary and allergen data per store",
@@ -2299,7 +2300,7 @@ const BASE_BRANDS: Brand[] = [
     ],
     currentMarket: {
       howServed: "Businesses currently commission a custom ecommerce build or assemble a shop from a platform, themes, extensions and agency support. Merqano provides each customer with a separate branded website while maintaining the repeated technology and updates through one shared system.",
-      users: "Independent retailers, growing brands, franchise businesses and agencies that need their own branded ecommerce websites.",
+      users: "Meyzaar and KALËTHON provide initial customer-store proof; the wider target is independent retailers, growing brands, franchise businesses and agencies that need their own branded ecommerce websites.",
       revenue: "≈$8bn annual platform and app subscription spend, plus agency build budgets of $25k–$180k per brand.",
     },
   },
