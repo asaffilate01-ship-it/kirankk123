@@ -450,7 +450,7 @@ const BUSINESS_FUNDED: Record<string, ModelSeed> = {
   kalethon: {
     payer:
       "sports venues, leisure trusts, schools with bookable facilities and multi-site operators",
-    freeSide: "Players, organisers, teams, clubs, coaches and officials use Kalethon free",
+    freeSide: "Players, organisers, teams, clubs, coaches and officials use Kalëthon Play free",
     pricingBasis: "venue subscription by locations, spaces and operating features",
     forecastVolumeLabel: "Paying venue accounts",
     forecastAccountLabel: "paying venue account",
@@ -598,6 +598,8 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
       ? `Only participating food outlets pay Ni'mah. Customers pay the outlet's displayed discounted food price but no Ni'mah platform fee. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per paying food outlet; Ni'mah does not take a percentage of the outlet's surplus-food sales.`
     : brand.id === "auvaneone"
       ? `Auvane One is hybrid-funded: members pay for concierge access and approved suppliers pay for platform access and business tools. Direct supplier payments carry no Auvane One commission; where Auvane One processes the payment, the supplier pays the card-processing cost and the member pays a disclosed 0.3% service fee. Auvane One may also keep the disclosed difference between an agreed wholesale supplier rate and the member price. The forecast uses ${currency}${brand.defaultArpu} average monthly platform revenue per paying member or supplier account.`
+    : brand.id === "kalethon"
+      ? `Only sports venues, leisure trusts, schools with bookable facilities and multi-site operators pay for Kalëthon Venue. Kalëthon Play remains free for players, organisers, teams, clubs, coaches and officials. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per paying venue account after the trial.`
     : `Only ${seed.payer} pay ${brand.name}. ${seed.freeSide}. The forecast uses ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}; pricing is based on ${seed.pricingBasis}.`;
   const pricing = brand.id === "taxcenda"
     ? [
@@ -623,6 +625,14 @@ export function brandPayerModel(brand: Brand): BrandPayerModel {
           "Direct supplier payments carry no Auvane One commission",
           "If Auvane One processes a payment, the supplier pays the card-processing cost and the member pays a disclosed 0.3% service fee",
           "Where a supplier provides an agreed wholesale rate, Auvane One may sell at a clear member price and keep the difference rather than charge commission",
+        ]
+    : brand.id === "kalethon"
+      ? [
+          "Only venues and venue operators pay for Kalëthon Venue",
+          "Players, organisers, teams, clubs, coaches and officials use Kalëthon Play free",
+          `Forecast working assumption: ${currency}${brand.defaultArpu} average monthly revenue per ${accountLabel}`,
+          `Pricing basis: ${seed.pricingBasis}`,
+          "No player subscription and no second-side platform fee",
         ]
     : [
         `Only ${seed.payer} pay ${brand.name}`,

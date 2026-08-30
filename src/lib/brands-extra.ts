@@ -3247,14 +3247,14 @@ export const EXTRA_BRANDS: Brand[] = [
 
   {
     id: "kalethon",
-    name: "KALETHON",
+    name: "KALËTHON PLAY",
     region: "UK",
-    domain: "kalethon.co.uk",
+    domain: "play.kalethon.com",
     tagline: "The standard for sport.",
     description:
-      "Kalethon brings sports venues, players, organisers, teams, clubs, coaches and officials into one organised booking and participation system. Players use it free; venues pay to claim verified profiles, publish availability, fill unused capacity and manage bookings.",
-    market: "To be confirmed — UK sport and grassroots activity market.",
-    audience: "To be confirmed — clubs, coaches, players, venues and parents.",
+      "Kalëthon Play brings sports venues, players, organisers, teams, clubs, coaches and officials into one organised booking and participation system. Players use it free; venues pay to claim verified profiles, publish availability, fill unused capacity and manage bookings.",
+    market: "UK grassroots and recreational sport, beginning with venue discovery, bookings and participation across football, cricket, padel, tennis and pickleball.",
+    audience: "Players, organisers, teams, clubs, coaches and officials use Kalëthon Play free. Sports venues, schools, councils, leisure trusts and multi-site operators are the paying customers.",
     color: "#1f3a30",
     defaultLaunchMonth: 33,
     defaultInitialUsers: 40,
@@ -3268,13 +3268,16 @@ export const EXTRA_BRANDS: Brand[] = [
       "A venue-funded platform that gives players free discovery and organisation tools while helping verified venues improve utilisation and booking certainty.",
     features: ["Free player access, verified venue profiles, availability, bookings, team organisation, attendance, payments and venue operations"],
     apps: [
-      { name: "KALETHON Web", kind: "Web", purpose: "Public marketplace / storefront — scope to be confirmed." },
-      { name: "KALETHON SaaS", kind: "SaaS", purpose: "Club and operator back office — scope to be confirmed." },
+      { name: "KALËTHON Play", kind: "Web", purpose: "Public venue discovery, sports booking, team organisation and participation." },
+      { name: "KALËTHON Venue", kind: "SaaS", purpose: "Paid venue claims, calendars, availability, bookings, payments, promotions and reporting." },
     ],
-    userTypes: [{ type: "To be confirmed", useCase: "User types and journeys will be added with the full brand brief." }],
-    competitors: [{ name: "To be confirmed", strength: "Incumbent scale", counter: "Flat subscription, zero commission and the shared iTechLounge platform" }],
-    risks: [{ risk: "Scope not yet defined", mitigation: "Brief to be confirmed before the launch month is committed." }],
-    currentMarket: { howServed: "To be confirmed.", users: "To be confirmed.", revenue: "To be confirmed." },
+    userTypes: [
+      { type: "Player or organiser (free)", useCase: "Finds venues and games, books, confirms attendance and organises participants." },
+      { type: "Venue operator (paying)", useCase: "Claims a verified profile, publishes availability, fills quiet capacity and manages bookings." },
+    ],
+    competitors: [{ name: "Venue directories and team tools", strength: "Existing search traffic or established team communication", counter: "Kalëthon Play connects free participation tools directly to verified live venue availability and a paid venue operating dashboard." }],
+    risks: [{ risk: "The network needs local venue and player density", mitigation: "Pre-list factual venue profiles, invite operators to claim them and launch postcode by postcode and sport by sport." }],
+    currentMarket: { howServed: "Venue discovery, availability, bookings, player organisation and payments are split across websites, calls, spreadsheets and message groups.", users: "Millions of UK participants and thousands of public, private, school, club and community sports venues.", revenue: "Kalëthon Play charges venues for subscriptions and optional venue-funded promotion; participants use the platform free." },
   },
   {
     id: "auvaneone",

@@ -686,7 +686,7 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
     defaultDirectCost: 4000,
     tagline: "The standard for sport.",
     description:
-      "Kalethon is a free sports discovery and organisation app for players, organisers, teams, clubs, coaches and officials, funded by venue subscriptions. It brings together the large number of sports venues and players that already exist but are scattered across separate websites, spreadsheets and message groups. Players can find a place or game, organise a team, split the venue price, fill missing places and confirm attendance. Venues can be listed before joining, then claim and verify their profile to control availability, prices, bookings and customer communication.",
+      "Kalëthon Play is a free sports discovery and organisation app for players, organisers, teams, clubs, coaches and officials, funded by venue subscriptions. It brings together the large number of sports venues and players that already exist but are scattered across separate websites, spreadsheets and message groups. Players can find a place or game, organise a team, split the venue price, fill missing places and confirm attendance. Venues can be listed before joining, then claim and verify their profile to control availability, prices, bookings and customer communication.",
     market:
       "UK grassroots and recreational sport, where thousands of public, private, school, club and community venues already serve millions of players but availability and demand are fragmented. Launch with football and five-a-side, cricket, padel, tennis and pickleball, then expand into other team, racket, combat, fitness and community activities.",
     audience:
@@ -694,7 +694,7 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
     reason:
       "The UK already has plenty of venues and players, but they are not organised in one dependable system. Players cannot easily see genuine availability or find a suitable game. Organisers chase replies and money, teams struggle to replace drop-outs, and venues lose revenue from empty slots, late cancellations and uncertain attendance.",
     proposition:
-      "Create useful local coverage quickly by adding factual public venue listings, clearly marking them as unclaimed and inviting each operator to claim and verify its profile. Players and organisers use Kalethon free to discover nearby sport, join or organise a game, share the venue cost, fill empty places, confirm attendance and receive changes. Claimed venues control calendars, prices, rules, bookings, payments, customer messages and off-peak promotion. This gives venues better use of their facilities and gives players greater certainty that the slot and participants are confirmed.",
+      "Create useful local coverage quickly by adding factual public venue listings, clearly marking them as unclaimed and inviting each operator to claim and verify its profile. Players and organisers use Kalëthon Play free to discover nearby sport, join or organise a game, share the venue cost, fill empty places, confirm attendance and receive changes. Claimed venues control calendars, prices, rules, bookings, payments, customer messages and off-peak promotion. This gives venues better use of their facilities and gives players greater certainty that the slot and participants are confirmed.",
     features: [
       "Free search and booking journey for players, organisers, teams, clubs, coaches and officials",
       "Pre-listed public venue profiles with a clear unclaimed label and correction or removal route",
@@ -704,7 +704,7 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
       "Later support for martial arts, boxing, archery, gyms, trainers and rooms",
       "Create public, private, verified or invitation-only games and sessions",
       "Team availability, attendance confirmation and standby substitutes",
-      "Share the venue cost, collect deposits and match fees without a Kalethon player service charge",
+      "Share the venue cost, collect deposits and match fees without a Kalëthon Play player service charge",
       "Free profiles and discovery for coaches, trainers, referees, umpires, scorers and analysts",
       "Off-peak pricing and promoted empty slots for venues",
       "Waitlists, reminders, cancellation rules and replacement players to improve booking certainty",
@@ -721,42 +721,42 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
       "Venue Growth £79/month for more spaces, promotions and reporting",
       "Venue Pro £149/month for advanced operations, staff and integrations",
       "Multi-site, council and leisure groups from £299/month",
-      "No Kalethon service fee for players and no commission on the venue's booking value; card-processing costs are shown separately to the venue",
+      "No Kalëthon Play service fee for players and no commission on the venue's booking value; card-processing costs are shown separately to the venue",
     ],
     positives: [
       "Free access removes the main barrier to bringing large numbers of players, teams and organisers into one network",
       "Pre-listing lawful public venue information creates useful postcode coverage before every operator has joined",
       "Claimed and verified profiles turn fragmented venue information into dependable live availability",
       "Empty-place filling, confirmations and off-peak offers increase use of facilities without building new ones",
-      "Venue-only subscriptions make the payer and value exchange simple: venues pay because Kalethon helps them fill and run capacity",
+      "Venue-only subscriptions make the payer and value exchange simple: venues pay because Kalëthon Play helps them fill and run capacity",
       "The UK beachhead can be launched locally and expanded sport by sport and area by area",
     ],
     monetisation: [
       "Only venues pay: monthly subscriptions for claimed venue profiles, booking tools and operating features",
       "Venues can buy promoted placement and off-peak campaigns; these are clearly labelled",
       "Venue groups, councils and leisure trusts pay for multi-site onboarding, integrations and reporting",
-      "Players, organisers, teams, clubs, coaches and officials are not charged by Kalethon",
+      "Players, organisers, teams, clubs, coaches and officials are not charged by Kalëthon Play",
     ],
     apps: [
-      { name: "Kalethon Player", kind: "iOS", purpose: "Discover, join, book, pay, confirm and track sport." },
-      { name: "Kalethon Player", kind: "Android", purpose: "The same player and organiser journey on Android." },
-      { name: "Kalethon Team & Club", kind: "SaaS", purpose: "Free tools for teams, availability, fixtures, results and communication." },
-      { name: "Kalethon Professional", kind: "Web", purpose: "Free discovery profiles for coaches, trainers and officials." },
-      { name: "Kalethon Venue OS", kind: "SaaS", purpose: "The paid product: claims, calendars, slots, pricing, bookings, access, customers and reporting." },
-      { name: "Kalethon Admin", kind: "Admin", purpose: "Verification, safeguarding, disputes, payments, content and partner controls." },
+      { name: "Kalëthon Play", kind: "iOS", purpose: "Discover, join, book, pay, confirm and track sport." },
+      { name: "Kalëthon Play", kind: "Android", purpose: "The same player and organiser journey on Android." },
+      { name: "Kalëthon Teams & Clubs", kind: "SaaS", purpose: "Free tools for teams, availability, fixtures, results and communication." },
+      { name: "Kalëthon Professionals", kind: "Web", purpose: "Free discovery profiles for coaches, trainers and officials." },
+      { name: "Kalëthon Venue", kind: "SaaS", purpose: "The paid product: claims, calendars, slots, pricing, bookings, access, customers and reporting." },
+      { name: "Kalëthon Play Admin", kind: "Admin", purpose: "Verification, safeguarding, disputes, payments, content and partner controls." },
     ],
     userTypes: [
       { type: "Player (free)", useCase: "Finds a nearby activity, joins, pays only the agreed share of the venue price and receives confirmed updates." },
       { type: "Organiser or captain (free)", useCase: "Books the venue, confirms the team, fills gaps and collects each person's share." },
-      { type: "Club administrator (free)", useCase: "Runs teams, members, fixtures, officials and results without a Kalethon subscription." },
+      { type: "Club administrator (free)", useCase: "Runs teams, members, fixtures, officials and results without a Kalëthon Play subscription." },
       { type: "Coach or official (free)", useCase: "Creates a profile, shows availability and can be found by local organisers and venues." },
       { type: "Venue operator (paying customer)", useCase: "Claims and verifies its profile, publishes live slots, promotes quiet periods and runs bookings from one calendar." },
       { type: "Council or leisure group (paying customer)", useCase: "Manages several facilities, promotes participation and sees programme and usage reporting." },
     ],
     competitors: [
-      { name: "Playfinder and venue-booking directories", strength: "Existing venue supply and search traffic", counter: "Kalethon is free to players and continues after discovery with confirmations, shared venue costs, substitutes, results and repeat play, while venues get an operating system." },
-      { name: "Spond, TeamApp and club tools", strength: "Strong team communication and attendance", counter: "Kalethon keeps team tools free and connects them to public venue discovery, live slots, officials, coaches and bookings." },
-      { name: "WhatsApp, spreadsheets and separate payment links", strength: "Free and familiar", counter: "Kalethon remains free for participants but gives both sides one confirmed record of the slot, attendance, money and changes." },
+      { name: "Playfinder and venue-booking directories", strength: "Existing venue supply and search traffic", counter: "Kalëthon Play is free to players and continues after discovery with confirmations, shared venue costs, substitutes, results and repeat play, while venues get an operating system." },
+      { name: "Spond, TeamApp and club tools", strength: "Strong team communication and attendance", counter: "Kalëthon Play keeps team tools free and connects them to public venue discovery, live slots, officials, coaches and bookings." },
+      { name: "WhatsApp, spreadsheets and separate payment links", strength: "Free and familiar", counter: "Kalëthon Play remains free for participants but gives both sides one confirmed record of the slot, attendance, money and changes." },
     ],
     risks: [
       { risk: "A marketplace needs both local players and local venue supply", mitigation: "Pre-list venues from lawful public sources, label unclaimed records clearly, recruit players through clubs and community networks, and expand postcode by postcode and sport by sport." },
@@ -768,7 +768,7 @@ export const BRAND_CONTENT_OVERRIDES: Record<string, Partial<Brand>> = {
     currentMarket: {
       howServed: "Venues and players already exist in large numbers, but discovery, availability, team organisation, payments and confirmations are split across search engines, separate venue sites, phone calls, spreadsheets and message groups.",
       users: "Millions of UK adults and children participate in grassroots, recreational and fitness activity, supported by thousands of public, private, school, club and community venues.",
-      revenue: "Kalethon charges only venues. Recurring revenue comes from claimed venue subscriptions, venue-funded promotion and multi-site venue services; players and other participants use the platform free.",
+      revenue: "Kalëthon Play charges only venues. Recurring revenue comes from claimed venue subscriptions, venue-funded promotion and multi-site venue services; players and other participants use the platform free.",
     },
   },
 };

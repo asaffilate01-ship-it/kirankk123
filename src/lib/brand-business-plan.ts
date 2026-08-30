@@ -163,7 +163,7 @@ const BRAND_SALES_PLANS: Record<string, string> = {
   merqora:
     "Recruit Amazon and other marketplace sellers through ecommerce agencies, seller communities, practical account audits and a guided trial. Show how Merqora reduces repeated admin and identifies clear actions across listings, stock, advertising and account health; sell only to sellers and agencies, never shoppers.",
   merqano:
-    "Sell directly to independent retailers, growing brands, franchise businesses and agencies that need professional ecommerce websites. Demonstrate one complete customer website, provide guided product and payment setup, and show how the business receives its own brand, customer relationship and operating dashboard without funding a custom technical build.",
+    "Sell directly to independent retailers, growing brands, franchise businesses and agencies that need professional ecommerce websites. Use Meyzaar and the KALËTHON clothing store as the first customer-store demonstrations, showing that each business receives its own branding, catalogue, checkout, customer relationship and operating dashboard while Merqano maintains the shared technology.",
   nimah:
     "Build one dense launch district at a time. Recruit anchor restaurants, cafés, bakeries, hotels and supermarkets directly, give staff guided setup and a trial, then attract nearby customers through local creators, universities, employers, community groups and participating outlets' own channels. Sell only to food businesses; customers use Ni'mah without a platform fee.",
   auvaneone:
@@ -205,7 +205,7 @@ const BRAND_TERRITORY_PLANS: Record<string, string> = {
   merqora:
     "Start with UK-based Amazon sellers and agencies using only authorised marketplace connections, pound pricing and UK support. Confirm marketplace developer terms, data permissions, account security, UK GDPR and advertising controls before connecting live seller accounts.",
   merqano:
-    "Start with a small group of UK customer businesses using pound pricing, UK payment processing, separate customer data and UK support. Complete payment, tax, privacy, consumer, delivery and cancellation terms before each ecommerce website begins trading.",
+    "Start in the UK with Meyzaar and the KALËTHON clothing store as the first customer-store examples, using pound pricing, UK payment processing, separate customer data and UK support. Complete payment, tax, privacy, consumer, delivery and cancellation terms before each ecommerce website begins trading.",
   nimah:
     "Launch separately in one Saudi city district and one Pakistani city district. Saudi Arabia uses Arabic and English, Saudi-riyal prices and supported local payments; Pakistan uses Urdu and English, Pakistani-rupee prices and supported local payments. Complete local business verification, food-safety, allergen, payment, refund, consumer and tax rules before accepting live offers in either country.",
   auvaneone:
@@ -268,7 +268,7 @@ const DE_BRAND_SALES: Record<string, string> = {
   merqora:
     "Amazon- und andere Marktplatzverkäufer über E-Commerce-Agenturen, Verkäufergemeinschaften, praktische Kontoanalysen und eine begleitete Testphase gewinnen. Den Nutzen aus weniger Verwaltung und klaren Maßnahmen für Angebote, Bestand, Werbung und Kontozustand zeigen; nur Verkäufer und Agenturen zahlen.",
   merqano:
-    "Direkt an unabhängige Händler, wachsende Marken, Franchiseunternehmen und Agenturen verkaufen, die professionelle E-Commerce-Websites benötigen. Eine vollständige Kundenwebsite zeigen, Produkte und Zahlungen gemeinsam einrichten und erklären, dass der Betrieb seine eigene Marke, Kundenbeziehung und Verwaltung erhält, ohne eine Sonderentwicklung zu finanzieren.",
+    "Direkt an unabhängige Händler, wachsende Marken, Franchiseunternehmen und Agenturen verkaufen, die professionelle E-Commerce-Websites benötigen. Meyzaar und den KALËTHON-Bekleidungsshop als erste Kunden-Shop-Demos nutzen und zeigen, dass jeder Betrieb seine eigene Marke, seinen Katalog, seine Kasse, Kundenbeziehung und Verwaltung erhält, während Merqano die gemeinsame Technik pflegt.",
   nimah:
     "Jeweils ein dichtes Startviertel aufbauen. Ankerbetriebe wie Restaurants, Cafés, Bäckereien, Hotels und Supermärkte direkt gewinnen, Mitarbeitende begleitet einrichten und eine Testphase anbieten. Kunden über lokale Creator, Hochschulen, Arbeitgeber, Gemeinschaftsgruppen und die Kanäle der teilnehmenden Betriebe erreichen. Nur Lebensmittelbetriebe zahlen; Kunden nutzen Ni'mah ohne Plattformgebühr.",
   auvaneone:
@@ -310,7 +310,7 @@ const DE_BRAND_TERRITORY: Record<string, string> = {
   merqora:
     "Mit britischen Amazon-Verkäufern und Agenturen, Pfund-Preisen und britischem Support starten und nur autorisierte Marktplatzverbindungen nutzen. Entwicklerbedingungen, Datenrechte, Kontosicherheit, britischen Datenschutz und Werbekontrollen vor Live-Verbindungen abschließen.",
   merqano:
-    "Mit einer kleinen Gruppe britischer Geschäftskunden, Pfund-Preisen, britischer Zahlungsabwicklung, getrennten Kundendaten und Support starten. Zahlungs-, Steuer-, Datenschutz-, Verbraucher-, Liefer- und Widerrufsregeln vor dem Start jeder E-Commerce-Website abschließen.",
+    "Im Vereinigten Königreich mit Meyzaar und dem KALËTHON-Bekleidungsshop als ersten Kunden-Shop-Beispielen starten, mit Pfund-Preisen, britischer Zahlungsabwicklung, getrennten Kundendaten und Support. Zahlungs-, Steuer-, Datenschutz-, Verbraucher-, Liefer- und Widerrufsregeln vor dem Start jeder E-Commerce-Website abschließen.",
   nimah:
     "Getrennt in einem Stadtviertel in Saudi-Arabien und einem in Pakistan starten. Saudi-Arabien nutzt Arabisch und Englisch, Saudi-Riyal und unterstützte lokale Zahlungen; Pakistan nutzt Urdu und Englisch, Pakistanische Rupien und unterstützte lokale Zahlungen. Betriebliche Prüfung, Lebensmittelsicherheit, Allergene, Zahlungen, Erstattungen, Verbraucher- und Steuerregeln vor Live-Angeboten je Land abschließen.",
   auvaneone:
@@ -372,8 +372,8 @@ const BRAND_MILESTONES: Record<string, string[]> = {
     "Months 7–12: add another marketplace or country only after the existing seller workflow, support cost and customer retention are dependable.",
   ],
   merqano: [
-    "Before launch: complete the central Merqano administration, separate customer dashboards, catalogue, checkout, payments, orders, delivery rules, permissions and customer-data separation tests.",
-    "Months 1–2: launch ecommerce websites for a controlled group of customer businesses, support their first orders and confirm that no customer can access another business's customers, products or reports.",
+    "Before launch: stabilise Meyzaar and the KALËTHON clothing store as the first customer-store examples, then complete the central Merqano administration, separate customer dashboards and customer-data separation tests.",
+    "Months 1–2: support Meyzaar and KALËTHON through real catalogue, checkout, payment and order journeys and confirm that neither customer can access the other business's customers, products or reports.",
     "Months 3–6: convert customer trials into business subscriptions and reduce the time and support effort needed to launch each additional ecommerce website.",
     "Months 7–12: expand to more customer businesses only when checkout reliability, customer-data separation, subscription retention and support cost are dependable.",
   ],
@@ -435,7 +435,7 @@ const BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
   ],
   merqano: [
     "Paying customer-business website subscriptions",
-    "Active ecommerce websites and retained business customers after the trial",
+    "Meyzaar and KALËTHON active as separately administered customer stores",
     "Time and support cost required to launch each additional customer website",
     "Successful checkouts, orders and payments with accurate customer-level reporting",
     "No cross-shop data access and no Merqano fee charged to shoppers",
@@ -497,8 +497,8 @@ const DE_BRAND_MILESTONES: Record<string, string[]> = {
     "Monate 7–12: erst dann einen weiteren Marktplatz oder ein weiteres Land ergänzen, wenn bestehende Abläufe, Supportkosten und Kundenbindung verlässlich sind.",
   ],
   merqano: [
-    "Vor dem Start: zentrale Merqano-Verwaltung, getrennte Kundenbereiche, Katalog, Kasse, Zahlungen, Bestellungen, Lieferregeln, Rechte und Kundendatentrennung abschließen.",
-    "Monate 1–2: E-Commerce-Websites für eine kontrollierte Gruppe von Geschäftskunden starten, erste Bestellungen begleiten und bestätigen, dass kein Kunde auf Kunden, Produkte oder Berichte eines anderen Betriebs zugreifen kann.",
+    "Vor dem Start: Meyzaar und den KALËTHON-Bekleidungsshop als erste Kunden-Shop-Beispiele stabilisieren und danach zentrale Merqano-Verwaltung, getrennte Kundenbereiche und Kundendatentrennung abschließen.",
+    "Monate 1–2: Meyzaar und KALËTHON bei echten Katalog-, Kassen-, Zahlungs- und Bestellabläufen begleiten und bestätigen, dass keiner auf Kunden, Produkte oder Berichte des anderen Betriebs zugreifen kann.",
     "Monate 3–6: Kundentests in Geschäftsabos umwandeln und Zeit sowie Supportaufwand für jede weitere E-Commerce-Website senken.",
     "Monate 7–12: nur bei verlässlicher Kasse, Kundendatentrennung, Abobindung und tragfähigen Supportkosten auf weitere Geschäftskunden ausweiten.",
   ],
@@ -528,7 +528,7 @@ const DE_BRAND_SUCCESS_MEASURES: Record<string, string[]> = {
   baytcircle: ["Zahlende übernommene Anbieterprofile", "Geprüfte Familienaktivitäten und buchbare freie Plätze je Startgebiet", "Bestätigte Teilnahme, wiederholte Familiennutzung und Anbieterbindung", "Messbar bessere Auslastung in schwachen Zeiten", "Schutzmeldungen innerhalb der vereinbarten Zeit bearbeitet"],
   taxcenda: ["Bezahlte und abgeschlossene Steuerfälle", "Ohne vermeidbare E-File-Ablehnung angenommene Erklärungen", "Erstellungs- und Prüfzeit nach Eingang aller Unterlagen", "Aktuelle PTIN-, Berufs- und E-File-Berechtigungen für jede zugewiesene Rolle", "Keine prozentuale Erstattungsgebühr, Ergebnisgarantie oder Annahme nicht unterstützter Fälle"],
   merqora: ["Zahlende Verkäufer- und Agenturabos", "Nach der Testphase gehaltene verbundene Marktplatzkonten", "Genaue Umsatz-, Gebühren-, Bestands-, Werbe- und Kontozustandsdaten", "Erledigte Verkäufermaßnahmen und messbar gesparte Verwaltungszeit", "Keine Käufergebühr, Umsatzgarantie oder ungeprüfte Änderung am Marktplatzkonto"],
-  merqano: ["Zahlende Website-Abos von Geschäftskunden", "Aktive E-Commerce-Websites und nach der Testphase gehaltene Geschäftskunden", "Zeit und Supportkosten für jede weitere Kundenwebsite", "Erfolgreiche Kassenabschlüsse, Bestellungen und Zahlungen mit genauen Kundenberichten", "Kein Datenzugriff zwischen Kunden-Websites und keine Merqano-Gebühr für Käufer"],
+  merqano: ["Zahlende Website-Abos von Geschäftskunden", "Meyzaar und KALËTHON als getrennt verwaltete aktive Kunden-Shops", "Zeit und Supportkosten für jede weitere Kundenwebsite", "Erfolgreiche Kassenabschlüsse, Bestellungen und Zahlungen mit genauen Kundenberichten", "Kein Datenzugriff zwischen Kunden-Websites und keine Merqano-Gebühr für Käufer"],
   nimah: ["Zahlende Lebensmittelbetriebsabos nach der Testphase", "Tägliche Live-Überschussangebote und erfolgreiche Abholungen je Startgebiet", "Abverkauf, wiederkehrende Kunden und zurückgewonnene Einnahmen der teilnehmenden Betriebe", "Niedrige Quoten bei Nichterscheinen, Erstattungen, Beschwerden und Sicherheitsvorfällen", "Kunden zahlen keine Ni'mah-Plattformgebühr und Betriebe behalten ihre Einnahmen aus Überschussverkäufen"],
   auvaneone: ["Zahlende und gehaltene Mitglieder- und Anbieterkonten", "Zeit bis zur ersten menschlichen Antwort, passenden Optionen und bestätigten Organisation", "Abgeschlossene Wünsche mit mehreren Anbietern und Mitgliederzufriedenheit", "Annahme-, Bestätigungs-, Ausfall- und Wiederverwendungsquote der Anbieter", "Einnahmen und direkte Servicekosten nach Mitgliedschaft, Anbieterplan, verarbeiteter Zahlung und Großhandelsbuchung", "Keine versteckte Gebühr, ungeprüfte KI-Bestätigung, Datenschutzverletzung oder unbeaufsichtigte Mitgliederanfrage"],
   yetkiva: ["Zahlende und gehaltene Händler-, Marktplatz- und Flottenkonten", "Pünktliche Abholung und Zustellung mit genauer Kunden-ETA", "Positive Marge nach Fahrervergütung, Fahrzeug-, Support- und lokalen Betriebskosten", "Vollständige Fahrer-, Fahrzeug- und Zustellnachweise bei niedrigen Betrugs-, Unfall- und Beschwerdequoten", "Gesparte Händler- und Dispositionszeit mit weniger verpassten oder manuell geretteten Aufträgen", "Keine Kundenmitgliedschaft, Fahrerzugangsgebühr oder ungeprüfte zweite zahlende Seite"],
@@ -705,7 +705,7 @@ export function plainBusinessPlan(
     operations: affiliateStore
       ? "Affivon imports approved retailer data, creates tracked links and reports confirmed commission. A human editor remains responsible for product claims, comparison quality, disclosure and removing stale or misleading content. The retailer handles payment, delivery and returns."
       : venueFundedSport
-        ? "The shared team maintains venue data, claim checks, booking technology, payments and support. Unclaimed profiles show only factual public information and cannot publish live availability. A venue must prove ownership or authority before controlling its profile. Venues set their own prices, availability and cancellation rules; Kalethon organises the booking and confirmation record."
+        ? "The shared team maintains venue data, claim checks, booking technology, payments and support. Unclaimed profiles show only factual public information and cannot publish live availability. A venue must prove ownership or authority before controlling its profile. Venues set their own prices, availability and cancellation rules; Kalëthon Play organises the booking and confirmation record."
         : (BRAND_OPERATIONS[brand.id] ?? OPERATIONS[sector]),
     territoryPlan: venueFundedSport
       ? "Launch in one UK area with pound pricing, postcode and distance search, UK card payments and UK-based support. Build dense coverage across football and five-a-side, cricket, padel, tennis and pickleball before opening the next area. Complete UK GDPR, marketplace, payment, safeguarding, facility-booking and consumer terms, and give every unclaimed venue a clear correction, claim and removal route."
@@ -747,7 +747,7 @@ export function plainBusinessPlan(
           `${currency}${arpu} average monthly revenue per paying venue`,
           `${(userGrowth * 100).toFixed(0)}% modelled monthly growth in paying venues`,
           `${(churn * 100).toFixed(1)}% or lower monthly venue cancellations`,
-          "Players and organisers remain free, with no Kalethon player service fee",
+          "Players and organisers remain free, with no Kalëthon Play player service fee",
           "Measured improvement in filled venue hours, confirmed attendance and repeat bookings",
           `Direct monthly brand cost kept near ${currency}${directCost.toLocaleString("en-GB")}`,
         ]
@@ -855,7 +855,7 @@ function plainGermanBusinessPlan(
     revenue: affiliateStore
       ? `Käufer nutzen den Vergleich kostenlos. Ein zugelassener Händler zahlt nach einer geeigneten vermittelten Bestellung eine Provision. Die Planung rechnet im Schnitt mit ${currency}${arpu.toFixed(2)} bestätigter Provision je Bestellung.`
       : venueFundedSport
-        ? `Spieler, Organisatoren, Teams, Vereine, Trainer und Offizielle nutzen Kalethon kostenlos. Nur Sportstätten zahlen nach 60 Tagen Testphase ein Abo; geplant sind durchschnittlich ${currency}${arpu} je zahlender Sportstätte und Monat.`
+        ? `Spieler, Organisatoren, Teams, Vereine, Trainer und Offizielle nutzen Kalëthon Play kostenlos. Nur Sportstätten zahlen nach 60 Tagen Testphase ein Abo; geplant sind durchschnittlich ${currency}${arpu} je zahlender Sportstätte und Monat.`
         : brand.id === "taxcenda"
           ? `Nur der steuerpflichtige Kunde zahlt TaxCenda. Die Planung rechnet mit durchschnittlich ${currency}${arpu} je abgeschlossenem unterstützten Steuerfall. IRS, Steuerbehörden und Fachpartner werden nicht belastet; TaxCenda erhält keinen Anteil an Erstattung oder Steuerersparnis.`
         : brand.id === "nimah"
