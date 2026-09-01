@@ -120,6 +120,17 @@ function BrandDetail() {
             )}
             <h1 className="text-2xl font-semibold tracking-tight">{brand.name}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{t(brand.tagline)}</p>
+            {brand.domain && (
+              <a
+                href={`https://${brand.domain}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:underline"
+              >
+                <Globe className="h-3.5 w-3.5" />
+                {brand.domain}
+              </a>
+            )}
             {(() => {
               const sister = siblingOf(brand);
               const group = groupOf(brand);
