@@ -119,6 +119,13 @@ export function downloadBrandPdf(brand: Brand, m: Metrics) {
   doc.setTextColor(90, 90, 90);
   doc.text(t(brand.tagline), margin, y);
   y += 16;
+  if (brand.domain) {
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.setTextColor(37, 99, 235);
+    doc.text(`https://${brand.domain}`, margin, y);
+    y += 14;
+  }
   y += 8;
 
   // Key metrics box
