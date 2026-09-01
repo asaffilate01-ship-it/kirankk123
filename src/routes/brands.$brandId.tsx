@@ -8,7 +8,7 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { SliderRow } from "@/components/dashboard/SliderRow";
 import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
-import { ArrowLeft, ChevronDown, Download } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download, Globe } from "lucide-react";
 import { GateGuard } from "@/components/GateGuard";
 import { brandLogo } from "@/lib/brand-logos";
 import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
