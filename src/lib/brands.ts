@@ -3772,7 +3772,7 @@ const BASE_BRANDS: Brand[] = [
     name: "HACCORA UK",
     region: "UK",
     tagline: "Commission-free food-safety OS, marketplace and CRM for UK hospitality",
-    domain: "haccorauk.itechlounge.co.uk",
+    domain: "haccora.co.uk",
     description: "The UK edition of HACCORA (Haccora Connect): digital HACCP diaries, fridge and probe temperature logs, allergen matrices (Natasha's Law), cleaning schedules and audit-ready evidence packs mapped to the FSA's Safer Food, Better Business framework and the Food Hygiene Rating Scheme — plus a commission-free marketplace of verified auditors, pest-control firms, hygiene trainers, equipment engineers and suppliers, and a full operator CRM for sites, staff, suppliers and inspections.",
     market: "≈290,000 UK food businesses inspected by local authorities; ≈£350m food-safety and compliance software spend.",
     audience: "Restaurants, pubs, cafés, takeaways, hotels, schools, care kitchens, small chains.",
