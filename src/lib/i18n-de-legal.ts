@@ -62,8 +62,8 @@ export const DE_LEGAL: Record<string, string> = {
     "© ITECHLOUNGE LTD / ITECHLOUNGE GMBH. Die Marken werden nur zur Ansicht gezeigt – Download, Ziehen und Speichern sind deaktiviert. Masterdateien beim Markeninhaber anfordern.",
 
   // Company / legal
-  "ITECHLOUNGE LTD (UK) · iTechLounge Digitallösungen GmbH (DE)":
-    "ITECHLOUNGE LTD (UK) · iTechLounge Digitallösungen GmbH (DE)",
+  "iTechLounge · iTechLounge Digitallösungen GmbH (DE)":
+    "iTechLounge · iTechLounge Digitallösungen GmbH (DE)",
   "Registered in England & Wales": "Eingetragen in England & Wales",
   "Registered in Germany": "Eingetragen in Deutschland",
   "Company numbers, registered addresses, VAT IDs and managing-director details will be shown here once confirmed — send them to us and we will complete this page.":
