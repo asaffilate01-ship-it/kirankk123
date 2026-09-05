@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="safe-bottom border-t bg-card/50">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
         <p>
-          © {year} {t("iTechLounge")} — {t("ITECHLOUNGE LTD (UK) · iTechLounge Digitallösungen GmbH (DE)")} ·{" "}
+          © {year} {t("iTechLounge")} — {t("iTechLounge · iTechLounge Digitallösungen GmbH (DE)")} ·{" "}
           <a href="mailto:hello@itechlounge.co.uk" className="hover:text-foreground">hello@itechlounge.co.uk</a>
         </p>
         <nav className="flex flex-wrap items-center gap-x-4 gap-y-2">
