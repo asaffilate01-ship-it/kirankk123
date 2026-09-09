@@ -14,6 +14,7 @@ import {
 
 
 import { ContactSection, Logo } from "@/components/site-chrome";
+import { BackToTop } from "@/components/BackToTop";
 import { Expertise } from "@/components/expertise";
 import { faqs, services } from "@/components/site-data";
 
