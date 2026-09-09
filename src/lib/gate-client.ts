@@ -48,3 +48,4 @@ export function clearMarketingGateToken() {
     /* storage unavailable */
   }
 }
+

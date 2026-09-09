@@ -1,4 +1,3 @@
-import { MarketingGateGuard } from "@/components/MarketingGateGuard";
 import { MobileTabBar } from "@/components/MobileTabBar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MarketingPanel } from "@/components/dashboard/MarketingPanel";
@@ -16,7 +15,7 @@ export const Route = createFileRoute("/marketing")({
     if (!unlocked) throw redirect({ to: "/marketing/unlock", search: { error: undefined } });
   },
   head: () => ({ meta: [{ title: "Marketing strategy — iTechLounge" }, { name: "description", content: "Private per-brand UK, Germany and international marketing action plans." }, { name: "robots", content: "noindex,nofollow" }] }),
-  component: () => <MarketingGateGuard><MarketingPage /></MarketingGateGuard>,
+  component: MarketingPage,
 });
 
 function MarketingPage() {

@@ -27,7 +27,6 @@ function PortfolioUnlock() {
     try {
       const res = await unlock({ data: { password } });
       if (res.ok && res.token) {
-
         await navigate({ to: "/portfolio" });
       } else setError("invalid");
     } catch {

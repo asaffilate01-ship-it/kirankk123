@@ -7,7 +7,6 @@ import { FundingPanel } from "@/components/dashboard/FundingPanel";
 import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
 import { PLPanel } from "@/components/dashboard/PLPanel";
 import { SystemPanel } from "@/components/dashboard/SystemPanel";
-import { GateGuard } from "@/components/GateGuard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Sheet,SheetContent,SheetHeader,SheetTitle,SheetTrigger } from "@/components/ui/sheet";
 import { Tabs,TabsContent,TabsList,TabsTrigger } from "@/components/ui/tabs";
@@ -56,11 +55,7 @@ export const Route = createFileRoute("/investment")({
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
-  component: () => (
-    <GateGuard>
-      <Index />
-    </GateGuard>
-  ),
+  component: Index,
 });
 
 function Index() {
