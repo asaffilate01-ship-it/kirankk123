@@ -3,6 +3,8 @@ Allow: /
 Disallow: /unlock
 Disallow: /marketing
 Disallow: /investment
+Disallow: /investor
+Disallow: /internal
+Disallow: /portfolio
 
 Sitemap: https://itechlounge.co.uk/sitemap.xml
-Disallow: /portfolio
