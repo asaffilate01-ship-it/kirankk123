@@ -14,9 +14,9 @@ import { Tabs,TabsContent,TabsList,TabsTrigger } from "@/components/ui/tabs";
 import { WorkspaceHeader } from "@/components/workspace-navigation";
 import { TARGET_BRAND_COUNT } from "@/lib/brands";
 import { clearGateToken } from "@/lib/gate-client";
-import { lockSite,requireUnlocked } from "@/lib/gate.functions";
+import { lockSite } from "@/lib/gate.functions";
 import { t } from "@/lib/i18n";
-import { createFileRoute,redirect,useRouter } from "@tanstack/react-router";
+import { createFileRoute,useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import {
 Boxes,
@@ -33,10 +33,6 @@ Wallet
 import { useState } from "react";
 
 export const Route = createFileRoute("/investment")({
-  beforeLoad: async () => {
-    const { unlocked } = await requireUnlocked();
-    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
-  },
   head: () => ({
     meta: [
       { title: "iTechLounge Dashboard — Live Financial Model" },

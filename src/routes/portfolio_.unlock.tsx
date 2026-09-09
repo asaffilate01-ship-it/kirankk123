@@ -1,5 +1,6 @@
 import { WorkspaceAccess } from "@/components/workspace-access";
 import { unlockPortfolio } from "@/lib/portfolio-gate.functions";
+import { savePortfolioGateToken } from "@/lib/gate-client";
 import { createFileRoute,useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
@@ -27,7 +28,7 @@ function PortfolioUnlock() {
     try {
       const res = await unlock({ data: { password } });
       if (res.ok && res.token) {
-
+        savePortfolioGateToken(res.token);
         await navigate({ to: "/portfolio" });
       } else setError("invalid");
     } catch {
