@@ -358,7 +358,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/marketing">Marketing</Link>
             <Link to="/investment">Investor</Link>
-            <span>© 2026 iTechLounge</span>
+            <span>© 2026 iTechLounge Ltd (UK) · iTechLounge Digitallösungen GmbH (DE)</span>
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
             <Link to="/cookies">Cookies</Link>

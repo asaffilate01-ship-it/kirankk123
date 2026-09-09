@@ -31,7 +31,7 @@ function PrivacyRoute() {
         <h2>{t("Who is responsible")}</h2>
         <p>
           {t(
-            "iTechLounge (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this website. Data-protection contact details are available directly from the company on request.",
+            "iTechLounge Ltd (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this website. Data-protection contact details are available directly from the company on request.",
           )}
         </p>
       </section>

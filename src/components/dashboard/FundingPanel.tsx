@@ -204,7 +204,7 @@ export function FundingPanel() {
           icon={<Building2 className="h-4 w-4" />}
           label={t("Company structure")}
           value="2"
-          detail={t("iTechLounge and iTechLounge Digitallösungen GmbH are ready to be set up.")}
+          detail={t("iTechLounge Ltd and iTechLounge Digitallösungen GmbH are ready to be set up.")}
         />
         <SnapshotCard
           icon={<Store className="h-4 w-4" />}

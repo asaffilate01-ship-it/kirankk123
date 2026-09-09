@@ -141,7 +141,7 @@ export function SystemPanel() {
         <div className="grid grid-cols-1 gap-3 text-sm md:grid-cols-2">
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("United Kingdom")}</div>
-            <div className="font-semibold">iTechLounge</div>
+            <div className="font-semibold">iTechLounge Ltd</div>
             <div className="text-xs text-muted-foreground">{t("United Kingdom company structure ready")}</div>
           </div>
           <div className="rounded-lg border p-3">
