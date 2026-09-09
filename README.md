@@ -27,13 +27,18 @@ npm run dev
 
 ## Public and private areas
 
-- `/` redirects to `/portfolio`, the public, search-indexable showcase of all brands, their plain-language purpose and services. It contains no forecasts, private traction or portfolio domains.
+- `/` is the corporate homepage imported from `pixel-perfect-render-1346`, with `/services`, `/industries`, `/about` and `/contact`.
+- `/portfolio` preserves the original brand showcase behind a separate Portfolio password gate.
 - `/investment` — private investor dashboard protected by `SITE_PASSWORD`.
 - `/marketing` — separate private marketing command centre protected by `MARKETING_PASSWORD`.
 
 Required production secrets:
 
 ```sh
+# Optional override; the owner-selected password has a server-only scrypt verifier.
+PORTFOLIO_PASSWORD=<portfolio-access-password>
+# Optional; otherwise derived from SESSION_SECRET.
+PORTFOLIO_SESSION_SECRET=<long-random-portfolio-session-secret>
 SITE_PASSWORD=<investor-access-password>
 SESSION_SECRET=<long-random-investor-session-secret>
 MARKETING_PASSWORD=<different-marketing-access-password>
@@ -42,3 +47,5 @@ MARKETING_SESSION_SECRET=<long-random-marketing-session-secret>
 ```
 
 Use different investor and marketing passwords. The two gates use separate cookies, browser tokens and signed token purposes, so unlocking one area does not unlock the other.
+
+Corporate media manifests retain the source Lovable asset IDs. Verify media resolution after Lovable sync; these assets are served by the hosting proxy, not Vite output.

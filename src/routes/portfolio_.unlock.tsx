@@ -8,19 +8,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageToggle } from "@/components/LanguageToggle";
-import { unlockMarketing } from "@/lib/gate.functions";
-import { saveMarketingGateToken } from "@/lib/gate-client";
+import { unlockPortfolio } from "@/lib/portfolio-gate.functions";
 
-export const Route = createFileRoute("/marketing_/unlock")({
+
+export const Route = createFileRoute("/portfolio_/unlock")({
   validateSearch: (search: Record<string, unknown>) => ({ error: typeof search.error === "string" ? search.error : undefined }),
-  head: () => ({ meta: [{ title: "Marketing access — iTechLounge" }, { name: "robots", content: "noindex,nofollow" }] }),
-  component: MarketingUnlock,
+  head: () => ({ meta: [{ title: "Portfolio access — iTechLounge" }, { name: "robots", content: "noindex,nofollow" }] }),
+  component: PortfolioUnlock,
 });
 
-function MarketingUnlock() {
+function PortfolioUnlock() {
   const { error: searchError } = Route.useSearch();
   const navigate = useNavigate();
-  const unlock = useServerFn(unlockMarketing);
+  const unlock = useServerFn(unlockPortfolio);
   const [error, setError] = useState<string | undefined>(searchError);
   const [busy, setBusy] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -32,8 +32,8 @@ function MarketingUnlock() {
     try {
       const res = await unlock({ data: { password } });
       if (res.ok && res.token) {
-        saveMarketingGateToken(res.token);
-        await navigate({ to: "/marketing" });
+
+        await navigate({ to: "/portfolio" });
       } else setError("invalid");
     } catch {
       setError("config");
@@ -45,9 +45,9 @@ function MarketingUnlock() {
   return (
     <div className="safe-top safe-bottom flex min-h-[100dvh] items-start justify-center bg-background px-4 pb-56 pt-8 sm:items-center sm:pb-8">
       <Card className="w-full max-w-sm space-y-5 p-6">
-        <div className="flex justify-between"><Button asChild variant="ghost" size="sm"><Link to="/portfolio">{t("Portfolio")}</Link></Button><LanguageToggle /></div>
-        <div className="flex flex-col items-center gap-3 text-center"><BrandLogo className="h-16" /><div><h1 className="text-lg font-semibold">{t("Marketing strategy")}</h1><p className="text-xs text-muted-foreground">{t("Enter the marketing access password.")}</p></div></div>
-        <form method="post" action="/api/public/marketing-unlock" onSubmit={onSubmit} className="space-y-3">
+        <div className="flex justify-between"><Button asChild variant="ghost" size="sm"><Link to="/">{t("Home")}</Link></Button><LanguageToggle /></div>
+        <div className="flex flex-col items-center gap-3 text-center"><BrandLogo className="h-16" /><div><h1 className="text-lg font-semibold">{t("Portfolio access")}</h1><p className="text-xs text-muted-foreground">{t("Enter the portfolio access password.")}</p></div></div>
+        <form method="post" action="/api/public/portfolio-unlock" onSubmit={onSubmit} className="space-y-3">
           <div className="relative">
             <Input type={showPassword ? "text" : "password"} name="password" autoComplete="current-password" placeholder={t("Password")} autoFocus required className="h-12 pr-11 text-base" />
             <button
@@ -60,7 +60,7 @@ function MarketingUnlock() {
             </button>
           </div>
           {error === "invalid" && <p className="text-xs text-destructive">{t("Incorrect password. Try again.")}</p>}
-          {error === "config" && <p className="text-xs text-destructive">{t("Marketing access is temporarily unavailable.")}</p>}
+          {error === "config" && <p className="text-xs text-destructive">{t("Portfolio access is temporarily unavailable.")}</p>}
           <Button type="submit" className="h-12 w-full text-base" disabled={busy}>{busy ? t("Checking…") : t("Enter")}</Button>
         </form>
       </Card>

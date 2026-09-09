@@ -5,3 +5,4 @@ Disallow: /marketing
 Disallow: /investment
 
 Sitemap: https://itechlounge.co.uk/sitemap.xml
+Disallow: /portfolio

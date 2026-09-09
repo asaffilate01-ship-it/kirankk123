@@ -1,11 +1,11 @@
 import { getCookie, getRequestHeader } from "@tanstack/react-start/server";
-import { createHash, createHmac, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, timingSafeEqual, scryptSync } from "node:crypto";
 
 export const GATE_COOKIE_NAME = "loungetech-gate";
 export const MARKETING_GATE_COOKIE_NAME = "loungetech-marketing-gate";
 export const GATE_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 
-export type GatePurpose = "investor" | "marketing";
+export type GatePurpose = "investor" | "marketing" | "portfolio";
 type UnlockPayload = { unlocked: true; purpose: GatePurpose; exp: number };
 
 function isLocalHost(host: string) {
@@ -88,4 +88,19 @@ export function marketingSessionSecret(): string | undefined {
 
 export function hasValidMarketingGateCookie(): boolean {
   return isValidUnlockToken(getCookie(MARKETING_GATE_COOKIE_NAME), marketingSessionSecret(), "marketing");
+}
+
+export const PORTFOLIO_GATE_COOKIE_NAME = "loungetech-portfolio-gate";
+export function portfolioSessionSecret() {
+  return process.env.PORTFOLIO_SESSION_SECRET ?? (process.env.SESSION_SECRET ? `${process.env.SESSION_SECRET}:portfolio` : undefined);
+}
+export function hasValidPortfolioGateCookie() {
+  return isValidUnlockToken(getCookie(PORTFOLIO_GATE_COOKIE_NAME), portfolioSessionSecret(), "portfolio");
+}
+
+// Server-only verifier for the owner-selected Portfolio password. Override via env to rotate.
+export function portfolioPasswordMatches(input: string) {
+  if (process.env.PORTFOLIO_PASSWORD) return passwordMatches(input, process.env.PORTFOLIO_PASSWORD);
+  const expected = Buffer.from("f415afd826be94d1bf0fae5a801f192a92420872a1b3e20be0fe8b62163e36e5ab8c4fd591e8589535d0736fe0d981024ae60e24800f68d549b3652db7fad3fc", "hex");
+  return timingSafeEqual(scryptSync(input, "6423e9f5906588f3a5f5dc30c67ef3d5", 64), expected);
 }

@@ -2,6 +2,7 @@ import { t } from "@/lib/i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
+  useRouterState,
   Link,
   createRootRouteWithContext,
   useRouter,
@@ -10,6 +11,8 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { SiteChrome } from "@/components/site-chrome";
+import corporateCss from "../corporate.css?url";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { LanguageProvider } from "../lib/i18n";
@@ -33,7 +36,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -85,6 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: corporateCss },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" },
       {
         rel: "stylesheet",
         href: appCss,
@@ -136,13 +141,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const path = useRouterState({ select: (state) => state.location.pathname });
+  const corporate = ["/", "/services", "/industries", "/about", "/contact", "/internal"].includes(path);
 
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-        <CookieConsent />
+        {corporate ? <SiteChrome><Outlet /></SiteChrome> : <><Outlet /><CookieConsent /></>}
       </LanguageProvider>
     </QueryClientProvider>
   );
