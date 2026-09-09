@@ -6,7 +6,7 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Notice — iTechLounge Dashboard" },
-      { name: "description", content: "How iTechLounge handles personal data for the investor dashboard: what we collect, why, how long we keep it and your rights." },
+      { name: "description", content: "How iTechLounge handles personal data: what we collect, why, how long we keep it and your privacy rights." },
       { property: "og:title", content: "Privacy Notice — iTechLounge Dashboard" },
       { property: "og:description", content: "How iTechLounge handles personal data for the investor dashboard, including your data-protection rights." },
       { property: "og:type", content: "article" },
@@ -23,7 +23,7 @@ function PrivacyRoute() {
     <LegalPage title={t("Privacy Notice")}>
       <p>
         {t(
-          "This notice explains how iTechLounge handles personal data when you use this dashboard. It is a private, password-protected tool for shareholders, investors and internal staff.",
+          "This notice explains how iTechLounge handles personal data when you use this website and its protected areas.",
         )}
       </p>
 
@@ -31,7 +31,7 @@ function PrivacyRoute() {
         <h2>{t("Who is responsible")}</h2>
         <p>
           {t(
-            "ITECHLOUNGE LTD (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this dashboard. Data-protection contact details are available directly from the company on request.",
+            "iTechLounge (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this website. Data-protection contact details are available directly from the company on request.",
           )}
         </p>
       </section>
