@@ -49,7 +49,7 @@ export function AccessMenu() {
         <DropdownMenuSeparator />
         {workspaceAreas.map(({ id, to, en, de, icon: Icon }) => (
           <DropdownMenuItem asChild key={id}>
-            <Link to={to} className="flex min-h-11 items-center gap-3">
+            <Link to={to} reloadDocument className="flex min-h-11 items-center gap-3">
               <Icon size={16} />
               {lang === "de" ? de : en}
               <ArrowUpRight className="ml-auto" size={14} />
