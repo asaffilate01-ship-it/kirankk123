@@ -75,6 +75,9 @@ export function PresenterVideo({ name }: { name: string }) {
       <video
         key={video}
         controls
+        controlsList="nodownload noplaybackrate"
+        disablePictureInPicture
+        onContextMenu={(e) => e.preventDefault()}
         playsInline
         preload="none"
         poster={poster}
