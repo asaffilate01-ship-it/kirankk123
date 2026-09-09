@@ -148,7 +148,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        {corporate ? <SiteChrome><Outlet /></SiteChrome> : <><Outlet /><CookieConsent /></>}
+        {corporate ? <SiteChrome><Outlet /></SiteChrome> : <Outlet />}
+        <CookieConsent />
       </LanguageProvider>
     </QueryClientProvider>
   );

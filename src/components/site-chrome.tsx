@@ -7,7 +7,8 @@ import { areas } from "./expertise";
 import logoAsset from "@/assets/itechlounge-logo-en.png.asset.json";
 import logoAssetDe from "@/assets/itechlounge-logo-de-v11.png.asset.json";
 import { getLocale, setLanguage, translateTree } from "@/lib/corporate-i18n";
-import { legal, services } from "./site-data";
+import { services } from "./site-data";
+import { openCookieSettings } from "@/lib/cookie-consent";
 
 export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?: boolean }) {
   const [de, setDe] = useState(false);
@@ -304,13 +305,6 @@ export function Restricted({ name }: { name: string }) {
 }
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
-  const [menu, setMenu] = useState<string | null>(null);
-  const [cookie, setCookie] = useState<string | null>("pending");
-
-  useEffect(() => {
-    setCookie(localStorage.getItem("itl-cookie-choice"));
-  }, []);
-
   return (
     <div className="corporate-site app">
       <Header />
@@ -351,56 +345,13 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             <Link to="/marketing">Marketing</Link>
             <Link to="/investment">Investor</Link>
             <span>© 2026 iTechLounge Ltd</span>
-            <button onClick={() => setMenu("privacy")}>Privacy</button>
-            <button onClick={() => setMenu("terms")}>Terms</button>
-            <button onClick={() => setMenu("cookies")}>Cookies</button>
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/terms">Terms</Link>
+            <Link to="/cookies">Cookies</Link>
+            <button onClick={openCookieSettings}>Cookie settings</button>
           </div>
         </div>
       </footer>
-      {!cookie && (
-        <aside className="cookie">
-          <div>
-            <b>Your privacy matters</b>
-            <p>We use essential browser storage only.</p>
-          </div>
-          <button
-            onClick={() => {
-              localStorage.setItem("itl-cookie-choice", "essential");
-              setCookie("essential");
-            }}
-          >
-            Essential only
-          </button>
-          <button
-            className="accept"
-            onClick={() => {
-              localStorage.setItem("itl-cookie-choice", "accepted");
-              setCookie("accepted");
-            }}
-          >
-            Accept
-          </button>
-        </aside>
-      )}
-      {menu && (
-        <div
-          className="modalBack"
-          onMouseDown={(e) => e.target === e.currentTarget && setMenu(null)}
-        >
-          <section className="legalModal">
-            <button className="modalClose" onClick={() => setMenu(null)}>
-              <X />
-            </button>
-            <span className="kicker">iTechLounge Ltd · iTechLounge GmbH</span>
-            <h2>{legal[menu]?.[0]}</h2>
-            <p>{legal[menu]?.[1]}</p>
-            <address className="legalAddress">
-              3rd Floor, 45 Albemarle Street, Mayfair, London, England, W1S 4JL
-            </address>
-            <address className="legalAddress">iTechLounge GmbH · Berlin, Germany</address>
-          </section>
-        </div>
-      )}
     </div>
   );
 }
