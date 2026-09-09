@@ -10,7 +10,7 @@ export function SiteFooter() {
     <footer className="safe-bottom border-t bg-foreground text-background">
       <div className="mx-auto grid max-w-5xl gap-10 px-5 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <BrandLogo className="h-12 brightness-0 invert" />
+          <BrandLogo className="h-12" dark />
           <p className="mt-4 max-w-sm text-sm leading-6 text-background/60">{t("Digital ideas. Beautifully built.")}</p>
           <a href="mailto:hello@itechlounge.co.uk" className="mt-5 inline-flex items-center gap-2 text-sm text-background/80 hover:text-primary"><Mail className="h-4 w-4" />hello@itechlounge.co.uk</a>
         </div>

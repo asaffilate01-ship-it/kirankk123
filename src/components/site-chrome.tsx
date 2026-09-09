@@ -4,8 +4,8 @@ import { ArrowRight, ChevronDown, Mail, MapPin, Menu, Send, ShieldCheck, X } fro
 
 import { areas } from "./expertise";
 
-import logoAsset from "@/assets/itechlounge-logo-en.png.asset.json";
-import logoAssetDe from "@/assets/itechlounge-logo-de-v11.png.asset.json";
+import logoAsset from "@/assets/itechlounge-logo-en.png";
+import logoAssetDe from "@/assets/itechlounge-logo-de.png";
 import { getLocale, setLanguage, translateTree } from "@/lib/corporate-i18n";
 import { services } from "./site-data";
 import { openCookieSettings } from "@/lib/cookie-consent";
@@ -16,7 +16,7 @@ export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?
   return (
     <img
       className={`siteLogo${footer ? " footerLogo" : ""}${hero ? " heroLogo" : ""}`}
-      src={de ? logoAssetDe.url : logoAsset.url}
+      src={de ? logoAssetDe : logoAsset}
       alt={
         de
           ? "iTechLounge – Digitale Ideen. Wunderschön umgesetzt."
@@ -316,12 +316,12 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
         </div>
         <div className="footerAddresses">
           <address>
-            <strong>iTechLounge Ltd</strong>
+            <strong>iTechLounge</strong>
             <span>3rd Floor, 45 Albemarle Street</span>
             <span>Mayfair, London, England, W1S 4JL</span>
           </address>
           <address>
-            <strong>iTechLounge GmbH</strong>
+            <strong>iTechLounge Digitallösungen GmbH</strong>
             <span>Berlin, Germany</span>
           </address>
         </div>
@@ -344,7 +344,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/marketing">Marketing</Link>
             <Link to="/investment">Investor</Link>
-            <span>© 2026 iTechLounge Ltd</span>
+            <span>© 2026 iTechLounge</span>
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
             <Link to="/cookies">Cookies</Link>

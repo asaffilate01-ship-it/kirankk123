@@ -23,7 +23,7 @@ function PrivacyRoute() {
     <LegalPage title={t("Privacy Notice")}>
       <p>
         {t(
-          "This notice explains how iTechLounge handles personal data when you use this dashboard. It is a private, password-protected tool for shareholders, investors and internal staff.",
+          "This notice explains how iTechLounge handles personal data when you use this website and its protected areas.",
         )}
       </p>
 

@@ -1,5 +1,7 @@
 // German translations for legal pages, filters, investor calculator labels and misc UI copy.
 export const DE_LEGAL: Record<string, string> = {
+  "This notice explains how iTechLounge handles personal data when you use this website and its protected areas.":
+    "Diese Hinweise erklären, wie iTechLounge personenbezogene Daten bei der Nutzung dieser Website und ihrer geschützten Bereiche verarbeitet.",
   "36-month forecast": "36-Monats-Prognose",
   "Live dashboard": "Live-Dashboard",
   Year: "Jahr",
