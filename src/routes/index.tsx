@@ -218,6 +218,7 @@ function HomePage() {
         </div>
       </section>
       <ContactSection />
+      <BackToTop />
     </>
   );
 }
