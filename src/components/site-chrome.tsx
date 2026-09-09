@@ -6,13 +6,18 @@ import { areas } from "./expertise";
 
 import logoAsset from "@/assets/itechlounge-logo-en.png";
 import logoAssetDe from "@/assets/itechlounge-logo-de.png";
-import { getLocale, setLanguage, translateTree } from "@/lib/corporate-i18n";
+import { getLocale, LANGUAGE_CHANGE_EVENT, setLanguage, translateTree } from "@/lib/corporate-i18n";
 import { services } from "./site-data";
 import { openCookieSettings } from "@/lib/cookie-consent";
 
 export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?: boolean }) {
   const [de, setDe] = useState(false);
-  useEffect(() => setDe(getLocale() === "de"), []);
+  useEffect(() => {
+    const syncLanguage = () => setDe(getLocale() === "de");
+    syncLanguage();
+    window.addEventListener(LANGUAGE_CHANGE_EVENT, syncLanguage);
+    return () => window.removeEventListener(LANGUAGE_CHANGE_EVENT, syncLanguage);
+  }, []);
   return (
     <img
       className={`siteLogo${footer ? " footerLogo" : ""}${hero ? " heroLogo" : ""}`}
@@ -28,7 +33,12 @@ export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?
 
 function LanguageSwitch() {
   const [lang, setLang] = useState<"en" | "de">("en");
-  useEffect(() => setLang(getLocale()), []);
+  useEffect(() => {
+    const syncLanguage = () => setLang(getLocale());
+    syncLanguage();
+    window.addEventListener(LANGUAGE_CHANGE_EVENT, syncLanguage);
+    return () => window.removeEventListener(LANGUAGE_CHANGE_EVENT, syncLanguage);
+  }, []);
   return (
     <div className="languageSwitch" aria-label="Language">
       {(["en", "de"] as const).map((l) => (
@@ -50,13 +60,15 @@ function LanguageSwitch() {
 
 function I18nObserver() {
   useEffect(() => {
-    const timers = [0, 120, 400, 1000].map((d) => window.setTimeout(() => translateTree(), d));
+    translateTree();
+    const handleLanguageChange = () => translateTree();
+    window.addEventListener(LANGUAGE_CHANGE_EVENT, handleLanguageChange);
     const observer = new MutationObserver((entries) =>
       entries.forEach((entry) => entry.addedNodes.forEach((node) => translateTree(node))),
     );
     observer.observe(document.body, { childList: true, subtree: true });
     return () => {
-      timers.forEach(clearTimeout);
+      window.removeEventListener(LANGUAGE_CHANGE_EVENT, handleLanguageChange);
       observer.disconnect();
     };
   }, []);

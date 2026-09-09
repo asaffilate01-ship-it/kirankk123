@@ -265,17 +265,25 @@ export function getLocale(): "en" | "de" {
   return inGermany() ? "de" : "en";
 }
 
+export const LANGUAGE_CHANGE_EVENT = "itl-language-change";
+
 export function setLanguage(next: "en" | "de") {
   localStorage.setItem("itl.lang", next);
-  location.reload();
+  window.dispatchEvent(new CustomEvent(LANGUAGE_CHANGE_EVENT, { detail: next }));
 }
 
+const originalText = new WeakMap<Node, string>();
+const originalAttributes = new WeakMap<Element, Map<string, string>>();
+let originalDocumentTitle: string | null = null;
+
 export function translateTree(root: Node | null = typeof document === "undefined" ? null : document.body) {
-  if (typeof document === "undefined" || getLocale() !== "de" || !root) return;
+  if (typeof document === "undefined" || !root) return;
+  const locale = getLocale();
   const normalize = (text: string) => text.replace(/\s+/g, " ").trim();
-  const translateText = (raw: string) => {
-    const hit = de[normalize(raw)];
-    return hit ? raw.replace(/\S[\s\S]*\S|\S/, hit) : raw;
+  const renderText = (source: string) => {
+    if (locale === "en") return source;
+    const hit = de[normalize(source)];
+    return hit ? source.replace(/\S[\s\S]*\S|\S/, hit) : source;
   };
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const nodes: Node[] = root.nodeType === Node.TEXT_NODE ? [root] : [];
@@ -283,8 +291,9 @@ export function translateTree(root: Node | null = typeof document === "undefined
   nodes.forEach((node) => {
     const raw = node.nodeValue ?? "";
     if (node.parentElement?.closest('script,style,noscript,textarea,[translate="no"]')) return;
-    const translated = translateText(raw);
-    if (translated !== raw) node.nodeValue = translated;
+    if (!originalText.has(node)) originalText.set(node, raw);
+    const rendered = renderText(originalText.get(node) ?? raw);
+    if (rendered !== raw) node.nodeValue = rendered;
   });
   const elements: Element[] = root instanceof Element ? [root] : [];
   if (root instanceof Element || root instanceof Document)
@@ -293,10 +302,19 @@ export function translateTree(root: Node | null = typeof document === "undefined
     if (element.closest('[translate="no"]')) return;
     ["aria-label", "placeholder", "title", "alt"].forEach((attribute) => {
       const raw = element.getAttribute(attribute);
-      if (raw && de[normalize(raw)]) element.setAttribute(attribute, de[normalize(raw)]!);
+      if (!raw) return;
+      let originals = originalAttributes.get(element);
+      if (!originals) {
+        originals = new Map<string, string>();
+        originalAttributes.set(element, originals);
+      }
+      if (!originals.has(attribute)) originals.set(attribute, raw);
+      const source = originals.get(attribute) ?? raw;
+      element.setAttribute(attribute, locale === "de" ? (de[normalize(source)] ?? source) : source);
     });
   });
 
-  document.documentElement.lang = "de";
-  document.title = "iTechLounge | Digitale Lösungen für Unternehmen";
+  if (originalDocumentTitle === null) originalDocumentTitle = document.title;
+  document.documentElement.lang = locale;
+  document.title = locale === "de" ? "iTechLounge | Digitale Lösungen für Unternehmen" : originalDocumentTitle;
 }
