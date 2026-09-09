@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight,ChevronDown,Mail,MapPin,Menu,Send,ShieldCheck,X } from "lucide-react";
+import { ArrowRight,BriefcaseBusiness,Building2,ChevronDown,Home,Mail,MapPin,Menu,MessageCircle,Send,ShieldCheck,UsersRound,X } from "lucide-react";
 import { useEffect,useState } from "react";
 import { AccessMenu } from "./workspace-navigation";
 
@@ -86,6 +86,14 @@ const navLinks: [string, string][] = [
   ["/portfolio", "Portfolio"],
 ];
 
+const mobileNavLinks = [
+  { to: "/", label: "Home", icon: Home, exact: true },
+  { to: "/services", label: "Services", icon: BriefcaseBusiness, exact: false },
+  { to: "/industries", label: "Industries", icon: Building2, exact: false },
+  { to: "/about", label: "About", icon: UsersRound, exact: false },
+  { to: "/contact", label: "Contact", icon: MessageCircle, exact: false },
+] as const;
+
 const Facebook = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v7h4v-7h3l1-4h-4V9c0-.7.3-1 1-1Z" className="fillMark" />
@@ -127,6 +135,9 @@ export function Header() {
       <Link to="/">
         <Logo />
       </Link>
+      <div className="mobileLanguage">
+        <LanguageSwitch />
+      </div>
       <button className="menu" onClick={() => setOpen(!open)} aria-label="Menu">
         {open ? <X /> : <Menu />}
       </button>
@@ -192,6 +203,34 @@ export function Header() {
         </Link>
       </nav>
     </header>
+  );
+}
+
+function MobileBottomNav() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--tabbar-h", "4.65rem");
+    return () => {
+      document.documentElement.style.removeProperty("--tabbar-h");
+    };
+  }, []);
+
+  return (
+    <nav className="mobileBottomNav" aria-label="Mobile primary navigation">
+      <div className="mobileBottomNavInner">
+        {mobileNavLinks.map(({ to, label, icon: Icon, exact }) => (
+          <Link
+            key={to}
+            to={to}
+            activeOptions={{ exact }}
+            className="mobileBottomNavItem"
+            activeProps={{ className: "mobileBottomNavItem active" }}
+          >
+            <span className="mobileBottomNavIcon"><Icon aria-hidden="true" /></span>
+            <span>{label}</span>
+          </Link>
+        ))}
+      </div>
+    </nav>
   );
 }
 
@@ -368,6 +407,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+      <MobileBottomNav />
     </div>
   );
 }
