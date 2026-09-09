@@ -207,6 +207,11 @@ export function Header() {
 }
 
 function MobileBottomNav() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--tabbar-h", "4.65rem");
+    return () => document.documentElement.style.removeProperty("--tabbar-h");
+  }, []);
+
   return (
     <nav className="mobileBottomNav" aria-label="Mobile primary navigation">
       <div className="mobileBottomNavInner">
