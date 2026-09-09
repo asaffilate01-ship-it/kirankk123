@@ -88,10 +88,10 @@ const navLinks: [string, string][] = [
 
 const mobileNavLinks = [
   { to: "/", label: "Home", icon: Home, exact: true },
-  { to: "/services", label: "Services", icon: BriefcaseBusiness },
-  { to: "/industries", label: "Industries", icon: Building2 },
-  { to: "/about", label: "About", icon: UsersRound },
-  { to: "/contact", label: "Contact", icon: MessageCircle },
+  { to: "/services", label: "Services", icon: BriefcaseBusiness, exact: false },
+  { to: "/industries", label: "Industries", icon: Building2, exact: false },
+  { to: "/about", label: "About", icon: UsersRound, exact: false },
+  { to: "/contact", label: "Contact", icon: MessageCircle, exact: false },
 ] as const;
 
 const Facebook = () => (
