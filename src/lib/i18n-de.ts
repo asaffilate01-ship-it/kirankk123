@@ -775,7 +775,7 @@ export const DE: Record<string, string> = {
  "United Kingdom": "Vereinigtes K\u00f6nigreich",
  "Germany": "Deutschland",
  "download disabled": "Download deaktiviert",
- "\u00a9 ITECHLOUNGE LTD / ITECHLOUNGE GMBH. The marks are shown for reference only \u2014 downloading, dragging and saving are disabled. Request the master files from the brand owner.": "\u00a9 ITECHLOUNGE LTD / ITECHLOUNGE GMBH. Die Marken dienen nur zur Ansicht \u2014 Herunterladen, Ziehen und Speichern sind deaktiviert. Die Masterdateien erhalten Sie beim Markeninhaber.",
+ "\u00a9 iTechLounge / iTechLounge Digitallösungen GmbH. The marks are shown for reference only \u2014 downloading, dragging and saving are disabled. Request the master files from the brand owner.": "\u00a9 iTechLounge / iTechLounge Digitallösungen GmbH. Die Marken dienen nur zur Ansicht \u2014 Herunterladen, Ziehen und Speichern sind deaktiviert. Die Masterdateien erhalten Sie beim Markeninhaber.",
  "All four marks are transparent PNGs (no background box), tightly cropped to the artwork \u2014 ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.": "Alle vier Marken sind transparente PNGs (kein Hintergrundkasten), exakt auf das Motiv beschnitten \u2014 bereit f\u00fcr Visitenkarten, Briefpapier, Beschilderung, Pr\u00e4sentationen und Web. Helle Version auf wei\u00dfem oder hellem Papier, dunkle Version auf schwarzen, dunklen oder fotografischen Hintergr\u00fcnden.",
  "Monthly revenue": "Monatsumsatz",
  "Paying customers": "Zahlende Kunden",

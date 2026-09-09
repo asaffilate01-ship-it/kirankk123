@@ -141,7 +141,7 @@ export function SystemPanel() {
         <div className="grid grid-cols-1 gap-3 text-sm md:grid-cols-2">
           <div className="rounded-lg border p-3">
             <div className="text-xs uppercase text-muted-foreground">{t("United Kingdom")}</div>
-            <div className="font-semibold">ITECHLOUNGE LTD</div>
+            <div className="font-semibold">iTechLounge</div>
             <div className="text-xs text-muted-foreground">{t("United Kingdom company structure ready")}</div>
           </div>
           <div className="rounded-lg border p-3">
@@ -155,7 +155,7 @@ export function SystemPanel() {
       <Card className="space-y-3 p-4 text-sm">
         <h3 className="font-semibold">{t("Brand marks")}</h3>
         <p className="text-muted-foreground">{t("All four marks are transparent PNGs (no background box), tightly cropped to the artwork — ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.")}</p>
-        <p className="text-xs text-muted-foreground">{t("© ITECHLOUNGE LTD / ITECHLOUNGE GMBH. The marks are shown for reference only — downloading, dragging and saving are disabled. Request the master files from the brand owner.")}</p>
+        <p className="text-xs text-muted-foreground">{t("© iTechLounge / iTechLounge Digitallösungen GmbH. The marks are shown for reference only — downloading, dragging and saving are disabled. Request the master files from the brand owner.")}</p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <MarkTile
             src={logoEn}

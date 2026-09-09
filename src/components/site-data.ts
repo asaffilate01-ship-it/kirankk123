@@ -54,6 +54,6 @@ export const faqs: [string, string][] = [
 
 export const legal: Record<string, [string, string]> = {
   privacy: ["Privacy notice", "We use information submitted through this website to respond to enquiries and provide our services. We do not sell personal information. You may request access, correction or deletion by emailing hello@itechlounge.co.uk."],
-  terms: ["Website terms", "This website provides general information about iTechLounge Ltd. Project scope, fees, responsibilities and third-party services are confirmed through separate written agreements."],
+  terms: ["Website terms", "This website provides general information about iTechLounge. Project scope, fees, responsibilities and third-party services are confirmed through separate written agreements."],
   cookies: ["Cookie notice", "This website uses essential browser storage to remember your preferences. Optional analytics or marketing technologies should remain disabled until consent is provided."],
 };

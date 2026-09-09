@@ -60,8 +60,8 @@ export const DE_LEGAL: Record<string, string> = {
   // Brand marks
   "All four marks are transparent PNGs (no background box), tightly cropped to the artwork — ready for business cards, letterheads, signage, slides and web. Use the light version on white or pale stock, the dark version on black, dark or photographic backgrounds.":
     "Alle vier Marken sind transparente PNGs (ohne Hintergrundfläche), exakt auf das Motiv beschnitten – geeignet für Visitenkarten, Briefpapier, Beschilderung, Präsentationen und Web. Helle Variante auf weißem oder hellem Untergrund, dunkle Variante auf schwarzem, dunklem oder fotografischem Hintergrund.",
-  "© ITECHLOUNGE LTD / ITECHLOUNGE GMBH. The marks are shown for reference only — downloading, dragging and saving are disabled. Request the master files from the brand owner.":
-    "© ITECHLOUNGE LTD / ITECHLOUNGE GMBH. Die Marken werden nur zur Ansicht gezeigt – Download, Ziehen und Speichern sind deaktiviert. Masterdateien beim Markeninhaber anfordern.",
+  "© iTechLounge / iTechLounge Digitallösungen GmbH. The marks are shown for reference only — downloading, dragging and saving are disabled. Request the master files from the brand owner.":
+    "© iTechLounge / iTechLounge Digitallösungen GmbH. Die Marken werden nur zur Ansicht gezeigt – Download, Ziehen und Speichern sind deaktiviert. Masterdateien beim Markeninhaber anfordern.",
 
   // Company / legal
   "iTechLounge · iTechLounge Digitallösungen GmbH (DE)":
@@ -88,8 +88,8 @@ export const DE_LEGAL: Record<string, string> = {
   // Privacy
   "This notice explains how iTechLounge handles personal data when you use this dashboard. It is a private, password-protected tool for shareholders, investors and internal staff.":
     "Diese Erklärung beschreibt, wie iTechLounge personenbezogene Daten bei der Nutzung dieses Dashboards verarbeitet. Es handelt sich um ein privates, passwortgeschütztes Werkzeug für Gesellschafter, Investoren und interne Mitarbeitende.",
-  "ITECHLOUNGE LTD (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this dashboard. For any data-protection question, contact us at privacy@itechlounge.co.uk.":
-    "ITECHLOUNGE LTD (Vereinigtes Königreich) und iTechLounge Digitallösungen GmbH (Deutschland) betreiben dieses Dashboard. Bei Fragen zum Datenschutz erreichen Sie uns unter privacy@itechlounge.co.uk.",
+  "iTechLounge (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this dashboard. For any data-protection question, contact us at privacy@itechlounge.co.uk.":
+    "iTechLounge (Vereinigtes Königreich) und iTechLounge Digitallösungen GmbH (Deutschland) betreiben dieses Dashboard. Bei Fragen zum Datenschutz erreichen Sie uns unter privacy@itechlounge.co.uk.",
   "Technical data: IP address, browser type and timestamps recorded by our hosting provider in server logs.":
     "Technische Daten: IP-Adresse, Browsertyp und Zeitstempel, die unser Hosting-Anbieter in Server-Logs erfasst.",
   "Your settings: language choice and the financial assumptions you adjust, stored in your browser.":
