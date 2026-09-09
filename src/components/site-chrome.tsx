@@ -4,8 +4,8 @@ import { ArrowRight, ChevronDown, Mail, MapPin, Menu, Send, ShieldCheck, X } fro
 
 import { areas } from "./expertise";
 
-import logoAsset from "@/assets/itechlounge-logo-en.png";
-import logoAssetDe from "@/assets/itechlounge-logo-de.png";
+import logoAsset from "@/assets/itechlounge-logo-en.png.asset.json";
+import logoAssetDe from "@/assets/itechlounge-logo-de.png.asset.json";
 import { getLocale, LANGUAGE_CHANGE_EVENT, setLanguage, translateTree } from "@/lib/corporate-i18n";
 import { services } from "./site-data";
 import { openCookieSettings } from "@/lib/cookie-consent";
@@ -21,7 +21,7 @@ export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?
   return (
     <img
       className={`siteLogo${footer ? " footerLogo" : ""}${hero ? " heroLogo" : ""}`}
-      src={de ? logoAssetDe : logoAsset}
+      src={de ? logoAssetDe.url : logoAsset.url}
       alt={
         de
           ? "iTechLounge – Digitale Ideen. Wunderschön umgesetzt."
