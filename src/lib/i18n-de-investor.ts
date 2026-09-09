@@ -75,8 +75,8 @@ export const DE_INVESTOR: Record<string, string> = {
   "Germany has not launched yet and is presented as the next funded growth market, not as proven traction.":
     "Deutschland ist noch nicht gestartet und wird als nächster finanzierter Wachstumsmarkt dargestellt, nicht als bereits bewiesene Nachfrage.",
   "Company structure": "Unternehmensstruktur",
-  "iTechLounge Ltd and iTechLounge GmbH are ready to be set up.":
-    "iTechLounge Ltd und iTechLounge GmbH sind bereit zur Gründung.",
+  "iTechLounge and iTechLounge Digitallösungen GmbH are ready to be set up.":
+    "iTechLounge und iTechLounge Digitallösungen GmbH sind bereit zur Gründung.",
   "Operating now": "Bereits in Betrieb",
   "3 live sites": "3 Live-Standorte",
   "Dishbee has real operating sites, with 3 more expected in September 2026.":

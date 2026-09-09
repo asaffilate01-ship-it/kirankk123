@@ -3859,7 +3859,7 @@ export const DE_BRAND_COPY2: Record<string, string> = {
   "Detailed revenue model": "Detailliertes Erlösmodell",
   "Detailed competitor analysis": "Detaillierte Wettbewerbsanalyse",
   "Contact details available on request": "Kontaktdaten auf Anfrage erhältlich",
-  "ITECHLOUNGE LTD (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this dashboard. Data-protection contact details are available directly from the company on request.": "ITECHLOUNGE LTD (Vereinigtes Königreich) und iTechLounge Digitallösungen GmbH (Deutschland) betreiben dieses Dashboard. Datenschutz-Kontaktdaten sind auf Anfrage direkt beim Unternehmen erhältlich.",
+  "iTechLounge (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this dashboard. Data-protection contact details are available directly from the company on request.": "iTechLounge (Vereinigtes Königreich) und iTechLounge Digitallösungen GmbH (Deutschland) betreiben dieses Dashboard. Datenschutz-Kontaktdaten sind auf Anfrage direkt beim Unternehmen erhältlich.",
   "Paying revenue units": "Zahlende Erlöseinheiten",
   "All travel brands run on the shared TraveNexa booking engine and are sold cross-border in multiple currencies.": "Alle Reisemarken laufen auf der gemeinsamen TraveNexa-Buchungsplattform und werden grenzüberschreitend in mehreren Währungen verkauft.",
   "Business-funded products keep the consumer, player, parent, candidate or traveller side free.": "Von Unternehmen bezahlte Produkte halten die Seite der Verbraucher, Spieler, Eltern, Bewerber oder Reisenden kostenlos.",
