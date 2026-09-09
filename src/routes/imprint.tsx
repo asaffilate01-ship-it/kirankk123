@@ -27,7 +27,7 @@ function ImprintRoute() {
       </p>
       <section className="space-y-2">
         <h2>{t("United Kingdom")}</h2>
-        <p>iTechLounge<br />{t("Registered in England & Wales")}<br />{t("Email")}: hello@itechlounge.co.uk</p>
+        <p>iTechLounge Ltd<br />{t("Registered in England & Wales")}<br />{t("Email")}: hello@itechlounge.co.uk</p>
       </section>
       <section className="space-y-2">
         <h2>{t("Germany")}</h2>
