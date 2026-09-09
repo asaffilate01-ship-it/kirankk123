@@ -330,7 +330,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
         </div>
         <div className="footerAddresses">
           <address>
-            <strong>iTechLounge</strong>
+            <strong>iTechLounge Ltd</strong>
             <span>3rd Floor, 45 Albemarle Street</span>
             <span>Mayfair, London, England, W1S 4JL</span>
           </address>
