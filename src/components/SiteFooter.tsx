@@ -29,7 +29,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-background/10">
-        <div className="mx-auto max-w-5xl px-5 py-5 text-xs text-background/45">© {year} {t("iTechLounge")} · {t("iTechLounge Digitallösungen GmbH (DE)")}</div>
+        <div className="mx-auto max-w-5xl px-5 py-5 text-xs text-background/45">© {year} {t("iTechLounge Ltd (UK) · iTechLounge Digitallösungen GmbH (DE)")}</div>
       </div>
     </footer>
   );
