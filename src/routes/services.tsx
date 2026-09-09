@@ -18,8 +18,11 @@ export const Route = createFileRoute("/services")({
         content: "Digital capability brought together: AI, software, web, commerce and cloud.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://itechlounge.co.uk/services" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "software development services, AI integration, web design, mobile app development, cloud hosting, ecommerce build" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/services" }],
   }),
   component: ServicesPage,
 });

@@ -32,8 +32,15 @@ export const Route = createFileRoute("/")({
         content: "Technology that helps your business work better — planned, designed and built around your goals.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://itechlounge.co.uk/" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "keywords",
+        content:
+          "iTechLounge, software development UK, AI development, web design, mobile apps, cloud services, ecommerce development, digital agency Germany",
+      },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/" }],
   }),
   component: HomePage,
 });

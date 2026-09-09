@@ -101,6 +101,6 @@ export function hasValidPortfolioGateCookie() {
 // Server-only verifier for the owner-selected Portfolio password. Override via env to rotate.
 export function portfolioPasswordMatches(input: string) {
   if (process.env.PORTFOLIO_PASSWORD) return passwordMatches(input, process.env.PORTFOLIO_PASSWORD);
-  const expected = Buffer.from("f415afd826be94d1bf0fae5a801f192a92420872a1b3e20be0fe8b62163e36e5ab8c4fd591e8589535d0736fe0d981024ae60e24800f68d549b3652db7fad3fc", "hex");
+  const expected = Buffer.from("4dbd4ca9380bd02bce05ca4ca0cab62a6ce234aeeb71313dcfe85be47d7d0aa408c08d43e68f2cd2b24d78308596a2a25e0832f11d74075ac2555f55043e019c", "hex");
   return timingSafeEqual(scryptSync(input, "6423e9f5906588f3a5f5dc30c67ef3d5", 64), expected);
 }

@@ -18,8 +18,11 @@ export const Route = createFileRoute("/industries")({
         content: "Sector-shaped technology for hospitality, retail, events, education and more.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://itechlounge.co.uk/industries" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "software for retail, healthcare software, property software, jobs platforms, travel technology, education software" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/industries" }],
   }),
   component: IndustriesPage,
 });
