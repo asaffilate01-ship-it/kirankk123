@@ -1,33 +1,35 @@
-import { useState } from "react";
-import { t, useLang } from "@/lib/i18n";
-import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
-import { BRANDS, SHARED_ADVANTAGE, groupOf, siblingOf, type Brand } from "@/lib/brands";
-import { buildModel, useFinance } from "@/lib/finance-store";
+import { GateGuard } from "@/components/GateGuard";
+import { BrandBusinessPlan } from "@/components/dashboard/BrandBusinessPlan";
+import { BrandInvestment } from "@/components/dashboard/BrandInvestment";
+import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
+import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
+import { SliderRow } from "@/components/dashboard/SliderRow";
+import { fmtEUR,fmtEURk,fmtNum,fmtPct } from "@/components/dashboard/format";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
-import { Button } from "@/components/ui/button";
-import { SliderRow } from "@/components/dashboard/SliderRow";
-import { fmtEUR, fmtEURk, fmtNum, fmtPct } from "@/components/dashboard/format";
-import { ArrowLeft, ChevronDown, Download, Globe } from "lucide-react";
-import { GateGuard } from "@/components/GateGuard";
+import { WorkspaceHeader } from "@/components/workspace-navigation";
+import { brandCompetition,brandMoneyModel,brandNegatives,brandPositives } from "@/lib/brand-insights";
+import { brandAttritionLabel,brandRevenuePerUnitLabel,brandVolumeLabel } from "@/lib/brand-investor-summary";
 import { brandLogo } from "@/lib/brand-logos";
-import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
 import { downloadBrandPdf } from "@/lib/brand-pdf";
-import { LanguageToggle } from "@/components/LanguageToggle";
-import { BrandMonthlyTable } from "@/components/dashboard/BrandMonthlyTable";
-import { BrandInvestment } from "@/components/dashboard/BrandInvestment";
-import { brandCompetition, brandMoneyModel, brandNegatives, brandPositives } from "@/lib/brand-insights";
-import { BrandBusinessPlan } from "@/components/dashboard/BrandBusinessPlan";
-import { countryLabel, countryOf } from "@/lib/brand-taxonomy";
-import { brandAttritionLabel, brandRevenuePerUnitLabel, brandVolumeLabel } from "@/lib/brand-investor-summary";
-import { requireUnlocked } from "@/lib/gate.functions";
+import { countryLabel,countryOf } from "@/lib/brand-taxonomy";
+import { BRANDS,groupOf,SHARED_ADVANTAGE,siblingOf,type Brand } from "@/lib/brands";
+import { buildModel,useFinance } from "@/lib/finance-store";
+import { clearGateToken } from "@/lib/gate-client";
+import { lockSite,requireUnlocked } from "@/lib/gate.functions";
+import { t,useLang } from "@/lib/i18n";
+import { createFileRoute,Link,notFound,redirect } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { ArrowLeft,ChevronDown,Download,Globe } from "lucide-react";
+import { useState } from "react";
 
 
 
 export const Route = createFileRoute("/brands/$brandId")({
-  beforeLoad: async () => {
+  beforeLoad: async ({ params }) => {
     const { unlocked } = await requireUnlocked();
-    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
+    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined, returnTo: `/brands/${params.brandId}` } });
   },
   loader: async ({ params }) => {
     const brand = BRANDS.find((b) => b.id === params.brandId);
@@ -47,6 +49,7 @@ export const Route = createFileRoute("/brands/$brandId")({
         content: loaderData?.brand.tagline ?? "iTechLounge brand detail",
       },
       { property: "og:type", content: "website" },
+      { name: "robots", content: "noindex,nofollow" },
       { name: "twitter:card", content: "summary" },
     ],
   }),
@@ -67,6 +70,8 @@ export const Route = createFileRoute("/brands/$brandId")({
 });
 
 function BrandDetail() {
+  const lock = useServerFn(lockSite);
+  async function handleLock() { await lock({}); clearGateToken(); window.location.assign("/unlock"); }
   const { brand } = Route.useLoaderData() as { brand: Brand };
   const { lang } = useLang();
   const logo = brandLogo(brand.id, lang);
@@ -93,8 +98,8 @@ function BrandDetail() {
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
-      <header className="safe-top sticky top-0 z-30 border-b bg-card/90 backdrop-blur">
-        <div className="mx-auto grid max-w-5xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-2 py-2 sm:px-4 sm:py-3">
+      <WorkspaceHeader area="investor" title={brand.name} subtitle={t("Brand detail")} onLock={handleLock}>
+<div className="mx-auto grid max-w-5xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-2 py-2 sm:px-4 sm:py-3">
           <Link to="/investment" aria-label={t("Back to dashboard")} className="inline-flex min-h-11 items-center gap-2 rounded-md px-2 text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft className="h-5 w-5 shrink-0" />
             <span className="hidden sm:inline">{t("Back to dashboard")}</span>
@@ -104,13 +109,12 @@ function BrandDetail() {
             <span className="truncate text-sm font-semibold">{brand.name}</span>
           </div>
           <div className="flex shrink-0 items-center gap-1 sm:gap-3">
-            <LanguageToggle />
             <Button size="sm" variant="outline" onClick={handleDownloadPdf} className="hidden sm:inline-flex">
               <Download className="mr-1 h-4 w-4" />{t("Download PDF")}</Button>
           </div>
         </div>
-      </header>
-      <main className="pb-tabbar mx-auto grid max-w-6xl gap-4 px-3 py-5 sm:gap-6 sm:px-4 sm:py-6 md:pb-6 lg:grid-cols-[1.1fr_1fr]">
+      </WorkspaceHeader>
+      <main id="workspace-main" tabIndex={-1} className="pb-tabbar mx-auto grid max-w-6xl gap-4 px-3 py-5 sm:gap-6 sm:px-4 sm:py-6 md:pb-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-4">
           <div>
             {logo && (

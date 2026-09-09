@@ -1,14 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { ArrowRight, ChevronDown, Mail, MapPin, Menu, Send, ShieldCheck, X } from "lucide-react";
+import { ArrowRight,ChevronDown,Mail,MapPin,Menu,Send,ShieldCheck,X } from "lucide-react";
+import { useEffect,useState } from "react";
+import { AccessMenu } from "./workspace-navigation";
 
 import { areas } from "./expertise";
 
-import logoAsset from "@/assets/itechlounge-logo-en.png.asset.json";
 import logoAssetDe from "@/assets/itechlounge-logo-de.png.asset.json";
-import { getLocale, LANGUAGE_CHANGE_EVENT, setLanguage, translateTree } from "@/lib/corporate-i18n";
-import { services } from "./site-data";
+import logoAsset from "@/assets/itechlounge-logo-en.png.asset.json";
 import { openCookieSettings } from "@/lib/cookie-consent";
+import { getLocale,LANGUAGE_CHANGE_EVENT,setLanguage,translateTree } from "@/lib/corporate-i18n";
+import { services } from "./site-data";
 
 export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?: boolean }) {
   const [de, setDe] = useState(false);
@@ -177,11 +178,12 @@ export function Header() {
             </div>
           )}
         </div>
-        {navLinks.slice(1).map(([u, n]) => (
+        {navLinks.slice(1).filter(([url]) => url !== "/portfolio").map(([u, n]) => (
           <Link key={u} to={u}>
             {n}
           </Link>
         ))}
+        <div onClick={(event) => event.stopPropagation()}><AccessMenu /></div>
         <LanguageSwitch />
         <Link className="navCta" to="/contact">
           Discuss your project <ArrowRight size={16} />

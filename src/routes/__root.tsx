@@ -1,22 +1,23 @@
 import { t } from "@/lib/i18n";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
-  useRouterState,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-  HeadContent,
-  Scripts,
+HeadContent,
+Link,
+Outlet,
+Scripts,
+createRootRouteWithContext,
+useRouter,
+useRouterState,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect,type ReactNode } from "react";
 
 import { SiteChrome } from "@/components/site-chrome";
-import corporateCss from "../corporate.css?url";
-import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
-import { LanguageProvider } from "../lib/i18n";
 import { CookieConsent } from "../components/CookieConsent";
+import corporateCss from "../corporate.css?url";
+import { LanguageProvider } from "../lib/i18n";
+import { reportLovableError } from "../lib/lovable-error-reporting";
+import appCss from "../styles.css?url";
+import workspaceCss from "../workspace.css?url";
 
 function NotFoundComponent() {
   return (
@@ -94,6 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "stylesheet", href: workspaceCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/favicon.png" },
     ],
@@ -148,7 +150,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        {corporate ? <SiteChrome><Outlet /></SiteChrome> : <Outlet />}
+        {corporate ? <SiteChrome><Outlet /></SiteChrome> : <div className="private-site"><Outlet /></div>}
         <CookieConsent />
       </LanguageProvider>
     </QueryClientProvider>

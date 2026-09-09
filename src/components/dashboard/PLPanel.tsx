@@ -1,29 +1,29 @@
-import { t } from "@/lib/i18n";
-import { useMemo } from "react";
-import { useFinance, buildModel, yearSummaries } from "@/lib/finance-store";
 import { Card } from "@/components/ui/card";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
+Table,
+TableBody,
+TableCell,
+TableHead,
+TableHeader,
+TableRow,
 } from "@/components/ui/table";
-import { fmtEURk, fmtPct } from "./format";
-import { PanelIntro, ScrollHint } from "./Explain";
+import { buildModel,useFinance,yearSummaries } from "@/lib/finance-store";
+import { t } from "@/lib/i18n";
+import { useMemo } from "react";
 import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
+Bar,
+BarChart,
+CartesianGrid,
+Legend,
+Line,
+LineChart,
+ResponsiveContainer,
+Tooltip,
+XAxis,
+YAxis,
 } from "recharts";
+import { PanelIntro,ScrollHint } from "./Explain";
+import { fmtEURk,fmtPct } from "./format";
 
 export function PLPanel() {
   const state = useFinance();
@@ -77,8 +77,8 @@ export function PLPanel() {
                 <YAxis tick={{ fontSize: 10 }} tickFormatter={(v) => fmtEURk(v)} width={60} />
                 <Tooltip formatter={(v: any) => fmtEURk(Number(v))} />
                 <Legend />
-                <Bar dataKey="EBIT" name={t("Operating profit (EBIT)")} fill="#6366f1" />
-                <Bar dataKey="Net" name={t("Net profit")} fill="#0ea5e9" />
+                <Bar dataKey="EBIT" name={t("Operating profit (EBIT)")} fill="var(--primary)" />
+                <Bar dataKey="Net" name={t("Net profit")} fill="var(--accent)" />
               </BarChart>
             </ResponsiveContainer>
           </div>

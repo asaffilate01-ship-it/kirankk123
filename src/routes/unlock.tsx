@@ -1,19 +1,15 @@
-import { t } from "@/lib/i18n";
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { WorkspaceAccess } from "@/components/workspace-access";
+import { investorDestination } from "@/lib/access-destination";
+import { saveGateToken } from "@/lib/gate-client";
+import { unlockSite } from "@/lib/gate.functions";
+import { createFileRoute,useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { BrandLogo } from "@/components/BrandLogo";
-import { LanguageToggle } from "@/components/LanguageToggle";
-import { unlockSite } from "@/lib/gate.functions";
-import { saveGateToken } from "@/lib/gate-client";
 
 export const Route = createFileRoute("/unlock")({
-  validateSearch: (search: Record<string, unknown>) => ({
+  validateSearch: (search: Record<string, unknown>): { error?: string; returnTo?: string } => ({
     error: typeof search.error === "string" ? search.error : undefined,
+    returnTo: investorDestination(search.returnTo),
   }),
   head: () => ({
     meta: [
@@ -30,22 +26,23 @@ export const Route = createFileRoute("/unlock")({
 });
 
 function Unlock() {
-  const { error: searchError } = Route.useSearch();
+  const { error: searchError, returnTo } = Route.useSearch();
   const navigate = useNavigate();
   const unlock = useServerFn(unlockSite);
   const [error, setError] = useState<string | undefined>(searchError);
   const [busy, setBusy] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const password = String(new FormData(e.currentTarget).get("password") ?? "");
+    if (busy) return;
+    setError(undefined);
     setBusy(true);
     try {
       const res = await unlock({ data: { password } });
       if (res.ok && res.token) {
         saveGateToken(res.token);
-        await navigate({ to: "/investment" });
+        await navigate({ to: investorDestination(returnTo) });
       } else {
         setError("invalid");
       }
@@ -56,51 +53,5 @@ function Unlock() {
     }
   }
 
-  return (
-    <div className="safe-top safe-bottom flex min-h-[100dvh] items-start justify-center bg-background px-4 pb-56 pt-8 sm:items-center sm:pb-8">
-      <Card className="w-full max-w-sm space-y-5 p-6">
-        <div className="flex justify-between">
-          <Button asChild variant="ghost" size="sm"><Link to="/portfolio">{t("Public portfolio")}</Link></Button>
-          <LanguageToggle />
-        </div>
-        <div className="flex flex-col items-center gap-3 text-center">
-          <BrandLogo className="h-16" />
-          <div>
-            <h1 className="text-lg font-semibold tracking-tight">{t("Dashboard")}</h1>
-            <p className="text-xs text-muted-foreground">{t("Enter the access password to view the financial model.")}</p>
-          </div>
-        </div>
-        <form method="post" action="/api/public/unlock" onSubmit={onSubmit} className="space-y-3">
-          <div className="relative">
-            <Input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              autoComplete="current-password"
-              placeholder={t("Password")}
-              autoFocus
-              required
-              className="h-12 pr-11 text-base"
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword((s) => !s)}
-              className="absolute right-1 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-md text-muted-foreground hover:text-foreground focus:outline-none"
-              aria-label={showPassword ? t("Hide password") : t("Show password")}
-            >
-              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-            </button>
-          </div>
-          {error === "invalid" && (
-            <p className="text-xs text-destructive">{t("Incorrect password. Try again.")}</p>
-          )}
-          {error === "config" && (
-            <p className="text-xs text-destructive">{t("Dashboard access is temporarily unavailable.")}</p>
-          )}
-          <Button type="submit" className="h-12 w-full text-base" disabled={busy}>
-            {busy ? "Checking…" : "Enter"}
-          </Button>
-        </form>
-      </Card>
-    </div>
-  );
+  return <WorkspaceAccess area="investor" action="/api/public/unlock" onSubmit={onSubmit} busy={busy} error={error} returnTo={investorDestination(returnTo)} />;
 }

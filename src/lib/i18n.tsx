@@ -1,32 +1,32 @@
 import {
-  createContext,
-  Fragment,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
+createContext,
+Fragment,
+useCallback,
+useContext,
+useEffect,
+useMemo,
+useState,
+type ReactNode,
 } from "react";
+import { BRANDS } from "./brands";
 import { DE } from "./i18n-de";
-import { DE_EXTRA } from "./i18n-de-extra";
-import { DE_UX } from "./i18n-de-ux";
-import { DE_LEGAL } from "./i18n-de-legal";
-import { DE_OMNIQORA } from "./i18n-de-omniqora";
-import { DE_KIEZIO } from "./i18n-de-kiezio";
-import { DE_MOTORESQ } from "./i18n-de-motoresq";
-import { DE_MARELYRA } from "./i18n-de-marelyra";
-import { DE_EASTAMIRA } from "./i18n-de-eastamira";
-import { DE_INVESTOR } from "./i18n-de-investor";
-import { DE_BRAND_CORRECTIONS } from "./i18n-de-brand-corrections";
 import { DE_BRAND_COPY } from "./i18n-de-brand-copy";
 import { DE_BRAND_COPY2 } from "./i18n-de-brand-copy2";
-import { DE_MERQANO_KALETHON } from "./i18n-de-merqano-kalethon";
-import { DE_MARKETING } from "./i18n-de-marketing";
+import { DE_BRAND_CORRECTIONS } from "./i18n-de-brand-corrections";
+import { DE_EASTAMIRA } from "./i18n-de-eastamira";
+import { DE_EXTRA } from "./i18n-de-extra";
 import { DE_FIXES } from "./i18n-de-fixes";
-import { BRANDS } from "./brands";
+import { DE_INVESTOR } from "./i18n-de-investor";
+import { DE_KIEZIO } from "./i18n-de-kiezio";
+import { DE_LEGAL } from "./i18n-de-legal";
+import { DE_MARELYRA } from "./i18n-de-marelyra";
+import { DE_MARKETING } from "./i18n-de-marketing";
+import { DE_MERQANO_KALETHON } from "./i18n-de-merqano-kalethon";
+import { DE_MOTORESQ } from "./i18n-de-motoresq";
+import { DE_OMNIQORA } from "./i18n-de-omniqora";
+import { DE_UX } from "./i18n-de-ux";
 
-const DICT: Record<string, string> = { ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA, ...DE_EASTAMIRA, ...DE_UX, ...DE_LEGAL, ...DE_INVESTOR, ...DE_BRAND_COPY, ...DE_BRAND_COPY2, ...DE_BRAND_CORRECTIONS, ...DE_MARKETING, ...DE_FIXES, ...DE_MERQANO_KALETHON };
+const DICT: Record<string, string> = { "Investor dashboard": "Investorenbereich", "Marketing workspace": "Marketingbereich", "Brand detail": "Markendetails", ...DE, ...DE_EXTRA, ...DE_OMNIQORA, ...DE_KIEZIO, ...DE_MOTORESQ, ...DE_MARELYRA, ...DE_EASTAMIRA, ...DE_UX, ...DE_LEGAL, ...DE_INVESTOR, ...DE_BRAND_COPY, ...DE_BRAND_COPY2, ...DE_BRAND_CORRECTIONS, ...DE_MARKETING, ...DE_FIXES, ...DE_MERQANO_KALETHON };
 
 export type Lang = "en" | "de";
 
@@ -108,6 +108,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const detected = detectLang();
     currentLang = detected;
     setLangState(detected);
+    const sync = () => {
+      const next = detectLang();
+      currentLang = next;
+      setLangState(next);
+    };
+    window.addEventListener("itl-language-change", sync);
+    return () => window.removeEventListener("itl-language-change", sync);
   }, []);
 
   currentLang = lang;
@@ -121,6 +128,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       /* ignore */
     }
     if (typeof document !== "undefined") document.documentElement.lang = l;
+    window.dispatchEvent(new CustomEvent("itl-language-change", { detail: l }));
   }, []);
 
   useEffect(() => {

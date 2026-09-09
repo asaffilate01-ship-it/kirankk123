@@ -1,24 +1,23 @@
-import { requirePortfolioUnlocked, lockPortfolio } from "@/lib/portfolio-gate.functions";
-import { useServerFn } from "@tanstack/react-start";
-import { useMemo, useState } from "react";
-import { createFileRoute, Link, redirect } from "@tanstack/react-router";
-import { ArrowUp, Boxes, ChevronDown, Globe2, LockKeyhole, Megaphone, Search, Sparkles } from "lucide-react";
-import { BRANDS, TARGET_BRAND_COUNT, type Brand } from "@/lib/brands";
-import { t, useLang } from "@/lib/i18n";
-import { brandPlainLanguage } from "@/lib/brand-investor-summary";
-import { brandLogo } from "@/lib/brand-logos";
-import { COUNTRIES, SECTORS, countryLabel, countryOf, sectorLabel, sectorOf, type CountryId, type SectorId } from "@/lib/brand-taxonomy";
-import { BrandLogo } from "@/components/BrandLogo";
+import promoHero from "@/assets/promo-tech-hero.jpg";
 import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
-import { LanguageToggle } from "@/components/LanguageToggle";
-import { SiteFooter } from "@/components/SiteFooter";
 import { MobileTabBar } from "@/components/MobileTabBar";
+import { SiteFooter } from "@/components/SiteFooter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import promoHero from "@/assets/promo-tech-hero.jpg";
+import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from "@/components/ui/select";
+import { WorkspaceHeader } from "@/components/workspace-navigation";
+import { brandPlainLanguage } from "@/lib/brand-investor-summary";
+import { brandLogo } from "@/lib/brand-logos";
+import { COUNTRIES,countryLabel,countryOf,sectorLabel,sectorOf,SECTORS,type CountryId,type SectorId } from "@/lib/brand-taxonomy";
+import { BRANDS,TARGET_BRAND_COUNT,type Brand } from "@/lib/brands";
+import { t,useLang } from "@/lib/i18n";
+import { lockPortfolio,requirePortfolioUnlocked } from "@/lib/portfolio-gate.functions";
+import { createFileRoute,Link,redirect } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { ArrowUp,Boxes,ChevronDown,LockKeyhole,Megaphone,Search,Sparkles } from "lucide-react";
+import { useMemo,useState } from "react";
 
 export const Route = createFileRoute("/portfolio")({
   beforeLoad: async () => {
@@ -65,36 +64,18 @@ function PublicPortfolio() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="safe-top sticky top-0 z-30 border-b bg-card/90 backdrop-blur">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 sm:py-3">
-          <Link to="/portfolio" className="flex min-w-0 items-center gap-3"><BrandLogo className="h-10 shrink-0 sm:h-14" /></Link>
-          <div className="flex shrink-0 items-center gap-2">
-            <Button asChild variant="outline" size="sm" className="hidden h-9 md:inline-flex">
-              <Link to="/marketing/unlock" search={{ error: undefined }}><Megaphone className="mr-1 h-3.5 w-3.5" />{t("Marketing command centre")}</Link>
-            </Button>
-            <Button asChild variant="outline" size="sm"><Link to="/">Home</Link></Button>
-            <Button variant="outline" size="sm" onClick={async () => { await lock({}); window.location.assign("/portfolio/unlock"); }}>Lock</Button>
-            <LanguageToggle />
-          </div>
-        </div>
-        <div className="mx-auto max-w-7xl px-4 pb-2 md:hidden">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("Search brand, audience or purpose")} className="h-11 rounded-full pl-9" inputMode="search" enterKeyHint="search" />
-          </div>
-        </div>
-      </header>
+      <WorkspaceHeader area="portfolio" title={t("Portfolio")} onLock={async () => { await lock({}); window.location.assign("/portfolio/unlock"); }} />
 
-      <main className="pb-tabbar md:pb-0">
+      <main id="workspace-main" tabIndex={-1} className="pb-tabbar md:pb-0">
 
         <section className="border-b bg-gradient-to-br from-primary/[0.08] via-background to-background"><div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-[1.3fr_.7fr] md:items-center md:py-20"><div><Badge className="mb-4"><Sparkles className="mr-1 h-3.5 w-3.5" />{TARGET_BRAND_COUNT} {t("digital brands")}</Badge><h1 className="max-w-4xl text-3xl font-bold tracking-tight sm:text-5xl">{t("One portfolio. Practical digital services for real people and businesses.")}</h1><p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("Explore our UK, German and international brands in plain English. See what each service does, who it helps and the main tools it provides.")}</p><p className="mt-3 text-xs text-muted-foreground">{t("Authorised portfolio access. Investor and marketing areas have separate access gates.")}</p></div><div className="space-y-4"><img src={promoHero} alt={t("Connected network of iTechLounge digital platforms")} width={1600} height={912} className="w-full rounded-xl border object-cover shadow-lg" /><Card className="grid grid-cols-3 gap-3 p-5 text-center"><Metric value={TARGET_BRAND_COUNT} label={t("digital brands")} /><Metric value={COUNTRIES.length} label={t("territories")} /><Metric value={SECTORS.length} label={t("service sectors")} /></Card></div></div></section>
 
         <section id="brands" className="mx-auto max-w-7xl px-4 py-8 md:py-10"><div className="mb-4 md:mb-5"><h2 className="text-xl font-semibold sm:text-2xl">{t("Browse every brand")}</h2><p className="mt-1 text-sm text-muted-foreground">{t("Filter by territory, sector or a word describing the service you need.")}</p></div>
-          <Card className="mb-5 p-3 sm:p-4"><div className="grid gap-2 md:grid-cols-[minmax(0,1fr)_180px_210px_auto]"><div className="relative hidden md:block"><Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" /><Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("Search brand, audience or purpose")} className="pl-9" /></div><Select value={country} onValueChange={(value) => setCountry(value as CountryId | "all")}><SelectTrigger className="h-11 md:h-9"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">{t("All territories")}</SelectItem>{COUNTRIES.map((item) => <SelectItem key={item.id} value={item.id}>{item.flag} {t(countryLabel(item.id))}</SelectItem>)}</SelectContent></Select><Select value={sector} onValueChange={(value) => setSector(value as SectorId | "all")}><SelectTrigger className="h-11 md:h-9"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">{t("All sectors")}</SelectItem>{SECTORS.map((item) => <SelectItem key={item.id} value={item.id}>{t(item.label)}</SelectItem>)}</SelectContent></Select><Button variant="outline" className="h-11 md:h-9" onClick={() => { setQuery(""); setCountry("all"); setSector("all"); }}>{t("Clear filters")}</Button></div><p className="mt-2 text-xs text-muted-foreground">{brands.length} {t("brands shown")}</p></Card>
+          <Card className="portfolio-filters mb-5 p-3 sm:p-4"><div className="grid gap-2 md:grid-cols-[minmax(0,1fr)_180px_210px_auto]"><div className="relative"><Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" /><Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("Search brand, audience or purpose")} className="pl-9" /></div><Select value={country} onValueChange={(value) => setCountry(value as CountryId | "all")}><SelectTrigger className="h-11 md:h-9"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">{t("All territories")}</SelectItem>{COUNTRIES.map((item) => <SelectItem key={item.id} value={item.id}>{item.flag} {t(countryLabel(item.id))}</SelectItem>)}</SelectContent></Select><Select value={sector} onValueChange={(value) => setSector(value as SectorId | "all")}><SelectTrigger className="h-11 md:h-9"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">{t("All sectors")}</SelectItem>{SECTORS.map((item) => <SelectItem key={item.id} value={item.id}>{t(item.label)}</SelectItem>)}</SelectContent></Select><Button variant="outline" className="h-11 md:h-9" onClick={() => { setQuery(""); setCountry("all"); setSector("all"); }}>{t("Clear filters")}</Button></div><p className="mt-2 text-xs text-muted-foreground">{brands.length} {t("brands shown")}</p></Card>
           {brands.length ? <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{brands.map((brand) => <PublicBrandCard key={brand.id} brand={brand} lang={lang} />)}</div> : <Card className="p-10 text-center text-sm text-muted-foreground">{t("No brands match these filters.")}</Card>}
         </section>
 
-        <section className="border-t bg-muted/20 md:hidden"><div className="mx-auto max-w-7xl px-4 py-10"><div className="flex gap-3"><LockKeyhole className="mt-0.5 h-5 w-5 text-primary" /><div><h2 className="text-lg font-semibold">{t("Private access")}</h2><p className="mt-1 max-w-3xl text-sm text-muted-foreground">{t("This private portfolio explains products only. Marketing details are available to authorised users.")}</p><div className="mt-4 grid gap-2 sm:flex sm:flex-wrap"><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/marketing/unlock" search={{ error: undefined }}>{t("Marketing command centre")}</Link></Button></div></div></div></div></section>
+        <section className="border-t bg-muted/20 md:hidden"><div className="mx-auto max-w-7xl px-4 py-10"><div className="flex gap-3"><LockKeyhole className="mt-0.5 h-5 w-5 text-primary" /><div><h2 className="text-lg font-semibold">{t("Private access")}</h2><p className="mt-1 max-w-3xl text-sm text-muted-foreground">{t("This private portfolio explains products only. Marketing details are available to authorised users.")}</p><div className="mt-4 grid gap-2 sm:flex sm:flex-wrap"><Button asChild variant="outline" className="h-11 sm:h-9"><Link to="/marketing">{t("Marketing command centre")}</Link></Button></div></div></div></div></section>
       </main>
       <div className="pb-tabbar md:pb-0">
         <SiteFooter />
@@ -103,7 +84,7 @@ function PublicPortfolio() {
         items={[
           { label: t("Brands"), icon: Boxes, active: true, onClick: () => document.getElementById("brands")?.scrollIntoView({ behavior: "smooth", block: "start" }) },
           { label: t("Top"), icon: ArrowUp, onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
-          { label: t("Marketing"), icon: Megaphone, to: "/marketing/unlock", search: { error: undefined } },
+          { label: t("Marketing"), icon: Megaphone, to: "/marketing" },
         ]}
       />
     </div>
@@ -120,12 +101,13 @@ function PublicBrandCard({ brand, lang }: { brand: Brand; lang: "en" | "de" }) {
         ? "Hybrid-funded — two different paid services are presented and priced separately."
         : "Business-funded — the relevant business customer pays; the user side is not charged a second platform fee.";
   return (
-    <Card className="flex flex-col p-4"><div className="flex items-start gap-3"><BrandLogoBox src={brandLogo(brand.id, lang)} name={brand.name} color={brand.color} /><div className="min-w-0"><h3 className="font-semibold">{brand.name}</h3><p className="mt-0.5 text-xs text-muted-foreground">{t(brand.tagline)}</p><div className="mt-2 flex flex-wrap gap-1"><Badge variant="secondary" className="text-[11px]">{t(countryLabel(countryOf(brand)))}</Badge><Badge variant="outline" className="text-[11px]">{t(sectorLabel(sectorOf(brand)))}</Badge></div></div></div>
+    <Card className="portfolio-brand-card flex flex-col p-4"><div className="flex items-start gap-3"><BrandLogoBox src={brandLogo(brand.id, lang)} name={brand.name} color={brand.color} /><div className="min-w-0"><h3 className="font-semibold">{brand.name}</h3><p className="mt-0.5 text-xs text-muted-foreground">{t(brand.tagline)}</p><div className="mt-2 flex flex-wrap gap-1"><Badge variant="secondary" className="text-[11px]">{t(countryLabel(countryOf(brand)))}</Badge><Badge variant="outline" className="text-[11px]">{t(sectorLabel(sectorOf(brand)))}</Badge></div></div></div>
       <div className="mt-4 rounded-lg bg-primary/5 p-3"><p className="text-[10px] font-semibold uppercase tracking-wide text-primary">{t("What it does")}</p><p className="mt-1 text-sm leading-relaxed">{brandPlainLanguage(brand, lang)}</p></div>
       <div className="mt-3"><p className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">{t("Who it helps")}</p><p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t(brand.audience)}</p></div>
       <div className="mt-3"><p className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">{t("How it is funded")}</p><p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t(funding)}</p></div>
       <button type="button" onClick={() => setOpen((value) => !value)} className="mt-4 flex min-h-11 w-full items-center justify-between rounded-md border px-3 py-2 text-xs font-medium hover:bg-muted/50" aria-expanded={open}><span>{t(open ? "Hide services" : "Show services")}</span><ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} /></button>
       {open ? <div className="mt-3 space-y-3"><div><p className="text-[10px] font-semibold uppercase tracking-wide text-primary">{t("Main services")}</p><ul className="mt-2 grid gap-1.5">{brand.features.slice(0, 10).map((feature) => <li key={feature} className="flex gap-2 text-xs leading-relaxed text-muted-foreground"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" /><span>{t(feature)}</span></li>)}</ul></div>{brand.apps.length ? <div><p className="text-[10px] font-semibold uppercase tracking-wide text-primary">{t("Apps and access")}</p><div className="mt-2 flex flex-wrap gap-1">{brand.apps.map((app) => <Badge key={`${app.name}-${app.kind}`} variant="outline" className="text-[10px]">{t(app.kind)}</Badge>)}</div></div> : null}</div> : null}
+      <Button asChild variant="outline" className="mt-5"><Link to="/brands/$brandId" params={{ brandId: brand.id }}>{lang === "de" ? "Markendetails · Investorenzugang" : "Brand details · investor access"}</Link></Button>
     </Card>
   );
 }

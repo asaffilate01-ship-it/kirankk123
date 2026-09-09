@@ -1,40 +1,36 @@
-import { t } from "@/lib/i18n";
-import { createFileRoute, redirect } from "@tanstack/react-router";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
-import { BrandsPanel } from "@/components/dashboard/BrandsPanel";
 import { AssumptionsPanel } from "@/components/dashboard/AssumptionsPanel";
-import { PLPanel } from "@/components/dashboard/PLPanel";
-import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { BalanceSheetPanel } from "@/components/dashboard/BalanceSheetPanel";
+import { BrandsPanel } from "@/components/dashboard/BrandsPanel";
+import { CashFlowPanel } from "@/components/dashboard/CashFlowPanel";
 import { ChartsPanel } from "@/components/dashboard/ChartsPanel";
 import { FundingPanel } from "@/components/dashboard/FundingPanel";
+import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
+import { PLPanel } from "@/components/dashboard/PLPanel";
 import { SystemPanel } from "@/components/dashboard/SystemPanel";
-import { BrandLogo } from "@/components/BrandLogo";
-import { TARGET_BRAND_COUNT } from "@/lib/brands";
-import { LanguageToggle } from "@/components/LanguageToggle";
-import { SiteFooter } from "@/components/SiteFooter";
-import { lockSite, requireUnlocked } from "@/lib/gate.functions";
 import { GateGuard } from "@/components/GateGuard";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Sheet,SheetContent,SheetHeader,SheetTitle,SheetTrigger } from "@/components/ui/sheet";
+import { Tabs,TabsContent,TabsList,TabsTrigger } from "@/components/ui/tabs";
+import { WorkspaceHeader } from "@/components/workspace-navigation";
+import { TARGET_BRAND_COUNT } from "@/lib/brands";
 import { clearGateToken } from "@/lib/gate-client";
+import { lockSite,requireUnlocked } from "@/lib/gate.functions";
+import { t } from "@/lib/i18n";
+import { createFileRoute,redirect,useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
-import { useRouter } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
 import {
-  LogOut,
-  LayoutDashboard,
-  Boxes,
-  SlidersHorizontal,
-  Receipt,
-  Wallet,
-  Scale,
-  LineChart,
-  HandCoins,
-  Network,
-  MoreHorizontal,
+Boxes,
+HandCoins,
+LayoutDashboard,
+LineChart,
+MoreHorizontal,
+Network,
+Receipt,
+Scale,
+SlidersHorizontal,
+Wallet
 } from "lucide-react";
+import { useState } from "react";
 
 export const Route = createFileRoute("/investment")({
   beforeLoad: async () => {
@@ -96,31 +92,9 @@ function Index() {
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
-      <header className="safe-top sticky top-0 z-30 border-b bg-card/80 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 sm:py-3">
-          <div className="flex min-w-0 items-center gap-3">
-            <BrandLogo className="h-9 shrink-0 sm:h-14" />
-            <div className="min-w-0">
-              <h1 className="text-sm font-semibold tracking-tight">{t("iTechLounge")}</h1>
-              <p className="truncate text-[11px] text-muted-foreground sm:text-xs">
-                {t("Live dashboard")} · {TARGET_BRAND_COUNT} {t("brands")} ·{" "}
-                {t("36-month forecast")}
-              </p>
-            </div>
-          </div>
-          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-            <span className="hidden text-xs text-muted-foreground sm:inline">
-              {t("All figures € · assumptions editable")}
-            </span>
-            <LanguageToggle />
-            <Button variant="outline" size="sm" onClick={handleLock} className="px-2 sm:px-3">
-              <LogOut className="h-3.5 w-3.5 sm:mr-1" />
-              <span className="hidden sm:inline">{t("Lock")}</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-      <main className="pb-tabbar mx-auto max-w-7xl px-4 py-4 sm:py-6 md:pb-6">
+      <WorkspaceHeader area="investor" title={t("Investor dashboard")} onLock={handleLock} />
+      <main id="workspace-main" tabIndex={-1} className="pb-tabbar mx-auto max-w-7xl px-4 py-4 sm:py-6 md:pb-6">
+        <div className="workspace-intro"><div><span>{t("Investor dashboard")}</span><h1>{t("Live financial model")}</h1><p>{TARGET_BRAND_COUNT} {t("brands")} · {t("36-month forecast")} · {t("All figures € · assumptions editable")}</p></div></div>
         <Tabs value={tab} onValueChange={setTab} className="space-y-4 sm:space-y-6">
           <TabsList className="hidden flex-wrap md:flex">
             {[...primary, ...secondary].map((i) => (

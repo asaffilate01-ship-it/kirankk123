@@ -1,3 +1,4 @@
+import { investorDestination } from "@/lib/access-destination";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/api/public/unlock")({
@@ -6,16 +7,19 @@ export const Route = createFileRoute("/api/public/unlock")({
       POST: async ({ request }) => {
         try {
           const contentType = request.headers.get("content-type") ?? "";
-          const password = contentType.includes("application/json")
-            ? ((await request.json()) as { password?: string }).password
-            : (await request.formData()).get("password")?.toString();
+          const data = contentType.includes("application/json")
+            ? (await request.json()) as { password?: string; returnTo?: string }
+            : Object.fromEntries(await request.formData());
+          const password = typeof data.password === "string" ? data.password : undefined;
+          const destination = investorDestination(data.returnTo);
+          const errorLocation = (error: string) => `/unlock?${new URLSearchParams({ error, returnTo: destination })}`;
           const expected = process.env.SITE_PASSWORD;
           const secret = process.env.SESSION_SECRET;
           const acceptsHtml = !contentType.includes("application/json");
 
           if (!expected || !secret) {
             if (acceptsHtml) {
-              return new Response(null, { status: 303, headers: { Location: "/unlock?error=config" } });
+              return new Response(null, { status: 303, headers: { Location: errorLocation("config") } });
             }
             return Response.json({ ok: false, error: "Gate is not configured" }, { status: 500 });
           }
@@ -26,7 +30,7 @@ export const Route = createFileRoute("/api/public/unlock")({
 
           if (!password || !passwordMatches(password, expected)) {
             if (acceptsHtml) {
-              return new Response(null, { status: 303, headers: { Location: "/unlock?error=invalid" } });
+              return new Response(null, { status: 303, headers: { Location: errorLocation("invalid") } });
             }
             return Response.json({ ok: false }, { status: 401 });
           }
@@ -34,7 +38,7 @@ export const Route = createFileRoute("/api/public/unlock")({
           const token = createUnlockToken(secret);
           const headers = new Headers(
             acceptsHtml
-              ? { Location: "/investment" }
+              ? { Location: destination }
               : { "Content-Type": "application/json" },
           );
           headers.append("Set-Cookie", gateSetCookieHeader(request.headers.get("host") ?? "", token));

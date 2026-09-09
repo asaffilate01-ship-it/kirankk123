@@ -1,12 +1,14 @@
-import { t } from "@/lib/i18n";
-import { useEffect, useState } from "react";
-import { useNavigate } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
+import { investorDestination } from "@/lib/access-destination";
+import { clearGateToken,readGateToken } from "@/lib/gate-client";
 import { verifyGateToken } from "@/lib/gate.functions";
-import { readGateToken, clearGateToken } from "@/lib/gate-client";
+import { t } from "@/lib/i18n";
+import { useNavigate,useRouterState } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { useEffect,useState } from "react";
 
 export function GateGuard({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
+  const path = useRouterState({ select: state => state.location.pathname });
   const verify = useServerFn(verifyGateToken);
   const [state, setState] = useState<"checking" | "ok">("checking");
 
@@ -19,15 +21,15 @@ export function GateGuard({ children }: { children: React.ReactNode }) {
       if (unlocked) setState("ok");
       else {
         clearGateToken();
-        navigate({ to: "/unlock", search: { error: undefined } });
+        navigate({ to: "/unlock", search: { error: undefined, returnTo: investorDestination(path) } });
       }
     })().catch(() => {
-      if (active) navigate({ to: "/unlock", search: { error: undefined } });
+      if (active) navigate({ to: "/unlock", search: { error: undefined, returnTo: investorDestination(path) } });
     });
     return () => {
       active = false;
     };
-  }, [navigate, verify]);
+  }, [navigate, verify, path]);
 
   if (state === "checking") {
     return (
