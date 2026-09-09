@@ -27,8 +27,12 @@ export const DE_FIXES: Record<string, string> = {
   "Your choices": "Ihre Auswahl",
   "Choose which optional cookies you allow. Essential protection always stays on.":
     "Wählen Sie, welche optionalen Cookies Sie erlauben. Der notwendige Schutz bleibt immer aktiv.",
-  "iTechLounge (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this website. Data-protection contact details are available directly from the company on request.":
-    "iTechLounge (Vereinigtes Königreich) und iTechLounge Digitallösungen GmbH (Deutschland) betreiben diese Website. Datenschutz-Kontaktdaten erhalten Sie auf Anfrage direkt vom Unternehmen.",
+  "iTechLounge Ltd (United Kingdom) and iTechLounge Digitallösungen GmbH (Germany) operate this website. Data-protection contact details are available directly from the company on request.":
+    "iTechLounge Ltd (Vereinigtes Königreich) und iTechLounge Digitallösungen GmbH (Deutschland) betreiben diese Website. Datenschutz-Kontaktdaten erhalten Sie auf Anfrage direkt vom Unternehmen.",
+  "iTechLounge Ltd (UK) · iTechLounge Digitallösungen GmbH (DE)":
+    "iTechLounge Ltd (UK) · iTechLounge Digitallösungen GmbH (DE)",
+  "iTechLounge Ltd and iTechLounge Digitallösungen GmbH are ready to be set up.":
+    "iTechLounge Ltd und iTechLounge Digitallösungen GmbH sind bereit zur Gründung.",
   "Dishbee is already live and operating with multiple restaurant sites, and more go live in September 2026.":
     "Dishbee ist bereits live und mit mehreren Restaurantstandorten im Betrieb; weitere gehen im September 2026 live.",
   "Multiple restaurants have signed for Haccora trials starting 1 September 2026, with a further pipeline of interested venues before any paid advertising.":
