@@ -14,8 +14,11 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact iTechLounge" },
       { property: "og:description", content: "Start a conversation about your project." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://itechlounge.co.uk/contact" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "contact iTechLounge, software development quote, project enquiry, digital agency contact" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/contact" }],
   }),
   component: () => <ContactSection full />,
 });

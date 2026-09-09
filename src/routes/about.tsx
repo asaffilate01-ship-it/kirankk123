@@ -16,8 +16,11 @@ export const Route = createFileRoute("/about")({
         content: "We turn useful ideas into dependable digital services.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://itechlounge.co.uk/about" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "iTechLounge about, digital product studio, UK software company, German software company" },
     ],
+    links: [{ rel: "canonical", href: "https://itechlounge.co.uk/about" }],
   }),
   component: AboutPage,
 });
