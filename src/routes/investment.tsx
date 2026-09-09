@@ -7,16 +7,15 @@ import { FundingPanel } from "@/components/dashboard/FundingPanel";
 import { OverviewPanel } from "@/components/dashboard/OverviewPanel";
 import { PLPanel } from "@/components/dashboard/PLPanel";
 import { SystemPanel } from "@/components/dashboard/SystemPanel";
-import { GateGuard } from "@/components/GateGuard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Sheet,SheetContent,SheetHeader,SheetTitle,SheetTrigger } from "@/components/ui/sheet";
 import { Tabs,TabsContent,TabsList,TabsTrigger } from "@/components/ui/tabs";
 import { WorkspaceHeader } from "@/components/workspace-navigation";
 import { TARGET_BRAND_COUNT } from "@/lib/brands";
 import { clearGateToken } from "@/lib/gate-client";
-import { lockSite } from "@/lib/gate.functions";
+import { lockSite,requireUnlocked } from "@/lib/gate.functions";
 import { t } from "@/lib/i18n";
-import { createFileRoute,useRouter } from "@tanstack/react-router";
+import { createFileRoute,redirect,useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import {
 Boxes,
@@ -33,6 +32,10 @@ Wallet
 import { useState } from "react";
 
 export const Route = createFileRoute("/investment")({
+  beforeLoad: async () => {
+    const { unlocked } = await requireUnlocked();
+    if (!unlocked) throw redirect({ to: "/unlock", search: { error: undefined } });
+  },
   head: () => ({
     meta: [
       { title: "iTechLounge Dashboard — Live Financial Model" },
@@ -52,11 +55,7 @@ export const Route = createFileRoute("/investment")({
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
-  component: () => (
-    <GateGuard>
-      <Index />
-    </GateGuard>
-  ),
+  component: Index,
 });
 
 function Index() {

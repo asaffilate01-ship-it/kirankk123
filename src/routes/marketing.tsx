@@ -1,18 +1,21 @@
-import { MarketingGateGuard } from "@/components/MarketingGateGuard";
 import { MobileTabBar } from "@/components/MobileTabBar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MarketingPanel } from "@/components/dashboard/MarketingPanel";
 import { WorkspaceHeader } from "@/components/workspace-navigation";
 import { clearMarketingGateToken } from "@/lib/gate-client";
-import { lockMarketing } from "@/lib/gate.functions";
+import { lockMarketing,requireMarketingUnlocked } from "@/lib/gate.functions";
 import { t } from "@/lib/i18n";
-import { createFileRoute,useRouter } from "@tanstack/react-router";
+import { createFileRoute,redirect,useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { LogOut,Megaphone,Store } from "lucide-react";
 
 export const Route = createFileRoute("/marketing")({
+  beforeLoad: async () => {
+    const { unlocked } = await requireMarketingUnlocked();
+    if (!unlocked) throw redirect({ to: "/marketing/unlock", search: { error: undefined } });
+  },
   head: () => ({ meta: [{ title: "Marketing strategy — iTechLounge" }, { name: "description", content: "Private per-brand UK, Germany and international marketing action plans." }, { name: "robots", content: "noindex,nofollow" }] }),
-  component: () => <MarketingGateGuard><MarketingPage /></MarketingGateGuard>,
+  component: MarketingPage,
 });
 
 function MarketingPage() {

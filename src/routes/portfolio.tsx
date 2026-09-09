@@ -1,7 +1,6 @@
 import promoHero from "@/assets/promo-tech-hero.jpg";
 import { BrandLogoBox } from "@/components/dashboard/BrandLogoBox";
 import { MobileTabBar } from "@/components/MobileTabBar";
-import { PortfolioGateGuard } from "@/components/PortfolioGateGuard";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,13 +13,17 @@ import { brandLogo } from "@/lib/brand-logos";
 import { COUNTRIES,countryLabel,countryOf,sectorLabel,sectorOf,SECTORS,type CountryId,type SectorId } from "@/lib/brand-taxonomy";
 import { BRANDS,TARGET_BRAND_COUNT,type Brand } from "@/lib/brands";
 import { t,useLang } from "@/lib/i18n";
-import { lockPortfolio } from "@/lib/portfolio-gate.functions";
-import { createFileRoute,Link } from "@tanstack/react-router";
+import { lockPortfolio,requirePortfolioUnlocked } from "@/lib/portfolio-gate.functions";
+import { createFileRoute,Link,redirect } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowUp,Boxes,ChevronDown,LockKeyhole,Megaphone,Search,Sparkles } from "lucide-react";
 import { useMemo,useState } from "react";
 
 export const Route = createFileRoute("/portfolio")({
+  beforeLoad: async () => {
+    const { unlocked } = await requirePortfolioUnlocked();
+    if (!unlocked) throw redirect({ to: "/portfolio/unlock", search: { error: undefined } });
+  },
   head: () => ({ meta: [
     { name: "robots", content: "noindex,nofollow" },
     { title: "iTechLounge digital brands — private portfolio" },
@@ -31,7 +34,7 @@ export const Route = createFileRoute("/portfolio")({
     { property: "og:url", content: "https://itechlounge.co.uk/portfolio" },
     { name: "twitter:card", content: "summary_large_image" },
   ], links: [{ rel: "canonical", href: "https://itechlounge.co.uk/portfolio" }] }),
-  component: () => <PortfolioGateGuard><PublicPortfolio /></PortfolioGateGuard>,
+  component: PublicPortfolio,
 });
 
 function PublicPortfolio() {

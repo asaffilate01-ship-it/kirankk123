@@ -1,6 +1,5 @@
 const KEY = "itechlounge-gate-token";
 const MARKETING_KEY = "itechlounge-marketing-gate-token";
-const PORTFOLIO_KEY = "itechlounge-portfolio-gate-token";
 
 export function saveGateToken(token: string) {
   try {
@@ -50,26 +49,3 @@ export function clearMarketingGateToken() {
   }
 }
 
-export function savePortfolioGateToken(token: string) {
-  try {
-    localStorage.setItem(PORTFOLIO_KEY, token);
-  } catch {
-    /* storage unavailable */
-  }
-}
-
-export function readPortfolioGateToken(): string | null {
-  try {
-    return localStorage.getItem(PORTFOLIO_KEY);
-  } catch {
-    return null;
-  }
-}
-
-export function clearPortfolioGateToken() {
-  try {
-    localStorage.removeItem(PORTFOLIO_KEY);
-  } catch {
-    /* storage unavailable */
-  }
-}
