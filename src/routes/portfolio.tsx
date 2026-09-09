@@ -67,7 +67,7 @@ function PublicPortfolio() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="safe-top sticky top-0 z-30 border-b bg-card/90 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-2 sm:py-3">
-          <Link to="/portfolio" className="flex min-w-0 items-center gap-3"><BrandLogo className="h-10 shrink-0 sm:h-14" /><span className="hidden text-sm font-semibold sm:inline">iTechLounge</span></Link>
+          <Link to="/portfolio" className="flex min-w-0 items-center gap-3"><BrandLogo className="h-10 shrink-0 sm:h-14" /></Link>
           <div className="flex shrink-0 items-center gap-2">
             <Button asChild variant="outline" size="sm" className="hidden h-9 md:inline-flex">
               <Link to="/marketing/unlock" search={{ error: undefined }}><Megaphone className="mr-1 h-3.5 w-3.5" />{t("Marketing command centre")}</Link>
