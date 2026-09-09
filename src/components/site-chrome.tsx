@@ -23,6 +23,8 @@ export function Logo({ footer = false, hero = false }: { footer?: boolean; hero?
     <img
       className={`siteLogo${footer ? " footerLogo" : ""}${hero ? " heroLogo" : ""}`}
       src={de ? logoAssetDe.url : logoAsset.url}
+      draggable={false}
+      onContextMenu={(e) => e.preventDefault()}
       alt={
         de
           ? "iTechLounge – Digitale Ideen. Wunderschön umgesetzt."

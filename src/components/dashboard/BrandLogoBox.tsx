@@ -37,6 +37,10 @@ export function BrandLogoBox({
         src={src}
         alt={`${name} logo`}
         loading="lazy"
+        draggable={false}
+        onContextMenu={(e) => e.preventDefault()}
+        onDragStart={(e) => e.preventDefault()}
+        style={{ WebkitTouchCallout: "none", WebkitUserSelect: "none", userSelect: "none" }}
         className={`max-h-full max-w-full object-contain ${
           align === "center" ? "object-center" : "object-left"
         }`}
